@@ -1,6 +1,11 @@
- kramdown:
-   input: GFM
-   hard_wrap: false
- gems:
-   - jekyll-coffeescript
-   - jekyll-paginate
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

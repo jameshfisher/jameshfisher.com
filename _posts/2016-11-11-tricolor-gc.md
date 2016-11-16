@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Tricolor GC
+title: Tricolor garbage collection
 ---
 
 # Tricolor garbage collection

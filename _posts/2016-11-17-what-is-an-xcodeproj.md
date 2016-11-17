@@ -63,7 +63,32 @@ A distinguished object is the `rootObject`. This defines the project.
 
 There are a few different kinds of "object". Each is a dictionary with an `isa` property. There are many types: PBXBuildFile, PBXFileReference, PBXFrameworksBuildPhase, PBXGroup, PBXNativeTarget, PBXProject, PBXHeadersBuildPhase, PBXResourcesBuildPhase, PBXSourcesBuildPhase, PBXVariantGroup, XCBuildConfiguration, XCConfigurationList, PBXContainerItemProxy, XCConfigurationList, PBXTargetDependency.
 
-Examples:
+The object dictionary is grouped by this type, with each section delimited by a comment, e.g.:
+
+```
+objects = {
+/* Begin PBXBuildFile section */
+		FD9C41D41DDE16AB001EC7D1 = ...;
+		FD9C41DD1DDE1FD0001EC7D1 = ...;
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FD9C41CF1DDE16AB001EC7D1 = ...;
+		FD9C41D21DDE16AB001EC7D1 = ...;
+		FD9C41D31DDE16AB001EC7D1 = ...;
+		FD9C41DC1DDE1FD0001EC7D1 = ...;
+/* End PBXFileReference section */
+
+...
+
+/* Begin XCConfigurationList section */
+		FD9C41C91DDE16AB001EC7D1 = ...;
+		FD9C41D71DDE16AB001EC7D1 = ...;
+/* End XCConfigurationList section */
+};
+```
+
+Examples of objects:
 
 * `{isa = PBXBuildFile; fileRef = FD9C41D21DDE16AB001EC7D1; settings = { ... }; };`
 * `{isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = foo.h; sourceTree = "<group>"; };`

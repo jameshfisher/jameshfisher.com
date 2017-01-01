@@ -1,5 +1,5 @@
 ---
-title: `restrict` keyword in C
+title: restrict keyword in C
 ---
 
 Take this example:

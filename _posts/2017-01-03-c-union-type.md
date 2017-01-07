@@ -19,7 +19,7 @@ struct int_and_char {
   char c;
 };
 
-int main() {
+int main(void) {
   // The struct makes room for both fields:
   assert(sizeof(struct int_and_char) >= sizeof(int) + sizeof(char));
 

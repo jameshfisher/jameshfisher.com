@@ -1,3 +1,7 @@
+---
+title: "A comparison of Huel, Joylent, et cetera"
+---
+
 A while back I bought some [Huel](https://huel.com/), copying some colleagues. I've finally got through it. Now I want to buy some more, but first let's look at the competition.
 
 There's a wide range:

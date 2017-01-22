@@ -1,5 +1,5 @@
 ---
-title: IP protocol numbers
+title: "What are 'protocol numbers' in IP?"
 ---
 
 When the kernel receives IP packets, how does it know what they represent? Are they part of a TCP stream, a UDP datagram, or something else?

@@ -1,5 +1,5 @@
 ---
-title: Error URLs (addressable errors)
+title: "Error URLs (addressable errors)"
 ---
 
 When printing an error, we _sometimes_ include an error code. For example:

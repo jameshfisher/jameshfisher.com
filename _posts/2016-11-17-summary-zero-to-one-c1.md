@@ -1,6 +1,6 @@
-# Summary of: Zero to One, Chapter 1
-
-## Chapter 1: the challenge of the future
+---
+title: "Summary of 'Zero to One', Chapter 1: the challenge of the future"
+---
 
 **Human progress is either _copying_ or _creating_. Global progress since 1971 has been copying, by globalization. The only exception is computing, which has had many creations. Creations come from small groups, because large groups can’t think anew. Startups are defined by both properties: they're small, and they create instead of copy.**
 

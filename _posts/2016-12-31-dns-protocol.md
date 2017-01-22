@@ -1,5 +1,5 @@
 ---
-title: DNS protocol
+title: "What do DNS datagrams look like?"
 ---
 
 Let's write a DNS request. We'll query the DNS server at `8.8.8.8` for information about the domain `www.google.com`.

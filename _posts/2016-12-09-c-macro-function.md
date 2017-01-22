@@ -1,5 +1,5 @@
 ---
-title: C macro functions
+title: "What are 'macro functions' in C?"
 ---
 
 In C, the `#define` preprocessor command has two different forms. One form replaces tokens. Another form replaces function calls.

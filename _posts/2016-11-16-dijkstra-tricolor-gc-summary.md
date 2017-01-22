@@ -1,3 +1,7 @@
+---
+title: "A summary of 'On-the-Fly Garbage Collection: An Exercise in Cooperation'"
+---
+
 A summary of: http://research.microsoft.com/en-us/um/people/lamport/pubs/garbage.pdf
 
 Describes how garbage detection and collection can be performed by a concurrent process.
@@ -41,10 +45,10 @@ The aim here is for a fine-grained concurrent GC algo
 NIL is represented as an object; its two outgoing edges point to itself. This lets us model removal of an edge as just a special case of changing the edge - there are now no nil pointers. So we now have
 
 1. Changing pointer to another reachable object.
-   
+
    3. "Adding pointer towards a reachable object" is just changing a pointer from NIL to the new object.
    5. "Removing an edge" is just changing the pointer to point to NIL.
-   
+
 2. Changing pointer to a not-yet-reachable object.
 
    4. "Adding pointer towards a not-yet-reachable object" is just changing the pointer from NIL.

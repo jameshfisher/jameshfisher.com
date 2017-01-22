@@ -1,5 +1,5 @@
 ---
-title: What is electric charge?
+title: "What is electric charge?"
 ---
 
 In my quest to understand computing and networking, I have admitted a need to learn electronics. There's no escaping it any more.

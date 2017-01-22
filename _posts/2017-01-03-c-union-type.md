@@ -1,5 +1,5 @@
 ---
-title: What is a union in C?
+title: "What is a `union` in C?"
 ---
 
 ```c

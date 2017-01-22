@@ -1,3 +1,7 @@
+---
+title: "Can I put comments in string literals in C?"
+---
+
 What happens if your C string literal contains comment-like delimiters?
 
 ```c

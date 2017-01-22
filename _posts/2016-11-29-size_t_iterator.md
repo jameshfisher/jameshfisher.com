@@ -1,3 +1,7 @@
+---
+title: "What is `size_t` for? How do I iterate over an object in C?"
+---
+
 The `size_t` type is used to represent the size of objects in memory. As examples, it is the type of the return value of the `sizeof` operator, and of the `strlen` function. This means that it is an unsigned integral type. Its specific size is platform-dependent; the size is chosen to be large enough to represent all sizes on that platform.
 
 Here's an example from [Modern C](http://icube-icps.unistra.fr/img_auth.php/d/db/ModernC.pdf):

@@ -1,4 +1,6 @@
-# Replacing target/action with callbacks in Swift
+---
+title: "How do I replace target/action with callbacks in Swift?"
+---
 
 `NSButton` uses the target/action pattern: a `button : NSButton` has two properties `button.target` and `button.action` which specify what to call when the button is clicked.
 

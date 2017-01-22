@@ -1,3 +1,7 @@
+---
+title: "What does `void` mean as a function parameter in C?"
+---
+
 What is the difference between
 
 ```c

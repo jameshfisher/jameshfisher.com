@@ -1,3 +1,7 @@
+---
+title: "Some notes on symmetric cryptography"
+---
+
 My understanding of cryptography is very superficial. Here are some notes.
 
 Traditional communication is easy: go into a meeting room and speak to each other. But in the modern world, we don't always have this luxury; instead we have to talk over large distances, via wires and other people, with many people listening. Unfortunately some of these people are "adversarial" and can now do bad things:

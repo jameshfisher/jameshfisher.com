@@ -1,5 +1,5 @@
 ---
-title: "WebRTC API basics"
+title: "A hello world serverless WebRTC app"
 ---
 
 I created [this tiny serverless WebRTC chat app](https://jameshfisher.github.io/serverless-webrtc/index.html). Let's see how it works.

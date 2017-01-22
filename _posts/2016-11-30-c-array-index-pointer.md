@@ -1,3 +1,7 @@
+---
+title: "What do array subscripts mean in C? (Answer: add then dereference)"
+---
+
 C array subscripts can be understood via pointer arithmetic.
 
 ```c

@@ -1,5 +1,5 @@
 ---
-title: What is STUN?
+title: "What is STUN?"
 ---
 
 **TL;DR: STUN is a "What is my IP?" service**

@@ -1,5 +1,5 @@
 ---
-title: Printing bytes in C
+title: "How do I print bytes in C?"
 ---
 
 What do the individual bytes of values in C look like? We can see the bytes by printing them out with this fun program:

@@ -1,5 +1,5 @@
 ---
-title: Tricolor garbage collection
+title: How does tricolor garbage collection work?
 ---
 
 # Tricolor garbage collection
@@ -12,7 +12,7 @@ The meaning of the three sets is this:
 
   * Black set: Definitely no pointers to any objects in the white set.
   * Grey set: Might have pointers to the white set.
-  
+
 * White set: Possibly accessible from the roots. Candidates for collection.
 
 The important invariant is the "tricolor" invariant: no pointers go directly from the black set to the white set. It is this invariant which lets us eventually clear the white set.

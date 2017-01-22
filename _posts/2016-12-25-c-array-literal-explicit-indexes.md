@@ -1,5 +1,5 @@
 ---
-title: C array literal explicit indexes
+title: "Array literals in C with explicit indexes"
 ---
 
 How do you write a C array literal? The way I knew of was with curly braces:

@@ -1,5 +1,5 @@
 ---
-title: Checking for a zero byte in C (or, how the fuck does this work?)
+title: "Quickly checking for a zero byte in C using bitwise operations"
 ---
 
 I stumbled upon this magic way to check whether a 64-bit word contains a zero byte:

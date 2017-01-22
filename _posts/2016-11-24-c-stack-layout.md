@@ -1,3 +1,7 @@
+---
+title: "How is the stack laid out in C?"
+---
+
 What does the stack look like?
 
 Where does the compiler put function arguments?

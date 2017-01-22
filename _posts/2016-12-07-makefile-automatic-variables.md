@@ -1,5 +1,5 @@
 ---
-title: Automatic variables in a `Makefile`
+title: What are automatic variables (dollar variables) in a `Makefile`?
 ---
 
 Suppose in your `Makefile` you wrote:

@@ -1,5 +1,5 @@
 ---
-title: C static functions
+title: "What are `static` functions in C?"
 ---
 
 Basically, this is yet another meaning of `static`. When you write `static` preceding a function declaration, its meaning is "this function is only callable within this translation unit".

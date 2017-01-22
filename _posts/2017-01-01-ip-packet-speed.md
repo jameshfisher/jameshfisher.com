@@ -1,5 +1,5 @@
 ---
-title: IP packet speed
+title: "How fast does an IP packet travel?"
 ---
 
 IP packets spend about 80% of their time in routers, and only about 20% on the wire.

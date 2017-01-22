@@ -1,3 +1,7 @@
+---
+title: "A C typedef convention for complex types"
+---
+
 C type syntax is maddening to read and write. The only sensible way to proceed is to force yourself to only ever express composite types in a `typedef`.
 
 An example from [cdecl.org](http://cdecl.org/):

@@ -1,5 +1,5 @@
 ---
-title: Setting C compiler in a `Makefile`
+title: How do I set the C compiler in a `Makefile`?
 ---
 
 How do you set your C compiler in a `Makefile`? You might write:

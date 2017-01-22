@@ -1,3 +1,7 @@
+---
+title: "How do I write a multi-line string literal in C?"
+---
+
 What ways do we have to define large string literals in C? Let's take this example:
 
 ```c

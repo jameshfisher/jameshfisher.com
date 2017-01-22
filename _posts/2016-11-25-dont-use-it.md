@@ -1,3 +1,7 @@
+---
+title: "Don't use the word 'it'"
+---
+
 I recently discovered a magic rule for instantly clarifying your technical writing: don't use the word "it".
 
 I very frequently use the word "it" when writing, in order to refer to something previously mentioned. The hope is that, in the reader's mind, the word "it" resolves to the same thing I am thinking of, because context demands that the word couldn't sensibly resolve to anything else.

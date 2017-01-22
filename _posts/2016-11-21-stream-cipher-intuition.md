@@ -1,3 +1,7 @@
+---
+title: "How does a stream cipher work?"
+---
+
 * A stream cipher works roughly like a one-time pad.
 
 * Just as in one-time pad, it can be broken if (A) you have insight into what the pad looks like, or if (B) the pad is used multiple times.

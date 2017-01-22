@@ -1,5 +1,5 @@
 ---
-title: GCC statement expressions
+title: "What are 'statement expressions' in GCC?"
 ---
 
 Lots of "modern" languages, like Rust, have converted statement syntax-forms into expressions. For example, `if`/`else`, which in C is a statement form, is in Rust a ternary expression. For another example, a series of expressions separated by semicolons becomes another expression, where in C this would be a compound statement.

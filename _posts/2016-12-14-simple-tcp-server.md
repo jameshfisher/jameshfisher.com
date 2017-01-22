@@ -1,5 +1,5 @@
 ---
-title: TCP server syscalls
+title: "What syscalls does a TCP server need?"
 ---
 
 The minimal useful TCP server must at least use the commands `socket/bind/listen/accept/recv/send/close`:

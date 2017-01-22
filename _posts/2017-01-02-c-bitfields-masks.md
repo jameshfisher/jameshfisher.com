@@ -1,5 +1,5 @@
 ---
-title: C bitfields using masks
+title: "How do I pack bits in C? (An answer using masks)"
 ---
 
 An exercise in packing information into bits instead of bytes.

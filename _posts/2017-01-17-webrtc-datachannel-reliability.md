@@ -1,5 +1,5 @@
 ---
-title: RTCDataChannel reliability
+title: "How does reliability work in `RTCDataChannel`?"
 ---
 
 When we create a data channel, we pass some options:

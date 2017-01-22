@@ -1,5 +1,5 @@
 ---
-title: How do C signals interact with the stack?
+title: "How do C signals interact with the stack?"
 ---
 
 We know how C functions work. The program maintains a _call stack_, which contains _stack frames_ corresponding to nested _function calls_. Calling a function means pushing a new stack frame onto the stack, and returning from a function means popping its stack frame off the stack.

@@ -1,5 +1,5 @@
 ---
-title: Hello world HTTP server
+title: "Writing a 'hello world' HTTP server in C"
 ---
 
 Writing a "hello world" HTTP server is surprisingly simple. This responds to every request with a "hello world" page:

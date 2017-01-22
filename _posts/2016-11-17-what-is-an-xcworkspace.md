@@ -1,3 +1,7 @@
+---
+title: "What is an `.xcworkspace` file?"
+---
+
 Xcode often creates a "SomeProject.xcworkspace" file. What is it?
 
 Each `.xcworkspace` file corresponds to a "workspace" created in Xcode via `File > New > Workspace...`. You can open them in Xcode, just like you can open projects.

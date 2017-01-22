@@ -1,5 +1,5 @@
 ---
-title: restrict keyword in C
+title: What does the `restrict` keyword mean in C?
 ---
 
 Take this example:

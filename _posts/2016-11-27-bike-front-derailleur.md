@@ -1,3 +1,7 @@
+---
+title: "Bike front derailleur"
+---
+
 I bought a bike from EBay. It has decent components, but they seem mashed together incompatibly. My front derailleur doesn't shift properly.
 
 I tried adjusting the front derailleur, with little success. The clearance to the big ring is always than 1mm (too little).

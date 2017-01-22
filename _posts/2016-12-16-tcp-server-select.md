@@ -1,5 +1,5 @@
 ---
-title: TCP server with the `select` syscall
+title: "Writing a TCP server with the `select` syscall"
 ---
 
 Yesterday I described the minimal commands for a TCP server. But that server can only serve one client at a time! It does some work with one TCP connection, then closes it and deals with the next TCP connection, etc. This is not how most servers work; the clients expect to be able to talk to the server regardless of what other clients are around.

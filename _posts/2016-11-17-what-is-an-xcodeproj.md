@@ -1,3 +1,7 @@
+---
+title: "What is an `.xcodeproj` file?"
+---
+
 Xcode tracks "projects" with a file called `SomeProject.xcodeproj`.
 
 Actually, like workspaces, it's not a file at all - it's a directory.

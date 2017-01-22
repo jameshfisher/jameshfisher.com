@@ -1,5 +1,5 @@
 ---
-title: TCP server with the kqueue API
+title: "Writing a TCP server with the `kqueue` API"
 ---
 
 I previously described how a process can serve multiple TCP clients simultaneously. The process did so using the `select` system call, which blocks waiting for one of many possible events.

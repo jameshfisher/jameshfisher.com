@@ -1,3 +1,7 @@
+---
+title: "Where is the C programming language defined?"
+---
+
 What is "C"? Where is C defined? Unfortunately, several places.
 
 The oldest "official" source is _The C Programming Language_ by Kernighan and Ritchie. There are:

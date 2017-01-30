@@ -92,6 +92,7 @@ i386_get_ldt(2), i386_set_ldt(2) - manage i386 per-process Local Descriptor Tabl
 
 ```
 pipe(2)                  - create descriptor pair for interprocess communication
+mkfifo(2)                - make a fifo file
 ```
 
 
@@ -198,7 +199,6 @@ fsync(2)                 - synchronize a file's in-core state with that on disk
 ftruncate(2), truncate(2) - truncate or extend a file to a specified length
 futimes(2), utimes(2)    - set file access and modification times
 lseek(2)                 - reposition read/write file offset
-mkfifo(2)                - make a fifo file
 mknod(2)                 - make a special file node
 rename(2), renameat(2), renamex_np(2), renameatx_np(2) - change the name of a file
 revoke(2)                - revoke file access

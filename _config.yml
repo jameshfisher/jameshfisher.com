@@ -9,3 +9,4 @@ defaults:
       path: ""
     values:
       layout: "default"
+future: true

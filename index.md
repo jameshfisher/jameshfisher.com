@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Jim Fisher's blog
+title: Jim Fisher
 ---
 
 Topics include C, UNIX, and networking.

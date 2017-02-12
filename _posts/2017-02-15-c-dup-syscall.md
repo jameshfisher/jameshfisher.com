@@ -10,7 +10,7 @@ Answer: the `dup` system call. Here's an example of duplicating the descriptor `
 #define WRITE(F, S) write((F), (S), sizeof(S))
 
 int main(void) {
-  WRITE(0, "This is written to stdout via descriptor 0\n");
+  WRITE(1, "This is written to stdout via descriptor 1\n");
   int new_stdout = dup(1);
   WRITE(new_stdout, "This is written to stdout via new descriptor\n");
   return 0;

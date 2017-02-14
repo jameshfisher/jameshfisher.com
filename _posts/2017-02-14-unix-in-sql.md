@@ -2,7 +2,7 @@
 title: "UNIX as a SQL database"
 ---
 
-UNIX is full of tables. When we talk about "processes", we're really referring to "rows in a process table." When we talk about "file descriptors", we're really referring to "rows in a per-process file descriptor table". There are other tables, too: a global file table, an inode table, routing tables, a mount table, and other tables I don't know about.
+UNIX is full of tables. When we talk about "processes", we're really referring to "rows in a process table." When we talk about "file descriptors", we're really referring to "rows in a per-process file descriptor table". There are other tables, too: a global file table, an inode table, routing tables, a mount table, page tables, and other tables I don't know about.
 
 These "tables" are custom in-memory data structures, but can be understood relationally. Here's a simplified description of them in SQL.
 
@@ -34,5 +34,12 @@ CREATE TABLE file (
 CREATE TABLE inode_cache (
   inode_number INT PRIMARY KEY,
   -- ...
+);
+
+CREATE TABLE pages (
+  pid INT FOREIGN KEY process (pid),
+  virtual_page BITSTRING,
+  physical_frame BITSTRING FOREIGN KEY ...,
+  PRIMARY KEY (pid, virtual_page)
 );
 ```

@@ -35,6 +35,6 @@ This is more acceptable, but if you still wish to avoid the risk of offense, con
 There are other phrases in the same category as "simply":
 
 * "Just", "merely"; e.g. "just frobnicate the spacetrellis".
-* "Of course, ...", "Naturally, ..."; e.g. "Of course, the translateral bulb frobnicates the spacetrellis".
+* "Of course", "naturally", "obviously"; e.g. "Of course, the translateral bulb frobnicates the spacetrellis".
 
 In every case, removal of the word or phrase results in crisper, friendlier text.

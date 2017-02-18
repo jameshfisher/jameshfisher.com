@@ -27,7 +27,7 @@ But we can generate assembler instead:
 
 This gives us the file:
 
-```asm
+```s
 	.section	__TEXT,__text,regular,pure_instructions
 	.macosx_version_min 10, 12
 	.globl	_main

@@ -4,7 +4,7 @@ title: "macOS assembly hello world"
 
 I started with [this gist](https://gist.github.com/FiloSottile/7125822), creating this file:
 
-```asm
+```s
 global start
 section .text
 start:

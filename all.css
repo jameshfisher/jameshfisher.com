@@ -1,1 +1,6 @@
-body{max-width:50em;margin: 0 auto}*{font-family:monospace;font-size:16px}code,.highlight{background:#eee}
+body { max-width: 50em; margin: 0 auto; }
+* { font-size: 18px; }
+code, .highlight { background: #eee; }
+th { text-align: left; }
+td, th { padding-right: 1em; }
+.highlight .n, .highlight .nf { text-decoration: underline; }

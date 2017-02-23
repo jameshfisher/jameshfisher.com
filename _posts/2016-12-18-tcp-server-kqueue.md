@@ -2,7 +2,7 @@
 title: "Writing a TCP server with the `kqueue` API"
 ---
 
-I previously described how a process can serve multiple TCP clients simultaneously. The process did so using the `select` system call, which blocks waiting for one of many possible events.
+I previously described [how a process can serve multiple TCP clients simultaneously using the `select` system call]({% post_url 2016-12-16-tcp-server-select %}), which blocks waiting for one of many possible events.
 
 The `select` system call is inefficient. All this has to happen when we call `select`:
 

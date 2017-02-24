@@ -1,6 +1,5 @@
 body { max-width: 50em; margin: 0 auto; }
-* { font-size: 18px; }
+* { font-size: 18px; line-height: 1.4em; }
 code, .highlight { background: #eee; }
-th { text-align: left; }
-td, th { padding-right: 1em; }
+td, th { text-align: left; padding-right: 1em; }
 .highlight .n, .highlight .nf { text-decoration: underline; }

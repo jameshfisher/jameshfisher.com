@@ -13,5 +13,7 @@ There is a simple solution: **avoid the word "it".** Instead, refer to the refer
 This rule actually applies to a bunch of "it"-like words:
 
 * it
+* this
+* that
 * them
 * they

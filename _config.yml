@@ -9,4 +9,5 @@ defaults:
       path: ""
     values:
       layout: "default"
+      justification: "I felt like it."
 future: true

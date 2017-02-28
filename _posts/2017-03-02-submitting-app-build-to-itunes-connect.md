@@ -23,3 +23,11 @@ After "validating" again, it passed all checks, so I clicked "Upload to App Stor
 > This action could not be completed. Try again. (-22421)
 
 Hmm. I wonder if this is due to the ongoing problems with S3 which are breaking the entire internet. I'll try again in a while ...
+
+... well, it worked the second time.
+
+Next, I have to select the build from the "Prepare for Submission" page in iTunes Connect. After clicking "Save", it shows the icon from the build.
+
+Weirdly, there's a separate "App Sandbox information" section in iTunes Connect, which is not populated from my build. I selected "com.apple.security.device.camera", with a brief description of why.
+
+Finally, I just need an app description. Let's do that in another post.

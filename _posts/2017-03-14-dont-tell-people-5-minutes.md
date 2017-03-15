@@ -1,5 +1,5 @@
 ---
-title: 'Don't say "it will take five minutes"'
+title: "Don't say 'it will take five minutes'"
 ---
 
 It's commonplace to emphasize that your product will let users achieve their goal in next to no time:

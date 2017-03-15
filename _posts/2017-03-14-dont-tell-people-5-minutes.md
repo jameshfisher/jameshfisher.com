@@ -10,10 +10,12 @@ It's commonplace to emphasize that your product will let users achieve their goa
 
 > "Learn how to build an Android Chat App in 10 minutes" - [Pusher tutorials](https://pusher.com/tutorials)
 
+> "Deploy a serverless microservice With Lambda, API Gateway in ~2 minutes" - AWS console
+
 There are two possible reactions to this:
 
-* The optimist. "Just ten minutes!", he thinks, "let's do it!" One hour later, when he is still installing Gradle, he now thinks: "Ten minutes?! I must be a fool. I give up :'("
-* The realist. "Surely it can't take ten minutes. I can't believe a word this says."
+* The optimist. "Just five minutes!", he thinks, "let's do it!" One hour later, when he is still installing Gradle, he now thinks: "Five minutes?! I must be a fool. I give up 😭"
+* The realist. "Surely it can't take five minutes. I can't believe a word this says. 😒"
 
 Other guides are more honest:
 

@@ -14,7 +14,7 @@ import AppKit
 _ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
 ```
 
-This is doubly confusing, because this "`main() function`" does not invoke a `shared()` method on anything. The above docs are misleading; you are not _required_ to call this `shared()` method, because []`NSApplicationMain(...)` will do it for you](https://developer.apple.com/reference/appkit/1428499-nsapplicationmain), as it explains:
+This is doubly confusing, because this "`main()` function" does not invoke a `shared()` method on anything. The above docs are misleading; you are not _required_ to call this `shared()` method, because [`NSApplicationMain(...)` will do it for you](https://developer.apple.com/reference/appkit/1428499-nsapplicationmain), as it explains:
 
 > **Creates the application**, loads the main nib file from the application’s main bundle, and runs the application.
 

@@ -2,7 +2,7 @@
 title: "Vidrio promo video: first cut"
 ---
 
-I've made [a promo video for Vidrio](https://youtu.be/b0DP6UhlxeI). It's going on [Vidrio's home page](https://vidr.io). Here's the embed:
+I made [a promo video for Vidrio](https://youtu.be/b0DP6UhlxeI). It's going on [Vidrio's home page](https://vidr.io). Here's the embed:
 
 <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/b0DP6UhlxeI" frameborder="0"></iframe>
 

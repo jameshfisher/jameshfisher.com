@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "How do Reddit thumbnails work?"
 ---
 
 The other day [I submitted Vidrio to /r/MacApps](https://www.reddit.com/r/macapps/comments/6tgk8g/vidrio_a_macos_screencasting_app_i_made_feedback/). After submission I found that the thumbnail for the submission defaulted to a generic image, rather than being the Vidrio icon. Why?
@@ -35,4 +35,4 @@ The one to pay attention is "The Open Graph `og:image` property". Embedly follow
 
 More concretely, Open Graph defines some `meta` tags, like `og:image`, which can be used to build an embedded representation of the page elsewhere.
 
-So, here's my answer: `https://vidr.io` didn't get a thumbnail because the page doesn't include an `og:image`. I'll go about adding some Open Graph properties to the Vidrio site. 
+So, here's my answer: `https://vidr.io` didn't get a thumbnail because the page doesn't include an `og:image`. I'll go about adding some Open Graph properties to the Vidrio site.

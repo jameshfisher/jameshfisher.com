@@ -12,6 +12,6 @@ title: Jim Fisher
 {% for month in postsByMonth %}
   <h2>{{ month.name }}</h2>
   {% for post in month.items %}
-  <p><a href="{{ post.url }}">{{ post.date | date: '%Y-%m-%d' }}: {{ post.title }}</a></p>
+  <p><a href="{{ post.url }}">{{ post.date | date: '%Y-%m-%d' }}: {{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}</a></p>
   {% endfor %}
 {% endfor %}

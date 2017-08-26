@@ -28,7 +28,7 @@ layout: null
     </table>
 
     {% assign postsByWeek = site.posts | group_by_exp:"post", "post.date | date: '%Y-W%W'" %}
-    <table class="cal_table">
+    <table class="cal_table" cellspacing="10">
       <col width="14.3%"/>
       <col width="14.3%"/>
       <col width="14.3%"/>

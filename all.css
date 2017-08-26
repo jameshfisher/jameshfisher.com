@@ -3,3 +3,7 @@ body { max-width: 50em; margin: 0 auto; }
 code, .highlight { background: #eee; }
 td, th { text-align: left; padding-right: 1em; vertical-align: top; }
 .highlight .n, .highlight .nf, .highlight .nv { text-decoration: underline; }
+.cal_table { }
+.cal_table td { padding: 0.5em; border-radius: 3px; }
+.posts_cell { background-color: #eee; }
+.no_posts_cell { background-color: #ddd; }

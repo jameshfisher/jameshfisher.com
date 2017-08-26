@@ -16,35 +16,37 @@ layout: null
     </p>
 
     {% assign postsByWeek = site.posts | group_by_exp:"post", "post.date | date: '%Y-W%W'" %}
-    <table>
-      <col width="2%">
-      <col width="14%">
-      <col width="14%">
-      <col width="14%">
-      <col width="14%">
-      <col width="14%">
-      <col width="14%">
-      <col width="14%">
+    <table class="cal_table">
+      <col width="15%">
+      <col width="15%">
+      <col width="15%">
+      <col width="15%">
+      <col width="15%">
+      <col width="15%">
+      <col width="15%">
       {% for week in postsByWeek %}
         {% assign postsByDay = week.items | group_by_exp:"post", "post.date | date: '%a'" %}
         <tr>
           {% assign prev_col = 0 %}
-          <td>{{ week.name }}</td>
           {% for day in postsByDay reversed %}
           {% capture col %}{{ day.items.first.date | date: '%w' }}{% endcapture %}
           {% assign col = col | plus:0 %}
           {% if col == 0 %}{% assign col = 7 %}{% endif %}
           {% assign spacers = col | minus:prev_col | minus:1 %}
           {% for n in (1..spacers) %}
-          <td></td>
+          <td class="no_posts_cell"></td>
           {% endfor %}
-          <td>
+          <td class="posts_cell">
             {{ day.items.first.date | date: '%a, %b %-d' }}:
             {% for post in day.items %}
             <a href="{{ post.url }}">{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>{% unless forloop.last %}, {% endunless %}
             {% endfor %}
           </td>
           {% assign prev_col = col %}
+          {% endfor %}
+          {% assign spacers = 7 | minus:prev_col %}
+          {% for n in (1..spacers) %}
+          <td class="no_posts_cell"></td>
           {% endfor %}
         </tr>
       {% endfor %}

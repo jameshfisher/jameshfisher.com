@@ -41,7 +41,6 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
 
 Why is it the case that all C function declarations are implicitly `extern`?
-It's not clear to me why it's not possible to declare a non-`extern` function in C.
 If it were possible to declare a C function without making it extern,
 the above program could generate a higher-level compiler error, like this:
 
@@ -50,3 +49,36 @@ $ clang main.c
 main.c:2:1: error: function 'incr' declared but not defined
   int incr(int);
 ```
+
+In fact, it _is_ possible to declare a non-`extern` function,
+and it is done with the `static` keyword:
+
+```c
+#include <stdio.h>
+static int incr(int);
+int main() {
+  printf("incr(5) = %d\n", incr(5));
+}
+```
+
+```
+$ clang main.c
+main.c:2:12: warning: function 'incr' has internal linkage but is not defined [-Wundefined-internal]
+static int incr(int);
+           ^
+main.c:4:28: note: used here
+  printf("incr(5) = %d\n", incr(5));
+```
+
+In effect, `static` undoes the work of the implicit `extern`.
+In my opinion this is a flaw in the C language.
+The semantics should be the same as with C variables:
+default to non-external; become external when `extern` is applied.
+The `static` keyword then becomes unnecessary.
+
+|                                 | externed?                             |
+|---------------------------------|---------------------------------------|
+| `int incr(int);`                | yes, _but this is a language flaw_    |
+| `extern int incr(int);`         | yes                                   |
+| `static int incr(int);`         | no, _but this shouldn't be necessary_ |
+| `static extern int incr(int);`  | _this is not possible_                |

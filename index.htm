@@ -29,13 +29,13 @@ layout: null
 
     {% assign postsByWeek = site.posts | group_by_exp:"post", "post.date | date: '%Y-W%W'" %}
     <table class="cal_table">
-      <col width="15%">
-      <col width="15%">
-      <col width="15%">
-      <col width="15%">
-      <col width="15%">
-      <col width="15%">
-      <col width="15%">
+      <col width="14.3%"/>
+      <col width="14.3%"/>
+      <col width="14.3%"/>
+      <col width="14.3%"/>
+      <col width="14.3%"/>
+      <col width="14.3%"/>
+      <col width="14.3%"/>
       {% for week in postsByWeek %}
         {% assign postsByDay = week.items | group_by_exp:"post", "post.date | date: '%a'" %}
         <tr>

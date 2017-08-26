@@ -31,5 +31,10 @@ The process was:
    which then got cached for ages.
 1. Enable "Force TLS connections" in the Netlify dashboard.
 1. Add `<link rel="canonical" .../>` tags to point to the new domain (see tomorrow's post).
+1. Clone the repo to a new GitHub repository, `github.com/jameshfisher/jameshfisher.com`.
+   This will be the repository backing the new site,
+   and the old repository will only be kept for redirects.
+1. Point Netlify at the new repository.
+1. Add `<meta http-equiv="refresh" content="0; ..."/>` tags to the old `jameshfisher.github.io` site.
 1. I need to keep the GitHub hosting around to redirect to the new domain.
-   Maybe I'll remove it some day.
+   Maybe I'll remove the site some day, but I'll keep it around for now.

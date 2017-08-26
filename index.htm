@@ -1,0 +1,17 @@
+---
+layout: default
+title: Jim Fisher
+---
+
+<p>
+  Developer of <a href="https://vidr.io">Vidrio</a>, the future of presentation.
+  Other topics include C, UNIX, and networking.
+</p>
+
+{% assign postsByMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y-%m'" %}
+{% for month in postsByMonth %}
+  <h2>{{ month.name }}</h2>
+  {% for post in month.items %}
+  <p><a href="{{ post.url }}">{{ post.date | date: '%Y-%m-%d' }}: {{ post.title }}</a></p>
+  {% endfor %}
+{% endfor %}

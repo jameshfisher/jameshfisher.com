@@ -5,15 +5,25 @@ layout: null
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
+    <meta rel="canonical" href="https://jameshfisher.com/"/>
     <link rel="stylesheet" href="/all.css" />
   </head>
   <body style="max-width: 100%;">
-    <h1>Jim Fisher</h1>
+    <h1><a href="/">Jim Fisher</a></h1>
 
     <p>
       Developer of <a href="https://vidr.io">Vidrio</a>, the future of presentation.
       Other topics include C, UNIX, and networking.
     </p>
+
+    <table>
+      <tr>
+        <td><a href="/">Blog.</a></td>
+        <td><a href="/talks.html">Public speaking.</a></td>
+        <td><a href="/friends.html">Friends.</a></td>
+        <td><a href="https://vidr.io">Vidrio.</a></td>
+      </tr>
+    </table>
 
     {% assign postsByWeek = site.posts | group_by_exp:"post", "post.date | date: '%Y-W%W'" %}
     <table class="cal_table">
@@ -51,17 +61,6 @@ layout: null
         </tr>
       {% endfor %}
     </table>
-    <hr/>
-    <p>
-      <i>
-        I wrote this because {{page.justification}}
-        This post is my own, and not associated with my employer.
-      </i>
-    </p>
-    <a href="/">Jim.</a>
-    <a href="/talks.html">Public speaking.</a>
-    <a href="/friends.html">Friends.</a>
-    <a href="https://vidr.io">Vidrio.</a>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -51,10 +51,10 @@ layout: null
           <td class="no_posts_cell"></td>
           {% endfor %}
           <td class="posts_cell">
-            {{ day.items.first.date | date: '%a, %b %-d' }}:
             {% for post in day.items %}
             <a href="{{ post.url }}">{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>{% unless forloop.last %}, {% endunless %}
             {% endfor %}
+            <span class="date">({{ day.items.first.date | date: '%b %-d' }})</span>
           </td>
           {% assign prev_col = col %}
           {% endfor %}

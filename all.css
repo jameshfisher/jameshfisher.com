@@ -1,4 +1,6 @@
-body { font-family: sans-serif; max-width: 50em; margin: 0 auto; }
+body { margin: 0; font-family: sans-serif; }
+#navbar { text-align: center; }
+#content { max-width: 50em; padding: 2em 0; margin: 2em auto; border-bottom: 3px solid #eee; }
 * { font-size: 20px; line-height: 1.4em; }
 code, .highlight { background: #eee; }
 td, th { text-align: left; padding-right: 1em; vertical-align: top; }

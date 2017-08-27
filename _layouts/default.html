@@ -8,20 +8,23 @@
     <title>{{page.title}}</title>
   </head>
   <body>
-    <h1>{{page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
-    {{content}}
-    <hr/>
-    <p>
-      <i>
-        I wrote this because {{page.justification}}
-        This post is my own, and not associated with my employer.
-      </i>
-    </p>
-    <a href="/">Jim.</a>
-    <a href="/talks.html">Public speaking.</a>
-    <a href="/friends.html">Friends.</a>
-    <a href="https://vidr.io">Vidrio.</a>
+    <div id="content">
+      <h1>{{page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+      {{content}}
+    </div>
+    <div id="navbar">
+      <a href="/">Jim.</a>
+      <a href="/talks.html">Public speaking.</a>
+      <a href="/friends.html">Friends.</a>
+      <a href="https://vidr.io">Vidrio.</a>
 
+      <p>
+        <i>
+          I wrote this because {{page.justification}}
+          This post is my own, and not associated with my employer.
+        </i>
+      </p>
+    </div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

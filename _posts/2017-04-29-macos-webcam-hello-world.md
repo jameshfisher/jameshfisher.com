@@ -1,5 +1,5 @@
 ---
-title: "Hello world webcam application in Swift on macOS"
+title: "How to write a webcam app in Swift on macOS"
 ---
 
 Here we set up a panel which displays the device webcam.

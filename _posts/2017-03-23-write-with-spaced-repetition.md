@@ -1,5 +1,5 @@
 ---
-title: "Getting your point across with spaced repetition"
+title: "How to get your point across with spaced repetition"
 ---
 
 ![communication strategies](/assets/2017-03-23-repetition/repetition.svg)

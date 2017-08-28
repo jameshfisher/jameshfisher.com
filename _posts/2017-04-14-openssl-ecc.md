@@ -1,5 +1,5 @@
 ---
-title: "Elliptic curve crypto with OpenSSL"
+title: "How can I do elliptic curve crypto with OpenSSL?"
 justification: "I'm beginning learning SSL/TLS by going through the CLI commands"
 ---
 

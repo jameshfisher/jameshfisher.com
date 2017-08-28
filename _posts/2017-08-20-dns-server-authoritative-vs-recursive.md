@@ -1,5 +1,5 @@
 ---
-title: "Two kinds of DNS server: authoritative vs. recursive"
+title: "What is an authoritative DNS server? What is a recursive DNS server?"
 ---
 
 A DNS name server is anything serving DNS responses to DNS requests.

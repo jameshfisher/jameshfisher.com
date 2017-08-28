@@ -1,5 +1,5 @@
 ---
-title: "Inspecting Mach-O files"
+title: "How to inspect Mach-O files"
 ---
 
 `clang main.c` produces an `a.out`,

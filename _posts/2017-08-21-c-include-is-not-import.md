@@ -1,5 +1,5 @@
 ---
-title: "C `include` is not an import"
+title: "What is C `include`?"
 ---
 
 Take this C program:

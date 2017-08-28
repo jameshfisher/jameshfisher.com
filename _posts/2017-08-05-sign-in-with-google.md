@@ -1,5 +1,5 @@
 ---
-title: "Signing in with Google, from scratch"
+title: "How to let your users sign in with Google, from scratch"
 justification: "I've never implemented any pages with SSO! I need to know how it works."
 ---
 

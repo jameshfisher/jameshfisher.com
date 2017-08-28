@@ -1,5 +1,5 @@
 ---
-title: "Custom CIFilter in Swift"
+title: "How to make a custom CIFilter in Swift"
 justification: "Future Vidrio requires image filters"
 ---
 

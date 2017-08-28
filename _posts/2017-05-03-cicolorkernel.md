@@ -1,5 +1,5 @@
 ---
-title: "CIColorKernel"
+title: "What is `CIColorKernel`?"
 justification: "Vidrio's image transformations are pixel-wise, which color kernels are optimized for."
 ---
 

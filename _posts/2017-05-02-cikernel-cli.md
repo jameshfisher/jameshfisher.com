@@ -1,5 +1,5 @@
 ---
-title: "Core Image kernel CLI program"
+title: "How to make a Core Image kernel program running on the CLI"
 justification: "I'm learning Core Image and Swift"
 ---
 

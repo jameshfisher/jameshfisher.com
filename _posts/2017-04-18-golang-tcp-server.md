@@ -1,5 +1,5 @@
 ---
-title: "A TCP chat server in 55 lines of Golang"
+title: "How to write a TCP chat server in 55 lines of Golang"
 ---
 
 The go `net` package lets you write a TCP server. Here's a chat server, where every byte sent by a client is copied to every other client (including the sender).

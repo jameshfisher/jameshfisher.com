@@ -1,5 +1,5 @@
 ---
-title: "Static linking in C"
+title: "What is static linking in C?"
 ---
 
 An example of static linking.

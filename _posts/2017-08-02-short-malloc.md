@@ -1,5 +1,5 @@
 ---
-title: "A short malloc/free"
+title: "How to implement malloc/free"
 ---
 
 Here's a malloc/free implementation in few lines of code. It maps `malloc`/`free` 1-to-1 with `mmap`/`munmap`. To do so, it rounds up all desired sizes to the nearest page size. This is pretty wasteful, but saves on implementation complexity.

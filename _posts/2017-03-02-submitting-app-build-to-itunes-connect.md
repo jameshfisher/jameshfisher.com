@@ -1,5 +1,5 @@
 ---
-title: "Submitting an app build to iTunes Connect"
+title: "How to submit an app build to iTunes Connect"
 justification: "I'm releasing Vidrio this month. Part of the release process is build submission."
 ---
 

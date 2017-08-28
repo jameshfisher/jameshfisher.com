@@ -1,5 +1,5 @@
 ---
-title: "macOS system calls"
+title: "What system calls does macOS have?"
 ---
 
 My machine runs macOS 10.12. macOS is a BSD system. Let's see what facilities this OS provides to processes. We'll do so with a rough categorization of its system calls. We can see all man pages with `man -k .`, and filter to the system call pages with `grep '(2)'`. I did this and then roughly grouped the system calls by the thing they operate on. It's probably inaccurate in places; I'll update it as my knowledge improves.

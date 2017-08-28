@@ -1,5 +1,5 @@
 ---
-title: "Building a .dmg to distribute MacOS apps"
+title: "How to build a .dmg to distribute MacOS apps"
 justification: "I want to release Vidrio 1.2 as a .dmg, bypassing the Mac App Store."
 ---
 

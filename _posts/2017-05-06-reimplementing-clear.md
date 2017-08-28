@@ -1,5 +1,5 @@
 ---
-title: "Reimplementing `clear`"
+title: "What is the `clear` program?"
 ---
 
 Typing `clear` at the terminal clears your screen. How does this program work? The implementation is tiny:

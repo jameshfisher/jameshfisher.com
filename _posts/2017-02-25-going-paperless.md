@@ -1,5 +1,5 @@
 ---
-title: "Going paperless"
+title: "Should I go paperless?"
 ---
 
 I have countless pieces of paper in my flat. Most of them ...

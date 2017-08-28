@@ -1,9 +1,9 @@
 ---
-title: "www.jameshfisher.com"
+title: "This site is now on jameshfisher.com"
 ---
 
 This blog has been hosted at `jameshfisher.github.io` since I started it in November last year.
-Last month I bought the domain `jameshfisher.com`, which I'm going to use for this blog (in the `www.` subdomain).
+Last month I bought the domain `jameshfisher.com`, which I'm going to use for this blog.
 Here's the process:
 
 * Set up a CNAME from `www.jameshfisher.com` to `jameshfisher.github.io`

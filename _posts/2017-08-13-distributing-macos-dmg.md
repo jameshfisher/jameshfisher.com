@@ -1,5 +1,5 @@
 ---
-title: "Distributing a MacOS .dmg"
+title: "How to distribute a MacOS .dmg"
 justification: "I'm making Vidrio available for download outside the Mac App Store"
 ---
 

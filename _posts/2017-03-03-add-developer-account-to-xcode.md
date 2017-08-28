@@ -1,5 +1,5 @@
 ---
-title: "Adding a developer account to XCode"
+title: "How to add a developer account to XCode"
 justification: "I'm making Vidrio with XCode. I've just switched to my new MacBook Pro, which doesn't want to build Vidrio."
 ---
 

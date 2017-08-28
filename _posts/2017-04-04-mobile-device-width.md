@@ -1,5 +1,5 @@
 ---
-title: "Mobile web page device width"
+title: "What is the `viewport` meta tag? How can I display my website on mobile?"
 justification: "I'm making the Vidrio website. It should display well on mobile."
 ---
 

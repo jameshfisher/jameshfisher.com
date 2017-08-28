@@ -1,5 +1,5 @@
 ---
-title: "Apple Store release process"
+title: "What is the Apple Store release process?"
 justification: "I'm releasing Vidrio on the Mac App Store, so I need to know the process!"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Adding Open Graph meta tags to vidr.io"
+title: "What are Open Graph meta tags?"
 justification: "I want to improve Vidrio's sharing before widely publicizing it."
 ---
 

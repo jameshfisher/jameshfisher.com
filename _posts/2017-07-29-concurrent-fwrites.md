@@ -1,5 +1,5 @@
 ---
-title: "concurrent fwrites are not atomic"
+title: "Are concurrent `fwrite`s atomic? No!"
 ---
 
 Take the following C program, in which two threads concurrently use `fwrite` to the same file. Each thread loops, writing a line over and over. What do you expect the output file to look like?

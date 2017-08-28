@@ -1,5 +1,5 @@
 ---
-title: "Generating Intel and AT&T assembly with `clang`"
+title: "How to generate Intel and AT&T assembly with `clang`"
 ---
 
 Earlier I showed [how to generate assembly from C]({% post_url 2017-02-03-c-generate-assembly %}). We compile this file with `clang -S`:

@@ -1,5 +1,5 @@
 ---
-title: "C constants vs. literals"
+title: "What is the difference between C constants and C literals?"
 ---
 
 **TL;DR: In C, literals (of which there are only string literals) are lvalues; we can take their address. All other "literals" (numbers, characters) are _constants_ in C; this means they are rvalues and we cannot take their address.**

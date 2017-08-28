@@ -1,5 +1,5 @@
 ---
-title: "Writing a file with `mmap`"
+title: "How can I write a file with `mmap` in C?"
 ---
 
 Here's an example of writing to a file using `mmap`.

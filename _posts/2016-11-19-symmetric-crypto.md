@@ -1,5 +1,5 @@
 ---
-title: "Some notes on symmetric cryptography"
+title: "What is symmetric cryptography?"
 ---
 
 My understanding of cryptography is very superficial. Here are some notes.

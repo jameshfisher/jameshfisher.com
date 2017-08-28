@@ -1,5 +1,5 @@
 ---
-title: "Simplest neural network: a neuron"
+title: "What is the simplest neural network? One neuron"
 ---
 
 The basis of neural networks is the neuron. A neuron has some inputs, and based on those, either _fires_ or doesn't fire. We can interpret the decision to fire as a binary _classification_ of the inputs into two classes.

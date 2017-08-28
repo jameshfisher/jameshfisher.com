@@ -1,5 +1,5 @@
 ---
-title: "Mobile video prevent autoplay"
+title: "How to prevent autoplay on mobile"
 justification: "The vidr.io promo video autoplays when loading the page, but this is inapprops on mobile"
 ---
 

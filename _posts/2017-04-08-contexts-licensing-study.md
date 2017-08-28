@@ -1,5 +1,5 @@
 ---
-title: "Implementing a 'free trial' for macOS apps"
+title: "How to implement a 'free trial' for macOS apps"
 justification: "I want to charge for Vidrio."
 ---
 

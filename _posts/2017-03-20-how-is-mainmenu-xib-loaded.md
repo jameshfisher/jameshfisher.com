@@ -1,5 +1,5 @@
 ---
-title: "How is `MainMenu.xib` found?"
+title: "How is `MainMenu.xib` found in Cocoa?"
 justification: "I'm making Vidrio this month. I need to understand Cocoa and Swift. Nib/xib files seem fairly fundamental to the Cocoa loading process."
 ---
 

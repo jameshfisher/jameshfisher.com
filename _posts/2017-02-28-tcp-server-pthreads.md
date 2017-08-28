@@ -1,5 +1,5 @@
 ---
-title: "Writing a TCP server with the `pthread` API"
+title: "How to write a TCP server with the `pthread` API"
 ---
 
 I've described several ways to write a TCP server:

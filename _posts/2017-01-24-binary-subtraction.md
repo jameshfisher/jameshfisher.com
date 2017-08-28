@@ -1,5 +1,5 @@
 ---
-title: "Binary subtraction"
+title: "How to subtract in binary"
 ---
 
 Remember how subtraction works. We work from the least-significant bits to the most-significant, and pairwise subtract them. `1-1=0`, `1-0=1`, `0-0=0`.

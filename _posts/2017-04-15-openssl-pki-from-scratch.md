@@ -1,5 +1,5 @@
 ---
-title: "Creating a public-key infrastructure from scratch"
+title: "How to create a public-key infrastructure"
 justification: "I'm learning SSL/TLS. x509 is a big part of this, but the tools obscure the problems it solves, and the cryptographic operations involved. To understand it, I'm building it myself."
 ---
 

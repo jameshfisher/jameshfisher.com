@@ -1,5 +1,5 @@
 ---
-title: "DNS lookup in Go"
+title: "How can I do DNS lookup in Go?"
 ---
 
 Go's `"net"` package in the stdlib has standard DNS client functions.

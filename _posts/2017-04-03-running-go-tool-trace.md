@@ -1,5 +1,5 @@
 ---
-title: "Running `go tool trace`"
+title: "How to run `go tool trace`"
 justification: "I'm making screencasts of various topics using Vidrio."
 ---
 

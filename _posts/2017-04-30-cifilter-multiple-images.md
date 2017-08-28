@@ -1,5 +1,5 @@
 ---
-title: "`CIKernel` with multiple inputs"
+title: "How to pass multiple inputs to a `CIKernel`"
 justification: "Vidrio will be using `CIKernel`s with multiple inputs."
 ---
 

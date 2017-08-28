@@ -1,5 +1,5 @@
 ---
-title: "C `extern` functions"
+title: "What is an `extern` function in C?"
 ---
 
 Earlier I showed the C `extern` keyword applied to variable declarations.

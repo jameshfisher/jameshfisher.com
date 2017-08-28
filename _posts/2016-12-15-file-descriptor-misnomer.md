@@ -1,5 +1,5 @@
 ---
-title: '"File descriptor" is a misnomer'
+title: 'What is a "file descriptor", really?'
 ---
 
 People say "in UNIX, everything is a file". And that we interact with the operating system through "file descriptors".

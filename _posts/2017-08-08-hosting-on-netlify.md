@@ -1,5 +1,5 @@
 ---
-title: "Hosting this blog on Netlify"
+title: "How to move your GitHub pages blog to Netlify"
 ---
 
 I bought `jameshfisher.com` to use for this blog.

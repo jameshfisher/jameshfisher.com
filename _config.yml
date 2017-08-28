@@ -1,7 +1,8 @@
 kramdown:
   input: GFM
   hard_wrap: false
-gems:
+plugins:
+  - jekyll-sitemap
   - jekyll-coffeescript
   - jekyll-paginate
 defaults:

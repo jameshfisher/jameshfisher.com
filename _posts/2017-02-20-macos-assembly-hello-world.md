@@ -1,5 +1,5 @@
 ---
-title: "macOS assembly hello world"
+title: "How to write an assembly 'hello world' on macOS"
 ---
 
 I started with [this gist](https://gist.github.com/FiloSottile/7125822), creating this file:

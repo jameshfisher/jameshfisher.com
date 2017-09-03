@@ -14,3 +14,5 @@ Non-friends who are interesting:
   Posts on C and crypto.
 * [Kevin Simler's blog, "Melting Asphalt"](http://www.meltingasphalt.com/).
   Philosophy, anthropology, biology, CS, and things in-between.
+* [Julia Evans' blog](https://jvns.ca/).
+  Linux, networking.

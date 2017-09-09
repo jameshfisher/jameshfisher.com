@@ -1,0 +1,11 @@
+{
+  "name": "jameshfisher.com",
+  "gcm_sender_id": "432193615425",
+  "icons": [
+    {
+      "src": "/assets/jim_144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}

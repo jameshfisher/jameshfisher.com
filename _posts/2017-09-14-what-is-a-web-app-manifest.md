@@ -13,6 +13,15 @@ for example:
 ```json
 {
   "name": "jameshfisher.com",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/assets/jim_144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone",
   "gcm_sender_id": "432193615425"
 }
 ```
@@ -27,3 +36,9 @@ The manifest gives the web app things which make it more like "real applications
 It's not clear to me why all this stuff has to go in a separate JSON file.
 It could all go directly in the `<meta>` tags for the page.
 We already have a million different `<meta>` tags for other things.
+
+In Chrome, you can see the contents of the manifest
+in Developer Tools under Application > Manifest.
+On thing you can do here is "Add to homescreen".
+Now this blog can be on your homescreen,
+which I'm sure you've all been waiting for.

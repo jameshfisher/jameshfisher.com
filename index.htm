@@ -9,6 +9,13 @@ layout: null
     <link rel="stylesheet" href="/all.css" />
     <link rel="icon" type="image/png" href="/assets/jim_128.png" />
     <title>Jim Fisher</title>
+    <style>
+      div.calendar_week { display: flex; }
+      div.calendar_week:nth-child(1) { border-top: 1px solid #aaa; }
+      div.day { flex-grow: 1; padding: 0.5em; border: 1px solid #aaa; }
+      div.day.day_no_posts { background-color: #f9f9f9; }
+      .jim_image { display: block; margin: 2em auto; width: 256px; padding: 10px; box-shadow: 2px 2px 10px #ccc; transform: rotate(2deg); }
+    </style>
   </head>
   <body style="max-width: 100%;">
     <img src="/assets/jim_512.jpg" class="jim_image"/>
@@ -38,17 +45,10 @@ layout: null
     </table>
 
     {% assign postsByWeek = site.posts | group_by_exp:"post", "post.date | date: '%Y-W%W'" %}
-    <table class="cal_table" cellspacing="10">
-      <col width="14.3%"/>
-      <col width="14.3%"/>
-      <col width="14.3%"/>
-      <col width="14.3%"/>
-      <col width="14.3%"/>
-      <col width="14.3%"/>
-      <col width="14.3%"/>
+    <div class="calendar">
       {% for week in postsByWeek %}
         {% assign postsByDay = week.items | group_by_exp:"post", "post.date | date: '%a'" %}
-        <tr>
+        <div class="calendar_week">
           {% assign prev_col = 0 %}
           {% for day in postsByDay reversed %}
           {% capture col %}{{ day.items.first.date | date: '%w' }}{% endcapture %}
@@ -56,23 +56,23 @@ layout: null
           {% if col == 0 %}{% assign col = 7 %}{% endif %}
           {% assign spacers = col | minus:prev_col | minus:1 %}
           {% for n in (1..spacers) %}
-          <td class="no_posts_cell"></td>
+          <div class="day day_no_posts"></div>
           {% endfor %}
-          <td class="posts_cell">
+          <div class="day day_posts">
             {% for post in day.items %}
             <a href="{{ post.url }}">{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>{% unless forloop.last %}, {% endunless %}
             {% endfor %}
             <span class="date">({{ day.items.first.date | date: '%b %-d' }})</span>
-          </td>
+          </div>
           {% assign prev_col = col %}
           {% endfor %}
           {% assign spacers = 7 | minus:prev_col %}
           {% for n in (1..spacers) %}
-          <td class="no_posts_cell"></td>
+          <div class="day day_no_posts"></div>
           {% endfor %}
-        </tr>
+        </div>
       {% endfor %}
-    </table>
+    </div>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

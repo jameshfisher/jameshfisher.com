@@ -10,10 +10,12 @@ layout: null
     <link rel="icon" type="image/png" href="/assets/jim_128.png" />
     <title>Jim Fisher</title>
     <style>
+      div.calendar { border: 1px solid #aaa; }
       div.calendar_week { display: flex; }
-      div.calendar_week:nth-child(1) { border-top: 1px solid #aaa; }
-      div.day { flex-grow: 1; padding: 0.5em; border: 1px solid #aaa; }
-      div.day.day_no_posts { background-color: #f9f9f9; }
+      div.day { flex-grow: 1; border: 1px solid #aaa; display: flex; flex-direction: column; }
+      div.post { flex-grow: 1; padding: 0.5em; border-bottom: 2px solid #aaa; }
+      div.post:last-child { border: none; }
+      div.day.day_no_posts { padding: 0.5em; background-color: #f9f9f9; }
       .jim_image { display: block; margin: 2em auto; width: 256px; padding: 10px; box-shadow: 2px 2px 10px #ccc; transform: rotate(2deg); }
     </style>
   </head>
@@ -61,9 +63,11 @@ layout: null
           {% endfor %}
           <div class="day day_posts">
             {% for post in day.items %}
-            <a href="{{ post.url }}">{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>{% unless forloop.last %}, {% endunless %}
+            <div class="post">
+              <a href="{{ post.url }}">{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+              <span class="date">({{ day.items.first.date | date: '%b %-d' }})</span>
+            </div>
             {% endfor %}
-            <span class="date">({{ day.items.first.date | date: '%b %-d' }})</span>
           </div>
           {% assign prev_col = col %}
           {% endfor %}

@@ -35,6 +35,6 @@ $ curl -H 'Authorization: key=MY_SERVER_KEY' -H 'Content-Type: application/json'
 ```
 
 Hooray, I get a push notification!
-But This borked API means your application server needs
+But this borked API means your application server needs
 separate logic for every possible push service!
 This is pretty rough.

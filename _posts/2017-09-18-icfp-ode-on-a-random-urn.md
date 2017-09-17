@@ -82,7 +82,7 @@ If there are 6 leaves in the tree,
 expand node 6 to make room.
 To delete a leaf from a tree with 7 leaves,
 contract node 6,
-and put the
+copying one child into node 6, and the other over the deleted leaf.
 
 Actually, the urn algorithms don't do this either.
 They expand the nodes in the following order:

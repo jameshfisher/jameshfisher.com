@@ -14,6 +14,10 @@ self.addEventListener("push", (ev) => {
   self.registration.showNotification("Received push!");
 });
 
+self.addEventListener("notificationclick", (ev) => {
+  clients.openWindow("https://jameshfisher.com/");
+});
+
 self.addEventListener("fetch", (ev) => {
   // Pass-through; browser should do its normal thing.
   // This is here to pass Chrome's tests for adding a web app to the home screen.

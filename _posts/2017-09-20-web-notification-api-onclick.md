@@ -31,6 +31,6 @@ This can be done with `clients.openWindow`:
 
 ```js
 self.addEventListener("notificationclick", (ev) => {
-  clients.openWindow("/");
+  clients.openWindow("https://jameshfisher.com/");
 });
 ```

@@ -1,8 +1,11 @@
 url: https://jameshfisher.com
+title: "Jim Fisher's blog"
+author: "Jim Fisher"
 kramdown:
   input: GFM
   hard_wrap: false
 plugins:
+  - jekyll-feed
   - jekyll-sitemap
   - jekyll-coffeescript
   - jekyll-paginate

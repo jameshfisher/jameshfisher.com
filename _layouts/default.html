@@ -5,6 +5,8 @@
     <link rel="canonical" href="https://jameshfisher.com{{ page.url }}"/>
     <link rel="stylesheet" href="/all.css" />
     <link rel="icon" type="image/png" href="/assets/jim_128.png" />
+    <link rel="manifest" href="/manifest.json"/>
+    <link rel="alternate" type="application/rss+xml" href="https://jameshfisher.com/feed.xml" />
     <title>{{page.title}}</title>
   </head>
   <body>
@@ -17,6 +19,7 @@
       <a href="/talks.html">Public speaking.</a>
       <a href="/friends.html">Friends.</a>
       <a href="https://vidr.io">Vidrio.</a>
+      <a href="https://jameshfisher.com/feed.xml">RSS feed.</a>
 
       <p>
         <i>
@@ -33,7 +36,11 @@
 
       ga('create', 'UA-90722538-1', 'auto');
       ga('send', 'pageview');
-
+    </script>
+    <script>
+    if (window.navigator && window.navigator.serviceWorker) {
+      window.navigator.serviceWorker.register("/service-worker.js");
+    }
     </script>
   </body>
 </html>

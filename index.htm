@@ -13,7 +13,7 @@ layout: null
     {% include all.css %}
     <style>
       div.calendar { border: 1px solid #aaa; }
-      div.calendar_week { display: flex; }
+      div.calendar_week { display: flex; flex-direction: row-reverse; }
       div.day { flex-grow: 1; border: 1px solid #aaa; display: flex; flex-direction: column; }
       a.post { display: block; flex-grow: 1; padding: 0.5em; border-bottom: 2px solid #aaa; }
       a.post:hover { background-color: antiquewhite; }
@@ -46,12 +46,12 @@ layout: null
       {% for week in postsByWeek %}
         {% assign postsByDay = week.items | group_by_exp:"post", "post.date | date: '%a'" %}
         <div class="calendar_week">
-          {% assign prev_col = 0 %}
-          {% for day in postsByDay reversed %}
+          {% assign prev_col = 8 %}
+          {% for day in postsByDay %}
           {% capture col %}{{ day.items.first.date | date: '%w' }}{% endcapture %}
           {% assign col = col | plus:0 %}
           {% if col == 0 %}{% assign col = 7 %}{% endif %}
-          {% assign spacers = col | minus:prev_col | minus:1 %}
+          {% assign spacers = prev_col | minus:col | minus:1 %}
           {% for n in (1..spacers) %}
           <div class="day day_no_posts"></div>
           {% endfor %}
@@ -65,7 +65,7 @@ layout: null
           </div>
           {% assign prev_col = col %}
           {% endfor %}
-          {% assign spacers = 7 | minus:prev_col %}
+          {% assign spacers = prev_col | minus:1 %}
           {% for n in (1..spacers) %}
           <div class="day day_no_posts"></div>
           {% endfor %}

@@ -23,6 +23,8 @@ layout: null
     </style>
   </head>
   <body style="max-width: 100%;">
+    {% include navbar.html %}
+
     <img src="/assets/jim_512.jpg" class="jim_image"/>
 
     <h1><a href="/">Jim Fisher</a></h1>
@@ -40,16 +42,6 @@ layout: null
       <a href="https://eegg.wordpress.com/">Wordpress</a>,
       <a href="https://medium.com/@MrJamesFisher">Medium</a>.
     </p>
-
-    <table>
-      <tr>
-        <td><a href="/">Blog.</a></td>
-        <td><a href="/talks.html">Public speaking.</a></td>
-        <td><a href="/friends.html">Friends.</a></td>
-        <td><a href="https://vidr.io">Vidrio.</a></td>
-        <a href="https://jameshfisher.com/feed.xml">RSS feed.</a>
-      </tr>
-    </table>
 
     {% assign postsByWeek = site.posts | group_by_exp:"post", "post.date | date: '%Y-W%W'" %}
     <div class="calendar">

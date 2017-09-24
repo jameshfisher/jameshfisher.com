@@ -14,6 +14,8 @@
       "type": "image/png"
     }
   ],
+  "background_color": "white",
+  "theme_color": "white",
   "display": "standalone",
   "gcm_sender_id": "432193615425"
 }

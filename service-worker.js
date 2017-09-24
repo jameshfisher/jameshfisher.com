@@ -11,7 +11,12 @@ self.addEventListener("sync", (ev) => {
 });
 
 self.addEventListener("push", (ev) => {
-  self.registration.showNotification("Received push!");
+  let data = ev.data.json();
+  if (data.method === "notification") {
+    self.registration.showNotification(data.title, data.options);
+  } else {
+    console.log("Received push with unknown method: ", data, ev);
+  }
 });
 
 self.addEventListener("notificationclick", (ev) => {

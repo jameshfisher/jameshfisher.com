@@ -7,6 +7,11 @@
       "src": "/assets/jim_144.png",
       "sizes": "144x144",
       "type": "image/png"
+    },
+    {
+      "src": "/assets/jim_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "display": "standalone",

@@ -105,7 +105,6 @@ req.addEventListener("success", () => {
 ```
 
 With our `db` handle in place, we can get/put items:
-To put an item:
 
 ```js
 function putEmployee(employee) {

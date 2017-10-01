@@ -10,7 +10,7 @@ title: "WebGL shader uniforms"
     void main(void){
       mediump float xd = gl_FragCoord.x-mouse_pos.x;
       mediump float yd = gl_FragCoord.y-mouse_pos.y;
-      mediump float c = mod(sqrt(xd*xd + yd*yd), 20.0)/30.0;
+      mediump float c = mod(sqrt(xd*xd + yd*yd), mouse_pos.y/2.0) / mouse_pos.x;
       gl_FragColor=vec4(c,c,c,1);
     }</textarea>
     <div id="compilationError"></div>

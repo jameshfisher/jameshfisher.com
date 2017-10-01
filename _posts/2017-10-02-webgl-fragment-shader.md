@@ -3,7 +3,7 @@ title: "WebGL fragment shader"
 ---
 
 <div style="display: flex;">
-  <canvas width="200" height="200" style="height: 200px; width: 200px;" id="triangleCanvas"></canvas>
+  <canvas width="200" height="200" style="height: 200px; width: 200px;" id="fragmentCanvas"></canvas>
   <div style="display: flex; flex-direction: column; flex-grow: 1;">
     <textarea id="fragmentShader" cols="60" rows="6">void main(void){
       mediump float xd = gl_FragCoord.x-100.0;
@@ -15,7 +15,7 @@ title: "WebGL fragment shader"
   </div>
 </div>
 <script>
-  const canvas = document.getElementById('triangleCanvas');
+  const canvas = document.getElementById('fragmentCanvas');
   const gl = canvas.getContext('webgl');
   gl.viewport(0,0,canvas.width,canvas.height);
   const vertexBuf = gl.createBuffer();

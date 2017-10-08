@@ -1,24 +1,21 @@
 ---
 title: "WebGL Lambertian shading"
-draft: true
 ---
 
 <div style="display: flex;">
-  <canvas width="512" height="512" id="fragmentCanvas"></canvas>
+  <canvas width="512" height="512" style="width: 256px; height: 256px;" id="fragmentCanvas"></canvas>
   <div style="display: flex; flex-direction: column; flex-grow: 1;">
-    <textarea id="fragmentShader" cols="60" rows="8">
+    <textarea id="fragmentShader" cols="60" rows="15">
       precision mediump float;
       uniform mediump vec2 mouse_pos;
       uniform sampler2D normal_map;
       void main(void) {
-        float x = gl_FragCoord.x/512.0;
-        float y = gl_FragCoord.y/512.0;
-        vec4 light_pos = vec4(mouse_pos.x, mouse_pos.y, 0.5, 1.0);
-        vec4 surface_pos = vec4(x, y, 0.0, 1.0);
-        vec4 s = texture2D(normal_map, vec2(x, y));
-        vec4 normal_direction = vec4(s.r, s.g, s.b, 0.0);
-        vec4 light_direction = normalize(light_pos - surface_pos);  
-        float intensity = dot(normal_direction, light_direction)/2.0;
+        vec2 frag = vec2(gl_FragCoord)/512.0;
+        vec4 light_pos = vec4(mouse_pos, 0.5, 1.0);
+        vec4 surface_pos = vec4(frag, 0.0, 1.0);
+        vec4 normal_direction = vec4(vec3(texture2D(normal_map, frag))*2.0-1.0, 0.0);
+        vec4 light_direction = normalize(light_pos-surface_pos);  
+        float intensity = dot(normal_direction, light_direction);
         gl_FragColor = vec4(intensity, intensity, intensity, 1.0);
       }</textarea>
     <div id="compilationError"></div>
@@ -87,10 +84,38 @@ draft: true
     errEl.innerText = '';
   }
   canvas.onmousemove = function(ev) {
-    mousePos = {x: ev.offsetX/512, y: (512-ev.offsetY)/512};
+    mousePos = {x: ev.offsetX/256, y: (256-ev.offsetY)/256};
     draw();
   }
   newShaderFromTextarea();
 </script>
 
-Maybe you can fix the bug in the program above for me?
+Move your cursor around the square above.
+Your cursor moves a light which illuminates a decorative relief.
+This is implemented with WebGL, using the fragment shader to the right.
+The fragment shader illuminates each pixel by consulting the following "normal map" image:
+
+<div>
+  <img src="/assets/crossnrm.jpg" style="width: 256px; height: 256px;" />
+</div>
+
+The normal map tells us, for each pixel, the "normal" at that point on the surface.
+The normal is a vector which points perpendicular to the surface.
+This vector has XYZ components which are encoded as RGB values.
+The X component is encoded by the amount of red, and so on.
+The red is in the range `[0, 1]`,
+and we convert this to the X component in the range `[-1, 1]`.
+
+The surface of the tile is completely matte.
+It's like wood, not like metal.
+This is because the shader uses "Lambertian shading",
+which is a model of matte objects.
+In Lambertian shading,
+the intensity is proportional to `dot(normal_direction, light_direction)`.
+We can interpret this formula as answering the question,
+"is the surface facing the light?".
+Note in particular that this formula does not depend on `camera_direction`.
+The illumination of shiny objects depends on `camera_direction`
+because light is reflected towards the camera.
+The illumination of matte objects does not depend on `camera_direction`
+because the matte surface scatters light equally in all directions.

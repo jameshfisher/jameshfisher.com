@@ -119,3 +119,6 @@ The illumination of shiny objects depends on `camera_direction`
 because light is reflected towards the camera.
 The illumination of matte objects does not depend on `camera_direction`
 because the matte surface scatters light equally in all directions.
+
+_Thanks to Ben Ellison, Andy Jones, Luís Fonseca, and Callum Oakley
+for helping me debug this over many beers._

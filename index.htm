@@ -60,10 +60,12 @@ layout: null
           {% endfor %}
           <div class="day day_posts">
             {% for post in day.items %}
+            {% unless post.draft %}
             <a class="post" href="{{ post.url }}">
               {{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}
               <span class="date">({{ day.items.first.date | date: '%b %-d' }})</span>
             </a>
+            {% endunless %}
             {% endfor %}
           </div>
           {% assign prev_col = col %}

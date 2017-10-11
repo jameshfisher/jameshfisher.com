@@ -7,6 +7,7 @@ title: Friends
 * [Dru Topliceanu](http://alexandrutopliceanu.ro/), my friend from work (at Pusher).
 * [Will Sewell](http://willsewell.com/), my friend from work (at Pusher).
   I've [given some public talks with him](/talks.html).
+* [Luka Bratos](https://lukabratos.me/), my friend from work (at Pusher).
 
 Non-friends who are interesting:
 
@@ -16,3 +17,4 @@ Non-friends who are interesting:
   Philosophy, anthropology, biology, CS, and things in-between.
 * [Julia Evans' blog](https://jvns.ca/).
   Linux, networking.
+* [Lin Clark](https://twitter.com/codecartoons).

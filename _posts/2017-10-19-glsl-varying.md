@@ -63,10 +63,10 @@ title: "GLSL varying variables"
 </script>
 
 Above you see a square where each corner has a color
-and the rest of the square gets its color by interpolates between these corners.
+and the rest of the square gets its color by interpolating between these corners.
 The square is drawn using WebGL.
 There is one draw call, with four vertices: the four corners.
-Each vertex is assigned a color attribute,
+Each vertex is assigned a color `attribute`,
 and WebGL interpolates between these colors using a `varying` variable.
 
 ```glsl
@@ -96,9 +96,14 @@ In each call to the fragment shader,
 the value of `v_color` comes from prior vertex shader calls.
 The precise value for a fragment is an interpolation of the value from nearby vertices.
 
-Here's how we pass in multiple attributes:
+To pass in the initial color,
+I use another `attribute` in the vertex shader, `a_color`.
+Here's how we pass in the two attributes, `a_coord` and `a_color`:
 
 ```js
+const coordLoc = gl.getAttribLocation(prog, "a_coord");
+const colorLoc = gl.getAttribLocation(prog, "a_color");
+
 const vertexBuf = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuf);
 gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([

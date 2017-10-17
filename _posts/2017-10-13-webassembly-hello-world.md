@@ -32,7 +32,7 @@ I didn't write it myself;
 instead, I compiled it from a program in WAST ("Web Abstract Syntax Tree") format.
 You can see the exports, imports and call logic in the WAST program:
 
-```wast
+```
 (module
   (func $i (import "imports" "log") (param i32))
   (func (export "e")

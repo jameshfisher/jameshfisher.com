@@ -44,9 +44,9 @@ I can't be bothered with all this TYPING!
 
 Together, time, thought and typing are **The Three Ts.**
 When designing your service,
-remember: **TTT, not $$$.**
+remember: **TTT, not `$$$`.**
 How can we improve the sign-up form, and get more users?
-The traditional way is to reduced perceived $$$: "Sign up for a free account".
+The traditional way is to reduced perceived `$$$`: "Sign up for a free account".
 No!
 Instead, reduce TTT.
 One way to reduce the TTT of sign-up is by using Single Sign-On: "Log in with Google".
@@ -73,5 +73,5 @@ Amazon knows this: "Buy now with one click"!
 One click is real quick,
 and also tells you that you won't need to think or type.
 
-Finally, many people are willing to pay $$$ for lower TTT.
-If you reduce perceived TTT, you can increase $$$!
+Finally, many people are willing to pay `$$$` for lower TTT.
+If you reduce perceived TTT, you can increase `$$$`!

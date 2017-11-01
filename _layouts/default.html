@@ -13,12 +13,18 @@
   </head>
   <body>
     <div id="content">
-      <h1>{{page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+      <h1>{% if page.author != "jim" %}Guest post: {% endif %}{{page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+      {% if page.author != "jim" %}<h2>By <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a></h2>{% endif %}
       {{content}}
       <p>
         <i>
-          I wrote this because {{page.justification}}
-          This post is my own, and not associated with my employer.
+          {% if page.author == "jim" %}
+            I wrote this because {{page.justification}}
+            This post is not associated with my employer.
+          {% else %}
+            <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a> wrote this.
+            This post is presumably not associated with their employer.
+          {% endif %}
         </i>
       </p>
       {% include navbar.html %}

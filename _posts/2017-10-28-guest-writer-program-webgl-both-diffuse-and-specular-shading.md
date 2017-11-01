@@ -1,6 +1,6 @@
 ---
-title: "Guest Writer Program: WebGL shading: both diffuse and specular"
-justification: "Luís was kind enough to write this post, so I just accepted it."
+title: "WebGL shading: both diffuse and specular"
+author: luis
 ---
 
 <div>

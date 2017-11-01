@@ -15,4 +15,5 @@ defaults:
     values:
       layout: "default"
       justification: "I felt like it."
+      author: jim
 future: true

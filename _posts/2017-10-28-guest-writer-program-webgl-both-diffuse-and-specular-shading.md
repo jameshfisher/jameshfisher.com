@@ -105,11 +105,12 @@ justification: "Luís was kind enough to write this post, so I just accepted it.
   setupCanvas('both');
 </script>
 
-Hi, I'm [Luís](http://luisfonseca.xyz). Just doing a quick variation on [Jims' previous post about specular and
+Hi, I'm [Luís](http://luisfonseca.xyz).
+Just doing a quick variation on [Jims' previous post about specular and
 diffuse lighting]({% post_url 2017-10-12-webgl-specular-diffuse-shading %}).
 
 You don't need to decide on going for one of those types.
 You can mix both to try to get a better effect.
 
-This as you move your cursor around the image above, press the `s` or `d` keys
-continuously for more specular or diffuse lightning, respectively.
+As you move your cursor around the image above, press the `s` or `d` keys
+continuously for more specular or diffuse lighting, respectively.

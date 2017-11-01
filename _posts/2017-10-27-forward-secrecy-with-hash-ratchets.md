@@ -4,7 +4,7 @@ title: "Forward secrecy with hash ratchets"
 
 Alice wants to send messages to Bob.
 These messages are sensitive, so Alice and Bob take precautions.
-When they meet, they decide on a shared secret `S` with which to encrypt the messages.
+When they meet, they decide on a shared secret _S_ with which to encrypt the messages.
 Each sent message is encrypted with the shared secret,
 and each received message is decrypted with the shared secret.
 
@@ -110,8 +110,8 @@ The most common one-way functions are _cryptographic hash functions_ like SHA256
 > Each time a new Message Key is needed by a message sender,
 > it is calculated as:
 >
-> 1. Message Key = HMAC-SHA256(Chain Key, 0x01).
-> 2. The Chain Key is then updated as Chain Key = HMAC-SHA256(Chain Key, 0x02).
+> 1. `Message Key = HMAC-SHA256(Chain Key, 0x01)`.
+> 2. The Chain Key is then updated as `Chain Key = HMAC-SHA256(Chain Key, 0x02)`.
 >
 > This causes the Chain Key to “ratchet” forward,
 > and also means that a stored Message Key can’t be used to
@@ -121,3 +121,13 @@ The WhatsApp whitepaper talks of "message keys" and "chain keys",
 but the structure is exactly that of a pseudo-random number generator.
 The "chain key" is the PRNG state.
 The "message key" is the random number output, to be used as a one-time key.
+
+HMAC is usually a way to sign data:
+`signature = HMAC-SHA256(secret, plaintext)`.
+In this terminology, the `Message Key` is the signature
+resulting from signing the message `0x01` with the secret `Chain Key`.
+But this is misleading.
+WhatsApp is using the `HMAC-SHA256` function for a different purpose:
+a hash function with two inputs.
+I believe that instead of `HMAC-SHA256(Chain Key, 0x01)`
+they could have used something like `SHA256(Chain Key + 0x01)`.

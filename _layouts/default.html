@@ -4,12 +4,18 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="white"/>
+    <meta property="og:title" content="{{page.title}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="{{site.url}}{% link /assets/jim_128.png %}"/>
+    <meta property="og:url" content="https://jameshfisher.com{{ page.url }}"/>
+    <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
+    <meta property="og:site_name" content="jameshfisher.com"/>
     <link rel="canonical" href="https://jameshfisher.com{{ page.url }}"/>
-    {% include all.css %}
-    <link rel="icon" type="image/png" href="/assets/jim_128.png" />
-    <link rel="manifest" href="/manifest.json"/>
+    <link rel="icon" type="image/png" href="{{site.url}}{% link /assets/jim_128.png %}" />
+    <link rel="manifest" href="{% link manifest.json %}"/>
     <link rel="alternate" type="application/rss+xml" href="https://jameshfisher.com/feed.xml" />
     <title>{{page.title}}</title>
+    {% include all.css %}
   </head>
   <body>
     <div id="content">
@@ -40,7 +46,7 @@
     </script>
     <script>
     if (window.navigator && window.navigator.serviceWorker) {
-      window.navigator.serviceWorker.register("/service-worker.js");
+      window.navigator.serviceWorker.register("{% link service-worker.js %}");
     }
     </script>
   </body>

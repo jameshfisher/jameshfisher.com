@@ -1,4 +1,5 @@
-<!doctype html>
+{% capture newline %}
+{% endcapture %}<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
@@ -6,9 +7,9 @@
     <meta name="theme-color" content="white"/>
     <meta property="og:title" content="{{page.title}}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="{{site.url}}{% link /assets/jim_128.png %}"/>
+    <meta property="og:image" content="{{site.url}}{% link /assets/jim_512.jpg %}"/>
     <meta property="og:url" content="https://jameshfisher.com{{ page.url }}"/>
-    <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
+    <meta property="og:description" content="{{ page.excerpt | strip_html | replace: newline, ' ' }}"/>
     <meta property="og:site_name" content="jameshfisher.com"/>
     <link rel="canonical" href="https://jameshfisher.com{{ page.url }}"/>
     <link rel="icon" type="image/png" href="{{site.url}}{% link /assets/jim_128.png %}" />

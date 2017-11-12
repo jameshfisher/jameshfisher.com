@@ -22,7 +22,7 @@ mother texted me to tell me to answer the phone.
 I hate telephones.
 
 Last year, I received a series of 3am calls.
-At the dial tone,
+At the ring tone,
 which is set to a horrifically unadjustable volume,
 I was woken from deep sleep to deep panic.
 Alone,

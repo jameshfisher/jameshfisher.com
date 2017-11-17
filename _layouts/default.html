@@ -19,6 +19,9 @@
     {% include all.css %}
   </head>
   <body>
+    <a href="/" style="display: block; transform: rotate(-5deg); margin: 0 2em 0 -1.6em; float: left;">
+      <img src="/assets/jim_512.jpg" class="jim_image" style="height: 128px; width: 100px; object-fit: cover; padding: 5px;"/>
+    </a>
     <div id="content">
       <h1>{% if page.author != "jim" %}Guest post: {% endif %}{{page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
       {% if page.author != "jim" %}<h2>By <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a></h2>{% endif %}

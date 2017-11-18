@@ -118,18 +118,18 @@ PubNub charges 10 cents per device per month.
 Zendesk charges £5 per agent per month.
 Slack charges £6.30 per active user per month.
 
-So you price your chat app at $5 per user per month,
-and don't mention messages, storage, TLS, et cetera.
+So you price your chat app at $5 per user per month.
 But don't forget about your costs!
 A customer could game your system
 by creating a single-user chat app,
-and having all of their employees log in as the same user.
-They'll generate big costs for you, but pay almost nothing.
+and having all of their employees log in as the same user,
+generating millions of messages and images.
+They'll be a big cost to you, but pay almost nothing.
 The standard solution to this is _limits_.
 Instead of charging per message, you set a message limit per user.
 Instead of charging per stored image, you set an image limit per user.
 
-Maybe in your business, the proxies for cost similar to the proxies for value.
+Maybe in your business, the proxies for cost are similar to the proxies for value.
 For example, you're starting a cloud computing company,
 where your cost is in CPU-hours,
 and your customers value you based on CPU-hours.
@@ -137,7 +137,8 @@ You might think this coincidence is excellent:
 you get to extract the maximum from your customer,
 while ensuring you cover your costs.
 But beware!
-This coincidence probably means you're in a competitive commodity market.
+This coincidence probably means you're in a competitive commodity market,
+where profits are poor.
 
 You want to be in markets where
 the proxies for value are wildly different to the proxies for cost.

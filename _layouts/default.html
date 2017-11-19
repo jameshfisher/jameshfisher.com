@@ -20,7 +20,7 @@
   </head>
   <body>
     <a href="/" style="display: block; transform: rotate(-5deg); margin: 0 2em 0 -1.6em; float: left;">
-      <img src="/assets/jim_512.jpg" class="jim_image" style="height: 128px; width: 100px; object-fit: cover; padding: 5px;"/>
+      <video autoplay loop src="{% link /assets/jim.webm %}" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;"></video>
     </a>
     <div id="content">
       <h1>{% if page.author != "jim" %}Guest post: {% endif %}{{page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>

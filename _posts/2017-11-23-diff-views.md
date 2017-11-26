@@ -12,7 +12,7 @@ We can use "diff views" to differentiate the code from the context.
 Often, the code under discussion is a modification:
 "to implement X, change the code as follows".
 For instance,
-in [an earlier post about implementing promises]({% post_url 2016-11-07-promise-implementation %}),
+in [an earlier post about implementing promises]({% post_url 2017-11-07-promise-implementation %}),
 this would have been clearer:
 
 > When a callback is registered late,

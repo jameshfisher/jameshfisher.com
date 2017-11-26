@@ -1,6 +1,7 @@
 ---
 title: "I hate telephones"
 justification: "I hate telephones."
+tags: ["fave"]
 ---
 
 In many polls,

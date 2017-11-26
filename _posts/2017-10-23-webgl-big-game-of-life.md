@@ -1,5 +1,6 @@
 ---
 title: "Giant Game of Life"
+tags: ["programming", "graphics", "webgl"]
 ---
 
 <canvas id="canvas" height="1024" width="1024" style="image-rendering: pixelated; border: 1px solid black;"></canvas>

@@ -1,5 +1,6 @@
 ---
 title: "GLSL varying variables"
+tags: ["programming", "graphics", "webgl"]
 ---
 
 <canvas id="canv" width="200" height="200"></canvas>

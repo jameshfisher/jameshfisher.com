@@ -1,5 +1,6 @@
 ---
 title: "What are promises in JavaScript?"
+tags: ["programming", "javascript"]
 ---
 
 A `Promise` in JavaScript is a object

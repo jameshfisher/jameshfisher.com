@@ -1,5 +1,6 @@
 ---
 title: "Guest writers"
+tags: ["blog"]
 ---
 
 My friend Luís modified one of my blog posts on WebGL shaders,

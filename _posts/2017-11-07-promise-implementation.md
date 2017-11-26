@@ -1,7 +1,7 @@
 ---
 title: "A JavaScript Promises implementation"
 justification: "I use Promises all the time."
-tags: ["programming"]
+tags: ["programming", "javascript"]
 ---
 
 You can implement the `Promise` pattern yourself.

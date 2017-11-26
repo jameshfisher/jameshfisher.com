@@ -1,5 +1,6 @@
 ---
 title: "Adding Open Graph meta tags to jameshfisher.com"
+tags: ["blog"]
 ---
 
 My blog posts are auto-posted to Facebook,

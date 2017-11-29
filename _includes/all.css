@@ -5,6 +5,8 @@ body { margin: 0 1em; font-family: sans-serif; }
 code, .highlight { background: #eee; }
 td, th { text-align: left; padding-right: 1em; vertical-align: top; }
 .highlight .n, .highlight .nf, .highlight .nv { text-decoration: underline; }
+.language-diff .highlight .gi { color: #22863a; background-color: #f0fff4; }
+.language-diff .highlight .gd { color: #b31d28; background-color: #ffeef0; }
 a:link, a:visited { text-decoration: none; }
 .date { font-size: 0.7em; }
 .jim_image { display: block; box-shadow: 2px 2px 10px #ccc; }

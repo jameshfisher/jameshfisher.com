@@ -5,6 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="white"/>
+    <meta name="keywords" content="{% for tag in page.tags %}{{tag}}{% if forloop.last == false %}, {% endif %}{% endfor %}"/>
     <meta property="og:title" content="{{page.title}}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="{{site.url}}{% link /assets/jim_512.jpg %}"/>
@@ -20,22 +21,25 @@
   </head>
   <body>
     <a href="/" style="display: block; transform: rotate(-5deg); margin: 0 2em 0 -1.6em; float: left;">
-      <video autoplay loop src="{% link /assets/jim.webm %}" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;"></video>
+      <video autoplay loop src="{% link /assets/jim.webm %}" poster="{% link /assets/jim_512.jpg %}" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;"></video>
     </a>
     <div id="content">
       <h1>{% if page.author != "jim" %}Guest post: {% endif %}{{page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
       {% if page.author != "jim" %}<h2>By <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a></h2>{% endif %}
       {{content}}
+      <hr/>
       <p>
-        <i>
-          {% if page.author == "jim" %}
-            I wrote this because {{page.justification}}
-            This post is not associated with my employer.
-          {% else %}
-            <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a> wrote this.
-            This post is presumably not associated with their employer.
-          {% endif %}
-        </i>
+        Tags:
+        {% for tag in page.tags %}{{tag}}{% if forloop.last == false %}, {% endif %}{% endfor %}.
+      </p>
+      <p>
+        {% if page.author == "jim" %}
+          I wrote this because {{page.justification}}
+          This post is not associated with my employer.
+        {% else %}
+          <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a> wrote this.
+          This post is presumably not associated with their employer.
+        {% endif %}
       </p>
       {% include navbar.html %}
     </div>

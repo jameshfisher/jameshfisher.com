@@ -28,10 +28,12 @@
       {% if page.author != "jim" %}<h2>By <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a></h2>{% endif %}
       {{content}}
       <hr/>
+      {% if 0 < page.tags.length %}
       <p>
         Tags:
         {% for tag in page.tags %}{{tag}}{% if forloop.last == false %}, {% endif %}{% endfor %}.
       </p>
+      {% endif %}
       <p>
         {% if page.author == "jim" %}
           I wrote this because {{page.justification}}

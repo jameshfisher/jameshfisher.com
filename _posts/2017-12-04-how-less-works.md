@@ -1,5 +1,5 @@
 ---
-title: "How less works"
+title: "How less works: the terminal's alternative buffer"
 ---
 
 Run `less foo.txt`.

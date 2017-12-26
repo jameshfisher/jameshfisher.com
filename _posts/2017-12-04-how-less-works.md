@@ -1,5 +1,6 @@
 ---
 title: "How less works: the terminal's alternative buffer"
+tags: ["c", "unix", "programming"]
 ---
 
 Run `less foo.txt`.

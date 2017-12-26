@@ -1,5 +1,6 @@
 ---
 title: "An encrypted diary using OpenSSL"
+tags: ["programming", "openssl"]
 ---
 
 Writing helps me think.

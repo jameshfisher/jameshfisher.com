@@ -58,8 +58,9 @@ layout: null
           <div class="day day_posts">
             {% for post in day.items %}
             {% unless post.draft %}
-            <a class="post" href="{{ post.url }}">
+            <a class="post" href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}"{% if post.external_url %} target="_blank"{% endif %}>
               {% if post.author != "jim" %}Guest post by {{site.data.people[post.author].name}}: {% endif %}{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}
+              {% if post.external_url %}<img src="{% link /assets/Icon_External_Link.svg %}" alt="external link" />{% endif %}
               <span class="date">({{ day.items.first.date | date: '%Y-%m-%d' }})</span>
             </a>
             {% endunless %}

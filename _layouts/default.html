@@ -26,6 +26,17 @@
     <div id="content">
       <h1>{% if page.author != "jim" %}Guest post: {% endif %}{{page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
       {% if page.author != "jim" %}<h2>By <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a></h2>{% endif %}
+      {% if page.external_url %}
+      <p>
+        <strong>
+          <a href="{{ page.external_url }}">
+            This post is published externally at
+            {{ page.external_url }}
+            <img src="{% link /assets/Icon_External_Link.svg %}" alt="external link" />.
+          </a>
+        </strong>
+      </p>
+      {% endif %}
       {{content}}
       <hr/>
       {% if 0 < page.tags.length %}

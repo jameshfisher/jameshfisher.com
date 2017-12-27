@@ -70,5 +70,11 @@
       window.navigator.serviceWorker.register("{% link service-worker.js %}");
     }
     </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () =>
+      Array.prototype.forEach.call(
+        document.getElementsByClassName("answer"),
+        el => el.addEventListener("click", () => el.classList.add("revealed"))));
+    </script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 ---
 title: "Drawing a cube in WebGL"
+tags: ["programming", "graphics", "webgl"]
 ---
 
 <canvas id="matrix_viz" width="400" height="400" style="width: 200px; height: 200px;"></canvas>

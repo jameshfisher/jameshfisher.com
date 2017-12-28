@@ -53,7 +53,7 @@ $ hexdump -C output.txt
 ```
 
 Curses achieves its magic via inline "escape sequences".
-Two important escape sequences in here are `\e[?1049h` and `\e[?1049l`.
+Two important escape sequences in here are `\e[?1049h` and `\e[?1049l`.
 These are escape sequences for switching to and from the "alternate screen".
 This alternate screen is a feature supported by most terminals, including `xterm`.
 

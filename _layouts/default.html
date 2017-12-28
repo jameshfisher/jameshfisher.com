@@ -21,7 +21,10 @@
   </head>
   <body>
     <a href="/" style="display: block; transform: rotate(-5deg); margin: 0 2em 0 -1.6em; float: left;">
-      <video autoplay loop src="{% link /assets/jim.webm %}" poster="{% link /assets/jim_512.jpg %}" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;"></video>
+      <video autoplay loop poster="{% link /assets/jim_512.jpg %}" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;">
+        <source src="{% link /assets/jim.webm %}" type="video/webm" />
+        <source src="{% link /assets/jim.mp4 %}" type="video/mp4" />
+      </video>
     </a>
     <div id="content">
       <h1>{% if page.author != "jim" %}Guest post: {% endif %}{{page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>

@@ -6,7 +6,7 @@ title: Friends
 * [Charlie Cochrane](http://www.charlescochrane.com/), my friend from work (at Pusher).
 * [Dru Topliceanu](http://alexandrutopliceanu.ro/), my friend from work (at Pusher).
 * [Will Sewell](http://willsewell.com/), my friend from work (at Pusher).
-  I've [given some public talks with him](/talks.html).
+  I've [given some public talks with him]({% link speaking.md %}).
 * [Luka Bratos](https://lukabratos.me/), my friend from work (at Pusher).
 
 Non-friends who are interesting:

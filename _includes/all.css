@@ -22,4 +22,7 @@ blockquote { border-left: 2px solid black; margin-left: 0; padding-left: 1rem; }
   background-image: url(/assets/question-mark.svg);
   cursor: pointer;
 }
+.answer:not(.revealed) * {
+  opacity: 0;
+}
 </style>

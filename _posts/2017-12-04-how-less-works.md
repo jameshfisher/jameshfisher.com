@@ -73,7 +73,7 @@ int main(int argc, char** argv) {
 }
 ```
 
-Actually, the escape sequences `\e[?1049h` and `\e[?1049l` are specific to XTerm.
+Actually, the escape sequences `\e[?1049h` and `\e[?1049l` are specific to XTerm.
 Other terminals might use different escape sequences for the same feature.
 Ncurses knows about many terminal types,
 and used XTerm escape sequences because

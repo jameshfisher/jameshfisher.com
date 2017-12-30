@@ -42,7 +42,9 @@ I don't even know if it's correct.
 By contrast, with `osquery`, I was able to write:
 
 ```
-$ osqueryi --header=false --list "select pid from process_open_sockets where remote_port=0 and local_port=15000"
+$ osqueryi --header=false --list \
+  "select pid from process_open_sockets
+   where remote_port=0 and local_port=15000"
 904
 ```
 
@@ -65,7 +67,8 @@ With standard UNIX tools,
 you'll have to glue together `lsof` and `ps` with some shell magic:
 
 ```
-$ ps -o args= -p $(lsof -P -n  -Fp -s TCP:LISTEN -i :15000 | grep '^p' | cut -dp -f 2)
+$ ps -o args= -p \
+  $(lsof -P -n  -Fp -s TCP:LISTEN -i :15000 | grep '^p' | cut -dp -f 2)
 nc -l 15000
 ```
 
@@ -83,7 +86,10 @@ If instead I were to use `osquery`,
 I could use `JOIN` over the domain objects instead of joining ad hoc plaintext:
 
 ```
-$ osqueryi --header=false --list "select p.cmdline from process_open_sockets s join processes p on s.pid = p.pid where local_port=15000 and remote_port=0"
+$ osqueryi --header=false --list \
+  "select p.cmdline from process_open_sockets s
+  join processes p on s.pid = p.pid
+  where local_port=15000 and remote_port=0"
 nc -l 15000
 ```
 
@@ -97,13 +103,16 @@ you can read the database schema:
 $ osqueryi
 Using a virtual database. Need help, type '.help'
 osquery> .schema process_open_sockets
-CREATE TABLE process_open_sockets(`pid` INTEGER, `fd` BIGINT, `socket` BIGINT, `family` INTEGER, `protocol` INTEGER, `local_address` TEXT, `remote_address` TEXT, `local_port` INTEGER, `remote_port` INTEGER, `path` TEXT, PRIMARY KEY (`pid`)) WITHOUT ROWID;
+CREATE TABLE process_open_sockets(`pid` INTEGER, `fd` BIGINT, `socket` BIGINT,
+  `family` INTEGER, `protocol` INTEGER, `local_address` TEXT,
+  `remote_address` TEXT, `local_port` INTEGER, `remote_port` INTEGER,
+  `path` TEXT, PRIMARY KEY (`pid`)) WITHOUT ROWID;
 ```
 
 There's one big downside:
 `osquery` is probably not installed on machines you access.
 I don't like using non-standard tools if I can afford to use the defaults.
-But I don't feel like I can afford to use the defaults:
+But I don't feel like I _can_ afford to use the defaults:
 the time investment is too expensive
 to consult the `man` page for `lsof` and `ps`
 every time I want to investigate a process.

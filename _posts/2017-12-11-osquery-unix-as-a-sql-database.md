@@ -3,7 +3,7 @@ title: "osquery: UNIX as a SQL database"
 tags: ["programming", "unix"]
 ---
 
-[Earlier this year, in "UNIX as a SQL database"]({% post_url 2017-02-14-unix-in-sql.md %}),
+[Earlier this year, in "UNIX as a SQL database"]({% post_url 2017-02-14-unix-in-sql %}),
 I wrote:
 
 > UNIX is full of tables.
@@ -23,7 +23,7 @@ I wrote:
 
 When I wrote that, it was only as a conceptual framework and a pipe dream.
 But I just discovered that my pipe dream is not just a dream:
-it exists, it's active, it has major backing, and over 10K stars on GitHub!
+it exists, it's active, it has major backing, and over 10K stars on GitHub! 😱
 This project is <a href="https://osquery.io/" target="_blank">osquery</a>.
 `osquery` lets you query a UNIX system using SQL.
 

@@ -1,2 +1,3 @@
 redirects = [
-  {from = "/:year/:month/:day/:slug.html", to = "/:year/:month/:day/:slug"}]
+  {from = "/:year/:month/:day/:slug.html", to = "/:year/:month/:day/:slug", status = 301}
+]

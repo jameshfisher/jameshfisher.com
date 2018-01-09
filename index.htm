@@ -12,15 +12,16 @@ layout: null
     <title>Jim Fisher</title>
     {% include all.css %}
     <style>
-      a.post { display: block; padding: 0.3em; }
-      a.post:hover { background-color: antiquewhite; }
+      .post { display: block; padding: 0.3em; }
+      .post:hover { background-color: antiquewhite; }
+      .post.diary_entry { color: #777; }
       @media (min-width: 680px) {
         div.calendar { border: 1px solid #aaa; }
         div.calendar_week { display: flex; flex-direction: row-reverse; }
         div.day { flex-grow: 1; border: 1px solid #aaa; display: flex; flex-direction: column; }
         div.day.day_no_posts { background-color: #f9f9f9; padding: 1em; }
-        a.post { flex-grow: 1; border-bottom: 2px solid #aaa; }
-        a.post:last-child { border: none; }
+        .post { flex-grow: 1; border-bottom: 2px solid #aaa; }
+        .post:last-child { border: none; }
       }
     </style>
   </head>
@@ -60,13 +61,15 @@ layout: null
           {% endfor %}
           <div class="day day_posts">
             {% for post in day.items %}
-            {% unless post.draft %}
+            {% if post.diary %}
+            <span class="post diary_entry">Diary: {{ post.word_count }} words</span>
+            {% elsif post.draft == false %}
             <a class="post" href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}"{% if post.external_url %} target="_blank"{% endif %}>
               {% if post.author != "jim" %}Guest post by {{site.data.people[post.author].name}}: {% endif %}{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}
               {% if post.external_url %}<img src="{% link /assets/Icon_External_Link.svg %}" alt="external link" />{% endif %}
               <span class="date">({{ day.items.first.date | date: '%Y-%m-%d' }})</span>
             </a>
-            {% endunless %}
+            {% endif %}
             {% endfor %}
           </div>
           {% assign prev_col = col %}

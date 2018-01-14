@@ -1,5 +1,6 @@
 ---
 title: "How to hash multiple values"
+tags: ["programming", "crypto"]
 ---
 
 To hash a string like `"hello"`,

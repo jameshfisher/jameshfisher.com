@@ -1,5 +1,6 @@
 ---
 title: "What is a subnet?"
+tags: ["programming", "networking", "c"]
 ---
 
 IP addresses look like this: `51.6.191.203` (in IP version 4).

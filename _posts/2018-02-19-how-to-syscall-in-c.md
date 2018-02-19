@@ -30,7 +30,6 @@ We can use that expression in our program instead of using `printf`:
 
 ```c
 #include <unistd.h>
-char buf[] = "hello, world!\n";
 int main(void) {
   write(1, "hello, world!\n", 14);
   return 0;

@@ -46,7 +46,7 @@ described as:
 > `dup2()` makes `newfd` be the copy of `oldfd`, closing `newfd` first if necessary ...
 > After a successful return from one of these system calls,
 > the old and new file descriptors may be used interchangeably.
-> They refer to the same open file description (see open(2)) and thus share file offset and file status flags.
+> They refer to the same open file description (see `open(2)`) and thus share file offset and file status flags.
 
 Thus, `3>&2` corresponds to a call to `dup2(2,3)`,
 `2>&1` corresponds to `dup2(1,2)`,
@@ -104,7 +104,7 @@ Here I've annotated the calls to show the state of the file descriptors:
 // { 0 -> stdin, 1 -> stdout, 2 -> stderr }
 dup2(2, 3); // tmp := stderr
 // { 0 -> stdin, 1 -> stdout, 2 -> stderr, 3 -> stderr }
-dup2(1, 2); // stdout := stderr
+dup2(1, 2); // stderr := stdout
 // { 0 -> stdin, 1 -> stdout, 2 -> stdout, 3 -> stderr }
 dup2(3, 1); // stdout := tmp
 // { 0 -> stdin, 1 -> stderr, 2 -> stdout, 3 -> stderr }

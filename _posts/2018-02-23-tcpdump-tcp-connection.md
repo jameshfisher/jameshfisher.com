@@ -1,6 +1,6 @@
 ---
 title: "Running `tcpdump` on a TCP connection"
-tags: ["programming", "unix"]
+tags: ["programming", "unix", "networking"]
 ---
 
 The `tcpdump` program is badly named:

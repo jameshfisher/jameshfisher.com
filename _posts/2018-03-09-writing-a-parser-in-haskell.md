@@ -21,7 +21,7 @@ because they were written as Haskell expressions.
 But now JimScript has its own syntax,
 and the above program can be written like this file, `write_the_alphabet.jimscript`:
 
-```lisp
+```scheme
 #/usr/bin/env jimscript
 (set x 'A')
 (while (<= x 'Z')

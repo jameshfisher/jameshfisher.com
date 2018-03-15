@@ -19,7 +19,7 @@ data E
   | EInt Int  -- literals
   deriving (Show)
 
-eval :: E -> IO E
+eval :: E -> E
 eval (EApp fun arg) = case eval fun of
   EAbs body -> eval $ sub 0 body where
                 sub n e = case e of

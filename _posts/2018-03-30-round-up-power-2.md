@@ -69,7 +69,7 @@ uint64_t next_pow2(uint64_t x) {
 The above logarithmic-time approach has a lot of branching.
 There is another logarithmic-time algorithm which uses no branching,
 [which I originally found here](https://graphics.stanford.edu/~seander/bithacks.html#RoundUpPowerOf2).
-It relies on a a function `next_pow2m1`,
+It relies on a function `next_pow2m1`,
 which finds the next number of the form `2^n - 1`:
 
 ```c

@@ -3,23 +3,49 @@ title: "How to let your users sign in with Google, from scratch"
 justification: "I've never implemented any pages with SSO! I need to know how it works."
 ---
 
-Back in the dark ages (say, 2010), every web service requiring an account system implemented it themselves. Users had to sign up to create a new account and think of a new password, and the developer had to store those credentials securely. Today in 2017, most new sites and apps delegate their account system to big account systems, like Google or GitHub. In this new world, the user doesn't have to think of a new password, and the developer is not burdened with keeping a long-term secure vault of email addresses and password hashes.
+Back in the dark ages (say, 2010),
+every web service requiring an account system implemented it themselves.
+Users had to sign up to create a new account and think of a new password,
+and the developer had to store those credentials securely.
+Today in 2017,
+most new sites and apps delegate their account system to big account systems,
+like Google or GitHub.
+In this new world,
+the user doesn't have to think of a new password,
+and the developer is not burdened with
+keeping a long-term secure vault of email addresses and password hashes.
 
-To show how this works, I'm going to create a diary web service. I'll sign in with my Google account, after which I can view and edit some private text - my diary. The service is on Heroku:
+To show how this works, I'm going to create a diary web service.
+I'll sign in with my Google account,
+after which I can view and edit some private text - my diary.
+The service is on Heroku:
 
-```
+```console
 $ heroku apps:create jim-diary
 Creating ⬢ jim-diary... done
 https://jim-diary.herokuapp.com/ | https://git.heroku.com/jim-diary.git
 ```
 
-Next, I created a new "project" on [the Google API Console](https://console.developers.google.com/). The project is called "diary" and has the ID `diary-175912`. This is public information. Every Project has [OAuth consent screen settings](https://console.developers.google.com/apis/credentials/consent).
+Next, I created a new "project" on [the Google API Console](https://console.developers.google.com/).
+The project is called "diary" and has the ID `diary-175912`.
+This is public information.
+Every Project has [OAuth consent screen settings](https://console.developers.google.com/apis/credentials/consent).
 
-A Project has zero or more client credentials. I created one called "web-client". The configuration for this demands a JavaScript origin URI. For me, this is `https://jim-diary.herokuapp.com/`. I also added `http://localhost:8080`, which lets me test this locally.
+A Project has zero or more client credentials.
+I created a client credential called "web-client".
+The configuration for this demands a JavaScript origin URI.
+For me, this is `https://jim-diary.herokuapp.com/`.
+I also added `http://localhost:8080`,
+which lets me test this locally.
 
-Creating this client credential gave me a client ID, `59111089553-rqujjdb91g4s7h9p2v23hf2rdvc28med.apps.googleusercontent.com`. This is public information, to embed in the web client. It also gave me a "client secret", which I, the developer, must keep secret!
+Creating this client credential gave me a client ID,
+`59111089553-rqujjdb91g4s7h9p2v23hf2rdvc28med.apps.googleusercontent.com`.
+This is public information, to embed in the web client
+(the web page loaded by users of my diary web app).
+It also gave me a "client secret", which I, the developer, must keep secret!
 
-Next I started making the web app. I started with a hello world Go web server:
+Next I started making the web app.
+I started with a hello world Go web server:
 
 ```go
 package main
@@ -45,7 +71,8 @@ func main() {
 }
 ```
 
-I need to extend this static home page to include a "Sign in with Google" button. I modified the Go server to read an HTML file:
+I need to extend this static home page to include a "Sign in with Google" button.
+I modified the Go server to read an HTML file:
 
 ```go
 func main() {
@@ -69,7 +96,8 @@ func main() {
 }
 ```
 
-The HTML for my homepage is as follows. Note the client ID in the `<meta name="google-signin-client_id">` tag.
+The HTML for my homepage is as follows.
+Note the client ID in the `<meta name="google-signin-client_id">` tag.
 
 ```html
 <!doctype html>
@@ -96,7 +124,10 @@ The HTML for my homepage is as follows. Note the client ID in the `<meta name="g
 </html>
 ```
 
-With this deployed, I get a page with a sign-in button on https://jim-diary.herokuapp.com/. Clicking it as a user, I go to a Google sign-in page. This then redirects me to https://jim-diary.herokuapp.com/, which prints some info to the console:
+With this deployed, I get a page with a sign-in button on https://jim-diary.herokuapp.com/.
+Clicking it as a user, I go to a Google sign-in page.
+This then redirects me to https://jim-diary.herokuapp.com/,
+which prints some info to the console:
 
 ```
 ID: 1234567890987654321234567890
@@ -105,13 +136,34 @@ Image URL: https://lh5.googleusercontent.com/-lmu6NYO1MJo/AAAAAAAAAAI/AAAAAAAAAG
 Email: jameshfisher@gmail.com
 ```
 
-How did this happen? There are three actors in this story: the web page, the user, and Google. The web page wants details about the user's Google account. To get those, the page redirects the user to Google. Google then asks the user for proof of identity, and asks the user whether she wants to pass some basic details to the web page. The user says yes, and Google redirects back to the web page, together with those basic details about the user's Google account. The web page can then consider this as a proof that the current user has access to the Google account detailed.
+How did this happen?
+There are three actors in this story:
+the web page, the user, and Google.
+The web page wants details about the user's Google account.
+To get those, the page redirects the user to Google.
+Google then asks the user for proof of identity,
+and asks the user whether she wants to pass some basic details to the web page.
+The user says yes,
+and Google redirects back to the web page,
+together with those basic details about the user's Google account.
+The web page can then consider this as a proof that
+the current user has access to the Google account detailed.
 
-A Google account has a numeric ID. This is different from the email address associated with the account. The email address for a Google account can change. We should consider the numeric ID to be the identity for the account.
+(Note, above, the ID `1234567890987654321234567890`.
+A Google account has a numeric ID.
+This is different from the email address associated with the account.
+The email address for a Google account can change.
+We should consider the numeric ID to be the identity for the account.)
 
-Note that all this happened with a purely static web server. How do we now give the user access to their private diary? I would like to allow GET and PUT requests to `/google-account/:google_account_id/diary`. But these requests need to be authenticated - my server needs proof that the request comes from someone with access to that Google account.
+Note that all this happened with a purely static web server.
+How do we now give the user access to their private diary?
+I would like to allow GET and PUT requests to `/google-account/:google_account_id/diary`.
+But these requests need to be authenticated:
+my server needs proof that the request comes from someone with access to that Google account.
 
-These proofs are called "ID tokens". The web client has access to an ID token through `googleUser.getAuthResponse().id_token`. We can set it as a cookie so that it will be passed to the server when we make requests:
+These proofs are called "ID tokens".
+The web client has access to an ID token through `googleUser.getAuthResponse().id_token`.
+We can set it as a cookie so that it will be passed to the server when we make requests:
 
 ```js
 function onSignIn(googleUser) {
@@ -119,7 +171,14 @@ function onSignIn(googleUser) {
 }
 ```
 
-On our server, when handling a request, we need to extract this token, verify it, and use it to identify the user. The token is a JSON Web Token, signed with one of [Google's three public keys](https://www.googleapis.com/oauth2/v3/certs). This validation process is rather laborious:
+On our server,
+when handling a request,
+we need to extract the cookie `google_id_token`,
+verify it,
+and parse it to identify the user.
+The token is a JSON Web Token,
+signed with one of [Google's three public keys](https://www.googleapis.com/oauth2/v3/certs).
+This validation process is rather laborious:
 
 ```go
 package main

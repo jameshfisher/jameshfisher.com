@@ -19,9 +19,12 @@ layout: null
         div.calendar { border: 1px solid #aaa; }
         div.calendar_week { display: flex; flex-direction: row-reverse; }
         div.day { flex-grow: 1; border: 1px solid #aaa; display: flex; flex-direction: column; }
-        div.day.day_no_posts { background-color: #f9f9f9; padding: 1em; }
+        div.day.day_no_posts { background-color: #f9f9f9; padding: 0.3em 1em; text-align: center; color: #777; }
         .post { flex-grow: 1; border-bottom: 2px solid #aaa; }
         .post:last-child { border: none; }
+      }
+      @media (max-width: 679.999px) {  /* gross */
+        div.day.day_no_posts { display: none; }
       }
     </style>
   </head>
@@ -56,8 +59,9 @@ layout: null
           {% assign col = col | plus:0 %}
           {% if col == 0 %}{% assign col = 7 %}{% endif %}
           {% assign spacers = prev_col | minus:col | minus:1 %}
-          {% for n in (1..spacers) %}
-          <div class="day day_no_posts"></div>
+          {% for n in (1..spacers) reversed %}
+          {% capture date %}2000-01-{{ n | plus:2 | plus: col }}{% endcapture %}
+          <div class="day day_no_posts">{{ date | date: "%a" }}</div>
           {% endfor %}
           <div class="day day_posts">
             {% for post in day.items %}
@@ -75,8 +79,9 @@ layout: null
           {% assign prev_col = col %}
           {% endfor %}
           {% assign spacers = prev_col | minus:1 %}
-          {% for n in (1..spacers) %}
-          <div class="day day_no_posts"></div>
+          {% for n in (1..spacers) reversed %}
+          {% capture date %}2000-01-{{ n | plus:2 }}{% endcapture %}
+          <div class="day day_no_posts">{{ date | date: "%a" }}</div>
           {% endfor %}
         </div>
       {% endfor %}

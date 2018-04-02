@@ -12,7 +12,8 @@
     <meta property="og:url" content="https://jameshfisher.com{{ page.url }}"/>
     <meta property="og:description" content="{{ page.excerpt | strip_html | replace: newline, ' ' }}"/>
     <meta property="og:site_name" content="jameshfisher.com"/>
-    <link rel="canonical" href="https://jameshfisher.com{{ page.url }}"/>
+    {% capture canonical %}https://jameshfisher.com{{ page.url }}{% endcapture %}
+    <link rel="canonical" href="{{ canonical }}"/>
     <link rel="icon" type="image/png" href="{{site.url}}{% link /assets/jim_128.png %}" />
     <link rel="manifest" href="{% link manifest.json %}"/>
     <link rel="alternate" type="application/rss+xml" href="https://jameshfisher.com/feed.xml" />
@@ -41,14 +42,18 @@
       </p>
       {% endif %}
       {{content}}
-      <hr/>
+      <p style="text-align: center">
+        <a target="_blank" style="display: inline-block; padding: 4px 10px; margin: 2em auto; background-color: #1b95e0; color: #fff; cursor: pointer;" href="https://twitter.com/intent/follow?original_referer={{ canonical | escape }}&region=follow_link&screen_name=MrJamesFisher&tw_p=followbutton">
+          Get updates on Twitter
+        </a>
+      </p>
       {% if 0 < page.tags.length %}
-      <p>
+      <p style="text-align: center">
         Tags:
         {% for tag in page.tags %}{{tag}}{% if forloop.last == false %}, {% endif %}{% endfor %}.
       </p>
       {% endif %}
-      <p>
+      <p style="text-align: center">
         {% if page.author == "jim" %}
           I wrote this because {{page.justification}}
           This post is not associated with my employer.

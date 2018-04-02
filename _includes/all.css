@@ -10,7 +10,6 @@ td, th { text-align: left; padding-right: 1em; vertical-align: top; }
 a:link, a:visited { text-decoration: none; }
 .date { font-size: 0.7em; }
 .jim_image { display: block; box-shadow: 2px 2px 10px #ccc; }
-hr { border: 1px solid black; }
 blockquote { border-left: 2px solid black; margin-left: 0; padding-left: 1rem; }
 .answer {
   border-color: #8ec58e;

@@ -89,12 +89,11 @@ More generally, the phishing scam here is:
 
 Where is the security flaw here?
 Some would say it's Netflix's fault;
-that Netflix should verify the email address on sign up,
-or that Netflix should disallow the registration of `james.hfisher@gmail.com`
-when a Netflix account already existed for `jameshfisher@gmail.com`.
-But such policies would not add security,
-and would force Netflix and every other website
-to have insider knowledge of Gmail's canonicalization algorithm.
+that Netflix should verify the email address on sign up.
+But using someone else's address on signup only cedes control of the account to that person.
+Others would say that Netflix should disallow the registration of `james.hfisher@gmail.com`,
+but this would force Netflix and every other website
+to have insider knowledge of Gmail’s canonicalization algorithm.
 
 Actually, the blame lies with Gmail,
 and specifically Gmail's "dots don't matter" feature.

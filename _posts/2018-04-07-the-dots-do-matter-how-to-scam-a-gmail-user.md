@@ -77,8 +77,9 @@ More generally, the phishing scam here is:
    until you find a `gmail.com` address which is "already registered".
    Let's say you find the victim `jameshfisher`.
 1. Create a Netflix account with address `james.hfisher`.
-1. Sign up for free trial with a dummy card `**** 2745`.
-1. Wait for Netflix to bill the dummy card `**** 2745`.
+1. Sign up for free trial with [a throwaway card number](https://getfinal.com/).
+1. After Netflix applies the "active card check", cancel the card.
+1. Wait for Netflix to bill the cancelled card.
    Then Netflix emails `james.hfisher` asking for a valid card.
 1. Hope Jim reads the email to `james.hfisher`,
    assumes it's for his Netflix account backed by `jameshfisher`,

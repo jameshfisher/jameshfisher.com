@@ -17,7 +17,8 @@ But first, I'll show you the email:
 
 "Odd," I thought, "but OK, I'll check."
 The email is genuinely from `netflix.com`,
-so I clicked through to [an "Update your credit or debit card" page](https://www.netflix.com/simplemember/editcredit?locale=en-GB),
+so I clicked the authenticated link
+to [an "Update your credit or debit card" page](https://www.netflix.com/simplemember/editcredit?locale=en-GB),
 which is genuinely hosted on `netflix.com`.
 No phishing here.
 But hang on, the "Update" page showed my declined card as `**** 2745`.

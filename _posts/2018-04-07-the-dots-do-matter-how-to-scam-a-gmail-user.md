@@ -5,7 +5,7 @@ justification: "people need to know."
 ---
 
 I recently received an email from Netflix
-which nearly caused caused me to add my card details to someone else's Netflix account.
+which nearly caused me to add my card details to someone else's Netflix account.
 Here I show that this is a new kind of phishing scam
 which is enabled by an obscure feature of Gmail called "the dots don't matter".
 I then argue that the dots _do_ matter,

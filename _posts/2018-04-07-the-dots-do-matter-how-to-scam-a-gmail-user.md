@@ -106,9 +106,10 @@ Some Gmail power users might claim:
 "The dots-don't-matter feature is great.
 I get ownership of an infinite set of email addresses!"
 But firstly, no one _wants_ this infinite set of email addresses.
-Gmail already provides this in the better form of ["plus labelling"](https://gmail.googleblog.com/2008/03/2-hidden-ways-to-get-more-from-your.html),
-so I also own `jameshfisher+spam@gmail.com` and `jameshfisher+work@gmail.com`.
-But I have never wanted `j.ame.s.h.fis.h.e.r@gmail.com`,
+Those who _really_ want infinite addresses already have the "plus labelling" feature:
+I also own `jameshfisher+spam@gmail.com`, `jameshfisher+work@gmail.com` et cetera.
+Plus labelling is a similar feature, but with similar scam potential, although with some legitimate use cases.
+But I have certainly never wanted `j.ame.s.h.fis.h.e.r@gmail.com`,
 and John Smith never wanted `jo.hn.sm.ith@gmail.com`.
 I have never asked someone for her email address only for her to reply,
 "it's `jane.doe@gmail.com`, but feel free to add the dot wherever you like."
@@ -140,8 +141,8 @@ The only clue in the screenshot above is that the interface says "to james.hfish
 instead of "to me".
 
 The Gmail team should combat this kind of phishing.
-They should officially acknowledge that dots-don't-matter is a misfeature
-([as indeed they suggested when they _announced_ the feature in 2008!](https://gmail.googleblog.com/2008/03/2-hidden-ways-to-get-more-from-your.html)).
+They should officially acknowledge that dots-don't-matter is a misfeature.
+Indeed, [the Gmail team admitted that dots-don't-matter is "confusing" way back when they _announced_ the feature in 2008](https://gmail.googleblog.com/2008/03/2-hidden-ways-to-get-more-from-your.html)).
 Each Google account should have _one_ variant configured as its standard address;
 I would set `jameshfisher@gmail.com` as standard,
 and maybe John would set `john.smith@gmail.com` as standard.

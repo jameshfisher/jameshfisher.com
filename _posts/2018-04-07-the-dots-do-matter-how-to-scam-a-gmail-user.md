@@ -96,8 +96,12 @@ But using someone else's address on signup only cedes control of the account to 
 Others would say that Netflix should disallow the registration of `james.hfisher@gmail.com`,
 but this would force Netflix and every other website
 to have insider knowledge of Gmail’s canonicalization algorithm.
+Still others would say that Netflix's "update your payment details" email
+should force a manual login,
+instead of using an authenticated link.
 
-Actually, the blame lies with Gmail,
+Some blame lies with Netflix,
+but I believe the main problem lies with Gmail,
 and specifically Gmail's "dots don't matter" feature.
 The scam fundamentally relies on the Gmail user responding to an email
 with the assumption that it was sent to their canonical address,
@@ -165,4 +169,5 @@ In the meantime, here are some links:
 
 * [Bruce Schneier's analysis](https://www.schneier.com/blog/archives/2018/04/obscure_e-mail_.html).
 * [The Hacker News post](https://news.ycombinator.com/item?id=16781959).
-* [Twitterers twittering on Twitter](https://twitter.com/MrJamesFisher/status/982683299385667585).
+* [Twitterers twittering on Twitter](https://twitter.com/MrJamesFisher/status/982683299385667585),
+  including [some Google/Netflix engineers](https://twitter.com/jaffathecake/status/982974503079866368).

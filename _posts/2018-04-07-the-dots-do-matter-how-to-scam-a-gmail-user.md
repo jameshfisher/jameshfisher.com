@@ -143,7 +143,7 @@ instead of "to me".
 
 The Gmail team should combat this kind of phishing.
 They should officially acknowledge that dots-don't-matter is a misfeature.
-Indeed, [the Gmail team admitted that dots-don't-matter is "confusing" way back when they _announced_ the feature in 2008](https://gmail.googleblog.com/2008/03/2-hidden-ways-to-get-more-from-your.html)).
+Indeed, [the Gmail team admitted that dots-don't-matter is "confusing" way back when they _announced_ the feature in 2008](https://gmail.googleblog.com/2008/03/2-hidden-ways-to-get-more-from-your.html).
 Each Google account should have _one_ variant configured as its standard address;
 I would set `jameshfisher@gmail.com` as standard,
 and maybe John would set `john.smith@gmail.com` as standard.
@@ -156,3 +156,5 @@ Finally, Gmail users should be able to opt out of dots-don't-matter.
 I wish for any mail sent to `james.hfisher@gmail.com` to bounce instead of reaching my inbox.
 The dots-don't-matter feature should be disabled by default for any new Google accounts,
 and eventually retired.
+
+## Follow-up

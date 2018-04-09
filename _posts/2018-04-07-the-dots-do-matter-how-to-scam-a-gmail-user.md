@@ -17,7 +17,8 @@ But first, I'll show you the email:
 
 "Odd," I thought, "but OK, I'll check."
 The email is genuinely from `netflix.com`,
-so I clicked the authenticated link
+so I clicked the link.
+It logged me in and took me
 to [an "Update your credit or debit card" page](https://www.netflix.com/simplemember/editcredit?locale=en-GB),
 which is genuinely hosted on `netflix.com`.
 No phishing here.

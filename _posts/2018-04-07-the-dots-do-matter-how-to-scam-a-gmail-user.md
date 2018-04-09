@@ -158,3 +158,11 @@ The dots-don't-matter feature should be disabled by default for any new Google a
 and eventually retired.
 
 ## Follow-up
+
+This article has spread around the web.
+I'll do a full follow-up soon.
+In the meantime, here are some links:
+
+* [Bruce Schneier's analysis](https://www.schneier.com/blog/archives/2018/04/obscure_e-mail_.html).
+* [The Hacker News post](https://news.ycombinator.com/item?id=16781959).
+* [Twitterers twittering on Twitter](https://twitter.com/MrJamesFisher/status/982683299385667585).

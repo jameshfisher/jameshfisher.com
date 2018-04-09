@@ -109,7 +109,7 @@ I get ownership of an infinite set of email addresses!"
 But firstly, no one _wants_ this infinite set of email addresses.
 Those who _really_ want infinite addresses already have the "plus labelling" feature:
 I also own `jameshfisher+spam@gmail.com`, `jameshfisher+work@gmail.com` et cetera.
-Plus labelling is a similar feature, but with similar scam potential, although with some legitimate use cases.
+Plus labelling has similar scam potential, but some legitimate use cases.
 But I have certainly never wanted `j.ame.s.h.fis.h.e.r@gmail.com`,
 and John Smith never wanted `jo.hn.sm.ith@gmail.com`.
 I have never asked someone for her email address only for her to reply,

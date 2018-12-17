@@ -10,7 +10,7 @@ First, let's look at some other apps' screenshots. They aren't literal screensho
 * Slack uses 4/5 slots. They're screenshots embedded in a larger poster-style explanation of features.
 * Magnet uses 5/5 slots. Wireframes, not screenshots. It's similar to Vidrio in that it can't be seen as a single window, only as an effect on other windows. It has a particularly nice wireframe of its menu bar list.
 
-![magnet example](http://a1.mzstatic.com/eu/r30/Purple122/v4/c9/88/9a/c9889ac0-8853-f506-fd6f-9e551d9f0adb/screen800x500.jpeg)
+![magnet example](https://a1.mzstatic.com/eu/r30/Purple122/v4/c9/88/9a/c9889ac0-8853-f506-fd6f-9e551d9f0adb/screen800x500.jpeg)
 
 I'm going for the Magnet approach: wireframes. Here's the breakdown of slides:
 

@@ -1,5 +1,6 @@
 ---
 title: "Summary of 'Zero to One', Chapter 1: the challenge of the future"
+tags: ["zero-to-one", "summary"]
 ---
 
 **Summary:** Human progress is either _copying_ or _creating_.

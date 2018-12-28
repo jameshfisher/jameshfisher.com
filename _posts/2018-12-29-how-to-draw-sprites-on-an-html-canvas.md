@@ -1,6 +1,6 @@
 ---
 title: "How to draw sprites on an HTML canvas"
-tags: []
+tags: ["programming", "animation", "web"]
 ---
 
 In [my previous post]({% post_url 2018-12-28-a-cat-walk-cycle %})

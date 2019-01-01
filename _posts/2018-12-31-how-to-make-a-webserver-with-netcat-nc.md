@@ -56,18 +56,7 @@ Content-Type: text/html; charset=UTF-8
 ```
 
 Once you start typing the HTML,
-you'll see this come line-by-line in your `curl` command:
-
-```
-$ curl localhost:8000/index.html
-<!doctype html>
-<html>
-<body>
-<h1>A webpage served with netcat</h1>
-</body>
-</html>
-```
-
+you'll see it come line-by-line in your `curl` command.
 When you've finished typing the HTTP response,
 hit `Ctrl-D`.
 This tells `nc` to close the TCP connection and exit.

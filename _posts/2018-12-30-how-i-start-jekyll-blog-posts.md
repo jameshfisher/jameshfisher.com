@@ -31,7 +31,7 @@ and creates the file `_posts/2018-12-30-how-i-start-jekyll-blog-posts.md`.
 Jekyll will take this file name
 and host it at the URL `https://jameshfisher.com/2018/12/30/how-i-start-jekyll-blog-posts`.
 The `blogpost` command also lays out the Jekyll 'front matter'.
-`blogpost` is an alias in my `.bashrc` which looks like:
+`blogpost` is an command in my `.bashrc` which looks like:
 
 ```bash
 function blogpost {

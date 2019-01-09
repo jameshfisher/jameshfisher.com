@@ -386,3 +386,12 @@ you'll see this come through on the `+switch-master` channel:
 
 As a Redis client receiving this message,
 you should stop using the old master, and start using the new one.
+
+Finally,
+I should note:
+we only created two Sentinel processes,
+and this worked,
+but I said we should create three!
+Sentinel uses consensus to log failovers,
+but consensus algorithms hate even numbers.
+You should create another, to have a minimum of three nodes.

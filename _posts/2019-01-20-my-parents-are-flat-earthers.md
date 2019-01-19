@@ -100,6 +100,7 @@ In the background, Hans Zimmer's _Time_ loops,
 a reference to [_Inception_](https://en.wikipedia.org/wiki/Inception:_Music_from_the_Motion_Picture),
 a film where the protagonist is trapped in a dream.
 These pop film references complement the call to "wake up!" from a false reality.
+Surely _serious_ conspiracy theorists don't convey their arguments this way?
 
 But make no mistake:
 that video is not a parody,
@@ -130,7 +131,7 @@ Such posts are easy, and plentiful.
 This post is just a field study;
 a description of my family's beliefs and their history.
 
-Given what you now know about my parents,
+Given what you know about my parents,
 how do you imagine their lives?
 You might be surprised.
 Both of my parents run successful businesses.

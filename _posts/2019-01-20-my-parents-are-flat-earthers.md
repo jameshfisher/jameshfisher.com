@@ -1,7 +1,6 @@
 ---
 title: "My parents are Flat-Earthers"
 tags: []
-draft: true
 ---
 
 Flat Earth theory entered my life around October 2015,
@@ -54,7 +53,7 @@ In the 1990s,
 the bookshelf started gaining creationist apologetics.
 An early addition to Dad's bookshelf in the 1990s was
 [Michael Behe's _Darwin's Black Box_](https://www.amazon.co.uk/Darwins-Black-Box-Biochemical-Challenge/dp/0684827549).
-It's a sophisticated version argument against Darwinism,
+It's a sophisticated argument against Darwinism,
 and it fitted nicely with [the Witnesses' anti-Darwinist stance](https://www.jw.org/en/publications/books/was-life-created/evolution-myths-and-facts/).
 I remember many interesting conversations with Dad,
 sitting on the couch amongst such books.
@@ -83,7 +82,7 @@ But the Moon's dimensions show the designers used the metric system,
 so it must have been designed by _us_,
 and we must have gone back in time to make it!
 This could make for a great film.
-Just as Indiana Jones began with Egyptology, and ended with higher-dimensional aliens,
+Just as Indiana Jones began with archaeology, and ended with higher-dimensional aliens,
 my Dad's conspiracy theories began with the Pyramids and ended with artificial Moons from the future.
 
 It all sounds like parody, doesn't it?

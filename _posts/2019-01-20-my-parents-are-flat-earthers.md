@@ -1,6 +1,7 @@
 ---
 title: "My parents are Flat-Earthers"
 tags: []
+draft: true
 ---
 
 Flat Earth theory entered my life around October 2015,
@@ -12,15 +13,15 @@ In the twentieth century,
 governments discovered vast coal deposits in Antarctica.
 Eager to harvest these resources without our interference,
 the governments conspired to make the rest of us believe in a round Earth,
-so we would have no desire to explore its uninteresting south pole.
+so we would have no desire to explore its uninteresting South Pole.
 To distract us from the true outside world beyond the ice wall,
 NASA hoaxes explorations of a fake outside world, "space".
 But, dear viewer, the conspiracy is hidden in plain sight:
-it is flaunted in the UN's very logo, which shows the flat earth!:
+it is flaunted in the UN's very logo, which shows the Flat Earth!:
 
 <img src="{% link assets/2019-01-20-flat-earth/Flag_of_the_United_Nations.svg %}" />
 
-If you were to see this video on Facebook,
+If you were to see your parents posting this on Facebook,
 what would your reaction be?
 Some of you might feel baffled ("what is this? Give me back my cat videos").
 Others might feel amused ("haha Dad, you're such a troll").
@@ -58,30 +59,31 @@ and it fitted nicely with [the Witnesses' anti-Darwinist stance](https://www.jw.
 I remember many interesting conversations with Dad,
 sitting on the couch amongst such books.
 Behe's argument against Darwin doesn't propose a conspiracy,
-but by the 2000s, the bookshelf had
-[Ian Taylor's _In the Minds of Men: Darwin and the New World Order_](https://www.amazon.co.uk/Minds-Men-Darwin-World-Order/dp/0969178891).
-This book is an entirely different beast,
-arguing that Darwinism must be mistaken because it
+but by the 2000s,
+we had an entirely different beast:
+[Ian Taylor's _In the Minds of Men: Darwin and the New World Order_](https://www.amazon.co.uk/Minds-Men-Darwin-World-Order/dp/0969178891),
+which argues that Darwinism must be mistaken because it
 ["becomes justification for a new world order under one elitist government."](http://www.creationism.org/books/TaylorInMindsMen/TaylorIMMa00fIntroduction.htm)
 
 Plausible grew implausible.
 Reading back through emails from Dad,
 I see the progression from
-MKULTRA (the CIA's mind control programme, uncontroversial),
-to 9/11 truth (debatable, reasonable motive),
-to anti-vaccination (unlikely claims, with unclear motive).
+MKULTRA (uncontroversial),
+to 9/11 inside jobs (reasonable motive),
+to anti-vaccination (unclear motive).
 Then around 2008,
 Dad gave me a book called [_Who Built The Moon?_](https://www.amazon.co.uk/Who-Built-Moon-Christopher-Knight/dp/1842931636).
 Its conclusion is deliberately shocking:
 "One day humanity will have to go back in time 4.6 billion years to build Earth's Moon!"
-Please, take a breath, and read that claim again.
+Take a breath and read that again.
 The book's argument is mostly numerological:
 the Moon is 400 times smaller than the Sun, and 400 times closer,
 and so it must have been designed.
 But the Moon's dimensions show the designers used the metric system,
 so it must have been designed by _us_,
 and we must have gone back in time to make it!
-Just as the Indiana Jones series began with Egyptology and ended with aliens from higher dimensions,
+This could make for a great film.
+Just as Indiana Jones began with Egyptology, and ended with higher-dimensional aliens,
 my Dad's conspiracy theories began with the Pyramids and ended with artificial Moons from the future.
 
 It all sounds like parody, doesn't it?
@@ -122,7 +124,7 @@ your reaction might be to join the argument,
 armed with a list of logical fallacies,
 a calendar of lunar eclipses,
 and your old GCSE triple science certificates.
-But I've tried that, and it doesn't work.
+But I've tried all that, and it doesn't work!
 My post today is not intended to be "reasons Flat Earth is false".
 Such posts are easy, and plentiful.
 This post is just a field study;
@@ -154,3 +156,7 @@ You get to participate in a global club,
 which now includes Dad, Mum, and both of my sisters.
 You get to surprise people with new ideas,
 challenging the person next to you on the plane to find the curvature of the horizon.
+And it's fun for me, too.
+At your family dinners,
+instead of banal chat about holidays and food,
+wouldn't you prefer interesting conversations about evolution and astronomy?

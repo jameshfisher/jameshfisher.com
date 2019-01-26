@@ -1,6 +1,6 @@
 ---
 title: "How Hacker News stays interesting"
-tags: []
+tags: ["fave"]
 ---
 
 Last week I wrote [a post called "My parents are Flat-Earthers"]({% post_url 2019-01-20-my-parents-are-flat-earthers %}),

@@ -1,6 +1,6 @@
 ---
 title: "My parents are Flat-Earthers"
-tags: []
+tags: ["fave"]
 ---
 
 Flat Earth theory entered my life around October 2015,

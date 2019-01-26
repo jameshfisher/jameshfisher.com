@@ -1,6 +1,6 @@
 ---
 title: "The sorry state of OpenSSL usability"
-tags: ["programming", "rant", "openssl"]
+tags: ["programming", "rant", "openssl", "fave"]
 ---
 
 OpenSSL is one of the most used and important pieces of software in the world.

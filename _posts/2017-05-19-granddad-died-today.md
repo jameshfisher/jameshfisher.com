@@ -1,5 +1,6 @@
 ---
 title: "Granddad died today"
+tags: ["fave"]
 ---
 
 Granddad died this morning. Chaotic breaths were replaced by a final gargle. A sprinting pulse was replaced by nothing. Around the bed, we held his hands, head, and legs. We said goodbye and cried. The time was 08:53.

@@ -1,6 +1,6 @@
 ---
 title: "The dots do matter: how to scam a Gmail user"
-tags: ["security"]
+tags: ["security", "fave"]
 justification: "people need to know."
 ---
 

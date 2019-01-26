@@ -106,7 +106,7 @@ that video is not a parody,
 and _those Flat-Earthers are not just trolling!_
 In the family,
 I have the reputation as the hyper-rational nerd,
-so I'll be challenged with some pre-prepared evidence.
+so when I visit, I'll be challenged with some pre-prepared evidence.
 One of Mum's favorites is [flightradar24.com](https://www.flightradar24.com/),
 a site which shows realtime flight paths.
 On a globe,

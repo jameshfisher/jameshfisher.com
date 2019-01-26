@@ -47,13 +47,18 @@
           Get updates on Twitter
         </a>
       </p>
-      {% if 0 < page.tags.length %}
-      <p style="text-align: center">
-        Tags:
-        {% for tag in page.tags %}{{tag}}{% if forloop.last == false %}, {% endif %}{% endfor %}.
+      <hr/>
+      <h3>More by Jim</h3>
+      <p class="posts">
+        <ul>
+          {% for post in site.posts %}
+            {% if post.tags contains "fave" %}
+              <li><a class="post" href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
       </p>
-      {% endif %}
-      <p style="text-align: center">
+      <p>
         {% if page.author == "jim" %}
           I wrote this because {{page.justification}}
           This post is not associated with my employer.

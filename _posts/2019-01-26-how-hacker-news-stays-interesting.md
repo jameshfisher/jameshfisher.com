@@ -1,5 +1,5 @@
 ---
-title: "My post was rightly buried on Hacker News"
+title: "How Hacker News stays interesting"
 tags: []
 ---
 

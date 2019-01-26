@@ -104,8 +104,6 @@ Surely _serious_ conspiracy theorists don't convey their arguments this way?
 But make no mistake:
 that video is not a parody,
 and _those Flat-Earthers are not just trolling!_
-Whenever I visit Mum,
-I'm goaded into argument.
 In the family,
 I have the reputation as the hyper-rational nerd,
 so I'll be challenged with some pre-prepared evidence.

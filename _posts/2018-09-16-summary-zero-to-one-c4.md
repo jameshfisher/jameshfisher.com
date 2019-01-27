@@ -10,6 +10,8 @@ Actually, competition is destructive and distracting.
 Foolish companies imitate each other and compete.
 Wise companies either diverge into new space, or merge into a monopoly.
 
+---
+
 "Creative monopoly" is good. 
 People believe competition is good, but this is ideology. 
 Our education system quantifies success and encourages competition. 

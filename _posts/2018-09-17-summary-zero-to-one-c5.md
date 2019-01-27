@@ -31,6 +31,8 @@ instead find a niche where you don't have to disrupt.
 But don't be the first mover into a big market; 
 instead, wait and be the last mover once you're big enough to keep the market.
 
+---
+
 Monopoly is only great if it can endure.
 Twitter is valued higher than The New York Times
 because of the expectation that it will capture monopoly profits in the future.

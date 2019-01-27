@@ -18,6 +18,8 @@ we pour effort into fixing failures instead of growing successes.
 But we should instead pick a small group of candidates,
 each of which has the potential to vastly succeed.
 
+---
+
 Compound interest is powerful. 
 Money makes money. 
 In 1906, Pareto expounded the "Pareto principle", or 80-20 rule: 

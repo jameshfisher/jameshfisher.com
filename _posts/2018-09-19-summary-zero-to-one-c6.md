@@ -38,6 +38,8 @@ who is going to make things better?
 We must either slip into pessimism, 
 or reprioritize design, planning, and prediction.
 
+---
+
 Does success come from luck or skill? 
 Many successful people claim luck, 
 but they're likely being humble. 

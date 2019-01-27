@@ -22,6 +22,8 @@ it also drives down wages, quality, and vision.
 Our economic models falsely assume that markets are static and fixed, making monopoly permanent; 
 but in the real world, markets are created, making monopolies impermanent.
 
+---
+
 What valuable company is nobody building? 
 Valuable to the company, not the world: 
 airlines are huge but have razor-thin profit margins; 

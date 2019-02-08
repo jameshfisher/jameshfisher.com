@@ -30,10 +30,12 @@ but closer to _closure_.
 The Flat Earth conspiracy had been years coming.
 
 As a child, I was raised Jehovah's Witness, and taught at home.
-Where other children recited nursery rhymes they had learned at school,
-I instead recited the books of the Bible, in order.
-Being a Witness puts you in a conspiracy-theory mindset.
-You are a member of an elite few,
+I have pleasant memories of home-schooling with Mum,
+including geography lessons with a Round Earth model.
+And I enjoyed reciting the books of the Bible,
+where other children may have recited nursery rhymes.
+But the Witnesses, and home-schooling, reveal a sense of distrust in the mainstream.
+As a Witness, you are a member of an elite few,
 proselytizing against the establishment's disinformation campaigns,
 in a cosmic war for mindshare.
 As a Witness going from door to door,
@@ -46,7 +48,7 @@ only re-confirms the Illuminati's brainwashing campaign.
 
 The conspiracy theories grew gradually.
 As long as I can remember,
-Dad's bookshelf has been laden with Egyptology and Pyramid studies.
+Dad's bookshelf has been laden with interesting Egyptology and Pyramid studies.
 No conspiracies there,
 but an early interest in _secret knowledge_.
 In the 1990s,
@@ -138,7 +140,7 @@ They eat well.
 They travel for holidays, by plane, all over the Earth.
 You might wonder how one could lead such a _normal_ life,
 while simultaneously believing in a Flat Earth and in Moons from the future.
-I think they can do so in just the same way that I lead a normal life,
+But you can do so in just the same way that I lead a normal life,
 while believing in a Round Earth.
 The grand ideas we all have about the world
 just don't have much influence over the decisions we make in our daily lives.

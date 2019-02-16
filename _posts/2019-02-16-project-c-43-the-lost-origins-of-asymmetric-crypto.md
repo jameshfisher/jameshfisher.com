@@ -94,7 +94,7 @@ in [a sparkling secret one-pager](https://www.gchq.gov.uk/sites/default/files/do
 Ellis and Cocks' work was declassified in 1997,
 and by now is well-known.
 But the legacy of Walter Koenig Jr is almost lost,
-drowned by articles about an unrelated _Star Trek_ actor.
+the signal drowned by noise generated about an unrelated _Star Trek_ actor.
 And, since Koenig's report was a compilation of many people's work on Project C-43,
 we'll probably never know
 which bright spark had the idea of adding noise

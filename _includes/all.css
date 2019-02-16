@@ -25,4 +25,9 @@ p > img, p > a > img { border: 2px solid black; width: 100%; }
 .answer:not(.revealed) * {
   opacity: 0;
 }
+.aside {
+  float: right;
+  max-width: 400px;
+  margin: 0 0 0 1em;
+}
 </style>

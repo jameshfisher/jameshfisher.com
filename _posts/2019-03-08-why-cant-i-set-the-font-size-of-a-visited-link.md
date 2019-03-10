@@ -82,6 +82,13 @@ Since `font-size` of the visited link would affect the offset of other elements,
 the page could indirectly check whether the link is visited.
 Disabling `font-size` for `a:visited` is a brutal, but safer, solution.
 
+There's [a short whitelist of properties](https://developer.mozilla.org/en-US/docs/Web/CSS/:visited) that,
+like `color`,
+shouldn't affect page layout,
+and so shouldn't be detectable.
+They're all different forms of color.
+All other CSS properties are banned.
+
 In _theory_, there is no way that a web page can determine
 whether a link has been colored differently.
 One possibility is a timing attack:

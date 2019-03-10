@@ -1,0 +1,16 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Jim's blogroll</title>
+    </head>
+    <body>
+      {% for blog in site.data.blogroll.blogroll %}
+      {% if blog.xmlUrl %}
+      <outline type="rss" xmlUrl="{{ blog.xmlUrl }}" htmlUrl="{{ blog.htmlUrl }}" title="{{ blog.title }}"/>
+      {% endif %}
+      {% endfor %}
+    </body>
+</opml>

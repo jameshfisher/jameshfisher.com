@@ -44,4 +44,10 @@ blogroll:
   author: "Lin Clark"
   xmlUrl: "https://code-cartoons.com/feed"
   htmlUrl: "https://code-cartoons.com/"
-
+- title: "Clay Shirky's writings"
+  author: "Clay Shirky"
+  htmlUrl: "http://shirky.com/writings/"
+- title: "Here comes everybody"
+  author: "Clay Shirky"
+  htmlUrl: "http://shirky.com/writings/herecomeseverybody/"
+  

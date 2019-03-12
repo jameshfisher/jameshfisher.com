@@ -57,3 +57,7 @@ blogroll:
 - title: "Robin Hanson"
   author: "Robin Hanson"
   htmlUrl: "https://mason.gmu.edu/~rhanson/home.html"
+- title: "Stratechery"
+  author: "Ben Thompson"
+  xmlUrl: "https://stratechery.com/feed/"
+  htmlUrl: "https://stratechery.com/"

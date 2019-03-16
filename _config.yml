@@ -17,3 +17,4 @@ defaults:
       justification: "I felt like it."
       author: jim
 future: true
+permalink: pretty

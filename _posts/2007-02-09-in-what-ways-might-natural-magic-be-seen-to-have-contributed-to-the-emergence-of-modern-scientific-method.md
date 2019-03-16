@@ -361,3 +361,6 @@ deserves an explanation "as simple as possible, but not simpler."<sup>23</sup>
 * David S Katz. The Occult Tradition. Random House (2005) 
 * Charles S Pierce. 'The Fixation of Belief'. Popular Science Monthly 12 (November 1877), 1-15. 
 * Weisner-Hanks, Merry E. Early Modern Europe, 1450 -- 1789. Cambridge University Press (2006). 
+
+Originally written as an essay in my History undergraduate 
+for [the Early Modern "period topic" module at the University of York](https://www.york.ac.uk/history/undergraduate/courses/period-topic/#tab-2).

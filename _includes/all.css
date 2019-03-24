@@ -32,4 +32,5 @@ p > img, p > a > img { border: 2px solid black; width: 100%; }
 }
 sup, sub { font-size: 0.8em; vertical-align: baseline; position: relative; top: -0.4em; }
 sub { top: 0.4em; }
+small { font-size: smaller; }
 </style>

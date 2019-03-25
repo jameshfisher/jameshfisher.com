@@ -84,12 +84,12 @@ which looks like this:
 My personal productivity cycle is tied to this industry hype cycle.
 My schoolfriend back in 2003 was my personal "technology trigger."
 From him,
-I rapidly learned some standard tools from the _plateau of productivity_:
+I rapidly learned some standard tools from Gartner's _plateau of productivity_:
 PHP, MySQL, Apache.
 Then I surveyed the plateau more widely,
 finding Python, Postgres, and Nginx.
 A little further away,
-I had heard of the _trough of disillusionment_.
+I had heard of Gartner's _trough of disillusionment_.
 I sneered at the Perl, Java, CORBA.
 I'll keep my Python, thanks.
 
@@ -101,7 +101,7 @@ I spied a peak on the horizon.
 Could it be that Python is not the holy grail?
 I set out on a pilgrimage.
 I didn't know it until I got there,
-but this was the _peak of inflated expectations_!
+but this was Gartner's _peak of inflated expectations_!
 Weary from my travels,
 I stopped on the peak to view ... a new valley.
 <small>JUST A LITTLE FARTHER</small>, I heard.
@@ -111,9 +111,12 @@ were still stranger objects.
 Agda. Minix. Verifast.
 And that beautiful alien book,
 _Homotopy Type Theory_.
-It was here that I reached my
-_trough of hipster technologies_,
-and it took me years to get back.
+It was here, in Gartner's land of technology triggers,
+that I reached my _trough of hipster technologies_:
+
+<img src="{% link assets/2019-03-23/gartners-peak.svg %}"/>
+
+It took me years to get back.
 I am still recovering.
 Each new project I start,
 I have to restrain myself,

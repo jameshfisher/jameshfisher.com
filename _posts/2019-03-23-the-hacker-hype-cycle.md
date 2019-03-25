@@ -1,6 +1,6 @@
 ---
 title: "The hacker hype cycle"
-tags: ["programming"]
+tags: ["programming", "fave"]
 ---
 
 Back on Christmas Day 2013,

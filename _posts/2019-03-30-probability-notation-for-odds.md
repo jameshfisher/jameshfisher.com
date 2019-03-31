@@ -1,6 +1,6 @@
 ---
 title: "Probability notation for odds"
-tags: []
+tags: ["betting"]
 ---
 
 If you've ever walked into a bookmaker,

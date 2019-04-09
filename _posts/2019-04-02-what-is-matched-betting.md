@@ -14,7 +14,7 @@ you can bet on the answer to this question.
 [On PredictIt](https://www.predictit.org/markets/detail/3352/Will-Donald-Trump-be-president-at-year-end-2019),
 the market estimates the probability of "Yes" at 90-91%.
 But [on BetFair](https://www.betfair.com/exchange/plus/politics/market/1.129097136),
-the market which estimates the probability at 94-95%!
+the market estimates the probability at 94-95%!
 We can exploit this difference in beliefs
 to turn a guaranteed profit,
 through the magic of _matched betting_!

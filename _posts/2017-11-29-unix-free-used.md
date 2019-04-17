@@ -55,5 +55,5 @@ look at the line below:
 ```
 
 Accounting for buffers+cache,
-your memory usage is `1096/2764` = 40%.
+your memory usage is `1096/3764` = 29%.
 Quite a difference!

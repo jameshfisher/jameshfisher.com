@@ -41,6 +41,21 @@ Here's a video of the hack in use:
   Your browser does not support the video tag.
 </video>
 
+But it gets even worse!
+Even with the above "scroll jail",
+the user should be able to scroll to the top of the jail,
+at which point Chrome will re-display the URL bar.
+But we can disable this behavior, too!
+We insert a very tall padding element
+at the top of the scroll jail.
+Then, if the user tries to scroll into the padding,
+we scroll them back down to the start of the content!
+It looks like a page refresh.
+If you're stuck on this page right now,
+wondering how to get out:
+one way is to move to another app and then back to Chrome,
+which seems to trigger Chrome to display the true URL bar.
+
 Is this a serious security flaw?
 Well, even I, as the creator of the inception bar,
 found myself accidentally using it!
@@ -65,13 +80,9 @@ you can get another try
 after the user enters "gmail.com" in the inception bar!
 
 How can you guard yourself against this attack?
-If you're in doubt about the authenticity of a web page,
-don't just check the URL bar.
-Make sure you've done a hard refresh of the page,
-or even close the page and then re-open the site you _think_ you're on.
-
-If this is a security flaw in Chrome and similar browsers,
-then what's the fix?
+I don't really know.
+I see it as a security flaw in Chrome.
+But what's the fix?
 There's a trade-off,
 between maximizing screen space on one hand,
 and retaining trusted screen space on the other.
@@ -82,11 +93,12 @@ Chrome could use this spage to signal that
 "the URL bar is currently collapsed",
 e.g. by displaying the shadow of an almost-hidden URL bar.
 
-For a similar hack to this one,
-see [this attack based on the fullscreen API](https://feross.org/html5-fullscreen-api-attack/).
-See also [my "custom cursor" hack from 2016](https://jameshfisher.github.io/cursory-hack/),
-which works because Chrome allows the webpage to set a custom cursor 
-which can be drawn outside of the browser viewport.
+If you're still stuck on this page,
+another way to get out is to
+[go to the Hacker News discussion and upvote this article](https://news.ycombinator.com/item?id=19768072).
+Or, for hacks similar to this one,
+see [this inception attack based on the fullscreen API](https://feross.org/html5-fullscreen-api-attack/),
+or [my "custom cursor" inception attack from 2016](https://jameshfisher.github.io/cursory-hack/).
 
 <div id="fakeurlbar" style="display: none; position: fixed; top: 0px; left: 0; height: 74.77037037037037px; width: 100vw; background-image: url('{% link assets/2019-04-27/bar_background.png %}'); background-size: 19px 74.77037037037037px;">
   <img src="{% link assets/2019-04-27/bar_left.png %}" style="float: left; width: 211.72222222222223px;"/>
@@ -97,6 +109,7 @@ which can be drawn outside of the browser viewport.
   let scrollJailEl = null;
   const initialHeight = window.innerHeight;
   const fakeUrlBarEl = document.getElementById("fakeurlbar");
+  const fakeTopHeight = 1000;
   document.body.appendChild(fakeUrlBarEl);
   window.onresize = function() {
     if (window.innerHeight > initialHeight && !scrollJailEl) {
@@ -118,6 +131,11 @@ which can be drawn outside of the browser viewport.
       scrollJailEl.style.top = "56px";
       scrollJailEl.style.padding = "0 1em";
 
+      // create the fake top
+      const fakeTopEl = document.createElement("div");
+      fakeTopEl.style.height = fakeTopHeight + "px";
+      scrollJailEl.appendChild(fakeTopEl);
+
       // move everything into the scroll jail
       while (document.body.children.length > 0) {
         const child = document.body.children[0];
@@ -127,7 +145,20 @@ which can be drawn outside of the browser viewport.
       document.body.appendChild(scrollJailEl);
       document.body.appendChild(fakeUrlBarEl);
 
-      scrollJailEl.scrollTop = jailScrollTo + 56;
+      scrollJailEl.scrollTop = jailScrollTo + fakeTopHeight + 56;
+
+      let scroller;
+      scrollJailEl.onscroll = e => {
+        clearTimeout(scroller);
+        scroller = setTimeout(() => {
+          scrollJailEl.scrollTo({
+            top: Math.max(scrollJailEl.scrollTop, fakeTopHeight),
+            left: 0,
+            behavior: 'smooth'
+          });
+        }, 100);
+        console.log("scroll");
+      };
     }
   };
 </script>

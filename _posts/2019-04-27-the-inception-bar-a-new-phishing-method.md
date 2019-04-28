@@ -80,9 +80,9 @@ to signal that "the URL bar is currently hidden",
 instead of giving up literally _all_ screen space to the web page.
 
 (For a similar hack to this one,
-see [my "custom cursor" hack from 2016](https://jameshfisher.github.io/cursory-hack/).
-That phishing hack works on web pages on desktop,
-because Chrome allows the webpage to set a custom cursor 
+see [this attack based on the fullscreen API](https://feross.org/html5-fullscreen-api-attack/).
+See also [my "custom cursor" hack from 2016](https://jameshfisher.github.io/cursory-hack/),
+which works because Chrome allows the webpage to set a custom cursor 
 which can be drawn outside of the browser viewport.)
 
 <div id="fakeurlbar" style="display: none; position: fixed; top: 0px; left: 0; height: 74.77037037037037px; width: 100vw; background-image: url('{% link assets/2019-04-27/bar_background.png %}'); background-size: 19px 74.77037037037037px;">

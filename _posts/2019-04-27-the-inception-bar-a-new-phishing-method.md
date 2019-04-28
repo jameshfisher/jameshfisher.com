@@ -72,18 +72,21 @@ or even close the page and then re-open the site you _think_ you're on.
 
 If this is a security flaw in Chrome and similar browsers,
 then what's the fix?
-There seems to be a trade-off,
+There's a trade-off,
 between maximizing screen space on one hand,
 and retaining trusted screen space on the other.
-One compromise could be to retain a small amount of screen space
-to signal that "the URL bar is currently hidden",
+One compromise would be for Chrome to retain a small amount of screen space
+above [the "line of death"](https://textslashplain.com/2017/01/14/the-line-of-death/)
 instead of giving up literally _all_ screen space to the web page.
+Chrome could use this spage to signal that 
+"the URL bar is currently collapsed",
+e.g. by displaying the shadow of an almost-hidden URL bar.
 
-(For a similar hack to this one,
+For a similar hack to this one,
 see [this attack based on the fullscreen API](https://feross.org/html5-fullscreen-api-attack/).
 See also [my "custom cursor" hack from 2016](https://jameshfisher.github.io/cursory-hack/),
 which works because Chrome allows the webpage to set a custom cursor 
-which can be drawn outside of the browser viewport.)
+which can be drawn outside of the browser viewport.
 
 <div id="fakeurlbar" style="display: none; position: fixed; top: 0px; left: 0; height: 74.77037037037037px; width: 100vw; background-image: url('{% link assets/2019-04-27/bar_background.png %}'); background-size: 19px 74.77037037037037px;">
   <img src="{% link assets/2019-04-27/bar_left.png %}" style="float: left; width: 211.72222222222223px;"/>

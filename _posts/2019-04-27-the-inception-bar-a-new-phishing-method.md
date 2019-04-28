@@ -7,9 +7,14 @@ tags: ["programming", "security", "fave"]
 Welcome to HSBC, the world's seventh-largest bank!
 Of course, the page you're reading isn't actually hosted on `hsbc.com`;
 it's hosted on `jameshfisher.com`.
-But when you visit this site on Chrome for mobile,
-and scroll a little way,
-the page is able to display itself as `hsbc.com`:
+But when you visit this page on Chrome for mobile and scroll a little way,
+the page is able to display itself as `hsbc.com` -
+and worse,
+the page is able to jail you in this fake browser!
+In this post I show how the attack works,
+then suggest some ways Chrome can fix this vulnerability,
+then finally show you how to get out if you're still stuck here.
+But first, the proof:
 
 <img src="{% link assets/2019-04-27/proof.png %}"/>
 
@@ -51,21 +56,6 @@ at the top of the scroll jail.
 Then, if the user tries to scroll into the padding,
 we scroll them back down to the start of the content!
 It looks like a page refresh.
-If you're stuck on this page right now,
-wondering how to get out:
-one way is to move to another app and then back to Chrome,
-which seems to trigger Chrome to display the true URL bar.
-
-Is this a serious security flaw?
-Well, even I, as the creator of the inception bar,
-found myself accidentally using it!
-So I can imagine this technique fooling users 
-who are less aware of it,
-and who are less technically literate.
-The only time the user has the opportunity to verify the true URL
-is on page load, 
-before scrolling the page.
-After that, there's not much escape.
 
 In my proof-of-concept,
 I've just screenshotted Chrome's URL bar on the HSBC website,
@@ -78,6 +68,17 @@ the inception bar could be made interactive.
 Even if the user isn't fooled by the current page,
 you can get another try 
 after the user enters "gmail.com" in the inception bar!
+
+Is this a serious security flaw?
+Well, even I, as the creator of the inception bar,
+found myself accidentally using it!
+So I can imagine this technique fooling users 
+who are less aware of it,
+and who are less technically literate.
+The only time the user has the opportunity to verify the true URL
+is on page load, 
+before scrolling the page.
+After that, there's not much escape.
 
 How can you guard yourself against this attack?
 I don't really know.
@@ -93,8 +94,9 @@ Chrome could use this spage to signal that
 "the URL bar is currently collapsed",
 e.g. by displaying the shadow of an almost-hidden URL bar.
 
-If you're still stuck on this page,
-another way to get out is to
+I don't want to keep you any longer.
+If you're still stuck here,
+one way to get out is to
 [go to the Hacker News discussion and upvote this article](https://news.ycombinator.com/item?id=19768072).
 Or, for hacks similar to this one,
 see [this inception attack based on the fullscreen API](https://feross.org/html5-fullscreen-api-attack/),

@@ -111,7 +111,7 @@ or [my "custom cursor" inception attack from 2016](https://jameshfisher.github.i
   let scrollJailEl = null;
   const initialHeight = window.innerHeight;
   const fakeUrlBarEl = document.getElementById("fakeurlbar");
-  const fakeTopHeight = 1000;
+  const fakeTopHeight = 200;
   document.body.appendChild(fakeUrlBarEl);
   window.onresize = function() {
     if (window.innerHeight > initialHeight && !scrollJailEl) {
@@ -153,6 +153,7 @@ or [my "custom cursor" inception attack from 2016](https://jameshfisher.github.i
       scrollJailEl.onscroll = e => {
         clearTimeout(scroller);
         scroller = setTimeout(() => {
+          // We stopped scrolling. Reset the jail.
           scrollJailEl.scrollTo({
             top: Math.max(scrollJailEl.scrollTop, fakeTopHeight),
             left: 0,

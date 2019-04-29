@@ -90,7 +90,7 @@ and retaining trusted screen space on the other.
 One compromise would be for Chrome to retain a small amount of screen space
 above [the "line of death"](https://textslashplain.com/2017/01/14/the-line-of-death/)
 instead of giving up literally _all_ screen space to the web page.
-Chrome could use this spage to signal that 
+Chrome could use this space to signal that 
 "the URL bar is currently collapsed",
 e.g. by displaying the shadow of an almost-hidden URL bar.
 

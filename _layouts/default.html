@@ -60,7 +60,7 @@
       </p>
       <p>
         {% if page.author == "jim" %}
-          I wrote this because {{page.justification}}
+          All content copyright James Fisher {{ page.date | date: "%Y" }}.
           This post is not associated with my employer.
         {% else %}
           <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a> wrote this.

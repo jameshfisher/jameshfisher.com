@@ -128,7 +128,7 @@ PredictIt's market and BetFair's market don't agree on the probability.
 The PredictIt market puts the probability at 90-91%,
 while the BetFair market puts the probability at 94-95%!
 This is a significant difference,
-and there is perhaps a profit to be made here ...
+and [there is perhaps a profit to be made here]({% post_url 2019-04-02-what-is-matched-betting %}) ...
 
 <style type="text/css">
   .odds-table {

@@ -50,8 +50,8 @@ module Jekyll
 end
 ```
 
-This uses a template at `_layouts/tag.html`.
-Here's a minimal example: of that layout:
+The above plugin uses a template at `_layouts/tag.html`.
+Here's a minimal example of that layout:
 
 ```html{%raw%}
 <!doctype html>

@@ -9,7 +9,8 @@ Here's what I saw:
 
 ```js
 const myIterable = {};
-myIterable[Symbol.iterator] = ( => { /* ... */ };
+myIterable[Symbol.iterator] = 
+  () => { /* ... */ };
 ```
 
 An iterable has the unusual property `Symbol.iterator`,

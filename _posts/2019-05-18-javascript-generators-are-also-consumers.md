@@ -39,7 +39,7 @@ you can implement the metric in one line:
 
 ```js
 function* Metric() {
-  send([yield, yield, yield, yield, yield]);
+  for (;;) send([yield, yield, yield, yield, yield]);
 }
 const metric = Metric();
 metric.next();

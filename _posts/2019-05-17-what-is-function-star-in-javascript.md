@@ -133,3 +133,7 @@ because nothing else can happen until that loop terminates.
 But the `yield` expression lets you jump out of that infinite loop
 to make progress on other useful things,
 like drawing a new number to the screen and waiting for more input.
+
+Now you've seen how JavaScript generators can be used to _generate_ data.
+But, surprise, generators can also be used to _consume_ data!
+[Read my next post to find out how ...]({% post_url 2019-05-18-javascript-generators-are-also-consumers %})

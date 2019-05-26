@@ -1,3 +1,6 @@
 [[redirects]]
   from = "/friends"
   to = "/blogroll"
+[[redirects]]
+  from = "/2019/05/26/i-can-see-your-local-web-servers"
+  to = "http://http.jameshfisher.com/2019/05/26/i-can-see-your-local-web-servers"

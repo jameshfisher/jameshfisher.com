@@ -29,6 +29,14 @@ In trial-and-error,
 you repeatedly generate guesses
 until you find the solution,
 or until you find a guess that's good enough.
+Here's one trial-and-error algorithm in JavaScript:
+
+```js
+let guess = rand();
+while (loss(guess) > 0)
+  guess = rand();
+```
+
 Simulated annealing improves on trial-and-error by
 
 1. Generating the next guess

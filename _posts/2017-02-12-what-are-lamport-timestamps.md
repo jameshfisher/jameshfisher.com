@@ -25,7 +25,7 @@ void send_message(char* msg, int to) {
 }
 
 void on_receive_message(msg_t msg) {
-  timestamp = max(timestamp, msg.timestamp + 1);
+  timestamp = max(timestamp, msg.timestamp) + 1;
 }
 ```
 

@@ -49,6 +49,18 @@ layout: null
       <a href="https://medium.com/@MrJamesFisher">Medium (2013-15)</a>.
     </p>
 
+    <h3>Favorite posts</h3>
+    <div class="calendar">
+      <div class="calendar_week">
+        {% for post in site.posts %}{% if post.tags contains "fave" %}
+        <div class="day day_posts">
+          <a class="post" href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
+        </div>
+        {% endif %}{% endfor %}
+      </div>
+    </div>
+
+    <h3>All posts</h3>
     {% assign postsByWeek = site.posts | group_by_exp:"post", "post.date | date: '%Y-W%W'" %}
     <div class="calendar">
       {% for week in postsByWeek %}

@@ -54,7 +54,15 @@ layout: null
       <div class="calendar_week">
         {% for post in site.posts %}{% if post.tags contains "fave" %}
         <div class="day day_posts">
-          <a class="post" href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
+          {% if post.diary %}
+          <span class="post diary_entry">Diary: {{ post.word_count }} words</span>
+          {% elsif post.draft == false %}
+          <a class="post" href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}"{% if post.external_url %} target="_blank"{% endif %}>
+            {% if post.author != "jim" %}Guest post by {{site.data.people[post.author].name}}: {% endif %}{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}
+            {% if post.external_url %}<img src="{% link /assets/Icon_External_Link.svg %}" alt="external link" />{% endif %}
+            <span class="date">({{ post.date | date: '%Y-%m-%d' }})</span>
+          </a>
+          {% endif %}
         </div>
         {% endif %}{% endfor %}
       </div>

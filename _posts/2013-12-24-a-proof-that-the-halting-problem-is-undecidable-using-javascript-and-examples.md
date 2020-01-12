@@ -1,6 +1,6 @@
 ---
 title: "A proof that the Halting problem is undecidable, using JavaScript and examples"
-tags: ["programming"]
+tags: ["programming", "computer-science", "javascript"]
 ---
 
 Having read a few proofs that the halting problem is undecidable,

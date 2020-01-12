@@ -52,5 +52,7 @@ Here's my solution in C:
 {% include ctci/1_6.c %}
 ```
 
-This runs in linear time in the size of the array,
-which is optimal.
+This runs in `O(n^2)`,
+i.e. linear time in the size of the array,
+which is optimal,
+because we at least have to look at all the pixels.

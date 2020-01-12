@@ -22,8 +22,10 @@ where `distrib[c]` gives the count of the character `c`.
 {% include ctci/1_3.c %}
 ```
 
-This runs in `O(len(a)+len(b))` and uses constant memory,
-which I think is optimal.
+This runs in `O(len(a)+len(b))` and uses constant memory.
+This is optimal,
+because we at least have to _look at_ every character,
+which is already linear time.
 
 The other "obvious" solution
 is to sort both strings and check they're the same.

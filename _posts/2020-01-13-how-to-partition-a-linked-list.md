@@ -9,24 +9,22 @@ Question 2.4 of _Cracking the Coding Interview_:
 > such that all nodes less than `x`
 > come before all nodes greater than or equal to `x`.
 
-We'll build two new linked lists,
+My first approach built two new lists:
 one for values less than `x`,
 and another for values greater than or equal to `x`.
-When we're done, we'll return the concatenation of these lists.
+When we're done, I returned the concatenation of these lists.
+To concatenate the two lists efficiently,
+I remembered the tail of the first list.
 
-We can build the new linked lists from the nodes of the input list.
-We'll "pop" each node off the input list,
-and "push" it onto one of the two new lists.
-This is treating the lists as stacks.
-This reverses the order of the elements,
-but that's fine according to the question.
-
-To concatenate the lists,
-we can run through the first list until we find the end,
-then link it to the start of the second list.
-But an optimization is to remember the tail of the first list,
-so we don't have to iterate through to find the tail.
-
+Then I read the answer,
+and found a simpler implementation:
+you only have to build one new list!
+When you find a value less than `x`,
+you put the node at the head of the list;
+otherwise,
+you append the node at the tail.
+To make append constant-time,
+you keep a pointer to the `tail`.
 This runs in `O(length of input)`,
 which is optimal.
 

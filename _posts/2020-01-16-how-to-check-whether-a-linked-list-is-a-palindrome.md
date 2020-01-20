@@ -23,7 +23,7 @@ comparing the node values pairwise.
 we can use the "runner" trick:
 have a `slow` pointer and a `fast` pointer,
 where the `fast` pointer advances two nodes
-for everyone one node that the `slow` pointer advances.
+for every one node that the `slow` pointer advances.
 When `fast` reaches the end, `slow` is in the middle.
 
 From the middle node,

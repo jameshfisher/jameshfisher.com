@@ -1,6 +1,6 @@
 ---
 title: "Implementing a queue using two stacks"
-tags: ["ctci", "programming", "c"]
+tags: ["ctci", "programming", "haskell"]
 ---
 
 Question 3.5 of _Cracking the Coding Interview_:
@@ -45,5 +45,5 @@ which will give you logarithmic-time `dequeue` and `enqueue`.
 Regardless, here's an implementation in Haskell:
 
 ```haskell
-{% include 3_5.hs %}
+{% include ctci/3_5.hs %}
 ```

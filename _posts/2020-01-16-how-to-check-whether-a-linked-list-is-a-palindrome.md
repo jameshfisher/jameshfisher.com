@@ -1,6 +1,6 @@
 ---
 title: "How to check whether a linked list is a palindrome"
-tags: ["ctci", "programming", "c"]
+tags: ["ctci", "programming", "c", "haskell"]
 ---
 
 Question 2.7 of _Cracking the Coding Interview_:

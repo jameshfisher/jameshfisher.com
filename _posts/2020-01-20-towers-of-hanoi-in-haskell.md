@@ -1,6 +1,6 @@
 ---
 title: "Towers of Hanoi in Haskell"
-tags: ["ctci", "programming", "c"]
+tags: ["ctci", "programming", "haskell"]
 ---
 
 Question 3.4 of _Cracking the Coding Interview_:

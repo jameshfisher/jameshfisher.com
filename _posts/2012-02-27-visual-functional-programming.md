@@ -1,5 +1,6 @@
 ---
 title: "A proposal for visual pure functional programming"
+tags: ["programming"]
 ---
 
 

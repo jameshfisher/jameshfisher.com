@@ -31,8 +31,7 @@ That `genome_diff` script looks like this:
 
 This script works by fetching the genome from [the NCBI database](https://www.ncbi.nlm.nih.gov/).
 The strings "MG772933.1" and "MN988713.1" are [accession numbers](https://en.wikipedia.org/wiki/Accession_number_(bioinformatics)).
-The text at `https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?report=fasta&id=MN988713.1`
-is 2019-nCoV's RNA sequence in FASTA format, which looks like:
+The API reutrns the RNA sequence in FASTA format, which looks like:
 
 ```
 $ curl -s 'https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?report=fasta&id=MN988713.1'
@@ -50,20 +49,26 @@ We don't need this metadata, so we strip it with `grep -v '^>'`.
 Next, we don't need those newline characters,
 so we strip them with `tr -d -C 'ATGC'`.
 Finally, 
-because `diff` doesn't work at the "character" level,
+because `diff` works on lines rather than characters,
 we'll instead use `wdiff`,
-but first separating the characters into separate words using `sed 's/\(.\)/\1 /g'`.
+after separating the characters into separate words using `sed 's/\(.\)/\1 /g'`.
 This gives us genomes that look like `A T A T T A G G ...`.
 
 Finally, we can call `wdiff -s -123` on these genomes,
 which gives us some statistics about their similarity.
 If we omit `-s -123`,
-we get the actual base differences between the sequences:
+we get the actual base differences between the sequences.
+For example, check out the end of the sequences:
 
-```diff
-A T [-A T-] T A {+A A+} G G T T T [-T-] {+A+} T A C C
-...
 ```
+$ ./genome_diff MG772933.1 MN988713.1 | fold | tail -2
+[-A A C C A C-] T [-C G A C A-] {+T+} A G {+G+} A {+G+} A A {+T G+} A [-A A A A
+A A A A A A-] {+C+} A A A A A A A A A A A A
+```
+
+We can see that the sequences both have a long sequence of `A`s at the end,
+but the Bat CoV's tail is significantly longer.
+This is known as a ["poly(A) tail"](https://en.wikipedia.org/wiki/Polyadenylation).
 
 A different way to see similarities is to use [NCBI's BLAST tool](https://blast.ncbi.nlm.nih.gov/Blast.cgi).
 Enter the accession number `MN988713.1`,

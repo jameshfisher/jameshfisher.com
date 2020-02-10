@@ -7,7 +7,7 @@ bool has_all_unique_characters(char* s) {
     return true;
   } else {
     for (int i = 1; s[i] != '\0'; i++) {
-      if (s[i] == first) return false;
+      if (s[i] == head) return false;
     }
     return has_all_unique_characters(s+1);
   }

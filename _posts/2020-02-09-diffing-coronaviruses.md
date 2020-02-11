@@ -12,8 +12,8 @@ We can use `diff` to see those similarities:
 
 ```
 $ ./genome_diff MG772933.1 MN988713.1
-MG772933.1: 29802 words  26618 89% common  861 3% deleted  2323 8% changed
-MN988713.1: 29874 words  26618 89% common  896 3% inserted  2360 8% changed
+MG772933.1: 29802 words  26618 89% common  856 3% deleted  2328 8% changed
+MN988713.1: 29882 words  26618 89% common  897 3% inserted  2367 8% changed
 ```
 
 This says that there's an 89% similarity 
@@ -31,7 +31,8 @@ That `genome_diff` script looks like this:
 
 This script works by fetching the genome from [the NCBI database](https://www.ncbi.nlm.nih.gov/).
 The strings "MG772933.1" and "MN988713.1" are [accession numbers](https://en.wikipedia.org/wiki/Accession_number_(bioinformatics)).
-The API reutrns the RNA sequence in FASTA format, which looks like:
+The API returns the RNA sequence in FASTA format, 
+which looks like:
 
 ```
 $ curl -s 'https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?report=fasta&id=MN988713.1'
@@ -43,11 +44,11 @@ TTGCAGCCGATCATCAGCACATCTAGGTTTCGTCCGGGTGTGACCGAAAGGTAAGATGGAGAGCCTTGTC
 ...
 ```
 
-The FASTA format needs a bit of "massaging" before we can `diff` it.
+The FASTA format needs some "massaging" before we can `diff` it.
 The first line, starting with `>`, describes the sequence that follows.
 We don't need this metadata, so we strip it with `grep -v '^>'`.
 Next, we don't need those newline characters,
-so we strip them with `tr -d -C 'ATGC'`.
+so we strip them with `tr -d '\n'`.
 Finally, 
 because `diff` works on lines rather than characters,
 we'll instead use `wdiff`,
@@ -77,3 +78,13 @@ ranked by "percent identity".
 The most similar are several recent sequences of 2019-nCoV,
 followed by the "Bat SARS-like coronavirus",
 followed by many SARS coronavirus sequences.
+
+_Correction 2020-02-11:_
+My script used  `tr -d -C 'ATGC'`
+to strip newlines,
+but it should use `tr -d '\n'`.
+It's important, because 
+the full set of FASTA characters in this file
+also includes `S`, `W`, and `Y`!
+For the meaning of these,
+see [FASTA format](https://en.wikipedia.org/wiki/FASTA_format#Sequence_representation).

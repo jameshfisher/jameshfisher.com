@@ -1,6 +1,6 @@
 ---
 title: "You don't need an introduction or conclusion"
-tags: []
+tags: ["writing"]
 draft: true
 ---
 

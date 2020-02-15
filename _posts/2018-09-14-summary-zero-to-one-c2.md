@@ -18,6 +18,8 @@ Error 3: "improve markets, don't create them, because they might be bubbles"
 Error 4: "focus on product, not sales; sales is wasteful"
 (actually, a product is useless without distribution).
 
+---
+
 Conventional beliefs are frequently wrong.
 This is proved by bubbles such as the Dot-com crash.
 The conventional belief then was that companies were valued by number of clicks, not by their profits.

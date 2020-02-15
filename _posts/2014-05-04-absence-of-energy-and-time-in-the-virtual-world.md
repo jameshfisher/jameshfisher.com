@@ -235,6 +235,9 @@ the words are the stars.'
 
 See http://lifehacker.com/stay-fit-by-scrolling-web-pages-with-a-treadmill-1229946945
 
+Compare to:
+  drags are more addictive when faster-acting
+
 ***T.B.C. since I got distracted***
 
 _Previously published [on Medium](https://medium.com/@MrJamesFisher/on-the-absence-of-energy-and-time-in-the-virtual-world-of-applications-43e9a6daf7fd)._

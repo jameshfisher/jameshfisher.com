@@ -1,4 +1,3 @@
-<style type="text/css">
 body { margin: 0 1em; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
 #content { max-width: 50em; margin: 2em auto; }
 * { font-size: 18px; line-height: 1.6em; box-sizing: border-box; }
@@ -34,4 +33,3 @@ p > img, p > a > img { border: 2px solid black; width: 100%; }
 sup, sub { font-size: 0.8em; vertical-align: baseline; position: relative; top: -0.4em; }
 sub { top: 0.4em; }
 small { font-size: smaller; }
-</style>

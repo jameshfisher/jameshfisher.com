@@ -3,7 +3,7 @@ title: "Perlin noise octaves"
 draft: true
 ---
 
-<canvas id="perlin" height="400" width="1200" style="height: 200px; width: 600px;"></canvas>
+<div><canvas id="perlin" height="400" width="1200" style="height: 200px; width: 600px;"></canvas></div>
 <script>
   function samplePerlin(slopeAt, x) {
     const lo = Math.floor(x);

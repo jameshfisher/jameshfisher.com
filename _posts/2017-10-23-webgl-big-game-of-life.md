@@ -3,7 +3,9 @@ title: "Giant Game of Life"
 tags: ["programming", "graphics", "webgl"]
 ---
 
-<canvas id="canvas" height="1024" width="1024" style="image-rendering: pixelated; border: 1px solid black;"></canvas>
+<div>
+  <canvas id="canvas" height="1024" width="1024" style="image-rendering: pixelated; border: 1px solid black;"></canvas>
+</div>
 <script type="x-shader/x-fragment" id="fragment-shader-display">
   precision mediump float;
   uniform sampler2D state;

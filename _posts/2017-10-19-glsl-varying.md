@@ -3,7 +3,7 @@ title: "GLSL varying variables"
 tags: ["programming", "graphics", "webgl"]
 ---
 
-<canvas id="canv" width="200" height="200"></canvas>
+<div><canvas id="canv" width="200" height="200"></canvas></div>
 <script id="vertex-shader" type="x-shader/x-vertex">
   attribute vec2 a_coord;
   attribute vec4 a_color;

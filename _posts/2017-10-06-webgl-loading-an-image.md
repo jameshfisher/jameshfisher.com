@@ -2,7 +2,7 @@
 title: "How to load an image in WebGL"
 ---
 
-<canvas id="jimmy" width="512" height="512" style="width: 256px; height: 256px;"></canvas>
+<div><canvas id="jimmy" width="512" height="512" style="width: 256px; height: 256px;"></canvas></div>
 <script id="fragment-shader" type="glsl">
   uniform sampler2D tex;
   void main(void) {

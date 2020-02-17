@@ -9,7 +9,7 @@ In today's post I animate the walk cycle as a "sprite sheet"
 drawn on an HTML canvas.
 Here's the finished canvas:
 
-<canvas id="canvas" style="image-rendering: pixelated;"></canvas>
+<div><canvas id="canvas" style="image-rendering: pixelated;"></canvas></div>
 
 This animation is generated from the following PNG image.
 The PNG contains four sprites for the cat walk cycle,

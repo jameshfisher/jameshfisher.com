@@ -2,7 +2,7 @@
 title: "WebGL fragment shader animation"
 ---
 
-<canvas id="clock" width="400" height="400" style="width: 200px; height: 200px;"></canvas>
+<div><canvas id="clock" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>
 <script id="vertex-shader" type="glsl">
   attribute vec2 coord;
   void main(void) {

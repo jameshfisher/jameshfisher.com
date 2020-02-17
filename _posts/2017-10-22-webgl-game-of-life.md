@@ -3,7 +3,7 @@ title: "Game of Life implemented with a fragment shader"
 tags: ["programming", "graphics", "webgl"]
 ---
 
-<canvas id="canvas" height="64" width="64" style="width: 256px; height: 256px; image-rendering: pixelated;"></canvas>
+<div><canvas id="canvas" height="64" width="64" style="width: 256px; height: 256px; image-rendering: pixelated;"></canvas></div>
 <script type="x-shader/x-fragment" id="fragment-shader-display">
   precision mediump float;
   uniform sampler2D state;

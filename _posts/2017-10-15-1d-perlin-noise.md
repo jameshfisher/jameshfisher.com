@@ -2,7 +2,7 @@
 title: "One-dimensional Perlin noise"
 ---
 
-<canvas id="perlin" height="400" width="1200" style="height: 200px; width: 600px;"></canvas>
+<div><canvas id="perlin" height="400" width="1200" style="height: 200px; width: 600px;"></canvas></div>
 <script>
   const slopeAt = [];
   for (let i = 0; i <= 10; i++) {

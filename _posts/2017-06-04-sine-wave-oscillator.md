@@ -52,7 +52,7 @@ function optimizedSpringSin(x) {
 
 Here's a plot of the `Math.sin` function (green) next to the `optimizedSpringSin` function (black, slightly offset):
 
-<canvas id="c"></canvas>
+<div><canvas id="c"></canvas></div>
 <script>
   var delta = 0.001;
   function springSin(x) {

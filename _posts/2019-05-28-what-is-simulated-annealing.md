@@ -13,7 +13,7 @@ what simulated annealing is,
 what problems it can solve,
 and how to implement it.
 
-<canvas width="400" height="400" style="height: 400px; width: 400px; border: 2px solid black;" id="chart"></canvas>
+<div><canvas width="400" height="400" style="height: 400px; width: 400px; border: 2px solid black;" id="chart"></canvas></div>
 <p>
   <span id="state"></span>
   <button onclick="run()">Run it again!</button>

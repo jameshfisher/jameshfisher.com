@@ -2,7 +2,7 @@
 title: "WebGL hello world"
 ---
 
-<canvas id="canvas" width="100" height="100"></canvas>
+<div><canvas id="canvas" width="100" height="100"></canvas></div>
 <script>
   const canvasEl = document.getElementById("canvas");
   const ctx = canvasEl.getContext("webgl");
@@ -17,7 +17,7 @@ It's a `<canvas>` element, and its content is rendered with WebGL.
 The code looks like this:
 
 ```html
-<canvas id="canvas" width="100" height="100"></canvas>
+<div><canvas id="canvas" width="100" height="100"></canvas></div>
 <script>
   const canvasEl = document.getElementById("canvas");
   const ctx = canvasEl.getContext("webgl");

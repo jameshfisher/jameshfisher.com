@@ -15,7 +15,7 @@ half of the global population will become infected.
 But if people reduced their interactions to just 6 per day,
 the epidemic could never even started!
 
-<canvas id="myChart" width="800" height="200"></canvas>
+<div><canvas id="myChart" width="800" height="200"></canvas></div>
 
 <table>
     <tbody>

@@ -2,7 +2,7 @@
 title: "Multiple textures in WebGL"
 ---
 
-<canvas width="200" height="200" style="height: 200px; width: 200px;" id="fragmentCanvas"></canvas>
+<div><canvas width="200" height="200" style="height: 200px; width: 200px;" id="fragmentCanvas"></canvas></div>
 <script id="fragment-shader" type="x-shader/x-fragment">
   precision mediump float;
   uniform sampler2D checkerboardTexture;

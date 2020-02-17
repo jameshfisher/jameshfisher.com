@@ -3,7 +3,7 @@ title: "Drawing a cube in WebGL"
 tags: ["programming", "graphics", "webgl"]
 ---
 
-<canvas id="matrix_viz" width="400" height="400" style="width: 200px; height: 200px;"></canvas>
+<div><canvas id="matrix_viz" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>
 <script src="/assets/gl-matrix.js" type="text/javascript"></script>
 <script id="vertex-shader" type="x-shader/x-vertex">
   uniform mat4 transformation;

@@ -2,7 +2,7 @@
 title: "Drawing a clock face with WebGL"
 ---
 
-<canvas id="clock" width="400" height="400" style="width: 200px; height: 200px;"></canvas>
+<div><canvas id="clock" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>
 <script id="vertex-shader" type="x-shader/x-vertex">
   attribute vec2 polar_coord;
   void main(void) {

@@ -20,7 +20,7 @@ The `ArrayBuffer` is interpreted as pixel data as follows.
 Each pixel is four bytes: 
 red, green, blue and alpha, in that order.
 Pixels are in "reading" order:
-top-to-bottom, right-to-left.
+top-to-bottom, left-to-right.
 The `ArrayBuffer` contains no image dimension metadata,
 or any other metadata.
 We provide these dimensions by wrapping the `ArrayBuffer`

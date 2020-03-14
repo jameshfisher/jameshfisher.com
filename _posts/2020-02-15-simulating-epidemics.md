@@ -133,8 +133,8 @@ Max infectious: <span id="maxInfected"></span>. Min susceptible: <span id="minSu
 
             const infectedMeetingsPerPerson = (infected / total) * MEETINGS_PER_DAY_PER_PERSON;
             const transmissionProbability = 1-(Math.pow(1-MEETING_INFECTION_PROBABILITY, infectedMeetingsPerPerson));
-            newlyInfected = susceptible * transmissionProbability;
-            newlyRecovered = infected / INFECTION_DURATION_DAYS;
+            const newlyInfected = susceptible * transmissionProbability;
+            const newlyRecovered = infected / INFECTION_DURATION_DAYS;
 
             infected += newlyInfected;
             susceptible -= newlyInfected;

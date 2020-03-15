@@ -1,5 +1,5 @@
 ---
-title: "Catch it now, or avoid it forever"
+title: "Two weeks left to catch COVID-19"
 tags: ["programming", "epidemiology"]
 ---
 
@@ -8,11 +8,13 @@ But the window of opportunity is closing!
 In approximately two weeks,
 the rational strategy will switch from _catch it now_
 to _avoid it forever_.
-In this post, I show an "SIR model" for COVID-19,
-with parameters that you can play with.
-I then show how a "backpropagation" algorithm 
-that efficiently calculates death probabilities in compartmental models,
-which lets us analyze optimal strategy.
+In this post, I show a compartmental simulation of COVID-19,
+with interactive parameters that you can play with.
+I then show a "backpropagation" algorithm 
+that calculates death probabilities in compartmental models,
+which lets us analyze optimal selfish strategies.
+I find that there are four phases during epidemics, 
+each with its own optimal strategy.
 
 The following chart shows 
 how likely a person is to be dead by the end of the year,
@@ -39,12 +41,12 @@ By tracing the blue "susceptible" line in the chart,
 and observing where it crosses the other lines,
 we derive the four phases:
 
-1. **Phase 1: you should infect yourself to get treatment.**
+1. **Phase 1: you should infect yourself, getting treatment.**
    Before the peak,
    you should infect yourself 
    to get treatment while our healthcare system is still functioning.
    We're currently in this phase.
-1. **Phase 2: you should infect yourself, foregoing treatment, in the hope of priority.**
+1. **Phase 2: you should still infect yourself, foregoing treatment.**
    Phase 2 begins when the healthcare system hits capacity,
    and there are no more beds.
    In the chart, the red line "infection without treatment" makes its appearance.
@@ -108,37 +110,61 @@ or by reducing the probability of transmission (e.g., with masks).
 
 <div><canvas id="populationChart" width="800" height="400"></canvas></div>
 
-This is an example of a "compartmental model",
-where each person is in one of
-a finite number of states (or "compartments").
-Generating the above population chart is fairly easy
-from running the model forwards.
+We can generate the above population chart
+by running the model.
+We end up with a graph like the following
+(note that I've simplified the model for clarity).
+Each vertex counts the number of people in a given state on a given day,
+and each edge counts the number of people transferred from one state to another:
 
-But how can we generate the "death probability" chart from this model?
-This turned out to be more challenging,
-and required an interesting "backpropagation" algorithm.
+<img src="{% link assets/2020-03-15/sir-model-forwards.svg %}" style="border: none; max-width: 30em; margin: 0 auto; display: block;" />
+
+But how can we generate the "death probability" chart from this?
 Say Bob asks you:
-"It's day 42, and I'm currently still susceptible;
-what's my chance of dying before the end of the year?"
-You can answer this by running the model forwards,
-keeping track of the probability distribution of Bob's possible states on day 42,
-then on day 43, then day 44, etc.
-But then to generate the "death probability" chart,
+"It's day 2, and I'm susceptible;
+what's my chance of being dead at the end of the year?"
+You could answer this by running the model _forwards_,
+keeping track of the probability distribution of Bob's possible states
+on day 2, then day 3, then day 4.
+But then to generate our entire "death probability" chart,
 you need to run this procedure for every combination of state and day.
 That's very expensive!
 
+Fortunately, I found a more efficient backpropagation-style algorithm!
+First, we run the model forwards, as before,
+keeping a record of all the transfers of people from one state to another.
+Then we run the model _backwards_.
+We'll get a graph that looks like this:
 
-Say you need to know the probability that
-a person in the "infected 
-Calculating the death probability
-Let's say
+<img src="{% link assets/2020-03-15/sir-model-backwards.svg %}" style="border: none; max-width: 30em; margin: 0 auto; display: block;" />
 
+We've labelled each node with the probability of ending up dead on day 3
+(the bottom-right corner).
+For example, "susceptible" on Day 2 has a 1/128 chance of dying.
+Labelling day 3 is our easy base-case.
+The dead state is 1, i.e. certain to be dead, because it's dead;
+All other states are 0, i.e. certain to survive, because they survived.
+Then, to generate a previous day's probabilities,
+each node is a _weighted sum_ of the previous nodes on the following day.
+For example, 1/128 is the weighted sum (87/96 × 0) + (9/96 × 1/12).
 
+Now for some commentary.
+Notice that the individual selfish strategy of getting infected
+is in conflict with the the group strategy of avoiding infection to "flatten the curve".
+This makes it an example of a [social dilemma](https://en.wikipedia.org/wiki/Social_dilemma),
+like overfishing, or not voting.
 
-This is an example of a _social dilemma_,
-since the selfish strategy 
-
-
+Despite this dilemma,
+no one appears to be deliberately infecting themselves with COVID-19.
+Perhaps the model is wrong, and self-infection is not actually rational.
+Or perhaps the model is right, but people don't act like _homo economicus_.
+It's a moral argument:
+I'm self-isolating, 
+not for my own protection,
+but for the good of the population.
+At least, that's what I tell myself.
+Maybe it's just because
+my friends would call me a moron if I self-infected.
 
 <script src="{% link /assets/Chart.min.js %}"></script>
 <script>

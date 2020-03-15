@@ -1,6 +1,6 @@
 ---
-title: "Two weeks left to catch COVID-19"
-tags: ["programming", "epidemiology"]
+title: "Time is running out to catch COVID-19"
+tags: ["programming", "epidemiology", "fave"]
 ---
 
 Your best chance for survival is to _catch COVID-19 now_.
@@ -10,7 +10,7 @@ the rational strategy will switch from _catch it now_
 to _avoid it forever_.
 In this post, I show a compartmental simulation of COVID-19,
 with interactive parameters that you can play with.
-I then show a "backpropagation" algorithm 
+I show a nice "backpropagation" algorithm 
 that calculates death probabilities in compartmental models,
 which lets us analyze optimal selfish strategies.
 I find that there are four phases during epidemics, 
@@ -95,9 +95,7 @@ There are many parameters in this model,
 which I've attempted to set to the known characteristics of COVID-19,
 but you can play with them yourself:
 
-<table style="background-color: #eee;">
-    <tbody id="sliders-body"></tbody>
-</table>
+<div id="sliders-body"></div>
 
 The following chart shows the proportion of the population in each state,
 It should look familar;
@@ -186,7 +184,7 @@ my friends would call me a moron if I self-infected.
 
     const sliders = {
       populationSize:
-        { min: 1000000, max: 400000000, value: covid19Defaults.populationSize, step: 1000000, display: displayFuncs.toString, label: "Population size" },
+        { min: 1000000, max: 400000000, value: covid19Defaults.populationSize, step: 1000000, display: displayFuncs.toString, label: "👩‍👩‍👧‍👧 Population size" },
       infectionDurationDays:
         { min: 1, max: 30, value: covid19Defaults.infectionDurationDays, step: 1, display: displayFuncs.toString, label: "⏰ Average infection duration in days" },
       meetingInfectionProbability:      
@@ -222,14 +220,19 @@ my friends would call me a moron if I self-infected.
         max: sliderConfig.max, 
         value: sliderConfig.value, 
         step: sliderConfig.step,
-        style: "width: 20em"
+        style: "width: 12em; margin-right: 1em"
       }, []);
       const valueSpan = el("span", {id: sliderId+"Value"}, []);
-      document.getElementById("sliders-body").appendChild(el("tr", {}, [
-        el("td", {}, [ el("label", { for: sliderId }, [sliderConfig.label]) ]),
-        el("td", {}, [ slider ]),
-        el("td", {}, [ valueSpan ]),
-      ]));
+      document.getElementById("sliders-body").appendChild(el("div", 
+        {
+          style: "width: 20em; display: inline-block;"
+        }, 
+        [
+          el("label", { for: sliderId, style: "margin-right: 1em; font-weight: bold;" }, [sliderConfig.label]),
+          el("br", {}, []),
+          slider,
+          valueSpan
+        ]));
       slider.oninput = update;
       sliderConfig.slider = slider;
       sliderConfig.valueSpan = valueSpan;

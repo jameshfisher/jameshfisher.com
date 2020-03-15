@@ -97,7 +97,7 @@ but you can play with them yourself:
 
 <div id="sliders-body"></div>
 
-The following chart shows the proportion of the population in each state,
+The following chart shows the proportion of the population in each state.
 It should look familar;
 especially the red curve of infected people.
 This is the curve that we should be "flattening" 
@@ -140,8 +140,8 @@ We've labelled each node with the probability of ending up dead on day 3
 (the bottom-right corner).
 For example, "susceptible" on Day 2 has a 1/128 chance of dying.
 Labelling day 3 is our easy base-case.
-The dead state is 1, i.e. certain to be dead, because it's dead;
-All other states are 0, i.e. certain to survive, because they survived.
+The dead state is 1, i.e. certain to be dead;
+all other states are 0, i.e. certain to survive, because they survived.
 Then, to generate a previous day's probabilities,
 each node is a _weighted sum_ of the previous nodes on the following day.
 For example, 1/128 is the weighted sum (87/96 × 0) + (9/96 × 1/12).

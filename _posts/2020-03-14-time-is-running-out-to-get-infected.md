@@ -1,14 +1,144 @@
 ---
-title: "Time is running out to get infected"
+title: "Catch it now, or avoid it forever"
 tags: ["programming", "epidemiology"]
 ---
 
-<div><canvas id="populationChart" width="800" height="200"></canvas></div>
-<div><canvas id="deathProbChart" width="800" height="200"></canvas></div>
+Your best chance for survival is to _catch COVID-19 now_.
+But the window of opportunity is closing!
+In approximately two weeks,
+the rational strategy will switch from _catch it now_
+to _avoid it forever_.
+In this post, I show an "SIR model" for COVID-19,
+with parameters that you can play with.
+I then show how a "backpropagation" algorithm 
+that efficiently calculates death probabilities in compartmental models,
+which lets us analyze optimal strategy.
 
-<table>
+The following chart shows 
+how likely a person is to be dead by the end of the year,
+given their current state.
+For example, on day 8, a person in the "infected with treatment" state
+has a 2.5% chance of being dead by day 365.
+But on the same day 8, a person in the "susceptible" state
+has a full 5% chance of being dead by day 365!
+It follows that the "susceptible" person
+should choose to deliberately become infected,
+to improve their chance of survival!
+
+<div><canvas id="deathProbChart" width="800" height="400"></canvas></div>
+
+According to the simulation,
+which I explain more fully below,
+it's rational to infect yourself right now.
+Intuitively,
+this is because you'll get better treatment 
+while our healthcare system is still functioning.
+But there are in fact four phases of the epidemic,
+and the strategy is different in each phase.
+By tracing the blue "susceptible" line in the chart,
+and observing where it crosses the other lines,
+we derive the four phases:
+
+1. **Phase 1: you should infect yourself to get treatment.**
+   Before the peak,
+   you should infect yourself 
+   to get treatment while our healthcare system is still functioning.
+   We're currently in this phase.
+1. **Phase 2: you should infect yourself, foregoing treatment, in the hope of priority.**
+   Phase 2 begins when the healthcare system hits capacity,
+   and there are no more beds.
+   In the chart, the red line "infection without treatment" makes its appearance.
+   Surprisingly,
+   for a brief time,
+   it is still rational to infect yourself,
+   and go without treatment!
+   This is because infected people are given priority
+   when beds are freed up,
+   so it's likely that you will soon get treatment.
+1. **Phase 3: you should avoid infection (unless you can jump the queue).**
+   After a short time,
+   there are so many people waiting for treatment
+   that it's no longer rational to join the "queue".
+   But during this phase,
+   it's still rational to infect yourself,
+   if you're given the unlikely opportunity to get treatment --
+   maybe you can join a clinical trial,
+   or maybe your relative donates their treatment to you.
+1. **Phase 4: you should avoid infection forever.**
+   Eventually, 
+   the blue "susceptible" line dips under the the "infected with treatment" line.
+   Beyond this point,
+   it's irrational to infect yourself,
+   even if you can get treatment.
+   You're better off gambling that you'll never get the infection,
+   because "herd immunity" makes it unlikely.
+
+Now I show how I simulated the epidemic.
+Every simulated person is in one of five states:
+"susceptible", "infected with treatment", "infected without treatment", "recovered", or "dead".
+Each day, people transition between these states like so:
+
+<img src="{% link assets/2020-03-15/sir-model.svg %}" style="border: none; max-width: 30em; margin: 0 auto; display: block;" />
+
+We start the simulation with everyone in the "susceptible" state,
+except for one person with the novel virus.
+Each day, people meet each other,
+through which susceptible people may become infected.
+Unfortunately, there is a limited number of beds to provide treatment!
+Infected people either die or recover,
+but the chance of dying is reduced by receiving treatment.
+When an infected person dies or recovers,
+their bed is given an infected person waiting for treatment.
+There are many parameters in this model,
+which I've attempted to set to the known characteristics of COVID-19,
+but you can play with them yourself:
+
+<table style="background-color: #eee;">
     <tbody id="sliders-body"></tbody>
 </table>
+
+The following chart shows the proportion of the population in each state,
+It should look familar;
+especially the red curve of infected people.
+This is the curve that we should be "flattening" 
+to reduce the total death rate.
+Use the sliders above to flatten the curve 
+by reducing meetings,
+or by reducing the probability of transmission (e.g., with masks).
+
+<div><canvas id="populationChart" width="800" height="400"></canvas></div>
+
+This is an example of a "compartmental model",
+where each person is in one of
+a finite number of states (or "compartments").
+Generating the above population chart is fairly easy
+from running the model forwards.
+
+But how can we generate the "death probability" chart from this model?
+This turned out to be more challenging,
+and required an interesting "backpropagation" algorithm.
+Say Bob asks you:
+"It's day 42, and I'm currently still susceptible;
+what's my chance of dying before the end of the year?"
+You can answer this by running the model forwards,
+keeping track of the probability distribution of Bob's possible states on day 42,
+then on day 43, then day 44, etc.
+But then to generate the "death probability" chart,
+you need to run this procedure for every combination of state and day.
+That's very expensive!
+
+
+Say you need to know the probability that
+a person in the "infected 
+Calculating the death probability
+Let's say
+
+
+
+This is an example of a _social dilemma_,
+since the selfish strategy 
+
+
 
 <script src="{% link /assets/Chart.min.js %}"></script>
 <script>
@@ -16,19 +146,35 @@ tags: ["programming", "epidemiology"]
       toString: n => n.toString(),
       percentage: n => (n*100).toFixed(1) + "%",
     };
+
+    const covid19Defaults = {
+      populationSize: 66000000, // UK
+      infectionDurationDays: 15, // https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30627-9/fulltext
+      meetingInfectionProbability: 0.06, // calibrated for growth rate ~= 1.6x per day, UK growth rate https://www.arcgis.com/apps/opsdashboard/index.html#/f94c3c90da5b4e9f9a0b19484dd4bb14
+      meetingsPerDayPerPerson: 15, // http://jtd.amegroups.com/article/view/36385/pdf
+      caseFatalityRateWithTreatment: 0.024, // https://ourworldindata.org/coronavirus "Case fatality rate for the rest of the world"
+      caseFatalityRateWithoutTreatment: 0.05, // A guess - we don't seem to know since most are treated atm. Italy CFR is 5%
+      numberOfBedsPerThousandPeople: 5, // 5 per 1K people, or 0.5%. Commonly cited
+      immunityDurationDays: 3650, // Entirely unknown at this stage, it seems
+    };
+
     const sliders = {
-      infectionDurationDays:            
-        { min: 1, max: 30, value: 14, step: 1, display: displayFuncs.toString, label: "⏰ Average infection duration in days" },
+      populationSize:
+        { min: 1000000, max: 400000000, value: covid19Defaults.populationSize, step: 1000000, display: displayFuncs.toString, label: "Population size" },
+      infectionDurationDays:
+        { min: 1, max: 30, value: covid19Defaults.infectionDurationDays, step: 1, display: displayFuncs.toString, label: "⏰ Average infection duration in days" },
       meetingInfectionProbability:      
-        { min: 0, max: 0.1, value: 0.03, step: 0.001, display: displayFuncs.percentage, label: "🦠 Probability of transmission in meeting" },
+        { min: 0, max: 0.1, value: covid19Defaults.meetingInfectionProbability, step: 0.001, display: displayFuncs.percentage, label: "🦠 Probability of transmission in meeting" },
       meetingsPerDayPerPerson:          
-        { min: 0, max: 15, value: 10, step: 1, display: displayFuncs.toString, label: "🤝 Meetings per day per person" },
+        { min: 0, max: 30, value: covid19Defaults.meetingsPerDayPerPerson, step: 1, display: displayFuncs.toString, label: "🤝 Meetings per day per person" },
       caseFatalityRateWithTreatment:    
-        { min: 0, max: 0.2, value: 0.01, step: 0.001, display: displayFuncs.percentage, label: "☠️ Case fatality rate with treatment" },
+        { min: 0, max: 0.2, value: covid19Defaults.caseFatalityRateWithTreatment, step: 0.001, display: displayFuncs.percentage, label: "☠️ Case fatality rate with treatment" },
       caseFatalityRateWithoutTreatment: 
-        { min: 0, max: 0.2, value: 0.06, step: 0.001, display: displayFuncs.percentage, label: "☠️ Case fatality rate without treatment" },
-      numberOfBeds:                     
-        { min: 0, max: 100000, value: 10000, step: 100, display: displayFuncs.toString, label: "🛏 Number of beds" }
+        { min: 0, max: 0.2, value: covid19Defaults.caseFatalityRateWithoutTreatment, step: 0.001, display: displayFuncs.percentage, label: "☠️ Case fatality rate without treatment" },
+      numberOfBedsPerThousandPeople:                     
+        { min: 0, max: 200, value: covid19Defaults.numberOfBedsPerThousandPeople, step: 1, display: displayFuncs.toString, label: "🛏 Number of beds per thousand people" },
+      immunityDurationDays:
+        { min: 1, max: 3650, value: covid19Defaults.immunityDurationDays, step: 1, display: displayFuncs.toString, label: "⏰ Average immunity duration in days"},
     };
 
     function el(t, as, cs) {
@@ -49,7 +195,8 @@ tags: ["programming", "epidemiology"]
         min: sliderConfig.min, 
         max: sliderConfig.max, 
         value: sliderConfig.value, 
-        step: sliderConfig.step 
+        step: sliderConfig.step,
+        style: "width: 20em"
       }, []);
       const valueSpan = el("span", {id: sliderId+"Value"}, []);
       document.getElementById("sliders-body").appendChild(el("tr", {}, [
@@ -131,6 +278,11 @@ tags: ["programming", "epidemiology"]
             scales: {
                 yAxes: [{
                     stacked: true,
+                    ticks: {
+                      callback: function(value, index, values) {
+                          return (value/1000000) + "M";
+                      }
+                    }
                 }]
             },
         }
@@ -172,6 +324,17 @@ tags: ["programming", "epidemiology"]
                     pointRadius: 0,
                 },
             ]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                callback: function(value, index, values) {
+                    return displayFuncs.percentage(value);
+                }
+              }
+            }]
+          }
         }
     });
 
@@ -183,7 +346,7 @@ tags: ["programming", "epidemiology"]
     //   { infected: 0, dead: 1 }
     // ) = 0.05 = (0.95*0) + (0.05*1)
     function calcDeathProb(cmp, totalToday, transfers, deathProbsTomorrow) {
-      if (totalToday === 0) return 0;
+      if (totalToday < 0.00001) return null;
 
       let totalProb = 0;
       let transferred = 0;
@@ -228,12 +391,16 @@ tags: ["programming", "epidemiology"]
     }
 
     function update() {
+        const POPULATION_SIZE = sliders.populationSize.slider.value;
         const MEETINGS_PER_DAY_PER_PERSON = sliders.meetingsPerDayPerPerson.slider.value;
         const MEETING_INFECTION_PROBABILITY = sliders.meetingInfectionProbability.slider.value;
         const INFECTION_DURATION_DAYS = sliders.infectionDurationDays.slider.value;
         const CASE_FATALITY_RATE_WITH_TREATMENT = sliders.caseFatalityRateWithTreatment.slider.value;
         const CASE_FATALITY_RATE_WITHOUT_TREATMENT = sliders.caseFatalityRateWithoutTreatment.slider.value;
-        const NUMBER_OF_BEDS = sliders.numberOfBeds.slider.value;
+        const NUMBER_OF_BEDS_PER_THOUSAND = sliders.numberOfBedsPerThousandPeople.slider.value;
+        const IMMUNITY_DURATION_DAYS = sliders.immunityDurationDays.slider.value;
+
+        const NUMBER_OF_BEDS = (NUMBER_OF_BEDS_PER_THOUSAND/1000) * POPULATION_SIZE;
 
         function calcTransfers(state) {
           const total = state.susceptible + state.infectedWithTreatment + state.infectedWithoutTreatment + state.recovered;
@@ -262,6 +429,8 @@ tags: ["programming", "epidemiology"]
           const newlyInfectedToTreatment = Math.min(newlyInfected, freeBeds);
           const newlyInfectedToWithoutTreatment = newlyInfected - newlyInfectedToTreatment;
 
+          const newlySusceptible = state.recovered / IMMUNITY_DURATION_DAYS;
+
           return [
             { from: "infectedWithoutTreatment", to: "infectedWithTreatment", value: givenABed },
             { from: "susceptible", to: "infectedWithTreatment", value: newlyInfectedToTreatment },
@@ -270,6 +439,7 @@ tags: ["programming", "epidemiology"]
             { from: "infectedWithTreatment", to: "recovered", value: newlyRecoveredFromWithTreatment },
             { from: "infectedWithoutTreatment", to: "dead", value: newlyDeadFromWithoutTreatment },
             { from: "infectedWithoutTreatment", to: "recovered", value: newlyRecoveredFromWithoutTreatment },
+            { from: "recovered", to: "susceptible", value: newlySusceptible },
           ];
         }
 
@@ -284,7 +454,7 @@ tags: ["programming", "epidemiology"]
         }
 
         const stateByDay = [{
-          susceptible: 100000,
+          susceptible: POPULATION_SIZE,
           infectedWithTreatment: 1,
           infectedWithoutTreatment: 0,
           recovered: 0,
@@ -297,6 +467,7 @@ tags: ["programming", "epidemiology"]
           const transfers = calcTransfers(state);
           transfersFromDay[i] = transfers;
           stateByDay[i+1] = doTransfers(state, transfers);
+          console.log(i, stateByDay[i+1].infectedWithTreatment / stateByDay[i].infectedWithTreatment);
         }
 
         deathProbsOnDay = [];

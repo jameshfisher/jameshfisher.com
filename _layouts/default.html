@@ -42,12 +42,44 @@
       </p>
       {% endif %}
       {{content}}
-      <p style="text-align: center">
-        <a target="_blank" style="display: inline-block; padding: 4px 10px; margin: 2em auto; background-color: #1b95e0; color: #fff; cursor: pointer;" href="https://twitter.com/intent/follow?screen_name=MrJamesFisher&original_referer={{ canonical | escape }}">
-          Get updates on Twitter
-        </a>
-      </p>
-      <hr/>
+      <div style="background-color: #111; color: white; border-radius: 0.5em;">
+        <div style="padding: 1em;">
+          WFH on lockdown, like me?
+          Let&rsquo;s help each other out!
+          I just released <a href="https://vidr.io/" style="color: #fd0; font-weight: bold; text-decoration: underline;">Vidrio</a>,
+          a free Mac app to make your screen-sharing awesomely holographic.
+          “Oh damn that's genius”, said some YouTuber when he saw it.
+          But don't believe him, or the #1 on Product Hunt.
+          Instead, believe this demo:
+        </div>
+        <div class="maxwidth pad-sides" style="margin-top: 1em;">
+          <!-- <h2>Before/After</h2> -->
+          <div style="text-align: center;">
+            <div style="width: 320px; display: inline-block;">
+              <div style="width: 320px; height: 200px; position: relative;">
+                <video loop muted autoplay style="width: 100%; position: absolute; top: 0; left: 0;">
+                  <source src="/assets/vidrio/screen_640.mp4" type="video/mp4"/>
+                </video>
+                <video loop muted autoplay style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0.25;">
+                  <source src="/assets/vidrio/webcam_320.mp4" type="video/mp4"/>
+                </video>
+              </div>
+              <p>With <a href="https://vidr.io/" style="color: #fd0; font-weight: bold; text-decoration: underline;">Vidrio</a></p>
+            </div>
+            <div style="width: 320px; display: inline-block;">
+              <div style="width: 320px; height: 200px; position: relative;">
+                <video loop muted autoplay style="width: 100%; position: absolute; top: 0; left: 0;">
+                  <source src="/assets/vidrio/screen_640.mp4" type="video/mp4"/>
+                </video>
+                <video loop muted autoplay style="width: 30%; position: absolute; right: 10px; bottom: 10px;">
+                  <source src="/assets/vidrio/webcam_320.mp4" type="video/mp4"/>
+                </video>
+              </div>
+              <p>With generic competitor</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <h3>More by Jim</h3>
       <p class="posts">
         <ul>

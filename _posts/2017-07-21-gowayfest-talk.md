@@ -17,6 +17,8 @@ We travelled via Kiev both ways.
 Minsk was surprisingly orderly (it's the "Russian Las Vagas" run by a semi-dictator obsessed with cleanliness)
 whereas Kiev was a bit of a Wild West.
 
-<div style="position:relative;padding-top:56.25%;">
-  <iframe src="https://www.youtube.com/embed/5hNRcoH4-Lk?list=PLpVeA1tdgfCDpgQzBP6J445sfTa46jqep" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+<div>
+  <div style="position:relative;padding-top:56.25%;">
+    <iframe src="https://www.youtube.com/embed/5hNRcoH4-Lk?list=PLpVeA1tdgfCDpgQzBP6J445sfTa46jqep" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
 </div>

@@ -88,7 +88,7 @@ class App {
     slider.target = self
     slider.action = #selector(sliderChanged)
 
-    // now change the slider, so tht the callback is called ...
+    // now change the slider, so that the callback is called ...
   }
 }
 ```

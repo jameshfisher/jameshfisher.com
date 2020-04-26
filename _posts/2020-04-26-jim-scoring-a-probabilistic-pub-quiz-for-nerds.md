@@ -40,8 +40,8 @@ and consider it carefully:
 <div class="question-box">
   <div class="question">Philadelphia is the capital of Pennsylvania. How likely is this?</div>
   <div>
-    <div><input type="radio" name="ans_prob" id="ans_prob_5" value="80-100" /><label for="ans_prob_5">80-100% likely</label><span class="score score-vwrong">No!! Harrisburg! -7 pts.</span></div>
-    <div><input type="radio" name="ans_prob" id="ans_prob_4" value="60-80" /><label for="ans_prob_4">60-80% likely</label><span class="score score-wrong">Wrong. Harrisburg. -3 pts. </span></div>
+    <div><input type="radio" name="ans_prob" id="ans_prob_5" value="80-100" /><label for="ans_prob_5">80-100% likely</label><span class="score score-vwrong">It's Harrisburg! -7 pts.</span></div>
+    <div><input type="radio" name="ans_prob" id="ans_prob_4" value="60-80" /><label for="ans_prob_4">60-80% likely</label><span class="score score-wrong">It's Harrisburg. -3 pts. </span></div>
     <div><input type="radio" name="ans_prob" id="ans_prob_3" value="40-60" /><label for="ans_prob_3">40-60% likely</label><span class="score score-neutral">It's Harrisburg. 0 pts.</span></div>
     <div><input type="radio" name="ans_prob" id="ans_prob_2" value="2-40" /><label for="ans_prob_2">20-40% likely</label><span class="score score-right">Right. 2 pts.</span></div>
     <div><input type="radio" name="ans_prob" id="ans_prob_1" value="0-20" /><label for="ans_prob_1">0-20% likely</label><span class="score score-vright">Such confidence! 3 pts.</span></div>
@@ -117,8 +117,8 @@ but was it ⅓ of bones, or ¼, or ½ ..?
 Was it the feet, or one foot, or the hands ..?
 Let's say you think it's 70% likely that "Approximately ⅓ of human bones are in the feet".
 Then your _expected score_ for picking "60-80% likely" is calculated as
-(70% ⨉ <span class="score score-right">2 pts</span>) + 
-(30% ⨉ <span class="score score-wrong">-3 pts</span>).
+(70% × <span class="score score-right">2 pts</span>) + 
+(30% × <span class="score score-wrong">-3 pts</span>).
 This expected score comes out at 0.5,
 which is higher than your expected score for any other answer.
 Here's a plot of your expected score, 
@@ -136,7 +136,7 @@ you can have a go:
   <div class="question">Approximately ⅓ of human bones are in the feet. How likely is this?</div>
   <div>
     <div><input type="radio" name="ans_prob" id="ans_prob_5" value="80-100" /><label for="ans_prob_5">80-100% likely</label><span class="score score-vwrong">Overconfident!! -7 pts.</span></div>
-    <div><input type="radio" name="ans_prob" id="ans_prob_4" value="60-80" /><label for="ans_prob_4">60-80% likely</label><span class="score score-wrong">Nope, it's false. -3 pts. </span></div>
+    <div><input type="radio" name="ans_prob" id="ans_prob_4" value="60-80" /><label for="ans_prob_4">60-80% likely</label><span class="score score-wrong">No, it's false. -3 pts. </span></div>
     <div><input type="radio" name="ans_prob" id="ans_prob_3" value="40-60" /><label for="ans_prob_3">40-60% likely</label><span class="score score-neutral">It's false. 0 pts.</span></div>
     <div><input type="radio" name="ans_prob" id="ans_prob_2" value="2-40" /><label for="ans_prob_2">20-40% likely</label><span class="score score-right">Yep, it's false. 2 pts.</span></div>
     <div><input type="radio" name="ans_prob" id="ans_prob_1" value="0-20" /><label for="ans_prob_1">0-20% likely</label><span class="score score-vright">Such confidence! 3 pts.</span></div>
@@ -155,7 +155,7 @@ Here is one such system:
 
 If you want to see why this works,
 consider that your believed probability is _p_.
-Then your expected score is _p_⨉log(_a_) + (1 - _p_) ⨉ log(1 - _a_).
+Then your expected score is _p_×log(_a_) + (1 - _p_) × log(1 - _a_).
 It turns out that to maximize this expected score,
 you should set _a_=_p_ --
 that is, you should answer with your true believed probability.
@@ -197,8 +197,8 @@ Post your final score on Twitter or Hacker News:
     false: {0: 3, 20: 2, 40: 0, 60: -3, 80: -7}
   };
   const labels = {
-    true: {0: "Overconfident! -7 pts", 20: "Nope, it's true. -3 pts", 40: "It's true. 0 pts", 60: "Yep, it's true. 2 pts", 80: "Confidence! 3 pts"},
-    false: {0: "Confidence! 3 pts", 20: "Yep, it's false. 2 pts", 40: "It's false. 0 pts", 60: "Nope, it's false. -3 pts", 80: "Overconfident! -7 pts"}
+    true: {0: "Noo!! -7 pts", 20: "No, it's true. -3 pts", 40: "It's true. 0 pts", 60: "Yep, it's true. 2 pts", 80: "Confidence! 3 pts"},
+    false: {0: "Confidence! 3 pts", 20: "Yep, it's false. 2 pts", 40: "It's false. 0 pts", 60: "No, it's false. -3 pts", 80: "Noo!! -7 pts"}
   };
   const cssClass = {
     true: {0:'vwrong', 20:'wrong', 40:'neutral', 60:'right', 80:'vright'},

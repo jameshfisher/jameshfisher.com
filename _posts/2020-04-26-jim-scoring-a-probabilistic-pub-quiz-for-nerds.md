@@ -1,6 +1,6 @@
 ---
-title: "Jim scoring: a probabilistic pub quiz for nerds"
-tags: ["mathematics", "betting"]
+title: "A probabilistic pub quiz for nerds"
+tags: ["mathematics", "betting", "fave"]
 ---
 
 The typical pub quiz has a "true or false" round.
@@ -96,7 +96,12 @@ The scoring system is as follows:
 </style>
 
 The Jim scoring system sure looks odd at first glance!
-There's a "magic sequence" of numbers: 3, 2, 0, -3, -7.
+There's a "magic sequence" of numbers: 
+<span class="score score-vright">3</span>, 
+<span class="score score-right">2</span>, 
+<span class="score score-neutral">0</span>, 
+<span class="score score-wrong">-3</span>, 
+<span class="score score-vwrong">-7</span>.
 Stare at it for a few seconds, and you might spot a pattern.
 But why is this a "good" scoring system?
 
@@ -172,7 +177,7 @@ Observe the confidence ratings become more extreme towards the end of the quiz.
 Try it out in your next family quiz over Zoom.
 But in the mean time,
 I'll leave you to test your confidence on this 10-question quiz.
-Post your final score on Twitter or Hacker News:
+Post your final score on Twitter:
 
 <div id="end_quiz">
 </div>

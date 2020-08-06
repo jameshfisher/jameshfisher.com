@@ -122,4 +122,4 @@ and [The Dots Do Matter](https://jameshfisher.com/2018/04/07/the-dots-do-matter-
 or how to scam a Gmail user.
 Google must love me by now.
 
-_Thanks Jonathan, Kevin and Alex for reviewing previous drafts of this post._
+_Thanks Jonathan, Kevin and Alex for reviewing previous drafts of this post. Thanks Luka and others for helping test the vuln._

@@ -4,10 +4,10 @@ tags: ["security", "phishing", "sms", "fave"]
 draft: true
 ---
 
-In this post,
-I describe a new phishing technique
-caused by a vulnerability in Android.
-It's convincing, easy, and still available for exploitation.
+In this post
+I show how you can trick Android into displaying an SMS as coming from any contact on a victim's phone.
+The trick is convincing and easy, 
+and the vulnerability is still open for exploitation.
 I then show how I stumbled onto it, reported it, and how Google ignored it.
 Have fun, whether you patch the vuln or exploit it!
 
@@ -30,7 +30,7 @@ An hour later, hundreds of Twitter's biggest accounts are hacked.
 The recent incident at Twitter was traced to 
 ["a phone spear phishing attack"](https://blog.twitter.com/en_us/topics/company/2020/an-update-on-our-security-incident.html).
 Though we don't know all the details,
-we know that phone spoofs can lead to massive breaches.
+we do know that phone spoofs can lead to massive breaches.
 Or, if your alignment is chaotic evil,
 you could send a message from your enemy to his boss,
 or a fake "drunk text" to his ex.

@@ -44,16 +44,18 @@ rather than coming from a numeric telephone number.
 For example, I have an SMS message from the Sender ID `Twitter`, 
 containing a password reset code.
 These Sender IDs are fairly unregulated:
-you can sign up for an SMS gateway like [ClickSend](http://clicksend.com/) or Twilio,
-and choose an arbitrary Sender ID.
+you can sign up on any SMS gateway and choose an arbitrary Sender ID.
+Here's an example using [ClickSend](http://clicksend.com/):
+
+<img src="{% link assets/2020-08-06/clicksend.png %}" />
 
 Sender ID on its own can be used for low-quality phishing.
-You could send me a message from the Sender ID `Jack Dorsey`.
+You could send me a message from the Sender ID `JackDorsey`.
 This might convince someone, but
 the message would appear in a new conversation,
 the sender would not show up as a contact,
 and the message details would show that it is not from a real phone number.
-My alarm bells would start ringing at this point.
+My phishing alarm would ring loudly.
 
 For a different approach, 
 you could try sending me a message from the Sender ID `07890123456` --
@@ -109,12 +111,16 @@ Android's SMS APIs are
 and [the "SMS inbox" API](https://developer.android.com/reference/android/provider/Telephony.Sms.Inbox).
 The latter API looks just awful,
 so I imagine you'll find the bug somewhere in there.
+If you find or fix the vulnerability,
+I'll give you some fake internet points and mention you here.
+I'm very curious _why_ Android has this behavior.
 
-First person to find and/or fix the vulnerability wins fake internet points and gets a mention at the bottom of this post.
-
-(You might be interested in my previous phishing scams:
+Or if you're just here to read,
+check out my previous phishing scams:
 [The Inception Bar](https://jameshfisher.com/2019/04/27/the-inception-bar-a-new-phishing-method/),
 or how to scam a Chrome user;
 and [The Dots Do Matter](https://jameshfisher.com/2018/04/07/the-dots-do-matter-how-to-scam-a-gmail-user/),
 or how to scam a Gmail user.
-Google must love me by now.)
+Google must love me by now.
+
+_Thanks Jonathan, Kevin and Alex for reviewing previous drafts of this post._

@@ -1,13 +1,12 @@
 ---
 title: "Smear phishing: how to scam an Android user"
 tags: ["security", "phishing", "sms", "fave"]
-draft: true
 ---
 
 In this post
 I show how you can trick Android into displaying an SMS as coming from any contact on a victim's phone.
 The trick is convincing and easy, 
-and the vulnerability is still open for exploitation.
+and the Android vulnerability is still unpatched.
 I then show how I stumbled onto it, reported it, and how Google ignored it.
 Have fun, whether you patch the vuln or exploit it!
 

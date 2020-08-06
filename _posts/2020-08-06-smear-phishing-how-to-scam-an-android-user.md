@@ -11,9 +11,9 @@ It's convincing, easy, and still available for exploitation.
 I then show how I stumbled onto it, reported it, and how Google ignored it.
 Have fun, whether you patch the vuln or exploit it!
 
-Say I work at Twitter,
-I have Jack Dorsey saved to my phone's contacts,
-and I have a previous legit conversation with Jack.
+Say I work at Twitter.
+I have Jack Dorsey, Twitter CEO, saved to my phone's contacts.
+I have a previous legit conversation with Jack.
 Right now, you can send me message from Jack,
 which will appear in that conversation history,
 like this:
@@ -34,7 +34,7 @@ we know that phone spoofs can lead to massive breaches.
 Or, if your alignment is chaotic evil,
 you could send a message from your enemy to his boss,
 or a fake "drunk text" to his ex.
-Fake messages, completely indistinguishable from genuine messages.
+Fake messages that are completely indistinguishable from genuine messages.
 Sit back and watch the fallout.
 
 How does this phishing technique work?
@@ -88,7 +88,7 @@ It wasn't the phone's network provider, or country -- the same stupid trick work
 It wasn't the Messages app -- the same stupid trick works with all other SMS apps on Android.
 But if I tried the trick with an iPhone, it wasn't fooled -- it came through just as the fake Sender ID.
 
-On July 3rd, I reported this vulnerability to Google.
+On July 3rd, I reported this vulnerability to Google via [their security vuln program](https://www.google.com/appserve/security-bugs/m2/new).
 But on July 17th, Google closed the issue as "Won't Fix (Infeasible)",
 with the assessment that 
 "there are no guarantees regarding the sender ID of SMS messages, and they are known to be spoofable."

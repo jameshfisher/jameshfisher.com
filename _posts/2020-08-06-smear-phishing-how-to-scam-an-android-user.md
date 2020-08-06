@@ -1,5 +1,5 @@
 ---
-title: "Smear phishing: how to scam an Android user"
+title: "Smear phishing: a new Android vulnerability"
 tags: ["security", "phishing", "sms", "fave"]
 ---
 

@@ -8,7 +8,7 @@
     <meta name="keywords" content="{% for tag in page.tags %}{{tag}}{% if forloop.last == false %}, {% endif %}{% endfor %}"/>
     <meta property="og:title" content="{{page.title}}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="{{site.url}}{% link /assets/jim_512.jpg %}"/>
+    <meta property="og:image" content="{{site.url}}{% if page.ogimage %}{{ page.ogimage }}{% else %}{% link /assets/jim_512.jpg %}{% endif %}"/>
     <meta property="og:url" content="https://jameshfisher.com{{ page.url }}"/>
     <meta property="og:description" content="{{ page.excerpt | strip_html | replace: newline, ' ' }}"/>
     <meta property="og:site_name" content="jameshfisher.com"/>

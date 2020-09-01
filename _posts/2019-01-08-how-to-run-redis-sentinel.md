@@ -260,7 +260,10 @@ but we never started one!
 Let's start one:
 
 ```console
-$ redis-server --port 6380 &
+$ redis-server --port 6380
+```
+&
+```console
 $ redis-cli -p 6380 slaveof 127.0.0.1 6379
 ```
 

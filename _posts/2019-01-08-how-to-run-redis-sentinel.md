@@ -257,10 +257,16 @@ but this gets aborted:
 
 To fail over, Sentinel needs a slave to fail over to,
 but we never started one!
-Let's start one:
+Let's start a new Redis:
 
 ```console
-$ redis-server --port 6380 &
+$ redis-server --port 6380
+...
+```
+
+Then from a new shell, set it as the slave:
+
+```console
 $ redis-cli -p 6380 slaveof 127.0.0.1 6379
 ```
 

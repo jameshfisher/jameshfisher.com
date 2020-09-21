@@ -17,8 +17,8 @@ runs BlazeFace against frames as often as possible,
 and draws the detected face landmarks on top of your webcam stream:
 
 <div style="position: relative; width: 640px; height: 360px; background-color: black;">
-  <video id="webcam" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></video>
-  <canvas id="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
+  <video id="webcam" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;"></video>
+  <canvas id="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;"></canvas>
 </div>
 
 Here's what I get when I run it against my own face:

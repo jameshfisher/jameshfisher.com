@@ -16,7 +16,7 @@ To test it out, here's an input image:
 And here's a person segmentation generated from this image,
 using [the getting started code from the BodyPix README](https://github.com/tensorflow/tfjs-models/tree/master/body-pix):
 
-<img id="jimage" src="{% link assets/2020-08-16/result.jpg %}"/>
+<img src="{% link assets/2020-08-16/result.jpg %}"/>
 
 In many ways, BodyPix does a great job,
 but there are some clear flaws.

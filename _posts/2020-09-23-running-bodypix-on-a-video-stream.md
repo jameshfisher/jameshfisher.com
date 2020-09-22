@@ -3,7 +3,7 @@ title: "Running BodyPix on a video stream"
 tags: ["programming", "web", "machinelearning"]
 ---
 
-In [this previous post](2020-08-16-bodypix-hello-world),
+In [this previous post]({% post_url 2020-08-16-bodypix-hello-world %}),
 I briefly showed the BodyPix API for segmenting a person in an image.
 In this post, I show this applied to the video stream from your webcam.
 <button onclick="helloWorld(); this.onclick=null">Click here to start the demo</button>:
@@ -106,7 +106,7 @@ In a future post, I'll show how to feed the segmentation mask into a custom WebG
       prevSegmentationTs = now;
       webcamEl.width = metadata.width;
       webcamEl.height = metadata.height;
-      const segmentation = await net.segmentPerson(webcamEl, { internalResolution: 'medium' });
+      const segmentation = await net.segmentPerson(webcamEl, { internalResolution: 'medium', maxDetections: 1 });
       mask = bodyPix.toMask(segmentation);
       webcamEl.requestVideoFrameCallback(segmentLoop);
     }

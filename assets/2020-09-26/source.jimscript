@@ -1,0 +1,8 @@
+This is a JimScript file. It's written in plain English.
+
+Define a function called `main` which takes one parameter, `x`.
+This function shall multiply `x` by two, and put the result into a variable called `result`.
+Finally, the function shall print the value of the variable `result`.
+
+Call the function `main` with the argument `3`.
+It will print "6" to the console.

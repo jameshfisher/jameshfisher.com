@@ -1,7 +1,7 @@
 ---
 title: "How to make a floating head"
 tags: ["programming", "web", "webgl", "ml"]
-ogimage: "assets/2020-10-06/result.jpg"
+ogimage: "/assets/2020-10-06/result.jpg"
 ---
 
 In [a previous post]({% post_url 2020-09-24-using-bodypix-segmentation-in-a-webgl-shader %}).

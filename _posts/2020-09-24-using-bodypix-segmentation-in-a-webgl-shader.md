@@ -1,7 +1,7 @@
 ---
 title: "Using BodyPix segmentation in a WebGL shader"
 tags: ["programming", "web", "webgl", "ml"]
-ogimage: "assets/2020-09-22/result.jpg"
+ogimage: "/assets/2020-09-22/result.jpg"
 ---
 
 In [the previous post]({% post_url 2020-09-23-running-bodypix-on-a-video-stream %})

@@ -1,6 +1,7 @@
 ---
 title: "Head tracking with BlazeFace"
 tags: ["programming", "web", "ml"]
+ogimage: "/assets/2020-10-11/result.jpg"
 ---
 
 BlazeFace identifies _faces_.
@@ -14,6 +15,10 @@ You can run it on your own face:
   <video id="webcam" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;"></video>
   <canvas id="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;"></canvas>
 </div>
+
+And here's what I get when I run it against my own face:
+
+<img src="{% link assets/2020-10-11/result.jpg %}"/>
 
 [In a previous post, I showed the "hello world" of BlazeFace]({% post_url 2020-09-21-blazeface-hello-world %}).
 It runs BlazeFace on your webcam video stream, 

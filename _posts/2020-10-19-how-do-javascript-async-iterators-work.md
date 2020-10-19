@@ -4,6 +4,10 @@ tags: ["programming", "javascript"]
 ---
 
 [A while ago, I described iterators in JavaScript]({% post_url 2019-05-10-how-do-javascript-iterators-work %}).
+In this post, I describe a limitation of iterators: the provider must provide its values synchronously.
+Then show how JavaScript relaxes this iterator contract
+to allow providers to provide their values asynchronously.
+Finally I show modern JavaScript syntax forms for consuming async iterables.
 
 As a recap,
 an _iterable_

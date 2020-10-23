@@ -39,14 +39,17 @@ I'll follow this post with some analysis of what they all mean!
 
   let stream = null;
   let latestFrameMetadata = null;
+  let imageBitmap = null;
 
-  setInterval(function() {
+  setInterval(async function() {
     videoInfoEl.innerText = 
 `videoTrack.getSettings().width = ${stream?.getVideoTracks()[0].getSettings().width}
 videoTrack.getSettings().height = ${stream?.getVideoTracks()[0].getSettings().height}
 videoTrack.getSettings().resizeMode = ${stream?.getVideoTracks()[0].getSettings().resizeMode}
 requestVideoFrameCallback.metadata.width = ${latestFrameMetadata?.width}
 requestVideoFrameCallback.metadata.height = ${latestFrameMetadata?.height}
+imageBitmap.width = ${imageBitmap?.width}
+imageBitmap.height = ${imageBitmap?.height}
 webcamVideoEl.width = ${webcamVideoEl.width}
 webcamVideoEl.height = ${webcamVideoEl.height}
 webcamVideoEl.videoWidth = ${webcamVideoEl.videoWidth}
@@ -60,8 +63,9 @@ webcamVideoEl.scrollWidth = ${webcamVideoEl.scrollWidth}
 `;
   }, 500);
 
-  function onFrame(now, metadata) {
+  async function onFrame(now, metadata) {
     latestFrameMetadata = metadata;
+    imageBitmap = await createImageBitmap(webcamVideoEl);
     webcamVideoEl.requestVideoFrameCallback(onFrame);
   }
   webcamVideoEl.requestVideoFrameCallback(onFrame);

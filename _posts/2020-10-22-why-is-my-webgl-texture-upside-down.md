@@ -17,7 +17,7 @@ gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 ```
 
 The WebGL `texImage2D` function is a thin wrapper over
-(the underlying `glTexImage2D` C function)[https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glTexImage2D.xml].
+[the underlying `glTexImage2D` C function](https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glTexImage2D.xml).
 This C function does not take an `HTMLImageElement` source;
 it just takes a `const void * data`.
 It expects the pixels in that array to be stored in bottom-to-top order:

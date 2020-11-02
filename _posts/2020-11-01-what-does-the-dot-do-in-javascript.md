@@ -159,4 +159,4 @@ But now, if there is no own property,
 it has to go up the chain looking for a potential setter function.
 If it doesn't find find one, it falls back to creating a new own property.
 
-[Here's the next post on how prototypes work]({% 2020-11-02-how-do-javascript-prototypes-work %}).
+[Here's the next post on how prototypes work]({% post_url 2020-11-02-how-do-javascript-prototypes-work %}).

@@ -80,8 +80,8 @@ To be honest, the spec has a lot of guff, but in essence it does this:
 // You should be able to replace `new Foo(x,y)` with `Construct(Foo, x, y)`
 function Construct(constructor, argsList) {
   const obj = Object.create(constructor.prototype);
-  constructor.call(obj, ...argsList);
-  return obj;
+  const ret = constructor.call(obj, ...argsList);
+  return ret instanceof Object ? ret : obj;
 }
 ```
 
@@ -90,6 +90,35 @@ which is really the only way that JavaScript objects get created.
 The new object's parent is the constructor's `.prototype` property.
 JavaScript's decision to look for the parent under a `.prototype` property has caused much needless confusion.
 It should instead be called something like `.methods`.
+
+When I first wrote the above `Construct` function,
+I discarded the return value of `constructor.call`.
+You don't usually see a constructor that returns a value,
+and I assumed that it would just be ignored.
+_I was wrong!!_
+A constructor can return a value,
+and if it returns an object,
+this will be used in place of the initial `obj`
+(which will probably be quickly garbage-collected).
+This means you can write things like:
+
+```js
+const existingLoggers = new Map();
+function Logger(filename) {
+  if (existingLoggers.has(filename)) {
+    return existingLoggers.get(filename);
+  }
+  else {
+    existingLoggers.set(filename, this);
+    this.filename = filename;
+  }
+}
+
+const logger1 = new Logger("/var/log/myapp");
+const logger2 = new Logger("/var/log/myapp");
+
+// logger1 === logger2! They are the same object!
+```
 
 Now let's look at how to define a "class" in JavaScript.
 I put "class" in quotes, because really a "class" is just 

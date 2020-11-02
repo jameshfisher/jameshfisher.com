@@ -103,13 +103,13 @@ this will be used in place of the initial `obj`
 This means you can write things like:
 
 ```js
-const existingLoggers = new Map();
+const loggers = new Map();
 function Logger(filename) {
-  if (existingLoggers.has(filename)) {
-    return existingLoggers.get(filename);
+  if (loggers.has(filename)) {
+    return loggers.get(filename);
   }
   else {
-    existingLoggers.set(filename, this);
+    loggers.set(filename, this);
     this.filename = filename;
   }
 }

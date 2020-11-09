@@ -13,4 +13,4 @@ which made this a bit simpler,
 and makes it possible to use this in future for a retro game.
 I made this using GIMP.
 
-<img src="{% link /assets/2018-12-28-cat-walk-cycle/cat.gif %}" style="width: 50%; margin-left: 25%; image-rendering: pixelated"/>
+<p><img src="{% link /assets/2018-12-28-cat-walk-cycle/cat.gif %}" style="width: 50%; margin-left: 25%; image-rendering: pixelated"/></p>

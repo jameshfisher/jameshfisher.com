@@ -18,7 +18,7 @@ You can run it on your own face:
 
 And here's what I get when I run it against my own face:
 
-<img src="{% link assets/2020-10-11/result.jpg %}"/>
+<p><img src="{% link assets/2020-10-11/result.jpg %}"/></p>
 
 [In a previous post, I showed the "hello world" of BlazeFace]({% post_url 2020-09-21-blazeface-hello-world %}).
 It runs BlazeFace on your webcam video stream, 
@@ -54,7 +54,7 @@ e.g. when viewing my head from below,
 the identified "ear" points are quite far from my ears.
 Below, I've just marked the points that BlazeFace seems to identify most strongly.
 
-<img src="{% link assets/2020-10-11/coords_and_points.png %}"/>
+<p><img src="{% link assets/2020-10-11/coords_and_points.png %}"/></p>
 
 I've labelled "L" for "left" and "R" for "right" on this image.
 Note that BlazeFace's notion of "left" 

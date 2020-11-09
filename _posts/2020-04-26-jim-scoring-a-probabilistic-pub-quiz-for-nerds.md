@@ -129,7 +129,7 @@ which is higher than your expected score for any other answer.
 Here's a plot of your expected score, 
 given your belief and your answer:
 
-<img style="border: 0" src="{% link /assets/2020-04-26/chart.svg %}" alt="expected score vs. belief" />
+<p><img style="border: 0" src="{% link /assets/2020-04-26/chart.svg %}" alt="expected score vs. belief" /></p>
 
 Notice that the "0-20% likely answer" is optimal 
 precisely in the range 0-20%, and so on.

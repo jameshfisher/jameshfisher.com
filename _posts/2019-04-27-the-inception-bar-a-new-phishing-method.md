@@ -16,7 +16,7 @@ then suggest some ways Chrome can fix this vulnerability,
 then finally show you how to get out if you're still stuck here.
 But first, the proof:
 
-<img src="{% link assets/2019-04-27/proof.png %}"/>
+<p><img src="{% link assets/2019-04-27/proof.png %}"/></p>
 
 In Chrome for mobile,
 when the user scrolls down, 

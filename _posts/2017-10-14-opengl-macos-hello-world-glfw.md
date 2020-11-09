@@ -2,7 +2,7 @@
 title: "macOS OpenGL hello world using GLFW"
 ---
 
-<img alt="cyan window" src="{% link assets/2017-10-14/window.png %}" style="width: 432px; height: 374px;"/>
+<p><img alt="cyan window" src="{% link assets/2017-10-14/window.png %}" style="width: 432px; height: 374px;"/></p>
 
 What a beautiful cyan!
 I made this window on macOS using C, OpenGL and [GLFW](http://www.glfw.org/).

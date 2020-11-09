@@ -6,7 +6,7 @@ tags: ["history", "programming"]
 How did past writers view _their_ past, and their future?
 The following chart shows, year by year, how frequently all other years are referenced:
 
-<img src="{% link /assets/2018-12-18-ngram/all_english.png %}" style="width: 825px; height: 825px; image-rendering: pixelated"/>
+<p><img src="{% link /assets/2018-12-18-ngram/all_english.png %}" style="width: 825px; height: 825px; image-rendering: pixelated"/></p>
 
 [Google Ngrams](https://books.google.com/ngrams) shows us the frequency of phrases over time.
 Their standard example shows the increasing popularity of "Frankenstein" between the years 1800 and 2000.

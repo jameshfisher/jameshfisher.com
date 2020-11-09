@@ -80,7 +80,7 @@ Every simulated person is in one of five states:
 "susceptible", "infected with treatment", "infected without treatment", "recovered", or "dead".
 Each day, people transition between these states like so:
 
-<img src="{% link assets/2020-03-15/sir-model.svg %}" style="border: none; max-width: 30em; margin: 0 auto; display: block;" />
+<p><img src="{% link assets/2020-03-15/sir-model.svg %}" style="border: none; max-width: 30em; margin: 0 auto; display: block;" /></p>
 
 We start the simulation with everyone in the "susceptible" state,
 except for one person with the novel virus.
@@ -115,7 +115,7 @@ We end up with a graph like the following
 Each vertex counts the number of people in a given state on a given day,
 and each edge counts the number of people transferred from one state to another:
 
-<img src="{% link assets/2020-03-15/sir-model-forwards.svg %}" style="border: none; max-width: 30em; margin: 0 auto; display: block;" />
+<p><img src="{% link assets/2020-03-15/sir-model-forwards.svg %}" style="border: none; max-width: 30em; margin: 0 auto; display: block;" /></p>
 
 But how can we generate the "death probability" chart from this?
 Say Bob asks you:
@@ -134,7 +134,7 @@ keeping a record of all the transfers of people from one state to another.
 Then we run the model _backwards_.
 We'll get a graph that looks like this:
 
-<img src="{% link assets/2020-03-15/sir-model-backwards.svg %}" style="border: none; max-width: 30em; margin: 0 auto; display: block;" />
+<p><img src="{% link assets/2020-03-15/sir-model-backwards.svg %}" style="border: none; max-width: 30em; margin: 0 auto; display: block;" /></p>
 
 We've labelled each node with the probability of ending up dead on day 3
 (the bottom-right corner).

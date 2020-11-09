@@ -10,7 +10,7 @@ Open the dev tools on this page,
 and you'll see it executes a strange `source.jimscript` file.
 It's basically English, but you can step through and debug it:
 
-<img src="{% link assets/2020-09-26/jimscript.png %}"/>
+<p><img src="{% link assets/2020-09-26/jimscript.png %}"/></p>
 
 But what on earth is JimScript,
 and how does the browser know how to execute it?

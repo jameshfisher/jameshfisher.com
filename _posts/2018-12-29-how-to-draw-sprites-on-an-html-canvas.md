@@ -15,7 +15,7 @@ This animation is generated from the following PNG image.
 The PNG contains four sprites for the cat walk cycle,
 plus a background that we will draw under the cat.
 
-<img id="sprite" src="{% link /assets/2018-12-29-sprite-canvas/cat-sprite.png %}" style="width: 480px; image-rendering: pixelated;"/>
+<p><img id="sprite" src="{% link /assets/2018-12-29-sprite-canvas/cat-sprite.png %}" style="width: 480px; image-rendering: pixelated;"/></p>
 
 This uses [the `ctx.drawImage` method of HTML canvas 2D context](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage).
 `drawImage` can take an `Image` object as the source;

@@ -107,7 +107,7 @@ void main(void) {
 
 Here's what I get when I run the demo against my own webcam feed:
 
-<img src="{% link assets/2020-09-22/result.jpg %}"/>
+<p><img src="{% link assets/2020-09-22/result.jpg %}"/></p>
 
 As you can see, BodyPix still has a number of quality issues.
 In priority order:

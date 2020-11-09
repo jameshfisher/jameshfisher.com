@@ -232,7 +232,7 @@ window.setInterval(function() {
 The initial process is bootstrapped with this tiny 64x64 image,
 which is a ["Gosper Glider Gun"](https://en.wikipedia.org/wiki/Gun_(cellular_automaton)):
 
-<img src="/assets/2017-10-22/game-of-life.png" style="width: 256px; height: 256px; image-rendering: pixelated; border: 1px solid black;"/>
+<p><img src="/assets/2017-10-22/game-of-life.png" style="width: 256px; height: 256px; image-rendering: pixelated; border: 1px solid black;"/></p>
 
 In future posts,
 I'll use texture rendering for more simulations.

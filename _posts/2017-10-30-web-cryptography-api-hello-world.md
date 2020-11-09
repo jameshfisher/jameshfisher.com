@@ -30,7 +30,8 @@ async function sha256(str) {
 <div>
   <input id="plaintext" value="hello"/>
   <code id="sha256"></code>
-  <script>
+</div>
+<script>
       async function sha256(str) {
         const buf = await crypto.subtle.digest("SHA-256", new TextEncoder("utf-8").encode(str));
         return Array.prototype.map.call(new Uint8Array(buf), x=>(('00'+x.toString(16)).slice(-2))).join('');
@@ -43,8 +44,7 @@ async function sha256(str) {
       };
       plaintextEl.oninput = update;
       update()
-  </script>
-</div>
+</script>
 
 Notice that `crypto.subtle.digest` returns a `Promise` of the digest.
 All the `crypto.subtle` functions are asynchronous like this.

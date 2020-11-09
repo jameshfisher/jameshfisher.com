@@ -22,7 +22,8 @@ the resulting ciphertext is in the middle.
     <textarea style="flex: 1;" id="ciphertext"></textarea>
     <textarea style="flex: 2;" id="privKey"></textarea>
   </div>
-  <script>
+</div>
+<script>
   function buf2hex(buf) {
     return Array.prototype.map.call(new Uint8Array(buf), x=>(('00'+x.toString(16)).slice(-2))).join('');
   }
@@ -69,8 +70,7 @@ the resulting ciphertext is in the middle.
     ciphertextEl.oninput = decrypt;
     encrypt();
   })();
-  </script>
-</div>
+</script>
 
 You can edit all three textareas.
 Editing the plaintext updates the ciphertext.

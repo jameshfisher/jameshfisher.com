@@ -16,14 +16,14 @@ to see edges detected in your webcam video:
   <button onclick="startWebcam(); this.parentElement.removeChild(this)">Start webcam</button>
 </div>
 <video id="webcamVideo" style="display: none;"></video>
-<div>
-  <script id="vertex-shader" type="glsl">
+
+<script id="vertex-shader" type="glsl">
     attribute vec2 c;
     void main(void) { 
       gl_Position=vec4(c, 0.0, 1.0); 
     }
-  </script>
-  <script id="fragment-shader" type="glsl">
+</script>
+<script id="fragment-shader" type="glsl">
     precision mediump float;
     uniform sampler2D tex;
     uniform vec2 texSize;
@@ -42,7 +42,7 @@ to see edges detected in your webcam video:
       return total;
     }
     void main(void) {
-      vec2 coord = vec2(gl_FragCoord.x/texSize.x, 1.0 - (gl_FragCoord.y/texSize.y));
+      vec2 coord = gl_FragCoord.xy / texSize;
 
       vec2 pxSize = 1./texSize;
 
@@ -54,8 +54,8 @@ to see edges detected in your webcam video:
 
       gl_FragColor = vec4(sqrt(vertical*vertical + horizontal*horizontal), 1.);
     }
-  </script>
-  <script type="text/javascript">
+</script>
+<script type="text/javascript">
     const webcamVideoEl = document.getElementById("webcamVideo");
     const displayCanvasEl = document.getElementById("display");
     const gl = displayCanvasEl.getContext("webgl");
@@ -119,8 +119,7 @@ to see edges detected in your webcam video:
         console.error(error);
       });
     }
-  </script>
-</div>
+</script>
 
 What is an edge, anyway?
 One definition is "a steep enough gradient".

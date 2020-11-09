@@ -14,7 +14,8 @@ which replaces green pixels with magenta:
   <video id="webcamVideo" style="display: none;"></video>
   <canvas id="displayCanvas" style="background-color: magenta;"></canvas>
   <button onclick="startWebcam(); this.parentElement.removeChild(this)">Start webcam</button>
-  <script type="text/javascript">
+</div>
+<script type="text/javascript">
     function startWebcam() {
       const webcamVideoEl = document.getElementById("webcamVideo");
       const blitCanvas = new OffscreenCanvas(0, 0);  // size dynamically assigned per frame
@@ -56,8 +57,7 @@ which replaces green pixels with magenta:
         console.error(error);
       });
     }
-  </script>
-</div>
+</script>
 
 The "pipeline" for this demo is:
 

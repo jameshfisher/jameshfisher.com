@@ -58,8 +58,7 @@ draw(0, SPRITE_H, BG_W, BG_H, bgX + BG_W, 0);
 draw(SPRITE_W * (frameNum % SPRITE_NUM_FRAMES), 0, SPRITE_W, SPRITE_H, 12, 0);
 ```
 
-<div>
-  <script>
+<script>
     const SPRITE_NUM_FRAMES = 4;
     const SPRITE_W = 24;
     const SPRITE_H = 24;
@@ -104,5 +103,4 @@ draw(SPRITE_W * (frameNum % SPRITE_NUM_FRAMES), 0, SPRITE_W, SPRITE_H, 12, 0);
       window.requestAnimationFrame(loop);
     });
     imageEl.src = '{% link /assets/2018-12-29-sprite-canvas/cat-sprite.png %}';
-  </script>
-</div>
+</script>

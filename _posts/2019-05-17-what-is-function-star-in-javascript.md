@@ -14,7 +14,8 @@ like this:
 <div>
   <button onclick="showNextFib()">Show next</button>
   <span id="fib"></span>
-  <script>
+</div>
+<script>
     const fibEl = document.getElementById("fib");
     let x = 1, y = 2;
     function showNextFib() {
@@ -24,8 +25,7 @@ like this:
       y = z;
     }
     showNextFib();
-  </script>
-</div>
+</script>
 
 Since the mid-90s,
 you could implement this in the browser with something like:

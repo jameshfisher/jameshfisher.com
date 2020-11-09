@@ -13,7 +13,8 @@ It will print the signature resulting from signing the plaintext with your secre
   <textarea id="key" rows="4" cols="50"></textarea>
   <p>Signature:</p>
   <code id="sig"></code>
-  <script>
+</div>
+<script>
     (async function(){
       function buf2hex(buf) {
         return Array.prototype.map.call(new Uint8Array(buf), x=>(('00'+x.toString(16)).slice(-2))).join('');
@@ -47,8 +48,7 @@ It will print the signature resulting from signing the plaintext with your secre
       stringEl.oninput = update;
       update();
     })();
-  </script>
-</div>
+</script>
 
 This is implemented with the Web Cryptography API.
 Specifically, it uses `window.crypto.subtle.sign("HMAC", CryptoKey, ArrayBuffer)`:

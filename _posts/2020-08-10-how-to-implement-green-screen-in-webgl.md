@@ -18,8 +18,7 @@ Here's a live demo, in which
   <button onclick="startWebcam(); this.parentElement.removeChild(this)">Start webcam</button>
 </div>
 <video id="webcamVideo" style="display: none;"></video>
-<div>
-  <script id="fragment-shader" type="glsl">
+<script id="fragment-shader" type="glsl">
     precision mediump float;
     uniform sampler2D tex;
     uniform float texWidth;
@@ -29,8 +28,8 @@ Here's a live demo, in which
       mediump vec4 sample = texture2D(tex, coord);
       gl_FragColor = vec4(sample.r, sample.g, sample.b, sample.g > 0.4 && sample.r < 0.4 ? 0.0 : 1.0);
     }
-  </script>
-  <script type="text/javascript">
+</script>
+<script type="text/javascript">
     const webcamVideoEl = document.getElementById("webcamVideo");
     const displayCanvasEl = document.getElementById("display");
     const gl = displayCanvasEl.getContext("webgl");
@@ -92,8 +91,7 @@ Here's a live demo, in which
         console.error(error);
       });
     }
-  </script>
-</div>
+</script>
 
 As before,
 this implementation has a big deficiency:

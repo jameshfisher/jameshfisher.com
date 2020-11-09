@@ -107,8 +107,7 @@ If you're not passing in a `varying`,
 consider how you could do so.
 
 <video id="webcamVideo" style="display: none;"></video>
-<div>
-  <script id="vertex-shader" type="glsl">
+<script id="vertex-shader" type="glsl">
     attribute vec2 clipspaceCoord;
     attribute vec2 a_texCoord;
     varying vec2 v_texCoord;
@@ -116,16 +115,16 @@ consider how you could do so.
       v_texCoord = a_texCoord;
       gl_Position = vec4(clipspaceCoord, 0.0, 1.0); 
     }
-  </script>
-  <script id="fragment-shader" type="glsl">
+</script>
+<script id="fragment-shader" type="glsl">
     precision mediump float;
     uniform sampler2D tex;
     varying vec2 v_texCoord;
     void main(void) {
       gl_FragColor = texture2D(tex, v_texCoord);
     }
-  </script>
-  <script type="text/javascript">
+</script>
+<script type="text/javascript">
     const webcamVideoEl = document.getElementById("webcamVideo");
     const displayCanvasEl = document.getElementById("display");
     const gl = displayCanvasEl.getContext("webgl");
@@ -192,6 +191,7 @@ consider how you could do so.
         webcamVideoEl.srcObject = stream;
         webcamVideoEl.play();
         function processFrame(now, metadata) {
+          console.log(webcamVideoEl.videoWidth, metadata.width);
           displayCanvasEl.width = webcamVideoEl.videoWidth;
           displayCanvasEl.height = webcamVideoEl.videoHeight;
           gl.viewport(0, 0, webcamVideoEl.videoWidth, webcamVideoEl.videoHeight);
@@ -205,5 +205,4 @@ consider how you could do so.
         console.error(error);
       });
     }
-  </script>
-</div>
+</script>

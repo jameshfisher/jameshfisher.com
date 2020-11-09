@@ -22,7 +22,8 @@ The following form sets/gets values in the `localStorage` for this website (`jam
   <input type="text" id="value" value='{"name": "Jim", "position": "CEO"}'/>
   <input type="button" id="get" value="Get"/>
   <input type="button" id="put" value="Put"/>
-  <script>
+</div>
+<script>
   let db;
   const req = indexedDB.open("exampledb", 1);
   req.addEventListener("upgradeneeded", function (ev) {
@@ -48,8 +49,7 @@ The following form sets/gets values in the `localStorage` for this website (`jam
       employeeTable.put(JSON.parse(valEl.value));
     });
   });
-  </script>
-</div>
+</script>
 
 Like LocalStorage, IndexedDB storage is per-origin (for this site, `https://jameshfisher.com:443`).
 Unlike LocalStorage, each origin can create _many_ key-value stores.

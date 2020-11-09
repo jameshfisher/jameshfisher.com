@@ -69,7 +69,8 @@ the default bounding box is not necessarily helpful for this.
 Under certain conditions, BlazeFace consistently recognized a face in my forehead,
 and was extremely confident about it:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Probably one of my weirder debugging sessions <a href="https://t.co/AubMIkM1kI">pic.twitter.com/AubMIkM1kI</a></p>&mdash; Jim Fisher (@MrJamesFisher) <a href="https://twitter.com/MrJamesFisher/status/1307783574561550336?ref_src=twsrc%5Etfw">September 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Probably one of my weirder debugging sessions <a href="https://t.co/AubMIkM1kI">pic.twitter.com/AubMIkM1kI</a></p>&mdash; Jim Fisher (@MrJamesFisher) <a href="https://twitter.com/MrJamesFisher/status/1307783574561550336?ref_src=twsrc%5Etfw">September 20, 2020</a></blockquote> 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 The bug seems to only happen when I use my high-resolution webcam feed.
 BlazeFace performs much more reliably with a lower-resolution webcam feed.

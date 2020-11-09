@@ -10,13 +10,13 @@ You can see this key in JSON Web Key format, on the right-hand side.
 The plaintext on the left is encrypted with this key;
 the resulting ciphertext is in the middle.
 
-<div>
-  <style>
+<style>
     textarea {
       height: 250px;
       font-family: monospace;
     }
-  </style>
+</style>
+<div>
   <div style="display: flex;">
     <textarea style="flex: 1;" id="plaintext">I, Jim, owe Bob $5</textarea>
     <textarea style="flex: 1;" id="ciphertext"></textarea>

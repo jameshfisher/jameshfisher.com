@@ -3,13 +3,13 @@ title: "WebGL matrix visualization"
 ---
 
 
-<div style="display: flex;">
-  <canvas id="matrix_viz" width="400" height="400" style="width: 200px; height: 200px;"></canvas>
-  <style>
+<style>
     input[type=range] {
       max-width: 100px;
     }
-  </style>
+</style>
+<div style="display: flex;">
+  <canvas id="matrix_viz" width="400" height="400" style="width: 200px; height: 200px;"></canvas>
   <table style="font-family: monospace; background: #eee;">
     <tr>
       <td colspan="4">mat4 transformation = mat4(</td>

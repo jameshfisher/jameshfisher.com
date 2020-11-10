@@ -1,5 +1,6 @@
 const markdownIt = require('markdown-it');
 const { format } = require('date-fns');
+const striptags = require("striptags");
 
 const markdownItRenderer = new markdownIt();
 
@@ -30,9 +31,11 @@ exports.data = {
 
 exports.render = function(data) {
   const siteUrl = ''; // FIXME site.url from jekyll _config.yml
-  const canonical = `https://jameshfisher.com${data.url}`;
+  const canonical = `https://jameshfisher.com${this.page.url}`;
 
-  const plaintextExcerpt = ''; // FIXME reimplement: page.excerpt | strip_html | replace: newline, ' '
+  // We don't use eleventy's 'excerpt' feature because it requires us to insert an explicit separator in the .md source.
+  // I want the excerpt to just be the first paragraph, which is how it behaved in Jekyll.
+  const plaintextExcerpt = striptags(data.content.split('</p>')[0]).replace('\n', ' ');
 
   return `<!doctype html>
 <html lang="en">
@@ -44,7 +47,7 @@ exports.render = function(data) {
     <meta property="og:title" content="${data.title}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="${siteUrl}${ data.ogimage || '/assets/jim_512.jpg' }"/>
-    <meta property="og:url" content="https://jameshfisher.com${data.url}"/>
+    <meta property="og:url" content="${canonical}"/>
     <meta property="og:description" content="${plaintextExcerpt}"/>
     <meta property="og:site_name" content="jameshfisher.com"/>
     <link rel="canonical" href="${canonical}"/>

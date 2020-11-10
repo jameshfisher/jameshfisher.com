@@ -9,8 +9,6 @@ const dataPeople = require('./_data/people.js');
 
 exports.render = function(data) {
   function renderPost(post) {
-    if (post.data.diary) return `<span class="post diary_entry">Diary: ${post.data.word_count} words</span>`;
-
     return `<a class="post" href="${ post.data.external_url ? post.data.external_url : post.url }"${ post.external_url ? ' target="_blank"' : '' }>
       ${ post.data.author !== 'jim' ? `Guest post by ${dataPeople[post.data.author].name}: ` : '' }${markdownItRenderer.renderInline(post.data.title || '')}
       ${ post.data.external_url ? `<img src="/assets/Icon_External_Link.svg" alt="external link" />` : ''}
@@ -55,7 +53,6 @@ return `
     <style>
       .post { display: block; padding: 0.3em; }
       .post:hover { background-color: antiquewhite; }
-      .post.diary_entry { color: #777; }
       @media (min-width: 680px) {
         div.calendar { border: 1px solid #aaa; }
         div.calendar_week { display: flex; flex-direction: row-reverse; }

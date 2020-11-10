@@ -37,6 +37,8 @@ exports.render = function(data) {
   // I want the excerpt to just be the first paragraph, which is how it behaved in Jekyll.
   const plaintextExcerpt = striptags((data.content).split('</p>')[0]).replace(/\n/g, ' ');
 
+  const author = data.author || 'jim';
+
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -65,8 +67,8 @@ exports.render = function(data) {
       </video>
     </a>
     <div id="content">
-      <h1>${ data.author === 'jim' ? '' : 'Guest post: '}${markdownItRenderer.renderInline(data.title || '')}</h1>
-      ${ data.author === 'jim' ? '' : `<h2>By <a href="${dataPeople[data.author].url}">${dataPeople[data.author].name}</a></h2>` }
+      <h1>${ author === 'jim' ? '' : 'Guest post: '}${markdownItRenderer.renderInline(data.title || '')}</h1>
+      ${ author === 'jim' ? '' : `<h2>By <a href="${dataPeople[author].url}">${dataPeople[author].name}</a></h2>` }
       ${ data.external_url ? 
         `<p>
           <strong>
@@ -128,10 +130,10 @@ exports.render = function(data) {
       </p>
       <p>
         Tagged ${(data.tags||[]).map(tag => `<a class="post" href="/tag/${tag}">#${tag}</a>`).join(', ')}.
-        ${ data.author === 'jim' ?
+        ${ author === 'jim' ?
            `All content copyright James Fisher ${format(data.page.date, 'yyyy')}.
            This post is not associated with my employer.` :
-           `<a href="${dataPeople[data.author].url}">${dataPeople[data.author].name}</a> wrote this.
+           `<a href="${dataPeople[author].url}">${dataPeople[author].name}</a> wrote this.
             This post is presumably not associated with their employer.`
         }
         <a href="https://github.com/jameshfisher/jameshfisher.com/edit/master/${data.page.inputPath /* FIXME strip './' */}">Found an error? Edit this page.</a>

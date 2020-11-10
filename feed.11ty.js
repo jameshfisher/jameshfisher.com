@@ -19,7 +19,7 @@ exports.render = function(data) {
     <name>Jim Fisher</name>
   </author>
   ${ data.collections.posts.map(post => `<entry>
-    <title>${ post.data.title }</title>
+    <title>${ entities.encode(post.data.title) }</title>
     <link href="https://jameshfisher.com${ post.url }"/>
     <updated>${ post.date.toISOString() }</updated>
     <id>https://jameshfisher.com${ post.url }</id>

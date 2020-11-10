@@ -23,13 +23,19 @@ const dataPeople = require('../../_data/people.js');
 exports.data = {
 };
 
+function excerpt(content) {
+  const paraMatches = content.match(/<p>.*<\/p>/);
+  if (paraMatches === null) return '';
+  return striptags(paraMatches[0]).replace(/\n/g, ' ').trim();
+}
+
 exports.render = function(data) {
   const siteUrl = ''; // FIXME site.url from jekyll _config.yml
   const canonical = `https://jameshfisher.com${this.page.url}`;
 
   // We don't use eleventy's 'excerpt' feature because it requires us to insert an explicit separator in the .md source.
   // I want the excerpt to just be the first paragraph, which is how it behaved in Jekyll.
-  const plaintextExcerpt = striptags((data.content).split('</p>')[0]).replace(/\n/g, ' ');
+  const plaintextExcerpt = excerpt(data.content);
 
   const author = data.author || 'jim';
 

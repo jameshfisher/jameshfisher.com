@@ -9,7 +9,7 @@ const dataPeople = require('./_data/people.js');
 
 exports.render = function(data) {
   function renderPost(post) {
-    if (post.diary) return `<span class="post diary_entry">Diary: ${post.word_count} words</span>`;
+    if (post.data.diary) return `<span class="post diary_entry">Diary: ${post.data.word_count} words</span>`;
 
     return `<a class="post" href="${ post.data.external_url ? post.data.external_url : post.url }"${ post.external_url ? ' target="_blank"' : '' }>
       ${ post.data.author !== 'jim' ? `Guest post by ${dataPeople[post.data.author].name}: ` : '' }${markdownItRenderer.renderInline(post.data.title || '')}

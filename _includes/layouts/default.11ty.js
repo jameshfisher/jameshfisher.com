@@ -124,7 +124,7 @@ exports.render = function(data) {
            `<a href="${dataPeople[author].url}">${dataPeople[author].name}</a> wrote this.
             This post is presumably not associated with their employer.`
         }
-        <a href="https://github.com/jameshfisher/jameshfisher.com/edit/master/${data.page.inputPath /* FIXME strip './' */}">Found an error? Edit this page.</a>
+        <a href="${ new URL(data.page.inputPath, 'https://github.com/jameshfisher/jameshfisher.com/edit/master/').href }">Found an error? Edit this page.</a>
       </p>
       ${navbarHtml}
     </div>

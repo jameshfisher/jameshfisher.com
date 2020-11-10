@@ -8,6 +8,12 @@ exports.data = {
 };
 
 exports.render = function(data) {
+
+  const postsByDateDesc = [...data.collections.posts];
+  postsByDateDesc.sort((p1, p2) => p2.date-p1.date );
+  
+  const mostRecentPosts = postsByDateDesc.slice(0,10);
+
   return `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link href="https://jameshfisher.com/feed.xml" rel="self" type="application/atom+xml"/>
@@ -18,7 +24,7 @@ exports.render = function(data) {
   <author>
     <name>Jim Fisher</name>
   </author>
-  ${ data.collections.posts.map(post => `<entry>
+  ${ mostRecentPosts.map(post => `<entry>
     <title>${ entities.encode(post.data.title) }</title>
     <link href="https://jameshfisher.com${ post.url }"/>
     <updated>${ post.date.toISOString() }</updated>

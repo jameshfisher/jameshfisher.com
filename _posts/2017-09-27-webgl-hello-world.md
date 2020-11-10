@@ -3,6 +3,7 @@ title: "WebGL hello world"
 ---
 
 <div><canvas id="canvas" width="100" height="100"></canvas></div>
+
 <script>
   const canvasEl = document.getElementById("canvas");
   const ctx = canvasEl.getContext("webgl");
@@ -18,6 +19,7 @@ The code looks like this:
 
 ```html
 <div><canvas id="canvas" width="100" height="100"></canvas></div>
+
 <script>
   const canvasEl = document.getElementById("canvas");
   const ctx = canvasEl.getContext("webgl");

@@ -4,6 +4,7 @@ tags: ["programming", "graphics", "webgl"]
 ---
 
 <div><canvas id="canvas" height="64" width="64" style="width: 256px; height: 256px; image-rendering: pixelated;"></canvas></div>
+
 <script type="x-shader/x-fragment" id="fragment-shader-display">
   precision mediump float;
   uniform sampler2D state;
@@ -12,6 +13,7 @@ tags: ["programming", "graphics", "webgl"]
     gl_FragColor = texture2D(state, coord);
   }
 </script>
+
 <script type="x-shader/x-fragment" id="fragment-shader-stepper">
   precision mediump float;
   uniform sampler2D previousState;
@@ -35,6 +37,7 @@ tags: ["programming", "graphics", "webgl"]
     gl_FragColor = nowAlive ? vec4(0.,0.,0.,1.) : vec4(1.,1.,1.,1.);
   }
 </script>
+
 <script>
   const startStateImg = new Image();
   startStateImg.onload = function() {

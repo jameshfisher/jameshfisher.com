@@ -43,6 +43,7 @@ title: "WebGL matrix visualization"
     </tr>
   </table>
 </div>
+
 <script id="vertex-shader" type="x-shader/x-vertex">
   uniform mat4 transformation;
   attribute vec4 coord;
@@ -50,6 +51,7 @@ title: "WebGL matrix visualization"
     gl_Position = transformation * coord;
   }
 </script>
+
 <script>
   const matrixVizEl = document.getElementById("matrix_viz");
   const gl = matrixVizEl.getContext("webgl");

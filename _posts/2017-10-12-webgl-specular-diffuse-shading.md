@@ -7,6 +7,7 @@ title: "WebGL shading: diffuse vs. specular"
   <canvas width="512" height="512" style="width: 256px; height: 256px;" id="specular-canvas"></canvas>
   <img src="/assets/crossnrm.jpg" style="width: 256px; height: 256px;" />
 </div>
+
 <script id="diffuse-fragment-shader" type="x-shader/x-fragment">
   precision mediump float;
   uniform mediump vec2 mouse_pos;
@@ -21,6 +22,7 @@ title: "WebGL shading: diffuse vs. specular"
     gl_FragColor = vec4(intensity, intensity, intensity, 1.0);
   }
 </script>
+
 <script id="specular-fragment-shader" type="x-shader/x-fragment">
   precision mediump float;
   uniform mediump vec2 mouse_pos;
@@ -37,6 +39,7 @@ title: "WebGL shading: diffuse vs. specular"
     gl_FragColor = vec4(intensity, intensity, intensity, 1.0);
   }
 </script>
+
 <script>
   function setupCanvas(shaderTy) {
     const canvas = document.getElementById(shaderTy+"-canvas");

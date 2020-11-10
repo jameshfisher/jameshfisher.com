@@ -3,6 +3,7 @@ title: "Drawing a clock face with WebGL"
 ---
 
 <div><canvas id="clock" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>
+
 <script id="vertex-shader" type="x-shader/x-vertex">
   attribute vec2 polar_coord;
   void main(void) {
@@ -13,6 +14,7 @@ title: "Drawing a clock face with WebGL"
     gl_Position = vec4(rotated, 0.0, 1.0);
   }
 </script>
+
 <script>
   const clockEl = document.getElementById("clock");
   const gl = clockEl.getContext("webgl");

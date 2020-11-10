@@ -124,6 +124,7 @@ or some more sophisticated background tracking.
     gl_FragColor = ProcessChromaKey(texCoord);
   }
 </script>
+
 <script type="text/javascript">
   const webcamVideoEl = document.getElementById("webcamVideo");
   const displayCanvasEl = document.getElementById("display");

@@ -43,4 +43,5 @@ but apparently it doesn't consider `Math.random()` to have side-effects.
 I'm like 99% sure it would consider "deleting all my files" to be a side-effect, though.
 
 <link rel="stylesheet" type="text/css" href="/assets/2020-10-05/asciinema-player.css" />
+
 <script src="/assets/2020-10-05/asciinema-player.js"></script>

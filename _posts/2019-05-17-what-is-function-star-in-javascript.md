@@ -15,6 +15,7 @@ like this:
   <button onclick="showNextFib()">Show next</button>
   <span id="fib"></span>
 </div>
+
 <script>
     const fibEl = document.getElementById("fib");
     let x = 1, y = 2;
@@ -33,6 +34,7 @@ you could implement this in the browser with something like:
 ```js
 <button onclick="showNextFib()">Show next</button>
 <span id="fib"></span>
+
 <script>
   const fibEl = document.getElementById("fib");
   let x = 1, y = 2;

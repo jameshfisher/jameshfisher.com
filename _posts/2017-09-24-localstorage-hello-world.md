@@ -21,6 +21,7 @@ The following form sets/gets values in the `localStorage` for this website (`jam
 <input type="text" id="value" placeholder="Value"/>
 <input type="button" id="get" value="Get"/>
 <input type="button" id="set" value="Set"/>
+
 <script>
 const keyEl = document.getElementById("key");
 const valEl = document.getElementById("value");

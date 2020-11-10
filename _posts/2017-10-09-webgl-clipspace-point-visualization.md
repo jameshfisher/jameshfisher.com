@@ -27,6 +27,7 @@ title: "WebGL clipspace point visualization"
     </div>
   </div>
 </div>
+
 <script>
   const CROSSHAIR_SIZE = 0.04;
 

@@ -13,11 +13,13 @@ curl -X GET 'https://api.embedly.com/1/oembed?format=json&url=https%3A//vidr.io&
 and Embedly responded with some info about https://vidr.io in a JSON format defined by oEmbed. Embedly is a paid service but it offers [a free HTML snippet generation service](http://embed.ly/code) which presumably uses the same logic. Here's the embed for Vidrio:
 
 <blockquote class="embedly-card"><h4><a href="https://vidr.io">Vidrio for macOS</a></h4><p>Vidrio for macOS is a holographic screencast app. Present from the future™</p></blockquote>
+
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
 No thumbnail! For contrast, here's the embed for a site which got a thumbnail on Reddit:
 
 <blockquote class="embedly-card"><h4><a href="https://itunes.apple.com/us/app/speedtest-by-ookla/id1153157709?mt=12">Speedtest by Ookla on the Mac App Store</a></h4><p>Read reviews, compare customer ratings, see screenshots, and learn more about Speedtest by Ookla. Download Speedtest by Ookla for Mac OS X 10.10 or later and enjoy it on your Mac.</p></blockquote>
+
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
 How does Embedly decide on the thumbnail for that URL? oEmbed doesn't specify this; it only defines the formats of requests and responses. However, [Embedly describes their process for choosing the image](http://support.embed.ly/hc/en-us/articles/204266025-Why-does-Embedly-choose-the-image-that-it-does-):

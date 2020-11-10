@@ -14,6 +14,7 @@ Below is a _spatial_ SIR model,
 simulated with WebGL:
 
 <div><canvas id="canvas" height="1024" width="1024" style="width: 50em; height: 50em;"></canvas></div>
+
 <script type="x-shader/x-fragment" id="fragment-shader-display">
   precision mediump float;
   uniform sampler2D state;
@@ -24,6 +25,7 @@ simulated with WebGL:
     gl_FragColor.r *= 5.0; // make red bug clearer
   }
 </script>
+
 <script type="x-shader/x-fragment" id="fragment-shader-stepper">
   precision mediump float;
   uniform sampler2D previousState;
@@ -65,6 +67,7 @@ simulated with WebGL:
     gl_FragColor = vec4(infected, recovered, susceptible, 1.0);
   }
 </script>
+
 <script>
   const startStateImg = new Image();
   startStateImg.onload = function() {

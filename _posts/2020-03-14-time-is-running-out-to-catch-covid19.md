@@ -165,6 +165,7 @@ Maybe it's just because
 my friends would call me a moron if I self-infected.
 
 <script src="{% link /assets/Chart.min.js %}"></script>
+
 <script>
     const displayFuncs = {
       toString: n => n.toString(),

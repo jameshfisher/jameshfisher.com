@@ -6,6 +6,7 @@ tags: ["programming", "graphics", "webgl"]
 <div>
   <canvas width="512" height="512" style="width: 256px; height: 256px;" id="canv"></canvas>
 </div>
+
 <script id="fragment-shader" type="x-shader/x-fragment">
   precision mediump float;
   const float PI_2 = 1.57079632679489661923;
@@ -39,6 +40,7 @@ tags: ["programming", "graphics", "webgl"]
     gl_FragColor = vec4(intensity, intensity, intensity, 1.0);
   }
 </script>
+
 <script>
   const canvas = document.getElementById("canv");
   const gl = canvas.getContext('webgl');

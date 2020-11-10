@@ -90,6 +90,7 @@ The scoring system is as follows:
     </tr>
   </tbody>
 </table>
+
 <style>
   .scoring-table tr > *:nth-child(2) { text-align: right; }
   .scoring-table tr > *:nth-child(3) { text-align: right; }
@@ -181,6 +182,7 @@ Post your final score on Twitter:
 
 <div id="end_quiz">
 </div>
+
 <script type="module">
   import { h, Component, render } from 'https://unpkg.com/preact?module';
 

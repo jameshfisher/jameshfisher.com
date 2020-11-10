@@ -18,13 +18,7 @@ const navbarHtml = `<style>
 </div>
 `;
 
-// FIXME import/require this
-const dataPeople = {
-  luis: {
-    name: "Luís Fonseca",
-    url: "http://luisfonseca.xyz/",
-  },
-};
+const dataPeople = require('../../_data/people.js');
 
 exports.data = {
 };

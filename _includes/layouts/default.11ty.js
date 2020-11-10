@@ -35,7 +35,7 @@ exports.render = function(data) {
 
   // We don't use eleventy's 'excerpt' feature because it requires us to insert an explicit separator in the .md source.
   // I want the excerpt to just be the first paragraph, which is how it behaved in Jekyll.
-  const plaintextExcerpt = striptags(data.content.split('</p>')[0]).replace('\n', ' ');
+  const plaintextExcerpt = striptags((data.content).split('</p>')[0]).replace(/\n/g, ' ');
 
   return `<!doctype html>
 <html lang="en">

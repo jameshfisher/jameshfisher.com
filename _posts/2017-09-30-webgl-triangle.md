@@ -3,6 +3,7 @@ title: "Drawing a triangle with WebGL"
 ---
 
 <div><canvas width="200" height="200" id="triangleCanvas"></canvas></div>
+
 <script>
   const canvas = document.getElementById('triangleCanvas');
   const gl = canvas.getContext('webgl');

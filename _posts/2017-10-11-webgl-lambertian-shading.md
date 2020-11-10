@@ -21,6 +21,7 @@ title: "WebGL Lambertian shading"
     <div id="compilationError"></div>
   </div>
 </div>
+
 <script>
   const canvas = document.getElementById('fragmentCanvas');
   const gl = canvas.getContext('webgl');

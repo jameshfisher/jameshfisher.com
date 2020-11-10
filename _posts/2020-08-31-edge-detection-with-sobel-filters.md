@@ -23,6 +23,7 @@ to see edges detected in your webcam video:
       gl_Position=vec4(c, 0.0, 1.0); 
     }
 </script>
+
 <script id="fragment-shader" type="glsl">
     precision mediump float;
     uniform sampler2D tex;
@@ -55,6 +56,7 @@ to see edges detected in your webcam video:
       gl_FragColor = vec4(sqrt(vertical*vertical + horizontal*horizontal), 1.);
     }
 </script>
+
 <script type="text/javascript">
     const webcamVideoEl = document.getElementById("webcamVideo");
     const displayCanvasEl = document.getElementById("display");

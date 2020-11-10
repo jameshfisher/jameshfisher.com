@@ -6,6 +6,7 @@ draft: true
 The button below lets you control whether you receive push notifications from this site.
 
 <button id="receive_notifications"></button>
+
 <script>
 const button = document.getElementById("receive_notifications");
 button.addEventListener("click", (ev) => {

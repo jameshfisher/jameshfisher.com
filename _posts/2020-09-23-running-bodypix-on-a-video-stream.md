@@ -64,8 +64,10 @@ or running any other effects.
 In a future post, I'll show how to feed the segmentation mask into a custom WebGL renderer.
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.4"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
 <video id="webcam" style="display: none;"></video>
+
 <script>
   async function helloWorld() {
     const webcamEl = document.getElementById('webcam');

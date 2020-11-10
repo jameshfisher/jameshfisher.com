@@ -20,6 +20,7 @@ html {
 And here's what we get when we apply it to a `<div id="yellowsquare">`:
 
 <div id="yellowsquare">I'm #yellowsquare</div>
+
 <style type="text/css">
   html {
     --bg-color: yellow;

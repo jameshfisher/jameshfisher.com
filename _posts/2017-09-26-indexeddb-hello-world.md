@@ -23,6 +23,7 @@ The following form sets/gets values in the `localStorage` for this website (`jam
   <input type="button" id="get" value="Get"/>
   <input type="button" id="put" value="Put"/>
 </div>
+
 <script>
   let db;
   const req = indexedDB.open("exampledb", 1);

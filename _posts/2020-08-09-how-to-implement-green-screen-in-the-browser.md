@@ -15,6 +15,7 @@ which replaces green pixels with magenta:
   <canvas id="displayCanvas" style="background-color: magenta;"></canvas>
   <button onclick="startWebcam(); this.parentElement.removeChild(this)">Start webcam</button>
 </div>
+
 <script type="text/javascript">
     function startWebcam() {
       const webcamVideoEl = document.getElementById("webcamVideo");

@@ -4,7 +4,9 @@ tags: ["programming", "graphics", "webgl"]
 ---
 
 <div><canvas id="matrix_viz" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>
+
 <script src="/assets/gl-matrix.js" type="text/javascript"></script>
+
 <script id="vertex-shader" type="x-shader/x-vertex">
   uniform mat4 transformation;
   attribute vec4 coord;
@@ -12,6 +14,7 @@ tags: ["programming", "graphics", "webgl"]
     gl_Position = transformation * coord;
   }
 </script>
+
 <script id="fragment-shader" type="x-shader/x-fragment">
   precision mediump float;
   uniform vec4 faceColor;
@@ -19,6 +22,7 @@ tags: ["programming", "graphics", "webgl"]
     gl_FragColor = faceColor;
   }
 </script>
+
 <script>
   const matrixVizEl = document.getElementById("matrix_viz");
   const gl = matrixVizEl.getContext("webgl");

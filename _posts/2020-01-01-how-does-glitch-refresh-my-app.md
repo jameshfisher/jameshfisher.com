@@ -4,6 +4,7 @@ tags: ["programming", "web"]
 ---
 
 <div id="display" style="display: none; outline: 5px solid red; padding: 2em;"></div>
+
 <script>
   function showHash() {
     const displayEl = document.getElementById("display");
@@ -84,6 +85,7 @@ the contents will refresh in the new window.
 
 <button id="open-window">Show new window</button>
 <textarea rows="10" id="source" style="width: 100%; font-family: monospace;">&lt;h1 style='color: blue'&gt;Hello, world!&lt;/h1&gt;</textarea>
+
 <script>
     let w;
     const sourceEl = document.getElementById("source");

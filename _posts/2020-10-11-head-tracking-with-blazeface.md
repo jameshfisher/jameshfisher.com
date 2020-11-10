@@ -197,7 +197,9 @@ const boundingCircleRadius = unitLength * MODEL_HEAD_BOUNDING_SPHERE_RADIUS;
 
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.4"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface@0.0.5"></script>
+
 <script>
   const webcamVideoEl = document.getElementById("webcam");
   const overlayCanvasEl = document.getElementById("overlay");

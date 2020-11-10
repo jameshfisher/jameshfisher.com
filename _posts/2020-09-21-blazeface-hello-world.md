@@ -30,6 +30,7 @@ a pure function from input image to predicted faces:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.4"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface@0.0.5"></script>
 ```
 
@@ -81,7 +82,9 @@ and how to use TensorFlow.js.
 This should help understand the weird forehead bug.
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.4"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface@0.0.5"></script>
+
 <script>
   const webcamVideoEl = document.getElementById("webcam");
   const overlayCanvasEl = document.getElementById("overlay");

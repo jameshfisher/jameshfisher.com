@@ -14,6 +14,7 @@ It will print the signature resulting from signing the plaintext with your secre
   <p>Signature:</p>
   <code id="sig"></code>
 </div>
+
 <script>
     (async function(){
       function buf2hex(buf) {

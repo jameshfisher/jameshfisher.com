@@ -3,12 +3,14 @@ title: "WebGL fragment shader animation"
 ---
 
 <div><canvas id="clock" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>
+
 <script id="vertex-shader" type="glsl">
   attribute vec2 coord;
   void main(void) {
     gl_Position = vec4(coord, 0.0, 1.0);
   }
 </script>
+
 <script id="fragment-shader" type="glsl">
   uniform mediump float millisecs;
   void main(void) {
@@ -16,6 +18,7 @@ title: "WebGL fragment shader animation"
     gl_FragColor = vec4(osc, osc, osc, 1.0);
   }
 </script>
+
 <script>
   const clockEl = document.getElementById("clock");
   const gl = clockEl.getContext("webgl");

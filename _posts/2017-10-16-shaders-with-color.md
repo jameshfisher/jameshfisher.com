@@ -6,6 +6,7 @@ title: "WebGL shaders with color"
   <canvas width="512" height="512" style="width: 256px; height: 256px;" id="diffuse-canvas"></canvas>
   <canvas width="512" height="512" style="width: 256px; height: 256px;" id="specular-canvas"></canvas>
 </div>
+
 <script id="diffuse-fragment-shader" type="x-shader/x-fragment">
   precision mediump float;
   uniform mediump vec2 mouse_pos;
@@ -21,6 +22,7 @@ title: "WebGL shaders with color"
     gl_FragColor = vec4(vec3(texture2D(color_map, frag))*intensity, 1.0);
   }
 </script>
+
 <script id="specular-fragment-shader" type="x-shader/x-fragment">
   precision mediump float;
   uniform mediump vec2 mouse_pos;
@@ -38,6 +40,7 @@ title: "WebGL shaders with color"
     gl_FragColor = vec4(vec3(texture2D(color_map, frag))*intensity, 1.0);
   }
 </script>
+
 <script>
   function setupCanvas(shaderTy) {
     const canvas = document.getElementById(shaderTy+"-canvas");

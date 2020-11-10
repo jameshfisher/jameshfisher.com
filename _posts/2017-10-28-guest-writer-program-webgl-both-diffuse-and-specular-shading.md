@@ -7,6 +7,7 @@ tags: ["programming", "graphics", "webgl"]
 <div>
   <canvas width="1024" height="1024" style="width: 512px; height: 512px;" id="both-canvas"></canvas>
 </div>
+
 <script id="both-fragment-shader" type="x-shader/x-fragment">
   precision mediump float;
   uniform mediump vec2 mouse_pos;
@@ -27,6 +28,7 @@ tags: ["programming", "graphics", "webgl"]
     gl_FragColor = vec4(intensity, intensity, intensity, 1.0);
   }
 </script>
+
 <script>
   var specularPercentage = 0.2;
   var diffusePercentage = 0.8;

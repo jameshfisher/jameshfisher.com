@@ -21,6 +21,7 @@ Here's a live demo, where you can adjust the parameters to place yourself in fro
     <tr><th>Spill</th><td><input type="range" id="spill" min="0" max="1" step="0.001" value="0.1" /></td></tr>
   </tbody>
 </table>
+
 <script id="fragment-shader" type="glsl">
   precision mediump float;
   
@@ -61,6 +62,7 @@ Here's a live demo, where you can adjust the parameters to place yourself in fro
     gl_FragColor = ProcessChromaKey(texCoord);
   }
 </script>
+
 <script type="text/javascript">
   const webcamVideoEl = document.getElementById("webcamVideo");
   const displayCanvasEl = document.getElementById("display");

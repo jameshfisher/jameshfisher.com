@@ -4,6 +4,7 @@ tags: ["programming", "graphics", "webgl"]
 ---
 
 <div><canvas id="canv" width="200" height="200"></canvas></div>
+
 <script id="vertex-shader" type="x-shader/x-vertex">
   attribute vec2 a_coord;
   attribute vec4 a_color;
@@ -13,6 +14,7 @@ tags: ["programming", "graphics", "webgl"]
     v_color = a_color;
   }
 </script>
+
 <script id="fragment-shader" type="x-shader/x-fragment">
   precision mediump float;
   varying vec4 v_color;
@@ -20,6 +22,7 @@ tags: ["programming", "graphics", "webgl"]
     gl_FragColor = v_color;
   }
 </script>
+
 <script>
   const canvas = document.getElementById("canv");
   const gl = canvas.getContext('webgl');

@@ -3,6 +3,7 @@ title: "Textures in WebGL shaders"
 ---
 
 <div><canvas width="200" height="200" style="height: 200px; width: 200px;" id="fragmentCanvas"></canvas></div>
+
 <script>
   const canvas = document.getElementById('fragmentCanvas');
   const gl = canvas.getContext('webgl');

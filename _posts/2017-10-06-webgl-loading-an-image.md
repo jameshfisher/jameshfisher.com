@@ -3,6 +3,7 @@ title: "How to load an image in WebGL"
 ---
 
 <div><canvas id="jimmy" width="512" height="512" style="width: 256px; height: 256px;"></canvas></div>
+
 <script id="fragment-shader" type="glsl">
   uniform sampler2D tex;
   void main(void) {
@@ -11,6 +12,7 @@ title: "How to load an image in WebGL"
     gl_FragColor = vec4(sample.b, sample.r, sample.g, 1.0);
   }
 </script>
+
 <script>
   const jimmyEl = document.getElementById("jimmy");
   const gl = jimmyEl.getContext("webgl");

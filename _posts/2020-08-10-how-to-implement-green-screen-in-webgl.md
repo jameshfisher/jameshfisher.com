@@ -18,6 +18,7 @@ Here's a live demo, in which
   <button onclick="startWebcam(); this.parentElement.removeChild(this)">Start webcam</button>
 </div>
 <video id="webcamVideo" style="display: none;"></video>
+
 <script id="fragment-shader" type="glsl">
     precision mediump float;
     uniform sampler2D tex;
@@ -29,6 +30,7 @@ Here's a live demo, in which
       gl_FragColor = vec4(sample.r, sample.g, sample.b, sample.g > 0.4 && sample.r < 0.4 ? 0.0 : 1.0);
     }
 </script>
+
 <script type="text/javascript">
     const webcamVideoEl = document.getElementById("webcamVideo");
     const displayCanvasEl = document.getElementById("display");

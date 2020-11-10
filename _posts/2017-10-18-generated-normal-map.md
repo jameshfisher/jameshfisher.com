@@ -5,6 +5,7 @@ title: "Generating a normal map in WebGL"
 <div>
   <canvas width="512" height="512" style="width: 256px; height: 256px;" id="canv"></canvas>
 </div>
+
 <script id="fragment-shader" type="x-shader/x-fragment">
   precision mediump float;
   mat4 rotateZ(float ang) {
@@ -21,6 +22,7 @@ title: "Generating a normal map in WebGL"
     gl_FragColor = vec4(vec3((normal+1.) * 0.5), 1.0);
   }
 </script>
+
 <script>
   const canvas = document.getElementById("canv");
   const gl = canvas.getContext('webgl');

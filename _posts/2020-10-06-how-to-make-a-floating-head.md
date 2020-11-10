@@ -49,7 +49,9 @@ Finally, here's what I get when I run the demo against my own webcam feed:
 <canvas id="display" style="position: fixed; bottom: 0; right: 0;"></canvas>
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.4"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+
 <script id="fragment-shader" type="glsl">
   precision mediump float;
   
@@ -66,6 +68,7 @@ Finally, here's what I get when I run the demo against my own webcam feed:
   }
 </script>
 <video id="webcam" style="display: none;"></video>
+
 <script>
   const webcamVideoEl = document.getElementById('webcam');
   const displayCanvasEl = document.getElementById("display");

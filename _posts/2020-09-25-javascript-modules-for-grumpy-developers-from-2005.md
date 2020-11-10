@@ -293,6 +293,7 @@ these will run in the opposite order:
 
 ```html
 <script type="module">console.log("module");</script>
+
 <script>console.log("classic script");</script>
 ```
 

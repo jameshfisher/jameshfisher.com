@@ -27,7 +27,9 @@ Another valid choice would be to shift the bounding box to always be inside the 
 even if it doesn't cover the head properly.
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.4"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface@0.0.5"></script>
+
 <script>
   const webcamVideoEl = document.getElementById("webcam");
   const displayCanvasEl = document.getElementById("display");

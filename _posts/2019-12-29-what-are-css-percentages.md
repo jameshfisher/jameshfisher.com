@@ -68,6 +68,7 @@ this gives us a square:
 <div id="square-wrapper">
   <div id="square"></div>
 </div>
+
 <style>
   #square-wrapper {
     width: 100px;

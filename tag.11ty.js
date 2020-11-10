@@ -9,6 +9,7 @@ exports.data = {
     data: "collections",
     size: "1",
     alias: "tag",
+    filter: ['posts', 'all'],
   },
   permalink: function (data) { return `/tag/${data.tag}/`; }
 };

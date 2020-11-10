@@ -17,7 +17,7 @@ exports.data = {
 exports.render = function(data) {
   const collection = data.collections[data.tag];
 
-  const title = `Tag: #${data.tag}`;
+  const title = `Tag: ${data.tag}`;
 
   const siteUrl = 'https://jameshfisher.com'; // FIXME site.url from jekyll _config.yml
   const canonical = `https://jameshfisher.com${this.page.url}`;
@@ -38,7 +38,7 @@ exports.render = function(data) {
     <link rel="manifest" href="/manifest.json"/>
     <link rel="alternate" type="application/rss+xml" href="https://jameshfisher.com/feed.xml" />
     <link rel="stylesheet" href="/assets/all.css" />
-    <title>Tag: ${data.tag}</title>
+    <title>${title}</title>
   </head>
   <body>
     <a href="/" style="display: block; transform: rotate(-5deg); margin: 0 2em 0 -1.6em; float: left;">

@@ -12,7 +12,7 @@ module.exports = function(eleventyConfig) {
 
   // 'posts' used by the RSS feed
   eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("_posts/**");
+    return collectionApi.getFilteredByGlob("_posts/**").filter(post => !post.data.draft);
   });
 
   // FIXME abandon {% post_url %} and  {% link %}

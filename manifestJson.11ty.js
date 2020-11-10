@@ -1,4 +1,8 @@
-{
+exports.data = {
+  permalink: "manifest.json"
+};
+
+exports.render = (data) => `{
   "name": "jameshfisher.com",
   "short_name": "Jameshfisher",
   "start_url": "/",
@@ -18,4 +22,4 @@
   "theme_color": "white",
   "display": "standalone",
   "gcm_sender_id": "432193615425"
-}
+}`;

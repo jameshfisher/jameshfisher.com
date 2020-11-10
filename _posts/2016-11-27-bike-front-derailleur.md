@@ -47,4 +47,4 @@ Is this the cause of my problems?
 
 Here is a photo of the front derailleur:
 
-![front derailleur](/bike/front_derailleur.jpg)
+![front derailleur](/assets/2016-11-27/front_derailleur.jpg)

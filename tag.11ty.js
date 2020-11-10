@@ -19,7 +19,7 @@ exports.render = function(data) {
 
   const title = `Tag: #${data.tag}`;
 
-  const siteUrl = ''; // FIXME site.url from jekyll _config.yml
+  const siteUrl = 'https://jameshfisher.com'; // FIXME site.url from jekyll _config.yml
   const canonical = `https://jameshfisher.com${this.page.url}`;
 
   return `<!doctype html>

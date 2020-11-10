@@ -18,7 +18,7 @@ function excerpt(content) {
 }
 
 exports.render = function(data) {
-  const siteUrl = ''; // FIXME site.url from jekyll _config.yml
+  const siteUrl = 'https://jameshfisher.com'; // FIXME site.url from jekyll _config.yml
   const canonical = `https://jameshfisher.com${this.page.url}`;
 
   // We don't use eleventy's 'excerpt' feature because it requires us to insert an explicit separator in the .md source.

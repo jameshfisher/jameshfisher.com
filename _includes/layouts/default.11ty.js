@@ -1,9 +1,7 @@
-const markdownIt = require('markdown-it');
 const { format } = require('date-fns');
 const striptags = require("striptags");
 
-const markdownItRenderer = new markdownIt();
-
+const renderTitle = require('../../renderTitle.js');
 const navbarHtml = require('../../navbar.js');
 
 const dataPeople = require('../../_data/people.js');
@@ -55,7 +53,7 @@ exports.render = function(data) {
       </video>
     </a>
     <div id="content">
-      <h1>${ author === 'jim' ? '' : 'Guest post: '}${markdownItRenderer.renderInline(data.title || '')}</h1>
+      <h1>${ author === 'jim' ? '' : 'Guest post: '}${renderTitle(data.title || '')}</h1>
       ${ author === 'jim' ? '' : `<h2>By <a href="${dataPeople[author].url}">${dataPeople[author].name}</a></h2>` }
       ${ data.external_url ? 
         `<p>
@@ -111,7 +109,7 @@ exports.render = function(data) {
       <p class="posts">
         <ul>
           ${ data.collections.fave
-              .map(post => `<li><a class="post" href="${post.external_url || post.url}">${post.data.title}</a></li>`)
+              .map(post => `<li><a class="post" href="${post.external_url || post.url}">${renderTitle(post.data.title)}</a></li>`)
               .join('') }
         </ul>
       </p>

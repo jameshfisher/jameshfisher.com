@@ -1,7 +1,5 @@
-const markdownIt = require('markdown-it');
 const { format } = require('date-fns');
-
-const markdownItRenderer = new markdownIt();
+const renderTitle = require('./renderTitle.js');
 
 const navbarHtml = require('./navbar.js');
 
@@ -10,7 +8,7 @@ const dataPeople = require('./_data/people.js');
 exports.render = function(data) {
   function renderPost(post) {
     return `<a class="post" href="${ post.data.external_url ? post.data.external_url : post.url }"${ post.data.external_url ? ' target="_blank"' : '' }>
-      ${ post.data.author !== 'jim' ? `Guest post by ${dataPeople[post.data.author].name}: ` : '' }${markdownItRenderer.renderInline(post.data.title || '')}
+      ${ post.data.author !== 'jim' ? `Guest post by ${dataPeople[post.data.author].name}: ` : '' }${renderTitle(post.data.title || '')}
       ${ post.data.external_url ? `<img src="/assets/Icon_External_Link.svg" alt="external link" />` : ''}
       <span class="date">(${format(post.date, 'yyyy-MM-dd')})</span>
     </a>`;

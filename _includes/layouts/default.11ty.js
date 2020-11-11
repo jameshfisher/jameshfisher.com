@@ -110,9 +110,8 @@ exports.render = function(data) {
       <h3>More by Jim</h3>
       <p class="posts">
         <ul>
-          ${ data.collections.posts
-              .filter(post => (post.tags||[]).includes('fave')) /* FIXME can't we just use data.collections.fave instead of filter? */
-              .map(post => `<li><a class="post" href="${post.external_url || post.url}">${post.title}</a></li>`)
+          ${ data.collections.fave
+              .map(post => `<li><a class="post" href="${post.external_url || post.url}">${post.data.title}</a></li>`)
               .join('') }
         </ul>
       </p>

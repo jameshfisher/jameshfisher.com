@@ -13,9 +13,9 @@ exports.render = (data) => `{
       "type": "image/png"
     },
     {
-      "src": "/assets/jim_512.png",
+      "src": "/assets/jim_512.jpg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
   ],
   "background_color": "white",

@@ -3,7 +3,7 @@ title: "Post-driven permanent blog pages"
 ---
 
 I have a few "permanent" pages on this blog.
-An example is [the `/talks` page](/talks).
+An example is [the `/speaking` page](/speaking).
 I used to maintain this page as a separate static HTML page:
 every time I did a talk, I would edit the page.
 

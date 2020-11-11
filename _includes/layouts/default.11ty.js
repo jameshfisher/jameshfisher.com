@@ -10,7 +10,7 @@ exports.data = {
 };
 
 function excerpt(content) {
-  const paraMatches = content.match(/<p>.*<\/p>/);
+  const paraMatches = content.match(/<p.*?<\/p>/s);
   if (paraMatches === null) return '';
   return striptags(paraMatches[0]).replace(/\n/g, ' ').trim();
 }

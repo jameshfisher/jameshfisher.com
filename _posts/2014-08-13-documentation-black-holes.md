@@ -1,5 +1,5 @@
 ---
-title: "Documentation black holes: things we write that don’t get read"
+title: "Documentation black holes: things we write that don't get read"
 tags: ["programming", "documentation"]
 ---
 

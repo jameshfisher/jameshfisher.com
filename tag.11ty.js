@@ -50,7 +50,7 @@ exports.render = function(data) {
     <div id="content">
       <h1>Tag: #${data.tag}</h1>
       <ul>
-        ${ collection.map(post => `<li><a href="${post.external_url || post.url}">${markdownItRenderer.renderInline(post.data.title || '')}</a></li>`).join('\n') }
+        ${ collection.map(post => `<li><a href="${post.data.external_url || post.url}">${markdownItRenderer.renderInline(post.data.title || '')}</a></li>`).join('\n') }
       </ul>
       <p>
         All content copyright James Fisher.

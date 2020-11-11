@@ -45,3 +45,15 @@ but all of them are written in some other language.
 but all of them need compiling with something else.
 BootstrapCC, sadly, is fictional,
 and I'm not aware of any project which performs this the bootstrapping process I described here.
+
+**Update!: BootstrapCC exists!**
+It's [a wonderful-looking project called `stage0`](https://github.com/oriansj/stage0),
+which describes itself thus:
+
+> This is a set of manually created hex programs in a Cthulhu Path to madness fashion. 
+> Which only have the goal of creating a bootstrapping path to a C compiler capable of compiling GCC, 
+> with only the explicit requirement of a single 1 KByte binary or less.
+> 
+> Additionally, all code must be able to be understood by 70% of the population of programmers. 
+> If the code can not be understood by that volume, 
+> it needs to be altered until it satisfies the above requirement.

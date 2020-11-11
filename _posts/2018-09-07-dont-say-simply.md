@@ -469,7 +469,7 @@ Another thing you can to to avoid using “simply” is to instead emphasize the
 When you say some part of your instructions is simple,
 You might have a more complex part of your instructions in mind which you’re comparing to.
 If so, emphasize the complexity there instead.
-Here’s an example I stumbled over from [jekyll-sitemap](github.com/jekyll/jekyll-sitemap),
+Here’s an example I stumbled over from [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap),
 a Ruby gem I use to make this blog:
 
 > ... be sure to require jekyll-sitemap either after those other gems if you want the sitemap to include the generated content, or before those other gems if you don't want the sitemap to include the generated content from the gems. (Programming is _hard_.)

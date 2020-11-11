@@ -17,7 +17,7 @@ and I can write post files like this:
 
 ```yaml
 ---
-title: "Low latency, large working set, and GHC’s garbage collector: pick two of three"
+title: "Low latency, large working set, and GHC's garbage collector: pick two of three"
 external_url: "https://making.pusher.com/latency-working-set-ghc-gc-pick-two/"
 ---
 ```

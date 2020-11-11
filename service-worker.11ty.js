@@ -1,3 +1,8 @@
+exports.data = {
+  permalink: "service-worker.js",
+};
+
+exports.render = (data) => `
 self.addEventListener("message", (ev) => {
   if (ev.data.method == "ping") {
     ev.source.postMessage("pong");
@@ -27,3 +32,4 @@ self.addEventListener("fetch", (ev) => {
   // Pass-through; browser should do its normal thing.
   // This is here to pass Chrome's tests for adding a web app to the home screen.
 });
+`;

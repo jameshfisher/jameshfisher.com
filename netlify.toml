@@ -1,6 +1,6 @@
 [build]
   publish = "_site/"
-  command = "bundle exec jekyll build"
+  command = "npm run build"
 [[redirects]]
   from = "/friends"
   to = "/blogroll"

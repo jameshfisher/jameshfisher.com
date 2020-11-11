@@ -1,3 +1,6 @@
 # jameshfisher.com
 
-Built with Jekyll
+```
+npm install
+npm run build  # or npx eleventy --serve
+```

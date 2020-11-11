@@ -1,47 +1,72 @@
-{% capture newline %}
-{% endcapture %}<!doctype html>
+const { format } = require('date-fns');
+const striptags = require("striptags");
+
+const renderTitle = require('../../renderTitle.js');
+const navbarHtml = require('../../navbar.js');
+
+const dataPeople = require('../../_data/people.js');
+
+exports.data = {
+};
+
+function excerpt(content) {
+  const paraMatches = content.match(/<p>.*<\/p>/);
+  if (paraMatches === null) return '';
+  return striptags(paraMatches[0]).replace(/\n/g, ' ').trim();
+}
+
+exports.render = function(data) {
+  const siteUrl = 'https://jameshfisher.com'; // FIXME site.url from jekyll _config.yml
+  const canonical = `https://jameshfisher.com${this.page.url}`;
+
+  // We don't use eleventy's 'excerpt' feature because it requires us to insert an explicit separator in the .md source.
+  // I want the excerpt to just be the first paragraph, which is how it behaved in Jekyll.
+  const plaintextExcerpt = excerpt(data.content);
+
+  const author = data.author || 'jim';
+
+  return `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="white"/>
-    <meta name="keywords" content="{% for tag in page.tags %}{{tag}}{% if forloop.last == false %}, {% endif %}{% endfor %}"/>
-    <meta property="og:title" content="{{page.title}}"/>
+    <meta name="keywords" content="${(data.tags || []).join(', ')}"/>
+    <meta property="og:title" content="${data.title}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="{{site.url}}{% if page.ogimage %}{{ page.ogimage }}{% else %}{% link /assets/jim_512.jpg %}{% endif %}"/>
-    <meta property="og:url" content="https://jameshfisher.com{{ page.url }}"/>
-    <meta property="og:description" content="{{ page.excerpt | strip_html | replace: newline, ' ' }}"/>
+    <meta property="og:image" content="${siteUrl}${ data.ogimage || '/assets/jim_512.jpg' }"/>
+    <meta property="og:url" content="${canonical}"/>
+    <meta property="og:description" content="${plaintextExcerpt}"/>
     <meta property="og:site_name" content="jameshfisher.com"/>
-    {% capture canonical %}https://jameshfisher.com{{ page.url }}{% endcapture %}
-    <link rel="canonical" href="{{ canonical }}"/>
-    <link rel="icon" type="image/png" href="{{site.url}}{% link /assets/jim_128.png %}" />
-    <link rel="manifest" href="{% link manifest.json %}"/>
+    <link rel="canonical" href="${canonical}"/>
+    <link rel="icon" type="image/png" href="${siteUrl}/assets/jim_128.png" />
+    <link rel="manifest" href="/manifest.json"/>
     <link rel="alternate" type="application/rss+xml" href="https://jameshfisher.com/feed.xml" />
     <link rel="stylesheet" href="/assets/all.css" />
-    <title>{{page.title}}</title>
+    <title>${data.title}</title>
   </head>
   <body>
     <a href="/" style="display: block; transform: rotate(-5deg); margin: 0 2em 0 -1.6em; float: left;">
-      <video autoplay loop muted poster="{% link /assets/jim_512.jpg %}" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;">
-        <source src="{% link /assets/jim.webm %}" type="video/webm" />
-        <source src="{% link /assets/jim.mp4 %}" type="video/mp4" />
+      <video autoplay loop muted poster="/assets/jim_512.jpg" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;">
+        <source src="/assets/jim.webm" type="video/webm" />
+        <source src="/assets/jim.mp4" type="video/mp4" />
       </video>
     </a>
     <div id="content">
-      <h1>{% if page.author != "jim" %}Guest post: {% endif %}{{page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
-      {% if page.author != "jim" %}<h2>By <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a></h2>{% endif %}
-      {% if page.external_url %}
-      <p>
-        <strong>
-          <a href="{{ page.external_url }}">
-            This post is published externally at
-            {{ page.external_url }}
-            <img src="{% link /assets/Icon_External_Link.svg %}" alt="external link" />.
-          </a>
-        </strong>
-      </p>
-      {% endif %}
-      {{content}}
+      <h1>${ author === 'jim' ? '' : 'Guest post: '}${renderTitle(data.title || '')}</h1>
+      ${ author === 'jim' ? '' : `<h2>By <a href="${dataPeople[author].url}">${dataPeople[author].name}</a></h2>` }
+      ${ data.external_url ? 
+        `<p>
+          <strong>
+            <a href="${data.external_url}">
+              This post is published externally at
+              ${data.external_url}
+              <img src="/assets/Icon_External_Link.svg" alt="external link" />.
+            </a>
+          </strong>
+        </p>` : ''
+        }
+      ${data.content}
       <div style="background-color: #111; color: white; border-radius: 0.5em; margin-top: 1em;">
         <div style="padding: 1em;">
           I just released <a href="https://vidr.io/" style="color: #fd0; font-weight: bold; text-decoration: underline;">Vidrio</a>,
@@ -83,21 +108,22 @@
       <h3>More by Jim</h3>
       <p class="posts">
         <ul>
-          {% for post in site.posts %}{% if post.tags contains "fave" %}<li><a class="post" href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a></li>{% endif %}{% endfor %}
+          ${ data.collections.fave
+              .map(post => `<li><a class="post" href="${post.external_url || post.url}">${renderTitle(post.data.title)}</a></li>`)
+              .join('') }
         </ul>
       </p>
       <p>
-        Tagged {% for tag in page.tags %}<a class="post" href="/tag/{{tag}}">#{{tag}}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.
-        {% if page.author == "jim" %}
-          All content copyright James Fisher {{ page.date | date: "%Y" }}.
-          This post is not associated with my employer.
-        {% else %}
-          <a href="{{site.data.people[page.author].url}}">{{site.data.people[page.author].name}}</a> wrote this.
-          This post is presumably not associated with their employer.
-        {% endif %}
-        <a href="https://github.com/jameshfisher/jameshfisher.com/edit/master/{{page.path}}">Found an error? Edit this page.</a>
+        Tagged ${(data.tags||[]).map(tag => `<a class="post" href="/tag/${tag}">#${tag}</a>`).join(', ')}.
+        ${ author === 'jim' ?
+           `All content copyright James Fisher ${format(data.page.date, 'yyyy')}.
+           This post is not associated with my employer.` :
+           `<a href="${dataPeople[author].url}">${dataPeople[author].name}</a> wrote this.
+            This post is presumably not associated with their employer.`
+        }
+        <a href="${ new URL(data.page.inputPath, 'https://github.com/jameshfisher/jameshfisher.com/edit/master/').href }">Found an error? Edit this page.</a>
       </p>
-      {% include navbar.html %}
+      ${navbarHtml}
     </div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -110,7 +136,7 @@
     </script>
     <script>
     if (window.navigator && window.navigator.serviceWorker) {
-      window.navigator.serviceWorker.register("{% link service-worker.js %}");
+      window.navigator.serviceWorker.register("/service-worker.js");
     }
     </script>
     <script>
@@ -121,3 +147,5 @@
     </script>
   </body>
 </html>
+`;
+};

@@ -213,7 +213,11 @@ Post your final score on Twitter:
   };
 
   class QuizApp extends Component {
-    state = {};
+    
+    constructor() {
+      super();
+      this.state = {};
+    }
 
     render() {
       return h('div', null, [

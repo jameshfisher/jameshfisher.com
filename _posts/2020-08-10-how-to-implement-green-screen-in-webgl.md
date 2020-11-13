@@ -3,7 +3,7 @@ title: "How to implement green screen in WebGL"
 tags: ["programming", "web", "webgl"]
 ---
 
-In [the last post]({% post_url 2020-08-09-how-to-implement-green-screen-in-the-browser %}), 
+In [the last post](/2020/08/09/how-to-implement-green-screen-in-the-browser/), 
 I showed how to implement green screen in the browser.
 However, the per-pixel logic was implemented in JavaScript on the CPU,
 which is awful for performance.

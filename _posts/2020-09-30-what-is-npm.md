@@ -4,8 +4,8 @@ tags: ["programming", "javascript"]
 ---
 
 Recently I wrote about Node.js's two module systems,
-[the traditional CommonJS module system]({% post_url 2020-09-27-what-does-the-require-function-do-in-nodejs %}),
-and [the newer ECMAScript module system]({% post_url 2020-09-29-ecmascript-modules-in-nodejs %}).
+[the traditional CommonJS module system](/2020/09/27/what-does-the-require-function-do-in-nodejs/),
+and [the newer ECMAScript module system](/2020/09/29/ecmascript-modules-in-nodejs/).
 These module systems are related to, but distinct from, package systems.
 A _module_ is a thing loaded and executed at runtime.
 A _package_ is a thing downloaded at "install time".

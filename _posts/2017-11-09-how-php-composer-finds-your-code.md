@@ -3,7 +3,7 @@ title: "How PHP and Composer find your code"
 tags: ["programming", "php"]
 ---
 
-[Recently I showed how to create an empty Packagist package]({% post_url 2017-11-06-how-to-release-a-composer-package %}).
+[Recently I showed how to create an empty Packagist package](/2017/11/06/how-to-release-a-composer-package/).
 By "empty", I mean it doesn't contain any code.
 This is useless, so let's start adding some code.
 

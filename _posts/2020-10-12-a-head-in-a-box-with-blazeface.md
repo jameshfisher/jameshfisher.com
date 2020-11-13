@@ -3,7 +3,7 @@ title: "A head in a box with BlazeFace"
 tags: ["programming", "web", "ml"]
 ---
 
-[Yesterday I showed how to track a head using BlazeFace.]({% post_url 2020-10-11-head-tracking-with-blazeface %})
+[Yesterday I showed how to track a head using BlazeFace.](/2020/10/11/head-tracking-with-blazeface/)
 Today, I show how to display the head in a square canvas.
 You can run it on your own head:
 <button onclick="main(); this.onclick=null">click here</button> to start a demo!

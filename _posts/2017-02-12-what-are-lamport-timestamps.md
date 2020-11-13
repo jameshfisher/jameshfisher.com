@@ -2,7 +2,7 @@
 title: "What are Lamport timestamps?"
 ---
 
-[I wrote about the happened-before relation]({% post_url 2017-02-10-happened-before %}) and [about processes and messages in this model]({% post_url 2017-02-11-are-processes-and-messages-different %}). Happened-before gives us a way to think about time and causality. But how can we _measure_ those things?
+[I wrote about the happened-before relation](/2017/02/10/happened-before/) and [about processes and messages in this model](/2017/02/11/are-processes-and-messages-different/). Happened-before gives us a way to think about time and causality. But how can we _measure_ those things?
 
 "Lamport timestamps" are one method to measure time and causality. The idea is that each process/message carries a _timestamp_, and that we can compare these timestamps as a way to determine whether one event happened-before another (i.e., whether the first event could have caused the second). Consider the following process diagram:
 

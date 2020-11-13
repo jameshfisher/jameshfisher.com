@@ -44,7 +44,7 @@ At the time of writing,
 Google Chrome hasn't implemented any way to draw GPU buffers to the screen.
 But it does let you extract a buffer as an `ArrayBuffer`.
 So instead,
-[I use a `2d` canvas context, and call `ctx.putImageData` with that `ArrayBuffer`]({% post_url 2020-03-01-how-to-write-an-arraybuffer-to-a-canvas %}).
+[I use a `2d` canvas context, and call `ctx.putImageData` with that `ArrayBuffer`](/2020/03/01/how-to-write-an-arraybuffer-to-a-canvas/).
 I use some more GLSL to render the state to a pixel buffer,
 in a format that can be written to a canvas:
 

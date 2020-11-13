@@ -3,7 +3,7 @@ title: "What is matched betting?"
 tags: ["betting"]
 ---
 
-In [my previous post]({% post_url 2019-04-01-what-is-a-prediction-market %}),
+In [my previous post](/2019/04/01/what-is-a-prediction-market/),
 I found a curiosity:
 an asset with different prices in two different betting exchanges.
 This can be used to turn a guaranteed profit,

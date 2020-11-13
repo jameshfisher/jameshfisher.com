@@ -3,7 +3,7 @@ title: "Simulating epidemics in WebGPU"
 tags: ["programming", "webgpu", "epidemiology"]
 ---
 
-A few days ago, I [simulated an epidemic with WebGL]({% post_url 2020-02-23-simulating-epidemics-with-webgl %}),
+A few days ago, I [simulated an epidemic with WebGL](/2020/02/23/simulating-epidemics-with-webgl/),
 using a texture for the state of a cellular automaton.
 However, I got some pretty weird effects.
 For example, the number of infected people never dropped to zero,
@@ -20,7 +20,7 @@ to just access the value at a specific pixel in the texture.
 
 As an extreme solution,
 I've rewritten the epidemic simulation in WebGPU.
-Earlier, [I implemented Game of Life in WebGPU]({% post_url 2020-03-03-game-of-life-in-webgpu %}),
+Earlier, [I implemented Game of Life in WebGPU](/2020/03/03/game-of-life-in-webgpu/),
 and I modified that for my epidemic simulation.
 The API is much more pleasant:
 instead of the voodoo `texture2d` function to access pixels of a texture,

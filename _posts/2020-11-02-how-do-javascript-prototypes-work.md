@@ -3,7 +3,7 @@ title: "How do JavaScript prototypes work?"
 tags: ["programming", "javascript"]
 ---
 
-[In my previous post]({% post_url 2020-11-01-what-does-the-dot-do-in-javascript %}),
+[In my previous post](/2020/11/01/what-does-the-dot-do-in-javascript/),
 I showed how "inheritance" works in JavaScript,
 by reimplementing the forms `foo.bar`, `foo.bar()`, and `foo.bar = baz`
 in plain JavaScript functions.

@@ -3,7 +3,7 @@ title: "How to draw sprites on an HTML canvas"
 tags: ["programming", "animation", "web"]
 ---
 
-In [my previous post]({% post_url 2018-12-28-a-cat-walk-cycle %})
+In [my previous post](/2018/12/28/a-cat-walk-cycle/)
 I animated a "walk cycle" as a GIF.
 In today's post I animate the walk cycle as a "sprite sheet"
 drawn on an HTML canvas.

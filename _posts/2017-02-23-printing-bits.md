@@ -2,7 +2,7 @@
 title: "How do I print bits in C?"
 ---
 
-(For the byte-by-byte version, see ["How do I print bytes in C?"]({% post_url 2016-12-22-printing-bytes %}).)
+(For the byte-by-byte version, see ["How do I print bytes in C?"](/2016/12/22/printing-bytes/).)
 
 What do the individual bits of values in C look like? We can see the bits by printing them out with this fun program:
 

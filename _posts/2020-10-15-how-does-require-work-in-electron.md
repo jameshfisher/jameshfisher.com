@@ -3,11 +3,11 @@ title: "How does `require` work in Electron?"
 tags: ["programming", "electron", "javascript"]
 ---
 
-[Electron apps copy the Chromium process architecture]({% post_url 2020-10-14-the-electron-process-architecture-is-the-chromium-process-architecture %}).
+[Electron apps copy the Chromium process architecture](/2020/10/14/the-electron-process-architecture-is-the-chromium-process-architecture/).
 When you start an app with something like `electron main.js`,
 this starts the Chromium browser process.
 You pass it a Node.js module like `main.js`.
-[Node.js uses the CommonJS system]({% post_url 2020-09-27-what-does-the-require-function-do-in-nodejs %}),
+[Node.js uses the CommonJS system](/2020/09/27/what-does-the-require-function-do-in-nodejs/),
 so the initial module can `require` further modules.
 For example, this script will act much like a Node.js script:
 

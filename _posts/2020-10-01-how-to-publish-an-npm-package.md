@@ -129,7 +129,7 @@ https://cdn.jsdelivr.net/npm/@jameshfisher/numsyslib@0.0.1/index.js
 
 You can link to this directly from your web app.
 However, it's not very useful and will throw an error,
-because it's [a CommonJS module]({% post_url 2020-09-27-what-does-the-require-function-do-in-nodejs %}),
+because it's [a CommonJS module](/2020/09/27/what-does-the-require-function-do-in-nodejs/),
 which web browsers don't understand.
 To make it useful for the web,
 we could publish an additional plain JavaScript file,

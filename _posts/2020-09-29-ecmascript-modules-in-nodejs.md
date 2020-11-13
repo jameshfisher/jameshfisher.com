@@ -4,8 +4,8 @@ tags: ["programming", "javascript"]
 ---
 
 Traditionally, Node.js uses the "CommonJS" module system,
-which [I described recently]({% post_url 2020-09-27-what-does-the-require-function-do-in-nodejs %}).
-But since 2015, the JavaScript world has had [ECMAScript modules]({% post_url 2020-09-25-javascript-modules-for-grumpy-developers-from-2005 %}).
+which [I described recently](/2020/09/27/what-does-the-require-function-do-in-nodejs/).
+But since 2015, the JavaScript world has had [ECMAScript modules](/2020/09/25/javascript-modules-for-grumpy-developers-from-2005/).
 Node.js now supports ECMAScript modules as well as CommonJS modules.
 They're inter-operable, too, but this can make things pretty complex.
 Let's take a look.

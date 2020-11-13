@@ -3,7 +3,7 @@ title: "What does the `require` function do in Node.js?"
 tags: ["programming", "javascript"]
 ---
 
-[The other day I wrote an intro to "JavaScript modules"]({% post_url 2020-09-25-javascript-modules-for-grumpy-developers-from-2005 %}).
+[The other day I wrote an intro to "JavaScript modules"](/2020/09/25/javascript-modules-for-grumpy-developers-from-2005/).
 But technically, I only wrote an intro to _ECMAScript modules_,
 one of the two major module systems in JavaScript.
 The other is the "CommonJS" module system,

@@ -3,7 +3,7 @@ title: "How Hacker News stays interesting"
 tags: ["fave"]
 ---
 
-Last week I wrote [a post called "My parents are Flat-Earthers"]({% post_url 2019-01-20-my-parents-are-flat-earthers %}),
+Last week I wrote [a post called "My parents are Flat-Earthers"](/2019/01/20/my-parents-are-flat-earthers/),
 a history of conspiracy theories in my family.
 [Someone submitted it to Hacker News](https://news.ycombinator.com/item?id=18951569),
 and it sat at the top for an hour or so.

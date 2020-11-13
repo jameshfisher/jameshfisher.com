@@ -19,7 +19,7 @@ To start, we'll find the middle node of the linked list.
 Then from the middle, we'll work outwards in both directions,
 comparing the node values pairwise.
 
-[To find the middle node of the list]({% post_url 2020-01-15-how-to-find-the-middle-of-a-linked-list %}),
+[To find the middle node of the list](/2020/01/15/how-to-find-the-middle-of-a-linked-list/),
 we can use the "runner" trick:
 have a `slow` pointer and a `fast` pointer,
 where the `fast` pointer advances two nodes
@@ -29,7 +29,7 @@ When `fast` reaches the end, `slow` is in the middle.
 From the middle node,
 we need to be able to march back up to the start of the list,
 to compare each value.
-So we need to also [reverse the first half of the list]({% post_url 2020-01-14-how-to-reverse-a-linked-list %}).
+So we need to also [reverse the first half of the list](/2020/01/14/how-to-reverse-a-linked-list/).
 We do this while we advance the `slow` pointer.
 
 We need to know whether the list has an odd number of nodes (with a middle node),

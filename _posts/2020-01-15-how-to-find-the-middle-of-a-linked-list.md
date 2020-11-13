@@ -4,7 +4,7 @@ tags: ["programming", "c"]
 ---
 
 Just like my post on 
-[How to find the kth last node of a linked list]({% post_url 2020-01-11-how-to-find-kth-last-node-of-a-linked-list %}),
+[How to find the kth last node of a linked list](/2020/01/11/how-to-find-kth-last-node-of-a-linked-list/),
 there are some boring ways to find the middle of a linked list,
 but at least one exciting way,
 and it again uses a trick called the "runner".

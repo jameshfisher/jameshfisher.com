@@ -39,7 +39,7 @@ I generate a master keypair.
 Diary entries will be encrypted with the public key.
 The private key will be stored encrypted with my master password.
 (An alternative design is to
-[use the password as the source for the keypair]({% post_url 2017-03-24-your-password-is-the-private-key-so-what-is-the-public-key %}).)
+[use the password as the source for the keypair](/2017/03/24/your-password-is-the-private-key-so-what-is-the-public-key/).)
 To encrypt long diary entries,
 public-key encryption is unsuitable,
 so instead each entry will get a one-time shared secret,

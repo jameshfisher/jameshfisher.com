@@ -8,13 +8,13 @@ I've recently written about four "module" systems in JavaScript:
 * Raw `<script>` loading, where dependencies are implicit, 
   and exports are vomited onto the `window` object.
   (Strangely, this convention doesn't have a name!)
-* [CommonJS]({% post_url 2020-09-27-what-does-the-require-function-do-in-nodejs %}),
+* [CommonJS](/2020/09/27/what-does-the-require-function-do-in-nodejs/),
   where a module's dependencies are synchronously, dynamically `require()`d,
   and its exports are placed on an `exports` object.
-* ["ECMAScript modules"]({% post_url 2020-09-25-javascript-modules-for-grumpy-developers-from-2005 %}),
+* ["ECMAScript modules"](/2020/09/25/javascript-modules-for-grumpy-developers-from-2005/),
   where a module's dependencies are statically `import`ed before execution,
   and its exports are statically defined, top-level variables.
-* [Asynchronous Module Definition or "AMD"]({% post_url 2020-10-03-what-are-amd-modules %}),
+* [Asynchronous Module Definition or "AMD"](/2020/10/03/what-are-amd-modules/),
   where a module calls `define(dependencies, callback)`
   (Plus a degenerate alternative form which unsafely wraps a CommonJS module;
   the less said about it, the better).

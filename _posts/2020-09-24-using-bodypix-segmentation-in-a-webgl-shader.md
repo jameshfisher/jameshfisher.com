@@ -4,7 +4,7 @@ tags: ["programming", "web", "webgl", "ml"]
 ogimage: "/assets/2020-09-22/result.jpg"
 ---
 
-In [the previous post]({% post_url 2020-09-23-running-bodypix-on-a-video-stream %})
+In [the previous post](/2020/09/23/running-bodypix-on-a-video-stream/)
 I showed how to run BodyPix on a video stream,
 displaying the segmentation using the library's convenience functions.
 But if you want to use the segmentation as part of your WebGL rendering pipeline,

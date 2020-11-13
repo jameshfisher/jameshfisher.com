@@ -8,10 +8,10 @@ the claim that JavaScript has too many module systems.
 From the olden days we have raw `<script>` loading,
 where dependencies are implicit,
 and exports are vomited onto the `window` object.
-Node.js gave us [the CommonJS module system]({% post_url 2020-09-27-what-does-the-require-function-do-in-nodejs %}),
+Node.js gave us [the CommonJS module system](/2020/09/27/what-does-the-require-function-do-in-nodejs/),
 where a module's dependencies are synchronously, dynamically `require()`d,
 and its exports placed on an `exports` object.
-[ECMAScript 2015 gave us "ES modules"]({% post_url 2020-09-25-javascript-modules-for-grumpy-developers-from-2005 %}),
+[ECMAScript 2015 gave us "ES modules"](/2020/09/25/javascript-modules-for-grumpy-developers-from-2005/),
 where a module's dependencies are statically `import`ed before execution,
 and its exports are statically defined, top-level variables.
 

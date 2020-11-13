@@ -3,7 +3,7 @@ title: "Why does this RNA virus look like DNA?"
 tags: ["programming", "bioinformatics"]
 ---
 
-The other day, [I was diffing coronaviruses]({% post_url 2020-02-09-diffing-coronaviruses %}):
+The other day, [I was diffing coronaviruses](/2020/02/09/diffing-coronaviruses/):
 taking long strings of `GCAT` characters that make up the COVID-19 genome,
 and pairing them up with the `GCAT` characters of similar viruses.
 I didn't realize it at the time,

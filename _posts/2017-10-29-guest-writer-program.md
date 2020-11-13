@@ -4,7 +4,7 @@ tags: ["blog"]
 ---
 
 My friend Luís modified one of my blog posts on WebGL shaders,
-[and we posted it here]({% post_url 2017-10-28-guest-writer-program-webgl-both-diffuse-and-specular-shading %}).
+[and we posted it here](/2017/10/28/guest-writer-program-webgl-both-diffuse-and-specular-shading/).
 I didn't have this blog set up for guest posts, so here's what I've done.
 
 I need to mark who wrote the post.

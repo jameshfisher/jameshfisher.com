@@ -3,7 +3,7 @@ title: "JavaScript live bindings are just concatenation"
 tags: ["programming", "web", "javascript"]
 ---
 
-[The other day I wrote an intro to ECMAScript modules]({% post_url 2020-09-25-javascript-modules-for-grumpy-developers-from-2005 %}),
+[The other day I wrote an intro to ECMAScript modules](/2020/09/25/javascript-modules-for-grumpy-developers-from-2005/),
 and concluded that "live bindings" are a fundamentally new magic language feature.
 I wrote things like:
 

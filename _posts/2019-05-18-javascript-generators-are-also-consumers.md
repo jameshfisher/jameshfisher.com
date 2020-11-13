@@ -3,7 +3,7 @@ title: "JavaScript generators are also consumers!"
 tags: ["programming", "javascript"]
 ---
 
-[Yesterday, I introduced JavaScript _generators_]({% post_url 2019-05-17-what-is-function-star-in-javascript %})
+[Yesterday, I introduced JavaScript _generators_](/2019/05/17/what-is-function-star-in-javascript/)
 motivated by the example of generating the Fibonacci sequence.
 This is the way generators are usually introduced:
 as _generators_ of data.

@@ -3,7 +3,7 @@ title: "Making a public key file in Go"
 draft: true
 ---
 
-[I saw yesterday]({% post_url 2017-11-30-asn1 %}) that the kinds of file that OpenSSL uses -
+[I saw yesterday](/2017/11/30/asn1/) that the kinds of file that OpenSSL uses -
 private and public keys, certificates, and so on -
 are not as opaque as they might look.
 Two important formats used are PEM and ASN.1.

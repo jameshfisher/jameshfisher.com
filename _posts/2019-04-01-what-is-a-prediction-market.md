@@ -78,7 +78,7 @@ the probability that Trump will be president at the end of 2019
 is 90-91%.
 
 There are other sites that operate like PredictIt.
-They're called [_betting exchanges_]({% post_url 2019-03-31-what-is-a-betting-exchange %}).
+They're called [_betting exchanges_](/2019/03/31/what-is-a-betting-exchange/).
 One example is BetFair, which is predominantly for sports betting.
 But, nested under their "Sports" categories
 is an obscure sport called "Politics"!
@@ -128,7 +128,7 @@ PredictIt's market and BetFair's market don't agree on the probability.
 The PredictIt market puts the probability at 90-91%,
 while the BetFair market puts the probability at 94-95%!
 This is a significant difference,
-and [there is perhaps a profit to be made here]({% post_url 2019-04-02-what-is-matched-betting %}) ...
+and [there is perhaps a profit to be made here](/2019/04/02/what-is-matched-betting/) ...
 
 <style type="text/css">
   .odds-table {

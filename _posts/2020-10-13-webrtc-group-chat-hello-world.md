@@ -19,7 +19,7 @@ and each peer connection has a `RTCDataChannel`.
 To establish peer connections,
 we need a signalling mechanism.
 In principle, we can use anything as the signalling mechanism;
-[in this old post]({% post_url 2017-01-16-tiny-serverless-webrtc %}),
+[in this old post](/2017/01/16/tiny-serverless-webrtc/),
 I show how to connect two peers by copy-pasting the signalling messages between them.
 In this app, I will use [Ably](https://www.ably.io/)'s publish/subscribe system
 to send the signaling messages.

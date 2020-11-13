@@ -20,7 +20,7 @@ And here's what I get when I run it against my own face:
 
 <p><img src="{% link assets/2020-10-11/result.jpg %}"/></p>
 
-[In a previous post, I showed the "hello world" of BlazeFace]({% post_url 2020-09-21-blazeface-hello-world %}).
+[In a previous post, I showed the "hello world" of BlazeFace](/2020/09/21/blazeface-hello-world/).
 It runs BlazeFace on your webcam video stream, 
 takes the face landmarks and bounding box output by BlazeFace,
 and displays them on a canvas.

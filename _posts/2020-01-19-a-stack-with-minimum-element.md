@@ -39,7 +39,7 @@ Here's an implementation in C:
 
 A cleverer implementation recognizes that the `min` doesn't change often,
 so we can compress the representation.
-The way I thought to do this was to [run-length encode]({% post_url 2020-01-08-run-length-encoding-in-c %}) 
+The way I thought to do this was to [run-length encode](/2020/01/08/run-length-encoding-in-c/) 
 the stack of `min`s:
 keep a stack of `(min, counter)` tuples.
 Instead of pushing the same `min`,

@@ -9,8 +9,8 @@ Let's analyze which titles worked well,
 and find some principles for how to choose a good title.
 
 * My post popular posts, by far, are
-  ["What is `mode_t`?"]({% post_url 2017-02-24-what-is-mode_t %}) and
-  ["Generating Intel and AT&T assembly with `clang`"]({% post_url 2017-02-19-clang-assembly-att-intel %}).
+  ["What is `mode_t`?"](/2017/02/24/what-is-mode_t/) and
+  ["Generating Intel and AT&T assembly with `clang`"](/2017/02/19/clang-assembly-att-intel/).
   This seems a bit arbitrary; they were low-effort posts.
 
 * Almost all people get to this site from Google search.

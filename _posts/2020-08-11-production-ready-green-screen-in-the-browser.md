@@ -155,7 +155,7 @@ you should get a reasonable result like this:
 
 <p><img src="{% link /assets/2020-08-11/result.jpg %}" /></p>
 
-This is similar to the green screen pipeline in [my previous post]({% post_url 2020-08-10-how-to-implement-green-screen-in-webgl %}),
+This is similar to the green screen pipeline in [my previous post](/2020/08/10/how-to-implement-green-screen-in-webgl/),
 but with a much better green screen algorithm.
 In the previous post,
 the green screen algorithm makes the pixel fully transparent

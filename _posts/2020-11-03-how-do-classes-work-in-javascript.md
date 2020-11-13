@@ -7,8 +7,8 @@ JavaScript classes are syntactic sugar.
 Here I show how to de-sugar the `class` notation
 into traditional prototype-based JavaScript.
 If you don't know how prototypes work in JavaScript,
-first read [how the dot works]({% post_url 2020-11-01-what-does-the-dot-do-in-javascript %}),
-then [how `function(){}` and `new` work]({% post_url 2020-11-02-how-do-javascript-prototypes-work %}).
+first read [how the dot works](/2020/11/01/what-does-the-dot-do-in-javascript/),
+then [how `function(){}` and `new` work](/2020/11/02/how-do-javascript-prototypes-work/).
 
 Let's start from an empty class, like `class Logger { }`.
 This is just sugar for a constructor function `function Logger() { }`.

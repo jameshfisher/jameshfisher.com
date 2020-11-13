@@ -2,7 +2,7 @@
 title: "Are processes and messages different?"
 ---
 
-[Yesterday I described the "happened-before" relation]({% post_url 2017-02-10-happened-before %}). I showed this typical "interaction diagram" illustrating "processes" interacting with "messages":
+[Yesterday I described the "happened-before" relation](/2017/02/10/happened-before/). I showed this typical "interaction diagram" illustrating "processes" interacting with "messages":
 
 ![message-passing processes](/assets/2017-02-10-happened-before/message-passing-processes.png)
 

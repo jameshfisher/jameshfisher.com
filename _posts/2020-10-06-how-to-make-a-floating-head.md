@@ -4,7 +4,7 @@ tags: ["programming", "web", "webgl", "ml"]
 ogimage: "/assets/2020-10-06/result.jpg"
 ---
 
-In [a previous post]({% post_url 2020-09-24-using-bodypix-segmentation-in-a-webgl-shader %}).
+In [a previous post](/2020/09/24/using-bodypix-segmentation-in-a-webgl-shader/).
 I showed how to run BodyPix on a video stream
 and access the segmentation from your shader.
 In this post, 

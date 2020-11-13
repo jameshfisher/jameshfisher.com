@@ -3,7 +3,7 @@ title: "Simulating epidemics with WebGL"
 tags: ["programming", "graphics", "webgl", "epidemiology"]
 ---
 
-In a recent post, I looked at [the SIR model for simulating epidemics]({% post_url 2020-02-15-simulating-epidemics %}).
+In a recent post, I looked at [the SIR model for simulating epidemics](/2020/02/15/simulating-epidemics/).
 The SIR model only tracks three numbers:
 the number of "Susceptible", "Infected", and "Recovered" people.
 This doesn't account for _location_:
@@ -193,7 +193,7 @@ infections can jump from one city to another via airplanes.
 
 To make this simulation efficient,
 I've implemented it as a WebGL fragment shader.
-This draws on [a previous simulation of the Game of Life that I wrote in 2017]({% post_url 2017-10-22-webgl-game-of-life %}).
+This draws on [a previous simulation of the Game of Life that I wrote in 2017](/2017/10/22/webgl-game-of-life/).
 The entire state is stored as a 1024x1024 texture.
 I have one "stepper" fragment shader which reads this texture,
 and generates the next state.

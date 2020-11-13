@@ -54,7 +54,7 @@ It has global state,
 so you can only have one Fibonacci sequence in your program.
 And it mixes up the _abstract concept_ of Fibonacci numbers with the _display_ of those numbers.
 You could solve these problems
-by using [a JavaScript _iterator_]({% post_url 2019-05-10-how-do-javascript-iterators-work %})
+by using [a JavaScript _iterator_](/2019/05/10/how-do-javascript-iterators-work/)
 to generate the Fibonacci numbers:
 
 ```js
@@ -138,4 +138,4 @@ like drawing a new number to the screen and waiting for more input.
 
 Now you've seen how JavaScript generators can be used to _generate_ data.
 But, surprise, generators can also be used to _consume_ data!
-[Read my next post to find out how ...]({% post_url 2019-05-18-javascript-generators-are-also-consumers %})
+[Read my next post to find out how ...](/2019/05/18/javascript-generators-are-also-consumers/)

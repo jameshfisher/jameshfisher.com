@@ -4,7 +4,7 @@ tags: ["programming", "web", "webgl"]
 ogimage: "/assets/2020-09-20/result.jpg"
 ---
 
-In [this previous post]({% post_url 2020-08-11-production-ready-green-screen-in-the-browser %}) 
+In [this previous post](/2020/08/11/production-ready-green-screen-in-the-browser/) 
 I showed how to remove a background from a webcam feed
 using a "green screen" algorithm implemented in WebGL.
 In this post, 

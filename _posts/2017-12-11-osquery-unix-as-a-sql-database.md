@@ -3,7 +3,7 @@ title: "osquery: UNIX as a SQL database"
 tags: ["programming", "unix"]
 ---
 
-[Earlier this year, in "UNIX as a SQL database"]({% post_url 2017-02-14-unix-in-sql %}),
+[Earlier this year, in "UNIX as a SQL database"](/2017/02/14/unix-in-sql/),
 I wrote:
 
 > UNIX is full of tables.

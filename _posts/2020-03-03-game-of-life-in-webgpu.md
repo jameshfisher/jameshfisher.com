@@ -3,9 +3,9 @@ title: "Game of Life in WebGPU"
 tags: ["programming", "webgpu"]
 ---
 
-Following on from [implementing Rule 110 in WebGPU]({% post_url 2020-03-02-rule-110-in-webgpu %}),
+Following on from [implementing Rule 110 in WebGPU](/2020/03/02/rule-110-in-webgpu/),
 I've gone into the second dimension, and implemented the Game of Life.
-This is essentially the same as my earlier [Game of Life in WebGL]({% post_url 2017-10-23-webgl-big-game-of-life %}),
+This is essentially the same as my earlier [Game of Life in WebGL](/2017/10/23/webgl-big-game-of-life/),
 but using WebGPU rather than WebGL.
 Below you should see the simulation,
 if you're running Google Chrome Canary, 

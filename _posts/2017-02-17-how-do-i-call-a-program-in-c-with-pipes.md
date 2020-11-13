@@ -2,7 +2,7 @@
 title: "How do I call a program in C, setting up standard pipes?"
 ---
 
-Earlier I showed [how to call a program in C]({% post_url 2017-02-07-how-do-i-call-a-program-in-c %}). This works by first forking the current process, then replacing the child process with the new program image. But how do we talk to this new process? We must set up the new process's standard pipes (standard in, out, error). This is a fair bit of work.
+Earlier I showed [how to call a program in C](/2017/02/07/how-do-i-call-a-program-in-c/). This works by first forking the current process, then replacing the child process with the new program image. But how do we talk to this new process? We must set up the new process's standard pipes (standard in, out, error). This is a fair bit of work.
 
 Here's the original `call` function, which starts a new process but does not set up its pipes (or do any error checking):
 

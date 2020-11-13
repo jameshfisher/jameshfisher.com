@@ -77,7 +77,7 @@ First, it's pretty inefficient.
 For efficiency, everything should happen on the GPU,
 but this demo does most processing on the CPU.
 It uses `getImageData` and `putImageData` to process frames in JavaScript as `ImageData` objects.
-[In the next post, I show how to avoid this inefficiency by using a WebGL shader.]({% post_url 2020-08-10-how-to-implement-green-screen-in-webgl %}).
+[In the next post, I show how to avoid this inefficiency by using a WebGL shader.](/2020/08/10/how-to-implement-green-screen-in-webgl/).
 
 The second deficiency here is the naivety of the green screen algorithm.
 The demo sets a pixel transparent if `g > 100 && r < 100`.

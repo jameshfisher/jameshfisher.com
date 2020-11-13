@@ -2,7 +2,7 @@
 title: "Don't use the word 'simply'"
 ---
 
-Previously I described a magic way to clarify your writing: [don't use the word "it"]({% post_url 2016-11-25-dont-use-it %}). Here's another heuristic: don't use the word "simply". Take these examples:
+Previously I described a magic way to clarify your writing: [don't use the word "it"](/2016/11/25/dont-use-it/). Here's another heuristic: don't use the word "simply". Take these examples:
 
 > One approach is simply to compress the messages.
 

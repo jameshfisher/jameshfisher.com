@@ -13,7 +13,7 @@ I describe how that happened,
 why it happened,
 and why it's a good thing.
 
-<p><a href="http://hnrankings.info/18951569/" target="_blank"><img src="{% link assets/2019-01-26-buried/ranking.png %}" /></a></p>
+<p><a href="http://hnrankings.info/18951569/" target="_blank"><img src="/assets/2019-01-26-buried/ranking.png" /></a></p>
 
 Truly my father's son,
 my first reaction to this plunge was:
@@ -74,7 +74,7 @@ and unlike censorship, burying is a _visible_ action, right there on the homepag
 My new post was sandwiched between much older, un-buried posts,
 and you can frequently see such posts whenever you open the homepage:
 
-<p><img src="{% link assets/2019-01-26-buried/buried.png %}" style="max-width: 15cm; display: block; margin: auto" /></p>
+<p><img src="/assets/2019-01-26-buried/buried.png" style="max-width: 15cm; display: block; margin: auto" /></p>
 
 If you want to blame Facebook and YouTube for allowing the spread of wild conspiracy theories,
 it's hard to also blame calmer forums like Hacker News for moderation.

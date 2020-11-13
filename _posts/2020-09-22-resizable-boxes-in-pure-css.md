@@ -18,7 +18,7 @@ with a little handle in the bottom-right corner:
 <p>
     <div style="resize: both; overflow: hidden; width: 500px; height: 300px;">
       <video loop muted autoplay style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: -1">
-        <source src="{% link assets/vidrio/webcam_320.mp4 %}" type="video/mp4">
+        <source src="/assets/vidrio/webcam_320.mp4" type="video/mp4">
       </video>
     </div>
 </p>
@@ -28,7 +28,7 @@ Here's the CSS for that:
 ```html
 <div style="resize: both; overflow: hidden; width: 500px; height: 300px;">
   <video loop muted autoplay style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: -1">
-    <source src="{% link assets/vidrio/webcam_320.mp4 %}" type="video/mp4">
+    <source src="/assets/vidrio/webcam_320.mp4" type="video/mp4">
   </video>
 </div>
 ```

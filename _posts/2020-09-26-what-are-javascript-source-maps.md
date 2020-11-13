@@ -4,13 +4,13 @@ tags: ["programming", "web"]
 ogimage: "/assets/2020-09-26/jimscript.png"
 ---
 
-<script src="{% link assets/2020-09-26/generated.js %}"></script>
+<script src="/assets/2020-09-26/generated.js"></script>
 
 Open the dev tools on this page,
 and you'll see it executes a strange `source.jimscript` file.
 It's basically English, but you can step through and debug it:
 
-<p><img src="{% link assets/2020-09-26/jimscript.png %}"/></p>
+<p><img src="/assets/2020-09-26/jimscript.png"/></p>
 
 But what on earth is JimScript,
 and how does the browser know how to execute it?

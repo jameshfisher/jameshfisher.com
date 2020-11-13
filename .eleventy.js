@@ -20,25 +20,6 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("_posts/**").filter(post => !post.data.draft);
   });
 
-  // FIXME abandon {% link %}
-  // Instead, use a post-build test like https://github.com/stevenvachon/broken-link-checker#sitechecker
-  // or https://github.com/Munter/netlify-plugin-checklinks
-
-  eleventyConfig.addLiquidTag("link", function(liquidEngine) {
-    return {
-      parse: function(tagToken, remainTokens) {
-        this.path = tagToken.args;
-      },
-      render: function(scope, hash) {
-        // FIXME this basically does nothing - it doesn't check the file exists
-
-        if (!this.path.startsWith("/")) this.path = "/" + this.path;
-
-        return Promise.resolve(this.path);
-      }
-    };
-  });
-
   eleventyConfig.setLiquidOptions({
     extname: ''  // Workaround for https://github.com/11ty/eleventy/issues/1504
   });

@@ -12,7 +12,7 @@ we will wash down her wine,
 visit her chateaux, 
 and marvel at her mediaeval make-believe.
 
-<p><img src="{% link assets/2019-04-09/route.png %}"/></p>
+<p><img src="/assets/2019-04-09/route.png"/></p>
 
 Early in the afternoon of Tuesday 9th April, 
 we will fly out from London to Tours. 

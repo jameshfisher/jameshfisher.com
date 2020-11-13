@@ -132,7 +132,7 @@ corresponds to the gradient's steepness in the input image.
 Take a look at what the demo does with my webcam,
 and consider whether "a steep gradient" really matches your intuition of what an "edge" is:
 
-<p><img src="{% link assets/2020-08-31/example.png %}"/></p>
+<p><img src="/assets/2020-08-31/example.png"/></p>
 
 In my opinion, there are some oddities.
 Notice the lampshade in the corner does not get a full outline.

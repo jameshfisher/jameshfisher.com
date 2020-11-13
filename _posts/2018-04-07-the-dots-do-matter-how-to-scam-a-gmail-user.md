@@ -13,7 +13,7 @@ and that this Gmail feature is in fact a misfeature.
 Finally I'll suggest some ways the Gmail team can combat such scams in future.
 But first, I'll show you the email:
 
-![email from Netflix]({% link assets/2018-04-07/email.png %})
+![email from Netflix](/assets/2018-04-07/email.png)
 
 "Odd," I thought, "but OK, I'll check."
 The email is genuinely from `netflix.com`,
@@ -155,7 +155,7 @@ and maybe John would set `john.smith@gmail.com` as standard.
 If an email is sent to a non-standard address,
 it should be shown with a warning:
 
-![how to show phishing]({% link assets/2018-04-07/better.png %})
+![how to show phishing](/assets/2018-04-07/better.png)
 
 Finally, Gmail users should be able to opt out of dots-don't-matter.
 I wish for any mail sent to `james.hfisher@gmail.com` to bounce instead of reaching my inbox.

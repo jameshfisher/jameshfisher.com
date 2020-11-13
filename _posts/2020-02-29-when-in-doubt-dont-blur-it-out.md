@@ -19,9 +19,9 @@ I won't show you The Guardian's example;
 instead, here's an example I created:
 
 <div>
-  <img style="width: 200px; display: inline-block;" src="{% link /assets/2020-02-29/original.png %}"/>
-  <img style="width: 200px; display: inline-block;" src="{% link /assets/2020-02-29/blurred.png %}"/>
-  <img style="width: 200px; display: inline-block;" src="{% link /assets/2020-02-29/recovered.png %}"/>
+  <img style="width: 200px; display: inline-block;" src="/assets/2020-02-29/original.png"/>
+  <img style="width: 200px; display: inline-block;" src="/assets/2020-02-29/blurred.png"/>
+  <img style="width: 200px; display: inline-block;" src="/assets/2020-02-29/recovered.png"/>
 </div>
 
 You see the original, then a blurred version, then a version recovered from this.

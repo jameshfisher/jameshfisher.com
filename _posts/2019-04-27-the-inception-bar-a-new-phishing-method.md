@@ -16,7 +16,7 @@ then suggest some ways Chrome can fix this vulnerability,
 then finally show you how to get out if you're still stuck here.
 But first, the proof:
 
-<p><img src="{% link assets/2019-04-27/proof.png %}"/></p>
+<p><img src="/assets/2019-04-27/proof.png"/></p>
 
 In Chrome for mobile,
 when the user scrolls down, 
@@ -42,7 +42,7 @@ but they're actually in a browser within their browser.
 Here's a video of the hack in use:
 
 <video width="100%" controls autoplay loop style="margin: 0 auto; border: 2px solid black;">
-  <source src="{% link assets/2019-04-27/demo.webm %}" type="video/webm">
+  <source src="/assets/2019-04-27/demo.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
 
@@ -102,9 +102,9 @@ Or, for hacks similar to this one,
 see [this inception attack based on the fullscreen API](https://feross.org/html5-fullscreen-api-attack/),
 or [my "custom cursor" inception attack from 2016](https://jameshfisher.github.io/cursory-hack/).
 
-<div id="fakeurlbar" style="display: none; position: fixed; top: 0px; left: 0; height: 74.77037037037037px; width: 100vw; background-image: url('{% link assets/2019-04-27/bar_background.png %}'); background-size: 19px 74.77037037037037px;">
-  <img src="{% link assets/2019-04-27/bar_left.png %}" style="float: left; width: 211.72222222222223px;"/>
-  <img src="{% link assets/2019-04-27/bar_right.png %}" style="float: right;  width: 124.74444444444444px;"/>
+<div id="fakeurlbar" style="display: none; position: fixed; top: 0px; left: 0; height: 74.77037037037037px; width: 100vw; background-image: url('/assets/2019-04-27/bar_background.png'); background-size: 19px 74.77037037037037px;">
+  <img src="/assets/2019-04-27/bar_left.png" style="float: left; width: 211.72222222222223px;"/>
+  <img src="/assets/2019-04-27/bar_right.png" style="float: right;  width: 124.74444444444444px;"/>
 </div>
 
 <script>

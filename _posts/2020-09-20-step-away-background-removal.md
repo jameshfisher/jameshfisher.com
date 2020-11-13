@@ -18,7 +18,7 @@ it takes a snapshot,
 and starts applying the background removal algorithm.
 
 <video id="webcamVideo" style="display: none;"></video>
-<canvas id="display" style="background-image: url({% link /assets/2020-08-11/bookshelf.jpg %}); background-size: cover;  max-width: initial"></canvas>
+<canvas id="display" style="background-image: url(/assets/2020-08-11/bookshelf.jpg); background-size: cover;  max-width: initial"></canvas>
 <table>
   <tbody>
     <tr><th></th><td><button onclick="startWebcam(); this.parentElement.removeChild(this)">Start webcam</button></td></tr>
@@ -39,8 +39,8 @@ Here's an example of this algorithm used against a fairly simple background.
 The snapshotted background is the first image; the output is the second:
 
 <div>
-  <img style="width: 49%;" src="{% link /assets/2020-09-20/background.jpg %}" />
-  <img style="width: 49%;" src="{% link /assets/2020-09-20/result.jpg %}" />
+  <img style="width: 49%;" src="/assets/2020-09-20/background.jpg" />
+  <img style="width: 49%;" src="/assets/2020-09-20/result.jpg" />
 </div>
 
 I found that the standard chroma key algorithm does not work well with real backgrounds.

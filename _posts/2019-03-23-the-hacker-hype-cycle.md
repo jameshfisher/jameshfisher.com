@@ -17,7 +17,7 @@ searching for hidden truths.
 Though I didn't know it at the time,
 I had sunk to the bottom of the _trough of hipster technologies_.
 
-<p><img src="{% link assets/2019-03-23/hacker-hype-cycle.svg %}"/></p>
+<p><img src="/assets/2019-03-23/hacker-hype-cycle.svg"/></p>
 
 Four years prior, in 2009,
 I had been making a web app in Python.
@@ -79,7 +79,7 @@ and I sketched it out above.
 I'm referencing the more famous _Gartner hype cycle_,
 which looks like this:
 
-<p><img src="{% link assets/2019-03-23/Hype-Cycle-General.png %}"/></p>
+<p><img src="/assets/2019-03-23/Hype-Cycle-General.png"/></p>
 
 My personal productivity cycle is tied to this industry hype cycle.
 My schoolfriend back in 2003 was my personal "technology trigger."
@@ -114,7 +114,7 @@ _Homotopy Type Theory_.
 It was here, in Gartner's land of technology triggers,
 that I reached my _trough of hipster technologies_:
 
-<p><img src="{% link assets/2019-03-23/gartners-peak.svg %}"/></p>
+<p><img src="/assets/2019-03-23/gartners-peak.svg"/></p>
 
 It took me years to get back.
 I am still recovering.

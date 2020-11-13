@@ -23,7 +23,7 @@ and draws the detected face landmarks on top of your webcam stream:
 
 Here's what I get when I run it against my own face:
 
-<p><img src="{% link assets/2020-09-21/result.jpg %}"/></p>
+<p><img src="/assets/2020-09-21/result.jpg"/></p>
 
 Basic usage of this API is basically one function call;
 a pure function from input image to predicted faces:

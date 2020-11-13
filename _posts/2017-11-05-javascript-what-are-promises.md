@@ -17,10 +17,10 @@ but have never delved into their precise semantics or implementation.
 
 Let's look at a specific DOM API:
 the Fetch API, used to make HTTP requests.
-Here's an example which gets the Content-Type of the file at `{% link manifest.json %}`:
+Here's an example which gets the Content-Type of the file at `/manifest.json`:
 
 ```js
-fetch(new Request("{% link manifest.json %}")).then(response => {
+fetch(new Request("/manifest.json")).then(response => {
   console.log("Content-Type", response.headers.get("Content-Type"));
 });
 ```
@@ -79,7 +79,7 @@ the promise given by the `fetch(...).then(...)` expression.
 We can see this with:
 
 ```js
-fetch(new Request("{% link manifest.json %}")).then(response => {
+fetch(new Request("/manifest.json")).then(response => {
   console.log("Content-Type", response.headers.get("Content-Type"));
 }).then(x => {
   console.log("mystery", x);
@@ -93,7 +93,7 @@ then it is converted to a `Promise` object that resolves to `x`.
 Arguably, this is ugly, and to be type-correct, we should have written:
 
 ```js
-fetch(new Request("{% link manifest.json %}")).then(response => {
+fetch(new Request("/manifest.json")).then(response => {
   console.log("headers", response.headers.get("Content-Type"));
   return Promise.resolve(undefined);
 });
@@ -111,11 +111,11 @@ Promise<T> Promise.resolve<T>(T t);
 The return value of `onFulfilled`
 becomes the return value of the entire promise.
 This allows us to "chain" promises together.
-To demonstrate, consider getting the resource at `{% link manifest.json %}`
+To demonstrate, consider getting the resource at `/manifest.json`
 as a JSON object:
 
 ```js
-fetch(new Request("{% link manifest.json %}"))
+fetch(new Request("/manifest.json"))
   .then(response => response.json())
   .then(json => console.log("json", json));
 ```
@@ -133,7 +133,7 @@ and each `onFulfilled` will be called.
 For example:
 
 ```js
-let p = fetch(new Request("{% link manifest.json %}"));
+let p = fetch(new Request("/manifest.json"));
 p.then(response => { console.log("Content-Type", response.headers.get("Content-Type")); });
 p.then(response => { console.log("Content-Length", response.headers.get("Content-Length")); });
 p.then(response => { console.log("Etag", response.headers.get("Etag")); });
@@ -152,7 +152,7 @@ The `onFulfilled` callback will be called with the fulfilled value.
 For example:
 
 ```js
-let p = fetch(new Request("{% link manifest.json %}"));
+let p = fetch(new Request("/manifest.json"));
 p.then(() => {
   // `p` is now fulfilled. Can we call `then` on `p` again? Yes!
   p.then(response => {
@@ -166,7 +166,7 @@ When calling `p.then(onFulfilled)`,
 even if `p` is already fulfilled:
 
 ```js
-let p = fetch(new Request("{% link manifest.json %}"));
+let p = fetch(new Request("/manifest.json"));
 p.then(() => {
   // `p` is now fulfilled.
   p.then(response => {

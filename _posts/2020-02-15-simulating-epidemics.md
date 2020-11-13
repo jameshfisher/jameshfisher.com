@@ -39,7 +39,7 @@ the epidemic could never even started!
 
 Max infectious: <span id="maxInfected"></span>. Min susceptible: <span id="minSusceptible"></span>.
 
-<script src="{% link /assets/Chart.min.js %}"></script>
+<script src="/assets/Chart.min.js"></script>
 
 <script>
     function numberWithCommas(x) {

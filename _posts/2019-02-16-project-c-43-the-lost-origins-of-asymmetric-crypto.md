@@ -43,7 +43,7 @@ a secret wartime research project on "speech privacy."
 In Section 9, "Masking Systems",
 Koenig writes that
 
-<p><img src="{% link assets/2019-02-16/fig21.png %}" class="aside" /></p>
+<p><img src="/assets/2019-02-16/fig21.png" class="aside" /></p>
 
 > One of the first schemes which is
 > likely to occur to a person considering how to make speech private
@@ -67,7 +67,7 @@ Ellis wrote in another secret paper,
 [_The possibility of secure non-secret digital encryption_](https://www.gchq.gov.uk/sites/default/files/document_files/CESG_Research_Report_No_3006_0.pdf),
 that
 
-<p><img src="{% link assets/2019-02-16/ellis_fig1.png %}" class="aside" /></p>
+<p><img src="/assets/2019-02-16/ellis_fig1.png" class="aside" /></p>
 
 > An ingenious scheme
 > intended for the encipherment of speech over short metallic connections

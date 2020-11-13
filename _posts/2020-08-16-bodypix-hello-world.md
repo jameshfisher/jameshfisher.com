@@ -11,12 +11,12 @@ what body part is at that point.
 For example, it might estimate that point `x=50,y=100` is part of a `right_hand`, with confidence `0.8`.
 To test it out, here's an input image:
 
-<p><img id="jimage" src="{% link assets/2020-08-16/jim.jpg %}"/></p>
+<p><img id="jimage" src="/assets/2020-08-16/jim.jpg"/></p>
 
 And here's a person segmentation generated from this image,
 using [the getting started code from the BodyPix README](https://github.com/tensorflow/tfjs-models/tree/master/body-pix):
 
-<p><img src="{% link assets/2020-08-16/result.jpg %}"/></p>
+<p><img src="/assets/2020-08-16/result.jpg"/></p>
 
 In many ways, BodyPix does a great job,
 but there are some clear flaws.
@@ -81,7 +81,7 @@ You might have to wait a while for the model to load and run.
 And here's the code that this page uses to generate this image:
 
 ```html
-<p><img id="jimage" src="{% link assets/2020-08-16/jim.jpg %}"/></p>
+<p><img id="jimage" src="/assets/2020-08-16/jim.jpg"/></p>
 <canvas id="canvas" width="900" height="507"></canvas>
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>

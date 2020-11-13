@@ -44,7 +44,7 @@ I don't see an easy way to hack around this.
 
 Finally, here's what I get when I run the demo against my own webcam feed:
 
-<p><img src="{% link assets/2020-10-06/result.jpg %}"/></p>
+<p><img src="/assets/2020-10-06/result.jpg"/></p>
 
 <canvas id="display" style="position: fixed; bottom: 0; right: 0;"></canvas>
 

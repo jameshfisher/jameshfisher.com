@@ -11,7 +11,7 @@ and uses a high-quality green screen algorithm that beats your Zoom virtual back
 Here's a live demo, where you can adjust the parameters to place yourself in front of a virtual bookshelf:
 
 <video id="webcamVideo" style="display: none;"></video>
-<canvas id="display" style="background-image: url({% link /assets/2020-08-11/bookshelf.jpg %}); background-size: cover;  max-width: initial"></canvas>
+<canvas id="display" style="background-image: url(/assets/2020-08-11/bookshelf.jpg); background-size: cover;  max-width: initial"></canvas>
 <table>
   <tbody>
     <tr><th></th><td><button onclick="startWebcam(); this.parentElement.removeChild(this)">Start webcam</button></td></tr>
@@ -153,7 +153,7 @@ How does it work? Here's the basic "pipeline":
 After tweaking the parameters for your own green screen,
 you should get a reasonable result like this:
 
-<p><img src="{% link /assets/2020-08-11/result.jpg %}" /></p>
+<p><img src="/assets/2020-08-11/result.jpg" /></p>
 
 This is similar to the green screen pipeline in [my previous post](/2020/08/10/how-to-implement-green-screen-in-webgl/),
 but with a much better green screen algorithm.

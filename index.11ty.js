@@ -53,7 +53,7 @@ return `
       .post:hover { background-color: antiquewhite; }
       @media (min-width: 680px) {
         div.calendar { border: 1px solid #aaa; }
-        div.calendar_week { display: flex; flex-direction: row-reverse; }
+        div.calendar_week { display: flex; flex-direction: row; }
         div.day { flex-grow: 1; border: 1px solid #aaa; display: flex; flex-direction: column; }
         div.day.day_no_posts { background-color: #f9f9f9; padding: 0.3em 1em; text-align: center; color: #ddd; }
         .post { flex-grow: 1; border-bottom: 2px solid #aaa; }

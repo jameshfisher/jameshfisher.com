@@ -72,7 +72,7 @@ And linear functions can't describe _projection_
 (that is, simulating a camera),
 because they keep parallel lines parallel.
 
-In my next post, I'll describe _homogeneous coordinates_,
+[In my next post, I describe _homogeneous coordinates_](/2020/11/28/homogeneous-coordinates-in-2d-from-scratch/),
 a mathematical hack that builds on top of plain linear algebra,
 and allows describing translation and projection.
 Stay tuned!

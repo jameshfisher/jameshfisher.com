@@ -23,6 +23,7 @@ exports.render = function(data) {
   function renderWeekPosts(weekPosts) {
     const days = [[], [], [], [], [], [], []];
     for (const post of weekPosts) days[parseInt(format(post.date, 'i'))-1].push(post);
+    days.reverse(); // Show all posts in reverse date order, for mobile/list view
     return `<div class="calendar_week">${days.map((day, i) => renderDayPosts(i, day)).join('')}</div>`;
   }
 
@@ -53,7 +54,7 @@ return `
       .post:hover { background-color: antiquewhite; }
       @media (min-width: 680px) {
         div.calendar { border: 1px solid #aaa; }
-        div.calendar_week { display: flex; flex-direction: row; }
+        div.calendar_week { display: flex; flex-direction: row-reverse; }
         div.day { flex-grow: 1; border: 1px solid #aaa; display: flex; flex-direction: column; }
         div.day.day_no_posts { background-color: #f9f9f9; padding: 0.3em 1em; text-align: center; color: #ddd; }
         .post { flex-grow: 1; border-bottom: 2px solid #aaa; }

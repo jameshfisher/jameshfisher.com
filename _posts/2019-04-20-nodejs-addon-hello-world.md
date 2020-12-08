@@ -37,7 +37,7 @@ not a JavaScript module.
 These `.node` files can be built with a tool called `node-gyp`:
 
 ```shell
-$ npm install -g node-gyp
+$ npm install --save-dev node-gyp  # install for this project
 ```
 
 To use it,
@@ -55,7 +55,7 @@ first create the following `binding.gyp` file:
 }
 ```
 
-Then run `node-gyp configure`,
+Then run `npx node-gyp configure`,
 which uses the above `binding.gyp` file.
 Our `binding.gyp` says we're going to build `addon.node`
 from the source file `addon_src.cc`.
@@ -87,10 +87,10 @@ NODE_MODULE(NODE_GYP_MODULE_NAME, Initialize)
 ```
 
 With everything in place,
-we can build our `addon.node` file with `node-gyp build`:
+we can build our `addon.node` file with `npx node-gyp build`:
 
 ```shell
-$ node-gyp build
+$ npx node-gyp build
 $ cp build/Release/addon.node .
 $ node main.js  # uses addon.node!
 world

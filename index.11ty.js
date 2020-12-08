@@ -23,6 +23,7 @@ exports.render = function(data) {
   function renderWeekPosts(weekPosts) {
     const days = [[], [], [], [], [], [], []];
     for (const post of weekPosts) days[parseInt(format(post.date, 'i'))-1].push(post);
+    days.reverse(); // Show all posts in reverse date order, for mobile/list view
     return `<div class="calendar_week">${days.map((day, i) => renderDayPosts(i, day)).join('')}</div>`;
   }
 

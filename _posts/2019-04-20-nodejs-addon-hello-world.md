@@ -75,8 +75,10 @@ using v8::Value;
 
 void Method(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();
-  args.GetReturnValue().Set(String::NewFromUtf8(
-      isolate, "world", NewStringType::kNormal).ToLocalChecked());
+  v8::MaybeLocal<v8::String> str = String::NewFromUtf8(isolate, "world", NewStringType::kNormal);
+  v8::Local<v8::String> checkedString = str.ToLocalChecked();
+  v8::ReturnValue<v8::Value> retVal = args.GetReturnValue();
+  retVal.Set(checkedString);
 }
 
 void Initialize(Local<Object> exports) {
@@ -95,3 +97,11 @@ $ cp build/Release/addon.node .
 $ node main.js  # uses addon.node!
 world
 ```
+
+(If you get build errors here, it's likely because the V8 API has changed.
+The above example works for Node 12.x.
+[Consult the addons docs for a latest working example](https://nodejs.org/api/addons.html).
+Due to V8 API instability,
+[Node.js provides "Native Abstractions for Node.js"](https://github.com/nodejs/nan), 
+a bunch of macros which are hopefully more stable.
+I'll do a future post on a NAN hello world.)

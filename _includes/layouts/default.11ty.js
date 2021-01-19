@@ -47,7 +47,7 @@ exports.render = function(data) {
   </head>
   <body>
     <a href="/" style="display: block; transform: rotate(-5deg); margin: 0 2em 0 -1.6em; float: left;">
-      <video autoplay loop muted disableRemotePlayback poster="/assets/jim_512.jpg" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;">
+      <video autoplay loop muted disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture poster="/assets/jim_512.jpg" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;">
         <source src="/assets/jim.webm" type="video/webm" />
         <source src="/assets/jim.mp4" type="video/mp4" />
       </video>
@@ -82,10 +82,10 @@ exports.render = function(data) {
           <div style="text-align: center;">
             <div style="width: 320px; display: inline-block;">
               <div style="width: 320px; height: 200px; position: relative;">
-                <video loop muted autoplay disableRemotePlayback style="width: 100%; position: absolute; top: 0; left: 0;">
+                <video loop muted autoplay disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture style="width: 100%; position: absolute; top: 0; left: 0;">
                   <source src="/assets/vidrio/screen_640.mp4" type="video/mp4"/>
                 </video>
-                <video loop muted autoplay disableRemotePlayback style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0.25;">
+                <video loop muted autoplay disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0.25;">
                   <source src="/assets/vidrio/webcam_320.mp4" type="video/mp4"/>
                 </video>
               </div>
@@ -93,10 +93,10 @@ exports.render = function(data) {
             </div>
             <div style="width: 320px; display: inline-block;">
               <div style="width: 320px; height: 200px; position: relative;">
-                <video loop muted autoplay disableRemotePlayback style="width: 100%; position: absolute; top: 0; left: 0;">
+                <video loop muted autoplay disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture style="width: 100%; position: absolute; top: 0; left: 0;">
                   <source src="/assets/vidrio/screen_640.mp4" type="video/mp4"/>
                 </video>
-                <video loop muted autoplay disableRemotePlayback style="width: 30%; position: absolute; right: 10px; bottom: 10px;">
+                <video loop muted autoplay disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture style="width: 30%; position: absolute; right: 10px; bottom: 10px;">
                   <source src="/assets/vidrio/webcam_320.mp4" type="video/mp4"/>
                 </video>
               </div>

@@ -28,3 +28,9 @@ Annoyingly, `<video>` features are generally opt-out,
 so as browsers keep inventing new features,
 we have to add more attributes to opt out of them.
 I'll try to keep this page up-to-date!
+
+(Also, I note in passing how this attribute soup uses every possible naming convention:
+`camelCase`, `alllowercase`, and `kebab-case`.
+You just know each of them was decided on
+in 5 minutes by a developer at Google or Apple,
+with no discussion.)

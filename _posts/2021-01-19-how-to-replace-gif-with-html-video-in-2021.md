@@ -8,7 +8,7 @@ All other online guides are out-of-date in 2021!
 Here's the attribute soup you need nowadays:
 
 ```html
-<video autoplay loop muted disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture>
+<video autoplay loop muted playsinline disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture>
   <source src="/assets/yourVideo.webm" type="video/webm" />
   <!-- ... more sources ... -->
 </video>
@@ -19,6 +19,7 @@ Here's what the attributes do to mimic an animated GIF:
 * `autoplay`: start playing the video ASAP, just like an animated GIF plays as it loads.
 * `loop`: restart the video when reaching the end. Optional in GIF but usually on.
 * `muted`: important even if your video has no audio! Browsers will often refuse to `autoplay` unless the video is `muted`.
+* `playsinline`: disable playing the video in "fullscreen".
 * `disableRemotePlayback`: disable Google Cast or AirPlay buttons.
 * `x-webkit-airplay="deny"`: same as `disableRemotePlayback`, but respected by Safari.
 * `disablePictureInPicture`: disable any Picture-in-Picture prompts.

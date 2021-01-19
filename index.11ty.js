@@ -67,7 +67,7 @@ return `
   </head>
   <body style="max-width: 100%;">
     ${navbarHtml}
-    <video autoplay loop muted poster="/assets/jim_512.jpg" class="jim_image" style="width: 192px; padding: 10px; transform: rotate(2deg); margin: 2em auto;">
+    <video autoplay loop muted disableRemotePlayback poster="/assets/jim_512.jpg" class="jim_image" style="width: 192px; padding: 10px; transform: rotate(2deg); margin: 2em auto;">
       <source src="/assets/jim.webm" type="video/webm" />
       <source src="/assets/jim.mp4" type="video/mp4" />
     </video>

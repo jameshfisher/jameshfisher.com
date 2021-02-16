@@ -74,7 +74,7 @@ CGWindowLevelForKey(.maximumWindow) = 2147483631
 
 Note some oddities here:
 
-* `NSWindow.Level.normal` is mostly a subset of `CGWindowLevelKey`.
+* `NSWindow.Level` is mostly a subset of `CGWindowLevelKey`.
   `CGWindowLevelKey` defines some more obscure levels.
 * Many levels are synonyms.
   `NSWindow.Level.floating`, `NSWindow.Level.submenu` and `NSWindow.Level.tornOffMenu`

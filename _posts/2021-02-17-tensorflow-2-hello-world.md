@@ -12,7 +12,7 @@ import tensorflow as tf
 
 NUM_EXAMPLES = 100
 TRUE_DOLLARS_PER_GRAM = 0.1
-weight_grams = tf.cast(tf.linspace(10, 70, NUM_EXAMPLES), tf.float32)
+weight_grams = tf.linspace(10., 70., NUM_EXAMPLES)
 price_dollars = weight_grams*TRUE_DOLLARS_PER_GRAM + tf.random.normal([NUM_EXAMPLES])
 
 model_dollars_per_gram = tf.Variable(5., name='dollars_per_gram')

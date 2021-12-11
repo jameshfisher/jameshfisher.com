@@ -55,7 +55,7 @@ exports.render = function(data) {
     <div id="content">
       <h1>${ author === 'jim' ? '' : 'Guest post: '}${renderTitle(data.title || '')}</h1>
       ${ author === 'jim' ? '' : `<h2>By <a href="${dataPeople[author].url}">${dataPeople[author].name}</a></h2>` }
-      ${ data.external_url ? 
+      ${ data.external_url ?
         `<p>
           <strong>
             <a href="${data.external_url}">
@@ -67,44 +67,6 @@ exports.render = function(data) {
         </p>` : ''
         }
       ${data.content}
-      <div style="background-color: #111; color: white; border-radius: 0.5em; margin-top: 1em;">
-        <div style="padding: 1em;">
-          I just released <a href="https://vidr.io/" style="color: #fd0; font-weight: bold; text-decoration: underline;">Vidrio</a>,
-          a free app for macOS and Windows to make your screen-sharing awesomely holographic.
-          Vidrio shows your webcam video on your screen, just like a mirror.
-          Then you just share or record your screen with Zoom, QuickTime, or any other app.
-          Vidrio makes your presentations effortlessly engaging, showing your gestures, gazes, and expressions.
-          #1 on Product Hunt.
-          Available for macOS and Windows.
-        </div>
-        <div class="maxwidth pad-sides" style="margin-top: 1em;">
-          <!-- <h2>Before/After</h2> -->
-          <div style="text-align: center;">
-            <div style="width: 320px; display: inline-block;">
-              <div style="width: 320px; height: 200px; position: relative;">
-                <video loop muted autoplay playsinline disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture style="width: 100%; position: absolute; top: 0; left: 0;">
-                  <source src="/assets/vidrio/screen_640.mp4" type="video/mp4"/>
-                </video>
-                <video loop muted autoplay playsinline disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0.25;">
-                  <source src="/assets/vidrio/webcam_320.mp4" type="video/mp4"/>
-                </video>
-              </div>
-              <p>With <a href="https://vidr.io/" style="color: #fd0; font-weight: bold; text-decoration: underline;">Vidrio</a></p>
-            </div>
-            <div style="width: 320px; display: inline-block;">
-              <div style="width: 320px; height: 200px; position: relative;">
-                <video loop muted autoplay playsinline disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture style="width: 100%; position: absolute; top: 0; left: 0;">
-                  <source src="/assets/vidrio/screen_640.mp4" type="video/mp4"/>
-                </video>
-                <video loop muted autoplay playsinline disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture style="width: 30%; position: absolute; right: 10px; bottom: 10px;">
-                  <source src="/assets/vidrio/webcam_320.mp4" type="video/mp4"/>
-                </video>
-              </div>
-              <p>With generic competitor</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <h3>More by Jim</h3>
       <p class="posts">
         <ul>

@@ -34,7 +34,7 @@ title: "Jim Fisher's CV"
 ## Skills
 
 * **Full-stack web dev (12+ years exp).**
-  TypeScript, React, SQL, Go/Rails/PHP, plus a bajillion other tools.
+  TypeScript, React, SQL, Go/Rails/PHP, AWS, Puppet, plus a bajillion other tools.
 * **Product management (3+ years exp).**
   Team of 8 on $12M ARR product.
 * **Design and illustration (3+ years exp).**

@@ -88,30 +88,30 @@ Art and Design (B)
 Other courses:
 
 * <span class="details">Apr. </span>2021:
-  [TensorFlow 2 for Deep Learning](https://www.coursera.org/specializations/tensorflow2-deeplearning)
+  [_TensorFlow 2 for Deep Learning_](https://www.coursera.org/specializations/tensorflow2-deeplearning)
   on [Coursera](https://www.coursera.org/).
   <span class="details">
   Consists of
-  [Getting started with TensorFlow 2](https://www.coursera.org/learn/getting-started-with-tensor-flow2)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_getting_started_with_tensorflow_2.pdf)</span>
+  [_Getting started with TensorFlow 2_](https://www.coursera.org/learn/getting-started-with-tensor-flow2)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_getting_started_with_tensorflow_2.pdf)</span>
   and
-  [Customising your models with TensorFlow 2](https://www.coursera.org/learn/customising-models-tensorflow2)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_customizing_your_models_with_tensorflow_2.pdf)</a></span>.
+  [_Customising your models with TensorFlow 2_](https://www.coursera.org/learn/customising-models-tensorflow2)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_customizing_your_models_with_tensorflow_2.pdf)</a></span>.
 * <span class="details">Apr. </span>2021:
-  [Probability Theory, Statistics and Exploratory Data Analysis](https://www.coursera.org/learn/probability-theory-statistics)
-  on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_probability_theory.pdf)</a>
+  [_Probability Theory, Statistics and Exploratory Data Analysis_](https://www.coursera.org/learn/probability-theory-statistics)
+  on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_probability_theory.pdf)</span>.
 * <span class="details">Mar.–Apr. </span>2021:
-  [Mathematics for Machine Learning](https://www.coursera.org/specializations/mathematics-machine-learning)
+  [_Mathematics for Machine Learning_](https://www.coursera.org/specializations/mathematics-machine-learning)
   on [Coursera](https://www.coursera.org/).
   <span class="details">
   Consists of
-  [Linear Algebra](https://www.coursera.org/learn/linear-algebra-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_linear_algebra.pdf)</span>,
-  [Multivariate Calculus](https://www.coursera.org/learn/multivariate-calculus-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_multivariate_calculus.pdf)</span>, and
-  [Principal Components Analysis](https://www.coursera.org/learn/pca-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_pca.pdf)<span>.
+  [_Linear Algebra_](https://www.coursera.org/learn/linear-algebra-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_linear_algebra.pdf)</span>,
+  [_Multivariate Calculus_](https://www.coursera.org/learn/multivariate-calculus-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_multivariate_calculus.pdf)</span>, and
+  [_Principal Components Analysis_](https://www.coursera.org/learn/pca-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_pca.pdf)<span>.
   </span>
 * <span class="details">Jan.–Apr. </span>2013:
-  [Programming Languages](https://www.coursera.org/learn/programming-languages)
+  [_Programming Languages_](https://www.coursera.org/learn/programming-languages)
   on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2013_coursera_proglang.pdf)</span>.
 * <span class="details">Sep.–Dec. </span>2012:
-  [Functional Programming Principles in Scala](https://www.coursera.org/learn/scala-functional-programming)
+  [_Functional Programming Principles in Scala_](https://www.coursera.org/learn/scala-functional-programming)
   on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2012_coursera_scala.pdf)</span>.
 
 ## Experience
@@ -339,8 +339,8 @@ with shelter, health-care, and help in their education and careers.
 <span class="summary">
 Branding for [Pembroke House](https://pembrokehouse.sc.ke/).
 </span>
-Pembroke House is a private Kenyan prep school.
 <span class="details">
+Pembroke House is a private Kenyan prep school.
 As of 2021, they're still using the logo and brand that I designed.
 In the words of their Commercial Director,
 'James has worked with me on new brand designs
@@ -356,8 +356,8 @@ I wouldn't hesitate to use James again for any design projects that I might have
 <span class="summary">
 Award-winning brand and web design for [Harambee Schools Kenya](https://web.archive.org/web/20120723045033/http://www.hsk.org.uk/).
 </span>
-HSK is a charity building schools around Gilgil in rural Kenya.
 <span class="details">
+HSK is a charity building schools around Gilgil in rural Kenya.
 [GWS Media gave the website an award](https://web.archive.org/web/20120628010313/http://onlinemarketing.gwsmedia.com/2010/11/2nd-objective-of-charity-website-design.html),
 commending its 'plain, clear English; striking design, and beautiful images.'
 The new branding and website brought in at least **£53,000 of funding**,

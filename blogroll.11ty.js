@@ -1,7 +1,7 @@
 const blogroll = require('./blogroll.js');
 
 exports.data = {
-  layout: "layouts/default",
+  layout: "layouts/minimal",
   author: "jim",
   title: "Blogroll",
 };

@@ -1,5 +1,5 @@
 ---
-layout: "layouts/default"
+layout: "layouts/minimal"
 author: "jim"
 title: "Jim Fisher's CV"
 ---
@@ -14,7 +14,7 @@ title: "Jim Fisher's CV"
 * Email: [jameshfisher@gmail.com](mailto:jameshfisher@gmail.com)
 * Website: [jameshfisher.com](https://jameshfisher.com)
 
-<div>
+<div class="noprint">
   <form autocomplete>
     <label>
       <input type="checkbox" name="hidedetails" onchange="document.body.classList.toggle('hide-details', this.checked)"/>
@@ -114,7 +114,7 @@ Other courses:
 Stealth start-up;
 details on request.**
 
-**<span class="details">Apr. </span>2020 – <span class="details">Feb </span>2021:
+**<span class="details">Apr. </span>2020 – <span class="details">Feb. </span>2021:
 CEO at [**Vidrio**](https://vidr.io/),
 my own app and company.**
 Vidrio lets you make presentations with a screen recording and webcam.
@@ -148,7 +148,7 @@ and the public representative of the product in many sales opportunities.
 Software Engineer at [Pusher](https://pusher.com/).**
 
 * <span class="details">Mar. </span>2016 - 2018:
-  Engineer on the [**Pusher Channels**](https://pusher.com/channels) team,
+  Engineer on the [Pusher Channels](https://pusher.com/channels) team,
   working on scalability and reliability.
   <span class="details">
   [The system typically delivered 200,000 messages every second](https://making.pusher.com/how-pusher-channels-has-delivered-10000000000000-messages/).
@@ -197,7 +197,7 @@ Software Engineer at [Pusher](https://pusher.com/).**
   organized [Pusher's London meetup](https://www.meetup.com/the-realtime-guild/);
   ran our internal coding bootcamp for Sales and Marketing employees.
 
-**<span class="details">May </span>2014 – <span class="details">Feb </span>2016:
+**<span class="details">May </span>2014 – <span class="details">Feb. </span>2016:
 Software Pilot at [**Trifork**](http://www.trifork.com/).**
 Trifork is an international software consultancy
 and "pilot" is a funny word for consultant.

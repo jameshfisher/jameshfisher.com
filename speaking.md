@@ -1,5 +1,5 @@
 ---
-layout: "layouts/default"
+layout: "layouts/minimal"
 author: "jim"
 title: "Talks"
 ---

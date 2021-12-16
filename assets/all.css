@@ -5,7 +5,21 @@ body { margin: 0 1em; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI"
 * { font-size: 18px; line-height: 1.6em; box-sizing: border-box; }
 hr { border: 1px solid black; }
 
-/* 
+@media print {
+  .noprint {
+    display: none;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  @page {
+    margin: 20mm;
+  }
+}
+
+/*
 These old rules only apply to Rouge. We now use Prism which structures the page differently.
 
 .highlight .n, .highlight .nf, .highlight .nv { text-decoration: underline; }
@@ -26,7 +40,7 @@ code { background: #eee; }
 /*
 These rules are for standard, non-syntax-highlighted code.
 Known deficiency: text overflowing a code block does not have a background color.
-Future fix: wrap code blocks in another wrapper, but this requires some JS/plugin work. 
+Future fix: wrap code blocks in another wrapper, but this requires some JS/plugin work.
 */
 code { background: #eee; }
 #content pre { max-width: none; width: 100%; margin-right: 0; overflow-x: auto; }

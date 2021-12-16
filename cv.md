@@ -33,9 +33,11 @@ title: "Jim Fisher's CV"
 
 ## Skills
 
-* Full-stack web development (12+ years experience)
-* Product management (3+ years experience)
-* Design and illustration (3+ years experience)
+* **Full-stack web dev (12+ years exp).**
+  TypeScript, React, SQL, Go/Rails/PHP, plus a bajillion other tools.
+* **Product management (3+ years exp).**
+  Team of 8 on $12M ARR product.
+* **Design and illustration (3+ years exp).**
 
 ## Education
 
@@ -158,8 +160,10 @@ Software Engineer at [Pusher](https://pusher.com/).
 </span>
 
 * <span class="details">Mar. </span>2016 - 2018:
+  <span class="summary">
   Engineer on the [Pusher Channels](https://pusher.com/channels) team,
   working on scalability and reliability.
+  </span>
   <span class="details">
   [The system typically delivered 200,000 messages every second](https://making.pusher.com/how-pusher-channels-has-delivered-10000000000000-messages/).
   I was on the on-call rota.
@@ -174,8 +178,10 @@ Software Engineer at [Pusher](https://pusher.com/).
   Also maintained several client libraries.
   </span>
 * <span class="details">Mar. – Jun. </span>2016:
+  <span class="summary">
   Adding message history to [Pusher Channels](https://pusher.com/channels)
   using Haskell and Raft.
+  </span>
   <span class="details">
   Channels used [Redis Pub/Sub](https://redis.io/topics/pubsub) as a message bus,
   but this has no message history.
@@ -191,8 +197,10 @@ Software Engineer at [Pusher](https://pusher.com/).
   [QuickCheck](https://en.wikipedia.org/wiki/QuickCheck).
   </span>
 * 2016 - 2017:
+  <span class="summary">
   Engineer on the [Pusher Beams](https://pusher.com/beams) team,
   building the initial product.
+  </span>
   <span class="details">
   Companies use Beams to send push notifications
   to Apple, Android and web clients.
@@ -217,9 +225,36 @@ Trifork is an international software consultancy
 and "pilot" is a funny word for consultant.
 Projects included:
 
+* 2015-16:
+  <span class="summary">
+  Worked with [Container Solutions](https://www.container-solutions.com/)
+  and [Cisco Cloud Services](https://www.cisco.com/c/en_uk/solutions/cloud/index.html)
+  on open-source cloud computing systems.
+  </span>
+  <span class="details">
+  [OpenStack](https://www.openstack.org/) (cloud resource management),
+  [Mesos](https://mesos.apache.org/) (a Kubernetes also-ran),
+  [Mantl](https://github.com/mantl/mantl) and
+  [DC/OS](https://dcos.io/) (layers on top of Mesos).
+  Worked on official Mesos integrations, including
+  [ElasticSearch for Mesos](https://github.com/mesos/elasticsearch) and
+  [Logstash for Mesos](https://github.com/mesos/logstash).
+  </span>
+* 2015:
+  <span class="summary">
+  Built a recommender system at large global bookmaker.
+  </span>
+  <span class="details">
+  For example, if you bet on Tottenham,
+  perhaps you'll want to bet against Arsenal.
+  Key tech:
+  [Neo4j](https://neo4j.com/).
+  </span>
 * 2014:
+  <span class="summary">
   Rebuilt the account system at a large global bookmaker,
   solving its scalability problems.
+  </span>
   <span class="details">
   Account activity at a bookmaker is extremely spiky:
   think of betting during the Grand National!
@@ -231,19 +266,7 @@ Projects included:
   [Puppet](https://puppet.com/).
   The system integrated with [CAS](https://www.apereo.org/projects/cas) for authentication.
   </span>
-* 2015-16:
-  Worked with [Container Solutions](https://www.container-solutions.com/)
-  and [Cisco Cloud Services](https://www.cisco.com/c/en_uk/solutions/cloud/index.html)
-  on open-source cloud computing systems.
-  <span class="details">
-  [OpenStack](https://www.openstack.org/) (cloud resource management),
-  [Mesos](https://mesos.apache.org/) (a Kubernetes also-ran),
-  [Mantl](https://github.com/mantl/mantl) and
-  [DC/OS](https://dcos.io/) (layers on top of Mesos).
-  Worked on official Mesos integrations, including
-  [ElasticSearch for Mesos](https://github.com/mesos/elasticsearch) and
-  [Logstash for Mesos](https://github.com/mesos/logstash).
-  </span>
+
 
 <span class="details">Jan. – May </span>2014:
 <span class="summary">

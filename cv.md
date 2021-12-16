@@ -76,36 +76,27 @@ Other courses:
   on [Coursera](https://www.coursera.org/).
   <span class="details">
   Consists of
-  [Getting started with TensorFlow 2](https://www.coursera.org/learn/getting-started-with-tensor-flow2)
-  [(certificate)](/assets/certificates/2021_coursera_getting_started_with_tensorflow_2.pdf)
+  [Getting started with TensorFlow 2](https://www.coursera.org/learn/getting-started-with-tensor-flow2)<span class="noprint">[(certificate)](/assets/certificates/2021_coursera_getting_started_with_tensorflow_2.pdf)</span>
   and
-  [Customising your models with TensorFlow 2](https://www.coursera.org/learn/customising-models-tensorflow2)
-  [(certificate)](/assets/certificates/2021_coursera_customizing_your_models_with_tensorflow_2.pdf).
-  </span>
+  [Customising your models with TensorFlow 2](https://www.coursera.org/learn/customising-models-tensorflow2)<span class="noprint">[(certificate)](/assets/certificates/2021_coursera_customizing_your_models_with_tensorflow_2.pdf)</a></span>.
 * <span class="details">Apr. </span>2021:
   [Probability Theory, Statistics and Exploratory Data Analysis](https://www.coursera.org/learn/probability-theory-statistics)
-  on [Coursera](https://www.coursera.org/)
-  [(certificate)](/assets/certificates/2021_coursera_probability_theory.pdf).
+  on [Coursera](https://www.coursera.org/)<span class="noprint">[(certificate)](/assets/certificates/2021_coursera_probability_theory.pdf)</a>
 * <span class="details">Mar.–Apr. </span>2021:
   [Mathematics for Machine Learning](https://www.coursera.org/specializations/mathematics-machine-learning)
   on [Coursera](https://www.coursera.org/).
   <span class="details">
   Consists of
-  [Linear Algebra](https://www.coursera.org/learn/linear-algebra-machine-learning)
-  [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_linear_algebra.pdf),
-  [Multivariate Calculus](https://www.coursera.org/learn/multivariate-calculus-machine-learning)
-  [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_multivariate_calculus.pdf), and
-  [Principal Components Analysis](https://www.coursera.org/learn/pca-machine-learning)
-  [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_pca.pdf).
+  [Linear Algebra](https://www.coursera.org/learn/linear-algebra-machine-learning)<span class="noprint">[(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_linear_algebra.pdf)</span>,
+  [Multivariate Calculus](https://www.coursera.org/learn/multivariate-calculus-machine-learning)<span class="noprint">[(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_multivariate_calculus.pdf)</span>, and
+  [Principal Components Analysis](https://www.coursera.org/learn/pca-machine-learning)<span class="noprint">[(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_pca.pdf)<span>.
   </span>
 * <span class="details">Jan.–Apr. </span>2013:
   [Programming Languages](https://www.coursera.org/learn/programming-languages)
-  on [Coursera](https://www.coursera.org/)
-  [(certificate)](/assets/certificates/2013_coursera_proglang.pdf).
+  on [Coursera](https://www.coursera.org/)<span class="noprint">[(certificate)](/assets/certificates/2013_coursera_proglang.pdf)</span>.
 * <span class="details">Sep.–Dec. </span>2012:
   [Functional Programming Principles in Scala](https://www.coursera.org/learn/scala-functional-programming)
-  on [Coursera](https://www.coursera.org/)
-  [(certificate)](/assets/certificates/2012_coursera_scala.pdf).
+  on [Coursera](https://www.coursera.org/)<span class="noprint">[(certificate)](/assets/certificates/2012_coursera_scala.pdf)</span>.
 
 ## EXPERIENCE
 

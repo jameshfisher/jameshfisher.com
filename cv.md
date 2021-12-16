@@ -5,8 +5,16 @@ title: "Jim Fisher's CV"
 ---
 
 <style>
+  .summary {
+    font-weight: bold;
+  }
+
   .hide-details .details {
     display: none;
+  }
+
+  .hide-details .summary {
+    font-weight: normal;
   }
 </style>
 
@@ -23,18 +31,20 @@ title: "Jim Fisher's CV"
   </form>
 </div>
 
-## SKILLS
+## Skills
 
 * Full-stack web development (12+ years experience)
 * Product management (3+ years experience)
 * Design and illustration (3+ years experience)
 
-## EDUCATION
+## Education
 
-**2010–12:
+2010–12:
+<span class="summary">
 M.Sc. with distinction
 in [Computing Science](https://www.imperial.ac.uk/study/pg/computing/computing/)
-at [Imperial College](https://www.imperial.ac.uk/).**
+at [Imperial College](https://www.imperial.ac.uk/).
+</span>
 <span class="details">
 In my individual project,
 ['Verifying a balanced-tree index implementation in VeriFast'](https://jameshfisher.github.io/presentation/pres.html),
@@ -44,16 +54,20 @@ then proved key properties of it using [VeriFast](https://people.cs.kuleuven.be/
 and [separation logic](https://en.wikipedia.org/wiki/Separation_logic).
 </span>
 
-**2006–9:
+2006–9:
+<span class="summary">
 B.A. with first-class honors
 in [History](https://www.york.ac.uk/history/undergraduate/)
-at the [**University of York**](https://www.york.ac.uk/).**
+at the [University of York](https://www.york.ac.uk/).
+</span>
 <span class="details">
 My dissertation was about robots.
 </span>
 
-**2004–6:
-Six A-levels.**
+2004–6:
+<span class="summary">
+Six A-levels.
+</span>
 <span class="details">
 At [Colchester Royal Grammar School](https://www.crgs.co.uk/).
 History (A),
@@ -98,15 +112,19 @@ Other courses:
   [Functional Programming Principles in Scala](https://www.coursera.org/learn/scala-functional-programming)
   on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2012_coursera_scala.pdf)</span>.
 
-## EXPERIENCE
+## Experience
 
-**2021 – current:
-Stealth start-up;
-details on request.**
+2021 – current:
+<span class="summary">
+Stealth start-up.
+</span>
+Details on request.
 
-**<span class="details">Apr. </span>2020 – <span class="details">Feb. </span>2021:
-CEO at [**Vidrio**](https://vidr.io/),
-my own app and company.**
+<span class="details">Apr. </span>2020 – <span class="details">Feb. </span>2021:
+<span class="summary">
+CEO at [Vidrio](https://vidr.io/),
+my own app and company.
+</span>
 Vidrio lets you make presentations with a screen recording and webcam.
 Grew the company from $0 revenue to a maximum of $1600/month.
 <span class="details">
@@ -119,14 +137,14 @@ Key tech:
 [WebGL](https://en.wikipedia.org/wiki/WebGL).
 </span>
 
-**<span class="details">Jun. </span>2018 – <span class="details">Apr. </span>2020:
+<span class="details">Jun. </span>2018 – <span class="details">Apr. </span>2020:
 Technical Product Manager for [Pusher Channels](https://pusher.com/channels)
-at [**Pusher**](https://pusher.com/).**
+at [Pusher](https://pusher.com/).
 Companies use Pusher Channels to add realtime features to their apps
-(e.g. chat messages, or stock ticker updates, or New York Times live election coverage).
+(e.g. chat messages, or New York Times live election night charts).
 I moved into product management
 to help grow the product.
-During my time we grew revenue from ~$8M ARR to ~$12M ARR.
+During my time we grew from ~$8M ARR to ~$12M ARR.
 <span class="details">
 We had very limited resources and this was
 an exercise in growing a product without adding new features.
@@ -134,8 +152,10 @@ I was the key link between Engineering, Sales and Marketing,
 and the public representative of the product in many sales opportunities.
 </span>
 
-**<span class="details">Mar. </span>2016 – <span class="details">Jun. </span>2018:
-Software Engineer at [Pusher](https://pusher.com/).**
+<span class="details">Mar. </span>2016 – <span class="details">Jun. </span>2018:
+<span class="summary">
+Software Engineer at [Pusher](https://pusher.com/).
+</span>
 
 * <span class="details">Mar. </span>2016 - 2018:
   Engineer on the [Pusher Channels](https://pusher.com/channels) team,
@@ -157,41 +177,45 @@ Software Engineer at [Pusher](https://pusher.com/).**
   Adding message history to [Pusher Channels](https://pusher.com/channels)
   using Haskell and Raft.
   <span class="details">
-  Channels used [Redis Pub/Sub](https://redis.io/topics/pubsub) as an internal message bus,
-  but this has no reliable message history.
-  Pusher had built a replacement message bus
-  that used a custom [Raft](https://raft.github.io/) implementation for consistency and availability.
+  Channels used [Redis Pub/Sub](https://redis.io/topics/pubsub) as a message bus,
+  but this has no message history.
+  Pusher had built a replacement
+  using [Raft](https://raft.github.io/) implementation for consistency and availability.
   This was written in [Haskell](https://www.haskell.org/).
   I researched high latencies in the system,
   [finding that the root cause was garbage collection in GHC](https://making.pusher.com/latency-working-set-ghc-gc-pick-two/).
-  This finding went surprisingly viral,
+  This finding went surprisingly viral
   and also sort of killed the whole project.
   Key tech:
   [Haskell (GHC)](https://www.haskell.org/),
   [QuickCheck](https://en.wikipedia.org/wiki/QuickCheck).
   </span>
 * 2016 - 2017:
-  Building [Pusher Beams](https://pusher.com/beams).
+  Engineer on the [Pusher Beams](https://pusher.com/beams) team,
+  building the initial product.
+  <span class="details">
   Companies use Beams to send push notifications
   to Apple, Android and web clients.
-  <span class="details">
   Key tech:
   [Go](https://go.dev/),
   [Postgres](https://www.postgresql.org/).
   Also built several client libraries.
   </span>
 * Public representation of Pusher:
-  gave [several talks at conferences](/speaking);
+  gave [talks at conferences](/speaking);
   maintained [Pusher's engineering blog](https://making.pusher.com/)
-  and wrote several posts;
-  organized [Pusher's London meetup](https://www.meetup.com/the-realtime-guild/);
-  ran our internal coding bootcamp for Sales and Marketing employees.
+  and wrote posts;
+  organized [Pusher's meetup](https://www.meetup.com/the-realtime-guild/);
+  ran our coding bootcamp for Sales and Marketing employees.
 
-**<span class="details">May </span>2014 – <span class="details">Feb. </span>2016:
-Software Pilot at [**Trifork**](http://www.trifork.com/).**
+<span class="details">May </span>2014 – <span class="details">Feb. </span>2016:
+<span class="summary">
+Software Pilot at [Trifork](http://www.trifork.com/),
+consulting with many global clients.
+</span>
 Trifork is an international software consultancy
 and "pilot" is a funny word for consultant.
-I worked with many clients, including:
+Projects included:
 
 * 2014:
   Rebuilt the account system at a large global bookmaker,
@@ -210,7 +234,8 @@ I worked with many clients, including:
 * 2015-16:
   Worked with [Container Solutions](https://www.container-solutions.com/)
   and [Cisco Cloud Services](https://www.cisco.com/c/en_uk/solutions/cloud/index.html)
-  on several open-source cloud systems:
+  on open-source cloud computing systems.
+  <span class="details">
   [OpenStack](https://www.openstack.org/) (cloud resource management),
   [Mesos](https://mesos.apache.org/) (a Kubernetes also-ran),
   [Mantl](https://github.com/mantl/mantl) and
@@ -218,11 +243,14 @@ I worked with many clients, including:
   Worked on official Mesos integrations, including
   [ElasticSearch for Mesos](https://github.com/mesos/elasticsearch) and
   [Logstash for Mesos](https://github.com/mesos/logstash).
+  </span>
 
-**<span class="details">Jan. – May </span>2014:
-Software Engineer at [**Arqiva WiFi**](https://web.archive.org/web/20140326072920/http://arqivawifi.com/internet-access-wireless-services-providers/).**
-Arqiva provided white-label public WiFi (e.g. the free public WiFi at Heathrow airport).
+<span class="details">Jan. – May </span>2014:
+<span class="summary">
+Software Engineer at [Arqiva WiFi](https://web.archive.org/web/20140326072920/http://arqivawifi.com/internet-access-wireless-services-providers/).
+</span>
 <span class="details">
+Arqiva provided white-label public WiFi (e.g. the free public WiFi at Heathrow airport).
 Our team rebuilt the 'captive portal'
 (that annoying login page you see when you connect to free public WiFi).
 I created the feature that gave you free public WiFi access
@@ -236,14 +264,16 @@ Key tech:
 [MySQL](https://en.wikipedia.org/wiki/MySQL).
 </span>
 
-**<span class="details">May </span>2012 – <span class="details">Sep </span>2013:
-Software Developer at [YUDU Media](https://www.yudu.com/).**
+<span class="details">May </span>2012 – <span class="details">Sep </span>2013:
+<span class="summary">
+Software Developer at [YUDU Media](https://www.yudu.com/),
+leading a team of four.
+</span>
+<span class="details">
 Traditional publishers use YUDU to create online facsimiles of their magazines and books
 (think: PDF reader on steroids with cool "page turn" animations).
-I was the lead in a team of four developers
-working alongside a team at [Softwire](https://www.softwire.com/),
+I worked alongside the team at [Softwire](https://www.softwire.com/),
 a software consultancy.
-<span class="details">
 I worked in product management, design, development, and maintenance.
 I maintained the two front-ends,
 a [Flash](https://en.wikipedia.org/wiki/Adobe_Flash) version for the web,
@@ -258,10 +288,12 @@ Key tech:
 [Bootstrap](https://getbootstrap.com/).
 </span>
 
-**2006 – 2014:
-Director and Secretary of [Lexden Montessori](https://web.archive.org/web/20210306074024/https://lexdenmontessori.com/),
-a nursery in Colchester.**
+2006 – 2014:
+<span class="summary">
+Director and Secretary of [Lexden Montessori](https://web.archive.org/web/20210306074024/https://lexdenmontessori.com/).
+</span>
 <span class="details">
+Lexden Montessori was a nursery in Colchester.
 I started the nursery with my mum in 2006.
 I worked in business planning,
 market research and advertising,
@@ -270,17 +302,21 @@ and web design and maintenance for [lexdenmontessori.com](https://web.archive.or
 including an online fee calculator.
 </span>
 
-**2012 – 2013:
+2012 – 2013:
+<span class="summary">
 Branding, marketing consultancy, and web design
-for [The Gilgil Trust](https://web.archive.org/web/20130602133801/http://www.gilgiltrust.org.uk/whatwedo.php).**
+for [The Gilgil Trust](https://web.archive.org/web/20130602133801/http://www.gilgiltrust.org.uk/whatwedo.php).
+</span>
 <span class="details">
 The Gilgil Trust provided young people around the town of Gilgil in Kenya
 with shelter, health-care, and help in their education and careers.
 </span>
 
-**2010:
-Branding for [**Pembroke House**](https://pembrokehouse.sc.ke/),
-a private Kenyan prep school.**
+2010:
+<span class="summary">
+Branding for [Pembroke House](https://pembrokehouse.sc.ke/).
+</span>
+Pembroke House is a private Kenyan prep school.
 <span class="details">
 As of 2021, they're still using the logo and brand that I designed.
 In the words of their Commercial Director,
@@ -293,9 +329,11 @@ but also for getting under the skin of the organisation he is designing for.
 I wouldn't hesitate to use James again for any design projects that I might have.'
 </span>
 
-**2010:
-Award-winning brand and web design for [**Harambee Schools Kenya**](https://web.archive.org/web/20120723045033/http://www.hsk.org.uk/),
-a charity building schools around Gilgil in rural Kenya.**
+2010:
+<span class="summary">
+Award-winning brand and web design for [Harambee Schools Kenya](https://web.archive.org/web/20120723045033/http://www.hsk.org.uk/).
+</span>
+HSK is a charity building schools around Gilgil in rural Kenya.
 <span class="details">
 [GWS Media gave the website an award](https://web.archive.org/web/20120628010313/http://onlinemarketing.gwsmedia.com/2010/11/2nd-objective-of-charity-website-design.html),
 commending its 'plain, clear English; striking design, and beautiful images.'
@@ -304,8 +342,10 @@ including from UBM (the global media and comms giant)
 and [HSBC](https://www.hsbc.co.uk/), who made HSK their official corporate charity after finding the website.
 </span>
 
-**2009:
-Software Developer at [Caring Homes](https://www.caringhomes.org/).**
+2009:
+<span class="summary">
+Software Developer at [Caring Homes](https://www.caringhomes.org/).
+</span>
 <span class="details">
 Caring Homes is a large UK group of care homes.
 Developed an internal system

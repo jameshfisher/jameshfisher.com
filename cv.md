@@ -25,8 +25,7 @@ title: "Jim Fisher's CV"
 
 ## SKILLS
 
-* Software engineering (12+ years experience)
-* Full-stack web development (10+ years experience)
+* Full-stack web development (12+ years experience)
 * Product management (3+ years experience)
 * Design and illustration (3+ years experience)
 

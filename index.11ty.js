@@ -73,7 +73,8 @@ return `
     </video>
     <p>
       <a href="https://www.dailymail.co.uk/sciencetech/article-6973463/Google-Chrome-hit-new-phishing-scam-uses-fake-address-bar-steal-passwords.html" target="_blank">As seen in the Daily Mail!</a>
-      I'm the developer of <a href="https://vidr.io">Vidrio</a>, the future of presentation.
+      I'm the developer of <a href="https://tigyog.app">TigYog</a>
+      and <a href="https://vidr.io">Vidrio</a>.
       Also find me on <a href="https://github.com/jameshfisher">GitHub</a>,
       <a href="https://stackoverflow.com/users/229792/jameshfisher">Stack Overflow</a>,
       <a href="https://www.linkedin.com/in/jameshfisher/">LinkedIn</a>,

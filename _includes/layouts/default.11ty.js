@@ -23,6 +23,36 @@ exports.render = function(data) {
         }
       ${data.content}
       <div class="noprint">
+        <a href="https://tigyog.app" target="_blank" style="color: #1f2547;">
+          <div style="background-color: #f8f9fc; border: 2px solid #dbdff0; border-radius: 0.5em; margin-top: 1em; padding: 1em;">
+            <img src="/assets/tigyog/icon.svg" style="width: 5em; float: right; margin-left: 1em;"/>
+            <div>
+              I just released <strong>TigYog</strong>:
+              interactive tutorials on coding, math, crypto, science!
+              Learn from wizards, or write your own quizzes!
+              What&rsquo;s your bag?
+            </div>
+            <div style="padding-top: 1em;">
+              <a target="_blank" href="https://tigyog.app/lessons/wtvuar2v9way/r/the-one-time-pad"><button class="tigyog-button">Coding</button></a>
+              <a target="_blank" href="https://tigyog.app/lessons/d1aswpgezqw6/r/the-quadratic-formula-a-tutorial"><button class="tigyog-button">Math</button></a>
+            </div>
+            <div style="clear: both"></div>
+          </div>
+        </a>
+        <style>
+          .tigyog-button {
+            border: 2px solid #dbdff0;
+            padding: 8px 16px;
+            border-bottom-width: 4px;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            transition: border-color 0.2s ease-in-out;
+          }
+          .tigyog-button:hover {
+            border-color: #9fa8d6;
+          }
+        </style>
         <h3>More by Jim</h3>
         <p class="posts">
           <ul>

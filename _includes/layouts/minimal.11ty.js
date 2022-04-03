@@ -46,6 +46,11 @@ exports.render = function(data) {
     <title>${data.title}</title>
   </head>
   <body>
+    <a style="display: block; clear: both; margin: 1em 0" href="https://en.wikipedia.org/wiki/War_crimes_in_the_2022_Russian_invasion_of_Ukraine" target="_blank">
+      <div style="background-color: yellow; border: 2px solid cornflowerblue; padding: 0.5em; font-weight: bold;">
+        Learn more about Russian war crimes in Ukraine.
+      </div>
+    </a>
     <div class="noprint">
       <a href="/" style="display: block; transform: rotate(-5deg); margin: 0 2em 0 -1.6em; float: left;">
         <video autoplay loop muted playsinline disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture poster="/assets/jim_512.jpg" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;">

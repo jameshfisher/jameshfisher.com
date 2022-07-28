@@ -2,5 +2,5 @@
 
 ```
 npm install
-npm run build  # or npx eleventy --serve
+npm run build  # or npm run serve
 ```

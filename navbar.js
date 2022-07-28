@@ -7,7 +7,7 @@ module.exports = `<style>
     <div class="navbar-item"><a href="/">Jim Fisher</a></div>
     <div class="navbar-item">
       <a href="https://tigyog.app">
-        <img src="/assets/tigyog/icon-64.svg" style="width: 1em; position: relative; top: 0.1em;" />
+        <img src="/assets/tigyog/icon-192.png" style="width: 1em; position: relative; top: 0.1em;" />
         TigYog
       </a>
     </div>

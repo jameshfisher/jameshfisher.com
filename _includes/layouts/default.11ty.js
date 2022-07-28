@@ -25,7 +25,7 @@ exports.render = function(data) {
       <div class="noprint">
         <a href="https://tigyog.app" target="_blank" style="color: #1f2547;">
           <div style="background-color: #f8f9fc; border: 2px solid #dbdff0; border-radius: 0.5em; margin-top: 1em; padding: 1em;">
-            <img src="/assets/tigyog/icon.svg" style="width: 5em; float: right; margin-left: 1em;"/>
+            <img src="/assets/tigyog/icon-192.png" style="width: 5em; float: right; margin-left: 1em;"/>
             <div>
               I just released <strong>TigYog</strong>:
               interactive tutorials on coding, math, crypto, science!

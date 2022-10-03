@@ -35,7 +35,7 @@ Or again, the point `[2,3]`
 is modelled by all points that pass through the straight line going through `[0,0,0]` and `[2,3,1]` (the laser line).
 Or again more formally,
 the two-dimensional point `[2,3]`
-is modelled by all three-dimensional points `[2/w, 3/w, w]`.
+is modelled by all three-dimensional points `[2w, 3w, w]`.
 
 We can _translate_ the two-dimensional drawing on the `w=1` plane
 by skewing space.

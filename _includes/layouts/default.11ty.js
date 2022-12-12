@@ -36,7 +36,7 @@ exports.render = function (data) {
           };
           console.log("window.discountCodes initialized! 🎉");
         </script>
-        <a href="https://tigyog.app/d/C:tWWwvJDWlo/r/busy-beavers" target="_blank">
+        <a href="https://busy-beavers.tigyog.app/" target="_blank">
           <div class="course">
             <p>
               What can computers do?
@@ -47,11 +47,11 @@ exports.render = function (data) {
               You and I will take a practical and modern approach to answering these questions — or at least learning why some questions are unanswerable!
             </p>
             <p>
-              It’s only $9, and you can get <strong>50% off</strong> if you find the discount code ... <span class="secret">Not quite. Hackers use the console!</span>
+              It’s only $19, and you can get <strong>50% off</strong> if you find the discount code ... <span class="secret">Not quite. Hackers use the console!</span>
             </p>
           </div>
         </a>
-        <a href="https://tigyog.app/d/C-I1weB9CpTH/r/everyday-data-science" target="_blank">
+        <a href="https://everyday-data-science.tigyog.app/" target="_blank">
           <div class="course">
             <p>
               After months of secret toil, 

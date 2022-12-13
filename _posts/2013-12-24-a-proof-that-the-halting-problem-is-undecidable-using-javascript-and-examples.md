@@ -19,6 +19,10 @@ we can consider programs as JavaScript function calls,
 and ask whether it is possible to write a JavaScript function which will tell us
 whether a function call will ever return.
 
+***(2022 update: I'm writing [an interactive course](https://busy-beavers.tigyog.app/) on this subject!
+[Here's the chapter on the Halting problem.](https://busy-beavers.tigyog.app/the-halting-problem)
+You can get 50% off with the hidden code below ...)***
+
 Programs, modelled as JavaScript function calls,
 consist of a JavaScript anonymous function and a list of arguments in parentheses.
 Anonymous functions look like `(function (x, y) { return x + y == 3; })`,

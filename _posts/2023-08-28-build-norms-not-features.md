@@ -8,7 +8,7 @@ You're selling social _norms_.
 In this post, I analyze LessWrong as a great example of product design,
 carefully designed to build strong social norms.
 
-[LessWrong](https://www.lesswrong.com/) a forum with various features.
+[LessWrong](https://www.lesswrong.com/) is a forum with various features.
 But the developers don't see themselves as building social _features_ in a _product_.
 Instead, they're building social [_norms_](https://en.wikipedia.org/wiki/Social_norm) in a _community_.
 Social norms are shared expectations of how to work together.

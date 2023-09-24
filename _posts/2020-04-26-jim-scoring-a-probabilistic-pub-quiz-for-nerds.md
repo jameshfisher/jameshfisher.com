@@ -1,6 +1,6 @@
 ---
 title: "A probabilistic pub quiz for nerds"
-tags: ["mathematics", "betting", "fave"]
+tags: ["mathematics", "betting", "fave", "uncertainty"]
 ---
 
 The typical pub quiz has a "true or false" round.

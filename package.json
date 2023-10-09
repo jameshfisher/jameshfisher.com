@@ -11,7 +11,7 @@
     "date-fns": "^2.30.0",
     "html-entities": "^1.4.0",
     "hyperlink": "^4.6.0",
-    "markdown-it": "^12.3.2",
+    "markdown-it": "^13.0.2",
     "striptags": "^3.2.0"
   }
 }

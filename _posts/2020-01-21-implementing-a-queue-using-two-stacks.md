@@ -45,5 +45,5 @@ which will give you logarithmic-time `dequeue` and `enqueue`.
 Regardless, here's an implementation in Haskell:
 
 ```haskell
-{% include ctci/3_5.hs %}
+{% include "ctci/3_5.hs" %}
 ```

@@ -16,7 +16,7 @@ into a given programming language.
 Here it is in Haskell:
 
 ```haskell
-{% include ctci/4_1_naive.hs %}
+{% include "ctci/4_1_naive.hs" %}
 ```
 
 This naive translation gives an `O(n*log(n))` algorithm,
@@ -28,7 +28,7 @@ by passing up a `height` from the recursive calls.
 This gives us an `O(n)` algorithm:
 
 ```haskell
-{% include ctci/4_1.hs %}
+{% include "ctci/4_1.hs" %}
 ```
 
 How did I work out that the naive algorithm is `O(n*log(n))`?

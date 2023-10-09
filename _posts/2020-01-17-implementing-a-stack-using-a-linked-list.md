@@ -14,5 +14,5 @@ The head of the list represents the top of the stack.
 Here's an implementation in C:
 
 ```c
-{% include ctci/3_stack.c %}
+{% include "ctci/3_stack.c" %}
 ```

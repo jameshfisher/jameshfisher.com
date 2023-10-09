@@ -26,5 +26,5 @@ because it holds a pointer to the new front of the list.
 Here's an implementation in C:
 
 ```c
-{% include ctci/3_queue.c %}
+{% include "ctci/3_queue.c" %}
 ```

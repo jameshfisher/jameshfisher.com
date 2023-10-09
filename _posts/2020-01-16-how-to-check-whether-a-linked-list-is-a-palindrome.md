@@ -44,12 +44,12 @@ and leave it as we found it.
 I found it helpful to first write an implementation in Haskell:
 
 ```haskell
-{% include ctci/2_7.hs %}
+{% include "ctci/2_7.hs" %}
 ```
 
 I then wrote an implementation in C,
 which follows the same algorithm:
 
 ```c
-{% include ctci/2_7.c %}
+{% include "ctci/2_7.c" %}
 ```

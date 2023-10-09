@@ -18,7 +18,7 @@ then the full string is unique.
 Here's a solution in C:
 
 ```c
-{% include ctci/1_1.c %}
+{% include "ctci/1_1.c" %}
 ```
 
 CTCI argues that this algorithm is `O(n^2)`

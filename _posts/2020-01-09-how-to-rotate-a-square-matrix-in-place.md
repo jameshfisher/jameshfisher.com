@@ -49,7 +49,7 @@ and our procedure doesn't touch it at all.
 Here's my solution in C:
 
 ```c
-{% include ctci/1_6.c %}
+{% include "ctci/1_6.c" %}
 ```
 
 This runs in `O(n^2)`,

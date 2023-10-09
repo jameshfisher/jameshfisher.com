@@ -31,5 +31,5 @@ which is optimal.
 Here's an implementation in C:
 
 ```c
-{% include ctci/2_4.c %}
+{% include "ctci/2_4.c" %}
 ```

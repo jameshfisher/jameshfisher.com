@@ -29,5 +29,5 @@ Then the trailing pointer is _k_ nodes from the end!
 Here's an implementation in C:
 
 ```c
-{% include ctci/2_2.c %}
+{% include "ctci/2_2.c" %}
 ```

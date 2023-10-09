@@ -30,7 +30,7 @@ which returns the length of the string that `sprintf` _would have_ printed
 if given a real string to print to.
 
 ```c
-{% include ctci/1_5.c %}
+{% include "ctci/1_5.c" %}
 ```
 
 This implementation is constant-time in the length of the input,

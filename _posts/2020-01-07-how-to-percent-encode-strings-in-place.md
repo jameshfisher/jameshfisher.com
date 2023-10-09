@@ -31,7 +31,7 @@ Then in a second pass, we work from there backwards.
 Here's a solution in C.
 
 ```c
-{% include ctci/1_4.c %}
+{% include "ctci/1_4.c" %}
 ```
 
 This runs in linear time,

@@ -34,7 +34,7 @@ alongside the value.
 Here's an implementation in C:
 
 ```c
-{% include ctci/3_2.c %}
+{% include "ctci/3_2.c" %}
 ```
 
 A cleverer implementation recognizes that the `min` doesn't change often,
@@ -48,7 +48,7 @@ you increment the counter.
 Again, here's an implementation in C:
 
 ```c
-{% include ctci/3_2_rle.c %}
+{% include "ctci/3_2_rle.c" %}
 ```
 
 The book has a different optimization method.

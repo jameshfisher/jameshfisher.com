@@ -27,5 +27,5 @@ then finally move those (N-1) disk from the spare tower to the target tower.
 Here's a solution in Haskell:
 
 ```hs
-{% include ctci/3_4.hs %}
+{% include "ctci/3_4.hs" %}
 ```

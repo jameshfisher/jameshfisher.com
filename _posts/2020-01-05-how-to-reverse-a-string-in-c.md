@@ -19,6 +19,6 @@ is zero or one characters long
 Here's a solution in C:
 
 ```c
-{% include ctci/1_2.c %}
+{% include "ctci/1_2.c" %}
 ```
 

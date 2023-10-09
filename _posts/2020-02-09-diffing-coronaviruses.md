@@ -26,7 +26,7 @@ in a total genome of only ~29800 bases.
 That `genome_diff` script looks like this:
 
 ```bash
-{% include ncov/genome_diff %}
+{% include "ncov/genome_diff" %}
 ```
 
 This script works by fetching the genome from [the NCBI database](https://www.ncbi.nlm.nih.gov/).

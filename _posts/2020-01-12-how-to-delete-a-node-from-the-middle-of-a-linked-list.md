@@ -94,5 +94,5 @@ a ---> b ---> d             e
 Here's an implementation in C:
 
 ```c
-{% include ctci/2_3.c %}
+{% include "ctci/2_3.c" %}
 ```

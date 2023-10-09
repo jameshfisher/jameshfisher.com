@@ -11,7 +11,7 @@ Question 2.1 of _Cracking the Coding Interview_:
 Here's a solution in C:
 
 ```c
-{% include ctci/2_1.c %}
+{% include "ctci/2_1.c" %}
 ```
 
 This is `O(n^2)`.

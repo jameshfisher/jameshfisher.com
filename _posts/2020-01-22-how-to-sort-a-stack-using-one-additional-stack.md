@@ -34,5 +34,5 @@ the list is sorted.
 Here's an implementation in Haskell:
 
 ```haskell
-{% include ctci/3_6.hs %}
+{% include "ctci/3_6.hs" %}
 ```

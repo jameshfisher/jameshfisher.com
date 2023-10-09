@@ -28,11 +28,11 @@ we return `NULL`.
 Here's an implementation in C:
 
 ```c
-{% include ctci/2_7_2.c %}
+{% include "ctci/2_7_2.c" %}
 ```
 
 Here's a similar implementation in Haskell:
 
 ```haskell
-{% include ctci/2_7_2.hs %}
+{% include "ctci/2_7_2.hs" %}
 ```

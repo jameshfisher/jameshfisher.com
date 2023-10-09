@@ -30,7 +30,7 @@ and the `explored` set is all the reachable nodes.
 Here's an implementation in Haskell:
 
 ```haskell
-{% include ctci/4_2.hs %}
+{% include "ctci/4_2.hs" %}
 ```
 
 One optimization could be to stop as soon as we find `n2` while exploring.

@@ -12,7 +12,7 @@ The second stack will accumulate a reversed list of items.
 Here's an implementation in C:
 
 ```c
-{% include ctci/2_7_1.c %}
+{% include "ctci/2_7_1.c" %}
 ```
 
 And here's a version that does the pointer manipulation directly,

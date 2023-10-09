@@ -19,7 +19,7 @@ It represents the character distribution as an `int[255]`,
 where `distrib[c]` gives the count of the character `c`.
 
 ```c
-{% include ctci/1_3.c %}
+{% include "ctci/1_3.c" %}
 ```
 
 This runs in `O(len(a)+len(b))` and uses constant memory.

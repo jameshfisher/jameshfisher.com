@@ -1,29 +1,28 @@
-const { format } = require('date-fns');
+const { format } = require("date-fns");
 const striptags = require("striptags");
 
-const renderTitle = require('../../renderTitle.js');
-const navbarHtml = require('../../navbar.js');
+const renderTitle = require("../../renderTitle.js");
+const navbarHtml = require("../../navbar.js");
 
-const dataPeople = require('../../_data/people.js');
+const dataPeople = require("../../_data/people.js");
 
-exports.data = {
-};
+exports.data = {};
 
 function excerpt(content) {
   const paraMatches = content.match(/<p.*?<\/p>/s);
-  if (paraMatches === null) return '';
-  return striptags(paraMatches[0]).replace(/\n/g, ' ').trim();
+  if (paraMatches === null) return "";
+  return striptags(paraMatches[0]).replace(/\n/g, " ").trim();
 }
 
-exports.render = function(data) {
-  const siteUrl = 'https://jameshfisher.com'; // FIXME site.url from jekyll _config.yml
+exports.render = function (data) {
+  const siteUrl = "https://jameshfisher.com"; // FIXME site.url from jekyll _config.yml
   const canonical = `https://jameshfisher.com${this.page.url}`;
 
   // We don't use eleventy's 'excerpt' feature because it requires us to insert an explicit separator in the .md source.
   // I want the excerpt to just be the first paragraph, which is how it behaved in Jekyll.
   const plaintextExcerpt = excerpt(data.content);
 
-  const author = data.author || 'jim';
+  const author = data.author || "jim";
 
   return `<!doctype html>
 <html lang="en">
@@ -31,10 +30,12 @@ exports.render = function(data) {
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="white"/>
-    <meta name="keywords" content="${(data.tags || []).join(', ')}"/>
+    <meta name="keywords" content="${(data.tags || []).join(", ")}"/>
     <meta property="og:title" content="${data.title}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="${siteUrl}${ data.ogimage || '/assets/jim_512.jpg' }"/>
+    <meta property="og:image" content="${siteUrl}${
+      data.ogimage || "/assets/jim_512.jpg"
+    }"/>
     <meta property="og:url" content="${canonical}"/>
     <meta property="og:description" content="${plaintextExcerpt}"/>
     <meta property="og:site_name" content="jameshfisher.com"/>
@@ -55,8 +56,14 @@ exports.render = function(data) {
       </a>
     </div>
     <div id="content">
-      <h1>${ author === 'jim' ? '' : 'Guest post: '}${renderTitle(data.title || '')}</h1>
-      ${ author === 'jim' ? '' : `<h2>By <a href="${dataPeople[author].url}">${dataPeople[author].name}</a></h2>` }
+      <h1>${author === "jim" ? "" : "Guest post: "}${renderTitle(
+        data.title || "",
+      )}</h1>
+      ${
+        author === "jim"
+          ? ""
+          : `<h2>By <a href="${dataPeople[author].url}">${dataPeople[author].name}</a></h2>`
+      }
       ${data.content}
       ${navbarHtml}
     </div>

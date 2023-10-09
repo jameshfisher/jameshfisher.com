@@ -1,4 +1,4 @@
-const blogroll = require('./blogroll.js');
+const blogroll = require("./blogroll.js");
 
 exports.data = {
   layout: "layouts/minimal",
@@ -6,7 +6,7 @@ exports.data = {
   title: "Blogroll",
 };
 
-exports.render = function(data) {
+exports.render = function (data) {
   return `<p>
   This blogroll is also available as <a href="/blogroll.xml">an OPML file</a>,
   which is accepted by many RSS readers.
@@ -21,11 +21,15 @@ exports.render = function(data) {
     </tr>
   </thead>
   <tbody>
-    ${ blogroll.map(blog => `<tr>
-    <td><a href="${ blog.htmlUrl }">${ blog.title }</a></td>
-    <td>${ blog.xmlUrl ? `<a href="${ blog.xmlUrl }">Here</a>` : 'Nope' }</td>
-    <td>${ blog.author }</td>
-  </tr>`).join('\n') }
+    ${blogroll
+      .map(
+        (blog) => `<tr>
+    <td><a href="${blog.htmlUrl}">${blog.title}</a></td>
+    <td>${blog.xmlUrl ? `<a href="${blog.xmlUrl}">Here</a>` : "Nope"}</td>
+    <td>${blog.author}</td>
+  </tr>`,
+      )
+      .join("\n")}
   </tbody>
 </table>
 `;

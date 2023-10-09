@@ -1,23 +1,25 @@
-const renderTitle = require('./renderTitle.js');
+const renderTitle = require("./renderTitle.js");
 
-const navbarHtml = require('./navbar.js');
+const navbarHtml = require("./navbar.js");
 
 exports.data = {
   pagination: {
     data: "collections",
     size: "1",
     alias: "tag",
-    filter: ['posts', 'all'],
+    filter: ["posts", "all"],
   },
-  permalink: function (data) { return `/tag/${data.tag}/`; }
+  permalink: function (data) {
+    return `/tag/${data.tag}/`;
+  },
 };
 
-exports.render = function(data) {
+exports.render = function (data) {
   const collection = data.collections[data.tag];
 
   const title = `Tag: ${data.tag}`;
 
-  const siteUrl = 'https://jameshfisher.com'; // FIXME site.url from jekyll _config.yml
+  const siteUrl = "https://jameshfisher.com"; // FIXME site.url from jekyll _config.yml
   const canonical = `https://jameshfisher.com${this.page.url}`;
 
   return `<!doctype html>
@@ -28,7 +30,9 @@ exports.render = function(data) {
     <meta name="theme-color" content="white"/>
     <meta property="og:title" content="${title}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="${siteUrl}${ data.ogimage || '/assets/jim_512.jpg' }"/>
+    <meta property="og:image" content="${siteUrl}${
+      data.ogimage || "/assets/jim_512.jpg"
+    }"/>
     <meta property="og:url" content="${canonical}"/>
     <meta property="og:site_name" content="jameshfisher.com"/>
     <link rel="canonical" href="${canonical}"/>
@@ -48,7 +52,14 @@ exports.render = function(data) {
     <div id="content">
       <h1>Tag: #${data.tag}</h1>
       <ul>
-        ${ collection.map(post => `<li><a href="${post.data.external_url || post.url}">${renderTitle(post.data.title || '')}</a></li>`).join('\n') }
+        ${collection
+          .map(
+            (post) =>
+              `<li><a href="${
+                post.data.external_url || post.url
+              }">${renderTitle(post.data.title || "")}</a></li>`,
+          )
+          .join("\n")}
       </ul>
       <p>
         All content copyright James Fisher.

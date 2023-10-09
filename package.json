@@ -4,7 +4,8 @@
   "scripts": {
     "build": "eleventy",
     "test": "hyperlink --recursive --internal --root _site --canonicalroot https://jameshfisher.com _site/index.html",
-    "serve": "eleventy --serve"
+    "serve": "eleventy --serve",
+    "format": "prettier --write \"./**/*.11ty.js\""
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
@@ -12,6 +13,7 @@
     "html-entities": "^1.4.0",
     "hyperlink": "^4.6.0",
     "markdown-it": "^13.0.2",
+    "prettier": "3.0.3",
     "striptags": "^3.2.0"
   }
 }

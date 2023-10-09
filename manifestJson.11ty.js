@@ -1,5 +1,5 @@
 exports.data = {
-  permalink: "manifest.json"
+  permalink: "manifest.json",
 };
 
 exports.render = (data) => `{

@@ -1,39 +1,50 @@
-const { format } = require('date-fns');
-const renderTitle = require('./renderTitle.js');
+const { format } = require("date-fns");
+const renderTitle = require("./renderTitle.js");
 
-const navbarHtml = require('./navbar.js');
+const navbarHtml = require("./navbar.js");
 
-const dataPeople = require('./_data/people.js');
+const dataPeople = require("./_data/people.js");
 
-exports.render = function(data) {
+exports.render = function (data) {
   function renderPost(post) {
-    return `<a class="post" href="${ post.data.external_url ? post.data.external_url : post.url }"${ post.data.external_url ? ' target="_blank"' : '' }>
-      ${ post.data.author !== 'jim' ? `Guest post by ${dataPeople[post.data.author].name}: ` : '' }${renderTitle(post.data.title || '')}
-      ${ post.data.external_url ? `<img src="/assets/Icon_External_Link.svg" alt="external link" />` : ''}
-      <span class="date">(${format(post.date, 'yyyy-MM-dd')})</span>
+    return `<a class="post" href="${
+      post.data.external_url ? post.data.external_url : post.url
+    }"${post.data.external_url ? ' target="_blank"' : ""}>
+      ${
+        post.data.author !== "jim"
+          ? `Guest post by ${dataPeople[post.data.author].name}: `
+          : ""
+      }${renderTitle(post.data.title || "")}
+      ${
+        post.data.external_url
+          ? `<img src="/assets/Icon_External_Link.svg" alt="external link" />`
+          : ""
+      }
+      <span class="date">(${format(post.date, "yyyy-MM-dd")})</span>
     </a>`;
   }
 
   function renderDayPosts(col, dayPosts) {
-    const weekdayNames = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-    return dayPosts.length === 0 ? `<div class="day day_no_posts">${weekdayNames[col]}</div>`
-      : `<div class="day day_posts">${ dayPosts.map(renderPost).join('') }</div>`;
+    const weekdayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    return dayPosts.length === 0
+      ? `<div class="day day_no_posts">${weekdayNames[col]}</div>`
+      : `<div class="day day_posts">${dayPosts.map(renderPost).join("")}</div>`;
   }
 
   function renderWeekPosts(weekPosts) {
     const days = [[], [], [], [], [], [], []];
-    for (const post of weekPosts) days[parseInt(format(post.date, 'i'))-1].push(post);
-    return `<div class="calendar_week">${
-      days.map((day, i) => [day, i]) // Show all posts in reverse date order, for mobile/list view
+    for (const post of weekPosts)
+      days[parseInt(format(post.date, "i")) - 1].push(post);
+    return `<div class="calendar_week">${days
+      .map((day, i) => [day, i]) // Show all posts in reverse date order, for mobile/list view
       .reverse()
       .map(([day, i]) => renderDayPosts(i, day))
-      .join('')
-    }</div>`;
+      .join("")}</div>`;
   }
 
   const postsByWeek = new Map();
-  for (const post of data.collections.posts.filter(post => !post.draft)) {
-    const week = format(post.date, 'RRRR-II');
+  for (const post of data.collections.posts.filter((post) => !post.draft)) {
+    const week = format(post.date, "RRRR-II");
     postsByWeek.set(week, postsByWeek.get(week) || []);
     postsByWeek.get(week).push(post);
   }
@@ -42,7 +53,7 @@ exports.render = function(data) {
   weeksDesc.sort();
   weeksDesc.reverse();
 
-return `
+  return `
 <!doctype html>
 <html lang="en">
   <head>
@@ -94,16 +105,18 @@ return `
     <h3>Favorite posts</h3>
     <div class="calendar">
       <div class="calendar_week">
-        ${
-          data.collections.fave.filter(post => !post.draft).map(post => 
-            `<div class="day day_posts">${ renderPost(post) }</div>`).join('')
-        }
+        ${data.collections.fave
+          .filter((post) => !post.draft)
+          .map((post) => `<div class="day day_posts">${renderPost(post)}</div>`)
+          .join("")}
       </div>
     </div>
 
     <h3>All posts</h3>
     <div class="calendar">
-      ${ weeksDesc.map(week => renderWeekPosts(postsByWeek.get(week))).join('') }
+      ${weeksDesc
+        .map((week) => renderWeekPosts(postsByWeek.get(week)))
+        .join("")}
     </div>
 
     <script>
@@ -119,4 +132,4 @@ return `
   </body>
 </html>
 `;
-}
+};

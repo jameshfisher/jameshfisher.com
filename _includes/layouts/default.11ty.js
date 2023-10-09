@@ -33,7 +33,7 @@ exports.render = function (data) {
                 (post) =>
                   `<li><a class="post" href="${
                     post.external_url || post.url
-                  }">${renderTitle(post.data.title)}</a></li>`
+                  }">${renderTitle(post.data.title)}</a></li>`,
               )
               .join("")}
           </ul>
@@ -47,7 +47,7 @@ exports.render = function (data) {
           author === "jim"
             ? `All content copyright James Fisher ${format(
                 data.page.date,
-                "yyyy"
+                "yyyy",
               )}.
            This post is not associated with my employer.`
             : ""
@@ -56,7 +56,7 @@ exports.render = function (data) {
           <a href="${
             new URL(
               data.page.inputPath,
-              "https://github.com/jameshfisher/jameshfisher.com/edit/master/"
+              "https://github.com/jameshfisher/jameshfisher.com/edit/master/",
             ).href
           }">Found an error? Edit this page.</a>
         </span>

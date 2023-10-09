@@ -56,6 +56,8 @@ int main(void) {
 
 This error now lives at the unique URL:
 
-    https://github.com/jameshfisher/sometool/wiki/errors/EXIT_FAILURE_CABLETRELLIS
+```
+https://github.com/jameshfisher/sometool/wiki/errors/EXIT_FAILURE_CABLETRELLIS
+```
 
 This idea shamelessly copied from https://rauchg.com/2016/addressable-errors

@@ -5,38 +5,38 @@ draft: true
 
 There is a standard history of computing which runs like this:
 
-    The devices we own - laptops, phones - are all computers.
-    These devices can do many things, but their core strength is _computation_.
-    Not so long ago, "computers" were people, and they computed things for you.
-    They began to use tools to aid them, like the abacus.
-    In the 19th century, Babbage created the difference and analytical engines.
-    In the 1890s, Hollerith made punched cards and worked out how to sort them electronically.
-    In the 1930s/40s, we got two theoretical models of computing: the Turing machine and the lambda calculus.
-    The mid-20th century saw the first computers with components like today's, e.g. the 1946 ENIAC.
-    Since then, computers have become a _lot_ smaller, and now they fit in your hand!
-    Today, most people have several computers,
-    and they are linked together by many kinds of network, allowing their users to communicate.
+> The devices we own - laptops, phones - are all computers.
+> These devices can do many things, but their core strength is _computation_.
+> Not so long ago, "computers" were people, and they computed things for you.
+> They began to use tools to aid them, like the abacus.
+> In the 19th century, Babbage created the difference and analytical engines.
+> In the 1890s, Hollerith made punched cards and worked out how to sort them electronically.
+> In the 1930s/40s, we got two theoretical models of computing: the Turing machine and the lambda calculus.
+> The mid-20th century saw the first computers with components like today's, e.g. the 1946 ENIAC.
+> Since then, computers have become a _lot_ smaller, and now they fit in your hand!
+> Today, most people have several computers,
+> and they are linked together by many kinds of network, allowing their users to communicate.
 
 I think this history has the wrong emphasis. 
 An alternative history runs like this:
 
-    The devices we all own - laptops, phones - are all communicators.
-    They can do many things, but their core strength is _communication_.
-    Not so long ago, communicators were people, and they delivered messages for you.
-    They began to use tools to aid them.
-    Telegraph, telegram, telephone.
-    Early telegraphy required a human to receive the messages. Later receivers got printers.
-    Early telephone systems required human switchboard operators; the caller would describe the recipient.
-    Automatic switchboards in the early 20th century introduced more sophisticated switchboards and telephones with dialers.
-    Automatic switchboards became electronic around 1950/60. These were stored-program controllers.
-    Radio, television.
-    In the 1870s, the telephone was invented.
-    Electronic communicators were extremely important in WWII (the most famous being the Enigma).
-    In 1948, Shannon formalized "information", as a way to understand modern communication.
-    Mobile phone 1973.
-    Internet, 1970s+.
-    In the 1970s, communication was secured by cryptography.
-    Today's communicators can also do powerful calculation.
+> The devices we all own - laptops, phones - are all communicators.
+> They can do many things, but their core strength is _communication_.
+> Not so long ago, communicators were people, and they delivered messages for you.
+> They began to use tools to aid them.
+> Telegraph, telegram, telephone.
+> Early telegraphy required a human to receive the messages. Later receivers got printers.
+> Early telephone systems required human switchboard operators; the caller would describe the recipient.
+> Automatic switchboards in the early 20th century introduced more sophisticated switchboards and telephones with dialers.
+> Automatic switchboards became electronic around 1950/60. These were stored-program controllers.
+> Radio, television.
+> In the 1870s, the telephone was invented.
+> Electronic communicators were extremely important in WWII (the most famous being the Enigma).
+> In 1948, Shannon formalized "information", as a way to understand modern communication.
+> Mobile phone 1973.
+> Internet, 1970s+.
+> In the 1970s, communication was secured by cryptography.
+> Today's communicators can also do powerful calculation.
 
 These devices have at least two (interconnected) abilities: 
 computation (rearrangement of data) and communication (movement of data). 

@@ -46,7 +46,7 @@ Future fix: wrap code blocks in another wrapper, but this requires some JS/plugi
 */
 code { background: #eee; }
 #content pre { max-width: none; width: 100%; margin-right: 0; overflow-x: auto; }
-#content pre > code { display: block; max-width: 50em; margin: 0 auto; }
+#content pre > code { display: block; max-width: 50em; margin: 0 auto; overflow: auto; padding: 1rem; border-radius: 0.5rem; }
 
 td, th { text-align: left; padding-right: 1em; vertical-align: top; }
 a:link, a:visited { text-decoration: none; }

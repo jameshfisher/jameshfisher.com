@@ -6,9 +6,15 @@ module.exports = `<style>
   <div class="navbar">
     <div class="navbar-item"><a href="/">Jim Fisher</a></div>
     <div class="navbar-item">
-      <a href="https://tigyog.app">
+      <a href="https://tigyog.app" target="_blank">
         <img src="/assets/tigyog/icon-192.png" style="width: 1em; position: relative; top: 0.1em;" />
         TigYog
+      </a>
+    </div>
+    <div class="navbar-item">
+      <a href="https://kickabout.club" target="_blank">
+        <img src="/assets/kickabout/icon-192.png" style="width: 1em; position: relative; top: 0.1em;" />
+        Kickabout
       </a>
     </div>
     <div class="navbar-item"><a href="/speaking">Speaking</a></div>

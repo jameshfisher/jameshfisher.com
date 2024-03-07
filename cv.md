@@ -116,6 +116,22 @@ Other courses:
 
 ## Experience
 
+<span class="details">Feb </span>2023 – current:
+<span class="summary">
+Senior engineer at [Slite](https://slite.com/).
+Slite lets employees document their knowledge, and search all company knowledge across Slack, Google Drive, etc.
+</span>
+
+<div class="details">
+
+* **Built [Slite Labs](https://www.linkedin.com/posts/christophepasquier_introducing-slite-labs-for-years-activity-7141337040926756864-SMSw/)**, which lets users try out experimental product improvements. Quickly adopted internally.
+* **Built Slite's internal A/B test framework.** Assigns users to groups by hash; otherwise re-uses existing product analytics.
+* Helped build **[Slite Ask](https://slite.com/ask)**, which is like Google Search for your company wiki, Slack, task-tracker etc. I built the iteration loop for improving answer quality: a set of test cases, with one-click reporting to add a bad answer to our test set, all graded using [promptfoo](https://github.com/promptfoo/promptfoo) and manually written rubrics. I used this to reduce hallucination and improve citation accuracy.
+* Built **[AI Improve](https://slite.slite.page/p/JHQ7KXTnDXHdZQ)**, an editor feature that lets you improve your writing. I framed AI Improve as automating [_How People Read Online_](https://www.nngroup.com/articles/how-people-read-online/), a famous guide on to how to optimize web content for scanning. Uses GPT-4, a few prompting tricks, and operational transforms.
+* Built [Magic document formatter](https://slite.com/micro-apps/document-formatter/), a public variant of "AI Improve" which builds upon [Slite's free public templates](https://slite.com/templates).
+
+</div>
+
 2021 – current:
 <span class="summary">
 Stealth start-up.
@@ -124,7 +140,7 @@ Details on request.
 
 <span class="details">Apr. </span>2020 – <span class="details">Feb. </span>2021:
 <span class="summary">
-CEO at [Vidrio](https://vidr.io/),
+CEO at [Vidrio](https://vidrio.netlify.app/),
 my own app and company.
 </span>
 Vidrio lets you make presentations with a screen recording and webcam.

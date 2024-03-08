@@ -26,18 +26,16 @@ exports.render = function (data) {
       ${data.content}
       <div class="noprint">
         <h3>More by Jim</h3>
-        <p class="posts">
-          <ul>
-            ${data.collections.fave
-              .map(
-                (post) =>
-                  `<li><a class="post" href="${
-                    post.external_url || post.url
-                  }">${renderTitle(post.data.title)}</a></li>`,
-              )
-              .join("")}
-          </ul>
-        </p>
+        <div class="posts">
+          ${data.collections.fave
+            .map(
+              (post) =>
+                `<a class="post" href="${
+                  post.external_url || post.url
+                }">${renderTitle(post.data.title)}</a>`,
+            )
+            .join("")}
+        </div>
       </div>
       <p>
         Tagged ${(data.tags || [])

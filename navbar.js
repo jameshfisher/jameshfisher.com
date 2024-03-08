@@ -1,5 +1,5 @@
 module.exports = `<style>
-.navbar { display: flex; margin: 1em 0; }
+.navbar { display: flex; flex-wrap: wrap; gap: 0.5em 1em; margin: 1em 0; }
 .navbar .navbar-item { flex-grow: 1; text-align: center; }
 </style>
 <div class="noprint">

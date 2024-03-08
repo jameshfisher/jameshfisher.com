@@ -107,11 +107,14 @@ th {
 
 a:link,
 a:visited {
-  color: #00b;
+  color: #119;
 }
-.no-link-underlines a {
+.no-link-underlines a:link {
   /* Links should look like links. But there are exceptions (like navigation) where context shows it's a link, and underlines become noise. */
   text-decoration: none;
+}
+.no-link-underlines a:hover {
+  text-decoration: underline;
 }
 
 .date {
@@ -186,4 +189,14 @@ ul {
 }
 .navbar .navbar-item {
   text-align: center;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1em;
+}
+.posts .post {
+  display: block;
+  padding: 0.2em 0;
 }

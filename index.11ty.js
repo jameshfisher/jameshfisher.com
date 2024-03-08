@@ -20,38 +20,9 @@ exports.render = function (data) {
           ? `<img src="/assets/Icon_External_Link.svg" alt="external link" />`
           : ""
       }
-      <span class="date">(${format(post.date, "yyyy-MM-dd")})</span>
+      <span class="date">${format(post.date, "yyyy-MM-dd")}</span>
     </a>`;
   }
-
-  function renderDayPosts(col, dayPosts) {
-    const weekdayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-    return dayPosts.length === 0
-      ? `<div class="day day_no_posts">${weekdayNames[col]}</div>`
-      : `<div class="day day_posts">${dayPosts.map(renderPost).join("")}</div>`;
-  }
-
-  function renderWeekPosts(weekPosts) {
-    const days = [[], [], [], [], [], [], []];
-    for (const post of weekPosts)
-      days[parseInt(format(post.date, "i")) - 1].push(post);
-    return `<div class="calendar_week">${days
-      .map((day, i) => [day, i]) // Show all posts in reverse date order, for mobile/list view
-      .reverse()
-      .map(([day, i]) => renderDayPosts(i, day))
-      .join("")}</div>`;
-  }
-
-  const postsByWeek = new Map();
-  for (const post of data.collections.posts.filter((post) => !post.draft)) {
-    const week = format(post.date, "RRRR-II");
-    postsByWeek.set(week, postsByWeek.get(week) || []);
-    postsByWeek.get(week).push(post);
-  }
-
-  const weeksDesc = [...postsByWeek.keys()];
-  weeksDesc.sort();
-  weeksDesc.reverse();
 
   return `
 <!doctype html>
@@ -64,21 +35,6 @@ exports.render = function (data) {
     <link rel="icon" type="image/png" href="/assets/jim_128.png" />
     <link rel="stylesheet" href="/assets/all.css" />
     <title>Jim Fisher</title>
-    <style>
-      .post { display: block; padding: 0.3em; }
-      .post:hover { background-color: antiquewhite; }
-      @media (min-width: 680px) {
-        div.calendar { border: 1px solid #aaa; }
-        div.calendar_week { display: flex; flex-direction: row-reverse; }
-        div.day { flex-grow: 1; border: 1px solid #aaa; display: flex; flex-direction: column; }
-        div.day.day_no_posts { background-color: #f9f9f9; padding: 0.3em 1em; text-align: center; color: #ddd; }
-        .post { flex-grow: 1; border-bottom: 2px solid #aaa; }
-        .post:last-child { border: none; }
-      }
-      @media (max-width: 679.999px) {  /* gross */
-        div.day.day_no_posts { display: none; }
-      }
-    </style>
   </head>
   <body style="max-width: 100%;">
     ${navbarHtml}
@@ -103,19 +59,20 @@ exports.render = function (data) {
     </p>
 
     <h3>Favorite posts</h3>
-    <div class="calendar no-link-underlines">
-      <div class="calendar_week">
-        ${data.collections.fave
-          .filter((post) => !post.draft)
-          .map((post) => `<div class="day day_posts">${renderPost(post)}</div>`)
-          .join("")}
-      </div>
+    <div class="posts no-link-underlines">
+      ${data.collections.fave
+        .reverse()
+        .filter((post) => !post.draft)
+        .map(renderPost)
+        .join("")}
     </div>
 
     <h3>All posts</h3>
-    <div class="calendar no-link-underlines">
-      ${weeksDesc
-        .map((week) => renderWeekPosts(postsByWeek.get(week)))
+    <div class="posts no-link-underlines">
+      ${data.collections.posts
+        .reverse()
+        .filter((post) => !post.draft)
+        .map(renderPost)
         .join("")}
     </div>
 

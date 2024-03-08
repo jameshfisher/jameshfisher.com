@@ -1,7 +1,7 @@
 ---
 layout: "layouts/minimal"
 author: "jim"
-title: "Jim Fisher's CV"
+title: "Jim Fisher – Product Engineer"
 ---
 
 <style>
@@ -31,7 +31,11 @@ title: "Jim Fisher's CV"
   </form>
 </div>
 
-## Skills
+## What you get if you hire me:
+
+**Let's build an amazing product and a profitable business!
+Just give me customer contact and let me iterate.
+I will never replace your old working stuff with interesting new stuff.**
 
 * **Full-stack web dev (12+ years exp).**
   TypeScript, React, SQL, Go/Rails/PHP, AWS, plus a bajillion other tools.
@@ -120,7 +124,7 @@ Other courses:
 <span class="summary">
 Senior engineer at [Slite](https://slite.com/).
 Slite lets employees document their knowledge, and search all company knowledge across Slack, Google Drive, etc.
-I helped build Slite's AI search and writing-improvement features, and maintained their rich text editor.
+I helped build Slite's AI writing and AI search features, maintained their rich text editor, and built several tools for faster product iteration.
 </span>
 
 <div class="details">

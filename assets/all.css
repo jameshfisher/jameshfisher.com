@@ -1,12 +1,48 @@
-body { margin: 0 1em; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-#content { margin: 2em 0; }
-#content > * { max-width: 50em; margin-left: auto; margin-right: auto; }
-#content > canvas, #content > video { display: block; }
-* { font-size: 18px; line-height: 1.6em; box-sizing: border-box; }
-hr { border: 1px solid black; }
+body {
+  margin: 0 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #222;
+}
+#content {
+  margin: 2em 0;
+}
+#content > * {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+#content > canvas,
+#content > video {
+  display: block;
+}
+* {
+  font-size: 18px;
+  line-height: 1.6em;
+  box-sizing: border-box;
+}
+hr {
+  border: 1px solid black;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
 
 @media print {
-  * { font-size: 12pt; }
+  * {
+    font-size: 12pt;
+  }
 
   .noprint {
     display: none;
@@ -44,34 +80,96 @@ These rules are for standard, non-syntax-highlighted code.
 Known deficiency: text overflowing a code block does not have a background color.
 Future fix: wrap code blocks in another wrapper, but this requires some JS/plugin work.
 */
-code { background: #eee; }
-#content pre { max-width: none; width: 100%; margin-right: 0; overflow-x: auto; }
-#content pre > code { display: block; max-width: 50em; margin: 0 auto; }
+code {
+  background: #eee;
+}
+#content pre {
+  max-width: none;
+  width: 100%;
+  margin-right: 0;
+  overflow-x: auto;
+}
+#content pre > code {
+  display: block;
+  max-width: 50em;
+  margin: 0 auto;
+}
 
-td, th { text-align: left; padding-right: 1em; vertical-align: top; }
-a:link, a:visited { text-decoration: none; }
-.date { font-size: 0.7em; }
-.jim_image { display: block; box-shadow: 2px 2px 10px #ccc; }
-blockquote { border-left: 2px solid black; margin-left: 0; padding-left: 1rem; }
-p > img, p > a > img, #content > video { border: 2px solid black; width: 100%; }
+td,
+th {
+  text-align: left;
+  padding-right: 1em;
+  vertical-align: top;
+}
+
+a:link,
+a:visited {
+  color: #00b;
+}
+.no-link-underlines a {
+  /* Links should look like links. But there are exceptions (like navigation) where context shows it's a link, and underlines become noise. */
+  text-decoration: none;
+}
+
+.date {
+  font-size: 0.7em;
+}
+
+.jim_image {
+  display: block;
+  box-shadow: 2px 2px 10px #ccc;
+}
+
+blockquote {
+  border-left: 2px solid black;
+  margin-left: 0;
+  padding-left: 1rem;
+}
+
+p > img,
+p > a > img,
+#content > video {
+  border: 2px solid black;
+  width: 100%;
+}
+
 .answer {
   border-color: #8ec58e;
   padding: 0 0.3rem;
-  border-radius: 3px; border: 2px solid #8585d0;
+  border-radius: 3px;
+  border: 2px solid #8585d0;
 }
 .answer:not(.revealed) {
-  color: rgba(0,0,0,0);
+  color: rgba(0, 0, 0, 0);
   background-image: url(/assets/question-mark.svg);
   cursor: pointer;
 }
 .answer:not(.revealed) * {
   opacity: 0;
 }
+
 .aside {
   float: right;
   max-width: 400px;
   margin: 0 0 0 1em;
 }
-sup, sub { font-size: 0.8em; vertical-align: baseline; position: relative; top: -0.4em; }
-sub { top: 0.4em; }
-small { font-size: smaller; }
+
+sup,
+sub {
+  font-size: 0.8em;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
+}
+
+small {
+  font-size: smaller;
+}
+
+/* Bullet points should have normal bullets, but be flush with the text. */
+ul {
+  padding-inline-start: 16px;
+}

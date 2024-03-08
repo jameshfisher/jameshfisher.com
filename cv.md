@@ -6,7 +6,7 @@ title: "Jim Fisher's CV"
 
 <style>
   .summary {
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .hide-details .details {
@@ -34,9 +34,9 @@ title: "Jim Fisher's CV"
 ## Skills
 
 * **Full-stack web dev (12+ years exp).**
-  TypeScript, React, SQL, Go/Rails/PHP, AWS, Puppet, plus a bajillion other tools.
+  TypeScript, React, SQL, Go/Rails/PHP, AWS, plus a bajillion other tools.
 * **Product management (3+ years exp).**
-  Team of 8 on $12M ARR product.
+  Managed Pusher Channels, a $12M ARR product. Built my own startups.
 * **Design and illustration (3+ years exp).**
 
 ## Education
@@ -82,7 +82,7 @@ Art and Design (B)
 [Grey Friars Community College](https://web.archive.org/web/20070301140932/http://colchesteracc.essexcc.gov.uk/)).</span>
 
 <p class="details">
-  <b>2002–4: Eleven GCSEs at Colchester Royal Grammar School.</b>
+  2002–4: Eleven GCSEs at Colchester Royal Grammar School.
 </p>
 
 Other courses:
@@ -120,23 +120,27 @@ Other courses:
 <span class="summary">
 Senior engineer at [Slite](https://slite.com/).
 Slite lets employees document their knowledge, and search all company knowledge across Slack, Google Drive, etc.
+I helped build Slite's AI search and writing-improvement features, and maintained their rich text editor.
 </span>
 
 <div class="details">
 
+* Helped build **[Slite Ask](https://slite.com/ask)**, which is like Google Search for your company wiki, Slack, task-tracker etc. I built the iteration loop for improving answer quality: a set of test cases, with one-click reporting to add a bad answer to the test set, all graded using [promptfoo](https://github.com/promptfoo/promptfoo) and manually written rubrics. I used this to reduce hallucination and improve citation accuracy.
+* Built **[AI Improve](https://slite.slite.page/p/JHQ7KXTnDXHdZQ)**, an editor feature that lets you improve your writing. I framed AI Improve as automating [_How People Read Online_](https://www.nngroup.com/articles/how-people-read-online/), the authority on optimizing web content for scanning. Uses GPT-4, a few prompting tricks, and operational transforms. Also built **[magic document formatter](https://slite.com/micro-apps/document-formatter/)**, a public variant that builds upon [Slite's free public templates](https://slite.com/templates).
 * **Built [Slite Labs](https://www.linkedin.com/posts/christophepasquier_introducing-slite-labs-for-years-activity-7141337040926756864-SMSw/)**, which lets users try out experimental product improvements. Quickly adopted internally.
-* **Built Slite's internal A/B test framework.** Assigns users to groups by hash; otherwise re-uses existing product analytics.
-* Helped build **[Slite Ask](https://slite.com/ask)**, which is like Google Search for your company wiki, Slack, task-tracker etc. I built the iteration loop for improving answer quality: a set of test cases, with one-click reporting to add a bad answer to our test set, all graded using [promptfoo](https://github.com/promptfoo/promptfoo) and manually written rubrics. I used this to reduce hallucination and improve citation accuracy.
-* Built **[AI Improve](https://slite.slite.page/p/JHQ7KXTnDXHdZQ)**, an editor feature that lets you improve your writing. I framed AI Improve as automating [_How People Read Online_](https://www.nngroup.com/articles/how-people-read-online/), a famous guide on to how to optimize web content for scanning. Uses GPT-4, a few prompting tricks, and operational transforms.
-* Built [Magic document formatter](https://slite.com/micro-apps/document-formatter/), a public variant of "AI Improve" which builds upon [Slite's free public templates](https://slite.com/templates).
+* **Built Slite's internal A/B test framework.** Assigns users to groups by hash; otherwise re-uses existing product analytics tools.
+* Maintained Slite's rich text editor, which uses [Slate](https://docs.slatejs.org/).
 
 </div>
 
 2021 – current:
 <span class="summary">
-Stealth start-up.
+CEO at [TigYog](https://tigyog.app/), my own app and company.
+TigYog lets you write interactive online courses.
 </span>
+<span class="details">
 Details on request.
+</span>
 
 <span class="details">Apr. </span>2020 – <span class="details">Feb. </span>2021:
 <span class="summary">
@@ -156,8 +160,8 @@ Key tech:
 </span>
 
 <span class="details">Jun. </span>2018 – <span class="details">Apr. </span>2020:
-Technical Product Manager for [Pusher Channels](https://pusher.com/channels)
-at [Pusher](https://pusher.com/).
+<span class="summary">Technical Product Manager for [Pusher Channels](https://pusher.com/channels)
+at [Pusher](https://pusher.com/).</span>
 Companies use Pusher Channels to add realtime features to their apps
 (e.g. chat messages, or New York Times live election night charts).
 I moved into product management

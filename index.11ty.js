@@ -103,7 +103,7 @@ exports.render = function (data) {
     </p>
 
     <h3>Favorite posts</h3>
-    <div class="calendar">
+    <div class="calendar no-link-underlines">
       <div class="calendar_week">
         ${data.collections.fave
           .filter((post) => !post.draft)
@@ -113,7 +113,7 @@ exports.render = function (data) {
     </div>
 
     <h3>All posts</h3>
-    <div class="calendar">
+    <div class="calendar no-link-underlines">
       ${weeksDesc
         .map((week) => renderWeekPosts(postsByWeek.get(week)))
         .join("")}

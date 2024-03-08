@@ -3,7 +3,7 @@ module.exports = `<style>
 .navbar .navbar-item { flex-grow: 1; text-align: center; }
 </style>
 <div class="noprint">
-  <div class="navbar">
+  <div class="navbar no-link-underlines">
     <div class="navbar-item"><a href="/">Jim Fisher</a></div>
     <div class="navbar-item">
       <a href="https://tigyog.app" target="_blank">

@@ -1,5 +1,5 @@
 :root {
-  font-size: calc(0.9rem + 0.2vw);
+  font-size: calc(1rem + 0.15vw);
 }
 body {
   margin: 0 1em;
@@ -175,4 +175,15 @@ small {
 /* Bullet points should have normal bullets, but be flush with the text. */
 ul {
   padding-inline-start: 16px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em 1em;
+  margin: 1em 0;
+}
+.navbar .navbar-item {
+  text-align: center;
 }

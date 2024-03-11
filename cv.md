@@ -20,14 +20,12 @@ title: "Jim Fisher – Product Engineer"
 
 **Let's build an amazing product and a profitable business!
 Just give me customer contact and let me iterate.**
-
-I've spent 12+ years in **full-stack web development.**
-TypeScript, React, Postgres, AWS, etc.
-But I'm not fussy, and I'll never replace your old working stuff with "interesting" new stuff.
-
-I've spent 5+ years in **product management.**
-I managed Pusher Channels, a $12M ARR product.
-I've built two startups, [Vidrio](https://vidrio.netlify.app/) and [TigYog](https://tigyog.app/), and grown them to thousands of dollars of revenue.
+I've spent 12+ years in **full-stack dev.**
+TypeScript, React, Postgres, AWS, etc.,
+but I'm not fussy.
+I've spent 5+ years in **product management,**
+including Pusher Channels ($12M ARR),
+and my two startups, [Vidrio](https://vidrio.netlify.app/) and [TigYog](https://tigyog.app/).
 
 * Location: London, UK
 * Email: [jameshfisher@gmail.com](mailto:jameshfisher@gmail.com)

@@ -40,7 +40,6 @@ exports.render = function (data) {
     <meta property="og:site_name" content="jameshfisher.com"/>
     <link rel="canonical" href="${canonical}"/>
     <link rel="icon" type="image/png" href="${siteUrl}/assets/jim_128.png" />
-    <link rel="manifest" href="/manifest.json"/>
     <link rel="alternate" type="application/rss+xml" href="https://jameshfisher.com/feed.xml" />
     <link rel="stylesheet" href="/assets/all.css" />
     <title>${data.title}</title>

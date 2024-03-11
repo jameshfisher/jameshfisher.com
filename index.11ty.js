@@ -42,20 +42,18 @@ exports.render = function (data) {
       <source src="/assets/jim.webm" type="video/webm" />
       <source src="/assets/jim.mp4" type="video/mp4" />
     </video>
-    <p>
-      <a href="https://www.dailymail.co.uk/sciencetech/article-6973463/Google-Chrome-hit-new-phishing-scam-uses-fake-address-bar-steal-passwords.html" target="_blank">As seen in the Daily Mail!</a>
-      I'm the developer of <a href="https://tigyog.app">TigYog</a>
-      and <a href="https://vidr.io">Vidrio</a>.
-      Also find me on <a href="https://github.com/jameshfisher">GitHub</a>,
+
+    <p style="max-width: 40em; margin: 0 auto; font-size: 1.3em; font-weight: 500">
+      👋 I'm Jim, a product engineer.
+      I built <a href="https://tigyog.app">TigYog</a>
+      and <a href="https://vidrio.netlify.app">Vidrio</a>.
+      Find me <a href="https://www.dailymail.co.uk/sciencetech/article-6973463/Google-Chrome-hit-new-phishing-scam-uses-fake-address-bar-steal-passwords.html" target="_blank">in the Daily Mail</a>,
+      or more likely on <a href="https://github.com/jameshfisher">GitHub</a>,
       <a href="https://stackoverflow.com/users/229792/jameshfisher">Stack Overflow</a>,
       <a href="https://www.linkedin.com/in/jameshfisher/">LinkedIn</a>,
       <a href="https://twitter.com/MrJamesFisher">Twitter</a>,
-      <a href="https://www.instagram.com/jameshfisher/">Instagram</a>,
-      <a href="https://keybase.io/jameshfisher">Keybase</a>,
+      or
       <a href="https://www.producthunt.com/@james_fisher2">Product Hunt</a>.
-      Find my old blogs:
-      <a href="https://eegg.wordpress.com/">Wordpress (2010-12)</a>,
-      <a href="https://medium.com/@MrJamesFisher">Medium (2013-15)</a>.
     </p>
 
     <h3>Favorite posts</h3>
@@ -75,6 +73,12 @@ exports.render = function (data) {
         .map(renderPost)
         .join("")}
     </div>
+
+    <h3>Old blogs</h3>
+    <ul>
+      <li><a href="https://medium.com/@MrJamesFisher">Medium (2013-15)</a></li>
+      <li><a href="https://eegg.wordpress.com/">Wordpress (2010-12)</a></li>
+    </ul>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

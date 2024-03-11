@@ -1,5 +1,7 @@
 :root {
   font-size: calc(1rem + 0.1vw);
+  line-height: 1.6;
+  box-sizing: border-box;
 }
 body {
   margin: 0 1em;
@@ -20,9 +22,7 @@ body {
   display: block;
 }
 * {
-  font-size: 1rem;
-  line-height: 1.6em;
-  box-sizing: border-box;
+  font-size: inherit;
 }
 hr {
   border: 1px solid black;

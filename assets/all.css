@@ -1,7 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   font-size: calc(1rem + 0.25vw);
   line-height: 1.6;
-  box-sizing: border-box;
 }
 body {
   margin: 0 1em;

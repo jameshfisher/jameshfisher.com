@@ -36,14 +36,14 @@ exports.render = function (data) {
     <link rel="stylesheet" href="/assets/all.css" />
     <title>Jim Fisher</title>
   </head>
-  <body style="max-width: 100%;">
+  <body>
     ${navbarHtml}
     <video autoplay loop muted playsinline disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture poster="/assets/jim_512.jpg" class="jim_image" style="width: 192px; padding: 10px; transform: rotate(2deg); margin: 2em auto;">
       <source src="/assets/jim.webm" type="video/webm" />
       <source src="/assets/jim.mp4" type="video/mp4" />
     </video>
 
-    <p style="max-width: 40em; margin: 0 auto; font-size: 1.3em; font-weight: 500">
+    <p style="max-width: 40em; margin: 0 auto 2em auto; font-size: 1.3em; font-weight: 500; text-align: center">
       👋 I'm Jim, a product engineer.
       I built <a href="https://tigyog.app">TigYog</a>
       and <a href="https://vidrio.netlify.app">Vidrio</a>.

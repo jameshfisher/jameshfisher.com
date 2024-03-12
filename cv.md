@@ -40,81 +40,6 @@ and my two startups, [Vidrio](https://vidrio.netlify.app/) and [TigYog](https://
   </form>
 </div>
 
-## Education
-
-2010–12:
-<span class="summary">
-M.Sc. with distinction
-in [Computing Science](https://www.imperial.ac.uk/study/pg/computing/computing/)
-at [Imperial College](https://www.imperial.ac.uk/).
-</span>
-<span class="details">
-In my individual project,
-['Verifying a balanced-tree index implementation in VeriFast'](https://jameshfisher.github.io/presentation/pres.html),
-I implemented [left-leaning red-black trees](https://en.wikipedia.org/wiki/Left-leaning_red%E2%80%93black_tree)
-in C,
-then proved key properties of it using [VeriFast](https://people.cs.kuleuven.be/~bart.jacobs/verifast/)
-and [separation logic](https://en.wikipedia.org/wiki/Separation_logic).
-</span>
-
-2006–9:
-<span class="summary">
-B.A. with first-class honors
-in [History](https://www.york.ac.uk/history/undergraduate/)
-at the [University of York](https://www.york.ac.uk/).
-</span>
-<span class="details">
-My dissertation was about robots.
-</span>
-
-2004–6:
-<span class="summary">
-Six A-levels.
-</span>
-<span class="details">
-At [Colchester Royal Grammar School](https://www.crgs.co.uk/).
-History (A),
-Computing (A),
-General Studies (A),
-Physics (B),
-Mathematics (B),
-Art and Design (B)
-(actually this last one was at
-[Grey Friars Community College](https://web.archive.org/web/20070301140932/http://colchesteracc.essexcc.gov.uk/)).</span>
-
-<p class="details">
-  2002–4: Eleven GCSEs at Colchester Royal Grammar School.
-</p>
-
-Other courses:
-
-* <span class="details">Apr. </span>2021:
-  [_TensorFlow 2 for Deep Learning_](https://www.coursera.org/specializations/tensorflow2-deeplearning)
-  on [Coursera](https://www.coursera.org/).
-  <span class="details">
-  Consists of
-  [_Getting started with TensorFlow 2_](https://www.coursera.org/learn/getting-started-with-tensor-flow2)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_getting_started_with_tensorflow_2.pdf)</span>
-  and
-  [_Customising your models with TensorFlow 2_](https://www.coursera.org/learn/customising-models-tensorflow2)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_customizing_your_models_with_tensorflow_2.pdf)</a></span>.
-* <span class="details">Apr. </span>2021:
-  [_Probability Theory, Statistics and Exploratory Data Analysis_](https://www.coursera.org/learn/probability-theory-statistics)
-  on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_probability_theory.pdf)</span>.
-* <span class="details">Mar.–Apr. </span>2021:
-  [_Mathematics for Machine Learning_](https://www.coursera.org/specializations/mathematics-machine-learning)
-  on [Coursera](https://www.coursera.org/).
-  <span class="details">
-  Consists of
-  [_Linear Algebra_](https://www.coursera.org/learn/linear-algebra-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_linear_algebra.pdf)</span>,
-  [_Multivariate Calculus_](https://www.coursera.org/learn/multivariate-calculus-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_multivariate_calculus.pdf)</span>, and
-  [_Principal Components Analysis_](https://www.coursera.org/learn/pca-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_pca.pdf)<span>.
-  </span>
-* <span class="details">Jan.–Apr. </span>2013:
-  [_Programming Languages_](https://www.coursera.org/learn/programming-languages)
-  on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2013_coursera_proglang.pdf)</span>.
-* <span class="details">Sep.–Dec. </span>2012:
-  [_Functional Programming Principles in Scala_](https://www.coursera.org/learn/scala-functional-programming)
-  on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2012_coursera_scala.pdf)</span>.
-
 ## Experience
 
 <span class="details">Feb </span>2023 – current:
@@ -398,3 +323,78 @@ Key tech:
 [Django](https://www.djangoproject.com/)
 and [Postgres](https://www.postgresql.org/).
 </span>
+
+## Education
+
+2010–12:
+<span class="summary">
+M.Sc. with distinction
+in [Computing Science](https://www.imperial.ac.uk/study/pg/computing/computing/)
+at [Imperial College](https://www.imperial.ac.uk/).
+</span>
+<span class="details">
+In my individual project,
+['Verifying a balanced-tree index implementation in VeriFast'](https://jameshfisher.github.io/presentation/pres.html),
+I implemented [left-leaning red-black trees](https://en.wikipedia.org/wiki/Left-leaning_red%E2%80%93black_tree)
+in C,
+then proved key properties of it using [VeriFast](https://people.cs.kuleuven.be/~bart.jacobs/verifast/)
+and [separation logic](https://en.wikipedia.org/wiki/Separation_logic).
+</span>
+
+2006–9:
+<span class="summary">
+B.A. with first-class honors
+in [History](https://www.york.ac.uk/history/undergraduate/)
+at the [University of York](https://www.york.ac.uk/).
+</span>
+<span class="details">
+My dissertation was about robots.
+</span>
+
+2004–6:
+<span class="summary">
+Six A-levels.
+</span>
+<span class="details">
+At [Colchester Royal Grammar School](https://www.crgs.co.uk/).
+History (A),
+Computing (A),
+General Studies (A),
+Physics (B),
+Mathematics (B),
+Art and Design (B)
+(actually this last one was at
+[Grey Friars Community College](https://web.archive.org/web/20070301140932/http://colchesteracc.essexcc.gov.uk/)).</span>
+
+<p class="details">
+  2002–4: Eleven GCSEs at Colchester Royal Grammar School.
+</p>
+
+Other courses:
+
+* <span class="details">Apr. </span>2021:
+  [_TensorFlow 2 for Deep Learning_](https://www.coursera.org/specializations/tensorflow2-deeplearning)
+  on [Coursera](https://www.coursera.org/).
+  <span class="details">
+  Consists of
+  [_Getting started with TensorFlow 2_](https://www.coursera.org/learn/getting-started-with-tensor-flow2)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_getting_started_with_tensorflow_2.pdf)</span>
+  and
+  [_Customising your models with TensorFlow 2_](https://www.coursera.org/learn/customising-models-tensorflow2)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_customizing_your_models_with_tensorflow_2.pdf)</a></span>.
+* <span class="details">Apr. </span>2021:
+  [_Probability Theory, Statistics and Exploratory Data Analysis_](https://www.coursera.org/learn/probability-theory-statistics)
+  on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_probability_theory.pdf)</span>.
+* <span class="details">Mar.–Apr. </span>2021:
+  [_Mathematics for Machine Learning_](https://www.coursera.org/specializations/mathematics-machine-learning)
+  on [Coursera](https://www.coursera.org/).
+  <span class="details">
+  Consists of
+  [_Linear Algebra_](https://www.coursera.org/learn/linear-algebra-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_linear_algebra.pdf)</span>,
+  [_Multivariate Calculus_](https://www.coursera.org/learn/multivariate-calculus-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_multivariate_calculus.pdf)</span>, and
+  [_Principal Components Analysis_](https://www.coursera.org/learn/pca-machine-learning)<span class="noprint"> [(certificate)](/assets/certificates/2021_coursera_mathematics_for_machine_learning_pca.pdf)<span>.
+  </span>
+* <span class="details">Jan.–Apr. </span>2013:
+  [_Programming Languages_](https://www.coursera.org/learn/programming-languages)
+  on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2013_coursera_proglang.pdf)</span>.
+* <span class="details">Sep.–Dec. </span>2012:
+  [_Functional Programming Principles in Scala_](https://www.coursera.org/learn/scala-functional-programming)
+  on [Coursera](https://www.coursera.org/)<span class="noprint"> [(certificate)](/assets/certificates/2012_coursera_scala.pdf)</span>.

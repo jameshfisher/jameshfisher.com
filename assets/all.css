@@ -1,5 +1,5 @@
 :root {
-  font-size: calc(1rem + 0.1vw);
+  font-size: calc(1rem + 0.25vw);
   line-height: 1.6;
   box-sizing: border-box;
 }

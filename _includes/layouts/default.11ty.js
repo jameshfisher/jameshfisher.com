@@ -25,7 +25,7 @@ exports.render = function (data) {
       }
       ${data.content}
       <div class="noprint">
-        <h3>More by Jim</h3>
+        <h3 style="margin-top: 3em;">More by Jim</h3>
         <div class="posts">
           ${data.collections.fave
             .map(

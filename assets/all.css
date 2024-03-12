@@ -104,6 +104,9 @@ th {
   padding-right: 1em;
   vertical-align: top;
 }
+th {
+  font-weight: 600;
+}
 
 a:link,
 a:visited {

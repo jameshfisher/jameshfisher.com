@@ -35,7 +35,7 @@ Instead of defining `font-size` piecewise,
 can't we use one linear function?
 Here's the line I believe they're trying to approximate:
 
-<img src="/assets/2024-03-12/chart.png" style="border: none; max-width: 30em; margin: 0 auto; display: block;" />
+<p><img src="/assets/2024-03-12/chart.png" style="border: none; max-width: 30em; margin: 0 auto; display: block;" /></p>
 
 With modern CSS, we can just write that function!
 It's `calc(1.0625rem + 0.2604vw)`.

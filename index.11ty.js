@@ -35,7 +35,7 @@ export function render(data) {
     <link rel="stylesheet" href="/assets/all.css" />
     <title>Jim Fisher</title>
   </head>
-  <body>
+  <body style="margin: 1em">
     ${navbarHtml}
     <video autoplay loop muted playsinline disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture poster="/assets/jim_512.jpg" class="jim_image" style="width: 192px; padding: 10px; transform: rotate(2deg); margin: 2em auto;">
       <source src="/assets/jim.webm" type="video/webm" />

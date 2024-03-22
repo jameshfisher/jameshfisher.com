@@ -24,31 +24,14 @@ export function render(data) {
       }
       ${data.content}
       <div class="noprint">
-        <a href="https://tigyog.app" target="_blank" style="text-decoration: none; color: #1f2547;">
-          <div style="background: #ffeb57; border-radius: 0.5em; margin-top: 1em; padding: 1em;">
-            <div>
-              👋 I'm Jim, a <strong>full-stack product engineer.</strong>
-              Want to build an <strong>amazing product</strong> and a <strong>profitable business?</strong>
-              <a href="/cv">Read more about me</a> or
-              <strong><a href="mailto:jameshfisher+work@gmail.com?subject=Let%27s%20build%20an%20amazing%20product%21&body=Hey%20Jim%2C%0A%0A">Get in touch!</a></strong>
-            </div>
+        <div style="background: #ffeb57; border-radius: 0.5em; margin-top: 1em; padding: 1em;">
+          <div>
+            👋 I'm Jim, a <strong>full-stack product engineer.</strong>
+            Want to build an <strong>amazing product</strong> and a <strong>profitable business?</strong>
+            <a href="/cv">Read more about me</a> or
+            <strong><a href="mailto:jameshfisher+work@gmail.com?subject=Let%27s%20build%20an%20amazing%20product%21&body=Hey%20Jim%2C%0A%0A">Get in touch!</a></strong>
           </div>
-        </a>
-        <style>
-          .tigyog-button {
-            text-decoration: none;
-            border: 2px solid #dbdff0;
-            padding: 8px 16px;
-            border-bottom-width: 4px;
-            border-radius: 4px;
-            background-color: white;
-            cursor: pointer;
-            transition: border-color 0.2s ease-in-out;
-          }
-          .tigyog-button:hover {
-            border-color: #9fa8d6;
-          }
-        </style>
+        </div>
         <h3 style="margin-top: 3em;">More by Jim</h3>
         <div class="posts">
           ${data.collections.fave

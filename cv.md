@@ -27,6 +27,10 @@ I've spent 5+ years in **product management,**
 including Pusher Channels ($12M ARR),
 and my two startups, [Vidrio](https://vidrio.netlify.app/) and [TigYog](https://tigyog.app/).
 
+<div class="noprint" style="margin: 2em auto;">
+  <a href="mailto:jameshfisher+work@gmail.com?subject=Let%27s%20build%20an%20amazing%20product%21&body=Hey%20Jim%2C%0A%0A" style="text-decoration: none; color: black; padding: 0.5em; border-radius: 0.4em; border: 3px solid black; border-bottom-width: 5px; font-size: 1.2em; font-weight: 600;">Get in touch! 👋</a>
+</div>
+
 * Location: London, UK
 * Email: [jameshfisher@gmail.com](mailto:jameshfisher@gmail.com)
 * Website: [jameshfisher.com](https://jameshfisher.com)

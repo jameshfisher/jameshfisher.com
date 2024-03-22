@@ -12,7 +12,7 @@
     "date-fns": "^3.6.0",
     "html-entities": "^1.4.0",
     "hyperlink": "^5.0.4",
-    "markdown-it": "^13.0.2",
+    "markdown-it": "^14.1.0",
     "prettier": "3.0.3",
     "striptags": "^3.2.0"
   },

@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0-alpha.5",
-    "date-fns": "^2.30.0",
+    "date-fns": "^3.6.0",
     "html-entities": "^1.4.0",
     "hyperlink": "^5.0.4",
     "markdown-it": "^13.0.2",

@@ -8,7 +8,7 @@
     "format": "prettier --write \"./**/*.11ty.js\""
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "date-fns": "^2.30.0",
     "html-entities": "^1.4.0",
     "hyperlink": "^4.6.0",

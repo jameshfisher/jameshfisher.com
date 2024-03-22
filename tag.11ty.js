@@ -20,7 +20,7 @@ export function render(data) {
   const title = `Tag: ${data.tag}`;
 
   const siteUrl = "https://jameshfisher.com"; // FIXME site.url from jekyll _config.yml
-  const canonical = `https://jameshfisher.com${this.page.url}`;
+  const canonical = `https://jameshfisher.com${data.page.url}`;
 
   return `<!doctype html>
 <html lang="en">

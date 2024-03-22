@@ -30,7 +30,7 @@ export function render(data) {
               👋 I'm Jim, a <strong>full-stack product engineer.</strong>
               Want to build an <strong>amazing product</strong> and a <strong>profitable business?</strong>
               <a href="/cv">Read more about me</a> or
-              <strong><a href=href="mailto:jameshfisher+work@gmail.com?subject=Let%27s%20build%20an%20amazing%20product%21&body=Hey%20Jim%2C%0A%0A">Get in touch!</a></strong>
+              <strong><a href="mailto:jameshfisher+work@gmail.com?subject=Let%27s%20build%20an%20amazing%20product%21&body=Hey%20Jim%2C%0A%0A">Get in touch!</a></strong>
             </div>
           </div>
         </a>

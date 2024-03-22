@@ -1,12 +1,11 @@
-const { format } = require("date-fns");
+import { format } from "date-fns";
+import renderTitle from "../../renderTitle.js";
 
-const renderTitle = require("../../renderTitle.js");
-
-exports.data = {
+export const data = {
   layout: "layouts/minimal",
 };
 
-exports.render = function (data) {
+export function render(data) {
   const author = data.author || "jim";
 
   return `
@@ -60,4 +59,4 @@ exports.render = function (data) {
         </span>
       </p>
 `;
-};
+}

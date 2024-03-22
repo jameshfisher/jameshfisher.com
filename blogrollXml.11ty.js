@@ -1,10 +1,10 @@
-const blogroll = require("./blogroll.js");
+import blogroll from "./blogroll.js";
 
-exports.data = {
+export const data = {
   permalink: "blogroll.xml",
 };
 
-exports.render = function (data) {
+export function render(data) {
   return `<?xml version="1.0" encoding="UTF-8"?>
   <opml version="1.0">
       <head>
@@ -20,4 +20,4 @@ exports.render = function (data) {
           .join("\n")}
       </body>
   </opml>`;
-};
+}

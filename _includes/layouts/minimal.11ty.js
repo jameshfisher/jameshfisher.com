@@ -1,12 +1,10 @@
-const striptags = require("striptags");
+import striptags from "striptags";
+import dataPeople from "../../_data/people.js";
+import navbarHtml from "../../navbar.js";
+import renderTitle from "../../renderTitle.js";
+import scriptsHtml from "../../scripts.js";
 
-const renderTitle = require("../../renderTitle.js");
-const navbarHtml = require("../../navbar.js");
-const scriptsHtml = require("../../scripts.js");
-
-const dataPeople = require("../../_data/people.js");
-
-exports.data = {};
+export const data = {};
 
 function excerpt(content) {
   const paraMatches = content.match(/<p.*?<\/p>/s);
@@ -14,7 +12,7 @@ function excerpt(content) {
   return striptags(paraMatches[0]).replace(/\n/g, " ").trim();
 }
 
-exports.render = function (data) {
+export function render(data) {
   const siteUrl = "https://jameshfisher.com"; // FIXME site.url from jekyll _config.yml
   const canonical = `https://jameshfisher.com${this.page.url}`;
 
@@ -70,4 +68,4 @@ exports.render = function (data) {
   </body>
 </html>
 `;
-};
+}

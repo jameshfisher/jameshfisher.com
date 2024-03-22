@@ -1,12 +1,12 @@
-const blogroll = require("./blogroll.js");
+import blogroll from "./blogroll.js";
 
-exports.data = {
+export const data = {
   layout: "layouts/minimal",
   author: "jim",
   title: "Blogroll",
 };
 
-exports.render = function (data) {
+export function render(data) {
   return `<p>
   This blogroll is also available as <a href="/blogroll.xml">an OPML file</a>,
   which is accepted by many RSS readers.
@@ -21,16 +21,14 @@ exports.render = function (data) {
     </tr>
   </thead>
   <tbody>
-    ${blogroll
-      .map(
-        (blog) => `<tr>
+    ${blogroll.map(
+      (blog) => `<tr>
     <td><a href="${blog.htmlUrl}">${blog.title}</a></td>
     <td>${blog.xmlUrl ? `<a href="${blog.xmlUrl}">Here</a>` : "Nope"}</td>
     <td>${blog.author}</td>
   </tr>`,
-      )
-      .join("\n")}
+    ).join("\n")}
   </tbody>
 </table>
 `;
-};
+}

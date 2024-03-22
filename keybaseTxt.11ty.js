@@ -1,10 +1,9 @@
-exports.data = {
+export const data = {
   permalink: "keybase.txt",
 };
 
-exports.render = (
-  data,
-) => `==================================================================
+export function render(data) {
+  return `==================================================================
 https://keybase.io/jameshfisher
 --------------------------------------------------------------------
 
@@ -59,3 +58,4 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/jameshfisher
 
 ==================================================================`;
+}

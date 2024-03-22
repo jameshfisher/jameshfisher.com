@@ -1,11 +1,8 @@
-exports.data = {
+export const data = {
   permalink: "sitemap.xml",
 };
 
-exports.render = function (data) {
-  const allPagesByUrl = [...data.collections.all];
-  allPagesByUrl.sort((p1, p2) => p1.url.localeCompare(p2.url));
-
+export function render(data) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -22,4 +19,4 @@ exports.render = function (data) {
     .join("\n")}
 </urlset>
 `;
-};
+}

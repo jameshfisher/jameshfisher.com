@@ -1,4 +1,4 @@
-module.exports = `<div class="noprint">
+export default `<div class="noprint">
   <div class="navbar no-link-underlines">
     <div class="navbar-item"><a href="/">Jim Fisher</a></div>
     <div class="navbar-item"><a href="/cv" class="cv-link">CV</a></div>

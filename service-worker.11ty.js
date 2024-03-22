@@ -1,8 +1,9 @@
-exports.data = {
+export const data = {
   permalink: "service-worker.js",
 };
 
-exports.render = (data) => `
+export function render(data) {
+  return `
 self.addEventListener("message", (ev) => {
   if (ev.data.method == "ping") {
     ev.source.postMessage("pong");
@@ -33,3 +34,4 @@ self.addEventListener("fetch", (ev) => {
   // This is here to pass Chrome's tests for adding a web app to the home screen.
 });
 `;
+}

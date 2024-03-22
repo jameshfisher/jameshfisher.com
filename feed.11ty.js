@@ -1,13 +1,13 @@
-const Entities = require("html-entities").XmlEntities;
+import { XmlEntities } from "html-entities";
 
-const entities = new Entities();
+const entities = new XmlEntities();
 
-exports.data = {
+export const data = {
   permalink: "feed.xml",
   eleventyExcludeFromCollections: true,
 };
 
-exports.render = function (data) {
+export function render (data) {
   const postsByDateDesc = [...data.collections.posts];
   postsByDateDesc.sort((p1, p2) => p2.date - p1.date);
 
@@ -38,4 +38,4 @@ exports.render = function (data) {
     .join("\n")}
 </feed>
 `;
-};
+}

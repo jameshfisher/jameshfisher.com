@@ -1,12 +1,10 @@
-const { format } = require("date-fns");
-const renderTitle = require("./renderTitle.js");
+import { format } from "date-fns";
+import dataPeople from "./_data/people.js";
+import navbarHtml from "./navbar.js";
+import renderTitle from "./renderTitle.js";
+import scriptsHtml from "./scripts.js";
 
-const navbarHtml = require("./navbar.js");
-const scriptsHtml = require("./scripts.js");
-
-const dataPeople = require("./_data/people.js");
-
-exports.render = function (data) {
+export function render(data) {
   function renderPost(post) {
     return `<a class="post" href="${
       post.data.external_url ? post.data.external_url : post.url
@@ -85,4 +83,4 @@ exports.render = function (data) {
   </body>
 </html>
 `;
-};
+}

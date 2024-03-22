@@ -1,9 +1,8 @@
-const renderTitle = require("./renderTitle.js");
+import navbarHtml from "./navbar.js";
+import renderTitle from "./renderTitle.js";
+import scriptsHtml from "./scripts.js";
 
-const navbarHtml = require("./navbar.js");
-const scriptsHtml = require("./scripts.js");
-
-exports.data = {
+export const data = {
   pagination: {
     data: "collections",
     size: "1",
@@ -15,7 +14,7 @@ exports.data = {
   },
 };
 
-exports.render = function (data) {
+export function render(data) {
   const collection = data.collections[data.tag];
 
   const title = `Tag: ${data.tag}`;
@@ -69,4 +68,4 @@ exports.render = function (data) {
     ${scriptsHtml}
   </body>
 </html>`;
-};
+}

@@ -1,5 +1,7 @@
-exports.data = {
+export const data = {
   permalink: "robots.txt",
 };
 
-exports.render = (data) => "Sitemap: https://jameshfisher.com/sitemap.xml";
+export function render(data) {
+  return "Sitemap: https://jameshfisher.com/sitemap.xml";
+}

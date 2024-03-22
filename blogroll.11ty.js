@@ -21,13 +21,15 @@ export function render(data) {
     </tr>
   </thead>
   <tbody>
-    ${blogroll.map(
-      (blog) => `<tr>
+    ${blogroll
+      .map(
+        (blog) => `<tr>
     <td><a href="${blog.htmlUrl}">${blog.title}</a></td>
     <td>${blog.xmlUrl ? `<a href="${blog.xmlUrl}">Here</a>` : "Nope"}</td>
     <td>${blog.author}</td>
   </tr>`,
-    ).join("\n")}
+      )
+      .join("\n")}
   </tbody>
 </table>
 `;

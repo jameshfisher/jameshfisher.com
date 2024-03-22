@@ -13,7 +13,7 @@
     "html-entities": "^1.4.0",
     "hyperlink": "^5.0.4",
     "markdown-it": "^14.1.0",
-    "prettier": "3.0.3",
+    "prettier": "^3.2.5",
     "striptags": "^3.2.0"
   },
   "type": "module"

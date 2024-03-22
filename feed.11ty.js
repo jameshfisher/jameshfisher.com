@@ -7,7 +7,7 @@ export const data = {
   eleventyExcludeFromCollections: true,
 };
 
-export function render (data) {
+export function render(data) {
   const postsByDateDesc = [...data.collections.posts];
   postsByDateDesc.sort((p1, p2) => p2.date - p1.date);
 

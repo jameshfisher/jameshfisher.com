@@ -3,13 +3,13 @@
 }
 
 :root {
+  font-family: system-ui, sans-serif;
+  color: #222;
   font-size: calc(1rem + 0.25vw);
   line-height: 1.6;
 }
 body {
   margin: 0 1em;
-  font-family: system-ui, sans-serif;
-  color: #222;
 }
 #content {
   margin: 2em 0;

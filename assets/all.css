@@ -87,7 +87,7 @@ Known deficiency: text overflowing a code block does not have a background color
 Future fix: wrap code blocks in another wrapper, but this requires some JS/plugin work.
 */
 code {
-  background: #eee;
+  background: #f5f5f5;
 }
 #content pre {
   max-width: none;

@@ -3,6 +3,9 @@ export const data = {
 };
 
 export function render(data) {
+  const allPagesByUrl = [...data.collections.all];
+  allPagesByUrl.sort((p1, p2) => p1.url.localeCompare(p2.url));
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

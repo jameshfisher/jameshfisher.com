@@ -44,8 +44,8 @@ export function render(data) {
     <title>${data.title}</title>
   </head>
   <body>
-    <div class="noprint">
-      <a href="/" style="display: block; transform: rotate(-5deg); margin: 0 2em 0 -1.6em; float: left;">
+    <div class="noprint" style="float: right; overflow: hidden;">
+      <a href="/" style="display: block; transform: rotate(-5deg); margin: 1em -1.6em 1em 2em;">
         <video autoplay loop muted playsinline disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture poster="/assets/jim_512.jpg" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;">
           <source src="/assets/jim.webm" type="video/webm" />
           <source src="/assets/jim.mp4" type="video/mp4" />

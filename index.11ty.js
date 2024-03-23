@@ -51,15 +51,17 @@ export function render(data) {
 
     <p style="max-width: 40em; margin: 0 auto 2em auto; font-size: 1.3em; font-weight: 500; text-align: center">
       👋 I'm Jim, a product engineer.
-      I built <a href="https://tigyog.app">TigYog</a>
-      and <a href="https://vidrio.netlify.app">Vidrio</a>.
-      Find me <a href="https://www.dailymail.co.uk/sciencetech/article-6973463/Google-Chrome-hit-new-phishing-scam-uses-fake-address-bar-steal-passwords.html" target="_blank">in the Daily Mail</a>,
-      or more likely on <a href="https://github.com/jameshfisher">GitHub</a>,
-      <a href="https://stackoverflow.com/users/229792/jameshfisher">Stack Overflow</a>,
-      <a href="https://www.linkedin.com/in/jameshfisher/">LinkedIn</a>,
-      <a href="https://twitter.com/MrJamesFisher">Twitter</a>,
+      I built <a target="_blank" href="https://tigyog.app">TigYog</a>
+      and <a target="_blank" href="https://vidrio.netlify.app">Vidrio</a>.
+      Find me <a target="_blank" href="https://www.dailymail.co.uk/sciencetech/article-6973463/Google-Chrome-hit-new-phishing-scam-uses-fake-address-bar-steal-passwords.html">in the Daily Mail</a>,
+      or more likely on
+      <a target="_blank" href="https://news.ycombinator.com/from?site=jameshfisher.com">HN</a>,
+      <a target="_blank" href="https://github.com/jameshfisher">GitHub</a>,
+      <a target="_blank" href="https://stackoverflow.com/users/229792/jameshfisher">Stack Overflow</a>,
+      <a target="_blank" href="https://www.linkedin.com/in/jameshfisher/">LinkedIn</a>,
+      <a target="_blank" href="https://twitter.com/MrJamesFisher">Twitter</a>,
       or
-      <a href="https://www.producthunt.com/@james_fisher2">Product Hunt</a>.
+      <a target="_blank" href="https://www.producthunt.com/@james_fisher2">Product Hunt</a>.
     </p>
 
     <h3>Hacker News favorites</h3>

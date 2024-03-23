@@ -1,6 +1,10 @@
 ---
-title: "Build norms, not features"
-tags: ["essay", "product"]
+title: 'Build norms, not features'
+tags:
+  - essay
+  - product
+hnUrl: 'https://news.ycombinator.com/item?id=37295398'
+hnUpvotes: 2
 ---
 
 If you're building a multi-user product, you're not just selling social _features_.

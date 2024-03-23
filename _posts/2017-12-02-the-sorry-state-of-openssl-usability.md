@@ -1,6 +1,12 @@
 ---
-title: "The sorry state of OpenSSL usability"
-tags: ["programming", "rant", "openssl", "fave"]
+title: The sorry state of OpenSSL usability
+tags:
+  - programming
+  - rant
+  - openssl
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=16024515'
+hnUpvotes: 78
 ---
 
 OpenSSL is one of the most used and important pieces of software in the world.

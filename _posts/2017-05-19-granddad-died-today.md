@@ -1,6 +1,9 @@
 ---
-title: "Granddad died today"
-tags: ["fave"]
+title: Granddad died today
+tags:
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=39725829'
+hnUpvotes: 2
 ---
 
 Granddad died this morning. Chaotic breaths were replaced by a final gargle. A sprinting pulse was replaced by nothing. Around the bed, we held his hands, head, and legs. We said goodbye and cried. The time was 08:53.

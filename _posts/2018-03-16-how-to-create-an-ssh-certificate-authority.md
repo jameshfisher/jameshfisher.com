@@ -1,6 +1,9 @@
 ---
-title: "How to create an SSH certificate authority"
-tags: ["unix"]
+title: How to create an SSH certificate authority
+tags:
+  - unix
+hnUrl: 'https://news.ycombinator.com/item?id=17720316'
+hnUpvotes: 1
 ---
 
 SSH uses asymmetric crypto.

@@ -1,7 +1,10 @@
 ---
-title: "I hate telephones"
-justification: "I hate telephones."
-tags: ["fave"]
+title: I hate telephones
+justification: I hate telephones.
+tags:
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=15677560'
+hnUpvotes: 493
 ---
 
 In many polls,

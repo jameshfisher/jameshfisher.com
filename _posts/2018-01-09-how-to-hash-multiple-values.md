@@ -1,6 +1,10 @@
 ---
-title: "How to hash multiple values"
-tags: ["programming", "crypto"]
+title: How to hash multiple values
+tags:
+  - programming
+  - crypto
+hnUrl: 'https://news.ycombinator.com/item?id=16143718'
+hnUpvotes: 3
 ---
 
 To hash a string like `"hello"`,

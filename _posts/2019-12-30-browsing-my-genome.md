@@ -1,6 +1,10 @@
 ---
-title: "Browsing my genome"
-tags: ["programming", "bioinformatics"]
+title: Browsing my genome
+tags:
+  - programming
+  - bioinformatics
+hnUrl: 'https://news.ycombinator.com/item?id=21916909'
+hnUpvotes: 1
 ---
 
 Back in Feb 2018, I spat in a tube and put it in the post.

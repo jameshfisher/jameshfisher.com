@@ -1,6 +1,10 @@
 ---
-title: "What are CSS percentages?"
-tags: ["programming", "css"]
+title: What are CSS percentages?
+tags:
+  - programming
+  - css
+hnUrl: 'https://news.ycombinator.com/item?id=21915089'
+hnUpvotes: 4
 ---
 
 If you've used CSS, you've probably used percentage values.

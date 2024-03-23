@@ -1,6 +1,9 @@
 ---
-title: "How Hacker News stays interesting"
-tags: ["fave"]
+title: How Hacker News stays interesting
+tags:
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=19010993'
+hnUpvotes: 227
 ---
 
 Last week I wrote [a post called "My parents are Flat-Earthers"](/2019/01/20/my-parents-are-flat-earthers/),

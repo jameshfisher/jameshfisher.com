@@ -1,6 +1,11 @@
 ---
-title: "Don't use `nscd`"
-tags: ["programming", "unix", "c"]
+title: Don't use `nscd`
+tags:
+  - programming
+  - unix
+  - c
+hnUrl: 'https://news.ycombinator.com/item?id=32950968'
+hnUpvotes: 2
 ---
 
 You find that DNS queries take a long time from your machine,

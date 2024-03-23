@@ -1,6 +1,10 @@
 ---
-title: "Simulating epidemics"
-tags: ["programming", "epidemiology"]
+title: Simulating epidemics
+tags:
+  - programming
+  - epidemiology
+hnUrl: 'https://news.ycombinator.com/item?id=22343490'
+hnUpvotes: 1
 ---
 
 Below you see a simulation of an epidemic.

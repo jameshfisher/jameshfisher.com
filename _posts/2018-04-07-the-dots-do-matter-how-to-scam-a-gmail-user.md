@@ -1,7 +1,11 @@
 ---
-title: "The dots do matter: how to scam a Gmail user"
-tags: ["security", "fave"]
-justification: "people need to know."
+title: 'The dots do matter: how to scam a Gmail user'
+tags:
+  - security
+  - fave
+justification: people need to know.
+hnUrl: 'https://news.ycombinator.com/item?id=16781959'
+hnUpvotes: 1023
 ---
 
 I recently received an email from Netflix

@@ -1,6 +1,10 @@
 ---
-title: "Your syntax highlighter is wrong"
-tags: ["programming", "fave"]
+title: Your syntax highlighter is wrong
+tags:
+  - programming
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=20020282'
+hnUpvotes: 233
 ---
 
 As coders, we spend our working lives looking at code. 

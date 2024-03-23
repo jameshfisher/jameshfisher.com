@@ -1,6 +1,9 @@
 ---
-title: "The golden rule of PR reviews"
-tags: ["programming"]
+title: The golden rule of PR reviews
+tags:
+  - programming
+hnUrl: 'https://news.ycombinator.com/item?id=38079321'
+hnUpvotes: 2
 ---
 
 You're reviewing Jane's pull request.

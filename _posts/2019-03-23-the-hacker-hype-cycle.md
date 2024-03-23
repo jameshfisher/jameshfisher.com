@@ -1,6 +1,10 @@
 ---
-title: "The hacker hype cycle"
-tags: ["programming", "fave"]
+title: The hacker hype cycle
+tags:
+  - programming
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=19769099'
+hnUpvotes: 5
 ---
 
 Back on Christmas Day 2013,

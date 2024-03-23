@@ -1,6 +1,10 @@
 ---
-title: "Setting font-size based on viewing distance"
-tags: ["programming", "web"]
+title: Setting font-size based on viewing distance
+tags:
+  - programming
+  - web
+hnUrl: 'https://news.ycombinator.com/item?id=39683762'
+hnUpvotes: 3
 ---
 
 I want to set the font-size at the most comfortable size for reading.

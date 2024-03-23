@@ -1,6 +1,10 @@
 ---
-title: "A formula for responsive font-size"
-tags: ["programming", "web"]
+title: A formula for responsive font-size
+tags:
+  - programming
+  - web
+hnUrl: 'https://news.ycombinator.com/item?id=39682871'
+hnUpvotes: 165
 ---
 
 This CSS is now part of most websites I make:

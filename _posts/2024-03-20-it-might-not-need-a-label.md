@@ -1,6 +1,10 @@
 ---
-title: "It might not need a label"
-tags: ["programming", "design"]
+title: It might not need a label
+tags:
+  - programming
+  - design
+hnUrl: 'https://news.ycombinator.com/item?id=39766709'
+hnUpvotes: 3
 ---
 
 One hallmark of "programmer UI" is <em>using labels for everything</em>.

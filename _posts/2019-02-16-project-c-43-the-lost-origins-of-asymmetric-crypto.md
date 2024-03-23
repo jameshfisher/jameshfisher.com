@@ -1,6 +1,11 @@
 ---
-title: "Project C-43: the lost origins of asymmetric crypto"
-tags: ["programming", "history", "fave"]
+title: 'Project C-43: the lost origins of asymmetric crypto'
+tags:
+  - programming
+  - history
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=19180606'
+hnUpvotes: 1
 ---
 
 Alice lives two doors down from Bob.

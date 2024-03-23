@@ -1,6 +1,11 @@
 ---
-title: "What does `getaddrinfo` do?"
-tags: ["programming", "c", "unix"]
+title: What does `getaddrinfo` do?
+tags:
+  - programming
+  - c
+  - unix
+hnUrl: 'https://news.ycombinator.com/item?id=30444336'
+hnUpvotes: 2
 ---
 
 The following C program calls `getaddrinfo("google.com", ...)`,

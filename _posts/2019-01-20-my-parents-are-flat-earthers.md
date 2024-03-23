@@ -1,6 +1,9 @@
 ---
-title: "My parents are Flat-Earthers"
-tags: ["fave"]
+title: My parents are Flat-Earthers
+tags:
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=18951569'
+hnUpvotes: 179
 ---
 
 Flat Earth theory entered my life around October 2015,

@@ -1,6 +1,12 @@
 ---
-title: "Smear phishing: a new Android vulnerability"
-tags: ["security", "phishing", "sms", "fave"]
+title: 'Smear phishing: a new Android vulnerability'
+tags:
+  - security
+  - phishing
+  - sms
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=24070633'
+hnUpvotes: 11
 ---
 
 In this post

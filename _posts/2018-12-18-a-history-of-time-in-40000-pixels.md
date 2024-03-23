@@ -1,6 +1,10 @@
 ---
-title: "A history of time in 40,000 pixels"
-tags: ["history", "programming"]
+title: 'A history of time in 40,000 pixels'
+tags:
+  - history
+  - programming
+hnUrl: 'https://news.ycombinator.com/item?id=18711302'
+hnUpvotes: 2
 ---
 
 How did past writers view _their_ past, and their future?

@@ -5,16 +5,21 @@
     "build": "eleventy",
     "test": "hyperlink --recursive --internal --root _site --canonicalroot https://jameshfisher.com _site/index.html",
     "serve": "eleventy --serve",
-    "format": "prettier --write \"./**/*.11ty.js\""
+    "format": "prettier --write \"./**/*.11ty.js\"",
+    "add-hn-backlinks": "bun run addHnBacklinks.ts"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0-alpha.5",
+    "@types/node": "^20.11.30",
     "date-fns": "^3.6.0",
+    "gray-matter": "^4.0.3",
     "html-entities": "^1.4.0",
     "hyperlink": "^5.0.4",
+    "jsdom": "^24.0.0",
     "markdown-it": "^14.1.0",
     "prettier": "^3.2.5",
-    "striptags": "^3.2.0"
+    "striptags": "^3.2.0",
+    "linkedom": "^0.16.10"
   },
   "type": "module"
 }

@@ -1,6 +1,11 @@
 ---
-title: "The inception bar: a new phishing method"
-tags: ["programming", "security", "fave"]
+title: 'The inception bar: a new phishing method'
+tags:
+  - programming
+  - security
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=19768072'
+hnUpvotes: 1046
 ---
 
 

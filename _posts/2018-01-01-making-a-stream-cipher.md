@@ -1,6 +1,11 @@
 ---
-title: "Making a stream cipher"
-tags: ["programming", "go", "crypto"]
+title: Making a stream cipher
+tags:
+  - programming
+  - go
+  - crypto
+hnUrl: 'https://news.ycombinator.com/item?id=16066503'
+hnUpvotes: 1
 ---
 
 Symmetric cryptography lets Alice talk privately to Bob,

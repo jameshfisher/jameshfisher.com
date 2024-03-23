@@ -1,6 +1,10 @@
 ---
-title: "Diffing coronaviruses"
-tags: ["programming", "bioinformatics"]
+title: Diffing coronaviruses
+tags:
+  - programming
+  - bioinformatics
+hnUrl: 'https://news.ycombinator.com/item?id=22282458'
+hnUpvotes: 119
 ---
 
 We can use standard UNIX tools

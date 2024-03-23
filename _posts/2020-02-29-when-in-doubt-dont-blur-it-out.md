@@ -1,6 +1,10 @@
 ---
-title: "When in doubt, don't blur it out"
-tags: ["programming", "security"]
+title: 'When in doubt, don''t blur it out'
+tags:
+  - programming
+  - security
+hnUrl: 'https://news.ycombinator.com/item?id=22452580'
+hnUpvotes: 5
 ---
 
 Yesterday,

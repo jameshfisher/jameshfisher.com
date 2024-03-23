@@ -1,6 +1,9 @@
 ---
-title: "MP4 can encode superwhite and superblack, thanks to analog TV"
-tags: ["video"]
+title: 'MP4 can encode superwhite and superblack, thanks to analog TV'
+tags:
+  - video
+hnUrl: 'https://news.ycombinator.com/item?id=25776560'
+hnUpvotes: 2
 ---
 
 I was making a video with Premiere Pro.

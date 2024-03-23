@@ -1,6 +1,11 @@
 ---
-title: "Time is running out to catch COVID-19"
-tags: ["programming", "epidemiology", "fave"]
+title: Time is running out to catch COVID-19
+tags:
+  - programming
+  - epidemiology
+  - fave
+hnUrl: 'https://news.ycombinator.com/item?id=22584632'
+hnUpvotes: 3
 ---
 
 Your best chance for survival is to _catch COVID-19 now_.

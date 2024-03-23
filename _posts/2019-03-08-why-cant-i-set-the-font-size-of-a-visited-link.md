@@ -1,6 +1,12 @@
 ---
-title: "Why can't I set the font size of a visited link?"
-tags: ["programming", "web", "css", "security"]
+title: Why can't I set the font size of a visited link?
+tags:
+  - programming
+  - web
+  - css
+  - security
+hnUrl: 'https://news.ycombinator.com/item?id=19351685'
+hnUpvotes: 3
 ---
 
 Visited links show up purple; unvisited links show up blue.

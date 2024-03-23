@@ -23,6 +23,13 @@ export function render(data) {
     </a>`;
   }
 
+  const hnFavorites = data.collections.posts
+    .filter(
+      (post) =>
+        post.data.hnUrl && post.data.hnUpvotes && post.data.hnUpvotes > 100,
+    )
+    .sort((a, b) => b.data.hnUpvotes - a.data.hnUpvotes);
+
   return `
 <!doctype html>
 <html lang="en">
@@ -55,11 +62,16 @@ export function render(data) {
       <a href="https://www.producthunt.com/@james_fisher2">Product Hunt</a>.
     </p>
 
-    <h3>Favorite posts</h3>
+    <h3>Hacker News favorites</h3>
+    <div class="posts no-link-underlines">
+      ${hnFavorites.map(renderPost).join("")}
+    </div>
+
+    <h3>My favorites</h3>
     <div class="posts no-link-underlines">
       ${data.collections.fave
         .reverse()
-        .filter((post) => !post.draft)
+        .filter((post) => !post.draft && !hnFavorites.includes(post))
         .map(renderPost)
         .join("")}
     </div>

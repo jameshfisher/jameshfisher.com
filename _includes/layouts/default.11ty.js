@@ -24,6 +24,11 @@ export function render(data) {
       }
       ${data.content}
       <div class="noprint">
+        ${
+          data.hnUrl
+            ? `<div><a href="${data.hnUrl}" target="_blank">Discussion on Hacker News.</a></div>`
+            : ""
+        }
         <div style="background: #ffeb57; border-radius: 0.5em; margin-top: 1em; padding: 1em;">
           <div>
             👋 I'm Jim, a <strong>full-stack product engineer.</strong>

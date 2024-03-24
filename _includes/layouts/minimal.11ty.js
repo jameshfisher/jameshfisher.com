@@ -1,6 +1,8 @@
 import striptags from "striptags";
+import h from "vhtml";
 import dataPeople from "../../_data/people.js";
 import navbarHtml from "../../navbar.js";
+import { rawHtml } from "../../rawHtml.js";
 import renderTitle from "../../renderTitle.js";
 import scriptsHtml from "../../scripts.js";
 
@@ -22,50 +24,117 @@ export function render(data) {
 
   const author = data.author || "jim";
 
-  return `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="theme-color" content="white"/>
-    <meta name="keywords" content="${(data.tags || []).join(", ")}"/>
-    <meta property="og:title" content="${data.title}"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:image" content="${siteUrl}${
-      data.ogimage || "/assets/jim_512.jpg"
-    }"/>
-    <meta property="og:url" content="${canonical}"/>
-    <meta property="og:description" content="${plaintextExcerpt}"/>
-    <meta property="og:site_name" content="jameshfisher.com"/>
-    <link rel="canonical" href="${canonical}"/>
-    <link rel="icon" type="image/png" href="${siteUrl}/assets/jim_128.png" />
-    <link rel="alternate" type="application/rss+xml" href="https://jameshfisher.com/feed.xml" />
-    <link rel="stylesheet" href="/assets/all.css" />
-    <title>${data.title}</title>
-  </head>
-  <body>
-    <div class="noprint" style="float: right; overflow: hidden;">
-      <a href="/" style="display: block; transform: rotate(-5deg); margin: 1em -1.6em 1em 2em;">
-        <video autoplay loop muted playsinline disableRemotePlayback x-webkit-airplay="deny" disablePictureInPicture poster="/assets/jim_512.jpg" class="jim_image" style="height: 128px; object-fit: cover; padding: 5px;">
-          <source src="/assets/jim.webm" type="video/webm" />
-          <source src="/assets/jim.mp4" type="video/mp4" />
-        </video>
-      </a>
-    </div>
-    <div id="content">
-      <h1>${author === "jim" ? "" : "Guest post: "}${renderTitle(
-        data.title || "",
-      )}</h1>
-      ${
+  const doneProperlyWithVhtml = h("html", { lang: "en" }, [
+    h("head", {}, [
+      h("meta", { charset: "utf-8" }),
+      h("meta", {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1",
+      }),
+      h("meta", { name: "theme-color", content: "white" }),
+      h("meta", {
+        name: "keywords",
+        content: (data.tags || []).join(", "),
+      }),
+      h("meta", {
+        property: "og:title",
+        content: data.title,
+      }),
+      h("meta", {
+        property: "og:type",
+        content: "website",
+      }),
+      h("meta", {
+        property: "og:image",
+        content: `${siteUrl}${data.ogimage || "/assets/jim_512.jpg"}`,
+      }),
+      h("meta", {
+        property: "og:url",
+        content: canonical,
+      }),
+      h("meta", {
+        property: "og:description",
+        content: plaintextExcerpt,
+      }),
+      h("meta", {
+        property: "og:site_name",
+        content: "jameshfisher.com",
+      }),
+      h("link", {
+        rel: "canonical",
+        href: canonical,
+      }),
+      h("link", {
+        rel: "icon",
+        type: "image/png",
+        href: `${siteUrl}/assets/jim_128.png`,
+      }),
+      h("link", {
+        rel: "alternate",
+        type: "application/rss+xml",
+        href: "https://jameshfisher.com/feed.xml",
+      }),
+      h("link", {
+        rel: "stylesheet",
+        href: "/assets/all.css",
+      }),
+      h("title", {}, data.title),
+    ]),
+    h("body", {}, [
+      h("div", { class: "noprint", style: "float: right; overflow: hidden;" }, [
+        h(
+          "a",
+          {
+            href: "/",
+            style:
+              "display: block; transform: rotate(-5deg); margin: 1em -1.6em 1em 2em;",
+          },
+          [
+            h(
+              "video",
+              {
+                autoplay: true,
+                loop: true,
+                muted: true,
+                playsinline: true,
+                disableRemotePlayback: true,
+                "x-webkit-airplay": "deny",
+                disablePictureInPicture: true,
+                poster: "/assets/jim_512.jpg",
+                class: "jim_image",
+                style: "height: 128px; object-fit: cover; padding: 5px;",
+              },
+              [
+                h("source", {
+                  src: "/assets/jim.webm",
+                  type: "video/webm",
+                }),
+                h("source", {
+                  src: "/assets/jim.mp4",
+                  type: "video/mp4",
+                }),
+              ],
+            ),
+          ],
+        ),
+      ]),
+      h("div", { id: "content" }, [
+        h("h1", {}, [
+          author === "jim" ? "" : "Guest post: ",
+          renderTitle(data.title || ""),
+        ]),
         author === "jim"
           ? ""
-          : `<h2>By <a href="${dataPeople[author].url}">${dataPeople[author].name}</a></h2>`
-      }
-      ${data.content}
-      ${navbarHtml}
-    </div>
-    ${scriptsHtml}
-  </body>
-</html>
-`;
+          : h("h2", {}, [
+              "By ",
+              h("a", { href: dataPeople[author].url }, dataPeople[author].name),
+            ]),
+        rawHtml(data.content),
+        rawHtml(navbarHtml),
+      ]),
+      rawHtml(scriptsHtml),
+    ]),
+  ]);
+
+  return doneProperlyWithVhtml;
 }

@@ -1,4 +1,6 @@
+import h from "vhtml";
 import blogroll from "./blogroll.js";
+import { fragmentHtml } from "./fragmentHtml.js";
 
 export const data = {
   layout: "layouts/minimal",
@@ -7,30 +9,35 @@ export const data = {
 };
 
 export function render(data) {
-  return `<p>
-  This blogroll is also available as <a href="/blogroll.xml">an OPML file</a>,
-  which is accepted by many RSS readers.
-</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Blog</th>
-      <th>RSS</th>
-      <th>Author</th>
-    </tr>
-  </thead>
-  <tbody>
-    ${blogroll
-      .map(
-        (blog) => `<tr>
-    <td><a href="${blog.htmlUrl}">${blog.title}</a></td>
-    <td>${blog.xmlUrl ? `<a href="${blog.xmlUrl}">Here</a>` : "Nope"}</td>
-    <td>${blog.author}</td>
-  </tr>`,
-      )
-      .join("\n")}
-  </tbody>
-</table>
-`;
+  return fragmentHtml(
+    h("p", {}, [
+      "This blogroll is also available as ",
+      h("a", { href: "/blogroll.xml" }, "an OPML file"),
+      ", which is accepted by many RSS readers.",
+    ]),
+    h("table", {}, [
+      h("thead", {}, [
+        h("tr", {}, [
+          h("th", {}, "Blog"),
+          h("th", {}, "RSS"),
+          h("th", {}, "Author"),
+        ]),
+      ]),
+      h(
+        "tbody",
+        {},
+        blogroll.map((blog) =>
+          h("tr", {}, [
+            h("td", {}, h("a", { href: blog.htmlUrl }, blog.title)),
+            h(
+              "td",
+              {},
+              blog.xmlUrl ? h("a", { href: blog.xmlUrl }, "Here") : "Nope",
+            ),
+            h("td", {}, blog.author),
+          ]),
+        ),
+      ),
+    ]),
+  );
 }

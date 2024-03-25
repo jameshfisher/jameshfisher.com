@@ -24,7 +24,7 @@ export function render(data) {
 
   const author = data.author || "jim";
 
-  const doneProperlyWithVhtml = h("html", { lang: "en" }, [
+  return h("html", { lang: "en" }, [
     h("head", {}, [
       h("meta", { charset: "utf-8" }),
       h("meta", {
@@ -135,6 +135,4 @@ export function render(data) {
       rawHtml(scriptsHtml),
     ]),
   ]);
-
-  return doneProperlyWithVhtml;
 }

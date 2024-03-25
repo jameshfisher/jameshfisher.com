@@ -63,25 +63,6 @@ h6 {
 }
 
 /*
-These old rules only apply to Rouge. We now use Prism which structures the page differently.
-
-.highlight .n, .highlight .nf, .highlight .nv { text-decoration: underline; }
-.language-diff .highlight .gi { color: #22863a; background-color: #f0fff4; }
-.language-diff .highlight .gd { color: #b31d28; background-color: #ffeef0; }
-*/
-
-/*
-These rules apply to Prism, but I decided Prism is worthless.
-
-#content pre { max-width: none; width: 100%; margin-right: 0; overflow-x: auto; }
-#content pre > code { display: block; max-width: 50em; margin: 0 auto; background: #eee; }
-#content pre > code > .highlight-line { background: #eee; box-shadow: 0 0 0 4px #eee; }
-code .token.function { text-decoration: underline; }
-code { background: #eee; }
-*/
-
-/*
-These rules are for standard, non-syntax-highlighted code.
 Known deficiency: text overflowing a code block does not have a background color.
 Future fix: wrap code blocks in another wrapper, but this requires some JS/plugin work.
 */

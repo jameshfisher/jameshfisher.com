@@ -1,5 +1,12 @@
 ---
-title: "Pointer to middle of allocation, part 1"
+title: 'Pointer to middle of allocation, part 1'
+tags:
+  - redis
+  - data-structures
+  - pointers
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 The Redis "Simple Dynamic String" is a length-prefixed string, roughly like this:

@@ -3,7 +3,7 @@ title: How do I put an array in a struct in C?
 tags:
   - c
   - programming
-  - data-structure
+  - data-structures
   - semantics
 taggedAt: '2024-03-26'
 ---

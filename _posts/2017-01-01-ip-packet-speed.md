@@ -1,5 +1,11 @@
 ---
-title: "How fast does an IP packet travel?"
+title: How fast does an IP packet travel?
+tags:
+  - internet-protocol
+  - networking
+  - latency
+  - physics
+taggedAt: '2024-03-26'
 ---
 
 IP packets spend about 80% of their time in routers, and only about 20% on the wire.

@@ -1,5 +1,11 @@
 ---
-title: "What do DNS datagrams look like?"
+title: What do DNS datagrams look like?
+tags:
+  - dns
+  - udp
+  - networking
+  - internet-protocol
+taggedAt: '2024-03-26'
 ---
 
 Let's write a DNS request. We'll query the DNS server at `8.8.8.8` for information about the domain `www.google.com`.

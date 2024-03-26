@@ -1,5 +1,11 @@
 ---
-title: "How do I pack bits in C? (An answer using masks)"
+title: How do I pack bits in C? (An answer using masks)
+tags:
+  - c
+  - programming
+  - bitwise-operations
+  - data-structures
+taggedAt: '2024-03-26'
 ---
 
 An exercise in packing information into bits instead of bytes.

@@ -1,5 +1,11 @@
 ---
-title: "What is a `union` in C?"
+title: What is a `union` in C?
+tags:
+  - c
+  - programming
+  - data-structures
+  - semantics
+taggedAt: '2024-03-26'
 ---
 
 ```c

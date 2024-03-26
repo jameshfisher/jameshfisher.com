@@ -1,5 +1,12 @@
 ---
-title: "Error URLs (addressable errors)"
+title: Error URLs (addressable errors)
+tags:
+  - error-handling
+  - c
+  - programming
+  - design
+  - documentation
+taggedAt: '2024-03-26'
 ---
 
 When printing an error, we _sometimes_ include an error code. For example:

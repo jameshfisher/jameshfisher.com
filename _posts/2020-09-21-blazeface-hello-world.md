@@ -70,12 +70,12 @@ the default bounding box is not necessarily helpful for this.
 Under certain conditions, BlazeFace consistently recognized a face in my forehead,
 and was extremely confident about it:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Probably one of my weirder debugging sessions <a href="https://t.co/AubMIkM1kI">pic.twitter.com/AubMIkM1kI</a></p>&mdash; Jim Fisher (@MrJamesFisher) <a href="https://twitter.com/MrJamesFisher/status/1307783574561550336?ref_src=twsrc%5Etfw">September 20, 2020</a></blockquote> 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Probably one of my weirder debugging sessions <a href="https://t.co/AubMIkM1kI">pic.twitter.com/AubMIkM1kI</a></p>&mdash; Jim Fisher (@MrJamesFisher) <a href="https://twitter.com/MrJamesFisher/status/1307783574561550336?ref_src=twsrc%5Etfw">September 20, 2020</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 The bug seems to only happen when I use my high-resolution webcam feed.
 BlazeFace performs much more reliably with a lower-resolution webcam feed.
-This is very strange, 
+This is very strange,
 because I believe [the library resizes the input to 128×128 pixels](https://github.com/tensorflow/tfjs-models/blob/6d9566b1d659c1354ab82d701f16e56a710229d4/blazeface/src/face.ts#L236) before analyzing it.
 I'll do a future post on the internals of this library,
 and how to use TensorFlow.js.
@@ -92,10 +92,10 @@ This should help understand the weird forehead bug.
 
   function drawLine(p1, p2) {
     overlayCtx.strokeStyle = "red";
-    overlayCtx.beginPath();     
-    overlayCtx.moveTo(p1[0], p1[1]);  
+    overlayCtx.beginPath();
+    overlayCtx.moveTo(p1[0], p1[1]);
     overlayCtx.lineTo(p2[0], p2[1]);
-    overlayCtx.stroke();   
+    overlayCtx.stroke();
   }
 
   function drawPoint(p, char) {
@@ -112,9 +112,9 @@ This should help understand the weird forehead bug.
     overlayCtx.fillStyle = "rgba(255,0,0,0.3)";
 
     overlayCtx.fillRect(
-      prediction.topLeft[0], 
-      prediction.topLeft[1], 
-      prediction.bottomRight[0]-prediction.topLeft[0], 
+      prediction.topLeft[0],
+      prediction.topLeft[1],
+      prediction.bottomRight[0]-prediction.topLeft[0],
       prediction.bottomRight[1]-prediction.topLeft[1],
     );
 
@@ -138,7 +138,7 @@ This should help understand the weird forehead bug.
 
   async function main() {
     const [model, stream] = await Promise.all([
-      blazeface.load(), 
+      blazeface.load(),
       navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } })
     ]);
 

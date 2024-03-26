@@ -1,6 +1,6 @@
 ---
 title: "The neural network programming language"
-tags: ["programming", "machine-learning"]
+tags: ["programming", "ml"]
 draft: true
 ---
 
@@ -43,7 +43,7 @@ to (hopefully) improve the function.
 This language is quite restrictive.
 Its only base data type is the floating-point number.
 Its only expressions are (non-recursive) function calls
-and the odd expression 
+and the odd expression
 
 ```ebnf
 expr ::=

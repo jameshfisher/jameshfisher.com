@@ -44,7 +44,7 @@ hello_model/saved_model/saved_model.pb
 hello_model/saved_model/assets
 ```
 
-You then use `tensorflowjs_converter` to convert the SavedModel format 
+You then use `tensorflowjs_converter` to convert the SavedModel format
 to the (undocumented) TensorFlow.js "Graph Model" format:
 
 ```shell

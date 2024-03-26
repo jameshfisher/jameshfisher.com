@@ -1,6 +1,6 @@
 ---
 title: "Hand-coded neural networks"
-tags: ["programming", "machine-learning"]
+tags: ["programming", "ml"]
 draft: true
 ---
 
@@ -16,7 +16,7 @@ function bothPos(x, y) {
 ```
 
 Surprise - this function is also a neural network!
-Neural networks are usually drawn as 
+Neural networks are usually drawn as
 
 No, the neural network is not a series of neurons;
 it's a JavaScript function which uses a restricted set of operations.

@@ -18,7 +18,7 @@ The output from BlazeFace tends to "jitter".
 The predicted face will move around with noticeable noise.
 To account for this, I smooth the values using [exponential smoothing](https://en.wikipedia.org/wiki/Exponential_smoothing)
 (the simplest smoothing function I'm aware of).
-This smoothing is a tradeoff; 
+This smoothing is a tradeoff;
 it increases smoothness but also increases latency.
 
 What should we do when the head is partially outside the image?
@@ -46,7 +46,7 @@ even if it doesn't cover the head properly.
 
   displayCanvasEl.width = DISPLAY_CANVAS_WIDTH;
   displayCanvasEl.height = DISPLAY_CANVAS_WIDTH;
-  
+
   function avg(x, y) {
     return (x+y)/2;
   }
@@ -76,7 +76,7 @@ even if it doesn't cover the head properly.
 
   function vec2_mul(v, m) {
     return [
-      v[0] * m, 
+      v[0] * m,
       v[1] * m
     ];
   }
@@ -149,7 +149,7 @@ even if it doesn't cover the head properly.
 
   async function main() {
     const [model, stream] = await Promise.all([
-      blazeface.load({ maxFaces: 1 }), 
+      blazeface.load({ maxFaces: 1 }),
       navigator.mediaDevices.getUserMedia({ video: { facingMode: "user", width: { ideal: 320 } } })
     ]);
 
@@ -173,19 +173,19 @@ even if it doesn't cover the head properly.
         console.log(avgBoundingBoxRadius);
 
         latestBoundingBox = [
-          avgBoundingBoxCenter[0]-avgBoundingBoxRadius, 
-          avgBoundingBoxCenter[1]-avgBoundingBoxRadius, 
-          avgBoundingBoxRadius*2, 
+          avgBoundingBoxCenter[0]-avgBoundingBoxRadius,
+          avgBoundingBoxCenter[1]-avgBoundingBoxRadius,
+          avgBoundingBoxRadius*2,
           avgBoundingBoxRadius*2
         ];
       }
 
       displayCanvasEl.width = DISPLAY_CANVAS_WIDTH;
       ctx.drawImage(
-        webcamVideoEl, 
-        latestBoundingBox[0], latestBoundingBox[1], 
-        latestBoundingBox[2], latestBoundingBox[3], 
-        0, 0, 
+        webcamVideoEl,
+        latestBoundingBox[0], latestBoundingBox[1],
+        latestBoundingBox[2], latestBoundingBox[3],
+        0, 0,
         DISPLAY_CANVAS_WIDTH, DISPLAY_CANVAS_WIDTH
       );
 

@@ -1,5 +1,7 @@
 ---
 title: "Predicting earth radius"
+tags:
+  - ml
 draft: true
 ---
 

@@ -87,7 +87,7 @@ by giving each slot its own area of the image to focus on.
 I believe each slot is only made sensitive to nearby faces
 by the training data.
 When generating training data,
-a ground truth bounding box is put in the slot 
+a ground truth bounding box is put in the slot
 whose anchor point most closely matches that box.
 
 The other important features of each slot are an "offset" and "size".
@@ -99,7 +99,7 @@ I have drawn these boxes in the overlay.
 
 You might wonder, since each box can express an _offset_ from its anchor point,
 why we have different anchor points at all.
-Couldn't we just have 896 slots, 
+Couldn't we just have 896 slots,
 and the network could return the absolute coordinates of the box,
 instead of an offset relative to an anchor point?
 I think the answer is: _yes_, the network could return absolute coordinates,

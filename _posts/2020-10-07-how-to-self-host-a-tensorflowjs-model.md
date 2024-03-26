@@ -7,14 +7,14 @@ The [various TensorFlow.js model libraries](https://github.com/tensorflow/tfjs-m
 will download the pretrained models from the web when your application launches.
 Taking an example from an earlier post,
 if you load the BodyPix library with the following config,
-it will download 24 files from `storage.googleapis.com`, 
+it will download 24 files from `storage.googleapis.com`,
 totalling a hefty 91MB!
 
 ```js
-const net = await bodyPix.load({ 
-  architecture: 'ResNet50', 
-  outputStride: 16, 
-  quantBytes: 4 
+const net = await bodyPix.load({
+  architecture: 'ResNet50',
+  outputStride: 16,
+  quantBytes: 4
 });
 ```
 
@@ -76,7 +76,7 @@ The manifest is a JSON file like this:
     versions: { producer: 114 }
   },
   weightsManifest: [
-    { 
+    {
       paths: [
         'group1-shard1of23.bin',  'group1-shard2of23.bin',
         'group1-shard3of23.bin',  'group1-shard4of23.bin',
@@ -90,8 +90,8 @@ The manifest is a JSON file like this:
         'group1-shard19of23.bin', 'group1-shard20of23.bin',
         'group1-shard21of23.bin', 'group1-shard22of23.bin',
         'group1-shard23of23.bin'
-      ], 
-      weights: [Array] 
+      ],
+      weights: [Array]
     }
   ]
 }
@@ -128,14 +128,14 @@ async function download(url, filepath) {
 
 async function downloadTensorFlowJsGraphModel(url, manifestFilepath) {
   await download(url, manifestFilepath);
-  
+
   const model = JSON.parse(fs.readFileSync(manifestFilepath));
-  
+
   await Promise.all(
     model.weightsManifest
       .flatMap(w => w.paths)
       .map(relativePath => download(
-        new URL(relativePath, url), 
+        new URL(relativePath, url),
         path.join(path.dirname(manifestFilepath), relativePath)
       )));
 }

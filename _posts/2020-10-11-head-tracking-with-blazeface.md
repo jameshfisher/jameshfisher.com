@@ -21,7 +21,7 @@ And here's what I get when I run it against my own face:
 <p><img src="/assets/2020-10-11/result.jpg"/></p>
 
 [In a previous post, I showed the "hello world" of BlazeFace](/2020/09/21/blazeface-hello-world/).
-It runs BlazeFace on your webcam video stream, 
+It runs BlazeFace on your webcam video stream,
 takes the face landmarks and bounding box output by BlazeFace,
 and displays them on a canvas.
 
@@ -49,15 +49,15 @@ const leftEar = prediction.landmarks[5];
 Here's an image illustrating the BlazeFace landmarks in magenta
 on a model head.
 BlazeFace doesn't define exactly what it means by "nose", "ear", et cetera.
-And it's inconsistent; 
-e.g. when viewing my head from below, 
+And it's inconsistent;
+e.g. when viewing my head from below,
 the identified "ear" points are quite far from my ears.
 Below, I've just marked the points that BlazeFace seems to identify most strongly.
 
 <p><img src="/assets/2020-10-11/coords_and_points.png"/></p>
 
 I've labelled "L" for "left" and "R" for "right" on this image.
-Note that BlazeFace's notion of "left" 
+Note that BlazeFace's notion of "left"
 is on the right side of the image;
 it's what you mean when you say "my left ear".
 
@@ -73,8 +73,8 @@ const MODEL_HEAD_RIGHT_EYE_COORD = [ 0.3, 0.3, 0.7 ];
 
 The center of the bounding sphere should be the center of the head.
 But the "center of the head" is a fuzzy concept!
-By experimentation (i.e., drawing circles around the heads in the drawing above), 
-I define the center of the head as 
+By experimentation (i.e., drawing circles around the heads in the drawing above),
+I define the center of the head as
 the point shown in bright green in the image above,
 and I define the radius of the bounding sphere with the green circle in the image above.
 These have these values:
@@ -89,9 +89,9 @@ Our model will have a bias towards this artificial man!
 We should try to find values that work for everyone,
 but I don't try that here.
 
-In what follows, 
+In what follows,
 I assume that the image we get is a parallel projection of the head.
-That is, I assume that points in 3D space are projected onto the image 
+That is, I assume that points in 3D space are projected onto the image
 with a function like this:
 
 ```js
@@ -142,7 +142,7 @@ const unitX = vec2_mul(vec2_sub(rightEar, origin), 1/0.7);
 Finally we need to infer `unitY`.
 I believe it's possible to infer `unitY` just from `unitX` and `unitZ`.
 Perhaps something like the cross product.
-However, my math sucks, so instead, 
+However, my math sucks, so instead,
 I use the eye positions to infer `unitY`.
 We can calculate the projection of the model eyes on the _xz_-plane,
 like this:
@@ -206,8 +206,8 @@ const boundingCircleRadius = unitLength * MODEL_HEAD_BOUNDING_SPHERE_RADIUS;
   const overlayCtx = overlayCanvasEl.getContext('2d');
 
   function drawLine(p1, p2) {
-    overlayCtx.beginPath();     
-    overlayCtx.moveTo(p1[0], p1[1]);  
+    overlayCtx.beginPath();
+    overlayCtx.moveTo(p1[0], p1[1]);
     overlayCtx.lineTo(p2[0], p2[1]);
     overlayCtx.stroke();
   }
@@ -268,7 +268,7 @@ const boundingCircleRadius = unitLength * MODEL_HEAD_BOUNDING_SPHERE_RADIUS;
 
   function vec2_mul(v, m) {
     return [
-      v[0] * m, 
+      v[0] * m,
       v[1] * m
     ];
   }
@@ -370,7 +370,7 @@ const boundingCircleRadius = unitLength * MODEL_HEAD_BOUNDING_SPHERE_RADIUS;
 
   async function main() {
     const [model, stream] = await Promise.all([
-      blazeface.load(), 
+      blazeface.load(),
       navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } })
     ]);
 

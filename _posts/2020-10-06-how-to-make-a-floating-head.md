@@ -7,13 +7,13 @@ ogimage: "/assets/2020-10-06/result.jpg"
 In [a previous post](/2020/09/24/using-bodypix-segmentation-in-a-webgl-shader/).
 I showed how to run BodyPix on a video stream
 and access the segmentation from your shader.
-In this post, 
+In this post,
 I demo the `segmentPersonParts` method,
 using it to make a floating head.
 You can run it on your own webcam;
 <button onclick="main(); this.onclick=null">click here to start the demo!</button>
 
-A call to `net.segmentPerson` returns a `Uint8Array` 
+A call to `net.segmentPerson` returns a `Uint8Array`
 where each value is either `1` (part of a person)
 or `0` (not part of a person).
 But the API also provides `net.segmentPersonParts`,
@@ -54,7 +54,7 @@ Finally, here's what I get when I run the demo against my own webcam feed:
 
 <script id="fragment-shader" type="glsl">
   precision mediump float;
-  
+
   uniform sampler2D frame;
   uniform sampler2D mask;
 
@@ -105,7 +105,7 @@ Finally, here's what I get when I run the demo against my own webcam feed:
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-  
+
   gl.activeTexture(gl.TEXTURE1);
   const background = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, background);
@@ -150,7 +150,7 @@ Finally, here's what I get when I run the demo against my own webcam feed:
       webcamVideoEl.width = metadata.width;
       webcamVideoEl.height = metadata.height;
 
-      const segmentation = await net.segmentPersonParts(webcamVideoEl, { 
+      const segmentation = await net.segmentPersonParts(webcamVideoEl, {
         internalResolution: 'medium',  // does make a difference; TODO investigate what precisely this does
         maxDetections: 1,
         segmentationThreshold: 0.7,
@@ -162,7 +162,7 @@ Finally, here's what I get when I run the demo against my own webcam feed:
 
       gl.activeTexture(gl.TEXTURE1);
       gl.texImage2D(
-        gl.TEXTURE_2D,        // target 
+        gl.TEXTURE_2D,        // target
         0,                    // level
         gl.ALPHA,             // internalformat
         segmentation.width,   // width
@@ -171,7 +171,7 @@ Finally, here's what I get when I run the demo against my own webcam feed:
         gl.ALPHA,             // format, "must be the same as internalformat"
         gl.UNSIGNED_BYTE,     // type of data below
         byteData     // pixels
-      );  
+      );
 
       webcamVideoEl.requestVideoFrameCallback(segmentLoop);
     }

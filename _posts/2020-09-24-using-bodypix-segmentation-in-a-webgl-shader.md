@@ -9,9 +9,9 @@ I showed how to run BodyPix on a video stream,
 displaying the segmentation using the library's convenience functions.
 But if you want to use the segmentation as part of your WebGL rendering pipeline,
 you need to access the segmentation from your shader.
-In this post, 
-I demo a pixel shader 
-that sets the alpha channel of a canvas 
+In this post,
+I demo a pixel shader
+that sets the alpha channel of a canvas
 based on a BodyPix segmentation.
 The demo shows your webcam feed in the bottom-right corner of this page
 with alpha-transparency taken from BodyPix.
@@ -52,14 +52,14 @@ function renderSegmentation(segmentation) {
 It will give you output like this if you wave at the camera:
 
 ```
-            XXXXX    XX        
-           XXXXXXX  XXXXX      
-           XXXXXXX  XXXXXX     
-           XXXXXXX   XXXXX     
-            XXXXX     XXXXX    
-           XXXXXX      XXXXX   
-       XXXXXXXXXXXXXXX   XXXX  
-   XXXXXXXXXXXXXXXXXXXXX XXXXX 
+            XXXXX    XX
+           XXXXXXX  XXXXX
+           XXXXXXX  XXXXXX
+           XXXXXXX   XXXXX
+            XXXXX     XXXXX
+           XXXXXX      XXXXX
+       XXXXXXXXXXXXXXX   XXXX
+   XXXXXXXXXXXXXXXXXXXXX XXXXX
   XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
@@ -74,7 +74,7 @@ Here's how to load the segmentation data into a texture:
 
 ```
 gl.texImage2D(
-  gl.TEXTURE_2D,        // target 
+  gl.TEXTURE_2D,        // target
   0,                    // level
   gl.ALPHA,             // internalformat
   segmentation.width,   // width
@@ -126,7 +126,7 @@ In priority order:
 
 <script id="fragment-shader" type="glsl">
   precision mediump float;
-  
+
   uniform sampler2D frame;
   uniform sampler2D mask;
 
@@ -176,7 +176,7 @@ In priority order:
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-  
+
   gl.activeTexture(gl.TEXTURE1);
   const background = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, background);
@@ -221,7 +221,7 @@ In priority order:
       webcamVideoEl.width = metadata.width;
       webcamVideoEl.height = metadata.height;
 
-      const segmentation = await net.segmentPerson(webcamVideoEl, { 
+      const segmentation = await net.segmentPerson(webcamVideoEl, {
         internalResolution: 'high',  // does make a difference; TODO investigate what precisely this does
         maxDetections: 1,
         segmentationThreshold: 0.7,
@@ -231,7 +231,7 @@ In priority order:
 
       gl.activeTexture(gl.TEXTURE1);
       gl.texImage2D(
-        gl.TEXTURE_2D,        // target 
+        gl.TEXTURE_2D,        // target
         0,                    // level
         gl.ALPHA,             // internalformat
         segmentation.width,   // width

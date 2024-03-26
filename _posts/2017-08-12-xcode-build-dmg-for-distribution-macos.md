@@ -1,6 +1,15 @@
 ---
-title: "How to build a .dmg to distribute MacOS apps"
-justification: "I want to release Vidrio 1.2 as a .dmg, bypassing the Mac App Store."
+title: How to build a .dmg to distribute MacOS apps
+justification: 'I want to release Vidrio 1.2 as a .dmg, bypassing the Mac App Store.'
+tags:
+  - dmg
+  - mac-app-store
+  - macos
+  - code-signing
+  - xcode
+  - app-distribution
+  - app-development
+taggedAt: '2024-03-26'
 ---
 
 To release a MacOS app through the Mac App Store, there is an integrated wizard in Xcode. Distributing your MacOS app outside the Mac App Store is less documented.

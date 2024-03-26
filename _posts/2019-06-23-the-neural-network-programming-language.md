@@ -1,7 +1,13 @@
 ---
-title: "The neural network programming language"
-tags: ["programming", "ml"]
+title: The neural network programming language
 draft: true
+tags:
+  - neural-networks
+  - ml
+  - javascript
+  - programming
+  - machine-learning
+taggedAt: '2024-03-26'
 ---
 
 Here's a JavaScript function that

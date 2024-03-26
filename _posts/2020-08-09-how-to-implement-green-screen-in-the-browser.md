@@ -1,9 +1,17 @@
 ---
-title: "How to implement green screen in the browser"
-tags: ["programming", "web"]
+title: How to implement green screen in the browser
+tags:
+  - webgl
+  - greenscreen
+  - video
+  - graphics-programming
+  - javascript
+  - web
+  - programming
+taggedAt: '2024-03-26'
 ---
 
-You're making a web app that captures a user's webcam, 
+You're making a web app that captures a user's webcam,
 your user has a green screen behind them,
 and you want to "remove the background" from the webcam video in realtime.
 This post shows one way to do so.
@@ -42,7 +50,7 @@ which replaces green pixels with magenta:
             // Downsamples video to canvas size
             blitCtx.drawImage(webcamVideoEl, 0, 0, canvasWidth, height);
             const imageData = blitCtx.getImageData(0, 0, canvasWidth, height);
-            
+
             const numPixels = imageData.data.length / 4;
             for (let i = 0; i < numPixels; i++) {
               const r = imageData.data[i * 4 + 0];
@@ -111,17 +119,17 @@ Finally, here's the complete HTML for this example.
 
               // use aspect ratio of latest frame
               const height = canvasWidth * metadata.height/metadata.width;
-  
+
               // note this clears the canvases (at least in Chrome)
               blitCanvas.width = canvasWidth;
               blitCanvas.height = height;
               displayCanvasEl.width = canvasWidth;
               displayCanvasEl.height = height;
-  
+
               // Downsamples video to canvas size
               blitCtx.drawImage(webcamVideoEl, 0, 0, canvasWidth, height);
               const imageData = blitCtx.getImageData(0, 0, canvasWidth, height);
-              
+
               const numPixels = imageData.data.length / 4;
               for (let i = 0; i < numPixels; i++) {
                 const r = imageData.data[i * 4 + 0];

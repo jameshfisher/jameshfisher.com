@@ -1,5 +1,11 @@
 ---
-title: "Long calendar"
+title: Long calendar
+tags:
+  - time-management
+  - planning
+  - personal
+  - app-ideas
+taggedAt: '2024-03-26'
 ---
 
 Google Calendar defaults to a 7-day window onto your life. You can zoom in to view a single day, or zoom out to view an entire month. Events come with a precise start and end time, and those times are displayed to the minute. Events are either definitely happening or not mentioned at all. Time stretches off forever in both directions.

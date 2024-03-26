@@ -1,6 +1,12 @@
 ---
-title: "How does reverse DNS lookup work?"
-tags: ["programming", "networking"]
+title: How does reverse DNS lookup work?
+tags:
+  - reverse-dns
+  - dns
+  - networking
+  - posix
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 You have an IP address like `8.8.4.4`,

@@ -1,5 +1,12 @@
 ---
-title: "What is C `include`?"
+title: What is C `include`?
+tags:
+  - c-include
+  - c-preprocessor
+  - linking
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Take this C program:

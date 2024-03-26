@@ -1,6 +1,12 @@
 ---
-title: "How to fix 'Activating bundler (< 2) failed' error in your jekyll build"
-tags: ["programming"]
+title: How to fix 'Activating bundler (< 2) failed' error in your jekyll build
+tags:
+  - bundler
+  - jekyll
+  - ruby
+  - programming
+  - continuous-integration
+taggedAt: '2024-03-26'
 ---
 
 This site is built using Jekyll,

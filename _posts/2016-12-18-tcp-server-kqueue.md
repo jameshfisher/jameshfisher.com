@@ -1,5 +1,14 @@
 ---
-title: "How to write a TCP server with the `kqueue` API"
+title: How to write a TCP server with the `kqueue` API
+tags:
+  - c
+  - programming
+  - networking
+  - tcp
+  - kqueue
+  - posix
+  - system-calls
+taggedAt: '2024-03-26'
 ---
 
 I previously described [how a process can serve multiple TCP clients simultaneously using the `select` system call](/2016/12/16/tcp-server-select/), which blocks waiting for one of many possible events.

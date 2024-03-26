@@ -1,5 +1,10 @@
 ---
 title: 'What is a "file descriptor", really?'
+tags:
+  - c
+  - posix
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 People say "in UNIX, everything is a file". And that we interact with the operating system through "file descriptors".

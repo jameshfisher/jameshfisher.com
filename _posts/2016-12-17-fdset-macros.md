@@ -1,5 +1,9 @@
 ---
-title: "What is `fdset` in C?"
+title: What is `fdset` in C?
+tags:
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 `sys/socket.h` provides some macros for working with sets of file descriptors. How do they work?

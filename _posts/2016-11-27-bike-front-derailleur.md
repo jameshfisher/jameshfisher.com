@@ -1,5 +1,8 @@
 ---
-title: "Bike front derailleur"
+title: Bike front derailleur
+tags:
+  - bike
+taggedAt: '2024-03-26'
 ---
 
 I bought a bike from EBay. It has decent components, but they seem mashed together incompatibly. My front derailleur doesn't shift properly.

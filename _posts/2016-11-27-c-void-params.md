@@ -1,5 +1,10 @@
 ---
-title: "What does `void` mean as a function parameter in C?"
+title: What does `void` mean as a function parameter in C?
+tags:
+  - c
+  - programming
+  - semantics
+taggedAt: '2024-03-26'
 ---
 
 What is the difference between

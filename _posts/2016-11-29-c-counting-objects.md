@@ -1,5 +1,9 @@
 ---
-title: "What type should I use to count objects in C?"
+title: What type should I use to count objects in C?
+tags:
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 You often need to count objects in memory: for example, if you have a linked list, and you want to keep or calculate the length. What datatype should you use for this?

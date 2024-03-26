@@ -84,14 +84,23 @@ async function getTagVocab(filePaths: string[]): Promise<Set<string>> {
   return tagSet;
 }
 
+function shuffle<T>(array: T[]): void {
+  // Fisher-Yates shuffle
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 async function main() {
   const dateStr = new Date().toISOString().slice(0, 10);
 
   const filePaths = fs
     .readdirSync("_posts")
     .filter((filename) => filename.endsWith(".md"))
-    .map((filename) => `_posts/${filename}`)
-    .sort((a, b) => a.localeCompare(b));
+    .map((filename) => `_posts/${filename}`);
+
+  shuffle(filePaths);
 
   const globalTagVocab = await getTagVocab(filePaths);
   const initialVocabList = [...globalTagVocab];

@@ -1,5 +1,9 @@
 ---
-title: "What is `sigaction` in C?"
+title: What is `sigaction` in C?
+tags:
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 The "`signal` facility is a simplified interface to the more general `sigaction` facility." Indeed, when we trace a C program with `signal` calls, we only see calls to `sigaction` system calls. We're also told that "`signal` is less portable than `sigaction` when establishing a signal handler".

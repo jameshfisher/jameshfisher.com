@@ -1,5 +1,9 @@
 ---
-title: "How does differential signaling work in USB?"
+title: How does differential signaling work in USB?
+tags:
+  - usb
+  - electronics
+taggedAt: '2024-03-26'
 ---
 
 The job of those data wires is to transfer a single signal (the "serial" in USB). This means USB is "half-duplex": at any given time, one end of the cable is the sender, and the other end the receiver.

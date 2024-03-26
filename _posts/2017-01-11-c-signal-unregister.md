@@ -1,5 +1,9 @@
 ---
-title: "How do I unregister a `signal` handler in C?"
+title: How do I unregister a `signal` handler in C?
+tags:
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 There are two possible ways to unregister a signal handler, and both re-use the same `signal` function:

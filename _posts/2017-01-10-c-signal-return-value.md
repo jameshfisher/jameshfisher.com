@@ -1,5 +1,9 @@
 ---
-title: "What does the C `signal` function return?"
+title: What does the C `signal` function return?
+tags:
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Look at the `signal` signature: `sig_t signal(int sig, sig_t func)`. What is that return value?

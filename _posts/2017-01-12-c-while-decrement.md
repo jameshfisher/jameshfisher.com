@@ -1,5 +1,9 @@
 ---
-title: "Doing something `n` times in C with `while` and decrement"
+title: Doing something `n` times in C with `while` and decrement
+tags:
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Here's the standard way to `do_something()` `n` times in C:

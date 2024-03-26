@@ -1,5 +1,9 @@
 ---
-title: "How does the USB power wire work?"
+title: How does the USB power wire work?
+tags:
+  - usb
+  - electronics
+taggedAt: '2024-03-26'
 ---
 
 I stripped a USB cable. The cable itself has four wires: white, black, red, and green. Each USB cable has two ends, each with a _connector_. One one end is a type-A connector, and on the other a micro-B connector. The type-A connector has four pins, and the type-B has five!

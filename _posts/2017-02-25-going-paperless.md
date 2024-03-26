@@ -1,5 +1,8 @@
 ---
-title: "Should I go paperless?"
+title: Should I go paperless?
+tags:
+  - personal
+taggedAt: '2024-03-26'
 ---
 
 I have countless pieces of paper in my flat. Most of them ...

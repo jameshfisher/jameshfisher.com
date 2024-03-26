@@ -1,5 +1,12 @@
 ---
-title: "What are the `domain` and `type` arguments to the `socket` system call?"
+title: What are the `domain` and `type` arguments to the `socket` system call?
+tags:
+  - socket-programming
+  - c
+  - posix
+  - networking
+  - system-calls
+taggedAt: '2024-03-26'
 ---
 
 Here's the `socket` system call:

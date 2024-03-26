@@ -1,5 +1,13 @@
 ---
-title: "How to write a TCP server with the `pthread` API"
+title: How to write a TCP server with the `pthread` API
+tags:
+  - pthread
+  - tcp
+  - posix
+  - c
+  - networking
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 I've described several ways to write a TCP server:

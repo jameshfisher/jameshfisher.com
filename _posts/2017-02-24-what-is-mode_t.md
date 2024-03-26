@@ -1,5 +1,14 @@
 ---
-title: "What is `mode_t` in C?"
+title: What is `mode_t` in C?
+tags:
+  - mode_t
+  - file-io
+  - file-descriptors
+  - permissions
+  - c
+  - programming
+  - posix
+taggedAt: '2024-03-26'
 ---
 
 Lots of man pages refer to `mode_t`, but frustratingly, the manual does not include a page on it. (This is a general flaw in the manual: there are no pages for types.) The documentation for `mode_t` is found buried in `CHMOD(2)`:

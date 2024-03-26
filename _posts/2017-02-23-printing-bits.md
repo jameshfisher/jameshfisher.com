@@ -1,5 +1,10 @@
 ---
-title: "How do I print bits in C?"
+title: How do I print bits in C?
+tags:
+  - bitwise-operations
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 (For the byte-by-byte version, see ["How do I print bytes in C?"](/2016/12/22/printing-bytes/).)

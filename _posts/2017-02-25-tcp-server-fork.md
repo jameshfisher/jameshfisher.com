@@ -1,5 +1,16 @@
 ---
-title: "How to write a TCP server using the `fork` syscall"
+title: How to write a TCP server using the `fork` syscall
+tags:
+  - fork
+  - tcp
+  - ipc
+  - c
+  - networking
+  - posix
+  - processes
+  - system-calls
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 I've previously described some simple TCP servers. First, [a program which uses a single process, serving one client at a time](/2016/12/14/simple-tcp-server/). Usually, this is unacceptable: we want to multiplex multiple clients' connections, so that each client is responded to promptly. I described a couple of ways to do this which also use a single process. [One uses the `select` system call](/2016/12/16/tcp-server-select/), which blocks waiting for one of many possible events. Another [uses the `kqueue` system calls](/2016/12/18/tcp-server-kqueue/). But I omitted a more obvious way to achieve multiplexing, which uses one process per client connection.

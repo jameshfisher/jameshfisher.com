@@ -92,7 +92,7 @@ export function render(data) {
           collection.map((post) =>
             h("li", {}, [
               h("a", { href: post.data.external_url || post.url }, [
-                renderTitle(post.data.title || ""),
+                rawHtml(renderTitle(post.data.title || "")),
               ]),
             ]),
           ),

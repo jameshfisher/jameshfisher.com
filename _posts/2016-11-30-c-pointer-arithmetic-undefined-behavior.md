@@ -1,5 +1,10 @@
 ---
-title: "Does C allow pointer arithmetic?"
+title: Does C allow pointer arithmetic?
+tags:
+  - c
+  - programming
+  - undefined-behavior
+taggedAt: '2024-03-26'
 ---
 
 Does C allow pointer arithmetic? For example, if we have some `int*`, can we add that value to another value, to get another pointer?

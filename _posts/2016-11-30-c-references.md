@@ -1,5 +1,9 @@
 ---
-title: "Where is the C programming language defined?"
+title: Where is the C programming language defined?
+tags:
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 What is "C"? Where is C defined? Unfortunately, several places.

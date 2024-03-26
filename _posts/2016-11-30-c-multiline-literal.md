@@ -1,5 +1,9 @@
 ---
-title: "How do I write a multi-line string literal in C?"
+title: How do I write a multi-line string literal in C?
+tags:
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 What ways do we have to define large string literals in C? Let's take this example:

@@ -1,5 +1,10 @@
 ---
-title: "Can I put comments in string literals in C?"
+title: Can I put comments in string literals in C?
+tags:
+  - c
+  - programming
+  - syntax-highlighting
+taggedAt: '2024-03-26'
 ---
 
 What happens if your C string literal contains comment-like delimiters?

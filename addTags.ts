@@ -6,14 +6,33 @@ const anthropic = new Anthropic({
   apiKey: process.env["ANTHROPIC_API_KEY"],
 });
 
-const exampleFileContent = `
----
-title: "What is \`ssize_t\` in C?"
+type Example = { fileContentWithoutTags: string; tags: string[] };
+
+const examples: Example[] = [
+  {
+    fileContentWithoutTags: `---
+  title: "What is \`ssize_t\` in C?"
+  ---
+
+  Lots of C functions use a type called \`ssize_t\`. What's that? What is the extra \`s\`? In short, \`ssize_t\` is the same as \`size_t\`, but is a signed type - read \`ssize_t\` as "signed \`size_t\`".
+  `,
+    tags: ["size_t", "c", "posix", "programming"],
+  },
+  {
+    fileContentWithoutTags: `---
+title: Don't use the word 'simply'
 ---
 
-Lots of C functions use a type called \`ssize_t\`. What's that? What is the extra \`s\`? In short, \`ssize_t\` is the same as \`size_t\`, but is a signed type - read \`ssize_t\` as "signed \`size_t\`".
-`;
-const exampleTags = ["size_t", "posix", "c", "programming"];
+Take these examples:
+
+> One approach is simply to compress the messages.
+
+> Simply link in the CDN and get started.
+
+All of these sentences are improved by removing the word "simply".`,
+    tags: ["technical-writing", "writing", "communication", "essay"],
+  },
+];
 
 async function fileToTags(
   fileContentWithoutTags: string,
@@ -24,16 +43,22 @@ async function fileToTags(
   const message = await anthropic.messages.create({
     max_tokens: 128,
     system: [
-      `You are given a blog post from jameshfisher.com.`,
+      `You are given an excerpt of a blog post from jameshfisher.com.`,
       `You respond with a string like "Tags: foo, bar".`,
+      `The tags will be added to the post.`,
       `Tags are used to recommend similar posts, and to allow browsing by topic.`,
       `Use existing tags where possible, which are: \`${vocabList.join(", ")}\`.`,
       `If the post covers any topics that do not yet have tags, invent new tags.`,
-      `Start with specific keywords, and work up to more general topics.`,
+      `Start with specific keywords from the post, and work up to more general topics.`,
     ].join(" "),
     messages: [
-      { role: "user", content: exampleFileContent },
-      { role: "assistant", content: `Tags: ${exampleTags.join(", ")}` },
+      ...examples.flatMap(
+        (example) =>
+          [
+            { role: "user", content: example.fileContentWithoutTags },
+            { role: "assistant", content: `Tags: ${example.tags.join(", ")}` },
+          ] as const,
+      ),
       { role: "user", content: fileContentWithoutTags.slice(0, 2048) },
       { role: "assistant", content: `Tags:` },
     ],
@@ -69,17 +94,18 @@ async function main() {
     .sort((a, b) => a.localeCompare(b));
 
   const globalTagVocab = await getTagVocab(filePaths);
-  console.log(`Tag vocab: ${[...globalTagVocab].join(", ")}`);
+  const initialVocabList = [...globalTagVocab];
+  initialVocabList.sort((a, b) => a.localeCompare(b));
+  console.log(`Tag vocab: ${initialVocabList.join(", ")}`);
 
   let i = 0;
   for (const filePath of filePaths) {
-    console.log(`Processing ${filePath}`);
     const fileContentWithOldTags = fs.readFileSync(filePath, "utf8");
     const { data: postFrontmatter, content } = matter(fileContentWithOldTags);
     if (postFrontmatter.taggedAt) {
-      console.log(`Already tagged; skipping`);
       continue;
     }
+    console.log(`Processing ${filePath}`);
     const postTagSet = new Set(postFrontmatter.tags ?? []);
     delete postFrontmatter.tags;
     const fileContentWithoutTags = matter.stringify(content, postFrontmatter);
@@ -96,7 +122,7 @@ async function main() {
     const fileContentWithNewTags = matter.stringify(content, postFrontmatter);
     fs.writeFileSync(filePath, fileContentWithNewTags);
     i++;
-    if (i >= 4) return;
+    if (i >= 8) return;
   }
 }
 

@@ -1,5 +1,9 @@
 ---
-title: "How is the stack laid out in C?"
+title: How is the stack laid out in C?
+tags:
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 What does the stack look like?

@@ -1,5 +1,11 @@
 ---
-title: "How does a stream cipher work?"
+title: How does a stream cipher work?
+tags:
+  - stream-cipher
+  - one-time-pad
+  - cryptography
+  - security
+taggedAt: '2024-03-26'
 ---
 
 * A stream cipher works roughly like a one-time pad.

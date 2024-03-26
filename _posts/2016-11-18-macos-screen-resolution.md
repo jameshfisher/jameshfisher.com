@@ -1,5 +1,8 @@
 ---
-title: "How do I change the resolution on macOS?"
+title: How do I change the resolution on macOS?
+tags:
+  - macos
+taggedAt: '2024-03-26'
 ---
 
 I just got more screen space! System Preferences > Displays, set Resolution to "Scaled"  and to "More Space" 🎉

@@ -1,5 +1,10 @@
 ---
-title: "A C typedef convention for complex types"
+title: A C typedef convention for complex types
+tags:
+  - types
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 C type syntax is maddening to read and write. The only sensible way to proceed is to force yourself to only ever express composite types in a `typedef`.

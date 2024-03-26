@@ -1,5 +1,9 @@
 ---
-title: "Don't use the word 'it'"
+title: Don't use the word 'it'
+tags:
+  - technical-writing
+  - documentation
+taggedAt: '2024-03-26'
 ---
 
 I recently discovered a magic rule for instantly clarifying your technical writing: don't use the word "it".

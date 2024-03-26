@@ -1,5 +1,8 @@
 ---
-title: "What is symmetric cryptography?"
+title: What is symmetric cryptography?
+tags:
+  - cryptography
+taggedAt: '2024-03-26'
 ---
 
 My understanding of cryptography is very superficial. Here are some notes.

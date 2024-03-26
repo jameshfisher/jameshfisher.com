@@ -1,5 +1,11 @@
 ---
-title: "In what ways can processes communicate?"
+title: In what ways can processes communicate?
+tags:
+  - posix
+  - ipc
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 UNIX processes on their own are boring; they are interesting when they communicate. There are many methods of "Inter-process communication", or IPC. What are all these methods? There are many!:

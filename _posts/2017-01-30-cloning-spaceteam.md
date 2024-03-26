@@ -1,5 +1,11 @@
 ---
-title: "Cloning Spaceteam"
+title: Cloning Spaceteam
+tags:
+  - web-apps
+  - pusher
+  - webrtc
+  - javascript
+taggedAt: '2024-03-26'
 ---
 
 Spaceteam is a multiplayer cooperative game which simulates a team of people operating a spaceship by manipulating the widgets on its deck. Each player uses their mobile. Their screen shows their individual piece of the spaceship's deck. Each player always has an instruction at the top of the screen. The instructions may be for other players; thus the team have to communicate by shouting out instructions. Hilarity ensues from the stupid names of the widgets and the ineffectiveness of the team's communication.

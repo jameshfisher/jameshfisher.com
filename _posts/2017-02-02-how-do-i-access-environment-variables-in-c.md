@@ -1,5 +1,11 @@
 ---
-title: "How do I access environment variables in C?"
+title: How do I access environment variables in C?
+tags:
+  - environment-variables
+  - c
+  - programming
+  - posix
+taggedAt: '2024-03-26'
 ---
 
 Environment variables are in the global variable `environ`. This points to an array of pointers to strings. To access the variable, we declare it with `extern`. We can then iterate over it like a normal array.

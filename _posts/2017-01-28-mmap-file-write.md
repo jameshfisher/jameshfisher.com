@@ -1,5 +1,11 @@
 ---
-title: "How can I write a file with `mmap` in C?"
+title: How can I write a file with `mmap` in C?
+tags:
+  - mmap
+  - system-calls
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Here's an example of writing to a file using `mmap`.

@@ -1,5 +1,12 @@
 ---
-title: "How do I read `man` pages?"
+title: How do I read `man` pages?
+tags:
+  - man
+  - posix
+  - c
+  - documentation
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 UNIX systems traditionally come with a built-in manual. How do we read it?

@@ -1,5 +1,11 @@
 ---
-title: "What is the type of a constant in C?"
+title: What is the type of a constant in C?
+tags:
+  - c
+  - programming
+  - semantics
+  - types
+taggedAt: '2024-03-26'
 ---
 
 When we write expressions like this in C:

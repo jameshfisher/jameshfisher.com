@@ -1,5 +1,9 @@
 ---
-title: "How can I read a file with `mmap` in C?"
+title: How can I read a file with `mmap` in C?
+tags:
+  - memory-management
+  - c
+taggedAt: '2024-03-26'
 ---
 
 Yesterday I introduced `mmap` as a way to map physical memory into the address space. But `mmap` is more well-known for its ability to map _files_ into the address space.

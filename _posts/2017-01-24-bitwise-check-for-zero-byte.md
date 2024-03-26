@@ -1,5 +1,12 @@
 ---
-title: "Quickly checking for a zero byte in C using bitwise operations"
+title: Quickly checking for a zero byte in C using bitwise operations
+tags:
+  - c
+  - programming
+  - bitwise-operations
+  - optimization
+  - performance
+taggedAt: '2024-03-26'
 ---
 
 I stumbled upon this magic way to check whether a 64-bit word contains a zero byte:

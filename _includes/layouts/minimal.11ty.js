@@ -121,7 +121,7 @@ export function render(data) {
       h("div", { id: "content" }, [
         h("h1", {}, [
           author === "jim" ? "" : "Guest post: ",
-          renderTitle(data.title || ""),
+          rawHtml(renderTitle(data.title || "")),
         ]),
         author === "jim"
           ? ""

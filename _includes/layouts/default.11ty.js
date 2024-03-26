@@ -75,7 +75,7 @@ export function render(data) {
           h(
             "a",
             { class: "post", href: post.external_url || post.url },
-            renderTitle(post.data.title),
+            rawHtml(renderTitle(post.data.title)),
           ),
         ),
       ]),

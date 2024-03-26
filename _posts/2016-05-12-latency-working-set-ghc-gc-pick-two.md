@@ -1,5 +1,12 @@
 ---
-title: "Low latency, large working set, and GHC's garbage collector: pick two of three"
+title: 'Low latency, large working set, and GHC''s garbage collector: pick two of three'
+tags:
+  - haskell
+  - performance
+  - garbage-collection
+  - latency
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 _(Originally published [on the Pusher engineering blog](https://making.pusher.com/latency-working-set-ghc-gc-pick-two/).)_
@@ -287,7 +294,7 @@ and not all programs fit this heuristic.
 GHC cannot achieve low latency with a large working set.
 We are in the process of reimplementing our message bus with this lesson in mind.
 We’re exploring a few avenues for avoiding the problem.
-We plan to talk about the new implementation in a future blog post. 
+We plan to talk about the new implementation in a future blog post.
 Stay tuned!
 
 <style>

@@ -1,6 +1,13 @@
 ---
-title: "Understanding the ELF"
-external_url: "https://medium.com/@MrJamesFisher/understanding-the-elf-4bd60daac571"
+title: Understanding the ELF
+external_url: 'https://medium.com/@MrJamesFisher/understanding-the-elf-4bd60daac571'
+tags:
+  - elf
+  - quine
+  - file-format
+  - computer-science
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 I wrote an ELF binary which, when run, prints itself on standard output.

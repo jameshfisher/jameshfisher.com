@@ -1,5 +1,9 @@
 ---
-title: "A summary of 'On-the-Fly Garbage Collection: An Exercise in Cooperation'"
+title: 'A summary of ''On-the-Fly Garbage Collection: An Exercise in Cooperation'''
+tags:
+  - garbage-collection
+  - computer-science
+taggedAt: '2024-03-26'
 ---
 
 A summary of: http://research.microsoft.com/en-us/um/people/lamport/pubs/garbage.pdf

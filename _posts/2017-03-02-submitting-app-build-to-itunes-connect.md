@@ -1,6 +1,16 @@
 ---
-title: "How to submit an app build to iTunes Connect"
-justification: "I'm releasing Vidrio this month. Part of the release process is build submission."
+title: How to submit an app build to iTunes Connect
+justification: >-
+  I'm releasing Vidrio this month. Part of the release process is build
+  submission.
+tags:
+  - macos
+  - app-development
+  - app-distribution
+  - app-store
+  - xcode
+  - ios
+taggedAt: '2024-03-26'
 ---
 
 I'm releasing Vidrio, a macOS app, to the Mac App Store. Part of the process is to submit a build of the application to iTunes Connect. Here's how.

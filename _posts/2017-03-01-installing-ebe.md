@@ -1,6 +1,15 @@
 ---
-title: "Installing and running `ebe`"
-justification: "I'm working through Ray Sefarth's assembly book. It heavily uses his program, `ebe`."
+title: Installing and running `ebe`
+justification: >-
+  I'm working through Ray Sefarth's assembly book. It heavily uses his program, `ebe`.
+tags:
+  - ebe
+  - gcc
+  - gdb
+  - assembly
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 The `ebe` program is installable with:

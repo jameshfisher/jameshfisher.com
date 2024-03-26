@@ -1,6 +1,16 @@
 ---
-title: "How to add a developer account to XCode"
-justification: "I'm making Vidrio with XCode. I've just switched to my new MacBook Pro, which doesn't want to build Vidrio."
+title: How to add a developer account to XCode
+justification: >-
+  I'm making Vidrio with XCode. I've just switched to my new MacBook Pro, which
+  doesn't want to build Vidrio.
+tags:
+  - xcode
+  - ios
+  - macos
+  - app-development
+  - code-signing
+  - certificates
+taggedAt: '2024-03-26'
 ---
 
 I just switched to my new MacBook Pro (the one with the touch bar - a feature I'll be adding to Vidrio). I cloned the Vidrio repository, and attempted to build it with XCode, but XCode complains:

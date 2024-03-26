@@ -1,6 +1,14 @@
 ---
-title: "What is the Apple Store release process?"
-justification: "I'm releasing Vidrio on the Mac App Store, so I need to know the process!"
+title: What is the Apple Store release process?
+justification: 'I''m releasing Vidrio on the Mac App Store, so I need to know the process!'
+tags:
+  - mac-app-store
+  - app-distribution
+  - app-development
+  - product-management
+  - monetization
+  - software-development
+taggedAt: '2024-03-26'
 ---
 
 I made an app called Vidrio. It's a macOS app, and it's going to be available on the Mac App Store. Just like [this example (Numbers, an app made by Apple)](https://itunes.apple.com/gb/app/numbers/id409203825). I've never released to the App Store before.

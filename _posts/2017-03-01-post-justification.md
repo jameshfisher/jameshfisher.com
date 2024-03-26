@@ -1,6 +1,15 @@
 ---
-title: "Justifying posts"
-justification: "I noticed in my monthly review that some posts were a bit random. Here is a possible technique for improving focus."
+title: Justifying posts
+justification: >-
+  I noticed in my monthly review that some posts were a bit random. Here is a
+  possible technique for improving focus.
+tags:
+  - blogging
+  - focus
+  - productivity
+  - technical-writing
+  - justification
+taggedAt: '2024-03-26'
 ---
 
 This month I have an experimental technique to improve the focus of my blogging. Posts should have a `justification` property, in which I justify the reason for the existence of the post. Typically this will refer back to one of my targets for the month. An example:

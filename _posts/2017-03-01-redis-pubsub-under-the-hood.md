@@ -1,5 +1,13 @@
 ---
-title: "Redis Pub/Sub under the hood"
+title: Redis Pub/Sub under the hood
+tags:
+  - redis
+  - pub-sub
+  - networking
+  - c
+  - programming
+  - software-design
+taggedAt: '2024-03-26'
 ---
 
 **Do you want to code a chat app?
@@ -107,7 +115,7 @@ The `pubsub_channels` array, with buckets from `0` to `7`,
 is a single allocated block of memory.
 To publish to a channel,
 we hash the channel’s name to find its bucket,
-then iterate over that channel’s set of clients. 
+then iterate over that channel’s set of clients.
 But different channel names can hash to the same bucket.
 Redis handles these collisions by “hash chaining”,
 which means each bucket points to a [linked list](https://github.com/antirez/redis/blob/3.2.6/src/dict.h#L47-L56) of channels.
@@ -165,13 +173,13 @@ Let’s recap our `PUBLISH` and `SUBSCRIBE` algorithms:
   Iterate over the hash chain, comparing each channel name (green) to our target channel name.
   Once we’ve found our target channel name, get the corresponding list of clients (red).
   Iterate over the linked list of clients, sending the published message to each client (purple).
-    
+
 * To `SUBSCRIBE`,
   find the linked list of clients as before.
   [Append the new client to the end of the linked list](https://github.com/antirez/redis/blob/3.2.6/src/pubsub.c#L76).
   (Actually, [this is a constant-time operation](https://github.com/antirez/redis/blob/3.2.6/src/adlist.c#L119),
   because [the linked lists have a tail pointer](https://github.com/antirez/redis/blob/3.2.6/src/adlist.h#L49).)
-  Also, add the channel to the client’s hash table.  
+  Also, add the channel to the client’s hash table.
 
 ## Realtime hash tables!
 
@@ -240,7 +248,7 @@ there is [the global `pubsub_patterns` list](https://github.com/antirez/redis
 This is a linked list of [pubsubPattern](https://github.com/antirez/redis/blob/3.2.6/src/server.h#L982-L985) objects,
 each of which associates one pattern with one client.
 Similarly, [each client object has a linked list](https://github.com/antirez/redis/blob/3.2.6/src/server.h#L610)
-of the patterns it is subscribed to. 
+of the patterns it is subscribed to.
 Here’s what `redis-server` memory looks like
 after client B subscribes to `drink?`,
 and clients A and B subscribe to `food.*`:

@@ -1,6 +1,15 @@
 ---
-title: "How do I create the AppIcon for my app?"
-justification: "I'm making Vidrio this month. It's complaining about misconfigured AppIcons, which I don't understand."
+title: How do I create the AppIcon for my app?
+justification: >-
+  I'm making Vidrio this month. It's complaining about misconfigured AppIcons,
+  which I don't understand.
+tags:
+  - icons
+  - macos
+  - app-development
+  - xcode
+  - vidrio
+taggedAt: '2024-03-26'
 ---
 
 I have several complaints in XCode like this:

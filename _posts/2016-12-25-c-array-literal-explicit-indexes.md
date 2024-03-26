@@ -1,5 +1,10 @@
 ---
-title: "How to write an array literal in C (with explicit indexes)"
+title: How to write an array literal in C (with explicit indexes)
+tags:
+  - c
+  - programming
+  - semantics
+taggedAt: '2024-03-26'
 ---
 
 How do you write a C array literal? The way I knew of was with curly braces:

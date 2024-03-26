@@ -1,5 +1,10 @@
 ---
-title: "How do I print bytes in C?"
+title: How do I print bytes in C?
+tags:
+  - c
+  - programming
+  - bitwise-operations
+taggedAt: '2024-03-26'
 ---
 
 What do the individual bytes of values in C look like? We can see the bytes by printing them out with this fun program:

@@ -1,5 +1,11 @@
 ---
-title: "How do I put an array in a struct in C?"
+title: How do I put an array in a struct in C?
+tags:
+  - c
+  - programming
+  - data-structure
+  - semantics
+taggedAt: '2024-03-26'
 ---
 
 Redis uses a string encoding which it calls "Simple Dynamic Strings". Simplified, it looks like:

@@ -1,5 +1,9 @@
 ---
-title: "How does GeoDNS work?"
+title: How does GeoDNS work?
+tags:
+  - dns
+  - networking
+taggedAt: '2024-03-26'
 ---
 
 Say you're serving static files to clients and want to minimize their request latency. The latency between sending the request and receiving the response is mostly due to the distance between the client and your server, i.e. due to time spent by packets on the network. So the way to reduce this latency is to move your server closer to the client. But since your clients are all over the globe, this means you need many servers, spread all over the globe, so that clients can query the server closest to them. The question then arises: how can you connect a client to the server which is geographically closest to them?

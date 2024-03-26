@@ -3,7 +3,7 @@ title: What does `getaddrinfo` do?
 tags:
   - programming
   - c
-  - unix
+  - posix
 hnUrl: 'https://news.ycombinator.com/item?id=30444336'
 hnUpvotes: 2
 ---

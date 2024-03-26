@@ -2,7 +2,7 @@
 title: Don't use `nscd`
 tags:
   - programming
-  - unix
+  - posix
   - c
 hnUrl: 'https://news.ycombinator.com/item?id=32950968'
 hnUpvotes: 2

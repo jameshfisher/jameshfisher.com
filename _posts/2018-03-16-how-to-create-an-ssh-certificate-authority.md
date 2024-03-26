@@ -1,7 +1,7 @@
 ---
 title: How to create an SSH certificate authority
 tags:
-  - unix
+  - posix
 hnUrl: 'https://news.ycombinator.com/item?id=17720316'
 hnUpvotes: 1
 ---

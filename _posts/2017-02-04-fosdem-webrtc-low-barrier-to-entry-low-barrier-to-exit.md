@@ -1,5 +1,9 @@
 ---
-title: "WebRTC - low barrier to entry, low barrier to exit?"
+title: 'WebRTC - low barrier to entry, low barrier to exit?'
+tags:
+  - webrtc
+  - web
+taggedAt: '2024-03-26'
 ---
 
 Summary:

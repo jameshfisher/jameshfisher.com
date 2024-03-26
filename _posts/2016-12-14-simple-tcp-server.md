@@ -2,7 +2,6 @@
 title: What syscalls does a TCP server need?
 tags:
   - tcp
-  - unix
   - c
   - programming
   - networking

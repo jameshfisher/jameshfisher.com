@@ -1,5 +1,8 @@
 ---
-title: "What are the stages of C compilation?"
+title: What are the stages of C compilation?
+tags:
+  - c
+taggedAt: '2024-03-26'
 ---
 
 C compilation goes through several stages. For `clang`, the C compiler on my machine, these are:

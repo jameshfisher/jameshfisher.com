@@ -1,5 +1,11 @@
 ---
-title: "How do I use `fork` in C?"
+title: How do I use `fork` in C?
+tags:
+  - c
+  - posix
+  - system-calls
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 The only way to create a new process in UNIX is with the `fork` system call, which duplicates the current process. Example:

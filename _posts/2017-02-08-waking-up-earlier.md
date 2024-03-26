@@ -1,5 +1,9 @@
 ---
-title: "How can I wake up earlier?"
+title: How can I wake up earlier?
+tags:
+  - personal
+  - productivity
+taggedAt: '2024-03-26'
 ---
 
 This ain't just a tech blog. It's a way to organize my life. One thing I've learned from my "blog every day" pledge is that the primary tool for life organization is _daily routine_. I don't think mine is optimal, so today I'm re-thinking it.

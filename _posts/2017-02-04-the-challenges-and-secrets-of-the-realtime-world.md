@@ -1,5 +1,11 @@
 ---
-title: "FOSDEM: The Challenges and Secrets of the Realtime World"
+title: 'FOSDEM: The Challenges and Secrets of the Realtime World'
+tags:
+  - fosdem
+  - realtime
+  - programming
+  - networking
+taggedAt: '2024-03-26'
 ---
 
 Summary:

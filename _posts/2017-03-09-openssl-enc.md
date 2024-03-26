@@ -1,6 +1,17 @@
 ---
-title: "How do I encrypt text with `openssl`?"
-justification: "I said I'd learn SSL/TLS. I'm first working through the various `openssl` subcommands."
+title: How do I encrypt text with `openssl`?
+justification: >-
+  I said I'd learn SSL/TLS. I'm first working through the various `openssl`
+  subcommands.
+tags:
+  - openssl
+  - tls
+  - cryptography
+  - security
+  - encryption
+  - cli
+  - c
+taggedAt: '2024-03-26'
 ---
 
 The `openssl` CLI tool is a bag of random tricks. One of them is the `enc` command. Here's an example of encrypting and decrypting some text:

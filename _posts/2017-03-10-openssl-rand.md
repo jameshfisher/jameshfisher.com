@@ -1,6 +1,15 @@
 ---
-title: "How do I generate random bytes with `openssl`?"
-justification: "I said I'd learn OpenSSL; `rand` is another tool in the toolbox"
+title: How do I generate random bytes with `openssl`?
+justification: I said I'd learn OpenSSL; `rand` is another tool in the toolbox
+tags:
+  - openssl
+  - tls
+  - cryptography
+  - security
+  - programming
+  - random-numbers
+  - cli
+taggedAt: '2024-03-26'
 ---
 
 Another command in `openssl` is `rand`. We invoke it like this:

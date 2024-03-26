@@ -1,6 +1,16 @@
 ---
-title: "How do I fetch a server's SSL certificate using `openssl`?"
-justification: "I said I'd learn SSL. I'm doing this by going through all the `openssl` commands. Here's the `s_client` command."
+title: How do I fetch a server's SSL certificate using `openssl`?
+justification: >-
+  I said I'd learn SSL. I'm doing this by going through all the `openssl`
+  commands. Here's the `s_client` command.
+tags:
+  - openssl
+  - tls
+  - certificates
+  - security
+  - cli
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 The `openssl` tool has a command `s_client` which is a general SSL client; i.e. it connects to an SSL-enabled server. HTTPS servers run an SSL on TCP port 443. We can use `s_client` to connect to them. Here's an example of connecting to the HTTPS server on `google.com` and getting the root page. In the course of this, the process prints the "certificate chain" to standard out.

@@ -1,6 +1,14 @@
 ---
-title: "How do I create a message digest using `openssl`?"
-justification: "I'm learning SSL, starting by going through the CLI tool commands"
+title: How do I create a message digest using `openssl`?
+justification: 'I''m learning SSL, starting by going through the CLI tool commands'
+tags:
+  - hmac
+  - hashing
+  - openssl
+  - cryptography
+  - programming
+  - cli
+taggedAt: '2024-03-26'
 ---
 
 The `openssl` tool has a `dgst` command which creates message digests. Here's an example:

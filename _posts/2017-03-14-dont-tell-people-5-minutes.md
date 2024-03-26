@@ -1,5 +1,12 @@
 ---
-title: "Don't say 'it will take five minutes'"
+title: Don't say 'it will take five minutes'
+tags:
+  - technical-writing
+  - communication
+  - product-management
+  - psychology
+  - estimates
+taggedAt: '2024-03-26'
 ---
 
 It's commonplace to emphasize that your product will let users achieve their goal in next to no time:

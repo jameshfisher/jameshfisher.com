@@ -1,6 +1,17 @@
 ---
-title: "How to make a Cocoa application without a `.xib` file"
-justification: "Vidrio has some random .xib file which I want to get rid of."
+title: How to make a Cocoa application without a `.xib` file
+justification: Vidrio has some random .xib file which I want to get rid of.
+tags:
+  - ios
+  - macos
+  - app-development
+  - xcode
+  - objective-c
+  - swift
+  - cocoa
+  - nib-file
+  - xib-file
+taggedAt: '2024-03-26'
 ---
 
 In XCode, go to `File > New > Project...` and select "Cocoa Application". Call it "Foo", then uncheck all of the "Use Storyboards", "Use Core Data", and other nonsense. You get a project which, when you run it, displays a window with the title "Foo". How does that window get there?

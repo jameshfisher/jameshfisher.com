@@ -1,7 +1,15 @@
 ---
-title: "Golang's realtime garbage collector at Not On The High Street Conference"
+title: Golang's realtime garbage collector at Not On The High Street Conference
 tags:
   - talk
+  - golang
+  - garbage-collection
+  - real-time
+  - conference
+  - software-development
+  - performance
+  - engineering
+taggedAt: '2024-03-26'
 ---
 
 After Will Sewell and I gave our "Golang's realtime garbage collector" talk at The Realtime Guild,

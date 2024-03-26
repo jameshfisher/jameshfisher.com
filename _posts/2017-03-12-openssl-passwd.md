@@ -1,6 +1,15 @@
 ---
-title: "How do I hash a password with `openssl`?"
-justification: "I'm learning SSL by working through the CLI tool commands."
+title: How do I hash a password with `openssl`?
+justification: I'm learning SSL by working through the CLI tool commands.
+tags:
+  - password-hashing
+  - openssl
+  - tls
+  - security
+  - cryptography
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Another command of `openssl` is `passwd`, which hashes passwords. Here's an example:

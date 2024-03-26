@@ -1,5 +1,11 @@
 ---
-title: "How do I close a file descriptor in C?"
+title: How do I close a file descriptor in C?
+tags:
+  - c
+  - posix
+  - file-descriptors
+  - system-calls
+taggedAt: '2024-03-26'
 ---
 
 To close a file descriptor, we use the `close` system call. Here's an example:

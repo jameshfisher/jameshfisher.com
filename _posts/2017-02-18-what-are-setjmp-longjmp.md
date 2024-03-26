@@ -1,5 +1,11 @@
 ---
-title: "What are `setjmp` and `longjmp` in C?"
+title: What are `setjmp` and `longjmp` in C?
+tags:
+  - setjmp
+  - longjmp
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Normal program flow in C follows function calls and branching constructs (`if`, `while` etc). The functions `setjmp` and `longjmp` introduce another kind of program flow.

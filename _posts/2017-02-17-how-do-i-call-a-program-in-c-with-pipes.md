@@ -1,5 +1,12 @@
 ---
-title: "How do I call a program in C, setting up standard pipes?"
+title: 'How do I call a program in C, setting up standard pipes?'
+tags:
+  - c
+  - programming
+  - pipes
+  - posix
+  - fave
+taggedAt: '2024-03-26'
 ---
 
 Earlier I showed [how to call a program in C](/2017/02/07/how-do-i-call-a-program-in-c/). This works by first forking the current process, then replacing the child process with the new program image. But how do we talk to this new process? We must set up the new process's standard pipes (standard in, out, error). This is a fair bit of work.
@@ -57,13 +64,13 @@ void call(char* argv[], struct subprocess * p) {
 
 After forking, the file descriptor table is cloned. This means both processes have the same references to every pipe. Recap which pipes we have: those for the parent process (its standard in, out, and error) and those for the child (the ones we just created). Each of those pipes has a read end and a write end. After forking, here is how both processes can refer to those pipe ends:
 
-| pipe end               | parent      | child     
+| pipe end               | parent      | child
 | ---------------------- | ----------- | ---------
-| parent stdin (read)    | `0`         | `0`         
-| parent stdout (write)  | `1`         | `1`         
-| parent stderr (write)  | `2`         | `2`         
-| child stdin (read)     | `stdin[0]`  | `stdin[0]`  
-| child stdin (write)    | `stdin[1]`  | `stdin[1]`  
+| parent stdin (read)    | `0`         | `0`
+| parent stdout (write)  | `1`         | `1`
+| parent stderr (write)  | `2`         | `2`
+| child stdin (read)     | `stdin[0]`  | `stdin[0]`
+| child stdin (write)    | `stdin[1]`  | `stdin[1]`
 | child stdout (read)    | `stdout[0]` | `stdout[0]`
 | child stdout (write)   | `stdout[1]` | `stdout[1]`
 | child stderr (read)    | `stderr[0]` | `stderr[0]`
@@ -80,17 +87,17 @@ What a mess! This needs some reshuffling:
 
 It should end up like this:
 
-| pipe end               | parent        | child     
+| pipe end               | parent        | child
 | ---------------------- | ------------- | ---------
-| parent stdin (read)    | `0`           | -         
-| parent stdout (write)  | `1`           | -         
-| parent stderr (write)  | `2`           | -         
-| child stdin (read)     | -             | `0`         
-| child stdin (write)    | `proc.stdin`  | -         
-| child stdout (read)    | `proc.stdout` | -         
-| child stdout (write)   | -             | `1`         
-| child stderr (read)    | `proc.stderr` | -         
-| child stderr (write)   | -             | `2`         
+| parent stdin (read)    | `0`           | -
+| parent stdout (write)  | `1`           | -
+| parent stderr (write)  | `2`           | -
+| child stdin (read)     | -             | `0`
+| child stdin (write)    | `proc.stdin`  | -
+| child stdout (read)    | `proc.stdout` | -
+| child stdout (write)   | -             | `1`
+| child stderr (read)    | `proc.stderr` | -
+| child stderr (write)   | -             | `2`
 
 ![desired state](/assets/2017-02-17-pipes/finished.svg)
 
@@ -114,12 +121,12 @@ void call(char* argv[], struct subprocess * p) {
 
 After `close`ing appropriate ends in each process, we end up with:
 
-| pipe end               | parent      | child     
+| pipe end               | parent      | child
 | ---------------------- | ----------- | ---------
-| parent stdin (read)    | `0`         | -       
-| parent stdout (write)  | `1`         | -         
-| parent stderr (write)  | `2`         | -       
-| child stdin (read)     | -           | `stdin[0]`  
+| parent stdin (read)    | `0`         | -
+| parent stdout (write)  | `1`         | -
+| parent stderr (write)  | `2`         | -
+| child stdin (read)     | -           | `stdin[0]`
 | child stdin (write)    | `stdin[1]`  | -
 | child stdout (read)    | `stdout[0]` | -
 | child stdout (write)   | -           | `stdout[1]`

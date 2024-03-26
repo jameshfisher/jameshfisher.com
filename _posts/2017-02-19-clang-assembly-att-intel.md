@@ -1,5 +1,13 @@
 ---
-title: "How to generate Intel and AT&T assembly with `clang`"
+title: How to generate Intel and AT&T assembly with `clang`
+tags:
+  - clang
+  - assembly
+  - intel-syntax
+  - att-syntax
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Earlier I showed [how to generate assembly from C](/2017/02/03/c-generate-assembly/). We compile this file with `clang -S`:

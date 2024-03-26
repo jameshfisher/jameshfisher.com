@@ -1,5 +1,14 @@
 ---
-title: "How to write an assembly 'hello world' on macOS"
+title: How to write an assembly 'hello world' on macOS
+tags:
+  - assembly
+  - macos
+  - hello-world
+  - nasm
+  - system-calls
+  - x86-64
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 I started with [this gist](https://gist.github.com/FiloSottile/7125822), creating this file:

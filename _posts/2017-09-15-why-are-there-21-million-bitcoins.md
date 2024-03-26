@@ -1,5 +1,10 @@
 ---
-title: "Why are there 21 million bitcoins?"
+title: Why are there 21 million bitcoins?
+tags:
+  - bitcoin
+  - cryptocurrency
+  - economics
+taggedAt: '2024-03-26'
 ---
 
 When all mining is done,

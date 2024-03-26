@@ -1,6 +1,10 @@
 ---
-title: "Converting a height map to a normal map"
+title: Converting a height map to a normal map
 draft: true
+tags:
+  - normal-maps
+  - graphics-programming
+taggedAt: '2024-03-26'
 ---
 
 Sample the points around to get a polygon

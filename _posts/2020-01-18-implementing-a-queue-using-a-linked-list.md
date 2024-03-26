@@ -1,9 +1,18 @@
 ---
-title: "Implementing a queue using a linked list"
-tags: ["ctci", "programming", "c"]
+title: Implementing a queue using a linked list
+tags:
+  - queue
+  - linked-list
+  - ctci
+  - programming
+  - c
+  - data-structures
+  - algorithms
+  - computer-science
+taggedAt: '2024-03-26'
 ---
 
-A "queue" is an abstract data type 
+A "queue" is an abstract data type
 that provides `enqueue` and `dequeue` operations
 which behave like a queue of people.
 There are many ways to implement a queue,

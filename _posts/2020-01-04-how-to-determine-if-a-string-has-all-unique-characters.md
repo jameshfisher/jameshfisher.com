@@ -1,6 +1,13 @@
 ---
-title: "Determine if a string has all unique characters"
-tags: ["ctci", "programming", "c"]
+title: Determine if a string has all unique characters
+tags:
+  - ctci
+  - programming
+  - c
+  - algorithms
+  - data-structures
+  - time-complexity
+taggedAt: '2024-03-26'
 ---
 
 Question 1.1 of _Cracking the Coding Interview_:

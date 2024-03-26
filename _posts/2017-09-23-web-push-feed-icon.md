@@ -1,6 +1,15 @@
 ---
-title: "A web push notification feed button"
+title: A web push notification feed button
 draft: true
+tags:
+  - web
+  - web-apps
+  - rss
+  - push-notifications
+  - ux
+  - ui
+  - design
+taggedAt: '2024-03-26'
 ---
 
 Lots of sites have RSS feeds.

@@ -1,12 +1,16 @@
 ---
 title: A probabilistic pub quiz for nerds
+hnUrl: 'https://news.ycombinator.com/item?id=22993239'
+hnUpvotes: 2
 tags:
   - mathematics
   - betting
   - fave
   - uncertainty
-hnUrl: 'https://news.ycombinator.com/item?id=22993239'
-hnUpvotes: 2
+  - probability
+  - quiz
+  - games
+taggedAt: '2024-03-26'
 ---
 
 The typical pub quiz has a "true or false" round.
@@ -15,13 +19,13 @@ the quizmaster tries to trick you
 with statements that are often believed to be true,
 but which are in fact false.
 In this game,
-you're rewarded for accuracy, 
+you're rewarded for accuracy,
 but not for your confidence --
-and that's unfortunate, because 
+and that's unfortunate, because
 drunk people just _love_ high-stakes gambling!
 In this post,
 I show the "Jim scoring" system,
-a simple way to inject risk and alcoholic overconfidence 
+a simple way to inject risk and alcoholic overconfidence
 into your "true or false" quiz round.
 
 As a refresher,
@@ -103,11 +107,11 @@ The scoring system is as follows:
 </style>
 
 The Jim scoring system sure looks odd at first glance!
-There's a "magic sequence" of numbers: 
-<span class="score score-vright">3</span>, 
-<span class="score score-right">2</span>, 
-<span class="score score-neutral">0</span>, 
-<span class="score score-wrong">-3</span>, 
+There's a "magic sequence" of numbers:
+<span class="score score-vright">3</span>,
+<span class="score score-right">2</span>,
+<span class="score score-neutral">0</span>,
+<span class="score score-wrong">-3</span>,
 <span class="score score-vwrong">-7</span>.
 Stare at it for a few seconds, and you might spot a pattern.
 But why is this a "good" scoring system?
@@ -129,16 +133,16 @@ but was it ⅓ of bones, or ¼, or ½ ..?
 Was it the feet, or one foot, or the hands ..?
 Let's say you think it's 70% likely that "Approximately ⅓ of human bones are in the feet".
 Then your _expected score_ for picking "60-80% likely" is calculated as
-(70% × <span class="score score-right">2 pts</span>) + 
+(70% × <span class="score score-right">2 pts</span>) +
 (30% × <span class="score score-wrong">-3 pts</span>).
 This expected score comes out at 0.5,
 which is higher than your expected score for any other answer.
-Here's a plot of your expected score, 
+Here's a plot of your expected score,
 given your belief and your answer:
 
 <p><img style="border: 0" src="/assets/2020-04-26/chart.svg" alt="expected score vs. belief" /></p>
 
-Notice that the "0-20% likely answer" is optimal 
+Notice that the "0-20% likely answer" is optimal
 precisely in the range 0-20%, and so on.
 Now you've had time to think about it,
 and you know the theory,
@@ -219,7 +223,7 @@ Post your final score on Twitter:
   };
 
   class QuizApp extends Component {
-    
+
     constructor() {
       super();
       this.state = {};
@@ -230,10 +234,10 @@ Post your final score on Twitter:
         quiz.map((q,i) => h('div', {class: 'question-box'}, [
           h('div', { class: 'question' }, q.question + ' How likely is this?'),
           h('div', null, [80,60,40,20,0].map(p => h('div', null, [
-            h('input', { 
-              type: 'radio', 
-              name: 'q'+i, 
-              id: 'q'+i+'_'+p, 
+            h('input', {
+              type: 'radio',
+              name: 'q'+i,
+              id: 'q'+i+'_'+p,
               value: p,
               disabled: this.state.hasOwnProperty('q'+i),
               onInput: () => {

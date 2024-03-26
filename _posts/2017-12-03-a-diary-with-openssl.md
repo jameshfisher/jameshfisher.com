@@ -1,6 +1,14 @@
 ---
-title: "An encrypted diary using OpenSSL"
-tags: ["programming", "openssl"]
+title: An encrypted diary using OpenSSL
+tags:
+  - diary
+  - cryptography
+  - privacy
+  - personal
+  - programming
+  - openssl
+  - security
+taggedAt: '2024-03-26'
 ---
 
 Writing helps me think.

@@ -1,5 +1,10 @@
 ---
-title: "What is electric charge?"
+title: What is electric charge?
+tags:
+  - electronics
+  - physics
+  - electricity
+taggedAt: '2024-03-26'
 ---
 
 In my quest to understand computing and networking, I have admitted a need to learn electronics. There's no escaping it any more.

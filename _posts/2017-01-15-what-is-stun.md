@@ -1,5 +1,10 @@
 ---
-title: "What is STUN?"
+title: What is STUN?
+tags:
+  - webrtc
+  - networking
+  - internet-protocol
+taggedAt: '2024-03-26'
 ---
 
 **TL;DR: STUN is a "What is my IP?" service**

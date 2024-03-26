@@ -1,6 +1,10 @@
 ---
-title: "Modular multiplication"
+title: Modular multiplication
 draft: true
+tags:
+  - modular-arithmetic
+  - math
+taggedAt: '2024-03-26'
 ---
 
 How about multiplication?

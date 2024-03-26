@@ -1,5 +1,9 @@
 ---
-title: "What is electric current?"
+title: What is electric current?
+tags:
+  - electricity
+  - physics
+taggedAt: '2024-03-26'
 ---
 
 So we saw what "electric charge" means: it measures _net protons_ of an object, i.e. the number of protons minus the number of electrons. We measure it in elementary charges, _e_.

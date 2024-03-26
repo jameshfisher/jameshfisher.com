@@ -1,5 +1,10 @@
 ---
-title: "How does reliability work in `RTCDataChannel`?"
+title: How does reliability work in `RTCDataChannel`?
+tags:
+  - webrtc
+  - networking
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 When we create a data channel, we pass some options:

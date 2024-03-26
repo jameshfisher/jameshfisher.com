@@ -1,5 +1,12 @@
 ---
 title: What does the `restrict` keyword mean in C?
+tags:
+  - pointers
+  - optimization
+  - c
+  - programming
+  - semantics
+taggedAt: '2024-03-26'
 ---
 
 Take this example:

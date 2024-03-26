@@ -1,5 +1,11 @@
 ---
-title: "What is 'array decaying' in C?"
+title: What is 'array decaying' in C?
+tags:
+  - c
+  - programming
+  - semantics
+  - pointers
+taggedAt: '2024-03-26'
 ---
 
 It is sometimes said that arrays in C are basically pointers. This is not true. What is true is that a value of an array type can _decay_ to a value of a pointer type.

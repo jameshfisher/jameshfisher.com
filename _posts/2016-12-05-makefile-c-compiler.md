@@ -1,5 +1,10 @@
 ---
 title: How do I set the C compiler in a `Makefile`?
+tags:
+  - make
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 How do you set your C compiler in a `Makefile`? You might write:

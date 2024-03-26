@@ -1,5 +1,10 @@
 ---
 title: What are automatic variables (dollar variables) in a `Makefile`?
+tags:
+  - make
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Suppose in your `Makefile` you wrote:

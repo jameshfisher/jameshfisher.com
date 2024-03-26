@@ -1,5 +1,9 @@
 ---
-title: "What is a 'binary-safe' string?"
+title: What is a 'binary-safe' string?
+tags:
+  - c
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 What do people mean when they say "binary-safe strings"? In C, strings are traditionally represented as a pointer to bytes, i.e. `char*`, where the array of bytes is terminated by a "null byte" (i.e. `'\0'`, i.e. `0`). This representation has the disadvantage that your string of bytes cannot itself contain a null byte, and so this structure cannot represent arbitrary strings of bytes. That is, C-strings are not "binary-safe".

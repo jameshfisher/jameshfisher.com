@@ -1,6 +1,11 @@
 ---
-title: "A proposal for visual pure functional programming"
-tags: ["programming"]
+title: A proposal for visual pure functional programming
+tags:
+  - functional-programming
+  - visual-programming
+  - haskell
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 

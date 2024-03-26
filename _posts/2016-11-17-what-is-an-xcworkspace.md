@@ -1,5 +1,9 @@
 ---
-title: "What is an `.xcworkspace` file?"
+title: What is an `.xcworkspace` file?
+tags:
+  - xcode
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Xcode often creates a "SomeProject.xcworkspace" file. What is it?

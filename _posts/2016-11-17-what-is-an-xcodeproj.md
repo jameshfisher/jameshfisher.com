@@ -1,5 +1,9 @@
 ---
-title: "What is an `.xcodeproj` file?"
+title: What is an `.xcodeproj` file?
+tags:
+  - xcode
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Xcode tracks "projects" with a file called `SomeProject.xcodeproj`.

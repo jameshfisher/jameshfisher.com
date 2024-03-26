@@ -1,6 +1,12 @@
 ---
-title: "Your first-class functions don't make you functional"
-external_url: "https://medium.com/@MrJamesFisher/your-first-class-functions-dont-make-you-functional-bcecd458f5aa"
+title: Your first-class functions don't make you functional
+external_url: >-
+  https://medium.com/@MrJamesFisher/your-first-class-functions-dont-make-you-functional-bcecd458f5aa
+tags:
+  - functional-programming
+  - programming
+  - opinion
+taggedAt: '2024-03-26'
 ---
 
 I’m sure you’ve heard the following claim before:

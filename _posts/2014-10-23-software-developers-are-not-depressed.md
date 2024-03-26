@@ -1,6 +1,14 @@
 ---
-title: "Software developers are not depressed (but everyone else is)"
-external_url: "https://medium.com/@MrJamesFisher/software-developers-are-not-depressed-1e61db4f480d"
+title: Software developers are not depressed (but everyone else is)
+external_url: >-
+  https://medium.com/@MrJamesFisher/software-developers-are-not-depressed-1e61db4f480d
+tags:
+  - software-development
+  - depression
+  - mental-health
+  - psychology
+  - statistics
+taggedAt: '2024-03-26'
 ---
 
 I often see stories associating software development with depression and other mental health issues.

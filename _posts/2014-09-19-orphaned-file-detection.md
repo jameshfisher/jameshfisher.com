@@ -1,6 +1,11 @@
 ---
-title: "Orphaned file detection"
-external_url: "https://medium.com/@MrJamesFisher/orphaned-file-detection-de307d96d5e1"
+title: Orphaned file detection
+external_url: 'https://medium.com/@MrJamesFisher/orphaned-file-detection-de307d96d5e1'
+tags:
+  - garbage-collection
+  - version-control
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 How many old files in your repository could be removed without breaking anything?

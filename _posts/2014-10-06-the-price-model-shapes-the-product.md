@@ -1,6 +1,12 @@
 ---
-title: "The price model shapes the product"
-external_url: "https://medium.com/@MrJamesFisher/price-models-that-make-bad-software-8a4cf01ce0f0"
+title: The price model shapes the product
+external_url: >-
+  https://medium.com/@MrJamesFisher/price-models-that-make-bad-software-8a4cf01ce0f0
+tags:
+  - pricing
+  - business-model
+  - product-management
+taggedAt: '2024-03-26'
 ---
 
 Your software company is driven by financial incentives.

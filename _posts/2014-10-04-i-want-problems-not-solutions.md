@@ -1,6 +1,9 @@
 ---
-title: "I want problems, not solutions!"
-external_url: "https://medium.com/@MrJamesFisher/i-want-problems-not-solutions-284b8d5b651"
+title: 'I want problems, not solutions!'
+external_url: 'https://medium.com/@MrJamesFisher/i-want-problems-not-solutions-284b8d5b651'
+tags:
+  - mindset
+taggedAt: '2024-03-26'
 ---
 
 We live in a world obsessed with solutions.

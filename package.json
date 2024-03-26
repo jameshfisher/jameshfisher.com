@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0-alpha.5",
+    "@anthropic-ai/sdk": "^0.19.0",
     "@types/node": "^20.11.30",
     "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",

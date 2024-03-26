@@ -2,3 +2,4 @@
 _site
 _drafts
 node_modules
+.env.local

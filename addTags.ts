@@ -19,13 +19,15 @@ async function fileToTags(
   fileContentWithoutTags: string,
   tagVocab: Set<string>,
 ): Promise<string[]> {
+  const vocabList = [...tagVocab];
+  vocabList.sort((a, b) => a.localeCompare(b));
   const message = await anthropic.messages.create({
     max_tokens: 128,
     system: [
       `You are given a blog post from jameshfisher.com.`,
       `You respond with a string like "Tags: foo, bar".`,
       `Tags are used to recommend similar posts, and to allow browsing by topic.`,
-      `Use existing tags where possible, which are: \`${[...tagVocab].join(", ")}\`.`,
+      `Use existing tags where possible, which are: \`${vocabList.join(", ")}\`.`,
       `If the post covers any topics that do not yet have tags, invent new tags.`,
       `Start with specific keywords, and work up to more general topics.`,
     ].join(" "),
@@ -69,6 +71,7 @@ async function main() {
   const globalTagVocab = await getTagVocab(filePaths);
   console.log(`Tag vocab: ${[...globalTagVocab].join(", ")}`);
 
+  let i = 0;
   for (const filePath of filePaths) {
     console.log(`Processing ${filePath}`);
     const fileContentWithOldTags = fs.readFileSync(filePath, "utf8");
@@ -92,7 +95,8 @@ async function main() {
     postFrontmatter.taggedAt = dateStr;
     const fileContentWithNewTags = matter.stringify(content, postFrontmatter);
     fs.writeFileSync(filePath, fileContentWithNewTags);
-    return;
+    i++;
+    if (i >= 4) return;
   }
 }
 

@@ -1,5 +1,9 @@
 ---
-title: "Are processes and messages different?"
+title: Are processes and messages different?
+tags:
+  - concurrency
+  - computer-science
+taggedAt: '2024-03-26'
 ---
 
 [Yesterday I described the "happened-before" relation](/2017/02/10/happened-before/). I showed this typical "interaction diagram" illustrating "processes" interacting with "messages":

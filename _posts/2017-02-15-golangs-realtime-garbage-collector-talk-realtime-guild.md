@@ -1,7 +1,14 @@
 ---
-title: "Golang's realtime garbage collector, at The Realtime Guild"
+title: 'Golang''s realtime garbage collector, at The Realtime Guild'
 tags:
   - talk
+  - golang
+  - garbage-collection
+  - real-time
+  - programming
+  - the-realtime-guild
+  - video
+taggedAt: '2024-03-26'
 ---
 
 Given with Will Sewell.

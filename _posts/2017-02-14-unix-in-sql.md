@@ -1,5 +1,12 @@
 ---
-title: "UNIX as a SQL database"
+title: UNIX as a SQL database
+tags:
+  - posix
+  - sql
+  - databases
+  - processes
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 UNIX is full of tables. When we talk about "processes", we're really referring to "rows in a process table." When we talk about "file descriptors", we're really referring to "rows in a per-process file descriptor table". There are other tables, too: a global file table, an inode table, routing tables, a mount table, page tables, and other tables I don't know about.

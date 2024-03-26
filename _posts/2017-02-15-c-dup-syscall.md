@@ -1,5 +1,12 @@
 ---
-title: "How do I duplicate a file descriptor in C?"
+title: How do I duplicate a file descriptor in C?
+tags:
+  - file-descriptors
+  - c
+  - system-calls
+  - posix
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Answer: the `dup` system call. Here's an example of duplicating the descriptor `1`, which refers to the standard out pipe.

@@ -1,5 +1,9 @@
 ---
-title: "How to wake up earlier"
+title: How to wake up earlier
+tags:
+  - productivity
+  - personal
+taggedAt: '2024-03-26'
 ---
 
 To understand how to change my routine, I should first understand how my previous routine was governed.

@@ -1,6 +1,16 @@
 ---
-title: "Hide your hyper-links, or, dealing with depth-first syndrome"
-external_url: "https://medium.com/@MrJamesFisher/hide-those-hyper-links-to-boost-your-readership-6f19c2bddff2"
+title: 'Hide your hyper-links, or, dealing with depth-first syndrome'
+external_url: >-
+  https://medium.com/@MrJamesFisher/hide-those-hyper-links-to-boost-your-readership-6f19c2bddff2
+tags:
+  - depth-first-syndrome
+  - links
+  - distraction-free-mode
+  - focus
+  - writing
+  - web
+  - design
+taggedAt: '2024-03-26'
 ---
 
 Like so many of us, I suffer from a neurological disorder known as _depth-first syndrome_.

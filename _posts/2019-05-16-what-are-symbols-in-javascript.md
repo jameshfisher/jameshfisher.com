@@ -3,6 +3,10 @@ title: What are symbols in JavaScript?
 tags:
   - programming
   - javascript
+summary: >-
+  Symbols are a new fundamental data type in JavaScript, introduced in 2015.
+  They are used to create unique object property keys that won't clash with
+  other properties.
 ---
 
 I stumbled across "symbols" 

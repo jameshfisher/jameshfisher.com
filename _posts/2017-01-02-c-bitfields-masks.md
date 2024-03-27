@@ -6,6 +6,9 @@ tags:
   - bitwise-operations
   - data-structures
 taggedAt: '2024-03-26'
+summary: >-
+  Efficient packing of game player data into 16 bits using bitwise operations on
+  a `uint16_t` type.
 ---
 
 An exercise in packing information into bits instead of bytes.

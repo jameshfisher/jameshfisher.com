@@ -5,6 +5,10 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Lamport timestamps measure time and causality in distributed
+  systems. Timestamps are assigned to events, with the property that if event A
+  happened-before event B, then A's timestamp is less than B's.
 ---
 
 [I wrote about the happened-before relation](/2017/02/10/happened-before/) and [about processes and messages in this model](/2017/02/11/are-processes-and-messages-different/). Happened-before gives us a way to think about time and causality. But how can we _measure_ those things?

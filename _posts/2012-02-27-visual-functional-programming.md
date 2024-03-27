@@ -6,6 +6,8 @@ tags:
   - haskell
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  A visual programming language inspired by Haskell.
 ---
 
 

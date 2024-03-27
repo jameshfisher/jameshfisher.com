@@ -5,6 +5,9 @@ tags:
   - web
 hnUrl: 'https://news.ycombinator.com/item?id=39682871'
 hnUpvotes: 165
+summary: >-
+  Try setting the root font-size to `calc(1rem + 0.25vw)` instead of using
+  media queries with fixed breakpoints.
 ---
 
 This CSS is now part of most websites I make:

@@ -1,6 +1,10 @@
 ---
 title: WebGL shader uniforms
 tags: []
+summary: >-
+  Shader uniforms in WebGL are global variables that allow passing data from the
+  JavaScript application to the shader. A demo shows how to update a uniform
+  representing the mouse position and use it to generate a dynamic pattern.
 ---
 
 <div style="display: flex;">

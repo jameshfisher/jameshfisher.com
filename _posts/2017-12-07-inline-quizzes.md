@@ -2,6 +2,9 @@
 title: Inline quizzes
 tags:
   - blog
+summary: >-
+  Inline quizzes make reading more engaging by requiring readers to participate
+  in the content.
 ---
 
 Stop and think of the last article you read

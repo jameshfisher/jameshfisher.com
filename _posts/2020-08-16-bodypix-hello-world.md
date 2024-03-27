@@ -5,11 +5,13 @@ tags:
   - web
   - machinelearning
 ogimage: /assets/2020-08-16/result.jpg
+summary: >-
+  BodyPix is a TensorFlow model for person segmentation. A demo of BodyPix in the browser.
 ---
 
 BodyPix is a TensorFlow model for "person segmentation".
-Given an image, it estimates, 
-for each point in the image, 
+Given an image, it estimates,
+for each point in the image,
 what body part is at that point.
 For example, it might estimate that point `x=50,y=100` is part of a `right_hand`, with confidence `0.8`.
 To test it out, here's an input image:
@@ -39,7 +41,7 @@ then add the detected fingers to the mask.
 
 A second problem: BodyPix does not identify boundaries very precisely.
 For example,
-in the source image, 
+in the source image,
 there is a very clear boundary between my shirt and the background,
 but BodyPix places the boundary outside of this.
 It could help to run an [active contour model](https://en.wikipedia.org/wiki/Active_contour_model)

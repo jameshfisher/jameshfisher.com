@@ -6,6 +6,9 @@ tags:
   - semantics
   - types
 taggedAt: '2024-03-26'
+summary: >-
+  Integers in C are `int` by default, while suffixes like `L` and `U` denote
+  `long` and `unsigned` types. Floats are `double` without a suffix.
 ---
 
 When we write expressions like this in C:

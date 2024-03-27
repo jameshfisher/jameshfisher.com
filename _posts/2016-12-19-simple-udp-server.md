@@ -8,6 +8,9 @@ tags:
   - networking
   - posix
 taggedAt: '2024-03-26'
+summary: >-
+  The syscalls needed for a simple UDP echo server are `socket`, `bind`,
+  `recvfrom`, `sendto`, and `close`.
 ---
 
 I previously described the syscalls needed for a multi-client TCP server. There are at least eight: `socket`, `bind`, `listen`, `select`, `accept`, `recv`, `send`, and `close`. This could be used to make an echo server: clients can open a TCP connection, and whatever bytes they send get echoed back.

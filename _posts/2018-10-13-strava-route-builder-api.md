@@ -2,6 +2,9 @@
 title: Strava route builder API
 tags:
   - programming
+summary: >-
+  How to use the undocumented Strava Route Builder API to get routes
+  between two points, including a JavaScript example.
 ---
 
 The [Strava Route Builder](https://www.strava.com/routes/new) lets you build cycling and running routes.

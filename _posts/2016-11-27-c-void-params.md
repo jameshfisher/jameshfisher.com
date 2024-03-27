@@ -5,6 +5,9 @@ tags:
   - programming
   - semantics
 taggedAt: '2024-03-26'
+summary: >-
+  `void` in a C function parameter list means the function takes no arguments,
+  whereas an empty list allows for an unspecified number of arguments.
 ---
 
 What is the difference between

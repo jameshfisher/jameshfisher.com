@@ -1,6 +1,11 @@
 ---
 title: What are `/dev/stdout` and `/dev/stdin`? What are they useful for?
 tags: []
+summary: >-
+  `/dev/stdin`, `/dev/stdout`, and `/dev/stderr` are special files in the `/dev`
+  directory that represent the standard input, output, and error streams of a
+  process. They can be used to connect processes in a shell pipeline without
+  creating temporary files.
 ---
 
 In the `/dev` directory,

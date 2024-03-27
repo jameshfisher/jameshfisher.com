@@ -6,6 +6,9 @@ tags:
   - semantics
   - pointers
 taggedAt: '2024-03-26'
+summary: >-
+  Arrays in C can "decay" to pointers, but are not inherently pointers. The size
+  of an array is lost during decay.
 ---
 
 It is sometimes said that arrays in C are basically pointers. This is not true. What is true is that a value of an array type can _decay_ to a value of a pointer type.

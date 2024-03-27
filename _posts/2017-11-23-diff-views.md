@@ -1,6 +1,10 @@
 ---
 title: Diff views as instructions
 tags: []
+summary: >-
+  A proposal to use "diff views" in technical writing to clearly differentiate
+  code under discussion from contextual information, similar to the format of
+  version control diffs.
 ---
 
 Technical communication about code usually includes code blocks.

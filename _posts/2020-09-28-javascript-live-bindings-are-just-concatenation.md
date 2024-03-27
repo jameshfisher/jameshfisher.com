@@ -4,6 +4,10 @@ tags:
   - programming
   - web
   - javascript
+summary: >-
+  ES modules are just concatenated source files, with some error checking and
+  variable renaming. Live bindings are an illusion - they're just ordinary
+  variables at the top-level scope.
 ---
 
 [The other day I wrote an intro to ECMAScript modules](/2020/09/25/javascript-modules-for-grumpy-developers-from-2005/),

@@ -1,6 +1,9 @@
 ---
 title: How to write a DNS server in Go
 tags: []
+summary: >-
+  A DNS server in Go that responds to A queries for a hardcoded set of
+  domain-to-IP mappings, using the `miekg/dns` package.
 ---
 
 Here's a DNS server written in Go.

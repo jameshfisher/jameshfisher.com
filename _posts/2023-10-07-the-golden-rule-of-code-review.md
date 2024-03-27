@@ -4,6 +4,8 @@ tags:
   - programming
 hnUrl: 'https://news.ycombinator.com/item?id=38079321'
 hnUpvotes: 2
+summary: >-
+  The "golden rule" of code reviews is to approve improvements. Approve pull requests that fix bugs, even if the implementation isn't ideal.
 ---
 
 You're reviewing Jane's pull request.

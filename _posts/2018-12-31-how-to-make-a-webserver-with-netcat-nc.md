@@ -4,6 +4,9 @@ tags:
   - programming
   - unix
   - networking
+summary: >-
+  Use `nc` (netcat) to create a web server that returns custom HTTP
+  responses.
 ---
 
 The netcat tool `nc` can operate as a TCP client.

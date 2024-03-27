@@ -10,6 +10,10 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  The `openssl passwd` command hashes passwords using the outdated _crypt_
+  algorithm, with truncation to 8 characters - a poor choice for secure password
+  hashing.
 ---
 
 Another command of `openssl` is `passwd`, which hashes passwords. Here's an example:

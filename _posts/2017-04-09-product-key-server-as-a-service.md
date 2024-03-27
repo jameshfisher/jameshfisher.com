@@ -2,6 +2,10 @@
 title: Product key server as a service
 justification: I'm making Vidrio. I want something to manage Vidrio licensing/keys.
 tags: []
+summary: >-
+  I want a service to manage product keys for software monetization, including key
+  generation, signing, distribution, and verification, with optional machine or
+  user licensing restrictions.
 ---
 
 Here is the service that I want:

@@ -2,6 +2,9 @@
 title: Let's get calibrated! A workshop
 tags:
   - uncertainty
+summary: >-
+  A workshop to show the importance of estimation, and teach
+  self-calibration using facts about your company.
 ---
 
 

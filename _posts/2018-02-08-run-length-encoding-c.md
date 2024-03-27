@@ -1,6 +1,9 @@
 ---
 title: Run-length encoding in C
 tags: []
+summary: >-
+  A C implementation of run-length encoding, a compression scheme that works
+  well on inputs with consecutive repeated characters.
 ---
 
 Run-length encoding is a "compression" scheme

@@ -4,6 +4,8 @@ tags:
   - tetra-pak
   - humor
 taggedAt: '2024-03-26'
+summary: >-
+  An ode to the Tetra Pak carton.
 ---
 
 This is a group for everyone who feels,

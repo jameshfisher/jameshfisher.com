@@ -4,13 +4,16 @@ tags:
   - ctci
   - programming
   - haskell
+summary: >-
+  An O(n) algorithm to check if a binary tree is balanced, by passing
+  up the height from recursive calls.
 ---
 
 Question 4.1 of _Cracking the Coding Interview_:
 
-> Implement a function to check if a binary tree is balanced. 
+> Implement a function to check if a binary tree is balanced.
 > For the purposes of this question,
-> a balanced tree is defined to be a tree such that 
+> a balanced tree is defined to be a tree such that
 > the heights of the two subtrees of any node never differ by more than one.
 
 To implement this,

@@ -1,6 +1,11 @@
 ---
 title: Array vs. dictionary pagination
 tags: []
+summary: >-
+  Paginate an API with either array indexing (`?page_number=`) or dictionary
+  indexing (`?first_word=`). Array indexing suffers from shifting page
+  boundaries, but is easier to parallelize. Dictionary indexing requires
+  ordering, but handles dynamic ordering better.
 ---
 
 You operate an HTTP API with a resource called `/words`.

@@ -3,6 +3,9 @@ title: How does an IP address get translated to a MAC address?
 tags:
   - programming
   - networking
+summary: >-
+  IP addresses are mapped to MAC addresses using the Address Resolution Protocol
+  (ARP). The OS maintains an ARP cache to store these mappings.
 ---
 
 For an IP packet to be sent, it must be encapsulated in an Ethernet frame.

@@ -1,6 +1,9 @@
 ---
 title: How to move your GitHub pages blog to Netlify
 tags: []
+summary: >-
+  Moved GitHub Pages blog to Netlify, using custom domain, HTTPS, and redirects
+  from the old site.
 ---
 
 I bought `jameshfisher.com` to use for this blog.

@@ -4,6 +4,10 @@ tags:
   - programming
   - web
   - machine-learning
+summary: >-
+  Involves downloading the
+  model manifest file and associated binary weight files, to avoid downloading
+  large models every application launch.
 ---
 
 The [various TensorFlow.js model libraries](https://github.com/tensorflow/tfjs-models)

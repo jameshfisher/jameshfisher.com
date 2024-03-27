@@ -1,6 +1,8 @@
 ---
 title: WebGL canvas size vs. CSS size vs. viewport vs. clipspace vs. world space
 tags: []
+summary: >-
+  WebGL has several spaces that need to be properly managed to display content correctly.
 ---
 
 There are lots of different widths and heights in WebGL!

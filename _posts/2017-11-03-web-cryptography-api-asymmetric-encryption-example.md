@@ -4,6 +4,8 @@ tags:
   - programming
   - crypto
   - javascript
+summary: >-
+  Generating ECDH keys and deriving a shared AES key.
 ---
 
 The Web Cryptography API lets us generate RSA and EC keypairs,

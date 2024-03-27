@@ -4,6 +4,9 @@ tags:
   - programming
   - unix
   - networking
+summary: >-
+  Linux uses exponential backoff to retry dropped TCP connections, with
+  a configurable retry limit.
 ---
 
 We can simulate a dropped TCP connection using two virtual machines.

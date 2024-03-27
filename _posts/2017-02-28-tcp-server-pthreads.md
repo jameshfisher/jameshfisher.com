@@ -8,6 +8,9 @@ tags:
   - networking
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  A TCP server that uses `pthread` to serve multiple clients concurrently, with
+  an "echo" server for each connection.
 ---
 
 I've described several ways to write a TCP server:

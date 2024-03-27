@@ -4,6 +4,10 @@ tags:
   - programming
   - web
   - webrtc
+summary: >-
+  A WebRTC-based group chat application that uses Ably's publish-subscribe
+  system for signaling. Clients connect directly via peer-to-peer data channels,
+  with Ably facilitating the initial connection.
 ---
 
 In the following `iframe` is a chat room.

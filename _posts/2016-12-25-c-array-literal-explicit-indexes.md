@@ -5,6 +5,8 @@ tags:
   - programming
   - semantics
 taggedAt: '2024-03-26'
+summary: >-
+  C array literals can use explicit indexes. The array length is determined by the largest explicit index.
 ---
 
 How do you write a C array literal? The way I knew of was with curly braces:

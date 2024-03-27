@@ -1,6 +1,14 @@
 ---
-title: "Study of framer.com promo video"
-justification: "I'm making Vidrio. I want to emulate the promo video on framer.com."
+title: Study of framer.com promo video
+justification: I'm making Vidrio. I want to emulate the promo video on framer.com.
+tags:
+  - framer.com
+  - video
+  - animation
+  - design
+  - marketing
+  - ux
+taggedAt: '2024-03-26'
 ---
 
 I was recently pointed to [framer.com](https://framer.com/). The homepage does an excellent job of marketing the product. By this, I mean that after visiting it, _I wanted to use/buy the product_. I didn't actually have a _great_ idea of what the product is for, but I wanted to use it. This, _I want to use the product_, is the aim of good advertising.

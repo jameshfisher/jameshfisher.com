@@ -1,7 +1,12 @@
 ---
-title: "How do I release a PHP Composer package?"
-justification: "I'm learning this for work"
-tags: ["programming", "php"]
+title: How do I release a PHP Composer package?
+justification: I'm learning this for work
+tags:
+  - php
+  - composer
+  - package-management
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 [Composer](https://getcomposer.org/)

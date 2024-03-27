@@ -1,5 +1,11 @@
 ---
-title: "What is the web Notification API?"
+title: What is the web Notification API?
+tags:
+  - web
+  - javascript
+  - notifications
+  - ux
+taggedAt: '2024-03-26'
 ---
 
 The web Notification API lets web apps on your browser display system-level notifications,

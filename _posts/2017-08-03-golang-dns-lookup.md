@@ -1,5 +1,11 @@
 ---
-title: "How can I do DNS lookup in Go?"
+title: How can I do DNS lookup in Go?
+tags:
+  - golang
+  - dns
+  - networking
+  - programming
+taggedAt: '2024-03-26'
 ---
 
 Go's `"net"` package in the stdlib has standard DNS client functions.

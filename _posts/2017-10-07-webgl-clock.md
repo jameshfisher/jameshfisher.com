@@ -1,5 +1,13 @@
 ---
-title: "Drawing a clock face with WebGL"
+title: Drawing a clock face with WebGL
+tags:
+  - webgl
+  - javascript
+  - web
+  - clock
+  - animation
+  - graphics-programming
+taggedAt: '2024-03-26'
 ---
 
 <div><canvas id="clock" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>

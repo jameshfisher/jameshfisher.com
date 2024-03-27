@@ -10,6 +10,8 @@ const examples = [
   `Redis Sentinel provides high availability for Redis. We start a Redis
 master, then three Redis Sentinel instances. They discover each other, then we trigger a failover.`,
   `A primary feature of a collaborative product is its social norms. I look at LessWrong, a forum product, and show it builds its unique social norms.`,
+  `I try \`vim\`. I give up after discovering that the cursor cannot sit at the end of a line.`,
+  `A method for calculating a bounding circle around a head, using facial landmarks from BlazeFace. Plus a live demo that you can run on your own face.`,
 ];
 
 async function fileToSummary(fileContent: string): Promise<string> {
@@ -24,6 +26,7 @@ async function fileToSummary(fileContent: string): Promise<string> {
         `Write as Jim Fisher, using 'I' and 'we'.`,
         `Summarize the post directly, and do not mention 'the post'.`,
         `Only include information from the post.`,
+        `Use Markdown for formatting.`,
         `Excellent examples of summaries from other posts:`,
       ].join(" ") +
       `\n` +
@@ -69,7 +72,7 @@ async function main() {
     const newFileContent = matter.stringify(content, postFrontmatter);
     fs.writeFileSync(filePath, newFileContent);
     i++;
-    if (i >= 1) return;
+    if (i >= 2) return;
   }
 }
 

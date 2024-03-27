@@ -5,6 +5,8 @@ tags:
   - web
   - machine-learning
 ogimage: /assets/2020-10-11/result.jpg
+summary: >-
+  A method for calculating a bounding circle around a head, using facial landmarks from BlazeFace. Plus a live demo that you can run on your own face.
 ---
 
 BlazeFace identifies _faces_.

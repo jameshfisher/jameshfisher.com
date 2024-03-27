@@ -1,7 +1,11 @@
 ---
-title: Why is the contentRect of my NSWindow ignored?
+title: Why is the `contentRect` of my `NSWindow` ignored?
 tags:
   - programming
+summary: >-
+  Calling `setFrameAutosaveName` on an `NSWindow` causes its size and position
+  to be saved to user defaults, overriding the `contentRect` passed to the
+  constructor. To avoid this, do not call `setFrameAutosaveName`.
 ---
 
 When creating an `NSWindow`,

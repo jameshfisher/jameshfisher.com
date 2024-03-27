@@ -3,6 +3,9 @@ title: Rule 110 in WebGPU
 tags:
   - programming
   - webgpu
+summary: >-
+  A WebGPU-powered simulation of the Rule 110 cellular automaton, rendering a
+  dynamic image on a canvas.
 ---
 
 If you're running the latest Google Chrome Canary,
@@ -42,7 +45,7 @@ This GLSL runs one step of a simulated world,
 from `stateIn` to `stateOut`.
 The `main` function runs once for every `cell` in the world.
 
-At the time of writing, 
+At the time of writing,
 Google Chrome hasn't implemented any way to draw GPU buffers to the screen.
 But it does let you extract a buffer as an `ArrayBuffer`.
 So instead,
@@ -221,7 +224,7 @@ which is where I started.
             stepStateComputePassEncoder.setBindGroup(0, stepStateBindGroups[dir]);
             stepStateComputePassEncoder.dispatch(ELEMS);
             stepStateComputePassEncoder.endPass();
-    
+
             const renderComputePassEncoder = commandEncoder.beginComputePass();
             renderComputePassEncoder.setPipeline(renderComputePipeline);
             renderComputePassEncoder.setBindGroup(0, renderBindGroups[dir]);

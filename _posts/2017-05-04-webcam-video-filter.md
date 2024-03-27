@@ -2,6 +2,9 @@
 title: Webcam video filter
 draft: true
 tags: []
+summary: >-
+  How to apply a video filter to a webcam stream using the
+  AVFoundation and CoreImage frameworks in Swift.
 ---
 
 We assume we have a video stream, e.g.:
@@ -24,10 +27,10 @@ Then we set a delegate for the `videoOutput`:
 videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sample buffer delegate"))
 ```
 
-The `videoOutput` will call 
-`captureOutput(AVCaptureOutput!, didOutputSampleBuffer: CMSampleBuffer!, from: AVCaptureConnection!)` 
-on its delegate whenever a new buffer is received from the `captureSession`, 
-i.e. a new frame from the webcam. 
+The `videoOutput` will call
+`captureOutput(AVCaptureOutput!, didOutputSampleBuffer: CMSampleBuffer!, from: AVCaptureConnection!)`
+on its delegate whenever a new buffer is received from the `captureSession`,
+i.e. a new frame from the webcam.
 So we start to implement that:
 
 ```

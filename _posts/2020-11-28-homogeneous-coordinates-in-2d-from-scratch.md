@@ -5,6 +5,8 @@ tags:
   - programming
   - js
   - graphics
+summary: >-
+  Homogeneous coordinates enable a matrix to translate points. I show a six-line JS library.
 ---
 
 Here's an animation of a spinning, orbiting rectangle.
@@ -29,7 +31,7 @@ And linear functions can't describe _projection_
 (that is, simulating a camera),
 because they keep parallel lines parallel.
 
-The _homogeneous coordinates_ system is a kind of mathematical hack 
+The _homogeneous coordinates_ system is a kind of mathematical hack
 that allows describing translation and projection.
 It builds on top of plain linear algebra,
 but adds an extra dimension, usually called _w_.
@@ -130,7 +132,7 @@ I'll show this in a future post.
       rotateHom2d(ts / 3000),       // spinning, orbiting the origin
       translateHom2d([0, 4.5]),     // spinning, orbiting the origin, up above y=1 line
     ]);
-  
+
     const objectWorldSpaceHom2d = matApplyToShape(spinAndOrbitAnimMatrix, fatRectangle);
 
     canvasEl.width = canvasEl.width; // clear

@@ -20,6 +20,9 @@ master and three Redis Sentinels. They discover each other. We trigger a failove
   probability distribution, using a balanced binary tree data structure called the "urn".`,
   `Creating and using an SSH certificate authority, an alternative to the default "trust on first use" model.`,
   `The MediaStream Recording API converts a MediaStream to a Blob of compressed video and audio. A demo where you can record a 5-second clip.`,
+  `A screencast about \`go tool trace\`, a profiling tool for Go applications.`,
+  `How to apply a video filter to a webcam stream using the AVFoundation and CoreImage frameworks in Swift.`,
+  `\`tcpdump\` captures and displays network traffic. An example inspecting DNS requests and responses.`,
 ];
 
 async function fileToSummary(fileContent: string): Promise<string> {

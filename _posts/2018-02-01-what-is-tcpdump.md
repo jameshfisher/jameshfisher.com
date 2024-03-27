@@ -3,6 +3,8 @@ title: What is `tcpdump`?
 tags:
   - programming
   - unix
+summary: >-
+  `tcpdump` captures and displays network traffic. An example inspecting DNS requests and responses.
 ---
 
 Say I make a DNS request:

@@ -2,6 +2,8 @@
 title: What is `go tool trace`?
 tags:
   - talk
+summary: >-
+  A screencast about `go tool trace`, a profiling tool for Go applications.
 ---
 
 I made [this screencast about `go tool trace`](https://www.youtube.com/watch?v=Xq5HDH8y0CE) to complement [this blog post about `go tool trace` that Will Sewell wrote at Pusher](https://making.pusher.com/go-tool-trace/). The screencast is embedded in the blog post. I plan to make more of these.

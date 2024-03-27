@@ -7,6 +7,8 @@ tags:
   - security
 hnUrl: 'https://news.ycombinator.com/item?id=19351685'
 hnUpvotes: 3
+summary: >-
+  CSS visited link styles are limited for security reasons, as they could reveal a user's browsing history. Color can be changed, but `getComputedStyle` will lie about it.
 ---
 
 Visited links show up purple; unvisited links show up blue.

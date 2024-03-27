@@ -4,6 +4,9 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  A C function to partition a linked list around a value `x`,
+  running in optimal time and space.
 ---
 
 Question 2.4 of _Cracking the Coding Interview_:

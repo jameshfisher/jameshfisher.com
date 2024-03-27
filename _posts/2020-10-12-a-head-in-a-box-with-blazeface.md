@@ -4,6 +4,9 @@ tags:
   - programming
   - web
   - machine-learning
+summary: >-
+  A method for calculating a bounding circle around a head, using facial
+  landmarks from BlazeFace. Plus a live demo that you can run on your own face.
 ---
 
 [Yesterday I showed how to track a head using BlazeFace.](/2020/10/11/head-tracking-with-blazeface/)

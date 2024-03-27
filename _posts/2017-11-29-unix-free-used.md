@@ -3,6 +3,10 @@ title: 'UNIX `free`: `used` does not mean what you think it means'
 tags:
   - programming
   - unix
+summary: >-
+  The `used` metric in `free -m` includes memory used for caching, not just
+  application memory. The true memory usage is lower, calculated as used minus
+  buffers/cache.
 ---
 
 Today I wanted to see how close a Linux machine was to being out-of-memory.

@@ -5,6 +5,10 @@ tags:
   - bioinformatics
 hnUrl: 'https://news.ycombinator.com/item?id=21916909'
 hnUpvotes: 1
+summary: >-
+  Exploring my 23andMe genome data - a text file of single nucleotide
+  polymorphisms, not a full DNA sequence, requiring a reference genome to
+  interpret.
 ---
 
 Back in Feb 2018, I spat in a tube and put it in the post.
@@ -83,11 +87,11 @@ This looks more like DNA!
 This file is in [FASTA format](https://en.wikipedia.org/wiki/FASTA_format),
 which generally shows the full sequence of nucleic acids.
 
-The file that 23andMe gave me 
+The file that 23andMe gave me
 is not a full DNA sequence.
 Instead, each line in is an "SNP",
 or a ["Single-nucleotide polymorphism"](https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism),
-"a substitution of a single nucleotide 
+"a substitution of a single nucleotide
 that occurs at a specific position in the genome".
 My genome file is a "patch"
 which can be applied to the reference genome
@@ -149,9 +153,9 @@ have [adenine](https://en.wikipedia.org/wiki/Adenine)
 at position 28,365,618.
 
 Let's see that for ourselves.
-Here's some JavaScript 
-that will highlight the position 
-in our downloaded `sequence.fasta` 
+Here's some JavaScript
+that will highlight the position
+in our downloaded `sequence.fasta`
 for chromosome 15:
 
 ```js

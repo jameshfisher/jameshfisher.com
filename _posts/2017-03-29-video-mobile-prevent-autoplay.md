@@ -4,6 +4,9 @@ justification: >-
   The vidr.io promo video autoplays when loading the page, but this is inapprops
   on mobile
 tags: []
+summary: >-
+  Prevent annoying video autoplay on mobile by detecting mobile devices and
+  serving a manual play button instead.
 ---
 
 Look at [framer.com](https://framer.com/) on desktop: the promo video autoplays. Look at it on mobile: it embeds as an ordinary YouTube video, with a manual play button. The behavior is different because video autoplay on mobile is much more annoying: video takes a big bite into your mobile data usage.

@@ -3,6 +3,8 @@ title: What is document.cookie?
 tags:
   - programming
   - web
+summary: >-
+  Cookies are client-side storage that get sent with every HTTP request. A cookie is scoped to a domain suffix, a path prefix, and a time range. The API is old and weird.
 ---
 
 I've used cookies as a web developer for many years,

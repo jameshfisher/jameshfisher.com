@@ -2,6 +2,10 @@
 title: Probability notation for odds
 tags:
   - betting
+summary: >-
+  Different notations for betting odds, including fractional, decimal,
+  and probability. Probability notation is shown to be the most transparent,
+  revealing the bookmaker's expected positive gain.
 ---
 
 If you've ever walked into a bookmaker,

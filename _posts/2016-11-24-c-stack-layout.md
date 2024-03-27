@@ -4,6 +4,10 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  The stack layout in C includes function arguments, return address, and local
+  variables. Addresses decrease as you go through the arguments, and the stack
+  grows downward with each function call.
 ---
 
 What does the stack look like?

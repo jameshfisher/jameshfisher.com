@@ -2,6 +2,10 @@
 title: What is a .app?
 justification: Vidrio is a .app!
 tags: []
+summary: >-
+  A .app is a macOS application bundle, a directory structure containing the
+  executable and supporting files. The .app directory contains the real program
+  binary, but cannot be directly executed.
 ---
 
 In macOS, I browse to my `/Applications` directory to see lots of files. `Keynote.app`, `Spotify.app`, `Vidrio.app`, etc. What are these things? These "applications" can't be launched in the normal fashion:

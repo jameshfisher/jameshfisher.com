@@ -4,6 +4,9 @@ tags:
   - programming
   - web
 ogimage: /assets/2020-09-26/jimscript.png
+summary: >-
+  Source maps map generated JavaScript to original source files, allowing
+  debugging of the original code in the browser's dev tools.
 ---
 
 <script src="/assets/2020-09-26/generated.js"></script>

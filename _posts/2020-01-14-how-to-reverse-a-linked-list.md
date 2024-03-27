@@ -3,6 +3,9 @@ title: How to reverse a linked list
 tags:
   - programming
   - c
+summary: >-
+  Reverse a linked list by treating it as a stack, popping elements and pushing
+  them onto a new list. An implementation in C without a separate stack.
 ---
 
 To reverse a linked list,

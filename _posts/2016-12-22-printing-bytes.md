@@ -5,6 +5,8 @@ tags:
   - programming
   - bitwise-operations
 taggedAt: '2024-03-26'
+summary: >-
+  Useful to show how C represents various data types.
 ---
 
 What do the individual bytes of values in C look like? We can see the bytes by printing them out with this fun program:

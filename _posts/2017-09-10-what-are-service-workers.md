@@ -1,6 +1,10 @@
 ---
 title: What are service workers?
 tags: []
+summary: >-
+  Service workers are scripts that run outside the browser context, allowing web
+  apps to perform tasks like caching, network requests, and offline
+  functionality.
 ---
 
 The Service Worker API lets a webpage register a script as a "service worker" in the local browser.

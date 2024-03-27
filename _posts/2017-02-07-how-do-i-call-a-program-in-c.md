@@ -5,7 +5,9 @@ tags:
   - programming
   - posix
   - system-calls
-taggedAt: '2024-03-26'
+taggedAt: "2024-03-26"
+summary: >-
+  To call a program from C, use \`fork\` then \`execve\`. There is no more direct way!
 ---
 
 TL;DR: to call a program from C, use `fork` then `execve`. There is no way to directly start a new process from a program file; instead, we must `fork` (clone) the current process, then in child process, we must `execve` the program file to replace the child with the desired program. Example:

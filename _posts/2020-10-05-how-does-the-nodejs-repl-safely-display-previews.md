@@ -3,6 +3,10 @@ title: How does the Node.js REPL display previews?
 tags:
   - programming
   - javascript
+summary: >-
+  Node.js REPL uses the `inspector` module to safely evaluate expressions as you
+  type, using V8's evaluation with `throwOnSideEffect: true` to avoid executing
+  harmful code.
 ---
 
 When typing in the `node` repl,

@@ -5,6 +5,9 @@ tags:
   - programming
 hnUrl: 'https://news.ycombinator.com/item?id=18711302'
 hnUpvotes: 2
+summary: >-
+  A visualization of how frequently different years are referenced in writing
+  over time, showing patterns in how the past and future are viewed.
 ---
 
 How did past writers view _their_ past, and their future?

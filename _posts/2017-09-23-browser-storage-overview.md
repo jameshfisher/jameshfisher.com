@@ -1,6 +1,10 @@
 ---
 title: How can I store things on the browser?
 tags: []
+summary: >-
+  Browsers offer various storage options, including cookies, localStorage,
+  sessionStorage, IndexedDB, CacheStorage, WebSQL, and AppCache, each with its
+  own tradeoffs in terms of use case, persistence, and support.
 ---
 
 The traditional web browser is a "thin client" which interacts with a web server.

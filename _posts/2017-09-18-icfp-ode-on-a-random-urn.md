@@ -1,6 +1,9 @@
 ---
 title: 'ICFP: Ode on a Random Urn'
 tags: []
+summary: >-
+  An efficient way to represent and sample from a discrete
+  probability distribution, using a balanced binary tree data structure called the "urn".
 ---
 
 I visited [ICFP](http://www.icfpconference.org/) this month.

@@ -15,6 +15,9 @@ master and three Redis Sentinels. They discover each other. We trigger a failove
   `\`const\` is a type qualifier in C that makes a variable unassignable, except during initialization.`,
   `A C function to determine if one string is a permutation of
   another, using a character distribution representation for optimal time and space complexity.`,
+  `To call a program from C, use \`fork\` then \`execve\`. There is no more direct way!`,
+  `An efficient way to represent and sample from a discrete
+  probability distribution, using a balanced binary tree data structure called the "urn".`,
 ];
 
 async function fileToSummary(fileContent: string): Promise<string> {
@@ -76,7 +79,7 @@ async function main() {
     const newFileContent = matter.stringify(content, postFrontmatter);
     fs.writeFileSync(filePath, newFileContent);
     i++;
-    if (i >= 2) return;
+    if (i >= 4) return;
   }
 }
 

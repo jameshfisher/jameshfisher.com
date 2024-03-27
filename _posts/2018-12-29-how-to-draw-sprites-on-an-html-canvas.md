@@ -4,6 +4,9 @@ tags:
   - programming
   - animation
   - web
+summary: >-
+  I demonstrate animating a cat walk cycle on an HTML canvas using a sprite
+  sheet image and the `drawImage` method.
 ---
 
 In [my previous post](/2018/12/28/a-cat-walk-cycle/)

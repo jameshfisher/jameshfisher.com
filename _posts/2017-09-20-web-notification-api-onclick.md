@@ -1,6 +1,8 @@
 ---
 title: Web Notification API onclick
 tags: []
+summary: >-
+  `notificationclick` service worker event lets the web app open a webpage via `clients.openWindow`.
 ---
 
 I've covered before that the browser Notification API lets you display desktop notifications like this:

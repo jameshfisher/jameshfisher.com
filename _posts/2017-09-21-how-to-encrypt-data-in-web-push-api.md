@@ -1,6 +1,9 @@
 ---
 title: How can I encrypt data in the Web Push API?
 tags: []
+summary: >-
+  Browser generates keys, shares public key;
+  server encrypts data with it; browser decrypts push payload.
 ---
 
 Here's a service worker push handler I wrote:

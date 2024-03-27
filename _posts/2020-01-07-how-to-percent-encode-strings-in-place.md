@@ -4,6 +4,9 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  A C function to replacing spaces with `"%20"` in-place, by iterating from the end, preserving true
+  string length.
 ---
 
 Question 1.4 of _Cracking the Coding Interview_:

@@ -9,6 +9,7 @@ tags:
   - the-realtime-guild
   - video
 taggedAt: '2024-03-26'
+summary: A talk given with Will Sewell. Overview of Go's concurrent garbage collector.
 ---
 
 Given with Will Sewell.

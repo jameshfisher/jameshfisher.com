@@ -1,6 +1,9 @@
 ---
 title: What is the web Push API?
 tags: []
+summary: >-
+  Web applications can "subscribe" for notifications via `PushSubscription`
+  endpoint, but there's poor interoperability between different browsers' push services.
 ---
 
 The [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)

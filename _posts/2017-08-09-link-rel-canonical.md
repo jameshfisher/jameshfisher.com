@@ -1,6 +1,9 @@
 ---
 title: What is the `rel=canonical` tag?
 tags: []
+summary: >-
+  `<link rel="canonical" href="..."/>` specifies the preferred URL of a page
+  duplicated across domains. Search engines use this to determine which page to recommend.
 ---
 
 This blog is hosted in a bunch of places:

@@ -4,6 +4,9 @@ tags:
   - programming
   - unix
   - c
+summary: >-
+  The magic shell string `3>&2 2>&1 1>&3-` swaps stdout and stderr.
+  It does with the `dup2` system call to swap file descriptors.
 ---
 
 Sometimes I want to call something in bash,

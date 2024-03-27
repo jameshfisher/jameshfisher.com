@@ -4,6 +4,7 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: '`signal` returns the old signal handler pointer for given signal number.'
 ---
 
 Look at the `signal` signature: `sig_t signal(int sig, sig_t func)`. What is that return value?

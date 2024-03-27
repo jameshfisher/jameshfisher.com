@@ -1,6 +1,9 @@
 ---
 title: 'WebGL shading: diffuse vs. specular'
 tags: []
+summary: >-
+  Contrasting diffuse and specular shading models in WebGL, with live demos
+  showing matte vs. shiny surface renderings.
 ---
 
 <div>

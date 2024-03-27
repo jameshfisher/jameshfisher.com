@@ -1,6 +1,9 @@
 ---
 title: How do Reddit thumbnails work?
 tags: []
+summary: >-
+  Embedly respects Open Graph `og:image` meta tag for thumbnail selection.
+  Adding it to `vidr.io` enables Reddit thumbnail.
 ---
 
 The other day [I submitted Vidrio to /r/MacApps](https://www.reddit.com/r/macapps/comments/6tgk8g/vidrio_a_macos_screencasting_app_i_made_feedback/). After submission I found that the thumbnail for the submission defaulted to a generic image, rather than being the Vidrio icon. Why?

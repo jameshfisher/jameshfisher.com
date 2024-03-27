@@ -4,6 +4,9 @@ tags:
   - video
 hnUrl: 'https://news.ycombinator.com/item?id=25776560'
 hnUpvotes: 2
+summary: >-
+  Screen recording accidentally encoded superwhite/superblack due to obsolete
+  `yuv420p(tv)` color space; rescaling fixes it.
 ---
 
 I was making a video with Premiere Pro.
@@ -43,8 +46,8 @@ But the most important part is the `(tv)` bit.
 This means it encodes the Y component in the range `16..235`, instead of the normal `0..255` range of a single byte.
 
 Wait ... what the fuck?
-Yes, you read that right: 
-black is encoded as the value `16`, 
+Yes, you read that right:
+black is encoded as the value `16`,
 and white is encoded as the value `235`.
 But why would anyone do that?
 The justification seems lost to history.
@@ -83,6 +86,6 @@ but sadly it seems to keep the metadata the same:
 $ ffmpeg -i screen_recording.mp4 -pix_fmt yuv420p -c copy -color_range 2 -pix_fmt yuv420p screen_recording_metadata_changed.mp4
 ...
 $ ffprobe screen_recording_metadata_changed.mp4
-...                                                                  !!!! 
+...                                                                  !!!!
     Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv), 2560x1416 [SAR 1:1 DAR 320:177], 18223 kb/s, 30.13 fps, 59.94 tbr, 30k tbn, 59.94 tbc (default)
 ```

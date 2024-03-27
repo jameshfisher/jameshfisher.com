@@ -2,7 +2,7 @@ import { format } from "date-fns";
 import h from "vhtml";
 import { fragmentHtml } from "../../fragmentHtml.js";
 import { rawHtml } from "../../rawHtml.js";
-import { renderInlineMarkdown } from "../../markdown.js";
+import { renderPosts } from "../../renderPosts.js";
 
 export const data = {
   layout: "layouts/minimal",
@@ -70,15 +70,7 @@ export function render(data) {
         ],
       ),
       h("h3", { style: "margin-top: 3em;" }, "More by Jim"),
-      h("div", { class: "posts" }, [
-        ...data.collections.fave.map((post) =>
-          h(
-            "a",
-            { class: "post", href: post.external_url || post.url },
-            rawHtml(renderInlineMarkdown(post.data.title)),
-          ),
-        ),
-      ]),
+      renderPosts(data.collections.fave),
     ]),
     h("p", {}, [
       "Tagged ",

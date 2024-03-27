@@ -1,42 +1,10 @@
-import { format } from "date-fns";
 import h from "vhtml";
-import dataPeople from "./_data/people.js";
 import navbarHtml from "./navbar.js";
 import { rawHtml } from "./rawHtml.js";
-import { renderInlineMarkdown } from "./markdown.js";
+import { renderPost, renderPosts } from "./renderPosts.js";
 import scriptsHtml from "./scripts.js";
 
 export function render(data) {
-  function renderPost(post) {
-    return h("a", { class: "post", href: post.url }, [
-      h(
-        "div",
-        { class: "title" },
-        rawHtml(renderInlineMarkdown(post.data.title || "")),
-        " ",
-        post.data.external_url &&
-          h("img", {
-            src: "/assets/Icon_External_Link.svg",
-            alt: "external link",
-          }),
-      ),
-      h(
-        "div",
-        { class: "summary" },
-        post.data.summary && rawHtml(renderInlineMarkdown(post.data.summary || "")),
-        " ",
-        post.data.author !== "jim" &&
-          h(
-            "span",
-            { class: "guest" },
-            `Guest post by ${dataPeople[post.data.author].name}.`,
-          ),
-        " ",
-        h("span", { class: "date" }, format(post.date, "yyyy-MM-dd")),
-      ),
-    ]);
-  }
-
   const hnFavorites = data.collections.posts
     .filter(
       (post) =>
@@ -149,21 +117,17 @@ export function render(data) {
         ],
       ),
       h("h3", {}, "Hacker News favorites"),
-      h(
-        "div",
-        { class: "posts no-link-underlines" },
-        hnFavorites.map(renderPost),
-      ),
+      renderPosts(hnFavorites),
       h("h3", {}, "My favorites"),
-      h(
-        "div",
-        { class: "posts no-link-underlines" },
+      renderPosts(
         data.collections.fave
           .reverse()
-          .filter((post) => !post.draft && !hnFavorites.includes(post))
-          .map(renderPost),
+          .filter((post) => !post.draft && hnFavorites.includes(post)),
       ),
       h("h3", {}, "All posts"),
+      renderPosts(
+        data.collections.posts.reverse().filter((post) => !post.draft),
+      ),
       h(
         "div",
         { class: "posts no-link-underlines" },

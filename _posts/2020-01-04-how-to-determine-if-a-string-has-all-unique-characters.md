@@ -8,6 +8,9 @@ tags:
   - data-structures
   - time-complexity
 taggedAt: '2024-03-26'
+summary: >-
+  A recursive algorithm to determine if a string has all unique characters, with
+  an analysis of its time complexity.
 ---
 
 Question 1.1 of _Cracking the Coding Interview_:

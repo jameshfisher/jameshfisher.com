@@ -4,6 +4,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  C array subscripts are defined as pointer arithmetic, where `a[b]` means
+  `*(a+b)`. This means `a[b]` is the same as `b[a]`!
 ---
 
 C array subscripts can be understood via pointer arithmetic.

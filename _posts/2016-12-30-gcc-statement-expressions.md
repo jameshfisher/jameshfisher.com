@@ -6,6 +6,9 @@ tags:
   - programming
   - semantics
 taggedAt: '2024-03-26'
+summary: >-
+  GCC's 'statement expressions' allow inserting statements into
+  expression positions. Behavior is unspecified.
 ---
 
 Lots of "modern" languages, like Rust, have converted statement syntax-forms into expressions. For example, `if`/`else`, which in C is a statement form, is in Rust a ternary expression. For another example, a series of expressions separated by semicolons becomes another expression, where in C this would be a compound statement.

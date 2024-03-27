@@ -7,6 +7,10 @@ tags:
   - focus
   - design
 taggedAt: '2024-03-26'
+summary: >-
+  Physical books and board games require energy and time to access, which
+  creates a sense of focus. Virtual applications lack these constraints, leading
+  to constant distraction.
 ---
 
 One of the key reasons that I like to read physical books

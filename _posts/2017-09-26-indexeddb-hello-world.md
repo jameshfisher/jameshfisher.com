@@ -1,6 +1,9 @@
 ---
 title: IndexedDB hello world
 tags: []
+summary: >-
+  How to create an IndexedDB database, add an object store, and read/write
+  data.
 ---
 
 IndexedDB is one kind of storage provided by browsers,

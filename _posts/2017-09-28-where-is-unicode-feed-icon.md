@@ -3,6 +3,8 @@ title: Where is the Unicode feed icon?
 hnUrl: 'https://news.ycombinator.com/item?id=20921087'
 hnUpvotes: 1
 tags: []
+summary: >-
+  Lack of a standard Unicode feed icon despite its widespread use. I plan to submit a proposal for its inclusion.
 ---
 
 If you lived through the naughties, you know this icon:

@@ -2,6 +2,8 @@
 title: Electron hello world
 tags:
   - programming
+summary: >-
+  Installing Electron, creating an HTML web page, and writing the main entry point script to load the page.
 ---
 
 First, install Electron via NPM:

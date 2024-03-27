@@ -6,6 +6,10 @@ tags:
   - personal
   - app-ideas
 taggedAt: '2024-03-26'
+summary: >-
+  A long-term personal calendar that captures life goals, plans, and
+  trajectories rather than daily schedules. Focuses on broad life stages and
+  scenarios rather than precise event planning.
 ---
 
 Google Calendar defaults to a 7-day window onto your life. You can zoom in to view a single day, or zoom out to view an entire month. Events come with a precise start and end time, and those times are displayed to the minute. Events are either definitely happening or not mentioned at all. Time stretches off forever in both directions.

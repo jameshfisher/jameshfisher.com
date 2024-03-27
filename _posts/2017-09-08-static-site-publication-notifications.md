@@ -1,6 +1,8 @@
 ---
 title: Publication notifications for static sites
 tags: []
+summary: >-
+  Using a service worker to monitor the sitemap and display updates via browser notifications.
 ---
 
 I have a new mini-project for this site:

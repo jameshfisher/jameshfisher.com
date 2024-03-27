@@ -10,6 +10,10 @@ tags:
   - app-distribution
   - app-development
 taggedAt: '2024-03-26'
+summary: >-
+  Package a macOS app for distribution outside the Mac App Store by archiving it
+  in Xcode, exporting it with a Developer ID signature, then creating a .dmg
+  disk image.
 ---
 
 To release a MacOS app through the Mac App Store, there is an integrated wizard in Xcode. Distributing your MacOS app outside the Mac App Store is less documented.

@@ -3,12 +3,15 @@ title: What is a McCulloch-Pitts neuron?
 tags:
   - programming
   - machinelearning
+summary: >-
+  A mathematical model where the neuron is a function that takes binary inputs and produces a binary output based on a threshold. The model can implement basic logic gates like AND and
+  OR, but not more complex functions like XOR.
 ---
 
 In [their 1943 paper, _A logical calculus of the ideas immanent in nervous activity_](http://www.cse.chalmers.se/~coquand/AUTOMATA/mcp.pdf),
 Warren McCulloch and Walter Pitts proposed
 a mathematical model of the behavior of neurons.
-But the notation is dated. 
+But the notation is dated.
 Here I show the model in JavaScript.
 For the impatient,
 here's the model that I'll explain:
@@ -16,7 +19,7 @@ here's the model that I'll explain:
 ```js
 const makeNeuron = options => inputs => {
   for (i of options.inhibitory)
-    if (inputs[i] === 1) 
+    if (inputs[i] === 1)
       return 0;
   let sum = 0;
   for (i of options.excitatory)
@@ -25,7 +28,7 @@ const makeNeuron = options => inputs => {
 }
 ```
 
-The McCulloch-Pitts neuron 
+The McCulloch-Pitts neuron
 (also called the M-P neuron,
 or the "Threshold Logic Unit")
 is modelled as a pure function
@@ -89,9 +92,9 @@ and implement three binary operators:
 
 
 ```js
-const makeNeuron = 
-  options => 
-    ([x,y]) => 
+const makeNeuron =
+  options =>
+    ([x,y]) =>
       x+y >= options.threshold ? 1 : 0
 
 const AND   = makeNeuron({threshold: 2})
@@ -127,7 +130,7 @@ Here's `NOR` with inhibitory inputs:
 ```js
 const makeNeuron = options => inputs => {
   for (i of options.inhibitory)
-    if (inputs[i] === 1) 
+    if (inputs[i] === 1)
       return 0;
   let sum = 0;
   for (i of options.excitatory)
@@ -143,7 +146,7 @@ const ON  = makeNeuron({threshold: 0, excitatory: [0,1], inhibitory: []});
 const NOR = makeNeuron({threshold: 0, excitatory: [], inhibitory: [0,1]});
 ```
 
-This `inhibitory` parameter loosely corresponds to 
+This `inhibitory` parameter loosely corresponds to
 [inhibitory postsynaptic potential](https://en.wikipedia.org/wiki/Inhibitory_postsynaptic_potential)
 in the physical model.
 And the addition of this parameter lets us define `NOR`, which is nice.

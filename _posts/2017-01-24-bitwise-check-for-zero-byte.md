@@ -7,6 +7,9 @@ tags:
   - optimization
   - performance
 taggedAt: '2024-03-26'
+summary: >-
+  How to check if a 64-bit word contains a zero byte. A
+  step-by-step example and a proof of correctness.
 ---
 
 I stumbled upon this magic way to check whether a 64-bit word contains a zero byte:

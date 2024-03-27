@@ -5,6 +5,9 @@ tags:
   - programming
   - web
 taggedAt: '2024-03-26'
+summary: >-
+  A C program that creates an HTTP server that responds with "Hello,
+  world!" to every request.
 ---
 
 Writing a "hello world" HTTP server is surprisingly simple. This responds to every request with a "hello world" page:

@@ -6,6 +6,8 @@ tags:
   - c
 hnUrl: 'https://news.ycombinator.com/item?id=32950968'
 hnUpvotes: 2
+summary: >-
+  `nscd`, a local DNS resolver within `glibc`, is non-standard. Instead, use a local DNS server like `named` or `dnscache`.
 ---
 
 You find that DNS queries take a long time from your machine,

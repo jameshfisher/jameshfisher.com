@@ -1,6 +1,11 @@
 ---
 title: How to trace a DNS lookup
 tags: []
+summary: >-
+  Tracing a DNS lookup for `ws-mt1.pusher.com` using `dig +trace` reveals the
+  iterative process of resolving the domain name, starting from the root name
+  servers and following referrals to the top-level domain and authoritative name
+  servers.
 ---
 
 We want to find an IP address for `ws-mt1.pusher.com`.

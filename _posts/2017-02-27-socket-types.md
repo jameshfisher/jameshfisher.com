@@ -7,6 +7,10 @@ tags:
   - networking
   - system-calls
 taggedAt: '2024-03-26'
+summary: >-
+  The `domain` and `type` arguments to `socket()` describe the protocol family
+  and socket type, respectively. The `protocol` argument specifies the actual
+  protocol to use, which may be inferred from the `domain` and `type`.
 ---
 
 Here's the `socket` system call:

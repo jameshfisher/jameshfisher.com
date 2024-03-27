@@ -6,6 +6,10 @@ tags:
   - communication
   - essay
 taggedAt: '2024-03-26'
+summary: >-
+  Avoid using the word "simply" as it can come across as insulting to the reader
+  by implying the task is easy or the reader is stupid. Instead, rephrase to be
+  more objective and avoid comparatives like "simply" or "just."
 ---
 
 Previously I described a magic way to clarify your writing: [don't use the word "it"](/2016/11/25/dont-use-it/). Here's another heuristic: don't use the word "simply". Take these examples:

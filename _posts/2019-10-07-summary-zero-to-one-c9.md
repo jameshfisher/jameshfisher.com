@@ -3,6 +3,10 @@ title: 'Summary of ''Zero to One'', Chapter 9: Foundations'
 tags:
   - zero-to-one
   - summary
+summary: >-
+  Startups must get the foundations right from the start. Choose co-founders
+  carefully, keep the board small, hire full-time employees, and compensate with
+  equity over high salaries, even for the CEO.
 ---
 
 **Summary:**

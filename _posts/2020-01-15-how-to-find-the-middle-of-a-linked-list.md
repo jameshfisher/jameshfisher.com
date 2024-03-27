@@ -3,6 +3,9 @@ title: How to find the middle of a linked list
 tags:
   - programming
   - c
+summary: >-
+  A trick to find the middle of a linked list by using two pointers, `slow` and
+  `fast`, where `fast` moves twice as fast as `slow`.
 ---
 
 Just like my post on 

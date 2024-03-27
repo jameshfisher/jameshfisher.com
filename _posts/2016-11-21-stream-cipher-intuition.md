@@ -6,6 +6,10 @@ tags:
   - cryptography
   - security
 taggedAt: '2024-03-26'
+summary: >-
+  A stream cipher works like a one-time pad, but uses a pseudorandom "keystream"
+  from a PRNG seeded by a secret key and nonce, preventing attacks based on pad
+  disclosure or reuse.
 ---
 
 * A stream cipher works roughly like a one-time pad.

@@ -7,6 +7,9 @@ tags:
   - design
   - documentation
 taggedAt: '2024-03-26'
+summary: >-
+  Using unique error codes with linkable documentation improves error reporting.
+  Provide a central error page URL with each error message.
 ---
 
 When printing an error, we _sometimes_ include an error code. For example:

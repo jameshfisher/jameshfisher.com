@@ -7,8 +7,6 @@ const anthropic = new Anthropic({
 });
 
 const examples = [
-  `A primary feature of a collaborative product is its social norms. I look at LessWrong, a forum product, and show it builds its social norms.`,
-  `I try \`vim\`, but give up after finding the cursor cannot sit at the end of a line.`,
   `A method for calculating a bounding circle around a head, using facial landmarks from BlazeFace. Plus a live demo that you can run on your own face.`,
   `\`const\` is a type qualifier in C that makes a variable unassignable, except during initialization.`,
   `A C function to determine if one string is a permutation of
@@ -16,13 +14,15 @@ const examples = [
   `To call a program from C, use \`fork\` then \`execve\`. There is no more direct way!`,
   `An efficient way to represent and sample from a discrete
   probability distribution, using a balanced binary tree data structure called the "urn".`,
-  `Creating and using an SSH certificate authority, an alternative to the default "trust on first use" model.`,
   `The MediaStream Recording API converts a MediaStream to a Blob of compressed video and audio. A demo where you can record a 5-second clip.`,
   `A screencast about \`go tool trace\`, a profiling tool for Go applications.`,
   `How to apply a video filter to a webcam stream using the AVFoundation and CoreImage frameworks in Swift.`,
   `\`tcpdump\` captures and displays network traffic. An example inspecting DNS requests and responses.`,
   `Generating RSA keys, extracting the public key, encrypting with the public key, and
   decrypting with the private key.`,
+  `A green screen implementation in the browser using WebGL and chroma key. Includes a live demo.`,
+  `Computing a pointer to unowned memory invokes undefined behavior, even without dereferencing!`,
+  `Cookies are client-side storage that get sent with every HTTP request. A cookie is scoped to a domain suffix, a path prefix, and a time range. The API is old and weird.`
 ];
 
 async function fileToSummary(fileContent: string): Promise<string> {
@@ -34,9 +34,11 @@ async function fileToSummary(fileContent: string): Promise<string> {
         `You respond with a summary of 20 words or less.`,
         `The summary will be added to the post front-matter.`,
         `The summary is shown beneath links to the post.`,
-        `Write as Jim Fisher, using 'I' and 'we'.`,
-        `Summarize the content directly, and do not mention 'the post'.`,
+        `Write as Jim Fisher.`,
+        `Paraphrase the content directly.`,
+        `Never mention 'the post'.`,
         `Be extremely concise, even using sentence fragments.`,
+        `Do not duplicate info from the title.`,
         `Only include information from the post.`,
         `Use Markdown for formatting.`,
         `Excellent examples of summaries from other posts:`,
@@ -88,7 +90,7 @@ async function main() {
     const newFileContent = matter.stringify(content, postFrontmatter);
     fs.writeFileSync(filePath, newFileContent);
     i++;
-    if (i >= 8) return;
+    if (i >= 16) return;
   }
 }
 

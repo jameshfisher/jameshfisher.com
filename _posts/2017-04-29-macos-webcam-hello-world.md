@@ -1,6 +1,9 @@
 ---
 title: How to write a webcam app in Swift on macOS
 tags: []
+summary: >-
+  A macOS app that displays a webcam preview in a floating panel, using the
+  AVFoundation framework.
 ---
 
 Here we set up a panel which displays the device webcam.

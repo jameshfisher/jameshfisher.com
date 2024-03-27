@@ -6,6 +6,10 @@ tags:
   - notifications
   - ux
 taggedAt: '2024-03-26'
+summary: >-
+  The web Notification API allows web apps to display system-level
+  notifications, requiring user permission. It has two key parts: requesting
+  permission and creating notifications.
 ---
 
 The web Notification API lets web apps on your browser display system-level notifications,

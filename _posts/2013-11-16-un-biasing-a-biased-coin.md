@@ -5,6 +5,9 @@ tags:
   - math
   - puzzle
 taggedAt: '2024-03-26'
+summary: >-
+  Flip a biased coin twice to get an unbiased outcome. Use HT and TH as the
+  outcomes, ignoring HH and TT.
 ---
 
 Puzzle: You and a friend are sharing a car.

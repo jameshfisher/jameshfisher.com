@@ -1,6 +1,10 @@
 ---
 title: What is Swift's `@NSApplicationMain` annotation?
 tags: []
+summary: >-
+  The `@NSApplicationMain` annotation in Swift automatically sets up the
+  application's entry point, including creating the `NSApplication` instance and
+  assigning the `AppDelegate` class.
 ---
 
 In Xcode, go to `File > New > Project`,

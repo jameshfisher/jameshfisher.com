@@ -2,6 +2,9 @@
 title: A lambda calculus interpreter in Haskell
 tags:
   - programming
+summary: >-
+  A lambda calculus interpreter in Haskell, using de Bruijn indexing and lazy
+  evaluation, with simple integer literals added.
 ---
 
 A few days ago, I wrote an interpreter for a small imperative language in Haskell.

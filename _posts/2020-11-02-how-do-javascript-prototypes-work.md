@@ -3,6 +3,8 @@ title: How do JavaScript prototypes work?
 tags:
   - programming
   - javascript
+summary: >-
+  JavaScript has two different "prototype" concepts: an own property with the string key "prototype", and a parent slot. Don't confuse the two!
 ---
 
 [In my previous post](/2020/11/01/what-does-the-dot-do-in-javascript/),
@@ -62,7 +64,7 @@ or it could refer to the parent of `x`.
 I will avoid this ambiguity by saying either
 "the parent of `x`", or "the `"prototype"` property of `x`".
 
-The JavaScript runtime enforces that 
+The JavaScript runtime enforces that
 all values are linked, by their parent slots, into a big tree.
 The value `null` is the root of the tree, with no parent.
 The basic point of these "parent" slots forming a big tree
@@ -123,7 +125,7 @@ const logger2 = new Logger("/var/log/myapp");
 ```
 
 Now let's look at how to define a "class" in JavaScript.
-I put "class" in quotes, because really a "class" is just 
+I put "class" in quotes, because really a "class" is just
 anything that would be accepted as the `constructor` argument of `Construct`, above.
 
 When we define a function in JavaScript with the `function(){}` notation,
@@ -137,13 +139,13 @@ function Dog(a,b,c) { this.a = a; console.log(b, c); }
 // ... THEN JAVASCRIPT INSERTS ALL THIS:
 
 const methods = Object.create(Object.prototype);  // New, empty methods for the user to fill out
-Object.defineProperty(Dog, 'prototype', 
+Object.defineProperty(Dog, 'prototype',
   { value: methods, writable: true });  // Store methods under Dog.prototype, for `new` to find
 Object.setPrototypeOf(Dog, Function.prototype);   // Confusing, but provides things like Dog.apply(...)
 Object.defineProperty(methods, 'constructor', { value: Dog });  // Unimportant; lets us do `new dog.constructor(4,5,6)`
 ```
 
-Note that every time you write `function(){}`, 
+Note that every time you write `function(){}`,
 it creates a constructor, with a new `methods` object, and an implicit `this` parameter.
 This is very often not your intention.
 To avoid this, you should use the arrow function syntax, which is conceptually simpler.
@@ -153,7 +155,7 @@ and it does not have an implicit `this` parameter.
 Note the methods object is set to inherit from the standard Object methods,
 stored in in `Object.prototype` (which should be called `Object.methods`).
 Effectively, it defaults to `Dog extends Object`.
-If you want a different class hierarchy, 
+If you want a different class hierarchy,
 you need to manually fix what JavaScript created for you!
 For example, if you want the hierarchy `Dog -> Animal -> Object`,
 you can patch it up with `Object.setPrototypeOf`:
@@ -180,10 +182,10 @@ overwriting the `prototype` property entirely,
 but this is also ugly,
 because it overwrites the `constructor` property too.
 But having said that, is the `constructor` property useful?
-It lets us write things like: 
+It lets us write things like:
 
 ```js
-let foo1 = new Dog(1,2,3); 
+let foo1 = new Dog(1,2,3);
 let foo2 = new foo1.constructor(4,5,6);
 ```
 
@@ -210,7 +212,7 @@ function Animal(prefix = "> ") {
   this.prefix = prefix;
 }
 Animal.prototype.speak = function(words) {
-  console.log(this.prefix + words); 
+  console.log(this.prefix + words);
 };
 
 function Dog() {

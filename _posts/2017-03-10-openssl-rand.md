@@ -10,6 +10,9 @@ tags:
   - random-numbers
   - cli
 taggedAt: '2024-03-26'
+summary: >-
+  Generate random bytes with `openssl rand`, which uses a PRNG seeded with
+  entropy from `~/.rnd`.
 ---
 
 Another command in `openssl` is `rand`. We invoke it like this:

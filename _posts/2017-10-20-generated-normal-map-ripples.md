@@ -4,6 +4,9 @@ tags:
   - programming
   - graphics
   - webgl
+summary: >-
+  Generating dynamic normal-mapped ripple effects using WebGL, with the mouse
+  position controlling the light source.
 ---
 
 <div>
@@ -36,7 +39,7 @@ tags:
     float ang = atan(surface_pos_cs.y, surface_pos_cs.x);
     float dist = length(vec2(surface_pos_cs));
     vec4 normal_direction = rotateZ(ang) * rotateY(-PI_2) * normalize(vec4(1.0, 0.0, sin((dist-shift)*20.0)/4.0, 0.0));
-    vec4 from_light_dir = normalize(surface_pos_cs-light_pos_cs);  
+    vec4 from_light_dir = normalize(surface_pos_cs-light_pos_cs);
     vec4 reflection_dir = reflect(from_light_dir, normal_direction);
     vec4 camera_dir = normalize(vec4(0.0, 0.0, 1.0, 0.0));
     float intensity = dot(reflection_dir, camera_dir);
@@ -119,7 +122,7 @@ void main(void) {
   float ang = atan(surface_pos_cs.y, surface_pos_cs.x);
   float dist = length(vec2(surface_pos_cs));
   vec4 normal_direction = rotateZ(ang) * rotateY(-PI_2) * normalize(vec4(1.0, 0.0, sin((dist-shift)*20.0)/4.0, 0.0));
-  vec4 from_light_dir = normalize(surface_pos_cs-light_pos_cs);  
+  vec4 from_light_dir = normalize(surface_pos_cs-light_pos_cs);
   vec4 reflection_dir = reflect(from_light_dir, normal_direction);
   vec4 camera_dir = normalize(vec4(0.0, 0.0, 1.0, 0.0));
   float intensity = dot(reflection_dir, camera_dir);

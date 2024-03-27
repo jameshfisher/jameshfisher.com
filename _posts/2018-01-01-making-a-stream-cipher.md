@@ -6,6 +6,9 @@ tags:
   - crypto
 hnUrl: 'https://news.ycombinator.com/item?id=16066503'
 hnUpvotes: 1
+summary: >-
+  A stream cipher in Go that generates an infinite keystream from a
+  shared key using SHA-256.
 ---
 
 Symmetric cryptography lets Alice talk privately to Bob,

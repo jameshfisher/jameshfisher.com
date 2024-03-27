@@ -4,6 +4,9 @@ tags:
   - fave
 hnUrl: 'https://news.ycombinator.com/item?id=19010993'
 hnUpvotes: 227
+summary: >-
+  Hacker News buried my post on conspiracy theories in my family due to
+  overheated discussion, not censorship. Moderation keeps the site focused on interesting technical content.
 ---
 
 Last week I wrote [a post called "My parents are Flat-Earthers"](/2019/01/20/my-parents-are-flat-earthers/),
@@ -25,20 +28,20 @@ After calming down,
 I learned that you can reach the moderators at <a href="mailto:hn@ycombinator.com">hn@ycombinator.com</a>.
 I received a quick reply:
 
-> A few things happened with that post: 
-> a moderator put a penalty on it, 
-> and then a software overheated-discussion detector kicked in, 
+> A few things happened with that post:
+> a moderator put a penalty on it,
+> and then a software overheated-discussion detector kicked in,
 > and users flagged it.
-> Those are primarily about dampening the kinds of discussion that results from articles like this one, 
-> not about the article itself. 
-> 
-> Hacker News (but probably not just HN!) 
-> reacts to speculative, exploratory content on controversial topics 
-> with all their own pent-up speculation and anecdotes, 
-> and the problem is that it just gets nasty. 
-> Religious flamewars, 
-> harsh judgements of others (including one's own grandparents!), blame, etc. 
-> This is not the discussion by which we gratify our [intellectual curiosity](https://news.ycombinator.com/newsguidelines.html), 
+> Those are primarily about dampening the kinds of discussion that results from articles like this one,
+> not about the article itself.
+>
+> Hacker News (but probably not just HN!)
+> reacts to speculative, exploratory content on controversial topics
+> with all their own pent-up speculation and anecdotes,
+> and the problem is that it just gets nasty.
+> Religious flamewars,
+> harsh judgements of others (including one's own grandparents!), blame, etc.
+> This is not the discussion by which we gratify our [intellectual curiosity](https://news.ycombinator.com/newsguidelines.html),
 > and so it gets cleared away for other threads that might.
 
 My website doesn't have a comments section.

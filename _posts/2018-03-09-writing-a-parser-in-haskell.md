@@ -3,6 +3,10 @@ title: Writing a parser in Haskell
 tags:
   - programming
   - haskell
+summary: >-
+  I write a parser for JimScript, an imperative programming language, in
+  Haskell. The parser goes through three stages: tokenization, nesting, and
+  parsing.
 ---
 
 Previously I wrote an interpreter for an imperative programming language, "JimScript".

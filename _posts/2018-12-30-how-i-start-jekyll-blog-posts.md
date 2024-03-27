@@ -4,6 +4,9 @@ tags:
   - programming
   - blog
   - jekyll
+summary: >-
+  I use a custom `blogpost` command to quickly create new blog post files
+  with the current date and post title.
 ---
 
 I start every blog post by running a command which creates a new blog post file, like this:

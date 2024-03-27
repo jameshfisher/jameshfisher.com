@@ -75,7 +75,11 @@ async function main() {
   for (const filePath of filePaths) {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const { data: postFrontmatter, content } = matter(fileContent);
-    if (postFrontmatter.summary) {
+    if (
+      postFrontmatter.summary ||
+      postFrontmatter.external_url ||
+      postFrontmatter.draft
+    ) {
       continue;
     }
     console.log(`Processing ${filePath}`);

@@ -4,6 +4,9 @@ tags:
   - tensorflow
   - programming
   - machine-learning
+summary: >-
+  A TensorFlow 2 program that learns the cost per gram of chocolate by
+  training a linear model on example chocolate bar weights and prices.
 ---
 
 The following program finds out the cost of chocolate per gram using TensorFlow 2.

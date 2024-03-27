@@ -3,6 +3,11 @@ title: What are TCP sequence numbers?
 tags:
   - programming
   - networking
+summary: >-
+  TCP uses sequence numbers to map unordered IP packets to an ordered byte
+  stream. The sequence number field is 32 bits, but wraps around to 0 after
+  reaching the max value. The sender chooses a random "initial sequence number"
+  during the connection handshake.
 ---
 
 A TCP connection is a method of transmitting two byte streams,

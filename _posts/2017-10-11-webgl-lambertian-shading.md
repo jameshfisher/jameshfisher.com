@@ -1,6 +1,10 @@
 ---
 title: WebGL Lambertian shading
 tags: []
+summary: >-
+  Interactive WebGL demo that shows Lambertian shading, with a
+  fragment shader that calculates lighting based on a normal map and mouse
+  position.
 ---
 
 <div style="display: flex;">
@@ -15,7 +19,7 @@ tags: []
         vec4 light_pos = vec4(mouse_pos, 0.5, 1.0);
         vec4 surface_pos = vec4(frag, 0.0, 1.0);
         vec4 normal_direction = vec4(vec3(texture2D(normal_map, frag))*2.0-1.0, 0.0);
-        vec4 light_direction = normalize(light_pos-surface_pos);  
+        vec4 light_direction = normalize(light_pos-surface_pos);
         float intensity = dot(normal_direction, light_direction);
         gl_FragColor = vec4(intensity, intensity, intensity, 1.0);
       }</textarea>

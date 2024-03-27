@@ -7,6 +7,10 @@ tags:
   - posix
   - fave
 taggedAt: '2024-03-26'
+summary: >-
+  A C function to create a new process, set up its standard input/output/error
+  pipes, and return a struct containing the process ID and pipe file
+  descriptors.
 ---
 
 Earlier I showed [how to call a program in C](/2017/02/07/how-do-i-call-a-program-in-c/). This works by first forking the current process, then replacing the child process with the new program image. But how do we talk to this new process? We must set up the new process's standard pipes (standard in, out, error). This is a fair bit of work.

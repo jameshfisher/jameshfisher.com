@@ -6,11 +6,14 @@ tags:
   - programming
   - javascript
   - web
+summary: >-
+  UMD modules are a way to write JavaScript code that can be used in any
+  module system (e.g. CommonJS, AMD, or as a global variable).
 ---
 
 I've recently written about four "module" systems in JavaScript:
 
-* Raw `<script>` loading, where dependencies are implicit, 
+* Raw `<script>` loading, where dependencies are implicit,
   and exports are vomited onto the `window` object.
   (Strangely, this convention doesn't have a name!)
 * [CommonJS](/2020/09/27/what-does-the-require-function-do-in-nodejs/),
@@ -39,16 +42,16 @@ and it will always do something sensible.
 You might reasonably ask why this is useful.
 Surely the developer knows ahead of time which module system is being used,
 and so can load a version specifically for that module system?
-So we'd have `react-script.js` for raw `<script>` users, 
+So we'd have `react-script.js` for raw `<script>` users,
 `react-commonjs.js` for CommonJS users,
 `react-amd.js` for AMD users,
 and `react-es6.js` for ECMAScript module users.
 Honestly, I don't know the answer.
-I suppose it allows library authors and library consumers 
+I suppose it allows library authors and library consumers
 to live in some level of ignorance.
 
 But for whatever reason, UMD is popular.
-[Here is the basic pattern](https://github.com/umdjs/umd/blob/master/templates/commonjsStrict.js), 
+[Here is the basic pattern](https://github.com/umdjs/umd/blob/master/templates/commonjsStrict.js),
 in all its glory:
 
 ```js
@@ -89,7 +92,7 @@ attempt to take our dependencies from the global object,
 and spit our exports back onto the global object.
 
 There are lots of variations on this theme in different packages.
-But you know you're looking at UMD 
+But you know you're looking at UMD
 if you see these runtime checks for `typeof define`, `typeof exports`, etc.
 For example, [here's a file in the `react` package](https://unpkg.com/browse/react@16.13.1/umd/react.development.js),
 which begins:

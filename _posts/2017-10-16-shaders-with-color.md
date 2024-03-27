@@ -1,6 +1,9 @@
 ---
 title: WebGL shaders with color
 tags: []
+summary: >-
+  WebGL shaders that respond to mouse movement, using normal maps and color maps
+  to simulate diffuse and specular lighting on a rockface texture.
 ---
 
 <div>

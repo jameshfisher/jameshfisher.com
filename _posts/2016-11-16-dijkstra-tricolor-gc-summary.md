@@ -4,6 +4,10 @@ tags:
   - garbage-collection
   - computer-science
 taggedAt: '2024-03-26'
+summary: >-
+  A concurrent garbage collection algorithm that keeps synchronization
+  constraints between the mutator and collector processes as weak as possible. It uses node markings (white, grey, black) to ensure
+  reachable objects are not incorrectly collected.
 ---
 
 A summary of: http://research.microsoft.com/en-us/um/people/lamport/pubs/garbage.pdf

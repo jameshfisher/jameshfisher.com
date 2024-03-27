@@ -4,6 +4,8 @@ tags:
   - programming
   - web
   - javascript
+summary: >-
+  Babel is a JavaScript compiler that transforms JavaScript code. Here I use its API programmatically.
 ---
 
 "Babel is a JavaScript compiler", say the docs.
@@ -33,7 +35,7 @@ but it doesn't always do so
 (it's prone to moving comments around, for example).
 
 Babel did the hard work of parsing the input into an AST, then stringifying it again.
-[Babel's parser](https://babeljs.io/docs/en/next/babel-parser.html) and generator 
+[Babel's parser](https://babeljs.io/docs/en/next/babel-parser.html) and generator
 has hardcoded knowledge of JavaScript,
 and various extensions like JSX and TypeScript.
 (The parser accepts "plugins", but they're not really plugins.
@@ -55,7 +57,7 @@ Babel is not a "bundler".
 So far, so useless.
 Babel's power is in transforming the AST before writing it out again.
 You could do what you like with the `ast` value, since it's mutable.
-But more conventionally, 
+But more conventionally,
 you'll use `"@babel/traverse"`,
 giving it a _visitor_ which is called for each node in the AST.
 Your visitor then mutates the AST.
@@ -125,15 +127,15 @@ module.exports = () => ({
 You can then either import it,
 or just pass the module name to Babel,
 which does some magic dynamic `require`ing.
-Here, we reverse the identifiers, 
+Here, we reverse the identifiers,
 then transform arrow functions using a standard Babel plugin:
 
 ```js
 babel.transformSync(inputJs, {
   configFile: false,
-  plugins: [ 
+  plugins: [
     "babel-plugin-transform-reverse-identifiers",
-    "@babel/plugin-transform-arrow-functions" 
+    "@babel/plugin-transform-arrow-functions"
   ]
 });
 ```
@@ -147,9 +149,9 @@ For example:
 ```js
 // node_mobules/my-preset/index.js
 module.exports = () => ({
-  plugins: [ 
+  plugins: [
     "babel-plugin-transform-reverse-identifiers",
-    "@babel/plugin-transform-arrow-functions" 
+    "@babel/plugin-transform-arrow-functions"
   ]
 });
 

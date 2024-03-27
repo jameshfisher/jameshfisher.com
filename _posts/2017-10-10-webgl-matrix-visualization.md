@@ -1,6 +1,9 @@
 ---
 title: WebGL matrix visualization
 tags: []
+summary: >-
+  A WebGL-powered matrix visualization tool that lets you interactively edit a
+  4x4 transformation matrix and see the effects on a 3D cube render.
 ---
 
 

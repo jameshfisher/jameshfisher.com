@@ -5,6 +5,10 @@ tags:
   - programming
   - c
   - haskell
+summary: >-
+  Find the middle node of the linked list using the "runner" trick. Reverse the
+  first half, then compare the nodes pairwise from the middle outwards. Restore
+  the list to its original state before returning.
 ---
 
 Question 2.7 of _Cracking the Coding Interview_:

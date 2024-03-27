@@ -1,6 +1,10 @@
 ---
 title: How to name a product with reduplication
 tags: []
+summary: >-
+  Product names often use reduplication, like "Tic Tac" or "Fit Bit", to mimic
+  the babbling sounds of babies. This creates a sense of familiarity and
+  simplicity.
 ---
 
 How do you name a product, or a company?

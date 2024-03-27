@@ -4,6 +4,7 @@ tags:
   - talk
   - documentation
   - conference
+summary: ' '
 ---
 
 Pusher kindly paid for me to travel to Prague for [Write the Docs 2018](http://www.writethedocs.org/conf/prague/2018/).

@@ -6,6 +6,9 @@ tags:
   - javascript
   - networking
 taggedAt: '2024-03-26'
+summary: >-
+  Including setting up the `RTCPeerConnection`, creating a data channel, handling ICE
+  candidates, and generating an offer to be shared with the remote peer. The signaling channel is copy-paste!
 ---
 
 I created [this tiny serverless WebRTC chat app](https://jameshfisher.github.io/serverless-webrtc/index.html).

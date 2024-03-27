@@ -5,6 +5,9 @@ tags:
   - graphics
   - webgl
   - epidemiology
+summary: >-
+  A spatial SIR model for simulating epidemics, implemented using WebGL fragment
+  shaders. Tracks susceptible, infected, and recovered populations in a 2D grid.
 ---
 
 In a recent post, I looked at [the SIR model for simulating epidemics](/2020/02/15/simulating-epidemics/).
@@ -49,7 +52,7 @@ simulated with WebGL:
     float infected    = prevPx.r;
     float recovered   = prevPx.g;
 
-    vec4 region = 
+    vec4 region =
       prevPx +
       sample(coord+vec2( 1., 0.)) +
       sample(coord+vec2(-1., 0.)) +

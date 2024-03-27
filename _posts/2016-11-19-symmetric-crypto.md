@@ -2,31 +2,35 @@
 title: What is symmetric cryptography?
 tags:
   - cryptography
-taggedAt: '2024-03-26'
+taggedAt: "2024-03-26"
+summary: >-
+  Symmetric cryptography uses a shared secret key for both encryption and
+  authentication, providing confidentiality and integrity. We look at
+  the API, HMAC, and Authenticated Encryption.
 ---
 
 My understanding of cryptography is very superficial. Here are some notes.
 
 Traditional communication is easy: go into a meeting room and speak to each other. But in the modern world, we don't always have this luxury; instead we have to talk over large distances, via wires and other people, with many people listening. Unfortunately some of these people are "adversarial" and can now do bad things:
 
-* They can read what you say.
-* They can change what you say.
-* They can pretend to be you.
+- They can read what you say.
+- They can change what you say.
+- They can pretend to be you.
 
 Crypto is all about recovering some of the guarantees of the meeting room, while in the presence of such adversaries. Two important guarantees are that:
 
-* Adversaries can't read your messages. ("Encryption".)
-* The recipient can verify that your messages are really from you. ("Authentication", "verification", or "signing".)
+- Adversaries can't read your messages. ("Encryption".)
+- The recipient can verify that your messages are really from you. ("Authentication", "verification", or "signing".)
 
 There are two main forms:
 
-* Private/secret/symmetric key. This is the old-school crypto which requires you to share a secret with the recipient. The hardships with it include initial key exchange, and that anyone who can decrypt your messages can also impersonate you.
-* Public/asymmetric key. This is the amazing post-1970 crypto which "fixes" some of those hardships.
+- Private/secret/symmetric key. This is the old-school crypto which requires you to share a secret with the recipient. The hardships with it include initial key exchange, and that anyone who can decrypt your messages can also impersonate you.
+- Public/asymmetric key. This is the amazing post-1970 crypto which "fixes" some of those hardships.
 
 I'd like to know more about symmetric key crypto. You can do both things with it:
 
-* Encryption: Send a message to someone else with the secret, such that adversaries can't read it.
-* Authentication (signing): Send a message to someone else with the secret, such that they can verify it's from you.
+- Encryption: Send a message to someone else with the secret, such that adversaries can't read it.
+- Authentication (signing): Send a message to someone else with the secret, such that they can verify it's from you.
 
 The basic API is:
 
@@ -100,14 +104,14 @@ The above says that, to verify the signature, we re-generate the signature and c
 
 Notice that this process verifies _two_ properties:
 
-* The received message is from someone with the shared secret. ("Authentication".)
-* The received message is exactly what that person wrote. ("Data integrity".)
+- The received message is from someone with the shared secret. ("Authentication".)
+- The received message is exactly what that person wrote. ("Data integrity".)
 
 If `verify_sig` fails, there are a few possible causes:
 
-* The message is not from someone with the shared secret.
-* An adversary tampered with the message in transit.
-* The message was corrupted in transit.
+- The message is not from someone with the shared secret.
+- An adversary tampered with the message in transit.
+- The message was corrupted in transit.
 
 This MAC process has some similarity with a different concept, a message digest (aka checksum):
 
@@ -193,8 +197,8 @@ All three approaches are used in different major systems: EtM in IPsec, E&M in S
 
 Within symmetric-key crypto, there are two forms of cipher:
 
-* Block ciphers. A block cipher encrypts fixed-length plaintexts. For example, the Blowfish algorithm works on 64-bit blocks (8 bytes).
-* Stream ciphers. A stream cipher encrypts variable-length plaintexts. It works "online", i.e. can emit the cipher text as it consumes the plaintext.
+- Block ciphers. A block cipher encrypts fixed-length plaintexts. For example, the Blowfish algorithm works on 64-bit blocks (8 bytes).
+- Stream ciphers. A stream cipher encrypts variable-length plaintexts. It works "online", i.e. can emit the cipher text as it consumes the plaintext.
 
 To understand either, a good place to start seems to be the XOR function (denoted ⊕ in crypto-land). It's one of the classic binary functions we were taught in school:
 
@@ -227,7 +231,6 @@ The one-time pad is secure against any adversary, regardless of computational po
 
 Block/stream ciphers are broken to the extent that attackers do not have to try all the possible keys.
 
-
 Let's look at block ciphers. A given block cipher has the API:
 
 ```
@@ -235,7 +238,7 @@ block = encrypt(secret, block)
 block = decrypt(secret, block)
 ```
 
-This looks just like our `encrypt` and `decrypt` functions above. The difference is that, for a given block cipher, the `block` type has a fixed length and the `secret` type has a fixed length.  For example:
+This looks just like our `encrypt` and `decrypt` functions above. The difference is that, for a given block cipher, the `block` type has a fixed length and the `secret` type has a fixed length. For example:
 
 ```
 block64 = blowfish_encrypt(secret, block64)

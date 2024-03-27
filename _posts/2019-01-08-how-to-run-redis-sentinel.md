@@ -3,6 +3,8 @@ title: How to run Redis Sentinel
 tags:
   - programming
   - networking
+summary: Redis Sentinel provides high availability for Redis. We start a Redis
+  master, then three Redis Sentinel instances. They discover each other, then we trigger a failover.
 ---
 
 This post is a walk-through of using Redis Sentinel,
@@ -80,7 +82,7 @@ Just point it at the configured port 5000:
 
 ```console
 $ redis-cli -p 5000
-127.0.0.1:5000> 
+127.0.0.1:5000>
 ```
 
 Once connected to the Sentinel,
@@ -376,7 +378,7 @@ Reading messages... (press Ctrl-C to quit)
 3) (integer) 1
 ```
 
-Now trigger a failover again, 
+Now trigger a failover again,
 this time in the other direction:
 
 ```console

@@ -1,6 +1,10 @@
 ---
-title: "Homogeneous coordinates in 3D"
-tags: ["mathematics", "programming", "js", "graphics"]
+title: Homogeneous coordinates in 3D
+tags:
+  - mathematics
+  - programming
+  - js
+  - graphics
 ---
 
 Here is an animation of a house.

@@ -1,6 +1,7 @@
 ---
-title: "Summarize metrics with random deletion"
+title: Summarize metrics with random deletion
 draft: true
+tags: []
 ---
 
 You have a metric for which you have a result every second

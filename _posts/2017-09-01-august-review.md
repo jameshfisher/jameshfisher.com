@@ -1,5 +1,5 @@
 ---
-title: "August review"
+title: August review
 tags:
   - monthly_review
 ---

@@ -1,6 +1,8 @@
 ---
-title: "DNS resolution procedure"
-tags: ["programming", "networking"]
+title: DNS resolution procedure
+tags:
+  - programming
+  - networking
 ---
 
 DNS is mainly a way to look up the IP address for a domain.

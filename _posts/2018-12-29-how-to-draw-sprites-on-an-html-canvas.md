@@ -1,6 +1,9 @@
 ---
-title: "How to draw sprites on an HTML canvas"
-tags: ["programming", "animation", "web"]
+title: How to draw sprites on an HTML canvas
+tags:
+  - programming
+  - animation
+  - web
 ---
 
 In [my previous post](/2018/12/28/a-cat-walk-cycle/)

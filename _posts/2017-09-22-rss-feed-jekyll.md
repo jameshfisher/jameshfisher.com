@@ -1,5 +1,6 @@
 ---
-title: "Adding an RSS feed to a Jekyll blog"
+title: Adding an RSS feed to a Jekyll blog
+tags: []
 ---
 
 I've added an RSS feed to this blog.

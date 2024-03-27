@@ -1,6 +1,9 @@
 ---
-title: "How to check if a binary tree is balanced"
-tags: ["ctci", "programming", "haskell"]
+title: How to check if a binary tree is balanced
+tags:
+  - ctci
+  - programming
+  - haskell
 ---
 
 Question 4.1 of _Cracking the Coding Interview_:

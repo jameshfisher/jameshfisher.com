@@ -1,6 +1,7 @@
 ---
-title: "Pattern jokes via WordNet/NLTK"
-justification: "It's Sophie's birthday. This is a silly present"
+title: Pattern jokes via WordNet/NLTK
+justification: It's Sophie's birthday. This is a silly present
+tags: []
 ---
 
 Facebook "Messenger Platform" lets you make bots which can talk on Facebook Messenger. I want to make a bot which makes "pattern jokes": it listens to the conversation, and occasionally responds with a "pattern joke" based on something someone said. Here's an example of a "pattern joke":

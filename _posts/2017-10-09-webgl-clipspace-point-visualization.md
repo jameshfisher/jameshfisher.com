@@ -1,5 +1,6 @@
 ---
-title: "WebGL clipspace point visualization"
+title: WebGL clipspace point visualization
+tags: []
 ---
 
 <div style="display: flex;">

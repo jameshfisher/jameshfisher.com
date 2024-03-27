@@ -1,6 +1,8 @@
 ---
-title: "Linking to external posts from Jekyll"
-tags: ["jekyll", "blog"]
+title: Linking to external posts from Jekyll
+tags:
+  - jekyll
+  - blog
 ---
 
 I'd like this site to list all my public activity.

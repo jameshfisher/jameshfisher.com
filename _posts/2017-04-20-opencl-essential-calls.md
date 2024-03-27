@@ -1,6 +1,7 @@
 ---
-title: "OpenCL essential calls"
+title: OpenCL essential calls
 draft: true
+tags: []
 ---
 
 Yesterday I distilled a "hello world" C program which uses the OpenCL framework. 

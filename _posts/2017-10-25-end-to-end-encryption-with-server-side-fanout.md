@@ -1,6 +1,8 @@
 ---
-title: "Group chat with end-to-end encryption"
-tags: ["programming", "crypto"]
+title: Group chat with end-to-end encryption
+tags:
+  - programming
+  - crypto
 ---
 
 In a two-person conversation,

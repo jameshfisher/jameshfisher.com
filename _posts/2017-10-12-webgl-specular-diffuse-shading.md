@@ -1,5 +1,6 @@
 ---
-title: "WebGL shading: diffuse vs. specular"
+title: 'WebGL shading: diffuse vs. specular'
+tags: []
 ---
 
 <div>

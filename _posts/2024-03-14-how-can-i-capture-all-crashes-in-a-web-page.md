@@ -1,6 +1,8 @@
 ---
-title: "How can I capture all crashes in a web page?"
-tags: ["programming", "web"]
+title: How can I capture all crashes in a web page?
+tags:
+  - programming
+  - web
 ---
 
 Services like [Sentry](https://sentry.io/)

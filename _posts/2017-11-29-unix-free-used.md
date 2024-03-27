@@ -1,6 +1,8 @@
 ---
-title: "UNIX `free`: `used` does not mean what you think it means"
-tags: ["programming", "unix"]
+title: 'UNIX `free`: `used` does not mean what you think it means'
+tags:
+  - programming
+  - unix
 ---
 
 Today I wanted to see how close a Linux machine was to being out-of-memory.

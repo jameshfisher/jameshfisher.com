@@ -1,5 +1,6 @@
 ---
-title: "What are `/dev/stdout` and `/dev/stdin`? What are they useful for?"
+title: What are `/dev/stdout` and `/dev/stdin`? What are they useful for?
+tags: []
 ---
 
 In the `/dev` directory,

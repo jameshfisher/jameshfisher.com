@@ -1,7 +1,10 @@
 ---
-title: "Head tracking with BlazeFace"
-tags: ["programming", "web", "ml"]
-ogimage: "/assets/2020-10-11/result.jpg"
+title: Head tracking with BlazeFace
+tags:
+  - programming
+  - web
+  - machine-learning
+ogimage: /assets/2020-10-11/result.jpg
 ---
 
 BlazeFace identifies _faces_.

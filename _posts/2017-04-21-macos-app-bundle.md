@@ -1,6 +1,7 @@
 ---
-title: "What is a .app?"
-justification: "Vidrio is a .app!"
+title: What is a .app?
+justification: Vidrio is a .app!
+tags: []
 ---
 
 In macOS, I browse to my `/Applications` directory to see lots of files. `Keynote.app`, `Spotify.app`, `Vidrio.app`, etc. What are these things? These "applications" can't be launched in the normal fashion:

@@ -1,6 +1,9 @@
 ---
-title: "Is there a route between these two nodes in this directed graph?"
-tags: ["ctci", "programming", "haskell"]
+title: Is there a route between these two nodes in this directed graph?
+tags:
+  - ctci
+  - programming
+  - haskell
 ---
 
 Question 4.2 of _Cracking the Coding Interview_:

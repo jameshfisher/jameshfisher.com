@@ -1,5 +1,5 @@
 ---
-title: "What is `go tool trace`?"
+title: What is `go tool trace`?
 tags:
   - talk
 ---

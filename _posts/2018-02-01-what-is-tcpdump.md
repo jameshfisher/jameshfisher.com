@@ -1,6 +1,8 @@
 ---
-title: "What is `tcpdump`?"
-tags: ["programming", "unix"]
+title: What is `tcpdump`?
+tags:
+  - programming
+  - unix
 ---
 
 Say I make a DNS request:

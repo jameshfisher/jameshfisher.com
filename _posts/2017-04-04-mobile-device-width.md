@@ -1,6 +1,7 @@
 ---
-title: "What is the `viewport` meta tag? How can I display my website on mobile?"
-justification: "I'm making the Vidrio website. It should display well on mobile."
+title: What is the `viewport` meta tag? How can I display my website on mobile?
+justification: I'm making the Vidrio website. It should display well on mobile.
+tags: []
 ---
 
 Look at [vidr.io](https://vidr.io) on mobile. The page looks like a scaled-down version of the site designed for desktop. Compare this to [framer.com](https://framer.com/) on mobile, which displays a significantly different page on mobile.

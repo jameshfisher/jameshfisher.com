@@ -1,6 +1,7 @@
 ---
-title: "How to apply a `CIFilter` to an image in Swift"
-justification: "Future Vidrio feature requires image processing."
+title: How to apply a `CIFilter` to an image in Swift
+justification: Future Vidrio feature requires image processing.
+tags: []
 ---
 
 ```swift

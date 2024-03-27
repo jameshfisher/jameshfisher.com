@@ -1,6 +1,8 @@
 ---
-title: "How to publish an npm package"
-tags: ["programming", "javascript"]
+title: How to publish an npm package
+tags:
+  - programming
+  - javascript
 ---
 
 Here I publish an NPM package `@jameshfisher/numsyslib`

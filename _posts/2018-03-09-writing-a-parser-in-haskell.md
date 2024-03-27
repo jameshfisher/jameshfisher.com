@@ -1,6 +1,8 @@
 ---
-title: "Writing a parser in Haskell"
-tags: ["programming", "haskell"]
+title: Writing a parser in Haskell
+tags:
+  - programming
+  - haskell
 ---
 
 Previously I wrote an interpreter for an imperative programming language, "JimScript".

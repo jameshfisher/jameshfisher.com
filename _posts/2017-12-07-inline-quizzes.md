@@ -1,6 +1,7 @@
 ---
-title: "Inline quizzes"
-tags: ["blog"]
+title: Inline quizzes
+tags:
+  - blog
 ---
 
 Stop and think of the last article you read

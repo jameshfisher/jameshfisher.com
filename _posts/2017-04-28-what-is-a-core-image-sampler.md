@@ -1,5 +1,6 @@
 ---
-title: "What are samples in a Core Image kernel?"
+title: What are samples in a Core Image kernel?
+tags: []
 ---
 
 Here's a Core Image kernel which swaps the red and green components of an image:

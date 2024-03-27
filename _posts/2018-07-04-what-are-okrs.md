@@ -1,6 +1,7 @@
 ---
-title: "What are OKRs?"
+title: What are OKRs?
 draft: true
+tags: []
 ---
 
 A summary of _Resource 1: Google's OKRs Playbook_, from _Measure What Matters_.

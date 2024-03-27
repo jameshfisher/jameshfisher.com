@@ -1,6 +1,9 @@
 ---
-title: "How to rotate a square matrix in-place"
-tags: ["ctci", "programming", "c"]
+title: How to rotate a square matrix in-place
+tags:
+  - ctci
+  - programming
+  - c
 ---
 
 Question 1.6 of _Cracking the Coding Interview_:

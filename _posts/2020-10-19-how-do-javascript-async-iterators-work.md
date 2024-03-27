@@ -1,6 +1,8 @@
 ---
-title: "How do JavaScript async iterators work?"
-tags: ["programming", "javascript"]
+title: How do JavaScript async iterators work?
+tags:
+  - programming
+  - javascript
 ---
 
 [A while ago, I described iterators in JavaScript](/2019/05/10/how-do-javascript-iterators-work/).

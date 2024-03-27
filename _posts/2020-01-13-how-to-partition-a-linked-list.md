@@ -1,6 +1,9 @@
 ---
-title: "How to partition a linked list"
-tags: ["ctci", "programming", "c"]
+title: How to partition a linked list
+tags:
+  - ctci
+  - programming
+  - c
 ---
 
 Question 2.4 of _Cracking the Coding Interview_:

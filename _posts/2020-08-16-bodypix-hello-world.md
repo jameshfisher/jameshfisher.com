@@ -1,7 +1,10 @@
 ---
-title: "BodyPix hello world"
-tags: ["programming", "web", "machinelearning"]
-ogimage: "/assets/2020-08-16/result.jpg"
+title: BodyPix hello world
+tags:
+  - programming
+  - web
+  - machinelearning
+ogimage: /assets/2020-08-16/result.jpg
 ---
 
 BodyPix is a TensorFlow model for "person segmentation".

@@ -1,5 +1,6 @@
 ---
-title: "Bootstrapping a C compiler"
+title: Bootstrapping a C compiler
+tags: []
 ---
 
 In ["Reflections on Trusting Trust"](https://dl.acm.org/citation.cfm?id=358210),

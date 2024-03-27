@@ -1,6 +1,9 @@
 ---
-title: "A head in a box with BlazeFace"
-tags: ["programming", "web", "ml"]
+title: A head in a box with BlazeFace
+tags:
+  - programming
+  - web
+  - machine-learning
 ---
 
 [Yesterday I showed how to track a head using BlazeFace.](/2020/10/11/head-tracking-with-blazeface/)

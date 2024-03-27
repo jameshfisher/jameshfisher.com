@@ -1,6 +1,8 @@
 ---
-title: "How do errors in a web page reach the dev console?"
-tags: ["programming", "web"]
+title: How do errors in a web page reach the dev console?
+tags:
+  - programming
+  - web
 ---
 
 When you write `throw new Error("blah")` in JavaScript,

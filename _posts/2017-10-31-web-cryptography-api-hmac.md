@@ -1,6 +1,9 @@
 ---
-title: "Signing a string with HMAC using the Web Crypto API"
-tags: ["programming", "crypto", "javascript"]
+title: Signing a string with HMAC using the Web Crypto API
+tags:
+  - programming
+  - crypto
+  - javascript
 ---
 
 Below, you can type a plaintext string, and enter a secret key.

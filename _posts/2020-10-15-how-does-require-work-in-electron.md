@@ -1,6 +1,9 @@
 ---
-title: "How does `require` work in Electron?"
-tags: ["programming", "electron", "javascript"]
+title: How does `require` work in Electron?
+tags:
+  - programming
+  - electron
+  - javascript
 ---
 
 [Electron apps copy the Chromium process architecture](/2020/10/14/the-electron-process-architecture-is-the-chromium-process-architecture/).

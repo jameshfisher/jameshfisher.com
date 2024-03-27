@@ -1,5 +1,6 @@
 ---
-title: "WebGL shader uniforms"
+title: WebGL shader uniforms
+tags: []
 ---
 
 <div style="display: flex;">

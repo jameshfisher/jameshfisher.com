@@ -1,5 +1,6 @@
 ---
-title: "What is a Web App Manifest?"
+title: What is a Web App Manifest?
+tags: []
 ---
 
 We use "web app" to describe web pages which are more like programs.

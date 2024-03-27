@@ -1,6 +1,9 @@
 ---
-title: "Determine whether one string is a permutation of the other"
-tags: ["ctci", "programming", "c"]
+title: Determine whether one string is a permutation of the other
+tags:
+  - ctci
+  - programming
+  - c
 ---
 
 Question 1.3 of _Cracking the Coding Interview_:

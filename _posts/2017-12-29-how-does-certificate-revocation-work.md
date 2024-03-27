@@ -1,4 +1,6 @@
 ---
-title: "How does certificate revocation work?"
+title: How does certificate revocation work?
 draft: true
+tags: []
 ---
+

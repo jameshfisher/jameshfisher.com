@@ -1,6 +1,9 @@
 ---
-title: "Symmetric encryption with the Web Cryptography API"
-tags: ["programming", "crypto", "javascript"]
+title: Symmetric encryption with the Web Cryptography API
+tags:
+  - programming
+  - crypto
+  - javascript
 ---
 
 Here's an example of symmetric encryption using the Web Cryptography API.

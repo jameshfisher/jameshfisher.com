@@ -1,5 +1,6 @@
 ---
-title: "What is a TTY?"
+title: What is a TTY?
+tags: []
 ---
 
 Open a terminal and run `tty`.

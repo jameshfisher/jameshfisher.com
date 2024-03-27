@@ -1,6 +1,9 @@
 ---
-title: "How does swapping stdin and stderr work?"
-tags: ["programming", "unix", "c"]
+title: How does swapping stdin and stderr work?
+tags:
+  - programming
+  - unix
+  - c
 ---
 
 Sometimes I want to call something in bash,

@@ -1,5 +1,6 @@
 ---
-title: "Instance DNS in multi-tenant services"
+title: Instance DNS in multi-tenant services
+tags: []
 ---
 
 "The cloud" is full of multi-tenant systems.

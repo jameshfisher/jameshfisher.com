@@ -1,5 +1,6 @@
 ---
-title: "What is open addressing?"
+title: What is open addressing?
+tags: []
 ---
 
 Hash tables must deal with hash collisions.

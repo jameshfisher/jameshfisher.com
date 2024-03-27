@@ -1,6 +1,8 @@
 ---
-title: "How to replace GIF with HTML video in 2021"
-tags: ["programming", "web"]
+title: How to replace GIF with HTML video in 2021
+tags:
+  - programming
+  - web
 ---
 
 You want to add a video to your webpage that acts like an animated GIF.

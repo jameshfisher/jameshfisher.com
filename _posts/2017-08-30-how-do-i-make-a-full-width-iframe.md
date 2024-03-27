@@ -1,5 +1,6 @@
 ---
-title: "How do I make a full-width `iframe` with fixed aspect ratio?"
+title: How do I make a full-width `iframe` with fixed aspect ratio?
+tags: []
 ---
 
 I wanted to embed a YouTube `<iframe>` in a webpage.

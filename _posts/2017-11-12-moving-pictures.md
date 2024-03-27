@@ -1,5 +1,6 @@
 ---
-title: "Moving pictures"
+title: Moving pictures
+tags: []
 ---
 
 I used to have an image of me

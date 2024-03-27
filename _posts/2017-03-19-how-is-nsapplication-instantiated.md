@@ -1,6 +1,9 @@
 ---
-title: "What is `NSApplication`? How is it instantiated? What is `NSApp`?"
-justification: "I'm making Vidrio this month. I need to understand Cocoa and Swift. `NSApp` is the heart of a Cocoa application."
+title: What is `NSApplication`? How is it instantiated? What is `NSApp`?
+justification: >-
+  I'm making Vidrio this month. I need to understand Cocoa and Swift. `NSApp` is
+  the heart of a Cocoa application.
+tags: []
 ---
 
 The core of a Cocoa application is [the `NSApplication` class](https://developer.apple.com/reference/appkit/nsapplication). The docs for it say

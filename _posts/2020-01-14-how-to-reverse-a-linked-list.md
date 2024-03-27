@@ -1,6 +1,8 @@
 ---
-title: "How to reverse a linked list"
-tags: ["programming", "c"]
+title: How to reverse a linked list
+tags:
+  - programming
+  - c
 ---
 
 To reverse a linked list,

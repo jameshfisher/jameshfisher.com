@@ -1,6 +1,8 @@
 ---
-title: "How to run Redis Sentinel"
-tags: ["programming", "networking"]
+title: How to run Redis Sentinel
+tags:
+  - programming
+  - networking
 ---
 
 This post is a walk-through of using Redis Sentinel,

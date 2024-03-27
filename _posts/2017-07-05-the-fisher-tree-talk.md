@@ -1,5 +1,5 @@
 ---
-title: "The Fisher Tree at The Realtime Guild"
+title: The Fisher Tree at The Realtime Guild
 tags:
   - talk
 ---

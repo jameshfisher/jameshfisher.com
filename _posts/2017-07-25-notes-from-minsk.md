@@ -1,5 +1,6 @@
 ---
-title: "Notes from Minsk"
+title: Notes from Minsk
+tags: []
 ---
 
 Will Sewell and I gave our "Go garbage collector" talk at GoWayFest in Minsk.

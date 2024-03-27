@@ -1,6 +1,9 @@
 ---
-title: "Resizable boxes in pure CSS!"
-tags: ["programming", "web", "css"]
+title: Resizable boxes in pure CSS!
+tags:
+  - programming
+  - web
+  - css
 ---
 
 This morning I stumbled upon the CSS `resize` property.

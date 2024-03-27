@@ -1,6 +1,7 @@
 ---
-title: "Executables in npm?"
-tags: ["programming"]
+title: Executables in npm?
+tags:
+  - programming
 ---
 
 NPM is not just for distributing Node.js modules.

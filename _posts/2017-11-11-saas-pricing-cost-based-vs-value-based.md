@@ -1,5 +1,6 @@
 ---
-title: "SaaS price models: cost-based pricing vs. value-based pricing"
+title: 'SaaS price models: cost-based pricing vs. value-based pricing'
+tags: []
 ---
 
 You run a software-as-a-service business.

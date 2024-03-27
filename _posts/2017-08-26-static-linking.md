@@ -1,5 +1,6 @@
 ---
-title: "What is static linking in C?"
+title: What is static linking in C?
+tags: []
 ---
 
 An example of static linking.

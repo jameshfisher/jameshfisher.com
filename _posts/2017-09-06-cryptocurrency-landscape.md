@@ -1,6 +1,7 @@
 ---
-title: "Survey of the cryptocurrency landscape"
+title: Survey of the cryptocurrency landscape
 draft: true
+tags: []
 ---
 
 How do you judge the "size" of a cryptocurrency?

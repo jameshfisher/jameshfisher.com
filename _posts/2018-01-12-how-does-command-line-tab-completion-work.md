@@ -1,6 +1,7 @@
 ---
-title: "How does command-line tab completion work?"
+title: How does command-line tab completion work?
 draft: true
+tags: []
 ---
 
 I've written a `diary` CLI program which

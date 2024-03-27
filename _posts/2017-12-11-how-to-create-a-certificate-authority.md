@@ -1,6 +1,7 @@
 ---
-title: "How to create a certificate authority"
+title: How to create a certificate authority
 draft: true
+tags: []
 ---
 
 Generate your root key:

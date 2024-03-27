@@ -1,6 +1,8 @@
 ---
-title: "Proving 1+1=2 and other advanced theorems"
-tags: ["math", "programming"]
+title: Proving 1+1=2 and other advanced theorems
+tags:
+  - math
+  - programming
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" crossorigin="anonymous">

@@ -1,5 +1,6 @@
 ---
-title: "WebGL canvas size vs. CSS size vs. viewport vs. clipspace vs. world space"
+title: WebGL canvas size vs. CSS size vs. viewport vs. clipspace vs. world space
+tags: []
 ---
 
 There are lots of different widths and heights in WebGL!

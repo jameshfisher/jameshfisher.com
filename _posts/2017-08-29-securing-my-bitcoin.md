@@ -1,5 +1,6 @@
 ---
-title: "Securing my Bitcoin"
+title: Securing my Bitcoin
+tags: []
 ---
 
 I bought some Bitcoin back in 2012-ish.

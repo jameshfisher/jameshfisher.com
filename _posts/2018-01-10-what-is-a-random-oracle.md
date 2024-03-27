@@ -1,5 +1,6 @@
 ---
-title: "What is a random oracle?"
+title: What is a random oracle?
+tags: []
 ---
 
 Here's one way to implement a hash function (in Go):

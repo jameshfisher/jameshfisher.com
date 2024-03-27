@@ -1,5 +1,6 @@
 ---
-title: "IndexedDB hello world"
+title: IndexedDB hello world
+tags: []
 ---
 
 IndexedDB is one kind of storage provided by browsers,

@@ -1,6 +1,10 @@
 ---
-title: "Simulating epidemics with WebGL"
-tags: ["programming", "graphics", "webgl", "epidemiology"]
+title: Simulating epidemics with WebGL
+tags:
+  - programming
+  - graphics
+  - webgl
+  - epidemiology
 ---
 
 In a recent post, I looked at [the SIR model for simulating epidemics](/2020/02/15/simulating-epidemics/).

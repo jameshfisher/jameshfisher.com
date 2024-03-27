@@ -1,6 +1,8 @@
 ---
-title: "Summary of 'Zero to One', Chapter 5: Last mover advantage"
-tags: ["zero-to-one", "summary"]
+title: 'Summary of ''Zero to One'', Chapter 5: Last mover advantage'
+tags:
+  - zero-to-one
+  - summary
 ---
 
 **Summary:**

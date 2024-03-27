@@ -1,6 +1,7 @@
 ---
-title: "The Hacker News algorithm is suboptimal"
+title: The Hacker News algorithm is suboptimal
 draft: true
+tags: []
 ---
 
 List all HN posts ever.

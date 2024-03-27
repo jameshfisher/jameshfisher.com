@@ -1,6 +1,7 @@
 ---
-title: "Multiplexing by looping over nonblocking sockets"
-justification: "I'm learning networking. Currently concentrating on TCP."
+title: Multiplexing by looping over nonblocking sockets
+justification: I'm learning networking. Currently concentrating on TCP.
+tags: []
 ---
 
 To multiplex multiple clients in a server process, we traditionally use two tools: `select` (or similar) to discover which clients can be processed, and non-blocking sockets to ensure that we don't block when processing those clients.

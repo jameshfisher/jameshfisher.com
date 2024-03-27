@@ -1,6 +1,9 @@
 ---
-title: "How to self-host a TensorFlow.js model"
-tags: ["programming", "web", "ml"]
+title: How to self-host a TensorFlow.js model
+tags:
+  - programming
+  - web
+  - machine-learning
 ---
 
 The [various TensorFlow.js model libraries](https://github.com/tensorflow/tfjs-models)

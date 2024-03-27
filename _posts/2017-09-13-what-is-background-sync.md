@@ -1,5 +1,6 @@
 ---
-title: "What is the web Background Sync API?"
+title: What is the web Background Sync API?
+tags: []
 ---
 
 Without the Background Sync API,

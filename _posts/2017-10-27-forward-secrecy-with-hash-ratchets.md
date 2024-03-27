@@ -1,6 +1,8 @@
 ---
-title: "Forward secrecy with hash ratchets"
-tags: ["programming", "crypto"]
+title: Forward secrecy with hash ratchets
+tags:
+  - programming
+  - crypto
 ---
 
 Alice wants to send messages to Bob.

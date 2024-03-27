@@ -1,6 +1,8 @@
 ---
-title: "How does network address translation work?"
-tags: ["programming", "networking"]
+title: How does network address translation work?
+tags:
+  - programming
+  - networking
 ---
 
 I have a laptop in front of me

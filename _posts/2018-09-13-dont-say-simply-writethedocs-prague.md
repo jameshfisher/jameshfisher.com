@@ -1,6 +1,9 @@
 ---
-title: "Don't say 'simply', at Write the Docs 2018, Prague"
-tags: ["talk", "documentation", "conference"]
+title: 'Don''t say ''simply'', at Write the Docs 2018, Prague'
+tags:
+  - talk
+  - documentation
+  - conference
 ---
 
 Pusher kindly paid for me to travel to Prague for [Write the Docs 2018](http://www.writethedocs.org/conf/prague/2018/).

@@ -1,6 +1,8 @@
 ---
-title: "JavaScript generators are also consumers!"
-tags: ["programming", "javascript"]
+title: JavaScript generators are also consumers!
+tags:
+  - programming
+  - javascript
 ---
 
 [Yesterday, I introduced JavaScript _generators_](/2019/05/17/what-is-function-star-in-javascript/)

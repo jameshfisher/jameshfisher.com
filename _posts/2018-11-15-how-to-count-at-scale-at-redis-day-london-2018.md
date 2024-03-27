@@ -1,5 +1,5 @@
 ---
-title: "_How to count at scale_ at Redis Day London 2018"
+title: _How to count at scale_ at Redis Day London 2018
 tags:
   - talk
 ---

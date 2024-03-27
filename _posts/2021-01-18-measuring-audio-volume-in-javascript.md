@@ -1,6 +1,9 @@
 ---
-title: "Measuring audio volume in JavaScript"
-tags: ["programming", "javascript", "web"]
+title: Measuring audio volume in JavaScript
+tags:
+  - programming
+  - javascript
+  - web
 ---
 
 Click <button id="startButton">Start measuring</button>,

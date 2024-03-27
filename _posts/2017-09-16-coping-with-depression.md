@@ -1,5 +1,6 @@
 ---
-title: "Coping with depression"
+title: Coping with depression
+tags: []
 ---
 
 The weather is getting colder.

@@ -1,6 +1,7 @@
 ---
-title: "How to let your users sign in with Google, from scratch"
-justification: "I've never implemented any pages with SSO! I need to know how it works."
+title: 'How to let your users sign in with Google, from scratch'
+justification: I've never implemented any pages with SSO! I need to know how it works.
+tags: []
 ---
 
 Back in the dark ages (say, 2010),

@@ -1,6 +1,8 @@
 ---
-title: "What are symbols in JavaScript?"
-tags: ["programming", "javascript"]
+title: What are symbols in JavaScript?
+tags:
+  - programming
+  - javascript
 ---
 
 I stumbled across "symbols" 

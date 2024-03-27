@@ -1,6 +1,9 @@
 ---
-title: "Run-length encoding in C"
-tags: ["ctci", "programming", "c"]
+title: Run-length encoding in C
+tags:
+  - ctci
+  - programming
+  - c
 ---
 
 Question 1.5 of _Cracking the Coding Interview_:

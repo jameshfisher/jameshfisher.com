@@ -1,6 +1,7 @@
 ---
-title: "Strava route builder API"
-tags: ["programming"]
+title: Strava route builder API
+tags:
+  - programming
 ---
 
 The [Strava Route Builder](https://www.strava.com/routes/new) lets you build cycling and running routes.

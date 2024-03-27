@@ -1,6 +1,9 @@
 ---
-title: "How to reverse a string in C"
-tags: ["ctci", "programming", "c"]
+title: How to reverse a string in C
+tags:
+  - ctci
+  - programming
+  - c
 ---
 
 Question 1.2 of _Cracking the Coding Interview_:

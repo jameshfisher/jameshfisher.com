@@ -1,7 +1,11 @@
 ---
-title: "BlazeFace hello world"
-tags: ["programming", "web", "tensorflow", "ml"]
-ogimage: "/assets/2020-09-21/result.jpg"
+title: BlazeFace hello world
+tags:
+  - programming
+  - web
+  - tensorflow
+  - machine-learning
+ogimage: /assets/2020-09-21/result.jpg
 ---
 
 [BlazeFace](https://github.com/tensorflow/tfjs-models/tree/master/blazeface)

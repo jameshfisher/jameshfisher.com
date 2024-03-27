@@ -1,5 +1,6 @@
 ---
-title: "What is the web Push API?"
+title: What is the web Push API?
+tags: []
 ---
 
 The [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)

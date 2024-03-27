@@ -1,6 +1,9 @@
 ---
-title: "TensorFlow 2 'hello world'"
-tags: ["tensorflow", "programming", "ml"]
+title: TensorFlow 2 'hello world'
+tags:
+  - tensorflow
+  - programming
+  - machine-learning
 ---
 
 The following program finds out the cost of chocolate per gram using TensorFlow 2.

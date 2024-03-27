@@ -1,6 +1,9 @@
 ---
-title: "Creating a UDP connection with netcat"
-tags: ["programming", "networking", "unix"]
+title: Creating a UDP connection with netcat
+tags:
+  - programming
+  - networking
+  - unix
 ---
 
 The netcat command `nc` is most often used to create TCP connections,

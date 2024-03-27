@@ -1,6 +1,11 @@
 ---
-title: "What are UMD modules? One final module system to rule them all (except ES modules which are a different thing)"
-tags: ["programming", "javascript", "web"]
+title: >-
+  What are UMD modules? One final module system to rule them all (except ES
+  modules which are a different thing)
+tags:
+  - programming
+  - javascript
+  - web
 ---
 
 I've recently written about four "module" systems in JavaScript:

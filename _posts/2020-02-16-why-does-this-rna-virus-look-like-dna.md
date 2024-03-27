@@ -1,6 +1,8 @@
 ---
-title: "Why does this RNA virus look like DNA?"
-tags: ["programming", "bioinformatics"]
+title: Why does this RNA virus look like DNA?
+tags:
+  - programming
+  - bioinformatics
 ---
 
 The other day, [I was diffing coronaviruses](/2020/02/09/diffing-coronaviruses/):

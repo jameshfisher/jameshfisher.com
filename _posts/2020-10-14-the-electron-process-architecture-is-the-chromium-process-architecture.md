@@ -1,6 +1,9 @@
 ---
-title: "The Electron process architecture is the Chromium process architecture"
-tags: ["programming", "javascript", "electron"]
+title: The Electron process architecture is the Chromium process architecture
+tags:
+  - programming
+  - javascript
+  - electron
 ---
 
 The Electron docs describe Electron as basically a mash-up of Node.js and Chromium. 

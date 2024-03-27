@@ -1,6 +1,9 @@
 ---
-title: "Hello world in Linux x86-64 assembly"
-tags: ["programming", "unix", "assembly"]
+title: Hello world in Linux x86-64 assembly
+tags:
+  - programming
+  - unix
+  - assembly
 ---
 
 A "hello world" program writes to stdout (calling `write`) then exits (calling `exit`).

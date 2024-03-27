@@ -1,6 +1,9 @@
 ---
-title: "What are AMD modules? Fetch your sick bag"
-tags: ["programming", "javascript", "web"]
+title: What are AMD modules? Fetch your sick bag
+tags:
+  - programming
+  - javascript
+  - web
 ---
 
 I don't think anyone would object to 

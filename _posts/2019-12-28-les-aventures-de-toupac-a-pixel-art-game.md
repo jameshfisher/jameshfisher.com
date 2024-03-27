@@ -1,6 +1,8 @@
 ---
-title: "Les Aventures De Toupac - a pixel art game"
-tags: ["programming", "animation"]
+title: Les Aventures De Toupac - a pixel art game
+tags:
+  - programming
+  - animation
 ---
 
 I made this game over Christmas:

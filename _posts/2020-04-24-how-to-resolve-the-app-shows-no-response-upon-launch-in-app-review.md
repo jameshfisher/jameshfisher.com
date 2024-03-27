@@ -1,6 +1,9 @@
 ---
-title: 'How to resolve "the app shows no response upon launch" in App Review'
-tags: ["programming", "macos", "swift"]
+title: How to resolve "the app shows no response upon launch" in App Review
+tags:
+  - programming
+  - macos
+  - swift
 ---
 
 I recently had an app rejected in Apple's App Review process,

@@ -1,5 +1,6 @@
 ---
-title: "What are service workers?"
+title: What are service workers?
+tags: []
 ---
 
 The Service Worker API lets a webpage register a script as a "service worker" in the local browser.

@@ -1,6 +1,8 @@
 ---
-title: "How does Glitch refresh my app?"
-tags: ["programming", "web"]
+title: How does Glitch refresh my app?
+tags:
+  - programming
+  - web
 ---
 
 <div id="display" style="display: none; outline: 5px solid red; padding: 2em;"></div>

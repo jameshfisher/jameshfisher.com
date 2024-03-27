@@ -1,6 +1,8 @@
 ---
-title: "How to record a canvas to video"
-tags: ["programming", "web"]
+title: How to record a canvas to video
+tags:
+  - programming
+  - web
 ---
 
 You can use HTML `canvas` to produce videos!

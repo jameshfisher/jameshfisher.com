@@ -1,6 +1,9 @@
 ---
-title: "How to sort a stack using one additional stack"
-tags: ["ctci", "programming", "haskell"]
+title: How to sort a stack using one additional stack
+tags:
+  - ctci
+  - programming
+  - haskell
 ---
 
 Question 3.6 of _Cracking the Coding Interview_:

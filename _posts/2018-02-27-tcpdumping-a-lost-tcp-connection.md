@@ -1,6 +1,9 @@
 ---
-title: "What does Linux do with a lost TCP connection?"
-tags: ["programming", "unix", "networking"]
+title: What does Linux do with a lost TCP connection?
+tags:
+  - programming
+  - unix
+  - networking
 ---
 
 We can simulate a dropped TCP connection using two virtual machines.

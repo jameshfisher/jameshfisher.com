@@ -1,6 +1,8 @@
 ---
-title: "Summary of 'Zero to One', Chapter 6: You are not a lottery ticket"
-tags: ["zero-to-one", "summary"]
+title: 'Summary of ''Zero to One'', Chapter 6: You are not a lottery ticket'
+tags:
+  - zero-to-one
+  - summary
 ---
 
 **Summary:**

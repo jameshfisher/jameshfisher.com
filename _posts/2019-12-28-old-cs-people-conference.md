@@ -1,6 +1,7 @@
 ---
-title: "Old people conference"
+title: Old people conference
 draft: true
+tags: []
 ---
 
 Who should speak at QCon 2015?

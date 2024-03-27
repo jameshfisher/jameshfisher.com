@@ -1,5 +1,6 @@
 ---
-title: "Publication notifications for static sites"
+title: Publication notifications for static sites
+tags: []
 ---
 
 I have a new mini-project for this site:

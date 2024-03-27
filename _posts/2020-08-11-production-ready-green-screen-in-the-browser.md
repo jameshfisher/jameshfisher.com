@@ -1,7 +1,10 @@
 ---
-title: "Production-ready green screen in the browser"
-tags: ["programming", "web", "webgl"]
-ogimage: "/assets/2020-08-11/result.jpg"
+title: Production-ready green screen in the browser
+tags:
+  - programming
+  - web
+  - webgl
+ogimage: /assets/2020-08-11/result.jpg
 ---
 
 In this post I show a high-quality green screen implementation directly in the browser.

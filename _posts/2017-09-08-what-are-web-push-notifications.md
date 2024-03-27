@@ -1,6 +1,7 @@
 ---
-title: "What are web push notifications?"
+title: What are web push notifications?
 draft: true
+tags: []
 ---
 
 You probably know what mobile push notifications are.

@@ -1,6 +1,7 @@
 ---
-title: "Making a public key file in Go"
+title: Making a public key file in Go
 draft: true
+tags: []
 ---
 
 [I saw yesterday](/2017/11/30/asn1/) that the kinds of file that OpenSSL uses -

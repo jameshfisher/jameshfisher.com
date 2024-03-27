@@ -1,5 +1,6 @@
 ---
-title: "Generating a normal map in WebGL"
+title: Generating a normal map in WebGL
+tags: []
 ---
 
 <div>

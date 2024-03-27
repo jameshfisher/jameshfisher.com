@@ -1,6 +1,7 @@
 ---
-title: "What is consistent hashing?"
+title: What is consistent hashing?
 draft: true
+tags: []
 ---
 
 Traditional algorithm:

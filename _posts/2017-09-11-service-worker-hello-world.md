@@ -1,5 +1,6 @@
 ---
-title: "Service worker hello world"
+title: Service worker hello world
+tags: []
 ---
 
 The following service worker gets a ping message and responds to it with "pong":

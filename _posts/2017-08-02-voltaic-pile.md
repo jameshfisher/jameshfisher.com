@@ -1,6 +1,7 @@
 ---
-title: "What is a voltaic pile?"
+title: What is a voltaic pile?
 draft: true
+tags: []
 ---
 
 Volta placed copper disc and a zinc disc, separated by some saltwater. 

@@ -1,6 +1,9 @@
 ---
-title: "JavaScript live bindings are just concatenation"
-tags: ["programming", "web", "javascript"]
+title: JavaScript live bindings are just concatenation
+tags:
+  - programming
+  - web
+  - javascript
 ---
 
 [The other day I wrote an intro to ECMAScript modules](/2020/09/25/javascript-modules-for-grumpy-developers-from-2005/),

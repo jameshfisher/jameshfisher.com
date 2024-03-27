@@ -1,5 +1,6 @@
 ---
-title: "WebGL fragment shader"
+title: WebGL fragment shader
+tags: []
 ---
 
 <div style="display: flex;">

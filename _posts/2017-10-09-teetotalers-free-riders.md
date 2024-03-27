@@ -1,6 +1,7 @@
 ---
-title: "Teetotalers are free riders"
+title: Teetotalers are free riders
 draft: true
+tags: []
 ---
 
 You'll occasionally find teetotalers at bars and clubs.

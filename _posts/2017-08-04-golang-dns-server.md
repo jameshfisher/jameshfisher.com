@@ -1,5 +1,6 @@
 ---
-title: "How to write a DNS server in Go"
+title: How to write a DNS server in Go
+tags: []
 ---
 
 Here's a DNS server written in Go.

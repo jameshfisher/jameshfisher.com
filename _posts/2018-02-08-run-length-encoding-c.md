@@ -1,5 +1,6 @@
 ---
-title: "Run-length encoding in C"
+title: Run-length encoding in C
+tags: []
 ---
 
 Run-length encoding is a "compression" scheme

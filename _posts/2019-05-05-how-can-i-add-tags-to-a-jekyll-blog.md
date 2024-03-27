@@ -1,6 +1,8 @@
 ---
-title: "How can I add tags to a Jekyll blog?"
-tags: ["programming", "jekyll"]
+title: How can I add tags to a Jekyll blog?
+tags:
+  - programming
+  - jekyll
 ---
 
 Here I show you how to add tags to your Jekyll blog.

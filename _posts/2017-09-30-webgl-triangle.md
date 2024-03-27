@@ -1,5 +1,6 @@
 ---
-title: "Drawing a triangle with WebGL"
+title: Drawing a triangle with WebGL
+tags: []
 ---
 
 <div><canvas width="200" height="200" id="triangleCanvas"></canvas></div>

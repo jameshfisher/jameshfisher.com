@@ -1,5 +1,6 @@
 ---
-title: "LocalStorage hello world"
+title: LocalStorage hello world
+tags: []
 ---
 
 [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage)

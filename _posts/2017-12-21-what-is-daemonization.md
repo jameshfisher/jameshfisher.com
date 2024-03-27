@@ -1,6 +1,9 @@
 ---
-title: "What is daemonization?"
-tags: ["programming", "unix", "c"]
+title: What is daemonization?
+tags:
+  - programming
+  - unix
+  - c
 draft: true
 ---
 

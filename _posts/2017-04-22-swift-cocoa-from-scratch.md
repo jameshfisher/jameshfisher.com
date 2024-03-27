@@ -1,6 +1,7 @@
 ---
-title: "Swift Cocoa application from scratch"
+title: Swift Cocoa application from scratch
 draft: true
+tags: []
 ---
 
 

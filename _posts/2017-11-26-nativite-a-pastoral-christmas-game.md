@@ -1,5 +1,6 @@
 ---
-title: "Nativité, a pastoral Christmas game"
+title: 'Nativité, a pastoral Christmas game'
+tags: []
 ---
 
 My girlfriend has three sisters.

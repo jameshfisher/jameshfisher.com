@@ -1,6 +1,7 @@
 ---
-title: "How to make a Core Image kernel program running on the CLI"
-justification: "I'm learning Core Image and Swift"
+title: How to make a Core Image kernel program running on the CLI
+justification: I'm learning Core Image and Swift
+tags: []
 ---
 
 Here's a CLI program which lets you apply a Core Image kernel to image files to generate a new image file. Example of use to average two images:

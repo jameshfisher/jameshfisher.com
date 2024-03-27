@@ -1,6 +1,7 @@
 ---
-title: "Push notification button"
+title: Push notification button
 draft: true
+tags: []
 ---
 
 The button below lets you control whether you receive push notifications from this site.

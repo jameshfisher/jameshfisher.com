@@ -1,5 +1,6 @@
 ---
-title: "Unicode is only for plaintext"
+title: Unicode is only for plaintext
+tags: []
 ---
 
 I wanted to get the Feed icon (<img src="https://upload.wikimedia.org/wikipedia/en/4/43/Feed-icon.svg" width="16" height="16"/>) into Unicode.

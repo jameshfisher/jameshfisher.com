@@ -1,6 +1,8 @@
 ---
-title: "Web Push API in Firefox"
-tags: ["programming", "javascript"]
+title: Web Push API in Firefox
+tags:
+  - programming
+  - javascript
 ---
 
 When I was playing around with the Web Push API,

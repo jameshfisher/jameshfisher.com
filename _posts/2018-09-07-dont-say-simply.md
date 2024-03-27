@@ -1,7 +1,9 @@
 ---
-title: "Don't say simply"
+title: Don't say simply
 draft: true
-tags: ["writing", "documentation"]
+tags:
+  - writing
+  - documentation
 ---
 
 Draft from 2018-01:

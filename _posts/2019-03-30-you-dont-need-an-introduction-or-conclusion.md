@@ -1,6 +1,7 @@
 ---
-title: "You don't need an introduction or conclusion"
-tags: ["writing"]
+title: You don't need an introduction or conclusion
+tags:
+  - writing
 draft: true
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: "How could Bitcoin fail?"
+title: How could Bitcoin fail?
+tags: []
 ---
 
 I'm intending to increase the amount of time and money I invest in cryptocurrencies such as Bitcoin.

@@ -3,7 +3,6 @@ title: The neural network programming language
 draft: true
 tags:
   - neural-networks
-  - ml
   - javascript
   - programming
   - machine-learning

@@ -1,5 +1,6 @@
 ---
-title: "What is stdatomic in C?"
+title: What is stdatomic in C?
+tags: []
 ---
 
 I was watching a talk yesterday about [Go's `sync/atomic` package](https://golang.org/pkg/sync/atomic/) which provides atomic operations like `AddInt32(*int32, int32)`. These are implemented using special atomic CPU instructions.

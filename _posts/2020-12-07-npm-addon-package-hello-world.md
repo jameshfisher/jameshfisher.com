@@ -1,6 +1,10 @@
 ---
-title: "NPM addon package hello world"
-tags: ["programming", "npm", "node", "javascript"]
+title: NPM addon package hello world
+tags:
+  - programming
+  - npm
+  - node
+  - javascript
 ---
 
 [In a previous post I showed how to build an `addon.node` file](/2019/04/20/nodejs-addon-hello-world/)

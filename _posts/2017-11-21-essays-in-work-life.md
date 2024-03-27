@@ -1,4 +1,6 @@
 ---
-title: "Essays in work life"
+title: Essays in work life
 draft: true
+tags: []
 ---
+

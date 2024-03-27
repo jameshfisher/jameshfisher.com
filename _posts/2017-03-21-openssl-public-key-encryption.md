@@ -1,6 +1,7 @@
 ---
-title: "How do I do public-key encryption with `openssl`?"
-justification: "I'm learning about SSL/TLS by going through the `openssl` commands."
+title: How do I do public-key encryption with `openssl`?
+justification: I'm learning about SSL/TLS by going through the `openssl` commands.
+tags: []
 ---
 
 OpenSSL is a public-key crypto library (plus some other random stuff). Here's how to do the basics: key generation, encryption and decryption. We'll use RSA keys, which means the relevant `openssl` commands are `genrsa`, `rsa`, and `rsautl`.

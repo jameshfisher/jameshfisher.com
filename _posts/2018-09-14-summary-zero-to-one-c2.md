@@ -1,6 +1,8 @@
 ---
-title: "Summary of 'Zero to One', Chapter 2: party like it's 1999"
-tags: ["zero-to-one", "summary"]
+title: 'Summary of ''Zero to One'', Chapter 2: party like it''s 1999'
+tags:
+  - zero-to-one
+  - summary
 ---
 
 **Summary:**

@@ -1,6 +1,8 @@
 ---
-title: "What cookies are sent in an HTTP request?"
-tags: ["programming", "web"]
+title: What cookies are sent in an HTTP request?
+tags:
+  - programming
+  - web
 draft: true
 ---
 

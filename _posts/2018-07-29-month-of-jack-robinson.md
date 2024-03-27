@@ -1,6 +1,7 @@
 ---
-title: "Month of Jack Robinson"
-tags: ["jackrobinson"]
+title: Month of Jack Robinson
+tags:
+  - jackrobinson
 ---
 
 After a three-month hiatus, my blog is back,

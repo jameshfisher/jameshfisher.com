@@ -1,5 +1,6 @@
 ---
-title: "A summary of _Managing Oneself_ by Peter Drucker"
+title: A summary of _Managing Oneself_ by Peter Drucker
+tags: []
 ---
 
 I recently read _Managing Oneself_ by Peter Drucker

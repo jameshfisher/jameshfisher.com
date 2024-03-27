@@ -1,5 +1,6 @@
 ---
-title: "How to write an essay"
+title: How to write an essay
+tags: []
 ---
 
 Ten years ago I took a break from writing essays to tell everyone else how to write essays.

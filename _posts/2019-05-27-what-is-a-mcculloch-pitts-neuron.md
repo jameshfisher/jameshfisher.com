@@ -1,6 +1,8 @@
 ---
-title: "What is a McCulloch-Pitts neuron?"
-tags: ["programming", "machinelearning"]
+title: What is a McCulloch-Pitts neuron?
+tags:
+  - programming
+  - machinelearning
 ---
 
 In [their 1943 paper, _A logical calculus of the ideas immanent in nervous activity_](http://www.cse.chalmers.se/~coquand/AUTOMATA/mcp.pdf),

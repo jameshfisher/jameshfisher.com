@@ -1,6 +1,8 @@
 ---
-title: "How to make a system call in C"
-tags: ["programming", "c"]
+title: How to make a system call in C
+tags:
+  - programming
+  - c
 ---
 
 Here's how we might write "hello world" in C:

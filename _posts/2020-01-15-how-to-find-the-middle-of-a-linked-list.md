@@ -1,6 +1,8 @@
 ---
-title: "How to find the middle of a linked list"
-tags: ["programming", "c"]
+title: How to find the middle of a linked list
+tags:
+  - programming
+  - c
 ---
 
 Just like my post on 

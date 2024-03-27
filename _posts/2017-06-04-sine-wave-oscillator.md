@@ -1,5 +1,6 @@
 ---
-title: "Defining the sine function as an oscillator"
+title: Defining the sine function as an oscillator
+tags: []
 ---
 
 When I do something trigonometric, I reach for a library implementing common trig functions, e.g. `Math.sin`. From school through university through work, I've been taught to treat these functions as black boxes. Before we had calculators at school, there were books of sine tables - more black boxes. How do these functions actually work? How do you define `sin(x)`?

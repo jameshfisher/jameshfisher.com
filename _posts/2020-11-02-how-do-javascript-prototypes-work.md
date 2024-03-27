@@ -1,6 +1,8 @@
 ---
-title: "How do JavaScript prototypes work?"
-tags: ["programming", "javascript"]
+title: How do JavaScript prototypes work?
+tags:
+  - programming
+  - javascript
 ---
 
 [In my previous post](/2020/11/01/what-does-the-dot-do-in-javascript/),

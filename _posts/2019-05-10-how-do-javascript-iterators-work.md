@@ -1,6 +1,8 @@
 ---
-title: "How do JavaScript iterators work?"
-tags: ["programming", "javascript"]
+title: How do JavaScript iterators work?
+tags:
+  - programming
+  - javascript
 ---
 
 For JavaScript programmers,

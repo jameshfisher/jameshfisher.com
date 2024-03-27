@@ -1,6 +1,7 @@
 ---
-title: "How does a distributed hash table work?"
+title: How does a distributed hash table work?
 draft: true
+tags: []
 ---
 
 First, what is a hash table?

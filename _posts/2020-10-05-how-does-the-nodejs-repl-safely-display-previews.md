@@ -1,6 +1,8 @@
 ---
-title: "How does the Node.js REPL display previews?"
-tags: ["programming", "javascript"]
+title: How does the Node.js REPL display previews?
+tags:
+  - programming
+  - javascript
 ---
 
 When typing in the `node` repl,

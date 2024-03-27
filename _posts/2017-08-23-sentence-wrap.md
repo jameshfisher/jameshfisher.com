@@ -1,6 +1,8 @@
 ---
-title: "Sentence wrap"
-tags: ["writing", "programming"]
+title: Sentence wrap
+tags:
+  - writing
+  - programming
 ---
 
 There are two common text-wrapping approaches for plaintext files like Markdown.

@@ -1,6 +1,9 @@
 ---
-title: "How to delete a node from the middle of a linked list"
-tags: ["ctci", "programming", "c"]
+title: How to delete a node from the middle of a linked list
+tags:
+  - ctci
+  - programming
+  - c
 ---
 
 Question 2.3 of _Cracking the Coding Interview_:

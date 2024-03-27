@@ -1,5 +1,6 @@
 ---
-title: "Running a Laravel+Pusher workshop at work"
+title: Running a Laravel+Pusher workshop at work
+tags: []
 ---
 
 Last Friday afternoon at Pusher, we ran an internal workshop on Laravel+Pusher.

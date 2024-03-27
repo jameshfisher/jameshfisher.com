@@ -1,6 +1,9 @@
 ---
-title: "Giant Game of Life"
-tags: ["programming", "graphics", "webgl"]
+title: Giant Game of Life
+tags:
+  - programming
+  - graphics
+  - webgl
 ---
 
 <div>

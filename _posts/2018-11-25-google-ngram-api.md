@@ -1,6 +1,7 @@
 ---
-title: "What is the  API for Google Ngram Viewer?"
-tags: ["programming"]
+title: What is the  API for Google Ngram Viewer?
+tags:
+  - programming
 ---
 
 The [Google Ngram Viewer](https://books.google.com/ngrams) shows the frequency of phrases over time.

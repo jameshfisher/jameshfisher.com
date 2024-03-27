@@ -1,6 +1,8 @@
 ---
-title: "What is `function*` in JavaScript?"
-tags: ["programming", "javascript"]
+title: What is `function*` in JavaScript?
+tags:
+  - programming
+  - javascript
 ---
 
 In JavaScript, `function*` defines a _generator function_.

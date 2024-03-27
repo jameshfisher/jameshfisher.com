@@ -1,6 +1,7 @@
 ---
-title: "Vélos, vins et vassaux dans la Loire"
-tags: ["holiday"]
+title: 'Vélos, vins et vassaux dans la Loire'
+tags:
+  - holiday
 ---
 
 You are cordially invited on a cycling tour of [France’s Valley of Kings](https://en.wikipedia.org/wiki/Loire_Valley). 

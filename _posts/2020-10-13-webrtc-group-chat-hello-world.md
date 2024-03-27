@@ -1,6 +1,9 @@
 ---
-title: "WebRTC group chat hello world"
-tags: ["programming", "web", "webrtc"]
+title: WebRTC group chat hello world
+tags:
+  - programming
+  - web
+  - webrtc
 ---
 
 In the following `iframe` is a chat room.

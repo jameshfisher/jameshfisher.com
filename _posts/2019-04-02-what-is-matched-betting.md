@@ -1,6 +1,7 @@
 ---
-title: "What is matched betting?"
-tags: ["betting"]
+title: What is matched betting?
+tags:
+  - betting
 ---
 
 In [my previous post](/2019/04/01/what-is-a-prediction-market/),

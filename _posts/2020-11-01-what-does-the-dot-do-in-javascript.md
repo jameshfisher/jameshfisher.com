@@ -1,6 +1,8 @@
 ---
-title: "What does the dot do in JavaScript?"
-tags: ["programming", "javascript"]
+title: What does the dot do in JavaScript?
+tags:
+  - programming
+  - javascript
 ---
 
 Ah, that little dot!

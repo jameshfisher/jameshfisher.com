@@ -1,5 +1,6 @@
 ---
-title: "Textures in WebGL shaders"
+title: Textures in WebGL shaders
+tags: []
 ---
 
 <div><canvas width="200" height="200" style="height: 200px; width: 200px;" id="fragmentCanvas"></canvas></div>

@@ -1,6 +1,8 @@
 ---
-title: "Hand-coded neural networks"
-tags: ["programming", "ml"]
+title: Hand-coded neural networks
+tags:
+  - programming
+  - machine-learning
 draft: true
 ---
 

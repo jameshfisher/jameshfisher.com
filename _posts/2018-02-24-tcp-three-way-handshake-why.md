@@ -1,6 +1,7 @@
 ---
-title: "What is the TCP three-way handshake?"
+title: What is the TCP three-way handshake?
 draft: true
+tags: []
 ---
 
 There are three blocks here, corresponding to three IP packets.

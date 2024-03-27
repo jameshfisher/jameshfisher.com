@@ -1,5 +1,6 @@
 ---
-title: "What is the `rel=canonical` tag?"
+title: What is the `rel=canonical` tag?
+tags: []
 ---
 
 This blog is hosted in a bunch of places:

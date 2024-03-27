@@ -1,6 +1,9 @@
 ---
-title: "Babel JS from the ground up"
-tags: ["programming", "web", "javascript"]
+title: Babel JS from the ground up
+tags:
+  - programming
+  - web
+  - javascript
 ---
 
 "Babel is a JavaScript compiler", say the docs.

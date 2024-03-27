@@ -1,6 +1,8 @@
 ---
-title: "Rounding up to the next power of two in C"
-tags: ["programming", "c"]
+title: Rounding up to the next power of two in C
+tags:
+  - programming
+  - c
 ---
 
 I was writing a memory allocator in C.

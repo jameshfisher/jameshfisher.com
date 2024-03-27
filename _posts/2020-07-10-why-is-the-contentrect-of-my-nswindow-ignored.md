@@ -1,6 +1,7 @@
 ---
-title: "Why is the contentRect of my NSWindow ignored?"
-tags: ["programming"]
+title: Why is the contentRect of my NSWindow ignored?
+tags:
+  - programming
 ---
 
 When creating an `NSWindow`,

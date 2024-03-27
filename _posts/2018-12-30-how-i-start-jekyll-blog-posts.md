@@ -1,6 +1,9 @@
 ---
-title: "How I start Jekyll blog posts"
-tags: ["programming", "blog", "jekyll"]
+title: How I start Jekyll blog posts
+tags:
+  - programming
+  - blog
+  - jekyll
 ---
 
 I start every blog post by running a command which creates a new blog post file, like this:

@@ -1,6 +1,7 @@
 ---
-title: "Webcam video filter"
+title: Webcam video filter
 draft: true
+tags: []
 ---
 
 We assume we have a video stream, e.g.:

@@ -1,6 +1,8 @@
 ---
-title: "What is HTTP keep-alive? What is HTTP request pipelining?"
-tags: ["programming", "networking"]
+title: What is HTTP keep-alive? What is HTTP request pipelining?
+tags:
+  - programming
+  - networking
 ---
 
 Traditional HTTP uses one TCP connection per request.

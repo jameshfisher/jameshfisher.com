@@ -1,5 +1,6 @@
 ---
-title: "How can I store things on the browser?"
+title: How can I store things on the browser?
+tags: []
 ---
 
 The traditional web browser is a "thin client" which interacts with a web server.

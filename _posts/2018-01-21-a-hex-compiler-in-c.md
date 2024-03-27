@@ -1,5 +1,6 @@
 ---
-title: "A hex compiler in C"
+title: A hex compiler in C
+tags: []
 ---
 
 Here is a sample of a programming language I call "Hex":

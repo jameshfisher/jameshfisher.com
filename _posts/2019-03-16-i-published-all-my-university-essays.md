@@ -1,5 +1,5 @@
 ---
-title: "I published all my university essays"
+title: I published all my university essays
 draft: true
 tags: []
 ---

@@ -1,6 +1,9 @@
 ---
-title: "What is DHCP?"
-tags: ["programming", "unix", "networking"]
+title: What is DHCP?
+tags:
+  - programming
+  - unix
+  - networking
 ---
 
 When your computer joins a network,

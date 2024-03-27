@@ -1,6 +1,9 @@
 ---
-title: "How to make a webserver with netcat (nc)"
-tags: ["programming", "unix", "networking"]
+title: How to make a webserver with netcat (nc)
+tags:
+  - programming
+  - unix
+  - networking
 ---
 
 The netcat tool `nc` can operate as a TCP client.

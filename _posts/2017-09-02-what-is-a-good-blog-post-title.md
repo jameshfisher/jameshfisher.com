@@ -1,5 +1,6 @@
 ---
-title: "What makes a good blog post title? 5 steps to going VIRAL!"
+title: What makes a good blog post title? 5 steps to going VIRAL!
+tags: []
 ---
 
 I now have 256 blog posts.

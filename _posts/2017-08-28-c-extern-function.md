@@ -1,5 +1,6 @@
 ---
-title: "What is an `extern` function in C?"
+title: What is an `extern` function in C?
+tags: []
 ---
 
 Earlier I showed the C `extern` keyword applied to variable declarations.

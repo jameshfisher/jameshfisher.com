@@ -1,5 +1,6 @@
 ---
-title: "Diary writing prompts"
+title: Diary writing prompts
+tags: []
 ---
 
 [I began this year writing a diary entry every day](https://github.com/jameshfisher/encrypted-diary).

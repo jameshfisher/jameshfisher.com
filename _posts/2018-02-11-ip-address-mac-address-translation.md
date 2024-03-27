@@ -1,6 +1,8 @@
 ---
-title: "How does an IP address get translated to a MAC address?"
-tags: ["programming", "networking"]
+title: How does an IP address get translated to a MAC address?
+tags:
+  - programming
+  - networking
 ---
 
 For an IP packet to be sent, it must be encapsulated in an Ethernet frame.

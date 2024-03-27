@@ -1,6 +1,9 @@
 ---
-title: "How to write an ArrayBuffer to a canvas"
-tags: ["programming", "javascript", "web"]
+title: How to write an ArrayBuffer to a canvas
+tags:
+  - programming
+  - javascript
+  - web
 ---
 
 I'm playing with [WebGPU](https://github.com/gpuweb/gpuweb).

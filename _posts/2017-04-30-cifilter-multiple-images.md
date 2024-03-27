@@ -1,6 +1,7 @@
 ---
-title: "How to pass multiple inputs to a `CIKernel`"
-justification: "Vidrio will be using `CIKernel`s with multiple inputs."
+title: How to pass multiple inputs to a `CIKernel`
+justification: Vidrio will be using `CIKernel`s with multiple inputs.
+tags: []
 ---
 
 I previously described how to create a custom `CIFilter` which swapped the red and green channels of an input image. That filter had a single input parameter: the input image. But kernels are C functions, and they can have many parameters of many types.

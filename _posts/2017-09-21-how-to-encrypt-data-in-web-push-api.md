@@ -1,5 +1,6 @@
 ---
-title: "How can I encrypt data in the Web Push API?"
+title: How can I encrypt data in the Web Push API?
+tags: []
 ---
 
 Here's a service worker push handler I wrote:

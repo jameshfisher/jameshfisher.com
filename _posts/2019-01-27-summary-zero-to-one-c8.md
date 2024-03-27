@@ -1,6 +1,8 @@
 ---
-title: "Summary of 'Zero to One', Chapter 8: Secrets"
-tags: ["zero-to-one", "summary"]
+title: 'Summary of ''Zero to One'', Chapter 8: Secrets'
+tags:
+  - zero-to-one
+  - summary
 ---
 
 **Summary:**

@@ -1,5 +1,6 @@
 ---
-title: "WebGL fragment shader animation"
+title: WebGL fragment shader animation
+tags: []
 ---
 
 <div><canvas id="clock" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>

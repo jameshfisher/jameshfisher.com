@@ -1,4 +1,6 @@
 ---
-title: "What system calls does `lldb` use?"
+title: What system calls does `lldb` use?
 draft: true
+tags: []
 ---
+

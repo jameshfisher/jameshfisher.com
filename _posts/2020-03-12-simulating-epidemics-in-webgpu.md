@@ -1,6 +1,9 @@
 ---
-title: "Simulating epidemics in WebGPU"
-tags: ["programming", "webgpu", "epidemiology"]
+title: Simulating epidemics in WebGPU
+tags:
+  - programming
+  - webgpu
+  - epidemiology
 ---
 
 A few days ago, I [simulated an epidemic with WebGL](/2020/02/23/simulating-epidemics-with-webgl/),

@@ -1,5 +1,5 @@
 ---
-title: "How to name a product with reduplication"
+title: How to name a product with reduplication
 tags: []
 ---
 

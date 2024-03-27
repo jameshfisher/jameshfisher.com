@@ -1,7 +1,8 @@
 ---
 title: Installing and running `ebe`
 justification: >-
-  I'm working through Ray Sefarth's assembly book. It heavily uses his program, `ebe`.
+  I'm working through Ray Sefarth's assembly book. It heavily uses his program,
+  `ebe`.
 tags:
   - ebe
   - gcc

@@ -1,5 +1,6 @@
 ---
-title: "What is Swift's `@NSApplicationMain` annotation?"
+title: What is Swift's `@NSApplicationMain` annotation?
+tags: []
 ---
 
 In Xcode, go to `File > New > Project`,

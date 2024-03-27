@@ -1,6 +1,8 @@
 ---
-title: "Does Redis Pub/Sub work with master-slave replication?"
-tags: ["programming", "redis"]
+title: Does Redis Pub/Sub work with master-slave replication?
+tags:
+  - programming
+  - redis
 ---
 
 In short: yes!

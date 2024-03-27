@@ -1,5 +1,6 @@
 ---
-title: "What is an authoritative DNS server? What is a recursive DNS server?"
+title: What is an authoritative DNS server? What is a recursive DNS server?
+tags: []
 ---
 
 A DNS name server is anything serving DNS responses to DNS requests.

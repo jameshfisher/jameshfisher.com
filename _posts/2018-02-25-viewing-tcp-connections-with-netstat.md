@@ -1,6 +1,7 @@
 ---
-title: "Viewing TCP connections with netstat"
+title: Viewing TCP connections with netstat
 draft: true
+tags: []
 ---
 
 `netstat -tpn` shows TCP connections on your current machine.

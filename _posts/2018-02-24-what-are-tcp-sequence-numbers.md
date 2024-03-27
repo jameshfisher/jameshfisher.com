@@ -1,6 +1,8 @@
 ---
-title: "What are TCP sequence numbers?"
-tags: ["programming", "networking"]
+title: What are TCP sequence numbers?
+tags:
+  - programming
+  - networking
 ---
 
 A TCP connection is a method of transmitting two byte streams,

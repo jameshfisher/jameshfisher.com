@@ -1,5 +1,6 @@
 ---
-title: "Post-driven permanent blog pages"
+title: Post-driven permanent blog pages
+tags: []
 ---
 
 I have a few "permanent" pages on this blog.

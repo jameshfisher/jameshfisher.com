@@ -1,6 +1,8 @@
 ---
-title: "What is the order of `NSWindow` levels?"
-tags: ["programming", "macos"]
+title: What is the order of `NSWindow` levels?
+tags:
+  - programming
+  - macos
 ---
 
 If two windows on your macOS desktop overlap,

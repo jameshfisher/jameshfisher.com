@@ -1,5 +1,5 @@
 ---
-title: "How to remember stopping distances for the Highway Code"
+title: How to remember stopping distances for the Highway Code
 tags: []
 ---
 

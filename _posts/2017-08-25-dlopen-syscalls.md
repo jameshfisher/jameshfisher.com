@@ -1,5 +1,6 @@
 ---
-title: "What system calls does `dlopen` use?"
+title: What system calls does `dlopen` use?
+tags: []
 ---
 
 When using the `dlopen` API - `dlopen`, `dlsym`, `dlclose` - what syscalls does it use?

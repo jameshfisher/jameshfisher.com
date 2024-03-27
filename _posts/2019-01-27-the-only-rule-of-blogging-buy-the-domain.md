@@ -1,5 +1,5 @@
 ---
-title: "The only rule of blogging: buy the domain"
+title: 'The only rule of blogging: buy the domain'
 draft: true
 tags: []
 ---

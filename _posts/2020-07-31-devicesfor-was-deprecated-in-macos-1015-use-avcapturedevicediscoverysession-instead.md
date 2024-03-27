@@ -1,6 +1,11 @@
 ---
-title: "devices(for:) was deprecated in macOS 10.15: Use AVCaptureDeviceDiscoverySession instead"
-tags: ["programming", "macos", "swift"]
+title: >-
+  devices(for:) was deprecated in macOS 10.15: Use
+  AVCaptureDeviceDiscoverySession instead
+tags:
+  - programming
+  - macos
+  - swift
 ---
 
 In my app, I had a call to [`AVCaptureDevice.devices()`](https://developer.apple.com/documentation/avfoundation/avcapturedevice/1386237-devices),

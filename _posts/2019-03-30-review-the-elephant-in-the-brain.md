@@ -1,5 +1,5 @@
 ---
-title: "Review: The Elephant in the Brain"
+title: 'Review: The Elephant in the Brain'
 draft: true
 tags: []
 ---

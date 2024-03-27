@@ -1,6 +1,7 @@
 ---
-title: "Varying navbar for mobile and desktop"
-justification: "The vidr.io navbar on mobile looks stupid"
+title: Varying navbar for mobile and desktop
+justification: The vidr.io navbar on mobile looks stupid
+tags: []
 ---
 
 Look at [framer.com](https://framer.com/) in various widths. The navbar is finely tuned based on the device width. As you decrease the device width, the logo moves above the text, then some links disappear ("Pricing", "Trial"), then some links change their text ("Get Started" becomes "Start"), then the text gets smaller, then finally the links move to two rows.

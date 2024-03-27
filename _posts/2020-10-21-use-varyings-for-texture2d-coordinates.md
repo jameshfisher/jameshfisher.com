@@ -1,6 +1,8 @@
 ---
-title: "Use varyings for texture2D coordinates!"
-tags: ["programming", "webgl"]
+title: Use varyings for texture2D coordinates!
+tags:
+  - programming
+  - webgl
 ---
 
 I'm using WebGL fragment shaders 

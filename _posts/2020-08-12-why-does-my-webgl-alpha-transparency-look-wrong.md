@@ -1,6 +1,9 @@
 ---
-title: "Why does my WebGL alpha-transparency look wrong?"
-tags: ["programming", "web", "webgl"]
+title: Why does my WebGL alpha-transparency look wrong?
+tags:
+  - programming
+  - web
+  - webgl
 ---
 
 When using WebGL and creating a partially transparent canvas,

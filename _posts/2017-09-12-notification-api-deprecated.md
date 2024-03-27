@@ -1,5 +1,6 @@
 ---
-title: "`new Notification(...)` is deprecated"
+title: '`new Notification(...)` is deprecated'
+tags: []
 ---
 
 Earlier I showed this example of the Notification API:

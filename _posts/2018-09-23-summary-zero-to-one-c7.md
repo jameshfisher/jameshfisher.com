@@ -1,6 +1,8 @@
 ---
-title: "Summary of 'Zero to One', Chapter 7: Follow the money"
-tags: ["zero-to-one", "summary"]
+title: 'Summary of ''Zero to One'', Chapter 7: Follow the money'
+tags:
+  - zero-to-one
+  - summary
 ---
 
 **Summary:**

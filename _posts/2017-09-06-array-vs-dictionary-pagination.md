@@ -1,5 +1,6 @@
 ---
-title: "Array vs. dictionary pagination"
+title: Array vs. dictionary pagination
+tags: []
 ---
 
 You operate an HTTP API with a resource called `/words`.

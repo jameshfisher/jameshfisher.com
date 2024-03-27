@@ -1,6 +1,7 @@
 ---
-title: "What is simulated annealing?"
-tags: ["programming"]
+title: What is simulated annealing?
+tags:
+  - programming
 ---
 
 Below you see a bunch of points,

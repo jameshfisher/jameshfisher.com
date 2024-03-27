@@ -1,5 +1,6 @@
 ---
-title: "WebAssembly hello world"
+title: WebAssembly hello world
+tags: []
 ---
 
 If your browser supports WebAssembly,

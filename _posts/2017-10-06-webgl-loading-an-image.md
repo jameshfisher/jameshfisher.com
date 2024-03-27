@@ -1,5 +1,6 @@
 ---
-title: "How to load an image in WebGL"
+title: How to load an image in WebGL
+tags: []
 ---
 
 <div><canvas id="jimmy" width="512" height="512" style="width: 256px; height: 256px;"></canvas></div>

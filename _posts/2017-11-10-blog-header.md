@@ -1,7 +1,8 @@
 ---
-title: "Adding a blog header"
-justification: "I want a lower bounce rate."
-tags: ["blog"]
+title: Adding a blog header
+justification: I want a lower bounce rate.
+tags:
+  - blog
 ---
 
 My blog's "design" is intentionally very minimal.

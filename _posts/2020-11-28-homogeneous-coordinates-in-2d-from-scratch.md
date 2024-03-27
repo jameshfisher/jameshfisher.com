@@ -1,6 +1,10 @@
 ---
-title: "Homogeneous coordinates in 2D, from scratch"
-tags: ["mathematics", "programming", "js", "graphics"]
+title: 'Homogeneous coordinates in 2D, from scratch'
+tags:
+  - mathematics
+  - programming
+  - js
+  - graphics
 ---
 
 Here's an animation of a spinning, orbiting rectangle.

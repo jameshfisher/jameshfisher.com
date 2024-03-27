@@ -1,5 +1,6 @@
 ---
-title: "One-dimensional Perlin noise"
+title: One-dimensional Perlin noise
+tags: []
 ---
 
 <div><canvas id="perlin" height="400" width="1200" style="height: 200px; width: 600px;"></canvas></div>

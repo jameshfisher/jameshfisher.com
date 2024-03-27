@@ -1,6 +1,7 @@
 ---
-title: "How is the Redis sorted set implemented?"
-tags: ["programming"]
+title: How is the Redis sorted set implemented?
+tags:
+  - programming
 ---
 
 [Redis provides a data structure called "sorted sets"](https://redis.io/topics/data-types#sorted-sets)

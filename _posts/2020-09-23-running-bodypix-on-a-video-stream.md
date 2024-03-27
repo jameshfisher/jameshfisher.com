@@ -1,6 +1,9 @@
 ---
-title: "Running BodyPix on a video stream"
-tags: ["programming", "web", "machinelearning"]
+title: Running BodyPix on a video stream
+tags:
+  - programming
+  - web
+  - machinelearning
 ---
 
 In [this previous post](/2020/08/16/bodypix-hello-world/),

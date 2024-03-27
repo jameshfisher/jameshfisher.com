@@ -1,7 +1,8 @@
 ---
-title: "Disempowering users"
+title: Disempowering users
 draft: true
-tags: ["product"]
+tags:
+  - product
 ---
 
 Lots of products are said to "empower" their users compared to the state-of-the-art.

@@ -1,6 +1,9 @@
 ---
-title: "Hello world in C inline assembly"
-tags: ["programming", "c", "assembly"]
+title: Hello world in C inline assembly
+tags:
+  - programming
+  - c
+  - assembly
 ---
 
 Here's an unusual "hello, world" in C:

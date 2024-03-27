@@ -1,6 +1,9 @@
 ---
-title: "How to implement green screen in WebGL"
-tags: ["programming", "web", "webgl"]
+title: How to implement green screen in WebGL
+tags:
+  - programming
+  - web
+  - webgl
 ---
 
 In [the last post](/2020/08/09/how-to-implement-green-screen-in-the-browser/), 

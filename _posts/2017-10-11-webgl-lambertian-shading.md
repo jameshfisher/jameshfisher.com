@@ -1,5 +1,6 @@
 ---
-title: "WebGL Lambertian shading"
+title: WebGL Lambertian shading
+tags: []
 ---
 
 <div style="display: flex;">

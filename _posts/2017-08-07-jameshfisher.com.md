@@ -1,5 +1,6 @@
 ---
-title: "This site is now on jameshfisher.com"
+title: This site is now on jameshfisher.com
+tags: []
 ---
 
 This blog has been hosted at `jameshfisher.github.io` since I started it in November last year.

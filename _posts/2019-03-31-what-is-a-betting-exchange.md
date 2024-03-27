@@ -1,6 +1,7 @@
 ---
-title: "What is a betting exchange?"
-tags: ["betting"]
+title: What is a betting exchange?
+tags:
+  - betting
 ---
 
 Consider the following betting websites:

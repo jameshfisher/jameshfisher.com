@@ -1,6 +1,9 @@
 ---
-title: "How to run a pre-trained model in TensorFlow.js"
-tags: ["programming", "web", "ml"]
+title: How to run a pre-trained model in TensorFlow.js
+tags:
+  - programming
+  - web
+  - machine-learning
 ---
 
 [The tfjs-models repository](https://github.com/tensorflow/tfjs-models)

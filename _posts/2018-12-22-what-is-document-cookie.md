@@ -1,6 +1,8 @@
 ---
-title: "What is document.cookie?"
-tags: ["programming", "web"]
+title: What is document.cookie?
+tags:
+  - programming
+  - web
 ---
 
 I've used cookies as a web developer for many years,

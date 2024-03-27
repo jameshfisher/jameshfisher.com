@@ -1,6 +1,9 @@
 ---
-title: "Generated normal-mapped ripples"
-tags: ["programming", "graphics", "webgl"]
+title: Generated normal-mapped ripples
+tags:
+  - programming
+  - graphics
+  - webgl
 ---
 
 <div>

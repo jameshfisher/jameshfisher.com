@@ -1,7 +1,9 @@
 ---
-title: "What are JavaScript source maps?"
-tags: ["programming", "web"]
-ogimage: "/assets/2020-09-26/jimscript.png"
+title: What are JavaScript source maps?
+tags:
+  - programming
+  - web
+ogimage: /assets/2020-09-26/jimscript.png
 ---
 
 <script src="/assets/2020-09-26/generated.js"></script>

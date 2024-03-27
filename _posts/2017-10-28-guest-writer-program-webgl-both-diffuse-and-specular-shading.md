@@ -1,7 +1,10 @@
 ---
-title: "WebGL shading: both diffuse and specular"
+title: 'WebGL shading: both diffuse and specular'
 author: luis
-tags: ["programming", "graphics", "webgl"]
+tags:
+  - programming
+  - graphics
+  - webgl
 ---
 
 <div>

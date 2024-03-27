@@ -1,6 +1,7 @@
 ---
-title: "A lambda calculus interpreter in Haskell"
-tags: ["programming"]
+title: A lambda calculus interpreter in Haskell
+tags:
+  - programming
 ---
 
 A few days ago, I wrote an interpreter for a small imperative language in Haskell.

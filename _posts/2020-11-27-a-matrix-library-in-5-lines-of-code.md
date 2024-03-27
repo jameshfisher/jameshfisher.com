@@ -1,6 +1,10 @@
 ---
-title: "A matrix library in 5 lines of code"
-tags: ["mathematics", "programming", "js", "graphics"]
+title: A matrix library in 5 lines of code
+tags:
+  - mathematics
+  - programming
+  - js
+  - graphics
 ---
 
 Here's an animation of a pulsating rectangle, spinning around the origin.

@@ -1,6 +1,7 @@
 ---
-title: "How do I set a socket to be non-blocking?"
-justification: "I'm learning networking by understanding pieces of Redis."
+title: How do I set a socket to be non-blocking?
+justification: I'm learning networking by understanding pieces of Redis.
+tags: []
 ---
 
 The traditional UNIX system calls are _blocking_. For example:

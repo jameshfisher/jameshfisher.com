@@ -1,6 +1,8 @@
 ---
-title: "Game of Life in WebGPU"
-tags: ["programming", "webgpu"]
+title: Game of Life in WebGPU
+tags:
+  - programming
+  - webgpu
 ---
 
 Following on from [implementing Rule 110 in WebGPU](/2020/03/02/rule-110-in-webgpu/),

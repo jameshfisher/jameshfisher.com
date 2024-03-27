@@ -1,6 +1,9 @@
 ---
-title: "Implementing a queue using two stacks"
-tags: ["ctci", "programming", "haskell"]
+title: Implementing a queue using two stacks
+tags:
+  - ctci
+  - programming
+  - haskell
 ---
 
 Question 3.5 of _Cracking the Coding Interview_:

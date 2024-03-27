@@ -1,6 +1,7 @@
 ---
-title: "Node.js addon hello world"
-tags: ["programming"]
+title: Node.js addon hello world
+tags:
+  - programming
 ---
 
 We're going to make a native extension called `addon`.

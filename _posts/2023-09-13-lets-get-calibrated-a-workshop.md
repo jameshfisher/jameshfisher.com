@@ -1,6 +1,7 @@
 ---
-title: "Let's get calibrated! A workshop"
-tags: ["uncertainty"]
+title: Let's get calibrated! A workshop
+tags:
+  - uncertainty
 ---
 
 

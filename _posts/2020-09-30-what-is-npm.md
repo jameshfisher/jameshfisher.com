@@ -1,6 +1,8 @@
 ---
-title: "What is npm?"
-tags: ["programming", "javascript"]
+title: What is npm?
+tags:
+  - programming
+  - javascript
 ---
 
 Recently I wrote about Node.js's two module systems,

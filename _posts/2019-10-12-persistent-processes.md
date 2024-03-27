@@ -1,5 +1,5 @@
 ---
-title: "Persistent processes"
+title: Persistent processes
 tags: []
 draft: true
 ---

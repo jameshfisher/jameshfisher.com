@@ -1,5 +1,5 @@
 ---
-title: "Golang's realtime garbage collector at GoWayFest, Minsk"
+title: 'Golang''s realtime garbage collector at GoWayFest, Minsk'
 tags:
   - talk
 ---

@@ -1,5 +1,6 @@
 ---
-title: "Hello world in Rust"
+title: Hello world in Rust
+tags: []
 ---
 
 I'm tinkering with [Rust](https://www.rust-lang.org/).

@@ -1,5 +1,6 @@
 ---
-title: "How to trace a DNS lookup"
+title: How to trace a DNS lookup
+tags: []
 ---
 
 We want to find an IP address for `ws-mt1.pusher.com`.

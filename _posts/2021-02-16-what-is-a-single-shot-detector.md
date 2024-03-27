@@ -1,6 +1,9 @@
 ---
-title: "What is a Single-Shot Multibox Detector?"
-tags: ["programming", "web", "ml"]
+title: What is a Single-Shot Multibox Detector?
+tags:
+  - programming
+  - web
+  - machine-learning
 ---
 
 [The pre-trained Blazeface model](https://github.com/tensorflow/tfjs-models/tree/master/blazeface),

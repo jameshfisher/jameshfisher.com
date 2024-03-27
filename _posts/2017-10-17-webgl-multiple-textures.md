@@ -1,5 +1,6 @@
 ---
-title: "Multiple textures in WebGL"
+title: Multiple textures in WebGL
+tags: []
 ---
 
 <div><canvas width="200" height="200" style="height: 200px; width: 200px;" id="fragmentCanvas"></canvas></div>

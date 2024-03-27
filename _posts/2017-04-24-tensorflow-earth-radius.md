@@ -1,7 +1,7 @@
 ---
-title: "Predicting earth radius"
+title: Predicting earth radius
 tags:
-  - ml
+  - machine-learning
 draft: true
 ---
 

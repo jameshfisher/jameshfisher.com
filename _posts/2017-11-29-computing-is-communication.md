@@ -1,6 +1,7 @@
 ---
-title: "Computing is communication"
+title: Computing is communication
 draft: true
+tags: []
 ---
 
 There is a standard history of computing which runs like this:

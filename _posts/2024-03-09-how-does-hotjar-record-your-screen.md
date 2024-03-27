@@ -1,6 +1,8 @@
 ---
-title: "How does HotJar record your screen?"
-tags: ["programming", "web"]
+title: How does HotJar record your screen?
+tags:
+  - programming
+  - web
 ---
 
 I was blown away when I first saw tools like HotJar.

@@ -1,6 +1,7 @@
 ---
-title: "A cycling holiday in Thailand"
-tags: ["holiday"]
+title: A cycling holiday in Thailand
+tags:
+  - holiday
 draft: true
 ---
 

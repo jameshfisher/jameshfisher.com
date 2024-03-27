@@ -1,5 +1,6 @@
 ---
-title: "Web Notification API onclick"
+title: Web Notification API onclick
+tags: []
 ---
 
 I've covered before that the browser Notification API lets you display desktop notifications like this:

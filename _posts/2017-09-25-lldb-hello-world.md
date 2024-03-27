@@ -1,5 +1,6 @@
 ---
-title: "`lldb` hello world"
+title: '`lldb` hello world'
+tags: []
 ---
 
 Create the following C program, `main.c`. We'll use `lldb` to step through it.

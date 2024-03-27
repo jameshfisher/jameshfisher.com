@@ -1,6 +1,9 @@
 ---
-title: "A stack with minimum element"
-tags: ["ctci", "programming", "c"]
+title: A stack with minimum element
+tags:
+  - ctci
+  - programming
+  - c
 ---
 
 Question 3.2 of _Cracking the Coding Interview_:

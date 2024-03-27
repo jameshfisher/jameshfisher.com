@@ -1,6 +1,9 @@
 ---
-title: "How to find kth last node of a linked list"
-tags: ["ctci", "programming", "c"]
+title: How to find kth last node of a linked list
+tags:
+  - ctci
+  - programming
+  - c
 ---
 
 Question 2.2 of _Cracking the Coding Interview_:

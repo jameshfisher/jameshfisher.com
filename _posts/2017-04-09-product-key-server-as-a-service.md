@@ -1,6 +1,7 @@
 ---
-title: "Product key server as a service"
-justification: "I'm making Vidrio. I want something to manage Vidrio licensing/keys."
+title: Product key server as a service
+justification: I'm making Vidrio. I want something to manage Vidrio licensing/keys.
+tags: []
 ---
 
 Here is the service that I want:

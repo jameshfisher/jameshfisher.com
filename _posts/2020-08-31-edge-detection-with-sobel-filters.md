@@ -1,7 +1,10 @@
 ---
-title: "Edge detection with Sobel filters"
-tags: ["programming", "web", "webgl"]
-ogimage: "/assets/2020-08-31/example.png"
+title: Edge detection with Sobel filters
+tags:
+  - programming
+  - web
+  - webgl
+ogimage: /assets/2020-08-31/example.png
 ---
 
 Image processing often requires detecting edges.

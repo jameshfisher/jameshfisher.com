@@ -1,6 +1,7 @@
 ---
-title: "How to implement a 'free trial' for macOS apps"
-justification: "I want to charge for Vidrio."
+title: How to implement a 'free trial' for macOS apps
+justification: I want to charge for Vidrio.
+tags: []
 ---
 
 A simple way to charge for macOS apps is to add an up-front cost in the Mac App Store. But I don't want this for Vidrio. I think "free trial" or "freemium" models will be much more successful. The Mac App Store payment system also only works for a single platform, whereas I want Vidrio to be available on multiple platforms (e.g. Windows). Yet another reason is that I want to be able to experiment with policies such as subscription, and discounts for sharing.

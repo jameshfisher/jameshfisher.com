@@ -1,5 +1,5 @@
 ---
-title: "Operational Transformations hello world"
+title: Operational Transformations hello world
 tags: []
 draft: true
 ---

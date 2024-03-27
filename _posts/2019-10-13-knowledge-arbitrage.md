@@ -1,5 +1,5 @@
 ---
-title: "Knowledge arbitrage"
+title: Knowledge arbitrage
 tags: []
 draft: true
 ---

@@ -1,6 +1,9 @@
 ---
-title: "How to export a model for TensorFlow.js"
-tags: ["tensorflow", "programming", "ml"]
+title: How to export a model for TensorFlow.js
+tags:
+  - tensorflow
+  - programming
+  - machine-learning
 ---
 
 This post shows how to save a "hello world" model in TensorFlow (Python),

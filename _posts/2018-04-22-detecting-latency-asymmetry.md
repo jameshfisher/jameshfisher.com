@@ -1,6 +1,7 @@
 ---
-title: "Can you detect asymmetric latency?"
+title: Can you detect asymmetric latency?
 draft: true
+tags: []
 ---
 
 skew = 400

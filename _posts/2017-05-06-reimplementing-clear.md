@@ -1,5 +1,6 @@
 ---
-title: "What is the `clear` program?"
+title: What is the `clear` program?
+tags: []
 ---
 
 Typing `clear` at the terminal clears your screen. How does this program work? The implementation is tiny:

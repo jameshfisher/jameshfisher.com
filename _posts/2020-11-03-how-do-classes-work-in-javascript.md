@@ -1,6 +1,8 @@
 ---
-title: "How do classes work in JavaScript?"
-tags: ["programming", "javascript"]
+title: How do classes work in JavaScript?
+tags:
+  - programming
+  - javascript
 ---
 
 JavaScript classes are syntactic sugar.

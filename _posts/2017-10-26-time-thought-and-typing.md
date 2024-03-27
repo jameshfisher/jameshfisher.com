@@ -1,6 +1,8 @@
 ---
-title: "The Three Ts of Time, Thought and Typing: measuring cost on the web"
-tags: ["fave", "programming"]
+title: 'The Three Ts of Time, Thought and Typing: measuring cost on the web'
+tags:
+  - fave
+  - programming
 ---
 
 "Create your free account"!

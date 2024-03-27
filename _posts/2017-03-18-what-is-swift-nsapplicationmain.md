@@ -1,6 +1,9 @@
 ---
-title: "What is Swift's `@NSApplicationMain` annotation?"
-justification: "I'm making Vidrio this month. I need to understand Cocoa and Swift. The `@NSApplicationMain` annotation is one barrier to understanding."
+title: What is Swift's `@NSApplicationMain` annotation?
+justification: >-
+  I'm making Vidrio this month. I need to understand Cocoa and Swift. The
+  `@NSApplicationMain` annotation is one barrier to understanding.
+tags: []
 ---
 
 In Xcode, go to `File > New > Project`, select "Cocoa application", and call it "LookMaNoNSApplicationMain". Run it. You get an empty window which reads "LookMaNoNSApplicationMain" in the title. When you focus the application, you get a menu bar for it along the top. This menu bar contains a whole lot of functionality. You can go `View > Enter Full Screen`, and the window maximizes. You can go `Format > Font > Show Colors`, and you get a color picker window. Where did all this functionality come from?!

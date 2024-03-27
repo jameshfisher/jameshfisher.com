@@ -1,5 +1,6 @@
 ---
-title: "Diff views as instructions"
+title: Diff views as instructions
+tags: []
 ---
 
 Technical communication about code usually includes code blocks.

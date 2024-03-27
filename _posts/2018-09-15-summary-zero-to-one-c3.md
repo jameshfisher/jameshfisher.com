@@ -1,6 +1,8 @@
 ---
-title: "Summary of 'Zero to One', Chapter 3: All happy companies are different"
-tags: ["zero-to-one", "summary"]
+title: 'Summary of ''Zero to One'', Chapter 3: All happy companies are different'
+tags:
+  - zero-to-one
+  - summary
 ---
 
 **Summary:**

@@ -1,6 +1,9 @@
 ---
-title: "JavaScript modules for grumpy developers from 2005"
-tags: ["programming", "web", "javascript"]
+title: JavaScript modules for grumpy developers from 2005
+tags:
+  - programming
+  - web
+  - javascript
 ---
 
 These days you keep bumping into things like `<script type="module">`

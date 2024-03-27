@@ -1,6 +1,7 @@
 ---
-title: "A cat walk cycle"
-tags: ["animation"]
+title: A cat walk cycle
+tags:
+  - animation
 ---
 
 I spent a few hours trying my hand at a "walk cycle".

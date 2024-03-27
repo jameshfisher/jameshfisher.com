@@ -1,6 +1,9 @@
 ---
-title: "How is `MainMenu.xib` found in Cocoa?"
-justification: "I'm making Vidrio this month. I need to understand Cocoa and Swift. Nib/xib files seem fairly fundamental to the Cocoa loading process."
+title: How is `MainMenu.xib` found in Cocoa?
+justification: >-
+  I'm making Vidrio this month. I need to understand Cocoa and Swift. Nib/xib
+  files seem fairly fundamental to the Cocoa loading process.
+tags: []
 ---
 
 In Xcode, go to `File > New > Project`, select "Cocoa application". Run it. You get an empty window, and a menu bar for it along the top. This menu bar contains a whole lot of functionality. Where did all this functionality come from?!

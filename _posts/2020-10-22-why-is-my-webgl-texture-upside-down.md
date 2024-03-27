@@ -1,6 +1,8 @@
 ---
-title: "Why is my WebGL texture upside-down?"
-tags: ["programming", "webgl"]
+title: Why is my WebGL texture upside-down?
+tags:
+  - programming
+  - webgl
 ---
 
 To get a texture into your WebGL program,

@@ -1,6 +1,9 @@
 ---
-title: "What are CSS variables?"
-tags: ["programming","web","css"]
+title: What are CSS variables?
+tags:
+  - programming
+  - web
+  - css
 ---
 
 Here's some CSS that was mysterious to me:

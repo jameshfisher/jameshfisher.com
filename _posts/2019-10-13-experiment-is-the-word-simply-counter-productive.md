@@ -1,6 +1,7 @@
 ---
-title: "Experiment: is the word 'simply' counter-productive?"
-tags: ["writing"]
+title: 'Experiment: is the word ''simply'' counter-productive?'
+tags:
+  - writing
 draft: true
 ---
 

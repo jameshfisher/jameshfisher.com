@@ -1,6 +1,7 @@
 ---
-title: "Variables in bash"
+title: Variables in bash
 draft: true
+tags: []
 ---
 
 If you want to understand a programming language,

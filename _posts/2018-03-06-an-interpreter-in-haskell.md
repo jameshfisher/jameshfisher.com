@@ -1,6 +1,8 @@
 ---
-title: "An interpreter in Haskell"
-tags: ["programming", "haskell"]
+title: An interpreter in Haskell
+tags:
+  - programming
+  - haskell
 ---
 
 I haven't touched Haskell for a couple of years.

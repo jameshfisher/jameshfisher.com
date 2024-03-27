@@ -1,6 +1,9 @@
 ---
-title: "How to percent-encode strings in-place"
-tags: ["ctci", "programming", "c"]
+title: How to percent-encode strings in-place
+tags:
+  - ctci
+  - programming
+  - c
 ---
 
 Question 1.4 of _Cracking the Coding Interview_:

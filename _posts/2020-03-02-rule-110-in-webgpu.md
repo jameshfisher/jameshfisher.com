@@ -1,6 +1,8 @@
 ---
-title: "Rule 110 in WebGPU"
-tags: ["programming", "webgpu"]
+title: Rule 110 in WebGPU
+tags:
+  - programming
+  - webgpu
 ---
 
 If you're running the latest Google Chrome Canary,

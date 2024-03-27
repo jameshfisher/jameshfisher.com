@@ -1,6 +1,9 @@
 ---
-title: "Implementing a stack using a linked list"
-tags: ["ctci", "programming", "c"]
+title: Implementing a stack using a linked list
+tags:
+  - ctci
+  - programming
+  - c
 ---
 
 A "stack" is an abstract data type 

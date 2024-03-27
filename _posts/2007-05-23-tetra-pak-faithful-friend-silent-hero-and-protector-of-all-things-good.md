@@ -1,7 +1,7 @@
 ---
 title: 'Tetra Pak: Faithful Friend, Silent Hero, and Protector of All Things Good'
 tags:
-  - 'tetra-pak'
+  - tetra-pak
   - humor
 taggedAt: '2024-03-26'
 ---

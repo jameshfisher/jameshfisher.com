@@ -1,5 +1,6 @@
 ---
-title: "Don't trust `cat`!"
+title: Don't trust `cat`!
+tags: []
 ---
 
 To read a file `foo` in the terminal, we do `cat foo`, and the contents of the file are printed out. But because terminal control sequences are _in-band_ as ordinary stdout bytes, `cat`ting a file can do more than you think! You should not trust the visual output of cat as a faithful representation of the file contents.

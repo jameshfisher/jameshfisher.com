@@ -1,6 +1,8 @@
 ---
-title: "How does `ping` work?"
-tags: ["programming", "networking"]
+title: How does `ping` work?
+tags:
+  - programming
+  - networking
 ---
 
 You may have used `ping` before,

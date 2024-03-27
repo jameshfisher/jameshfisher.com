@@ -2,6 +2,7 @@
 title: Where is the Unicode feed icon?
 hnUrl: 'https://news.ycombinator.com/item?id=20921087'
 hnUpvotes: 1
+tags: []
 ---
 
 If you lived through the naughties, you know this icon:

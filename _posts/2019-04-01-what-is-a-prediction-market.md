@@ -1,6 +1,7 @@
 ---
-title: "What is a prediction market?"
-tags: ["betting"]
+title: What is a prediction market?
+tags:
+  - betting
 ---
 
 "[PredictIt](https://www.predictit.org/support/what-is-predictit) 

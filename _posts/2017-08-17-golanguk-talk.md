@@ -1,5 +1,5 @@
 ---
-title: "_Golang's realtime garbage collector_ at GolangUK"
+title: _Golang's realtime garbage collector_ at GolangUK
 tags:
   - talk
 ---

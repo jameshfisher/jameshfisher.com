@@ -1,5 +1,6 @@
 ---
-title: "How to inspect Mach-O files"
+title: How to inspect Mach-O files
+tags: []
 ---
 
 `clang main.c` produces an `a.out`,

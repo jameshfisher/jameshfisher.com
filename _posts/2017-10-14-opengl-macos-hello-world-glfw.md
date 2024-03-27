@@ -1,5 +1,6 @@
 ---
-title: "macOS OpenGL hello world using GLFW"
+title: macOS OpenGL hello world using GLFW
+tags: []
 ---
 
 <p><img alt="cyan window" src="/assets/2017-10-14/window.png" style="width: 432px; height: 374px;"/></p>

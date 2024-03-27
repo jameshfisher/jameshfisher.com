@@ -1,6 +1,7 @@
 ---
-title: "A calendar view for this blog"
-justification: "Renewing my 'post every day' promise"
+title: A calendar view for this blog
+justification: Renewing my 'post every day' promise
+tags: []
 ---
 
 I just spent two hours reformatting the homepage for this blog.

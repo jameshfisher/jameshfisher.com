@@ -1,5 +1,6 @@
 ---
-title: "WebGL shaders with color"
+title: WebGL shaders with color
+tags: []
 ---
 
 <div>

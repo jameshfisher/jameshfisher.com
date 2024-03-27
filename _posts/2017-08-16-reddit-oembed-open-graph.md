@@ -1,5 +1,6 @@
 ---
-title: "How do Reddit thumbnails work?"
+title: How do Reddit thumbnails work?
+tags: []
 ---
 
 The other day [I submitted Vidrio to /r/MacApps](https://www.reddit.com/r/macapps/comments/6tgk8g/vidrio_a_macos_screencasting_app_i_made_feedback/). After submission I found that the thumbnail for the submission defaulted to a generic image, rather than being the Vidrio icon. Why?

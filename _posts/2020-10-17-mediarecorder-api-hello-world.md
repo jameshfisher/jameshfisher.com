@@ -1,6 +1,8 @@
 ---
-title: "MediaRecorder hello world"
-tags: ["programming", "web"]
+title: MediaRecorder hello world
+tags:
+  - programming
+  - web
 ---
 
 [The MediaStream Recording API](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API)

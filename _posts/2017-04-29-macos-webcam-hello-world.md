@@ -1,5 +1,6 @@
 ---
-title: "How to write a webcam app in Swift on macOS"
+title: How to write a webcam app in Swift on macOS
+tags: []
 ---
 
 Here we set up a panel which displays the device webcam.

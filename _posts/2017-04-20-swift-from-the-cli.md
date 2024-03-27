@@ -1,5 +1,6 @@
 ---
-title: "How to run Swift from the CLI"
+title: How to run Swift from the CLI
+tags: []
 ---
 
 So far I've only had experience of running Swift from Xcode as part of a project. But you can also run and compile Swift independently of Xcode. Example:

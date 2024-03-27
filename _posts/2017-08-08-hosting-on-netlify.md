@@ -1,5 +1,6 @@
 ---
-title: "How to move your GitHub pages blog to Netlify"
+title: How to move your GitHub pages blog to Netlify
+tags: []
 ---
 
 I bought `jameshfisher.com` to use for this blog.

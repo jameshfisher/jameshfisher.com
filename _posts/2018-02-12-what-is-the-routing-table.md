@@ -1,5 +1,6 @@
 ---
-title: "What is the routing table in Linux?"
+title: What is the routing table in Linux?
+tags: []
 ---
 
 You may have used the IP address `127.0.0.1` before.

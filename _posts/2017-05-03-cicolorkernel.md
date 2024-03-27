@@ -1,6 +1,9 @@
 ---
-title: "What is `CIColorKernel`?"
-justification: "Vidrio's image transformations are pixel-wise, which color kernels are optimized for."
+title: What is `CIColorKernel`?
+justification: >-
+  Vidrio's image transformations are pixel-wise, which color kernels are
+  optimized for.
+tags: []
 ---
 
 I've showed some uses of `CIKernel`, each of which produces an output pixel by transforming one pixel of some input images. To get the input pixels, I used code like this:

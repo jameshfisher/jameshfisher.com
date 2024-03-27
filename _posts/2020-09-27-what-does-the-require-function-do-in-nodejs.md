@@ -1,6 +1,8 @@
 ---
-title: "What does the `require` function do in Node.js?"
-tags: ["programming", "javascript"]
+title: What does the `require` function do in Node.js?
+tags:
+  - programming
+  - javascript
 ---
 
 [The other day I wrote an intro to "JavaScript modules"](/2020/09/25/javascript-modules-for-grumpy-developers-from-2005/).

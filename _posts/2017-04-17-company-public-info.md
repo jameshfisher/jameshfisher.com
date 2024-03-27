@@ -1,6 +1,7 @@
 ---
-title: "What company information is public? What's on Companies House?"
-justification: "I'm learning business?"
+title: What company information is public? What's on Companies House?
+justification: I'm learning business?
+tags: []
 ---
 
 Companies in the UK are registered with Companies House. If you want to know what companies exist, go to Companies House. You can search companies at [the company register search](https://beta.companieshouse.gov.uk/).

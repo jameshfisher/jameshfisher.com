@@ -1,6 +1,7 @@
 ---
-title: "Browser webcam hello world"
-tags: ["programming"]
+title: Browser webcam hello world
+tags:
+  - programming
 ---
 
 Just below this paragraph, you can see yourself!

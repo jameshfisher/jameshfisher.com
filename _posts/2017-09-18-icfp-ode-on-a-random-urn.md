@@ -1,5 +1,6 @@
 ---
-title: "ICFP: Ode on a Random Urn"
+title: 'ICFP: Ode on a Random Urn'
+tags: []
 ---
 
 I visited [ICFP](http://www.icfpconference.org/) this month.

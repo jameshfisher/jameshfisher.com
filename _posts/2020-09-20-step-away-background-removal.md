@@ -1,7 +1,10 @@
 ---
-title: "Step-away background removal"
-tags: ["programming", "web", "webgl"]
-ogimage: "/assets/2020-09-20/result.jpg"
+title: Step-away background removal
+tags:
+  - programming
+  - web
+  - webgl
+ogimage: /assets/2020-09-20/result.jpg
 ---
 
 In [this previous post](/2020/08/11/production-ready-green-screen-in-the-browser/) 

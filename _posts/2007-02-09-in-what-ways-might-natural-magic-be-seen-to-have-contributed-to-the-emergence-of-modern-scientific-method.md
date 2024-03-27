@@ -8,7 +8,6 @@ tags:
   - renaissance
   - history
   - essay
-
 taggedAt: '2024-03-26'
 ---
 

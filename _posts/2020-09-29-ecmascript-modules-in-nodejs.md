@@ -1,6 +1,8 @@
 ---
-title: "How do ECMAScript modules work in Node.js?"
-tags: ["programming", "javascript"]
+title: How do ECMAScript modules work in Node.js?
+tags:
+  - programming
+  - javascript
 ---
 
 Traditionally, Node.js uses the "CommonJS" module system,

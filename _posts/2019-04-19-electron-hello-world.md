@@ -1,6 +1,7 @@
 ---
-title: "Electron hello world"
-tags: ["programming"]
+title: Electron hello world
+tags:
+  - programming
 ---
 
 First, install Electron via NPM:

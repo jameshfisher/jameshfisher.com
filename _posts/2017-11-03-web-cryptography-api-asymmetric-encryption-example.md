@@ -1,6 +1,9 @@
 ---
-title: "Asymmetric encryption with the Web Cryptography API"
-tags: ["programming", "crypto", "javascript"]
+title: Asymmetric encryption with the Web Cryptography API
+tags:
+  - programming
+  - crypto
+  - javascript
 ---
 
 The Web Cryptography API lets us generate RSA and EC keypairs,

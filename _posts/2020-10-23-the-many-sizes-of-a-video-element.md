@@ -1,6 +1,8 @@
 ---
-title: "The many sizes of a video element"
-tags: ["programming", "web"]
+title: The many sizes of a video element
+tags:
+  - programming
+  - web
 ---
 
 What is th size of a `<video>`?

@@ -13,7 +13,7 @@ master and three Redis Sentinels. They discover each other. We trigger a failove
   `I try \`vim\`, but give up after finding the cursor cannot sit at the end of a line.`,
   `A method for calculating a bounding circle around a head, using facial landmarks from BlazeFace. Plus a live demo that you can run on your own face.`,
   `\`const\` is a type qualifier in C that makes a variable unassignable, except during initialization.`,
-  `A solution in C to determine if one string is a permutation of
+  `A C function to determine if one string is a permutation of
   another, using a character distribution representation for optimal time and space complexity.`,
 ];
 

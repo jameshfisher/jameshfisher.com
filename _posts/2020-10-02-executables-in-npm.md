@@ -2,6 +2,10 @@
 title: Executables in npm?
 tags:
   - programming
+summary: >-
+  NPM packages can contain executables, not just Node.js modules. NPM provides
+  features to help distribute and run these executables, such as the `bin` field
+  in `package.json` and the `npm run-script` command.
 ---
 
 NPM is not just for distributing Node.js modules.

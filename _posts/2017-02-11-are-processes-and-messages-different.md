@@ -4,6 +4,9 @@ tags:
   - concurrency
   - computer-science
 taggedAt: '2024-03-26'
+summary: >-
+  Processes and messages can be unified - processes are just very slow messages,
+  and message passing can be seen as splitting and fusing atoms.
 ---
 
 [Yesterday I described the "happened-before" relation](/2017/02/10/happened-before/). I showed this typical "interaction diagram" illustrating "processes" interacting with "messages":

@@ -6,6 +6,9 @@ tags:
   - programming
   - macos
   - swift
+summary: >-
+  Use `AVCaptureDeviceDiscoverySession` instead of the deprecated
+  `AVCaptureDevice.devices(for:)` to discover video capture devices.
 ---
 
 In my app, I had a call to [`AVCaptureDevice.devices()`](https://developer.apple.com/documentation/avfoundation/avcapturedevice/1386237-devices),
@@ -35,7 +38,7 @@ let avCaptureDevices = deviceDiscoverySession.devices
 ```
 
 Non-obviously, you should include the device type `.externalUnknown`.
-If you don't include `.externalUnknown`, 
+If you don't include `.externalUnknown`,
 your users won't be able to use that fancy new camera they bought.
 This device type includes USB webcams,
 which were only implicitly included in `AVCaptureDevice.devices(for: AVMediaType.video)`.

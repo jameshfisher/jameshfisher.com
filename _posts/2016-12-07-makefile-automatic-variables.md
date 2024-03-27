@@ -5,6 +5,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Automatic variables in a Makefile, like `$@` for the target and `$^` for the
+  dependencies, reduce repetition in rules.
 ---
 
 Suppose in your `Makefile` you wrote:

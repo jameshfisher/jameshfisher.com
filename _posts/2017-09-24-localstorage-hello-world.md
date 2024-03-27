@@ -1,6 +1,9 @@
 ---
 title: LocalStorage hello world
 tags: []
+summary: >-
+  LocalStorage allows web apps to store key-value pairs locally in the browser,
+  with storage scoped to the origin. Comes with a free demo.
 ---
 
 [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage)

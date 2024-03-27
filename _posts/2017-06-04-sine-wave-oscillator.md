@@ -1,6 +1,10 @@
 ---
 title: Defining the sine function as an oscillator
 tags: []
+summary: >-
+  The sine function can be defined as the oscillation of an object on a spring,
+  which can be simulated with a simple iterative function. This provides an
+  intuitive definition of sine beyond the standard trig-based one.
 ---
 
 When I do something trigonometric, I reach for a library implementing common trig functions, e.g. `Math.sin`. From school through university through work, I've been taught to treat these functions as black boxes. Before we had calculators at school, there were books of sine tables - more black boxes. How do these functions actually work? How do you define `sin(x)`?

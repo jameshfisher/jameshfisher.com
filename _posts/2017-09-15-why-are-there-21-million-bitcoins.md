@@ -5,6 +5,10 @@ tags:
   - cryptocurrency
   - economics
 taggedAt: '2024-03-26'
+summary: >-
+  The 21 million bitcoins limit was chosen to ensure the smallest unit, the
+  satoshi, would have a reasonable value if Bitcoin were the world's exclusive
+  currency.
 ---
 
 When all mining is done,

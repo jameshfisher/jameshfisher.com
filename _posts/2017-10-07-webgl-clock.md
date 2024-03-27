@@ -8,6 +8,9 @@ tags:
   - animation
   - graphics-programming
 taggedAt: '2024-03-26'
+summary: >-
+  A WebGL clock face with moving hands that updates every second, using a vertex
+  shader to convert polar coordinates to 3D positions.
 ---
 
 <div><canvas id="clock" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>

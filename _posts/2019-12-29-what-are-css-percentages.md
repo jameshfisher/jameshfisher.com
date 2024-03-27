@@ -5,6 +5,10 @@ tags:
   - css
 hnUrl: 'https://news.ycombinator.com/item?id=21915089'
 hnUpvotes: 4
+summary: >-
+  CSS percentages have varying meanings depending on the property. They can
+  refer to the containing block's width/height, the element's own font size, or
+  other specific measurements.
 ---
 
 If you've used CSS, you've probably used percentage values.

@@ -3,6 +3,10 @@ title: How do ECMAScript modules work in Node.js?
 tags:
   - programming
   - javascript
+summary: >-
+  ECMAScript modules and CommonJS modules in Node.js are interoperable. Node.js looks at file extensions and
+  `package.json` fields to determine the module type. ECMAScript modules can
+  only use `import`, while CommonJS modules can only use `require`.
 ---
 
 Traditionally, Node.js uses the "CommonJS" module system,
@@ -19,7 +23,7 @@ _You_ might decide by eyeballing the file contents,
 e.g. seeing whether it has `import` annotations or `require` calls.
 But Node.js does not look at the contents, or execute them, to make this decision.
 First, it looks at the file extension.
-The extension `.mjs` signals ECMAScript; 
+The extension `.mjs` signals ECMAScript;
 the extension `.cjs` signals CommonJS.
 If the extension is just `.js`,
 it will look for a `package.json` in the path from the root to the file,

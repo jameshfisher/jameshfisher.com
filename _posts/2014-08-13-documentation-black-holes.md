@@ -7,6 +7,11 @@ tags:
   - programming
   - documentation
 taggedAt: '2024-03-26'
+summary: >-
+  Documentation often ends up in black holes - internal documents, issue
+  trackers, test cases, conversations, commit messages, and wikis - where it
+  goes unread. Focus on writing documentation that people will actually read,
+  like product names, homepages, and inline help.
 ---
 
 Nearly all the software I’ve ever contributed to has crappy or non-existent documentation.

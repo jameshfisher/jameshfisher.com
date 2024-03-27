@@ -4,6 +4,10 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  To remove duplicates from an unsorted linked list with no extra memory, use a
+  nested loop to check each node against all others, removing duplicates as you
+  go. Time complexity is O(n^2).
 ---
 
 Question 2.1 of _Cracking the Coding Interview_:

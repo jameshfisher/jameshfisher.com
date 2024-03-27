@@ -4,13 +4,17 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  A stack with a `min` operation that runs in O(1) time. Store the
+  current minimum alongside each element, or use run-length encoding to compress
+  the stack of minimums.
 ---
 
 Question 3.2 of _Cracking the Coding Interview_:
 
-> How would you design a stack which, 
-> in addition to `push` and `pop`, 
-> also has a function `min` which returns the minimum element? 
+> How would you design a stack which,
+> in addition to `push` and `pop`,
+> also has a function `min` which returns the minimum element?
 > `push`, `pop` and `min` should all operate in O(1) time.
 
 Without the requirement that `min` should operate in O(1) time,
@@ -42,7 +46,7 @@ Here's an implementation in C:
 
 A cleverer implementation recognizes that the `min` doesn't change often,
 so we can compress the representation.
-The way I thought to do this was to [run-length encode](/2020/01/08/run-length-encoding-in-c/) 
+The way I thought to do this was to [run-length encode](/2020/01/08/run-length-encoding-in-c/)
 the stack of `min`s:
 keep a stack of `(min, counter)` tuples.
 Instead of pushing the same `min`,
@@ -56,7 +60,7 @@ Again, here's an implementation in C:
 
 The book has a different optimization method.
 It also keeps a separate stack for the `min`s,
-and pushes a value to the `min` stack 
+and pushes a value to the `min` stack
 if the value is less than _or equal to_ the current `min`.
 This method has an annoying worst-case, though:
 when the `min` is pushed repeatedly onto the stack,

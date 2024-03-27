@@ -4,6 +4,8 @@ tags:
   - programming
   - graphics
   - webgl
+summary: >-
+  Implements a 1024x1024 grid of Conway's Game of Life using WebGL fragment shaders.
 ---
 
 <div>

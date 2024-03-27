@@ -2,6 +2,9 @@
 title: 'Vélos, vins et vassaux dans la Loire'
 tags:
   - holiday
+summary: >-
+  Cycling tour of France's Loire Valley, visiting chateaux, wineries, and
+  medieval attractions over 5 days, from Tours to Nantes.
 ---
 
 You are cordially invited on a cycling tour of [France’s Valley of Kings](https://en.wikipedia.org/wiki/Loire_Valley). 

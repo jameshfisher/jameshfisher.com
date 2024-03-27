@@ -4,6 +4,9 @@ tags:
   - programming
   - javascript
   - web
+summary: >-
+  I write an ArrayBuffer to a canvas by interpreting the
+  buffer as pixel data and using ImageData to provide the dimensions.
 ---
 
 I'm playing with [WebGPU](https://github.com/gpuweb/gpuweb).
@@ -11,7 +14,7 @@ But it's currently very bleeding-edge,
 and Chrome hasn't implemented direct GPU integration with `canvas` yet.
 As a workaround to display stuff,
 WebGPU lets you read data as an [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer),
-and we can write that `ArrayBuffer` to a `canvas` 
+and we can write that `ArrayBuffer` to a `canvas`
 using the traditional `2d` context.
 Here's a canvas which I've written an `ArrayBuffer` to:
 
@@ -20,7 +23,7 @@ Here's a canvas which I've written an `ArrayBuffer` to:
 </div>
 
 The `ArrayBuffer` is interpreted as pixel data as follows.
-Each pixel is four bytes: 
+Each pixel is four bytes:
 red, green, blue and alpha, in that order.
 Pixels are in "reading" order:
 top-to-bottom, left-to-right.
@@ -60,7 +63,7 @@ ctx.putImageData(imageData, 0, 0);
 
   const WIDTH = 256;
   const HEIGHT = 256;
-  
+
   const arrayBuffer = new ArrayBuffer(WIDTH * HEIGHT * 4);
   const pixels = new Uint8ClampedArray(arrayBuffer);
   for (let y = 0; y < HEIGHT; y++) {

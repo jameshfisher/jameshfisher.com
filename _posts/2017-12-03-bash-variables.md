@@ -2,6 +2,8 @@
 title: Variables in bash
 draft: true
 tags: []
+summary: >-
+  Bash variables are made of ASCII letters/digits/underscores. They store strings and are dynamically scoped.
 ---
 
 If you want to understand a programming language,

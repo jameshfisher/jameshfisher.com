@@ -5,7 +5,7 @@ tags:
   - product
 hnUrl: "https://news.ycombinator.com/item?id=37295398"
 hnUpvotes: 2
-summary: "A primary feature of a collaborative product is its social norms. I look at LessWrong, a forum product, and show it builds its unique social norms."
+summary: "A primary feature of a collaborative product is its social norms. I look at LessWrong, a forum product, and show how it builds its social norms."
 ---
 
 If you're building a multi-user product, you're not just selling social _features_.

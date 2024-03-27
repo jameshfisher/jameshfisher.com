@@ -3,6 +3,10 @@ title: What are promises in JavaScript?
 tags:
   - programming
   - javascript
+summary: >-
+  Promises in JavaScript represent future values. They provide a way to handle
+  asynchronous operations, allowing chaining of callbacks. Promises can be
+  fulfilled or rejected, with callbacks handling each case.
 ---
 
 A `Promise` in JavaScript is a object

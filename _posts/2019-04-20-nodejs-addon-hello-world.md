@@ -2,6 +2,8 @@
 title: Node.js addon hello world
 tags:
   - programming
+summary: >-
+  I create a native Node.js addon called `addon` in C++ using `node-gyp`. The addon exports a `hello()` function.
 ---
 
 We're going to make a native extension called `addon`.
@@ -28,7 +30,7 @@ module.exports.hello = () => 'world';
 ```
 
 But instead,
-we're going to implement `addon` in C++ 
+we're going to implement `addon` in C++
 as a [Node.js addon](https://nodejs.org/api/addons.html)!
 Instead of a file called `addon.js`,
 we'll be making `addon.node`.
@@ -100,7 +102,7 @@ If you get build errors here, it's likely because the V8 API has changed.
 The above example works for Node 12.x.
 [Consult the addons docs for a latest working example](https://nodejs.org/api/addons.html).
 Due to V8 API instability,
-[Node.js provides "Native Abstractions for Node.js"](https://github.com/nodejs/nan), 
+[Node.js provides "Native Abstractions for Node.js"](https://github.com/nodejs/nan),
 a bunch of macros which are hopefully more stable.
 I'll do a future post on a NAN hello world.
 

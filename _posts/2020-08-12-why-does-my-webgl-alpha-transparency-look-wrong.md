@@ -4,6 +4,9 @@ tags:
   - programming
   - web
   - webgl
+summary: >-
+  WebGL alpha-transparency may appear wrong because of premultiplied alpha. Fix it by
+  setting `premultipliedAlpha: false` when creating the WebGL context.
 ---
 
 When using WebGL and creating a partially transparent canvas,

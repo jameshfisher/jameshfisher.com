@@ -5,6 +5,9 @@ tags:
   - programming
   - undefined-behavior
 taggedAt: '2024-03-26'
+summary: >-
+  Computing a pointer to unowned memory
+  invokes undefined behavior, even without dereferencing!
 ---
 
 Does C allow pointer arithmetic? For example, if we have some `int*`, can we add that value to another value, to get another pointer?

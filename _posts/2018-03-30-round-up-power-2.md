@@ -3,6 +3,9 @@ title: Rounding up to the next power of two in C
 tags:
   - programming
   - c
+summary: >-
+  An efficient algorithm to round up to the next power of two in C, using
+  bitwise operations and compiler intrinsics for constant-time performance.
 ---
 
 I was writing a memory allocator in C.

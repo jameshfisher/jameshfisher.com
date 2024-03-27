@@ -1,6 +1,9 @@
 ---
 title: '`new Notification(...)` is deprecated'
 tags: []
+summary: >-
+  Deprecated `new Notification()` replaced with
+  `ServiceWorkerRegistration.showNotification()`.
 ---
 
 Earlier I showed this example of the Notification API:

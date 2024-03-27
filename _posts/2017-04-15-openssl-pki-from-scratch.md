@@ -5,6 +5,9 @@ justification: >-
   problems it solves, and the cryptographic operations involved. To understand
   it, I'm building it myself.
 tags: []
+summary: >-
+  I demonstrate creating a public-private key pair, distributing the public key,
+  and using a trusted third party (CA) to vouch for the public key.
 ---
 
 Say Alice generates her private key, and extracts her public key:

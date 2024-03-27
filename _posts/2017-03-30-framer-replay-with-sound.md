@@ -2,6 +2,9 @@
 title: Replay with sound
 justification: The Vidrio site has an autoplay promo video. It's a bit annoying ...
 tags: []
+summary: >-
+  A "Replay with sound" button to control a muted video, implemented using the
+  YouTube Iframe API.
 ---
 
 Video is no longer standalone content to be played with a separate "video player". Nowadays, videos are commonplace as UI elements. Video contrasts with traditional UI elements (text, tables, images) in a few ways. Video is temporal: its state changes through time. Video is noisy: it can have an audio track. And video is interactive: the user can change its state.

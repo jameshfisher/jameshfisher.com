@@ -7,6 +7,9 @@ tags:
   - image-processing
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Blurring sensitive information in images may not effectively protect privacy,
+  as the original content can often be recovered using deblurring techniques.
 ---
 
 Yesterday,

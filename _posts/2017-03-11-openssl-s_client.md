@@ -11,6 +11,9 @@ tags:
   - cli
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Use the `openssl s_client` command to fetch a server's SSL certificate chain,
+  including the root certificate.
 ---
 
 The `openssl` tool has a command `s_client` which is a general SSL client; i.e. it connects to an SSL-enabled server. HTTPS servers run an SSL on TCP port 443. We can use `s_client` to connect to them. Here's an example of connecting to the HTTPS server on `google.com` and getting the root page. In the course of this, the process prints the "certificate chain" to standard out.

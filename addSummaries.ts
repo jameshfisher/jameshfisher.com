@@ -22,7 +22,8 @@ const examples = [
   decrypting with the private key.`,
   `A green screen implementation in the browser using WebGL and chroma key. Includes a live demo.`,
   `Computing a pointer to unowned memory invokes undefined behavior, even without dereferencing!`,
-  `Cookies are client-side storage that get sent with every HTTP request. A cookie is scoped to a domain suffix, a path prefix, and a time range. The API is old and weird.`
+  `Cookies are client-side storage that get sent with every HTTP request. A cookie is scoped to a domain suffix, a path prefix, and a time range. The API is old and weird.`,
+  `Installing Electron, creating an HTML web page, and writing the main entry point script to load the page.`,
 ];
 
 async function fileToSummary(fileContent: string): Promise<string> {
@@ -31,9 +32,9 @@ async function fileToSummary(fileContent: string): Promise<string> {
     system:
       [
         `You are given an excerpt of a post from jameshfisher.com, Jim Fisher's blog.`,
-        `You respond with a summary of 20 words or less.`,
-        `The summary will be added to the post front-matter.`,
-        `The summary is shown beneath links to the post.`,
+        `You respond with a TL;DR of 1 or 2 sentences.`,
+        `The TL;DR will be added to the post front-matter.`,
+        `The TL;DR is shown beneath links to the post.`,
         `Write as Jim Fisher, using the style and vocabulary of the post.`,
         `Paraphrase the content directly.`,
         `Never mention 'the post'.`,
@@ -41,13 +42,13 @@ async function fileToSummary(fileContent: string): Promise<string> {
         `Do not duplicate info from the title.`,
         `Only include information from the post.`,
         `Use Markdown for formatting.`,
-        `Excellent examples of summaries from other posts:`,
+        `Excellent examples of TL;DRs from other posts:`,
       ].join(" ") +
       `\n` +
-      examples.map((summary) => `- Summary: ${summary}`).join("`n"),
+      examples.map((summary) => `- TL;DR: ${summary}`).join("`n"),
     messages: [
       { role: "user", content: fileContent.slice(0, 16384) },
-      { role: "assistant", content: `Summary:` },
+      { role: "assistant", content: `TL;DR:` },
     ],
     model: "claude-3-haiku-20240307",
   });

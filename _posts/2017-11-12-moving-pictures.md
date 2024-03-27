@@ -1,6 +1,8 @@
 ---
 title: Moving pictures
 tags: []
+summary: >-
+  Replaced static image on this site with a looped video. Experimenting with subtle motion to mimic images at first glance.
 ---
 
 I used to have an image of me

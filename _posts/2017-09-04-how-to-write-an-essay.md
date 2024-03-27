@@ -1,6 +1,9 @@
 ---
 title: How to write an essay
 tags: []
+summary: >-
+  Guidelines for writing compelling yet substantively
+  questionable essays, focused on rhetorical techniques over truth.
 ---
 
 Ten years ago I took a break from writing essays to tell everyone else how to write essays.

@@ -1,6 +1,9 @@
 ---
 title: Securing my Bitcoin
 tags: []
+summary: >-
+  Old Bitcoin wallet on a sketchy 2012 laptop. Block database corrupted but
+  wallet.dat found.
 ---
 
 I bought some Bitcoin back in 2012-ish.

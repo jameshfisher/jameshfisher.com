@@ -1,6 +1,11 @@
 ---
 title: 'SaaS price models: cost-based pricing vs. value-based pricing'
 tags: []
+summary: >-
+  Cost-based pricing sets prices to cover costs plus profit, while value-based
+  pricing sets prices based on customer willingness to pay. The optimal SaaS
+  pricing model uses value-based inputs like user count that approximate
+  customer value.
 ---
 
 You run a software-as-a-service business.

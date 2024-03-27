@@ -7,6 +7,10 @@ tags:
   - history
   - essay
 taggedAt: '2024-03-26'
+summary: >-
+  The French Revolution, far from being a "liberal revolution", was defined by
+  violence from the start, with the Terror and subsequent instability being a
+  logical continuation, not a deviation, from the events of 1789.
 ---
 
 "Liberty, equality, fraternity, or death; -- the last, much the easiest to bestow, O Guillotine!"<sup>1</sup>

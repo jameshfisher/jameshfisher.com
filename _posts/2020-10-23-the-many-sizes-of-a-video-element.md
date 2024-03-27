@@ -3,6 +3,10 @@ title: The many sizes of a video element
 tags:
   - programming
   - web
+summary: >-
+  A playground to explore the various widths and heights of a `<video>` element,
+  as reported by different browser APIs, when displaying a webcam stream with
+  dynamically adjustable constraints.
 ---
 
 What is th size of a `<video>`?

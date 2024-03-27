@@ -1,6 +1,9 @@
 ---
 title: What makes a good blog post title? 5 steps to going VIRAL!
 tags: []
+summary: >-
+  To write a viral blog post title, use a question format, focus on a single
+  topic, and employ clickbait tactics to pique readers' curiosity.
 ---
 
 I now have 256 blog posts.

@@ -3,6 +3,10 @@ title: What does the `require` function do in Node.js?
 tags:
   - programming
   - javascript
+summary: >-
+  The `require` function in Node.js loads modules, either local files
+  or external packages. I show the algorithm that searches `node_modules` directories and
+  package.json files.
 ---
 
 [The other day I wrote an intro to "JavaScript modules"](/2020/09/25/javascript-modules-for-grumpy-developers-from-2005/).

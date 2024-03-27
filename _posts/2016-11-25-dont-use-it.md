@@ -4,6 +4,9 @@ tags:
   - technical-writing
   - documentation
 taggedAt: '2024-03-26'
+summary: >-
+  Avoid using ambiguous pronouns like "it" in technical writing. Refer to
+  specific referents explicitly to improve clarity.
 ---
 
 I recently discovered a magic rule for instantly clarifying your technical writing: don't use the word "it".

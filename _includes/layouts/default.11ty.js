@@ -2,7 +2,7 @@ import { format } from "date-fns";
 import h from "vhtml";
 import { fragmentHtml } from "../../fragmentHtml.js";
 import { rawHtml } from "../../rawHtml.js";
-import renderTitle from "../../renderTitle.js";
+import { renderInlineMarkdown } from "../../markdown.js";
 
 export const data = {
   layout: "layouts/minimal",
@@ -75,7 +75,7 @@ export function render(data) {
           h(
             "a",
             { class: "post", href: post.external_url || post.url },
-            rawHtml(renderTitle(post.data.title)),
+            rawHtml(renderInlineMarkdown(post.data.title)),
           ),
         ),
       ]),

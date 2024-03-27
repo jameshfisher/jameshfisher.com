@@ -3,7 +3,7 @@ import h from "vhtml";
 import dataPeople from "../../_data/people.js";
 import navbarHtml from "../../navbar.js";
 import { rawHtml } from "../../rawHtml.js";
-import renderTitle from "../../renderTitle.js";
+import { renderInlineMarkdown } from "../../markdown.js";
 import scriptsHtml from "../../scripts.js";
 
 export const data = {};
@@ -121,7 +121,7 @@ export function render(data) {
       h("div", { id: "content" }, [
         h("h1", {}, [
           author === "jim" ? "" : "Guest post: ",
-          rawHtml(renderTitle(data.title || "")),
+          rawHtml(renderInlineMarkdown(data.title || "")),
         ]),
         author === "jim"
           ? ""

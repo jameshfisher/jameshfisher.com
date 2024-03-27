@@ -1,7 +1,7 @@
 import h from "vhtml";
 import navbarHtml from "./navbar.js";
 import { rawHtml } from "./rawHtml.js";
-import renderTitle from "./renderTitle.js";
+import { renderInlineMarkdown } from "./markdown.js";
 import scriptsHtml from "./scripts.js";
 
 export const data = {
@@ -92,7 +92,7 @@ export function render(data) {
           collection.map((post) =>
             h("li", {}, [
               h("a", { href: post.data.external_url || post.url }, [
-                rawHtml(renderTitle(post.data.title || "")),
+                rawHtml(renderInlineMarkdown(post.data.title || "")),
               ]),
             ]),
           ),

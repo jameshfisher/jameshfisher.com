@@ -3,7 +3,7 @@ import h from "vhtml";
 import dataPeople from "./_data/people.js";
 import navbarHtml from "./navbar.js";
 import { rawHtml } from "./rawHtml.js";
-import renderTitle from "./renderTitle.js";
+import { renderInlineMarkdown } from "./markdown.js";
 import scriptsHtml from "./scripts.js";
 
 export function render(data) {
@@ -12,7 +12,7 @@ export function render(data) {
       h(
         "div",
         { class: "title" },
-        rawHtml(renderTitle(post.data.title || "")),
+        rawHtml(renderInlineMarkdown(post.data.title || "")),
         " ",
         post.data.external_url &&
           h("img", {
@@ -23,7 +23,7 @@ export function render(data) {
       h(
         "div",
         { class: "summary" },
-        post.data.summary && post.data.summary,
+        post.data.summary && rawHtml(renderInlineMarkdown(post.data.summary || "")),
         " ",
         post.data.author !== "jim" &&
           h(

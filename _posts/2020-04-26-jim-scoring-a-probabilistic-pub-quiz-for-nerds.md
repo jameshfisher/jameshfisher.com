@@ -1,5 +1,6 @@
 ---
 title: A probabilistic pub quiz for nerds
+summary: A "true or false" quiz where you respond with your confidence level, and the optimal strategy is to report your true belief.
 hnUrl: 'https://news.ycombinator.com/item?id=22993239'
 hnUpvotes: 2
 tags:
@@ -165,13 +166,13 @@ But if you're a real nerd,
 you can use a continuous scoring system.
 Here is one such system:
 
-* You enter an answer _a_ between 0 and 1 (that is, "0% likely" to "100% likely").
-* If the statement is true, your score is log(_a_).
-* If the statement is false, your score is log(1 - _a_).
+- You enter an answer _a_ between 0 and 1 (that is, "0% likely" to "100% likely").
+- If the statement is true, your score is log(_a_).
+- If the statement is false, your score is log(1 - _a_).
 
 If you want to see why this works,
 consider that your believed probability is _p_.
-Then your expected score is _p_×log(_a_) + (1 - _p_) × log(1 - _a_).
+Then your expected score is *p*×log(_a_) + (1 - _p_) × log(1 - _a_).
 It turns out that to maximize this expected score,
 you should set _a_=_p_ --
 that is, you should answer with your true believed probability.

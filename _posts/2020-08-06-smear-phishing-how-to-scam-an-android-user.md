@@ -1,9 +1,10 @@
 ---
 title: 'Smear phishing: a new Android vulnerability'
+summary: Trick Android to display an SMS as coming from any contact. Convincing phishing vuln, but still unpatched.
 tags:
-  - security
   - phishing
   - sms
+  - security
   - fave
 hnUrl: 'https://news.ycombinator.com/item?id=24070633'
 hnUpvotes: 11
@@ -11,7 +12,7 @@ hnUpvotes: 11
 
 In this post
 I show how you can trick Android into displaying an SMS as coming from any contact on a victim's phone.
-The trick is convincing and easy, 
+The trick is convincing and easy,
 and the Android vulnerability is still unpatched.
 I then show how I stumbled onto it, reported it, and how Google ignored it.
 Have fun, whether you patch the vuln or exploit it!
@@ -32,7 +33,7 @@ Ten seconds later, my phone rings, I answer, and it's Jack.
 Blearily, I follow his instructions to click the link in my latest email.
 An hour later, hundreds of Twitter's biggest accounts are hacked.
 
-The recent incident at Twitter was traced to 
+The recent incident at Twitter was traced to
 ["a phone spear phishing attack"](https://blog.twitter.com/en_us/topics/company/2020/an-update-on-our-security-incident.html).
 Though we don't know all the details,
 we do know that phone spoofs can lead to massive breaches.
@@ -46,7 +47,7 @@ How does this phishing technique work?
 It exploits a bug in how Android treats the "Sender ID" of an SMS message.
 An SMS message can have an alphanumeric "Sender ID",
 rather than coming from a numeric telephone number.
-For example, I have an SMS message from the Sender ID `Twitter`, 
+For example, I have an SMS message from the Sender ID `Twitter`,
 containing a password reset code.
 These Sender IDs are fairly unregulated:
 you can sign up on any SMS gateway and choose an arbitrary Sender ID.
@@ -62,7 +63,7 @@ the sender would not show up as a contact,
 and the message details would show that it is not from a real phone number.
 My phishing alarm would ring loudly.
 
-For a different approach, 
+For a different approach,
 you could try sending me a message from the Sender ID `07890123456` --
 Jack's number.
 This would actually be the same as sending a message from Jack's number:
@@ -97,7 +98,7 @@ But if I tried the trick with an iPhone, it wasn't fooled -- it came through jus
 
 On July 3rd, I reported this vulnerability to Google via [their security vuln program](https://www.google.com/appserve/security-bugs/m2/new).
 But on July 17th, Google closed the issue as "Won't Fix (Infeasible)",
-with the assessment that 
+with the assessment that
 "there are no guarantees regarding the sender ID of SMS messages, and they are known to be spoofable."
 While this isn't wrong,
 it's another thing for the OS to completely misrepresent the Sender ID as a genuine phone number.

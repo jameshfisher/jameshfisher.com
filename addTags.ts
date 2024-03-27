@@ -43,9 +43,9 @@ async function fileToTags(
   const message = await anthropic.messages.create({
     max_tokens: 128,
     system: [
-      `You are given an excerpt of a blog post from jameshfisher.com.`,
+      `You are given an excerpt of a post from jameshfisher.com, Jim Fisher's blog.`,
       `You respond with a string like "Tags: foo, bar".`,
-      `The tags will be added to the post.`,
+      `The tags will be added to the post front-matter.`,
       `Tags are used to recommend similar posts, and to allow browsing by topic.`,
       `Use existing tags where possible, which are: \`${vocabList.join(", ")}\`.`,
       `If the post covers any topics that do not yet have tags, invent new tags.`,

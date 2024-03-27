@@ -5,11 +5,14 @@ tags:
   - web
   - webgl
 ogimage: /assets/2020-08-11/result.jpg
+summary: >-
+  A green screen implementation in the browser using
+  WebGL and chroma key. Includes a live demo.
 ---
 
 In this post I show a high-quality green screen implementation directly in the browser.
-It runs in realtime, 
-uses WebGL for efficiency, 
+It runs in realtime,
+uses WebGL for efficiency,
 and uses a high-quality green screen algorithm that beats your Zoom virtual background.
 Here's a live demo, where you can adjust the parameters to place yourself in front of a virtual bookshelf:
 
@@ -27,7 +30,7 @@ Here's a live demo, where you can adjust the parameters to place yourself in fro
 
 <script id="fragment-shader" type="glsl">
   precision mediump float;
-  
+
   uniform sampler2D tex;
   uniform float texWidth;
   uniform float texHeight;
@@ -103,7 +106,7 @@ Here's a live demo, where you can adjust the parameters to place yourself in fro
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-  
+
   const texLoc = gl.getUniformLocation(prog, "tex");
   const texWidthLoc = gl.getUniformLocation(prog, "texWidth");
   const texHeightLoc = gl.getUniformLocation(prog, "texHeight");
@@ -113,7 +116,7 @@ Here's a live demo, where you can adjust the parameters to place yourself in fro
   const spillLoc = gl.getUniformLocation(prog, "spill");
 
   function startWebcam() {
-    navigator.mediaDevices.getUserMedia({ video: { 
+    navigator.mediaDevices.getUserMedia({ video: {
         facingMode: "user",
         width: { ideal: 1280 },
         height: { ideal: 720 } } }).then(stream => {
@@ -168,7 +171,7 @@ But there are more sophisticated methods to decide _how_ transparent a pixel sho
 and to correct for "color spill" (that is, green light reflected from the subject).
 
 The green screen algorithm above is derived from [the Chroma Key filter in OBS Studio](https://github.com/obsproject/obs-studio/blob/master/plugins/obs-filters/data/chroma_key_filter.effect).
-The OBS shader is written in HLSL, 
+The OBS shader is written in HLSL,
 but WebGL shaders are written in GLSL.
 [Microsoft have a GLSL-to-HLSL conversion reference](https://docs.microsoft.com/en-us/windows/uwp/gaming/glsl-to-hlsl-reference),
 which I just read "backwards".

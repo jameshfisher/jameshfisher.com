@@ -5,6 +5,8 @@ tags:
   - programming
   - js
   - graphics
+summary: >-
+  A 5-line matrix library, and how to derive it without rote memorization.
 ---
 
 Here's an animation of a pulsating rectangle, spinning around the origin.
@@ -51,7 +53,7 @@ In this system, matrices are written in "column-major format":
 a list of basis vectors.
 Here are some examples for 2D matrix math:
 
-```js 
+```js
 const identity = [
   [1, 0],  // the x basis vector ("i-hat"). It hasn't moved anywhere.
   [0, 1],  // the y basis vector ("j-hat"). It hasn't moved anywhere.

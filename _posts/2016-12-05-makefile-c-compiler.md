@@ -5,6 +5,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Set the C compiler in `Makefile` using predefined variable `$(CC)`, which
+  defaults to `cc` and can be redefined.
 ---
 
 How do you set your C compiler in a `Makefile`? You might write:

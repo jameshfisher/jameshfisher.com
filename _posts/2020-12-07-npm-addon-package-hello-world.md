@@ -5,6 +5,10 @@ tags:
   - npm
   - node
   - javascript
+summary: >-
+  How to create an NPM addon package from C++ code using the `node-gyp`
+  tool and a `binding.gyp` file, with a JavaScript wrapper module for a more
+  idiomatic API.
 ---
 
 [In a previous post I showed how to build an `addon.node` file](/2019/04/20/nodejs-addon-hello-world/)
@@ -51,8 +55,8 @@ But more typically, it will compile them from C++ source.
 This convention is strong enough that it's built into `npm`.
 [According to the docs](https://docs.npmjs.com/cli/v6/using-npm/scripts#default-values),
 
-> If there is a `binding.gyp` file in the root of your package 
-> and you haven't defined your own `install` or `preinstall` scripts, 
+> If there is a `binding.gyp` file in the root of your package
+> and you haven't defined your own `install` or `preinstall` scripts,
 > `npm` will default the `install` command to `"node-gyp rebuild"`.
 
 The package needs to ensure the `node-gyp` tool is available,

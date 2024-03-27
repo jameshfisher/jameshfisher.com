@@ -5,6 +5,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  A convention for expressing complex C types using `typedef` and a "reverse
+  Polish notation" syntax to improve readability.
 ---
 
 C type syntax is maddening to read and write. The only sensible way to proceed is to force yourself to only ever express composite types in a `typedef`.

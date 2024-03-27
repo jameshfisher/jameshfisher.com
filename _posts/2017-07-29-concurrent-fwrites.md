@@ -1,6 +1,10 @@
 ---
 title: Are concurrent `fwrite`s atomic? No!
 tags: []
+summary: >-
+  Concurrent `fwrite`s are not atomic and can lead to interleaving of
+  characters, invoking undefined behavior. POSIX does not specify behavior of
+  concurrent writes to a file, so applications should use concurrency control.
 ---
 
 Take the following C program, in which two threads concurrently use `fwrite` to the same file. Each thread loops, writing a line over and over. What do you expect the output file to look like?

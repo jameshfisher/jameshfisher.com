@@ -4,6 +4,8 @@ tags:
   - programming
   - networking
   - c
+summary: >-
+  Subnets divide the IP address space hierarchically using bitstring prefixes. We check if an IP address is in a subnet using C.
 ---
 
 IP addresses look like this: `51.6.191.203` (in IP version 4).

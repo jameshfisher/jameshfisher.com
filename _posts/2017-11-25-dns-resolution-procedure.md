@@ -3,6 +3,10 @@ title: DNS resolution procedure
 tags:
   - programming
   - networking
+summary: >-
+  DNS resolution is a recursive procedure involving different record types like
+  A, CNAME, and NS. Resolving a domain name can require multiple DNS queries to
+  different nameservers.
 ---
 
 DNS is mainly a way to look up the IP address for a domain.

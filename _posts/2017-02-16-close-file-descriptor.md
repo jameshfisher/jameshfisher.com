@@ -6,6 +6,10 @@ tags:
   - file-descriptors
   - system-calls
 taggedAt: '2024-03-26'
+summary: >-
+  To close a file descriptor in C, use the `close` system call. Multiple
+  descriptors can reference the same underlying file or pipe. The pipe is
+  only closed when all references are closed.
 ---
 
 To close a file descriptor, we use the `close` system call. Here's an example:

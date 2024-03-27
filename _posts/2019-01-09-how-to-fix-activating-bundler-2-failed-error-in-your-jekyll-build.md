@@ -7,6 +7,9 @@ tags:
   - programming
   - continuous-integration
 taggedAt: '2024-03-26'
+summary: >-
+  Jekyll build breaks due to Bundler 2 incompatibility. Fixed by removing
+  Bundler 1 version from Gemfile.lock.
 ---
 
 This site is built using Jekyll,

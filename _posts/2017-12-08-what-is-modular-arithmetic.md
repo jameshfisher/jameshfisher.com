@@ -1,6 +1,10 @@
 ---
 title: What is modular arithmetic?
 tags: []
+summary: >-
+  Modular arithmetic involves operations like addition, subtraction,
+  multiplication, and exponentiation that "wrap around" a fixed modulus. This is
+  useful for cryptography like RSA.
 ---
 
 I was looking into RSA, an asymmetric cryptosystem.

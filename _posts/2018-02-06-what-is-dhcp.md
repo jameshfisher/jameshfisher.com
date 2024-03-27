@@ -4,6 +4,10 @@ tags:
   - programming
   - unix
   - networking
+summary: >-
+  DHCP dynamically assigns IP addresses to hosts, using a client-server protocol
+  over UDP. It involves a sequence of DORA (Discover, Offer, Request,
+  Acknowledge) messages to obtain and configure a network lease.
 ---
 
 When your computer joins a network,

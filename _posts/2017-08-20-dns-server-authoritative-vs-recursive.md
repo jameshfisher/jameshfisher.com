@@ -1,6 +1,10 @@
 ---
 title: What is an authoritative DNS server? What is a recursive DNS server?
 tags: []
+summary: >-
+  Authoritative DNS servers provide definitive responses for their domains,
+  while recursive DNS servers consult other servers to serve responses, caching
+  results to reduce load on authorities.
 ---
 
 A DNS name server is anything serving DNS responses to DNS requests.

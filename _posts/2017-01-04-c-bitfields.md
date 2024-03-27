@@ -5,6 +5,10 @@ tags:
   - programming
   - data-structures
 taggedAt: '2024-03-26'
+summary: >-
+  Bitfields in C allow compact bit packing in structs, avoiding manual bitwise
+  operations for greater safety and clarity, at the cost of some language
+  complexity.
 ---
 
 I've previously written that "Struct fields have a fixed byte offset". This is not actually true, because of a feature called _bitfields_. They allow us to do bit packing, but without all the bitwise operators, with greater safety, and greater clarity. The cost is some language complexity.

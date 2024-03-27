@@ -3,6 +3,8 @@ title: Why is my WebGL texture upside-down?
 tags:
   - programming
   - webgl
+summary: >-
+  WebGL's `texImage2D` function expects pixels in bottom-to-top order, while browsers provide them top-to-bottom. `UNPACK_FLIP_Y_WEBGL` fixes this behavior.
 ---
 
 To get a texture into your WebGL program,
@@ -24,16 +26,16 @@ This C function does not take an `HTMLImageElement` source;
 it just takes a `const void * data`.
 It expects the pixels in that array to be stored in bottom-to-top order:
 
-> The first element corresponds to the lower left corner of the texture image. 
-> Subsequent elements progress left-to-right through the remaining texels in the lowest row of the texture image, 
-> and then in successively higher rows of the texture image. 
+> The first element corresponds to the lower left corner of the texture image.
+> Subsequent elements progress left-to-right through the remaining texels in the lowest row of the texture image,
+> and then in successively higher rows of the texture image.
 > The final element corresponds to the upper right corner of the texture image.
 
 Despite this,
 [the spec for the WebGL `texImage2D` function](https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXIMAGE2D_HTML)
 says:
 
-> The first pixel transferred from the source to the WebGL implementation 
+> The first pixel transferred from the source to the WebGL implementation
 > corresponds to the upper left corner of the source.
 
 So, the browser copies pixels from the `<img>` in top-to-bottom order,
@@ -44,8 +46,8 @@ except that it's a mistake in the design of WebGL.
 Happily, the spec basically admits that it's a mistake,
 and provides a way to fix this behavior:
 
-> This behavior is modified by the `UNPACK_FLIP_Y_WEBGL` pixel storage parameter, 
-> except for `ImageBitmap` arguments, 
+> This behavior is modified by the `UNPACK_FLIP_Y_WEBGL` pixel storage parameter,
+> except for `ImageBitmap` arguments,
 > as described in the abovementioned section.
 
 So, it's highly likely that you want this for every program you write:

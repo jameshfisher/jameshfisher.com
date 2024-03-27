@@ -4,6 +4,9 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  A C function to determine if one string is a permutation of
+  another, using a character distribution representation for optimal time and space complexity.
 ---
 
 Question 1.3 of _Cracking the Coding Interview_:

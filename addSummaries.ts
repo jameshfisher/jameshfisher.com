@@ -8,10 +8,13 @@ const anthropic = new Anthropic({
 
 const examples = [
   `Redis Sentinel provides high availability for Redis. We start a Redis
-master, then three Redis Sentinel instances. They discover each other, then we trigger a failover.`,
-  `A primary feature of a collaborative product is its social norms. I look at LessWrong, a forum product, and show it builds its unique social norms.`,
-  `I try \`vim\`. I give up after discovering that the cursor cannot sit at the end of a line.`,
+master and three Redis Sentinels. They discover each other. We trigger a failover.`,
+  `A primary feature of a collaborative product is its social norms. I look at LessWrong, a forum product, and show it builds its social norms.`,
+  `I try \`vim\`, but give up after finding the cursor cannot sit at the end of a line.`,
   `A method for calculating a bounding circle around a head, using facial landmarks from BlazeFace. Plus a live demo that you can run on your own face.`,
+  `\`const\` is a type qualifier in C that makes a variable unassignable, except during initialization.`,
+  `A solution in C to determine if one string is a permutation of
+  another, using a character distribution representation for optimal time and space complexity.`,
 ];
 
 async function fileToSummary(fileContent: string): Promise<string> {
@@ -20,11 +23,12 @@ async function fileToSummary(fileContent: string): Promise<string> {
     system:
       [
         `You are given an excerpt of a post from jameshfisher.com, Jim Fisher's blog.`,
-        `You respond with a summary of 30 words or less.`,
+        `You respond with a summary of 20 words or less.`,
         `The summary will be added to the post front-matter.`,
         `The summary is shown beneath links to the post.`,
         `Write as Jim Fisher, using 'I' and 'we'.`,
-        `Summarize the post directly, and do not mention 'the post'.`,
+        `Summarize the content directly, and do not mention 'the post'.`,
+        `Be extremely concise, even using sentence fragments.`,
         `Only include information from the post.`,
         `Use Markdown for formatting.`,
         `Excellent examples of summaries from other posts:`,

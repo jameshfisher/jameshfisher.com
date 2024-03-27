@@ -10,6 +10,9 @@ tags:
   - technical-writing
   - justification
 taggedAt: '2024-03-26'
+summary: >-
+  A technique to improve blogging focus by including a justification for each
+  post, referring back to monthly targets. Allows room for off-the-wall posts.
 ---
 
 This month I have an experimental technique to improve the focus of my blogging. Posts should have a `justification` property, in which I justify the reason for the existence of the post. Typically this will refer back to one of my targets for the month. An example:

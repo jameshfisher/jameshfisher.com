@@ -4,6 +4,10 @@ tags:
   - programming
   - web
   - css
+summary: >-
+  CSS variables, also called custom properties, allow defining and using dynamic
+  values in CSS. They cascade and inherit like other CSS properties, with the
+  `var()` function used to reference them.
 ---
 
 Here's some CSS that was mysterious to me:

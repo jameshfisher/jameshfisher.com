@@ -10,6 +10,9 @@ tags:
   - xcode
   - vidrio
 taggedAt: '2024-03-26'
+summary: >-
+  To fix misconfigured App Icons, create properly-sized PNG files and update the
+  `Contents.json` file to reference the correct image files.
 ---
 
 I have several complaints in XCode like this:

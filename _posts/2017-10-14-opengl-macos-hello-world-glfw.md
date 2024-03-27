@@ -1,6 +1,9 @@
 ---
 title: macOS OpenGL hello world using GLFW
 tags: []
+summary: >-
+  A program to create a cyan
+  window on macOS using C and the GLFW library.
 ---
 
 <p><img alt="cyan window" src="/assets/2017-10-14/window.png" style="width: 432px; height: 374px;"/></p>

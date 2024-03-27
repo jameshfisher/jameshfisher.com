@@ -7,6 +7,10 @@ tags:
   - psychology
   - estimates
 taggedAt: '2024-03-26'
+summary: >-
+  Avoid claiming unrealistic time estimates like "5 minutes" for product
+  onboarding or tutorials. Realistic estimates like "a couple hours" are more
+  honest and set appropriate expectations.
 ---
 
 It's commonplace to emphasize that your product will let users achieve their goal in next to no time:

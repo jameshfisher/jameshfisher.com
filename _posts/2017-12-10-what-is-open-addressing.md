@@ -1,6 +1,9 @@
 ---
 title: What is open addressing?
 tags: []
+summary: >-
+  An open addressing hash table implementation in C, which resolves collisions
+  by finding alternative buckets for elements using linear probing.
 ---
 
 Hash tables must deal with hash collisions.

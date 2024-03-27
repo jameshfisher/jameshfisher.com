@@ -34,7 +34,7 @@ async function fileToSummary(fileContent: string): Promise<string> {
         `You respond with a summary of 20 words or less.`,
         `The summary will be added to the post front-matter.`,
         `The summary is shown beneath links to the post.`,
-        `Write as Jim Fisher.`,
+        `Write as Jim Fisher, using the style and vocabulary of the post.`,
         `Paraphrase the content directly.`,
         `Never mention 'the post'.`,
         `Be extremely concise, even using sentence fragments.`,

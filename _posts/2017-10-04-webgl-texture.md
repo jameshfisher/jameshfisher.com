@@ -1,6 +1,10 @@
 ---
 title: Textures in WebGL shaders
 tags: []
+summary: >-
+  A WebGL demo that creates a 2x2 checkerboard texture, uploads it to the
+  graphics driver, and samples from it in the fragment shader to display a
+  blurred checkerboard pattern.
 ---
 
 <div><canvas width="200" height="200" style="height: 200px; width: 200px;" id="fragmentCanvas"></canvas></div>

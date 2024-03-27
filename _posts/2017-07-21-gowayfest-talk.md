@@ -2,6 +2,9 @@
 title: 'Golang''s realtime garbage collector at GoWayFest, Minsk'
 tags:
   - talk
+summary: >-
+  Presented "Go garbage collector" talk at GoWayFest in Minsk, met fellow
+  Gophers, and did some tourism around Belarus and Ukraine.
 ---
 
 Will Sewell and I gave our "Go garbage collector" talk at [GoWayFest](https://goway.io/) in Minsk.

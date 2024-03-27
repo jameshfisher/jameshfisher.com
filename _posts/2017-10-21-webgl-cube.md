@@ -4,6 +4,9 @@ tags:
   - programming
   - graphics
   - webgl
+summary: >-
+  Rendering an animated 3D cube in WebGL using a vertex shader, face color
+  uniforms, and matrix transformations for rotating the cube.
 ---
 
 <div><canvas id="matrix_viz" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>

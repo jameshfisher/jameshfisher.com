@@ -3,8 +3,10 @@ title: How to hash multiple values
 tags:
   - programming
   - crypto
-hnUrl: 'https://news.ycombinator.com/item?id=16143718'
+hnUrl: "https://news.ycombinator.com/item?id=16143718"
 hnUpvotes: 3
+summary: >-
+  Methods for hashing multiple values, including hash-then-XOR, concat-then-hash, and serialize-then-hash. The only method that's collision-resistant is serialize-then-hash!
 ---
 
 To hash a string like `"hello"`,

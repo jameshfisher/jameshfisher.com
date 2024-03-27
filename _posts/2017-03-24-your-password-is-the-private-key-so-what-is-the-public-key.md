@@ -1,6 +1,10 @@
 ---
 title: Your password is the private key. So what is the public key?
 tags: []
+summary: >-
+  Asymmetric cryptography uses public and private keys. The private key can be
+  derived from a password using a secure PRNG, avoiding the need to store the
+  private key.
 ---
 
 There are two branches of crypto: symmetric and asymmetric. Symmetric crypto is simpler to understand: two participants share a secret string, such as "ImmediateWomanBroadcastCross4". This secret is commonly known as a password. They can then communicate in private by encrypting an decrypting using the secret.

@@ -4,6 +4,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Executing `do_something()` N times in C using a `while` loop and
+  post-decrement operator.
 ---
 
 Here's the standard way to `do_something()` `n` times in C:

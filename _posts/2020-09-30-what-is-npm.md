@@ -3,6 +3,10 @@ title: What is npm?
 tags:
   - programming
   - javascript
+summary: >-
+  NPM is Node.js's package system, allowing installation of arbitrary stuff,
+  not just Node.js modules. Packages are folders, tarballs, URLs, or version
+  identifiers published to the NPM registry.
 ---
 
 Recently I wrote about Node.js's two module systems,
@@ -67,7 +71,7 @@ $ curl -s https://registry.npmjs.org/lodash | jq '.versions | .["4.17.20"].dist.
 "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz"
 ```
 
-NPM has a separate thing called "tags" 
+NPM has a separate thing called "tags"
 which uses the same syntax as versions.
 For example, `npm install jquery@beta` installs the `beta` tag.
 Currently, the `beta` tag maps to version `3.5.1`.

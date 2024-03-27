@@ -1,6 +1,10 @@
 ---
 title: Bootstrapping a C compiler
 tags: []
+summary: >-
+  I propose BootstrapCC, a project to build a C compiler from a tiny handwritten
+  program, avoiding the trust problem in Thompson's "Reflections on Trusting
+  Trust".
 ---
 
 In ["Reflections on Trusting Trust"](https://dl.acm.org/citation.cfm?id=358210),

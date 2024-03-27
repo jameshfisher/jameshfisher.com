@@ -3,6 +3,10 @@ title: Web Push API in Firefox
 tags:
   - programming
   - javascript
+summary: >-
+  Differences between the Web Push API in Google Chrome and
+  Firefox. Firefox uses the Mozilla Push Service, enabling push
+  notifications without Google's GCM/FCM.
 ---
 
 When I was playing around with the Web Push API,

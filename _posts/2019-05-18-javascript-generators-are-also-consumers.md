@@ -3,6 +3,8 @@ title: JavaScript generators are also consumers!
 tags:
   - programming
   - javascript
+summary: >-
+  Generators in JavaScript can act as both producers and consumers of data. An example `Metric` generator batches and sends data using the `yield` keyword.
 ---
 
 [Yesterday, I introduced JavaScript _generators_](/2019/05/17/what-is-function-star-in-javascript/)

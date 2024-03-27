@@ -1,6 +1,10 @@
 ---
 title: Hello world in Rust
 tags: []
+summary: >-
+  I install Rust, create a "Hello World" program, and compare it to the
+  equivalent C program. The Rust binary has additional dependencies beyond the
+  standard C library.
 ---
 
 I'm tinkering with [Rust](https://www.rust-lang.org/).

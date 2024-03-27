@@ -6,6 +6,10 @@ tags:
   - fave
 hnUrl: 'https://news.ycombinator.com/item?id=19180606'
 hnUpvotes: 1
+summary: >-
+  Bob invents asymmetric cryptography by playing loud white noise to obscure
+  Alice's message, which he can cancel out but an eavesdropper cannot. This
+  idea, published in 1944 by Walter Koenig Jr., is the forgotten origin of asymmetric crypto.
 ---
 
 Alice lives two doors down from Bob.
@@ -21,7 +25,7 @@ Alice suggests that they use a secret code.
 But Bob has an entirely different plan!
 "Here's what we'll do," Bob says.
 "I'll play loud white noise at my end.
-With all that noise on the line, 
+With all that noise on the line,
 Eve won't be able to hear you speak.
 But I'll be able to,
 using my new noise-cancelling headphones!"
@@ -78,13 +82,13 @@ that
 > intended for the encipherment of speech over short metallic connections
 > was proposed by Bell Telephone Laboratories [i.e., Koenig's paper]
 > in which the recipient adds noise to the line
-> over which he receives the signal. 
+> over which he receives the signal.
 > ...
 > The above system is essentially analogue ...
-> The problem with which we are now concerned is that 
+> The problem with which we are now concerned is that
 > of trying to find a digital system which is non-secret ...
 > We shall now describe a theoretical model
-> of a system which has these properties. 
+> of a system which has these properties.
 
 Ellis sketched,
 in a diagram resembling Koenig's,

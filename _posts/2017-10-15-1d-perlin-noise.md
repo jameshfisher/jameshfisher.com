@@ -1,6 +1,8 @@
 ---
 title: One-dimensional Perlin noise
 tags: []
+summary: >-
+  Random slopes are interpolated to create a smooth, wiggly line. More realistic noise is achieved by combining multiple octaves.
 ---
 
 <div><canvas id="perlin" height="400" width="1200" style="height: 200px; width: 600px;"></canvas></div>

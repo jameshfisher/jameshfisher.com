@@ -3,6 +3,9 @@ title: How do errors in a web page reach the dev console?
 tags:
   - programming
   - web
+summary: >-
+  Errors in JavaScript cause an `ErrorEvent` on `window`. Preventing the default action blocks console output.
+  Resource errors follow the capture-bubble event model.
 ---
 
 When you write `throw new Error("blah")` in JavaScript,

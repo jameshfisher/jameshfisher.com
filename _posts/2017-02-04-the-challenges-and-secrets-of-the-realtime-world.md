@@ -6,6 +6,10 @@ tags:
   - programming
   - networking
 taggedAt: '2024-03-26'
+summary: >-
+  Realtime apps use protocols like HTTP streaming, long polling, WebSocket to
+  enable live updates. Scaling pub/sub requires distributed servers and routing
+  clients to the closest server.
 ---
 
 Summary:

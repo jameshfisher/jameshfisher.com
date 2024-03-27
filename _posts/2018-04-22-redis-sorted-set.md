@@ -2,6 +2,10 @@
 title: How is the Redis sorted set implemented?
 tags:
   - programming
+summary: >-
+  Redis sorted sets are implemented using a hash table for efficient key-value
+  lookups and a skip list for efficient score-based ordering. I show a Haskell
+  implementation that uses a forward map for keys and a reverse map for scores.
 ---
 
 [Redis provides a data structure called "sorted sets"](https://redis.io/topics/data-types#sorted-sets)

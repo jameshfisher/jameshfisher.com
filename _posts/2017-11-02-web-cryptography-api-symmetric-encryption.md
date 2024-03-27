@@ -4,6 +4,8 @@ tags:
   - programming
   - crypto
   - javascript
+summary: >-
+  Generating a key, encrypting and decrypting text, and explaining the implementation.
 ---
 
 Here's an example of symmetric encryption using the Web Cryptography API.

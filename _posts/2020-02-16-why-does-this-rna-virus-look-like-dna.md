@@ -3,6 +3,10 @@ title: Why does this RNA virus look like DNA?
 tags:
   - programming
   - bioinformatics
+summary: >-
+  RNA genomes of viruses like COVID-19 are often sequenced as complementary DNA
+  (cDNA) for practical reasons, though the actual genome is made of RNA with
+  uracil instead of thymine.
 ---
 
 The other day, [I was diffing coronaviruses](/2020/02/09/diffing-coronaviruses/):

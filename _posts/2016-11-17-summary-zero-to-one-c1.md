@@ -5,6 +5,10 @@ tags:
   - summary
   - business
 taggedAt: '2024-03-26'
+summary: >-
+  Progress comes from either copying or creating. Global progress since 1971 has
+  been copying via globalization, except for computing. Startups create, not
+  copy, because small groups, not large, can think anew.
 ---
 
 **Summary:** Human progress is either _copying_ or _creating_.

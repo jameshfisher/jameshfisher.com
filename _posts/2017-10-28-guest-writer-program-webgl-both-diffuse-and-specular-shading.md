@@ -5,6 +5,9 @@ tags:
   - programming
   - graphics
   - webgl
+summary: >-
+  A WebGL shader that combines diffuse and specular lighting, allowing
+  the user to adjust the relative contribution of each using keyboard controls.
 ---
 
 <div>

@@ -1,6 +1,7 @@
 ---
 title: How to load an image in WebGL
 tags: []
+summary: "Using WebGL to load an image and swap its RGB channels with a fragment shader."
 ---
 
 <div><canvas id="jimmy" width="512" height="512" style="width: 256px; height: 256px;"></canvas></div>
@@ -81,7 +82,7 @@ To load the image into the `uniform sampler2D tex`, I used:
 
 ```js
 const img = new Image();
-img.onload = function() {
+img.onload = function () {
   gl.activeTexture(gl.TEXTURE0);
   const tex = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, tex);
@@ -91,7 +92,7 @@ img.onload = function() {
   const texLoc = gl.getUniformLocation(prog, "tex");
   gl.uniform1i(texLoc, 0);
 
-  gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);  // draw over the entire viewport
+  gl.drawArrays(gl.TRIANGLE_FAN, 0, 4); // draw over the entire viewport
 };
-img.src = '/assets/jim_512.jpg';
+img.src = "/assets/jim_512.jpg";
 ```

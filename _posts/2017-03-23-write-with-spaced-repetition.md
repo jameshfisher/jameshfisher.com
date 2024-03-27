@@ -1,6 +1,10 @@
 ---
 title: How to get your point across with spaced repetition
 tags: []
+summary: >-
+  Repetition is key for effective communication. Spaced repetition throughout
+  the text, not just in the intro and conclusion, helps readers remember the
+  main point.
 ---
 
 ![communication strategies](/assets/2017-03-23-repetition/repetition.svg)

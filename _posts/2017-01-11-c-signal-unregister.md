@@ -4,6 +4,10 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  To unregister a `signal` handler in C, use `signal(signum, SIG_DFL)` to reset
+  the disposition to the default, or `signal(signum, SIG_IGN)` to set the
+  disposition to ignore the signal.
 ---
 
 There are two possible ways to unregister a signal handler, and both re-use the same `signal` function:

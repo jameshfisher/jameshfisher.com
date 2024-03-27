@@ -12,6 +12,9 @@ tags:
   - cli
   - c
 taggedAt: '2024-03-26'
+summary: >-
+  Encrypt and decrypt text using the `openssl enc` command with a password and
+  AES-256 cipher. The encrypted text is base64-encoded.
 ---
 
 The `openssl` CLI tool is a bag of random tricks. One of them is the `enc` command. Here's an example of encrypting and decrypting some text:

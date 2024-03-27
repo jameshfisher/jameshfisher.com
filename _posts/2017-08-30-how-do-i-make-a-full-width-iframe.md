@@ -1,6 +1,9 @@
 ---
 title: How do I make a full-width `iframe` with fixed aspect ratio?
 tags: []
+summary: >-
+  Use CSS padding-top and position properties to create a full-width iframe with
+  fixed 16:9 aspect ratio.
 ---
 
 I wanted to embed a YouTube `<iframe>` in a webpage.

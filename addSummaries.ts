@@ -7,8 +7,6 @@ const anthropic = new Anthropic({
 });
 
 const examples = [
-  `Redis Sentinel provides high availability for Redis. We start a Redis
-master and three Redis Sentinels. They discover each other. We trigger a failover.`,
   `A primary feature of a collaborative product is its social norms. I look at LessWrong, a forum product, and show it builds its social norms.`,
   `I try \`vim\`, but give up after finding the cursor cannot sit at the end of a line.`,
   `A method for calculating a bounding circle around a head, using facial landmarks from BlazeFace. Plus a live demo that you can run on your own face.`,
@@ -23,6 +21,8 @@ master and three Redis Sentinels. They discover each other. We trigger a failove
   `A screencast about \`go tool trace\`, a profiling tool for Go applications.`,
   `How to apply a video filter to a webcam stream using the AVFoundation and CoreImage frameworks in Swift.`,
   `\`tcpdump\` captures and displays network traffic. An example inspecting DNS requests and responses.`,
+  `Generating RSA keys, extracting the public key, encrypting with the public key, and
+  decrypting with the private key.`,
 ];
 
 async function fileToSummary(fileContent: string): Promise<string> {

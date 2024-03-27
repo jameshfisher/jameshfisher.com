@@ -1,6 +1,8 @@
 ---
 title: Greater-than is redundant
 tags: []
+summary: >-
+  `>` is redundant; `<` alone suffices for all comparisons. I prefer it because it aligns with the number line.
 ---
 
 The following two expressions are the same: `a < b`, `b > a`. To know what they mean, you have to use the counter-intuitive memory aid: "the smaller number eats the bigger one". Why do we do this to ourselves? We do we have both? We don't have flipped subtraction, division, or assignment operators. Why would you need `5 =: x`? It would be simpler to abolish `>` and instead use `<` in every case:

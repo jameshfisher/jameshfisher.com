@@ -4,6 +4,8 @@ tags:
   - programming
   - web
   - javascript
+summary: >-
+  JavaScript modules enable better dependency management and scoping. A guide for developers like me who still use `<script>` tags everywhere.
 ---
 
 These days you keep bumping into things like `<script type="module">`
@@ -274,7 +276,7 @@ Some (unpleasant) magic is going on here.
 The form `import d from './myModule.js'` stands for
 `import { default as d } from '/myModule.js'`.
 Careful:
-you will forever find yourself writing `import myModule from './myModule.js'` 
+you will forever find yourself writing `import myModule from './myModule.js'`
 to import the entire module,
 where in fact you meant to write `import * as myModule from './myModule.js'`.
 

@@ -1,6 +1,9 @@
 ---
 title: Multiple textures in WebGL
 tags: []
+summary: >-
+  Combining two textures in a WebGL fragment shader, using texture units and
+  uniform locations to access the textures.
 ---
 
 <div><canvas width="200" height="200" style="height: 200px; width: 200px;" id="fragmentCanvas"></canvas></div>

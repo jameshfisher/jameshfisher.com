@@ -2,11 +2,13 @@
 title: What is the simplest neural network? One neuron
 tags:
   - machine-learning
+summary: >-
+  A neural network with one neuron that classifies binary-encoded natural numbers. We can decide whether the number is even, or whether it's greater/less than 5.
 ---
 
 The basis of neural networks is the neuron. A neuron has some inputs, and based on those, either _fires_ or doesn't fire. We can interpret the decision to fire as a binary _classification_ of the inputs into two classes.
 
-To neuron whether to fire, the neuron follows a simple procedure: take each input, multiply it by a _weight_, sum those products, then fire if the sum is above a threshold. The specific behavior of a neuron is given by its weights and its threshold.
+To decide whether to fire, the neuron follows a simple procedure: take each input, multiply it by a _weight_, sum those products, then fire if the sum is above a threshold. The specific behavior of a neuron is given by its weights and its threshold.
 
 The following C code shows two neurons at work. One classifies numbers according to whether they are even or odd. Another neuron classifies numbers according to whether they are greater than five. Each is defined by specific weights and threshold.
 

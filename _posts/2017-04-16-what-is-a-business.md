@@ -5,6 +5,11 @@ justification: >-
   legalities when I get to that point. I'm going to work through [the gov.uk
   guide](https://www.gov.uk/browse/business).
 tags: []
+summary: >-
+  Businesses can take different legal forms, such as companies, sole traders,
+  and partnerships. Companies are unique in that they are considered "legal
+  persons" with their own finances and liabilities, distinct from their
+  directors and shareholders.
 ---
 
 There are multiple types of "business". These businesses all have in common that they _trade_ - that is, they sell goods and/or services. We often use the word "business" interchangeably with "company", but a company is just one type of business. Other types of business include "sole traders" and "partnerships". (Everything I'm writing here is specific to UK law.)

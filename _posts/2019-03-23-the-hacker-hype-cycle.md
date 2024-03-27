@@ -5,6 +5,10 @@ tags:
   - fave
 hnUrl: 'https://news.ycombinator.com/item?id=19769099'
 hnUpvotes: 5
+summary: >-
+  I got started with simple web development, but because enamored with increasingly esoteric
+  programming concepts, leading to a "trough of hipster technologies" before
+  returning to more productive work.
 ---
 
 Back on Christmas Day 2013,
@@ -100,7 +104,7 @@ I'll keep my Python, thanks.
 But one day,
 taking a break from battling WSGI,
 I spied a peak on the horizon.
-<small>HASKELL</small>, it whispered to me. 
+<small>HASKELL</small>, it whispered to me.
 <small>MICROKERNELS. GRAPH DATABASES. ENLIGHTENMENT AWAITS YOU.</small>
 Could it be that Python is not the holy grail?
 I set out on a pilgrimage.
@@ -127,7 +131,7 @@ I have to restrain myself,
 an addict resisting relapse.
 But I've been clean now for almost three years.
 
-Is this a necessary pilgrimage 
+Is this a necessary pilgrimage
 that all engineers must undergo?
 I have seen similar patterns in colleagues and friends through the years.
 They may not follow the same technologies,

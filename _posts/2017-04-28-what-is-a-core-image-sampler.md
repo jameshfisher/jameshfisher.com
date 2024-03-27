@@ -1,6 +1,11 @@
 ---
 title: What are samples in a Core Image kernel?
 tags: []
+summary: >-
+  Kernels in Core Image operate on output pixels, using `samplerCoord` to find
+  corresponding input pixels. `sample` then retrieves the color of the input
+  pixel. Kernel can apply transformations by modifying the `samplerCoord`
+  expression.
 ---
 
 Here's a Core Image kernel which swaps the red and green components of an image:

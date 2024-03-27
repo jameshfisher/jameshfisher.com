@@ -4,6 +4,8 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  `sigaction` says what to do when a signal is received. `signal` is a simplified interface to `sigaction`.
 ---
 
 The "`signal` facility is a simplified interface to the more general `sigaction` facility." Indeed, when we trace a C program with `signal` calls, we only see calls to `sigaction` system calls. We're also told that "`signal` is less portable than `sigaction` when establishing a signal handler".

@@ -4,6 +4,10 @@ tags:
   - electricity
   - physics
 taggedAt: '2024-03-26'
+summary: >-
+  Coulomb's law describes the force between charged particles, which is
+  proportional to the product of their charges and inversely proportional to the
+  square of the distance between them.
 ---
 
 In previous posts I described _electric charge_ and _electric current_. Electric charge is a thing carried by fundamental particles: electrons and protons. Electrons carry 1e of charge, and protons carry -1e of charge. When we talk of the "charge" of an aggregate object, we're measuring the sum of these charges. When we talk of "current" over a boundary, we mean the net flow of these charges across this boundary. Equivalently, the current across a boundary is the number of electrons crossing one way, minus the number of protons crossing in the same direction.

@@ -4,12 +4,15 @@ tags:
   - ctci
   - programming
   - haskell
+summary: >-
+  An algorithm in Haskell using a breadth-first search to find the reachable set of
+  nodes.
 ---
 
 Question 4.2 of _Cracking the Coding Interview_:
 
-> Given a directed graph, 
-> design an algorithm to find out whether 
+> Given a directed graph,
+> design an algorithm to find out whether
 > there is a route between two nodes.
 
 Given any node in the graph,
@@ -22,7 +25,7 @@ and asking whether `n2` is in that list.
 To generate the "reachable set" from a node,
 we partition the graph into three sets:
 `explored` nodes, `boundary` nodes, and the rest.
-We repeatedly look for new nodes 
+We repeatedly look for new nodes
 by looking at outgoing edges from nodes in the `boundary` set.
 When we've looked at all the outgoing edges of a node,
 we move that node to `explored` so we don't look at its edges again.

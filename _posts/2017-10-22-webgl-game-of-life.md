@@ -4,6 +4,9 @@ tags:
   - programming
   - graphics
   - webgl
+summary: >-
+  A Conway's Game of Life simulation implemented using WebGL fragment shaders,
+  with rendering to texture and a Gosper Glider Gun initial state.
 ---
 
 <div><canvas id="canvas" height="64" width="64" style="width: 256px; height: 256px; image-rendering: pixelated;"></canvas></div>

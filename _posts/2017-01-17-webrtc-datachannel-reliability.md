@@ -5,6 +5,9 @@ tags:
   - networking
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  The `RTCDataChannel` API lets us configure the delivery guarantees, including the
+  `ordered`, `maxPacketLifeTime`, and `maxRetransmits` properties.
 ---
 
 When we create a data channel, we pass some options:

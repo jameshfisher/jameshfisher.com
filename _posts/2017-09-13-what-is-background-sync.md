@@ -1,6 +1,11 @@
 ---
 title: What is the web Background Sync API?
 tags: []
+summary: >-
+  The Background Sync API lets service workers execute tasks even when the
+  client page is not active. It
+  queues jobs that run as `sync` events, which can trigger desktop
+  notifications.
 ---
 
 Without the Background Sync API,

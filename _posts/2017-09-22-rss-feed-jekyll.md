@@ -1,6 +1,9 @@
 ---
 title: Adding an RSS feed to a Jekyll blog
 tags: []
+summary: >-
+  Adding an RSS feed to a Jekyll blog using the `jekyll-feed` gem, configuring
+  `_config.yml`, and adding links to the HTML template.
 ---
 
 I've added an RSS feed to this blog.

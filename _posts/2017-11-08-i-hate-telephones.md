@@ -5,6 +5,8 @@ tags:
   - fave
 hnUrl: 'https://news.ycombinator.com/item?id=15677560'
 hnUpvotes: 493
+summary: >-
+  I hate telephones. Some rational reasons: lack of authentication, no spam filtering, forced synchronous communication. But also just a visceral fear.
 ---
 
 In many polls,

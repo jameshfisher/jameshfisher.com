@@ -5,6 +5,9 @@ tags:
   - prepositions
   - grammar
 taggedAt: '2024-03-26'
+summary: >-
+  French preposition examples for common spatial relationships like behind, in
+  front of, next to, under, on, above, in, and between.
 ---
 
 ```

@@ -2,6 +2,10 @@
 title: How do I set a socket to be non-blocking?
 justification: I'm learning networking by understanding pieces of Redis.
 tags: []
+summary: >-
+  To set a socket as non-blocking, use `fcntl` to mark it with the `O_NONBLOCK`
+  flag. This allows the socket to fail gracefully instead of blocking when no
+  data is available.
 ---
 
 The traditional UNIX system calls are _blocking_. For example:

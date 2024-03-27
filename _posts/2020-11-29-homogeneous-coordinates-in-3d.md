@@ -5,6 +5,10 @@ tags:
   - programming
   - js
   - graphics
+summary: >-
+  I implement homogeneous coordinates in 3D, including rotation, scaling,
+  translation, and projection matrices, and use them to create an animated 3D
+  house scene.
 ---
 
 Here is an animation of a house.

@@ -6,6 +6,8 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  To write to a file, open the file, `mmap` the file descriptor, then write to memory.
 ---
 
 Here's an example of writing to a file using `mmap`.

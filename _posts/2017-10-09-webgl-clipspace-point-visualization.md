@@ -1,6 +1,8 @@
 ---
 title: WebGL clipspace point visualization
 tags: []
+summary: >-
+  A WebGL visualization of a point in 4D homogeneous clip space. Explore the effects of the x, y, z, and w components.
 ---
 
 <div style="display: flex;">
@@ -74,7 +76,7 @@ tags: []
       pos.x,                 pos.y,                 pos.z-CROSSHAIR_SIZE, pos.w,
       pos.x,                 pos.y,                 pos.z+CROSSHAIR_SIZE, pos.w,
     ]), gl.STATIC_DRAW);
-    
+
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.drawArrays(gl.LINES, 0, 6);
   }
@@ -127,8 +129,8 @@ which passes on the vertex attributes as the vertex position:
 
 ```glsl
 attribute vec4 coord;
-void main(void) { 
-  gl_Position = coord; 
+void main(void) {
+  gl_Position = coord;
 }
 ```
 
@@ -145,7 +147,7 @@ function redraw() {
     pos.x,                 pos.y,                 pos.z-CROSSHAIR_SIZE, pos.w,
     pos.x,                 pos.y,                 pos.z+CROSSHAIR_SIZE, pos.w,
   ]), gl.STATIC_DRAW);
-  
+
   gl.clear(gl.COLOR_BUFFER_BIT);
   gl.drawArrays(gl.LINES, 0, 6);
 }

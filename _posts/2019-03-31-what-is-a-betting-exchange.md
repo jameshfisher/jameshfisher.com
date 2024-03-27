@@ -2,6 +2,10 @@
 title: What is a betting exchange?
 tags:
   - betting
+summary: >-
+  Betting exchanges like Betfair allow users to act as bookmakers, offering bets
+  at their own chosen odds. This contrasts with traditional bookmakers who set
+  the odds.
 ---
 
 Consider the following betting websites:

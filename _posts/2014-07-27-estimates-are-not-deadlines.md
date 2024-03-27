@@ -6,5 +6,7 @@ tags:
   - deadlines
   - project-management
 taggedAt: '2024-03-26'
+summary: >-
+  The difference between estimates and deadlines, and why conflating the two can cause problems in project management.
 ---
 

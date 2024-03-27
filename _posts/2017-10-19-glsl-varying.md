@@ -4,6 +4,8 @@ tags:
   - programming
   - graphics
   - webgl
+summary: >-
+  GLSL `varying` allows vertex shader outputs to be passed to fragment shaders. A WebGL demo with colors interpolated between vertices.
 ---
 
 <div><canvas id="canv" width="200" height="200"></canvas></div>
@@ -113,18 +115,22 @@ const colorLoc = gl.getAttribLocation(prog, "a_color");
 
 const vertexBuf = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuf);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-  -1,1,  -1,-1,  1,-1,  1, 1,
-]), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new Float32Array([-1, 1, -1, -1, 1, -1, 1, 1]),
+  gl.STATIC_DRAW,
+);
 gl.enableVertexAttribArray(coordLoc);
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuf);
 gl.vertexAttribPointer(coordLoc, 2, gl.FLOAT, false, 0, 0);
 
 const colorBuf = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, colorBuf);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-  1,0,0,1, 0,1,0,1, 0,0,1,1, 1,1,0,1,
-]), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new Float32Array([1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1]),
+  gl.STATIC_DRAW,
+);
 gl.enableVertexAttribArray(colorLoc);
 gl.bindBuffer(gl.ARRAY_BUFFER, colorBuf);
 gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 0, 0);

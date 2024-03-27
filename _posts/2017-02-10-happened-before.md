@@ -5,6 +5,8 @@ tags:
   - programming
   - computer-science
 taggedAt: '2024-03-26'
+summary: >-
+  The happened-before relation models time in distributed systems, where events at different locations may not have a total order. It defines time using causality.
 ---
 
 We're used to thinking of _time_ as a total order: given two events, one happened before the other. At my desk, I sit down before I turn on my computer. All the things happening to _you_ have a total order, because you're a timeline. _Sitting down at my desk_ and _turning on my computer_ happened at _the same place_ (my desk). Because of this, they have a total order. This total order is nicely tracked by the clock on my desk. If you compared the reading of that clock at both events, you would find that the time at which I sat at my desk was _less than_ the time I turned on my computer.

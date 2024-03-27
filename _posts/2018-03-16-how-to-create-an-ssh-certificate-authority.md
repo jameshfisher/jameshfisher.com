@@ -4,6 +4,8 @@ tags:
   - posix
 hnUrl: 'https://news.ycombinator.com/item?id=17720316'
 hnUpvotes: 1
+summary: >-
+  Creating and using an SSH certificate authority, an alternative to the default "trust on first use" model.
 ---
 
 SSH uses asymmetric crypto.

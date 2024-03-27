@@ -2,6 +2,10 @@
 title: Computing is communication
 draft: true
 tags: []
+summary: >-
+  Devices we use today are primarily communicators, not just computers. The
+  history of computing should emphasize communication more than pure
+  computation.
 ---
 
 There is a standard history of computing which runs like this:
@@ -18,7 +22,7 @@ There is a standard history of computing which runs like this:
 > Today, most people have several computers,
 > and they are linked together by many kinds of network, allowing their users to communicate.
 
-I think this history has the wrong emphasis. 
+I think this history has the wrong emphasis.
 An alternative history runs like this:
 
 > The devices we all own - laptops, phones - are all communicators.
@@ -39,47 +43,47 @@ An alternative history runs like this:
 > In the 1970s, communication was secured by cryptography.
 > Today's communicators can also do powerful calculation.
 
-These devices have at least two (interconnected) abilities: 
-computation (rearrangement of data) and communication (movement of data). 
-One might also add storage of data 
+These devices have at least two (interconnected) abilities:
+computation (rearrangement of data) and communication (movement of data).
+One might also add storage of data
 (though this could be viewed as communication with the future, or a buffer).
 
-In our devices, the CPU and memory roughly correspond to Turing's machine. 
-Pretty much everything else is communication-oriented. 
-Keyboard, mouse, screen, touchscreen, microphone, speaker, graphics card, sound card, ethernet card, WiFi module, bluetooth, DSP chips, audio/video codec chips, GSM and all the other mobile comms chips, webcam, camera. 
-There is certainly "computing" in all this hardware, 
+In our devices, the CPU and memory roughly correspond to Turing's machine.
+Pretty much everything else is communication-oriented.
+Keyboard, mouse, screen, touchscreen, microphone, speaker, graphics card, sound card, ethernet card, WiFi module, bluetooth, DSP chips, audio/video codec chips, GSM and all the other mobile comms chips, webcam, camera.
+There is certainly "computing" in all this hardware,
 but it's all in the name of communication.
 
-Today's large companies are communication platforms. 
-Facebook is obvious. 
-Google helps people communicate their message, and helps others find the message. 
-Web is mostly advertising, which is just more communication. 
-Many of today's startups are advances in communication, not computation. 
+Today's large companies are communication platforms.
+Facebook is obvious.
+Google helps people communicate their message, and helps others find the message.
+Web is mostly advertising, which is just more communication.
+Many of today's startups are advances in communication, not computation.
 Uber, AirBnb, and all the other gig markets are primarily communication platforms.
 
 Why the bias towards "computation" in our histories?
 
-There is a bias towards a mathematical notion of computation. 
-The mathematical notion of computation suggests that 
-"computers" are all the same 
-and thus the IBM tabulator is morally equivalent to today's smartphone. 
-It is not. 
-A history of computing should acknowledge the physicality of devices and their purpose. 
-A history of computing should acknowledge step changes in device abilities: 
+There is a bias towards a mathematical notion of computation.
+The mathematical notion of computation suggests that
+"computers" are all the same
+and thus the IBM tabulator is morally equivalent to today's smartphone.
+It is not.
+A history of computing should acknowledge the physicality of devices and their purpose.
+A history of computing should acknowledge step changes in device abilities:
 audio, video, mobile.
 
-The mainstream history of computing says: 
-we discover a universal idea of computation, 
+The mainstream history of computing says:
+we discover a universal idea of computation,
 but we learn to do it smaller, faster, cheaper.
 
-In "teaching computing", 
-we bias towards learning computation instead of communication. 
-There are people who know many programming languages, yet no protocols. 
+In "teaching computing",
+we bias towards learning computation instead of communication.
+There are people who know many programming languages, yet no protocols.
 Communication is relegated to a "networking" module in a "computing science" degree.
 
-A key problem is terminology. 
-The term "computing" is overloaded: 
-we use it to refer to a mathematical notion of "computation", 
+A key problem is terminology.
+The term "computing" is overloaded:
+we use it to refer to a mathematical notion of "computation",
 as well as to refer to a broad class of devices such as our laptops, phones, and watches.
 
 In _Code_, he describes how "computers" are built of RELAYS.

@@ -3,6 +3,9 @@ title: MediaRecorder hello world
 tags:
   - programming
   - web
+summary: >-
+  The MediaStream Recording API converts a MediaStream to a
+  Blob of compressed video and audio. A demo where you can record a 5-second clip.
 ---
 
 [The MediaStream Recording API](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API)
@@ -70,7 +73,7 @@ recorder.start(1000);
 ```
 
 Still nothing will happen!
-We're accumulating chunks, 
+We're accumulating chunks,
 but at some point we need to tell the `MediaRecorder` stop,
 at which point it will generate any remaining chunks,
 and finally the `stop` event.

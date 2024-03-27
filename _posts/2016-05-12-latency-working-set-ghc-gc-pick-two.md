@@ -7,6 +7,8 @@ tags:
   - latency
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Large working sets and low latency are incompatible with GHC's stop-the-world garbage collector, which optimizes for throughput instead of latency. The collector's pause times scale linearly with working set size.
 ---
 
 _(Originally published [on the Pusher engineering blog](https://making.pusher.com/latency-working-set-ghc-gc-pick-two/).)_

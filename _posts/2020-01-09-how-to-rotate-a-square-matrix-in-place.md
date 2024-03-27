@@ -4,6 +4,10 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  An in-place algorithm to rotate a square matrix by 90 degrees. The key is to
+  rotate 4 corresponding points using a formula, applying this to all points in
+  the top-left corner.
 ---
 
 Question 1.6 of _Cracking the Coding Interview_:

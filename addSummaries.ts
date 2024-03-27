@@ -18,6 +18,8 @@ master and three Redis Sentinels. They discover each other. We trigger a failove
   `To call a program from C, use \`fork\` then \`execve\`. There is no more direct way!`,
   `An efficient way to represent and sample from a discrete
   probability distribution, using a balanced binary tree data structure called the "urn".`,
+  `Creating and using an SSH certificate authority, an alternative to the default "trust on first use" model.`,
+  `The MediaStream Recording API converts a MediaStream to a Blob of compressed video and audio. A demo where you can record a 5-second clip.`,
 ];
 
 async function fileToSummary(fileContent: string): Promise<string> {
@@ -79,7 +81,7 @@ async function main() {
     const newFileContent = matter.stringify(content, postFrontmatter);
     fs.writeFileSync(filePath, newFileContent);
     i++;
-    if (i >= 4) return;
+    if (i >= 8) return;
   }
 }
 

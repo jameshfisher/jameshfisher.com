@@ -1,7 +1,7 @@
 import h from "vhtml";
 import navbarHtml from "./navbar.js";
 import { rawHtml } from "./rawHtml.js";
-import { renderPost, renderPosts } from "./renderPosts.js";
+import { renderPosts } from "./renderPosts.js";
 import scriptsHtml from "./scripts.js";
 
 export function render(data) {
@@ -127,14 +127,6 @@ export function render(data) {
       h("h3", {}, "All posts"),
       renderPosts(
         data.collections.posts.reverse().filter((post) => !post.draft),
-      ),
-      h(
-        "div",
-        { class: "posts no-link-underlines" },
-        data.collections.posts
-          .reverse()
-          .filter((post) => !post.draft)
-          .map(renderPost),
       ),
       h("h3", {}, "Old blogs"),
       h("ul", {}, [

@@ -3,6 +3,11 @@ title: How do classes work in JavaScript?
 tags:
   - programming
   - javascript
+summary: >-
+  JavaScript `class` syntax is just syntactic sugar over the traditional
+  prototype-based inheritance. Deconstructing a simple `class` reveals the
+  underlying constructor functions, prototype assignment, and use of `super` to
+  call the superclass's constructor.
 ---
 
 JavaScript classes are syntactic sugar.

@@ -4,6 +4,10 @@ tags:
   - ctci
   - programming
   - haskell
+summary: >-
+  Implement a queue using two stacks, with one stack for the back of the queue
+  and one for the front. Reverse the back stack onto the front stack when
+  dequeuing to maintain the queue order.
 ---
 
 Question 3.5 of _Cracking the Coding Interview_:

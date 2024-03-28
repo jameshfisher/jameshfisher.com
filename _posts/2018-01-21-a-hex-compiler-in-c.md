@@ -1,6 +1,9 @@
 ---
 title: A hex compiler in C
 tags: []
+summary: >-
+  A compiler that converts a text file containing hex codes and comments
+  into a binary output file.
 ---
 
 Here is a sample of a programming language I call "Hex":

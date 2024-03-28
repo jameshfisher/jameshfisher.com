@@ -10,6 +10,11 @@ tags:
   - algorithms
   - computer-science
 taggedAt: '2024-03-26'
+summary: >-
+  The head is the front of the
+  queue, allowing efficient dequeue.
+  The tail is the back of the list.
+  To enqueue efficiently, we keep a reference to the tail.
 ---
 
 A "queue" is an abstract data type

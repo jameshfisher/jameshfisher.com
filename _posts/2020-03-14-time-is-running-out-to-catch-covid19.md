@@ -6,6 +6,10 @@ tags:
   - fave
 hnUrl: 'https://news.ycombinator.com/item?id=22584632'
 hnUpvotes: 3
+summary: >-
+  Simulation shows it's rational to deliberately infect yourself with COVID-19
+  early on to get treatment, but after healthcare capacity is exceeded, it's
+  better to avoid infection. Includes interactive parameters and visualizations.
 ---
 
 Your best chance for survival is to _catch COVID-19 now_.

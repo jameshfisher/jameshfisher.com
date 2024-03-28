@@ -11,6 +11,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Install `ebe` assembler with a one-liner, but be wary of the SourceForge
+  installation script.
 ---
 
 The `ebe` program is installable with:

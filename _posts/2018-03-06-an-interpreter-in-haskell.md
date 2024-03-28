@@ -3,6 +3,9 @@ title: An interpreter in Haskell
 tags:
   - programming
   - haskell
+summary: >-
+  An interpreter for an imperative language in Haskell, featuring integers,
+  operators, global variables, control flow, and I/O primitives.
 ---
 
 I haven't touched Haskell for a couple of years.

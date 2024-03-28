@@ -7,6 +7,10 @@ tags:
   - programming
   - semantics
 taggedAt: '2024-03-26'
+summary: >-
+  The `restrict` keyword in C is a type qualifier that indicates a pointer
+  parameter points to an object not accessed through any other pointer in the
+  function's scope. This allows the compiler to make optimizations.
 ---
 
 Take this example:

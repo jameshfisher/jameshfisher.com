@@ -4,6 +4,10 @@ tags:
   - c
   - unix
   - programming
+summary: >-
+  `less` uses the terminal's "alternate screen" feature to clear the screen and
+  display the contents of a file, and then restores the previous screen when
+  exiting.
 ---
 
 Run `less foo.txt`.

@@ -1,6 +1,9 @@
 ---
 title: What is static linking in C?
 tags: []
+summary: >-
+  Static linking in C involves compiling a library and main program separately,
+  then linking the object files together into an executable.
 ---
 
 An example of static linking.

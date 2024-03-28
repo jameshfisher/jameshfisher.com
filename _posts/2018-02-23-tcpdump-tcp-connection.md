@@ -4,6 +4,8 @@ tags:
   - programming
   - unix
   - networking
+summary: >-
+  `tcpdump` captures network traffic. Capture and analysis of a TCP connection, including the 3-way handshake and message exchange.
 ---
 
 The `tcpdump` program is badly named:

@@ -5,6 +5,10 @@ tags:
   - web
 hnUrl: 'https://news.ycombinator.com/item?id=39683762'
 hnUpvotes: 3
+summary: >-
+  Estimating viewing distance from screen size to set optimal font-size, but
+  other factors like user mobility, long-sightedness, and short-sightedness
+  complicate the ideal font-size calculation.
 ---
 
 I want to set the font-size at the most comfortable size for reading.

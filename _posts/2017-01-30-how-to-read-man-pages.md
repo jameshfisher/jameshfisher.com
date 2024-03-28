@@ -7,6 +7,10 @@ tags:
   - documentation
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  The `man` command is used to access the UNIX manual pages, which are organized
+  into numbered sections. `man` searches a predefined path to find the
+  relevant manual page.
 ---
 
 UNIX systems traditionally come with a built-in manual. How do we read it?

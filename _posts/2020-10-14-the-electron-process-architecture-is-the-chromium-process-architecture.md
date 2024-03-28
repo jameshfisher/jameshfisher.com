@@ -4,9 +4,11 @@ tags:
   - programming
   - javascript
   - electron
+summary: >-
+  An Electron instance is basically a Chromium instance. It just has some Node.js integration.
 ---
 
-The Electron docs describe Electron as basically a mash-up of Node.js and Chromium. 
+The Electron docs describe Electron as basically a mash-up of Node.js and Chromium.
 My mental model was that there are two kinds of process.
 An Electron app has a single "Main" process,
 which is basically a NodeJS process,

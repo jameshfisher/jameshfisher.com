@@ -5,9 +5,9 @@ tags:
   - programming
   - semantics
 taggedAt: '2024-03-26'
+summary: >-
+  "lvalue" either means "expression which can be placed on the left-hand side of the assignment operator", or means "expression which has a memory address". "rvalue" is defined as "all other expressions".
 ---
-
-**TL;DR: "lvalue" either means "expression which can be placed on the left-hand side of the assignment operator", or means "expression which has a memory address". "rvalue" is defined as "all other expressions".**
 
 What does the following program do?
 

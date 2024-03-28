@@ -1,6 +1,9 @@
 ---
 title: How to implement malloc/free
 tags: []
+summary: >-
+  A malloc/free implementation that maps allocations directly to
+  mmap/munmap, with the allocation size stored before the returned pointer.
 ---
 
 Here's a malloc/free implementation in few lines of code. It maps `malloc`/`free` 1-to-1 with `mmap`/`munmap`. To do so, it rounds up all desired sizes to the nearest page size. This is pretty wasteful, but saves on implementation complexity.

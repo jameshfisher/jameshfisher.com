@@ -4,6 +4,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  C is defined in several places, including "The C Programming Language" by
+  Kernighan and Ritchie, and a series of ISO C standards (C89, C99, C11).
 ---
 
 What is "C"? Where is C defined? Unfortunately, several places.

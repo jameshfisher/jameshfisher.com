@@ -6,6 +6,9 @@ tags:
   - system-calls
   - posix
 taggedAt: '2024-03-26'
+summary: >-
+  All system calls on macOS 10.12, categorized by the functionality they provide,
+  such as process management, file operations, memory management, etc.
 ---
 
 My machine runs macOS 10.12. macOS is a BSD system. Let's see what facilities this OS provides to processes. We'll do so with a rough categorization of its system calls. We can see all man pages with `man -k .`, and filter to the system call pages with `grep '(2)'`. I did this and then roughly grouped the system calls by the thing they operate on. It's probably inaccurate in places; I'll update it as my knowledge improves.

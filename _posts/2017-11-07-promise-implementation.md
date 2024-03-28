@@ -4,6 +4,10 @@ justification: I use Promises all the time.
 tags:
   - programming
   - javascript
+summary: >-
+  Implementing a Promise API in JavaScript, including handling
+  asynchronous callbacks, promise chaining, and automatically wrapping
+  non-promise values.
 ---
 
 You can implement the `Promise` pattern yourself.

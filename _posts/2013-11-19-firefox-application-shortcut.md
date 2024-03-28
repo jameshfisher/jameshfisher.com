@@ -4,6 +4,9 @@ tags:
   - firefox
   - web-apps
 taggedAt: '2024-03-26'
+summary: >-
+  Firefox still lacks a built-in feature to create application shortcuts, unlike
+  Chrome, despite the rise of web apps over the past decade.
 ---
 
 It’s 2013, and the web is no longer made up of “web pages.”

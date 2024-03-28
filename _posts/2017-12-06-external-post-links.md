@@ -3,6 +3,8 @@ title: Linking to external posts from Jekyll
 tags:
   - jekyll
   - blog
+summary: >-
+  Using an `external_url` property for linking to external blog posts from a website built with Jekyll, allowing a comprehensive directory of all posts regardless of platform.
 ---
 
 I'd like this site to list all my public activity.

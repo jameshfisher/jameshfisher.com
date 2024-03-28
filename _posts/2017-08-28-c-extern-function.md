@@ -1,6 +1,9 @@
 ---
 title: What is an `extern` function in C?
 tags: []
+summary: >-
+  In C, function declarations are implicitly `extern`, meaning they have
+  external linkage. The `static` keyword can be used to give a function internal linkage instead.
 ---
 
 Earlier I showed the C `extern` keyword applied to variable declarations.

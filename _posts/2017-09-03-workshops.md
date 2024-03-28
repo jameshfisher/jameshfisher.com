@@ -1,6 +1,8 @@
 ---
 title: Running a Laravel+Pusher workshop at work
 tags: []
+summary: >-
+  Internal workshop on Laravel+Pusher. Structured approach with checkpoints helped keep everyone on track.
 ---
 
 Last Friday afternoon at Pusher, we ran an internal workshop on Laravel+Pusher.

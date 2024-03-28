@@ -2,6 +2,8 @@
 title: How can I do elliptic curve crypto with OpenSSL?
 justification: I'm beginning learning SSL/TLS by going through the CLI commands
 tags: []
+summary: >-
+  Generate ECC private key with `openssl ecparam`, extract public key from it using `openssl ec`, derive shared secret using `openssl pkeyutl`.
 ---
 
 I've previously looked at doing asymmetric crypto with `openssl` using the `genrsa`, `rsa`, and `rsautl` commands. This uses RSA, which is one way to do asymmetric crypto. An alternative way is elliptic-curve crypto (ECC), and `openssl` has commands for ECC too.

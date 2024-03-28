@@ -3,6 +3,10 @@ title: Bike front derailleur
 tags:
   - bike
 taggedAt: '2024-03-26'
+summary: >-
+  The front derailleur (Shimano FD-2203) is incompatible with the triple
+  crankset, causing shifting issues. A compatible front derailleur like Shimano
+  FD-5603 may be needed to resolve the problem.
 ---
 
 I bought a bike from EBay. It has decent components, but they seem mashed together incompatibly. My front derailleur doesn't shift properly.

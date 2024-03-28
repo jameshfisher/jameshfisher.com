@@ -6,6 +6,10 @@ tags:
   - udp
   - networking
 taggedAt: '2024-03-26'
+summary: >-
+  An IP packet contains a 'protocol number' that identifies the protocol (e.g. TCP,
+  UDP) running over IP. The kernel uses this to determine how to handle the
+  packet.
 ---
 
 When the kernel receives IP packets, how does it know what they represent? Are they part of a TCP stream, a UDP datagram, or something else?

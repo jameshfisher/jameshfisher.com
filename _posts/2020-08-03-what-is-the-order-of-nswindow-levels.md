@@ -3,6 +3,11 @@ title: What is the order of `NSWindow` levels?
 tags:
   - programming
   - macos
+summary: >-
+  The order of `NSWindow` levels is defined by the `CGWindowLevelKey` constants,
+  with lower numerical values being behind higher ones. The `NSWindow.Level`
+  enum provides a more limited set of semantic level names, with some levels
+  overlapping.
 ---
 
 If two windows on your macOS desktop overlap,

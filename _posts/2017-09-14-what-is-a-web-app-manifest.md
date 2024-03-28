@@ -1,6 +1,10 @@
 ---
 title: What is a Web App Manifest?
 tags: []
+summary: >-
+  A web app manifest is a JSON file that provides metadata about a web app, such
+  as its name, icons, and display mode, enabling features like adding it to a
+  homescreen.
 ---
 
 We use "web app" to describe web pages which are more like programs.

@@ -5,6 +5,8 @@ tags:
   - assembly
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Compiling with the `-S` flag generates assembly.
 ---
 
 Any C compiler has multiple stages. A fundamental one is _assembler_. The compiler runs the C preprocessor, parses the C file, and transforms that AST into assembler. Usually, we instruct the compiler to then _assemble_ that into an object file and link it, producing a binary.

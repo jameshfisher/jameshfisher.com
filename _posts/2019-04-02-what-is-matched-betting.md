@@ -2,6 +2,9 @@
 title: What is matched betting?
 tags:
   - betting
+summary: >-
+  Matched betting exploits differences in odds between betting exchanges to
+  guarantee a profit, by betting on both sides of a proposition.
 ---
 
 In [my previous post](/2019/04/01/what-is-a-prediction-market/),

@@ -3,6 +3,8 @@ title: How do JavaScript async iterators work?
 tags:
   - programming
   - javascript
+summary: >-
+  Async iterators use the `Symbol.asyncIterator` method to define the iteration protocol.
 ---
 
 [A while ago, I described iterators in JavaScript](/2019/05/10/how-do-javascript-iterators-work/).
@@ -78,7 +80,7 @@ before calling `.next()` again.
 
 This is how JavaScript async iterators work.
 Because this is an entirely new contract,
-async iterables expose their async iterator under a different key, 
+async iterables expose their async iterator under a different key,
 `asyncIterable[Symbol.asyncIterator]()`.
 Here's an async iterable
 that yields the values `0` to `99`,
@@ -117,7 +119,7 @@ function loop() {
 loop();
 ```
 
-Note that the async iterator contract 
+Note that the async iterator contract
 forces the consumer to loop in an async fashion.
 (The consumer _can_ still call `.next()` in a hot loop on an async iterator,
 but this breaks the contract,

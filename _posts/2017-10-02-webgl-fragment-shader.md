@@ -1,6 +1,9 @@
 ---
 title: WebGL fragment shader
 tags: []
+summary: >-
+  A demo WebGL fragment shader that draws concentric circles, with a live
+  editor to experiment with the shader code.
 ---
 
 <div style="display: flex;">

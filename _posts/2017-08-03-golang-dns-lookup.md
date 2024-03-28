@@ -6,6 +6,8 @@ tags:
   - networking
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Using the Go `"net"` package to look up IP addresses for a given domain name, using either the C stdlib or a pure Go DNS resolver.
 ---
 
 Go's `"net"` package in the stdlib has standard DNS client functions.

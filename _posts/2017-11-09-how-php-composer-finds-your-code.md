@@ -3,6 +3,9 @@ title: How PHP and Composer find your code
 tags:
   - programming
   - php
+summary: >-
+  Composer's autoloader uses PSR-4 to map namespaces to directories, allowing
+  you to load classes without explicit `require` statements.
 ---
 
 [Recently I showed how to create an empty Packagist package](/2017/11/06/how-to-release-a-composer-package/).

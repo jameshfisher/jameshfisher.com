@@ -5,6 +5,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  A program in C that prints the individual bits of various data types,
+  showing how they are represented in memory.
 ---
 
 (For the byte-by-byte version, see ["How do I print bytes in C?"](/2016/12/22/printing-bytes/).)

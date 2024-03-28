@@ -11,6 +11,9 @@ tags:
   - xcode
   - ios
 taggedAt: '2024-03-26'
+summary: >-
+  To submit a macOS app build to iTunes Connect, archive the app in Xcode,
+  enable App Sandbox, then upload the build.
 ---
 
 I'm releasing Vidrio, a macOS app, to the Mac App Store. Part of the process is to submit a build of the application to iTunes Connect. Here's how.

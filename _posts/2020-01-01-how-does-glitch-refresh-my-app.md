@@ -3,6 +3,10 @@ title: How does Glitch refresh my app?
 tags:
   - programming
   - web
+summary: >-
+  Glitch's "Show in a new window" feature uses the `window.open` API to open a
+  new window, and then manipulates the contents of that window by updating its
+  `location` property when the source code is edited.
 ---
 
 <div id="display" style="display: none; outline: 5px solid red; padding: 2em;"></div>

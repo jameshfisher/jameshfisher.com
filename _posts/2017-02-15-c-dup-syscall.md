@@ -7,6 +7,9 @@ tags:
   - posix
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Use the `dup` system call to duplicate a file descriptor in C, allowing two
+  references to the same underlying pipe.
 ---
 
 Answer: the `dup` system call. Here's an example of duplicating the descriptor `1`, which refers to the standard out pipe.

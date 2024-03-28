@@ -7,6 +7,10 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  `#include` in C does not import functionality, but rather inserts the
+  preprocessed text of the included file. The actual implementation of the
+  included functions, like `fprintf`, is provided through _linking_.
 ---
 
 Take this C program:

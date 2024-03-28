@@ -1,6 +1,6 @@
 ---
 title: What is the Apple Store release process?
-justification: 'I''m releasing Vidrio on the Mac App Store, so I need to know the process!'
+justification: "I'm releasing Vidrio on the Mac App Store, so I need to know the process!"
 tags:
   - mac-app-store
   - app-distribution
@@ -8,7 +8,9 @@ tags:
   - product-management
   - monetization
   - software-development
-taggedAt: '2024-03-26'
+taggedAt: "2024-03-26"
+summary: >-
+  1) Enroll in the Apple Developer Program. Create an "App Record" in iTunes Connect. Upload the app. Submit it for review.
 ---
 
 I made an app called Vidrio. It's a macOS app, and it's going to be available on the Mac App Store. Just like [this example (Numbers, an app made by Apple)](https://itunes.apple.com/gb/app/numbers/id409203825). I've never released to the App Store before.
@@ -25,9 +27,9 @@ Step 4: upload the app. This sounds trivial. Step 5, "beta testing", sounds skip
 
 My main work is around:
 
-* creating vidr.io site
-* figure out how to charge for Vidrio (Subscriptions? In-app purchases?)
-* recreate App Record
-* submission and app review
+- creating vidr.io site
+- figure out how to charge for Vidrio (Subscriptions? In-app purchases?)
+- recreate App Record
+- submission and app review
 
 Next step today: bring up a placeholder website.

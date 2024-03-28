@@ -1,6 +1,9 @@
 ---
 title: Notes from Minsk
 tags: []
+summary: >-
+  Spoke with Will about the Go garbage collector at GoWayFest in Minsk,
+  Belarus. Orderly city. Software engineering scene surprisingly big.
 ---
 
 Will Sewell and I gave our "Go garbage collector" talk at GoWayFest in Minsk.

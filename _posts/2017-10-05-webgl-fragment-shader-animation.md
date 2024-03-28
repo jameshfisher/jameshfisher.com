@@ -1,6 +1,9 @@
 ---
 title: WebGL fragment shader animation
 tags: []
+summary: >-
+  A WebGL fragment shader that animates a pulsating colored square by updating a
+  time-based `uniform` in the shader.
 ---
 
 <div><canvas id="clock" width="400" height="400" style="width: 200px; height: 200px;"></canvas></div>

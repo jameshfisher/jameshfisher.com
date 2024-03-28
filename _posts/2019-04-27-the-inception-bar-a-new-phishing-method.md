@@ -6,8 +6,9 @@ tags:
   - fave
 hnUrl: 'https://news.ycombinator.com/item?id=19768072'
 hnUpvotes: 1046
+summary: >-
+  A new phishing technique that displays a fake URL bar in Chrome for mobile. A key innovation is the "scroll jail" that traps the user in a fake browser.
 ---
-
 
 Welcome to HSBC, the world's seventh-largest bank!
 Of course, the page you're reading isn't actually hosted on `hsbc.com`;
@@ -24,7 +25,7 @@ But first, the proof:
 <p><img src="/assets/2019-04-27/proof.png"/></p>
 
 In Chrome for mobile,
-when the user scrolls down, 
+when the user scrolls down,
 the browser hides the URL bar,
 and hands the URL bar's screen space to the web page.
 Because the user associates this screen space with "trustworthy browser UI",
@@ -71,17 +72,17 @@ and forge an inception bar for that browser.
 With yet more effort,
 the inception bar could be made interactive.
 Even if the user isn't fooled by the current page,
-you can get another try 
+you can get another try
 after the user enters "gmail.com" in the inception bar!
 
 Is this a serious security flaw?
 Well, even I, as the creator of the inception bar,
 found myself accidentally using it!
-So I can imagine this technique fooling users 
+So I can imagine this technique fooling users
 who are less aware of it,
 and who are less technically literate.
 The only time the user has the opportunity to verify the true URL
-is on page load, 
+is on page load,
 before scrolling the page.
 After that, there's not much escape.
 
@@ -95,7 +96,7 @@ and retaining trusted screen space on the other.
 One compromise would be for Chrome to retain a small amount of screen space
 above [the "line of death"](https://textslashplain.com/2017/01/14/the-line-of-death/)
 instead of giving up literally _all_ screen space to the web page.
-Chrome could use this space to signal that 
+Chrome could use this space to signal that
 "the URL bar is currently collapsed",
 e.g. by displaying the shadow of an almost-hidden URL bar.
 
@@ -120,7 +121,7 @@ or [my "custom cursor" inception attack from 2016](https://jameshfisher.github.i
   document.body.appendChild(fakeUrlBarEl);
   window.onresize = function() {
     if (window.innerHeight > initialHeight && !scrollJailEl) {
-      // Chrome has given up its URL bar! 
+      // Chrome has given up its URL bar!
       // Create the scroll jail and the fake URL bar!
 
       const jailScrollTo = window.scrollY;

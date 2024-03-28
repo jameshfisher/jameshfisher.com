@@ -9,6 +9,9 @@ tags:
   - history
   - essay
 taggedAt: '2024-03-26'
+summary: >-
+  Natural magic and scientific method share commonalities, but only
+  scientific method distinguished correlation from causation. The Scientific Revolution arose from internal technological developments, the link between knowledge and political power, and the destruction of absolute truth from the Renaissance and Reformation.
 ---
 
 > 'All truth is simple' -- Is that not a compound lie? --

@@ -1,6 +1,10 @@
 ---
 title: 'Nativité, a pastoral Christmas game'
 tags: []
+summary: >-
+  A Christmas game where sisters compete to move their toy sheep closer to the
+  Christ Child by doing good deeds, played out in real-time through a web app
+  with an admin interface for the parents.
 ---
 
 My girlfriend has three sisters.

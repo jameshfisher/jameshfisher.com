@@ -1,6 +1,9 @@
 ---
 title: Post-driven permanent blog pages
 tags: []
+summary: >-
+  Permanent blog pages are now generated from tagged blog posts, providing
+  automatic updates, separate URLs, and chronological ordering.
 ---
 
 I have a few "permanent" pages on this blog.

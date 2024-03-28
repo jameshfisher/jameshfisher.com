@@ -6,6 +6,9 @@ tags:
   - tensorflow
   - machine-learning
 ogimage: /assets/2020-09-21/result.jpg
+summary: >-
+  A demo that uses the BlazeFace model from TensorFlow.js to detect faces in a
+  webcam stream, and draws the detected landmarks on the video.
 ---
 
 [BlazeFace](https://github.com/tensorflow/tfjs-models/tree/master/blazeface)

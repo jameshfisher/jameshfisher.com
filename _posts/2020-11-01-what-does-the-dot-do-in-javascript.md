@@ -4,6 +4,8 @@ tags:
   - programming
   - javascript
   - fave
+summary: >-
+  `foo.bar`, `foo.bar()`, or `foo.bar = baz` - what do they mean? A deep dive into prototypical inheritance and getters/setters.
 ---
 
 Ah, that little dot!

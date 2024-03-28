@@ -12,6 +12,11 @@ tags:
   - nib-file
   - xib-file
 taggedAt: '2024-03-26'
+summary: >-
+  To create a Cocoa app without a `.xib` file, remove the `NSMainNibFile` key
+  from the `Info.plist`, and replace the `@NSApplicationMain` annotation on your
+  `AppDelegate` class with a custom `main.swift` file that manually sets up the
+  application and its delegate.
 ---
 
 In XCode, go to `File > New > Project...` and select "Cocoa Application". Call it "Foo", then uncheck all of the "Use Storyboards", "Use Core Data", and other nonsense. You get a project which, when you run it, displays a window with the title "Foo". How does that window get there?

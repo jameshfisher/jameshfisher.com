@@ -3,6 +3,10 @@ title: What is HTTP keep-alive? What is HTTP request pipelining?
 tags:
   - programming
   - networking
+summary: >-
+  HTTP keep-alive allows reusing the same TCP connection for multiple requests,
+  avoiding the overhead of opening a new connection. HTTP request pipelining
+  sends multiple requests without waiting for their responses.
 ---
 
 Traditional HTTP uses one TCP connection per request.

@@ -2,6 +2,8 @@
 title: How to apply a `CIFilter` to an image in Swift
 justification: Future Vidrio feature requires image processing.
 tags: []
+summary: >-
+  Using `CIFilter` to apply a sepia tone filter to an `NSImage` and save the result to a file.
 ---
 
 ```swift

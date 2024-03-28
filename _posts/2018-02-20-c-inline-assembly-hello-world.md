@@ -4,6 +4,10 @@ tags:
   - programming
   - c
   - assembly
+summary: >-
+  A C program that writes "hello, world!" to the console using inline assembly
+  instead of standard library functions, demonstrating direct system call
+  invocation.
 ---
 
 Here's an unusual "hello, world" in C:

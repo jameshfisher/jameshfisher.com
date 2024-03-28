@@ -6,6 +6,10 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  `setjmp` and `longjmp` in C bypass normal function call and
+  return flow, allowing a function to return to a previously saved state.
+  `setjmp` saves the current execution context, and `longjmp` restores it.
 ---
 
 Normal program flow in C follows function calls and branching constructs (`if`, `while` etc). The functions `setjmp` and `longjmp` introduce another kind of program flow.

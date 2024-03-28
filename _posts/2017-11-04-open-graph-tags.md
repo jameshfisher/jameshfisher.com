@@ -2,6 +2,9 @@
 title: Adding Open Graph meta tags to jameshfisher.com
 tags:
   - blog
+summary: >-
+  Added Open Graph meta tags to improve how blog posts appear when auto-posted
+  to Facebook.
 ---
 
 My blog posts are auto-posted to Facebook,

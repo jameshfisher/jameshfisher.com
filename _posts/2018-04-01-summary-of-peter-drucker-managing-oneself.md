@@ -1,6 +1,9 @@
 ---
 title: A summary of _Managing Oneself_ by Peter Drucker
 tags: []
+summary: >-
+  Discover your strengths, work styles, and values through feedback analysis.
+  Align your career and relationships with your unique characteristics.
 ---
 
 I recently read _Managing Oneself_ by Peter Drucker

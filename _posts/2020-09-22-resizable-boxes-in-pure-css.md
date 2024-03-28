@@ -4,6 +4,9 @@ tags:
   - programming
   - web
   - css
+summary: >-
+  The CSS `resize` property allows any element to be resized, not just
+  `<textarea>`! But there are some gotchas.
 ---
 
 This morning I stumbled upon the CSS `resize` property.

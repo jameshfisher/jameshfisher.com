@@ -1,6 +1,9 @@
 ---
 title: Instance DNS in multi-tenant services
 tags: []
+summary: >-
+  Pusher could use runtime DNS lookup to identify the cluster for each app
+  instance, instead of hardcoding the cluster. This allows more flexibility, and easier changes, at the cost of some lookup overhead.
 ---
 
 "The cloud" is full of multi-tenant systems.

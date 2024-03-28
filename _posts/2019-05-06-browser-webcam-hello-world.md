@@ -2,6 +2,8 @@
 title: Browser webcam hello world
 tags:
   - programming
+summary: >-
+  Demo of the user's webcam in a `<video>` element, using the `navigator.mediaDevices.getUserMedia()` API.
 ---
 
 Just below this paragraph, you can see yourself!
@@ -18,7 +20,7 @@ Here's the code that achieves this:
 ```
 
 ```js
-// ... then some JavaScript to access the webcam stream 
+// ... then some JavaScript to access the webcam stream
 // and attach it to the video element.
 const vidEl = document.getElementById("webcam");
 navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } })

@@ -11,6 +11,10 @@ tags:
   - code-signing
   - certificates
 taggedAt: '2024-03-26'
+summary: >-
+  Xcode uses "teams" to manage developer identities, and
+  revoking a certificate on one device may require regenerating provisioning
+  profiles.
 ---
 
 I just switched to my new MacBook Pro (the one with the touch bar - a feature I'll be adding to Vidrio). I cloned the Vidrio repository, and attempted to build it with XCode, but XCode complains:

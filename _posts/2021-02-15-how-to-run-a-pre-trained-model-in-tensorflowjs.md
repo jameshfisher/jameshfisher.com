@@ -4,6 +4,8 @@ tags:
   - programming
   - web
   - machine-learning
+summary: >-
+  Load the model, convert the input to a tensor, preprocess the tensor to match the model's expected format, run inference with `.predict()`, and decode the prediction tensor.
 ---
 
 [The tfjs-models repository](https://github.com/tensorflow/tfjs-models)

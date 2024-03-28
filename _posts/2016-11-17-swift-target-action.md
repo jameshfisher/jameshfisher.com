@@ -4,6 +4,10 @@ tags:
   - swift
   - objective-c
 taggedAt: '2024-03-26'
+summary: >-
+  Use a `CallbackWrapper` object to associate a closure with an `NSControl`,
+  setting the `target` and `action` properties to enable callback-based event
+  handling.
 ---
 
 `NSButton` uses the target/action pattern: a `button : NSButton` has two properties `button.target` and `button.action` which specify what to call when the button is clicked.

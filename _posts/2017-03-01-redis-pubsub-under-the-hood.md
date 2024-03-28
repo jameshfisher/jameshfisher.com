@@ -8,6 +8,10 @@ tags:
   - programming
   - software-design
 taggedAt: '2024-03-26'
+summary: >-
+  Examines Redis's source code to understand how it tracks subscriptions, handles
+  disconnections, and implements pattern subscriptions, highlighting potential
+  pitfalls and attack vectors.
 ---
 
 **Do you want to code a chat app?

@@ -4,6 +4,9 @@ justification: >-
   Vidrio's image transformations are pixel-wise, which color kernels are
   optimized for.
 tags: []
+summary: >-
+  `CIColorKernel` is a type of `CIKernel` optimized for pixel-wise image
+  transformations, with input as pixel samples instead of image samplers.
 ---
 
 I've showed some uses of `CIKernel`, each of which produces an output pixel by transforming one pixel of some input images. To get the input pixels, I used code like this:

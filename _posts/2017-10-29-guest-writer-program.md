@@ -2,6 +2,8 @@
 title: Guest writers
 tags:
   - blog
+summary: >-
+  Setting up guest writers on a Jekyll blog. Marking authors in the metadata. Storing author information in a YAML file.
 ---
 
 My friend Luís modified one of my blog posts on WebGL shaders,

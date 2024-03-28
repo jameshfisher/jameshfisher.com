@@ -1,6 +1,9 @@
 ---
 title: WebGL hello world
 tags: []
+summary: >-
+  A WebGL demo that creates a green square in a canvas element,
+  showing the difference between 2D canvas and WebGL contexts.
 ---
 
 <div><canvas id="canvas" width="100" height="100"></canvas></div>

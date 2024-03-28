@@ -122,7 +122,7 @@ export function render(data) {
       renderPosts(
         data.collections.fave
           .reverse()
-          .filter((post) => !post.draft && hnFavorites.includes(post)),
+          .filter((post) => !post.draft && !hnFavorites.includes(post)),
       ),
       h("h3", {}, "All posts"),
       renderPosts(

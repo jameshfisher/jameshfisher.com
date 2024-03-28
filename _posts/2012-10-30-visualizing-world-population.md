@@ -4,6 +4,7 @@ tags:
   - data-visualization
   - demography
 taggedAt: '2024-03-26'
+summary: ' '
 ---
 
 <p><img src="/assets/2012-10-30/visualizing-world-population.png"/></p>

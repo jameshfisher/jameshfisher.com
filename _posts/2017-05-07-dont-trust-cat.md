@@ -1,6 +1,10 @@
 ---
 title: Don't trust `cat`!
 tags: []
+summary: >-
+  `cat` can hide malicious content behind terminal control sequences, so you
+  should not trust its visual output. Use `less` or `hexdump` to inspect files
+  instead.
 ---
 
 To read a file `foo` in the terminal, we do `cat foo`, and the contents of the file are printed out. But because terminal control sequences are _in-band_ as ordinary stdout bytes, `cat`ting a file can do more than you think! You should not trust the visual output of cat as a faithful representation of the file contents.

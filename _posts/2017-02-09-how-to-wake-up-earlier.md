@@ -4,6 +4,9 @@ tags:
   - productivity
   - personal
 taggedAt: '2024-03-26'
+summary: >-
+  To wake up earlier, set a physical alarm in a location away from the bed, and
+  schedule early meetings to create firm deadlines for your day.
 ---
 
 To understand how to change my routine, I should first understand how my previous routine was governed.

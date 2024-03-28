@@ -1,6 +1,10 @@
 ---
 title: This site is now on jameshfisher.com
 tags: []
+summary: >-
+  Moved blog from `jameshfisher.github.io` to `jameshfisher.com`, with CNAME
+  setup and GitHub custom domain settings. Switching to Netlify for HTTPS
+  hosting.
 ---
 
 This blog has been hosted at `jameshfisher.github.io` since I started it in November last year.

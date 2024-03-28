@@ -1,6 +1,10 @@
 ---
 title: How do peer-to-peer programs discover each other?
 tags: []
+summary: >-
+  Peer-to-peer programs use centralized discovery mechanisms like BitTorrent
+  trackers and Bitcoin DNS seeds to find peers, as a purely decentralized
+  approach would require an impractical brute-force search.
 ---
 
 In peer-to-peer systems like BitTorrent and Bitcoin, you start your local program on a networked computer, and you become connected to other instances of the same program running on lots of other computers. The local process starts listening on a local port, and finds IP:port pairs for those other processes. How does your process discover those "peer" addresses?

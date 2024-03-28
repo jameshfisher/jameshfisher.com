@@ -5,6 +5,10 @@ tags:
   - contrast
   - physics
 taggedAt: '2024-03-26'
+summary: >-
+  Phone screens have low contrast in sunlight because the reflected sunlight
+  overpowers the screen's own light output, reducing the effective contrast
+  ratio.
 ---
 
 We start out by defining what we mean by the "contrast".

@@ -1,6 +1,9 @@
 ---
 title: What is 'sequencing markets'?
 tags: []
+summary: >-
+  A strategy for growing a product by starting with an extremely specific target
+  market and gradually expanding to broader markets.
 ---
 
 "Sequencing markets" is a strategy for growing a product. Begin with an extremely specific target market, and capture this before expanding. Here's my current market sequence plan for Vidrio:

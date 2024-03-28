@@ -2,6 +2,8 @@
 title: A calendar view for this blog
 justification: Renewing my 'post every day' promise
 tags: []
+summary: >-
+  An updated calendar-based homepage, highlighting gaps in posting.
 ---
 
 I just spent two hours reformatting the homepage for this blog.

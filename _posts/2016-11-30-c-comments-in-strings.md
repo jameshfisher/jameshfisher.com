@@ -5,6 +5,9 @@ tags:
   - programming
   - syntax-highlighting
 taggedAt: '2024-03-26'
+summary: >-
+  C string literals can contain comment-like characters, which are treated as
+  literal text, not as comments.
 ---
 
 What happens if your C string literal contains comment-like delimiters?

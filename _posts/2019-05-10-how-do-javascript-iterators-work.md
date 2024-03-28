@@ -3,6 +3,10 @@ title: How do JavaScript iterators work?
 tags:
   - programming
   - javascript
+summary: >-
+  JavaScript iterators are objects that implement a specific protocol, providing
+  a way to iterate over a sequence of values. The `for...of` loop is syntactic
+  sugar for manually creating and using an iterator.
 ---
 
 For JavaScript programmers,

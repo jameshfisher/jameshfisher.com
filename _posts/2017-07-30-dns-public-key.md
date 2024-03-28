@@ -1,6 +1,10 @@
 ---
 title: How to cut out the CA middleman
 tags: []
+summary: >-
+  Eliminate Certificate Authorities by storing the public key for a domain
+  directly in the DNS, allowing browsers to verify the identity of a server
+  without relying on a third-party CA.
 ---
 
 SSL certificates work on trust: end users trust their browsers, and browsers trust "certificate authorities" (CAs) like Gandi. But the chain goes one step further: the CA trusts DNS. When you buy an SSL certificate for `foo.com` from a CA like Gandi, Gandi verifies that you `foo.com` by challenging you to modify the DNS for that domain. The ultimate trusted authority is not the CA; it is the Domain Name System.

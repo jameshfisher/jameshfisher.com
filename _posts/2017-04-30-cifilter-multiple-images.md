@@ -2,6 +2,8 @@
 title: How to pass multiple inputs to a `CIKernel`
 justification: Vidrio will be using `CIKernel`s with multiple inputs.
 tags: []
+summary: >-
+  A `CIKernel` in Swift can have multiple inputs, including image samplers and other data types. Example: an alpha-compositing kernel.
 ---
 
 I previously described how to create a custom `CIFilter` which swapped the red and green channels of an input image. That filter had a single input parameter: the input image. But kernels are C functions, and they can have many parameters of many types.

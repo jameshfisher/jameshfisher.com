@@ -55,6 +55,7 @@ export function render(data) {
             h("strong", {}, "amazing product"),
             " and a ",
             h("strong", {}, "profitable business?"),
+            " ",
             h("a", { href: "/cv" }, "Read more about me"),
             " or ",
             h("strong", {}, [
@@ -88,6 +89,7 @@ export function render(data) {
           )}. This post is not associated with my employer.`
         : "",
       h("span", { class: "noprint" }, [
+        " ",
         h(
           "a",
           {

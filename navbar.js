@@ -21,7 +21,7 @@ const navbarHtml = h("div", { class: "noprint" }, [
           src: "/assets/tigyog/icon-192.png",
           style: "width: 1em; position: relative; top: 0.1em;",
         }),
-        "TigYog",
+        " TigYog",
       ]),
     ]),
     h("div", { class: "navbar-item" }, [
@@ -30,7 +30,7 @@ const navbarHtml = h("div", { class: "noprint" }, [
           src: "/assets/kickabout/icon-192.png",
           style: "width: 1em; position: relative; top: 0.1em;",
         }),
-        "Kickabout",
+        " Kickabout",
       ]),
     ]),
   ]),

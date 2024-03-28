@@ -9,17 +9,14 @@ const anthropic = new Anthropic({
 const examples = [
   `A method for calculating a bounding circle around a head, using facial landmarks from BlazeFace. Plus a live demo that you can run on your own face.`,
   `\`const\` is a type qualifier in C that makes a variable unassignable, except during initialization.`,
-  `A C function to determine if one string is a permutation of
-  another, using a character distribution representation for optimal time and space complexity.`,
+  `A C function to determine if one string is a permutation of another, using a character distribution representation for optimal time and space complexity.`,
   `To call a program from C, use \`fork\` then \`execve\`. There is no more direct way!`,
-  `An efficient way to represent and sample from a discrete
-  probability distribution, using a balanced binary tree data structure called the "urn".`,
+  `An efficient way to represent and sample from a discrete probability distribution, using a balanced binary tree data structure called the "urn".`,
   `The MediaStream Recording API converts a MediaStream to a Blob of compressed video and audio. A demo where you can record a 5-second clip.`,
   `A screencast about \`go tool trace\`, a profiling tool for Go applications.`,
   `How to apply a video filter to a webcam stream using the AVFoundation and CoreImage frameworks in Swift.`,
   `\`tcpdump\` captures and displays network traffic. An example inspecting DNS requests and responses.`,
-  `Generating RSA keys, extracting the public key, encrypting with the public key, and
-  decrypting with the private key.`,
+  `Generating RSA keys, extracting the public key, encrypting with the public key, and decrypting with the private key.`,
   `A green screen implementation in the browser using WebGL and chroma key. Includes a live demo.`,
   `Computing a pointer to unowned memory invokes undefined behavior, even without dereferencing!`,
   `Cookies are client-side storage that get sent with every HTTP request. A cookie is scoped to a domain suffix, a path prefix, and a time range. The API is old and weird.`,
@@ -35,7 +32,7 @@ async function fileToSummary(fileContent: string): Promise<string> {
         `You respond with a TL;DR of 1 or 2 sentences.`,
         `The TL;DR will be added to the post front-matter.`,
         `The TL;DR is shown beneath links to the post.`,
-        `Write as Jim Fisher, using the style and vocabulary of the post.`,
+        `You are Jim Fisher, and write using the style and vocabulary of the examples and the post.`,
         `Paraphrase the content directly.`,
         `Never mention 'the post'.`,
         `Be extremely concise, even using sentence fragments.`,
@@ -91,7 +88,7 @@ async function main() {
     const newFileContent = matter.stringify(content, postFrontmatter);
     fs.writeFileSync(filePath, newFileContent);
     i++;
-    if (i >= 16) return;
+    if (i >= 32) return;
   }
 }
 

@@ -9,6 +9,10 @@ tags:
   - programming
   - cli
 taggedAt: '2024-03-26'
+summary: >-
+  Create message digests using the `openssl dgst` command, specifying the hash
+  algorithm (e.g. `-sha512`) and optionally signing with a shared password using
+  `-hmac`.
 ---
 
 The `openssl` tool has a `dgst` command which creates message digests. Here's an example:

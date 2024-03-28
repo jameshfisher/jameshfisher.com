@@ -2,6 +2,8 @@
 title: How to write 'hello world' in TensorFlow
 tags:
   - machine-learning
+summary: >-
+  Two ways to calculate the cost per gram of chocolate: one without machine learning, and another using TensorFlow to learns a linear model.
 ---
 
 The following program finds out the cost of chocolate per gram. It takes as input some example chocolate bars: each one with a weight and a price.

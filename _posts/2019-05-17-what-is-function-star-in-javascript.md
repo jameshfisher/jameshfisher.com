@@ -3,6 +3,9 @@ title: What is `function*` in JavaScript?
 tags:
   - programming
   - javascript
+summary: >-
+  JavaScript's `function*` defines a generator function, which can be used to
+  generate and consume data.
 ---
 
 In JavaScript, `function*` defines a _generator function_.
@@ -52,7 +55,7 @@ you could implement this in the browser with something like:
 
 Depending on who you speak to,
 this code has some problems.
-It has global state, 
+It has global state,
 so you can only have one Fibonacci sequence in your program.
 And it mixes up the _abstract concept_ of Fibonacci numbers with the _display_ of those numbers.
 You could solve these problems
@@ -114,7 +117,7 @@ You can think of the state of the iterator `fibs` as containing:
    `fibs.localVars` could be `x = 3; y= 5`.
 2. A program counter.
    This points to one of the `yield` expressions in the function body
-   (or to the start of the function body, 
+   (or to the start of the function body,
    if `.next()` hasn't been called yet).
    In our `FibIterator` example,
    `fibs.programCounter` could point to the `yield x` expression.

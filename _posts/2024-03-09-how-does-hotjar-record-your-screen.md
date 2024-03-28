@@ -3,6 +3,10 @@ title: How does HotJar record your screen?
 tags:
   - programming
   - web
+summary: >-
+  "Session replay" tools record user interactions by capturing
+  DOM changes, external resources, and viewport state, using efficient
+  techniques like the MutationObserver API.
 ---
 
 I was blown away when I first saw tools like HotJar.

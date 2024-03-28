@@ -1,6 +1,9 @@
 ---
 title: Diary writing prompts
 tags: []
+summary: >-
+  Struggling with mundane diary entries, I implement random writing
+  prompts to reinvigorate the process.
 ---
 
 [I began this year writing a diary entry every day](https://github.com/jameshfisher/encrypted-diary).

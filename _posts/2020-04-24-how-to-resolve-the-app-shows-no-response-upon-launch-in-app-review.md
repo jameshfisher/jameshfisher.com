@@ -4,6 +4,11 @@ tags:
   - programming
   - macos
   - swift
+summary: >-
+  To resolve "the app shows no response upon launch" in App Review, identify and
+  handle potential sources of fatal errors, such as uncaught exceptions,
+  force-unwrapping nil values, unsafe downcasts, and out-of-bounds array access.
+  Display a helpful error message instead of crashing.
 ---
 
 I recently had an app rejected in Apple's App Review process,

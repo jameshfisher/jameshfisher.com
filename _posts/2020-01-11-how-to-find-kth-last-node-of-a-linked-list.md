@@ -4,6 +4,10 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  Use the "runner" technique with two pointers - one leading by k nodes - to
+  find the kth last element of a singly linked list without knowing the list
+  length in advance.
 ---
 
 Question 2.2 of _Cracking the Coding Interview_:

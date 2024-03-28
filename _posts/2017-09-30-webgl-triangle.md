@@ -1,6 +1,9 @@
 ---
 title: Drawing a triangle with WebGL
 tags: []
+summary: >-
+  A WebGL example that draws a cyan triangle on a pink canvas by creating
+  shaders, a program, a vertex buffer, and rendering using `gl.drawArrays()`.
 ---
 
 <div><canvas width="200" height="200" id="triangleCanvas"></canvas></div>

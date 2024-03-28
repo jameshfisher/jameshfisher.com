@@ -2,7 +2,12 @@
 title: 'The Three Ts of Time, Thought and Typing: measuring cost on the web'
 tags:
   - fave
+  - product
   - programming
+summary: >-
+  Businesses often tout "free" services, but the real costs come in terms of
+  time, thought, and typing required from users. Reducing these "Three Ts" is
+  key to improving sign-up flows and increasing conversions.
 ---
 
 "Create your free account"!

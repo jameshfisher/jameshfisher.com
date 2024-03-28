@@ -3,6 +3,9 @@ title: Adding a blog header
 justification: I want a lower bounce rate.
 tags:
   - blog
+summary: >-
+  Added a header to the blog with a photo that links to the homepage, as people
+  expect a header for navigation.
 ---
 
 My blog's "design" is intentionally very minimal.

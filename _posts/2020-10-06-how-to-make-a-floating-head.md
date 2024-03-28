@@ -6,6 +6,9 @@ tags:
   - webgl
   - machine-learning
 ogimage: /assets/2020-10-06/result.jpg
+summary: >-
+  Creating a "floating head" effect using WebGL and the BodyPix
+  machine learning model to segment the face from a webcam feed.
 ---
 
 In [a previous post](/2020/09/24/using-bodypix-segmentation-in-a-webgl-shader/).

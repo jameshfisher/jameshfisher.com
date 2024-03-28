@@ -6,6 +6,9 @@ tags:
   - latency
   - physics
 taggedAt: '2024-03-26'
+summary: >-
+  IP packets travel at ~20% the speed of light, with most time spent in routers
+  rather than on the wire.
 ---
 
 IP packets spend about 80% of their time in routers, and only about 20% on the wire.

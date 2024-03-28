@@ -4,9 +4,11 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  The head of the list is the top of the stack.
 ---
 
-A "stack" is an abstract data type 
+A "stack" is an abstract data type
 that provides `push` and `pop` operations
 which behave like "a stack of plates".
 There are many ways to implement a stack,

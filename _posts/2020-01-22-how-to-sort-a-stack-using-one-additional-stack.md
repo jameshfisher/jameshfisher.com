@@ -4,13 +4,15 @@ tags:
   - ctci
   - programming
   - haskell
+summary: >-
+  We can model "infinite tape" using two stacks. Then we can navigate the list in both directions. This lets us bubble-sort the list in O(n^2) time.
 ---
 
 Question 3.6 of _Cracking the Coding Interview_:
 
-> Write a program to sort a stack in ascending order (with biggest items on top). 
-> You may use at most one additional stack to hold items, 
-> but you may not copy the elements into any other data structure (such as an array). 
+> Write a program to sort a stack in ascending order (with biggest items on top).
+> You may use at most one additional stack to hold items,
+> but you may not copy the elements into any other data structure (such as an array).
 > The stack supports the following operations: `push` , `pop`, `peek` and `isEmpty`.
 
 Imagine you're a Turing machine, reading a tape.

@@ -9,6 +9,10 @@ tags:
   - programming
   - posix
 taggedAt: '2024-03-26'
+summary: >-
+  `mode_t` is a bitfield type in C that represents file permissions, including
+  read, write, and execute permissions for the owner, group, and other classes.
+  It provides symbolic constants to set and check these permissions.
 ---
 
 Lots of man pages refer to `mode_t`, but frustratingly, the manual does not include a page on it. (This is a general flaw in the manual: there are no pages for types.) The documentation for `mode_t` is found buried in `CHMOD(2)`:

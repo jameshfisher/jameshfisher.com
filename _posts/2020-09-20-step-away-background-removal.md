@@ -5,6 +5,10 @@ tags:
   - web
   - webgl
 ogimage: /assets/2020-09-20/result.jpg
+summary: >-
+  A step-away background removal technique using WebGL, which compares both
+  chrominance and luminance differences between the webcam feed and a captured
+  background image to create a transparent mask.
 ---
 
 In [this previous post](/2020/08/11/production-ready-green-screen-in-the-browser/) 

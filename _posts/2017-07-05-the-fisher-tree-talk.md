@@ -2,6 +2,8 @@
 title: The Fisher Tree at The Realtime Guild
 tags:
   - talk
+summary: >-
+  A talk about the Fisher Tree, a data structure, with slides and code.
 ---
 
 

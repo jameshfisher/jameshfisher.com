@@ -4,9 +4,12 @@ tags:
   - programming
   - javascript
   - web
+summary: >-
+  "Simplified CommonJS wrapping" feature is a hacky attempt to support
+  synchronous `require` calls by using regexes. It's gross.
 ---
 
-I don't think anyone would object to 
+I don't think anyone would object to
 the claim that JavaScript has too many module systems.
 From the olden days we have raw `<script>` loading,
 where dependencies are implicit,
@@ -43,7 +46,7 @@ define(
 );
 ```
 
-You know you're looking at AMD (or something like it) 
+You know you're looking at AMD (or something like it)
 if you see calls to a `define` function,
 or the inclusion of an "AMD loader" script,
 like `<script src="lib/require.js"></script>`.

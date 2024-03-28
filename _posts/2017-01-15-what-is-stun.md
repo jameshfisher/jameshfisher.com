@@ -5,6 +5,9 @@ tags:
   - networking
   - internet-protocol
 taggedAt: '2024-03-26'
+summary: >-
+  STUN is a protocol that allows clients to discover their public IP address and
+  port, enabling peer-to-peer connections in WebRTC.
 ---
 
 **TL;DR: STUN is a "What is my IP?" service**

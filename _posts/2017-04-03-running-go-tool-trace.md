@@ -2,6 +2,7 @@
 title: How to run `go tool trace`
 justification: I'm making screencasts of various topics using Vidrio.
 tags: []
+summary: "A screencast about `go tool trace`, a profiling tool for Go applications."
 ---
 
 I made this screencast here:

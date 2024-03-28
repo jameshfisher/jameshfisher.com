@@ -5,6 +5,8 @@ tags:
   - security
 hnUrl: 'https://news.ycombinator.com/item?id=20028108'
 hnUpvotes: 652
+summary: >-
+  Script detects and exposes your local web servers on `localhost` and your local network.
 ---
 
 <script>

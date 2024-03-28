@@ -4,6 +4,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Use concatenated string literals with newline characters to define multi-line
+  string literals in C.
 ---
 
 What ways do we have to define large string literals in C? Let's take this example:

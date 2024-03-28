@@ -1,6 +1,9 @@
 ---
 title: What is the routing table in Linux?
 tags: []
+summary: >-
+  When a packet arrives, Linux determines which network interface should handle
+  it. It uses the first rule in the routing table that matches the destination address. Surprisingly, all `127.0.0.0/8` addresses go to the loopback interface.
 ---
 
 You may have used the IP address `127.0.0.1` before.

@@ -2,6 +2,8 @@
 title: How to make a custom CIFilter in Swift
 justification: Future Vidrio requires image filters
 tags: []
+summary: >-
+  Using a `CIFilter` using a GLSL kernel to swap the red and green components of an image.
 ---
 
 Here's an example Swift program which will swap the red and green components of an image, and save the output to a file. It uses a custom `CIFilter`, which uses a GLSL kernel, the source of which is embedded in the program.

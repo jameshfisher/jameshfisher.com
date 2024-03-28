@@ -5,6 +5,9 @@ tags:
   - web
   - webgl
 ogimage: /assets/2020-08-31/example.png
+summary: >-
+  A WebGL fragment shader that implements the Sobel filter, a method for
+  detecting edges in an image. A demo processes your webcam video stream.
 ---
 
 Image processing often requires detecting edges.
@@ -22,8 +25,8 @@ to see edges detected in your webcam video:
 
 <script id="vertex-shader" type="glsl">
     attribute vec2 c;
-    void main(void) { 
-      gl_Position=vec4(c, 0.0, 1.0); 
+    void main(void) {
+      gl_Position=vec4(c, 0.0, 1.0);
     }
 </script>
 
@@ -64,32 +67,32 @@ to see edges detected in your webcam video:
     const webcamVideoEl = document.getElementById("webcamVideo");
     const displayCanvasEl = document.getElementById("display");
     const gl = displayCanvasEl.getContext("webgl");
-  
+
     const vs = gl.createShader(gl.VERTEX_SHADER);
     gl.shaderSource(vs, document.getElementById("vertex-shader").innerText);
     gl.compileShader(vs);
-  
+
     const fs = gl.createShader(gl.FRAGMENT_SHADER);
     gl.shaderSource(fs, document.getElementById("fragment-shader").innerText);
     gl.compileShader(fs);
     if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
       console.error(gl.getShaderInfoLog(fs));
     }
-  
+
     const prog = gl.createProgram();
     gl.attachShader(prog, vs);
     gl.attachShader(prog, fs);
     gl.linkProgram(prog);
     gl.useProgram(prog);
-  
+
     const vb = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, vb);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([ -1,1,  -1,-1,  1,-1,  1,1 ]), gl.STATIC_DRAW);
-  
+
     const coordLoc = gl.getAttribLocation(prog, 'c');
     gl.vertexAttribPointer(coordLoc, 2, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(coordLoc);
-  
+
     gl.activeTexture(gl.TEXTURE0);
     const tex = gl.createTexture();
     gl.bindTexture(gl.TEXTURE_2D, tex);
@@ -97,12 +100,12 @@ to see edges detected in your webcam video:
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-    
+
     const texLoc = gl.getUniformLocation(prog, "tex");
     const texSizeLoc = gl.getUniformLocation(prog, "texSize");
 
     function startWebcam() {
-      navigator.mediaDevices.getUserMedia({ video: { 
+      navigator.mediaDevices.getUserMedia({ video: {
             facingMode: "user",
             width: { ideal: 320 },
             height: { ideal: 240 } } }).then(stream => {
@@ -154,7 +157,7 @@ One approach is to convert the image to grayscale before detecting edges,
 although this throws away information (and thus edges).
 Another approach is to run edge detection separately on each color channel.
 That is what the demo above does.
-For example, if a line is mostly red, 
+For example, if a line is mostly red,
 it means there is a steep gradient in the red color channel.
 Notice the strong orange line in the image above:
 there is little blue in it,
@@ -185,7 +188,7 @@ and the total sum is near zero.
 If given a horizontal gradient,
 from white on the left to black on the right,
 the kernel outputs a positive value.
-For example, consider a horizontal gradient 
+For example, consider a horizontal gradient
 that decreases by 1 for every pixel towards the right:
 
 ```

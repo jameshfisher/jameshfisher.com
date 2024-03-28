@@ -4,6 +4,8 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  Compresses a string by replacing consecutive repeated characters with the character and its count. The solution requires two passes to first calculate the length of the compressed string, then generate it.
 ---
 
 Question 1.5 of _Cracking the Coding Interview_:

@@ -6,6 +6,8 @@ tags:
   - webgl
   - machine-learning
 ogimage: /assets/2020-09-22/result.jpg
+summary: >-
+  A WebGL shader that uses BodyPix segmentation to set the alpha channel.
 ---
 
 In [the previous post](/2020/09/23/running-bodypix-on-a-video-stream/)

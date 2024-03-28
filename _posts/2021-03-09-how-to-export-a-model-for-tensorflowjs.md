@@ -4,6 +4,8 @@ tags:
   - tensorflow
   - programming
   - machine-learning
+summary: >-
+  Exporting a TensorFlow model, converting it to the TensorFlow.js format, and running it in the browser with interactive input.
 ---
 
 This post shows how to save a "hello world" model in TensorFlow (Python),

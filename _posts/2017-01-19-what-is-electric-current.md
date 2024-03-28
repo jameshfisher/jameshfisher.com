@@ -4,6 +4,11 @@ tags:
   - electricity
   - physics
 taggedAt: '2024-03-26'
+summary: >-
+  Electric current measures the change in electric charge across a boundary,
+  like a wire. It is measured in amperes (coulombs per second) and reflects the
+  net movement of electrons and protons from one side of the boundary to the
+  other.
 ---
 
 So we saw what "electric charge" means: it measures _net protons_ of an object, i.e. the number of protons minus the number of electrons. We measure it in elementary charges, _e_.

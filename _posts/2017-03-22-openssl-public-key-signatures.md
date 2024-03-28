@@ -2,6 +2,8 @@
 title: How do I do public-key signatures with `openssl`?
 justification: I'm learning SSL/TLS by going through the commands of the `openssl` tool.
 tags: []
+summary: >-
+  Using `openssl genrsa`, `openssl rsa`, `openssl rsautl -sign`, and `openssl rsautl -verify`.
 ---
 
 Yesterday I described how to do public-key encryption with `openssl`, using the `genrsa`, `rsa`, and `rsautl` commands. Those same commands can also do signing and verification. Previously, we set up keys so that Bob could send a private message to Alice. To do this, Alice made a private key, and she sent the public key for it to Bob. With this same setup, Alice is using her public key as an unforgeable digital identity. This requires two things: that when people send messages to Alice, only Alice can receive them; and when Alice sends messages to people, they can see that the message is from Alice. Signing and verification deal with the latter story.

@@ -1,6 +1,9 @@
 ---
 title: '`lldb` hello world'
 tags: []
+summary: >-
+  Compiling a C program with debugging flags, then using `lldb` to set
+  breakpoints, step through the code, and observe output.
 ---
 
 Create the following C program, `main.c`. We'll use `lldb` to step through it.

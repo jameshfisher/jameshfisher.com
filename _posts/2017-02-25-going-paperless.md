@@ -3,6 +3,11 @@ title: Should I go paperless?
 tags:
   - personal
 taggedAt: '2024-03-26'
+summary: >-
+  Going paperless by scanning, shredding, and storing documents digitally in
+  Google Drive can solve issues with physical clutter and document management,
+  while carefully considering the tradeoffs of legal weight, fidelity,
+  sentiment, independence, and privacy.
 ---
 
 I have countless pieces of paper in my flat. Most of them ...

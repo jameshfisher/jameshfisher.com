@@ -3,6 +3,9 @@ title: How to replace GIF with HTML video in 2021
 tags:
   - programming
   - web
+summary: >-
+  To replace a GIF with an HTML `<video>` element in 2021, use a long list of
+  attributes disable unwanted browser behaviors.
 ---
 
 You want to add a video to your webpage that acts like an animated GIF.

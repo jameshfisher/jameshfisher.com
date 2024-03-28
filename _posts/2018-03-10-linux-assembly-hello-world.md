@@ -4,6 +4,8 @@ tags:
   - programming
   - unix
   - assembly
+summary: >-
+  An x86-64 program that writes to stdout and exits.
 ---
 
 A "hello world" program writes to stdout (calling `write`) then exits (calling `exit`).

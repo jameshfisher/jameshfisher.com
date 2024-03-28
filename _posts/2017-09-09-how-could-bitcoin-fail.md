@@ -1,6 +1,9 @@
 ---
 title: How could Bitcoin fail?
 tags: []
+summary: >-
+  Bitcoin could fail due to theoretical inferiority, lack of practicality,
+  bans, critical bugs, centralized control, or technological collapse.
 ---
 
 I'm intending to increase the amount of time and money I invest in cryptocurrencies such as Bitcoin.

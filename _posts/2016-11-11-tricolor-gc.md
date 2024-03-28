@@ -8,6 +8,11 @@ tags:
   - concurrency
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Golang's garbage collector uses a "tricolor" algorithm, dividing heap objects
+  into black, white, and grey sets. The algorithm can run concurrently with the
+  program, and the "tricolor" invariant ensures no pointers go directly from the
+  black set to the white set, allowing the white set to be cleared.
 ---
 
 Golang's garbage collector uses a "tricolor" algorithm. This means it divides the heap objects into three sets: black, white, and grey. Initially, all objects are white, and as the algorithm proceeds, objects are moved into the grey and then black sets, in such a way that eventually the orphaned (collectible) objects are left in the white set, which is then cleared. An important property of this algorithm is that it can run concurrently with the "mutator" (program).

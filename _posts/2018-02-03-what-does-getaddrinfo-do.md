@@ -6,6 +6,8 @@ tags:
   - posix
 hnUrl: 'https://news.ycombinator.com/item?id=30444336'
 hnUpvotes: 2
+summary: >-
+  `getaddrinfo` ostensibly does DNS lookups. Sounds simple, but it uses more than 100 system calls! Let's trace the crazy path of address lookup on Linux.
 ---
 
 The following C program calls `getaddrinfo("google.com", ...)`,

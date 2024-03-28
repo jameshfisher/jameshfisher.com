@@ -5,6 +5,8 @@ tags:
   - epidemiology
 hnUrl: 'https://news.ycombinator.com/item?id=22343490'
 hnUpvotes: 1
+summary: >-
+  An interactive simulation showing how disease characteristics and human behavior can significantly impact the spread of an epidemic.
 ---
 
 Below you see a simulation of an epidemic.
@@ -115,7 +117,7 @@ Max infectious: <span id="maxInfected"></span>. Min susceptible: <span id="minSu
         document.getElementById("infectionDurationDaysValue").innerText = INFECTION_DURATION_DAYS;
         document.getElementById("meetingInfectionProbabilityValue").innerText = (MEETING_INFECTION_PROBABILITY * 100) + "%";
         document.getElementById("meetingsPerDayPerPersonValue").innerText = MEETINGS_PER_DAY_PER_PERSON;
-        
+
         labels.length = 0;
         datasets.susceptible.length = 0;
         datasets.infected.length = 0;
@@ -180,7 +182,7 @@ or for death (perhaps the most important state we care about!).
 And yet the SIR model shows some important things about epidemics.
 It shows that the outcome is very sensitive to inputs.
 I mentioned one at the start:
-a moderate reduction in the number of meetings 
+a moderate reduction in the number of meetings
 can be the difference between a pandemic and an isolated case.
 Similarly,
 if we reduced transmission probability from 3% to 2%,

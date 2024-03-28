@@ -1,6 +1,9 @@
 ---
 title: What is stdatomic in C?
 tags: []
+summary: >-
+  `stdatomic` provides atomic operations like `atomic_fetch_add` to ensure
+  thread-safe access to shared variables.
 ---
 
 I was watching a talk yesterday about [Go's `sync/atomic` package](https://golang.org/pkg/sync/atomic/) which provides atomic operations like `AddInt32(*int32, int32)`. These are implemented using special atomic CPU instructions.

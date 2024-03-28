@@ -4,6 +4,10 @@ tags:
   - webrtc
   - web
 taggedAt: '2024-03-26'
+summary: >-
+  WebRTC has many challenges - browser API inconsistencies, protocol
+  ambiguities, infrastructure requirements, and lack of built-in "business
+  logic". Not as easy as it seemed at first.
 ---
 
 Summary:

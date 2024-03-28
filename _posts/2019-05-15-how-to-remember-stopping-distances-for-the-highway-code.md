@@ -1,12 +1,15 @@
 ---
 title: How to remember stopping distances for the Highway Code
 tags: []
+summary: >-
+  Formulas to calculate stopping distances for different speeds, using
+  thinking and braking distances, instead of memorizing a table.
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" crossorigin="anonymous">
 
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" crossorigin="anonymous"></script> 
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMath()"></script> 
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMath()"></script>
 <script>
   function renderMath() {
     renderMathInElement(document.body,{
@@ -24,10 +27,10 @@ But it's significantly less effort to learn the following formulas:
 <div>
   \[
   \begin{aligned}
-  s(n) &= \text{stopping distance at } 10n \text{ mph} \\ 
+  s(n) &= \text{stopping distance at } 10n \text{ mph} \\
   t(n) &= \text{thinking distance at } 10n \text{ mph} \\
   b(n) &= \text{braking distance at } 10n \text{ mph} \\
-  s(n) &= t(n) + b(n) \\ 
+  s(n) &= t(n) + b(n) \\
   t(n) &= 3n \text{ meters} \\
   b(n) &= \frac{3n^2 + n}{2} - 1 \text{ meters} \\
   \end{aligned}

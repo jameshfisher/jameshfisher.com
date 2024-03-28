@@ -3,6 +3,8 @@ title: How does `ping` work?
 tags:
   - programming
   - networking
+summary: >-
+  `ping` uses ICMP, or "Internet Control Message Protocol", to send "echo request" packets and receive "echo reply" packets.
 ---
 
 You may have used `ping` before,

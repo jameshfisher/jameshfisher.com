@@ -1,6 +1,10 @@
 ---
 title: Coping with depression
 tags: []
+summary: >-
+  Depression involves negative cycles of repression, guilt, and reclusiveness.
+  Coping strategies include getting out, making healthy meals, reading, and
+  talking about it.
 ---
 
 The weather is getting colder.

@@ -9,6 +9,9 @@ tags:
   - web
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  A green screen implementation in the browser using WebGL and chroma key.
+  Includes a live demo.
 ---
 
 You're making a web app that captures a user's webcam,

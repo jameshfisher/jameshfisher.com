@@ -1,6 +1,9 @@
 ---
 title: WebAssembly hello world
 tags: []
+summary: >-
+  A WebAssembly program that prints `42` to the console, demonstrating
+  the structure and usage of WebAssembly.
 ---
 
 If your browser supports WebAssembly,

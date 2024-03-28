@@ -1,6 +1,9 @@
 ---
 title: Unicode is only for plaintext
 tags: []
+summary: >-
+  The Unicode Consortium rejected proposals for encoding a "external link sign"
+  character, citing that it is not "an element of plain text". This precedent makes it unlikely that a proposal for a Unicode feed icon would be approved.
 ---
 
 I wanted to get the Feed icon (<img src="https://upload.wikimedia.org/wikipedia/en/4/43/Feed-icon.svg" width="16" height="16"/>) into Unicode.

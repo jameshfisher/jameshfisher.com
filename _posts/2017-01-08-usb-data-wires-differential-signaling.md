@@ -4,6 +4,10 @@ tags:
   - usb
   - electronics
 taggedAt: '2024-03-26'
+summary: >-
+  USB uses "differential signaling" where the sender transmits two signals, `D+`
+  and `D-`, and the receiver interprets the difference `D+ - D-`. This
+  cancels out electromagnetic interference that affects both wires equally.
 ---
 
 The job of those data wires is to transfer a single signal (the "serial" in USB). This means USB is "half-duplex": at any given time, one end of the cable is the sender, and the other end the receiver.

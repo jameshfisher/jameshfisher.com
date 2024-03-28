@@ -3,6 +3,9 @@ title: How can I capture all crashes in a web page?
 tags:
   - programming
   - web
+summary: >-
+  Including uncaught errors, unhandled promise rejections, image load failures,
+  Content Security Policy violations, and `console.error` calls.
 ---
 
 Services like [Sentry](https://sentry.io/)

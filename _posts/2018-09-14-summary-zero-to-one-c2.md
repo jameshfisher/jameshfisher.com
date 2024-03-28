@@ -3,6 +3,10 @@ title: 'Summary of ''Zero to One'', Chapter 2: party like it''s 1999'
 tags:
   - zero-to-one
   - summary
+summary: >-
+  The dot-com bubble showed that conventional wisdom is often wrong. Lessons
+  learned, like being "lean" and avoiding new markets, prevent bold visions and
+  are the opposite of what companies like Google and PayPal needed.
 ---
 
 **Summary:**

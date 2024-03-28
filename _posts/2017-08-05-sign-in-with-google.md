@@ -2,6 +2,9 @@
 title: 'How to let your users sign in with Google, from scratch'
 justification: I've never implemented any pages with SSO! I need to know how it works.
 tags: []
+summary: >-
+  Implemented Google Sign-In for a web app, handling the authentication flow and
+  verifying ID tokens to authorize access to a private diary feature.
 ---
 
 Back in the dark ages (say, 2010),

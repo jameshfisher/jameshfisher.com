@@ -4,6 +4,10 @@ tags:
   - programming
   - electron
   - javascript
+summary: >-
+  `require` in Electron works like Node.js, allowing you to load modules, but
+  each Renderer process has its own isolated module state. Relative module
+  resolution depends on whether you use `loadFile` or `loadURL`.
 ---
 
 [Electron apps copy the Chromium process architecture](/2020/10/14/the-electron-process-architecture-is-the-chromium-process-architecture/).
@@ -40,10 +44,10 @@ But you can allow them to use the Node.js module system, too!
 To do so, we pass:
 
 ```js
-const window = new BrowserWindow({ 
-  webPreferences: { 
-    nodeIntegration: true 
-  } 
+const window = new BrowserWindow({
+  webPreferences: {
+    nodeIntegration: true
+  }
 });
 ```
 
@@ -73,7 +77,7 @@ exports.getValue = () => counter;
 exports.increment = () => counter++;
 ```
 
-In a typical Node.js app, 
+In a typical Node.js app,
 this module would be loaded once,
 and the `counter` state would be shared globally.
 This is not the case in Electron.
@@ -85,15 +89,15 @@ you can't use modules for sneaky inter-process communication
 
 The `require('electron')` module is a built-in,
 but we can require local modules in the file system too.
-As far as I can tell, 
+As far as I can tell,
 Electron searches for modules in the same way Node.js does.
 But relative to what starting filepath?
 
 If you use `loadFile`, modules seem to be resolved relative to the loaded file.
-For example, if you `loadFile("foo/bar/baz.html")`, 
+For example, if you `loadFile("foo/bar/baz.html")`,
 then a call to `require('some_module)'` on that page
 will look for a module at `foo/bar/baz/node_modules/some_module`.
-But if you use `loadURL` with a non-file protocol, 
+But if you use `loadURL` with a non-file protocol,
 `require('some_module')` won't search for modules on disk;
 it seems to only work for built-in modules like `"electron"` or `"fs"`.
 This is a good thing

@@ -1,6 +1,8 @@
 ---
 title: How to inspect Mach-O files
 tags: []
+summary: >-
+  Using `otool` to see dynamic library dependencies, and `nm` to see function symbols.
 ---
 
 `clang main.c` produces an `a.out`,

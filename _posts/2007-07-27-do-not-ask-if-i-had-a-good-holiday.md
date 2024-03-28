@@ -4,6 +4,10 @@ tags:
   - humor
   - personal
 taggedAt: '2024-03-26'
+summary: >-
+  A disastrous start to a holiday in Turkey, involving a naked midnight run,
+  injured toes, heat exhaustion, and a serious bacterial infection, leading to
+  an unpleasant but unforgettable trip.
 ---
 
 Why? Because I didn't.

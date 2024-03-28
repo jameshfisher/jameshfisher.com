@@ -4,6 +4,10 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  `fdset` in C is a data structure that represents a set of file descriptors.
+  The `FD_SET`, `FD_CLR`, `FD_ISSET`, and `FD_ZERO` macros are used to
+  manipulate and inspect these sets.
 ---
 
 `sys/socket.h` provides some macros for working with sets of file descriptors. How do they work?

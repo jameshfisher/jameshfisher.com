@@ -4,6 +4,8 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  `size_t` is used to represent the size of objects in memory. It is commonly used for array indexing.
 ---
 
 The `size_t` type is used to represent the size of objects in memory. As examples, it is the type of the return value of the `sizeof` operator, and of the `strlen` function. This means that it is an unsigned integral type. Its specific size is platform-dependent; the size is chosen to be large enough to represent all sizes on that platform.

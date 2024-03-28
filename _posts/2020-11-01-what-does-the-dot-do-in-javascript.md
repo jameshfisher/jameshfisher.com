@@ -3,6 +3,7 @@ title: What does the dot do in JavaScript?
 tags:
   - programming
   - javascript
+  - fave
 ---
 
 Ah, that little dot!
@@ -13,7 +14,7 @@ Two concepts interact subtly here:
 prototypical inheritance
 and accessor properties (getters/setters).
 There are some weird corner cases, and I bet you don't know all of them!
-In this post series, 
+In this post series,
 I explain the behavior of `foo.bar`, `foo.bar()`, and `foo.bar = baz`
 by reimplementing them in plain JavaScript.
 
@@ -81,14 +82,14 @@ function Invoke(obj, prop, argumentsList = []) {
 Surprisingly, this means that you can define a getter that returns the function to bind in the method call:
 
 ```js
-const obj = { 
+const obj = {
   i: 10,
   get add() {
     // Return the method to be called
-    return function(x) { 
+    return function(x) {
       this.i += x;  // `this` will be `obj`
     };
-  } 
+  }
 };
 obj.add(2);
 console.log(obj.i);  // Logs 12
@@ -112,7 +113,7 @@ export function Set(obj, prop, val) {
     if (ownPropDesc.set) {
       ownPropDesc.set.call(obj, val);
       return val;
-    } 
+    }
     else if (ownPropDesc.get) {
       // Note: we end here, rather than going up the chain looking for a setter.
       throw new TypeError(`Cannot set property ${prop} of #<Object> which has only a getter`);
@@ -139,14 +140,14 @@ export function Set(obj, prop, val) {
             // Note: despite the writable check, we _don't_ write to the ancestor, or continue up the chain.
             Object.defineProperty(obj, prop, { value: val, writable: true, enumerable: true, configurable: true });
             return val;
-          } 
+          }
           else {
             throw new TypeError(`Cannot assign to read only property '${prop}' of object '#<Object>'`);
           }
         }
       }
     }
-  
+
     // Not on the prototype chain either. Just set a new own property.
     Object.defineProperty(obj, prop, { value: val, writable: true, enumerable: true, configurable: true });
     return val;

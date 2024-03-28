@@ -1,6 +1,10 @@
 ---
 title: Generating a normal map in WebGL
 tags: []
+summary: >-
+  Generates a normal map of a cone in WebGL dynamically, without needing to load
+  a static file. Using a rotation matrix and color conversion
+  functions to create the normal map.
 ---
 
 <div>

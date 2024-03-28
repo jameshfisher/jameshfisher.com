@@ -3,6 +3,10 @@ title: How to write a TCP chat server in 55 lines of Golang
 hnUrl: 'https://news.ycombinator.com/item?id=26597761'
 hnUpvotes: 3
 tags: []
+summary: >-
+  A TCP chat server in Go, where each client message is broadcast to all
+  other connected clients. Uses the `net` package and goroutines to manage
+  multiple connections.
 ---
 
 The go `net` package lets you write a TCP server. Here's a chat server, where every byte sent by a client is copied to every other client (including the sender).

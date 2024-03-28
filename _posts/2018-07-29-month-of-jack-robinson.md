@@ -2,6 +2,10 @@
 title: Month of Jack Robinson
 tags:
   - jackrobinson
+summary: >-
+  Jack Robinson is an instant messaging app where your message is shared as you
+  type, with no "submit" button, reducing finger-to-eye delay compared to
+  traditional chat apps.
 ---
 
 After a three-month hiatus, my blog is back,

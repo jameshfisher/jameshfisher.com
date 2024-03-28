@@ -4,6 +4,9 @@ tags:
   - xcode
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  An `.xcworkspace` file is a directory that contains a workspace configuration
+  for Xcode projects.
 ---
 
 Xcode often creates a "SomeProject.xcworkspace" file. What is it?

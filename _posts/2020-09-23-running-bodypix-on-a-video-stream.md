@@ -4,6 +4,10 @@ tags:
   - programming
   - web
   - machinelearning
+summary: >-
+  Applying the BodyPix machine learning model to a video stream for real-time
+  person segmentation, with separate render and segmentation loops to optimize
+  performance.
 ---
 
 In [this previous post](/2020/08/16/bodypix-hello-world/),

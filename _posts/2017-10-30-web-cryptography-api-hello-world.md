@@ -4,6 +4,9 @@ tags:
   - programming
   - crypto
   - javascript
+summary: >-
+  The Web Cryptography API provides low-level crypto primitives in JavaScript,
+  including hashing strings using SHA-256.
 ---
 
 The [Web Cryptography API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API)

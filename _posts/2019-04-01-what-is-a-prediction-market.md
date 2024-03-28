@@ -2,6 +2,10 @@
 title: What is a prediction market?
 tags:
   - betting
+summary: >-
+  Prediction markets allow people to bet on the outcome of future events, with
+  the traded share prices reflecting the market's probability estimate for those
+  events.
 ---
 
 "[PredictIt](https://www.predictit.org/support/what-is-predictit) 

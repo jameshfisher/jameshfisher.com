@@ -4,6 +4,8 @@ tags:
   - memory-management
   - c
 taggedAt: '2024-03-26'
+summary: >-
+  Use `mmap` to map a file into memory, then read and write the memory directly.
 ---
 
 Yesterday I introduced `mmap` as a way to map physical memory into the address space. But `mmap` is more well-known for its ability to map _files_ into the address space.

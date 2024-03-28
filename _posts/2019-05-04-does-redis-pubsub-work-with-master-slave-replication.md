@@ -3,6 +3,10 @@ title: Does Redis Pub/Sub work with master-slave replication?
 tags:
   - programming
   - redis
+summary: >-
+  Redis Pub/Sub works with master-slave replication, allowing messages published
+  on the master to be replicated to the slave and received by subscribed clients
+  on the slave.
 ---
 
 In short: yes!

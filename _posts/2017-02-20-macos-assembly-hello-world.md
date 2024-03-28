@@ -9,6 +9,9 @@ tags:
   - x86-64
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  A "Hello, world!" program in x86-64 assembly for macOS, using
+  the NASM assembler and system calls for writing to stdout and exiting.
 ---
 
 I started with [this gist](https://gist.github.com/FiloSottile/7125822), creating this file:

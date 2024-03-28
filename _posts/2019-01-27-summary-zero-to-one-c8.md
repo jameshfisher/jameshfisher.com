@@ -3,6 +3,10 @@ title: 'Summary of ''Zero to One'', Chapter 8: Secrets'
 tags:
   - zero-to-one
   - summary
+summary: >-
+  Valuable businesses are built on secrets - things that are hard but still
+  doable. Look for secrets by thinking contrarily and exploring outside the
+  mainstream. When you find a secret, share it only with the people you need to.
 ---
 
 **Summary:**

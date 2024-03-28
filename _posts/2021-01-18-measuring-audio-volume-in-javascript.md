@@ -4,6 +4,8 @@ tags:
   - programming
   - javascript
   - web
+summary: >-
+  A demo of real-time microphone volume measurement using the Web Audio API's `AnalyserNode`.
 ---
 
 Click <button id="startButton">Start measuring</button>,
@@ -31,7 +33,7 @@ window.requestAnimationFrame(onFrame);
 ```
 
 The Web Audio API is a kind of ["filter graph API"](https://en.wikipedia.org/wiki/Filter_graph).
-This means that in JavaScript, 
+This means that in JavaScript,
 we create nodes in a directed graph to say how the audio data flows
 from sources to sinks.
 (There is still no equivalent API for video.

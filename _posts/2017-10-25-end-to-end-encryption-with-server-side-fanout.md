@@ -3,6 +3,11 @@ title: Group chat with end-to-end encryption
 tags:
   - programming
   - crypto
+summary: >-
+  Group chat with end-to-end encryption can use "client-side fan-out" where the
+  sender encrypts the message separately for each recipient, or "server-side
+  fan-out" where the sender encrypts the message once using a shared secret,
+  then the server distributes the ciphertext to the group.
 ---
 
 In a two-person conversation,

@@ -4,6 +4,9 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  To delete a node from the middle of a linked list, copy the value and next
+  pointer of the next node to the current node, then free the next node.
 ---
 
 Question 2.3 of _Cracking the Coding Interview_:

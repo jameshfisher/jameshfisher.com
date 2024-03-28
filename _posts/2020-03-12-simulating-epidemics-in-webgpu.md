@@ -4,6 +4,10 @@ tags:
   - programming
   - webgpu
   - epidemiology
+summary: >-
+  Simulating an epidemic in WebGPU using a direct index into an array of cells,
+  avoiding the issues encountered with the previous WebGL implementation that
+  used a texture.
 ---
 
 A few days ago, I [simulated an epidemic with WebGL](/2020/02/23/simulating-epidemics-with-webgl/),

@@ -1,6 +1,11 @@
 ---
 title: What is a TTY?
 tags: []
+summary: >-
+  Terminals in Unix are files in the filesystem, identified by names like
+  `/dev/ttys008`. Processes have standard input, output, and error streams that
+  can be connected to terminals. The terminal a process is attached to can be
+  inspected and manipulated.
 ---
 
 Open a terminal and run `tty`.

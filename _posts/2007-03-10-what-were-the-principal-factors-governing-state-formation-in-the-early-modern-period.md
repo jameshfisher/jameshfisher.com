@@ -14,6 +14,8 @@ tags:
   - history
   - essay
 taggedAt: '2024-03-26'
+summary: >-
+  Humanism, the Reformation, centralized administration, the decline of feudalism, and the rise of national identity.
 ---
 
 "There is a strong sense of unreality about the Renaissance \[...\]

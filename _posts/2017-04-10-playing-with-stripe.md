@@ -2,6 +2,10 @@
 title: Playing with Stripe
 justification: I want to monetize Vidrio. I'm investigating Stripe as an option.
 tags: []
+summary: >-
+  Investigating Stripe as a payment processor for Vidrio. Trying out the
+  client-side and server-side integration, creating a simple Go server to handle
+  the Stripe token and charge the user.
 ---
 
 I want to monetize Vidrio using product keys. One way to do this with a generic payment processor like Stripe. After my server receives notification of payment, it can generate a product key.

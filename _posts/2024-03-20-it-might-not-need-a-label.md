@@ -5,6 +5,8 @@ tags:
   - design
 hnUrl: 'https://news.ycombinator.com/item?id=39766709'
 hnUpvotes: 3
+summary: >-
+  Often, content is self-labelling. Removing its label can make the content _more_ scannable. Programmers often over-label.
 ---
 
 One hallmark of "programmer UI" is <em>using labels for everything</em>.

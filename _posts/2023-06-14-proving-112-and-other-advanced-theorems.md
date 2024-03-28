@@ -3,12 +3,14 @@ title: Proving 1+1=2 and other advanced theorems
 tags:
   - math
   - programming
+summary: >-
+  Lean is used to define and prove the commutativity of addition on natural numbers.
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" crossorigin="anonymous">
 
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" crossorigin="anonymous"></script> 
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMath()"></script> 
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMath()"></script>
 <script>
   function renderMath() {
     renderMathInElement(document.body,{

@@ -5,6 +5,9 @@ tags:
   - physics
   - electricity
 taggedAt: '2024-03-26'
+summary: >-
+  Electric charge is the number of electrons minus the number of protons in an
+  object.
 ---
 
 In my quest to understand computing and networking, I have admitted a need to learn electronics. There's no escaping it any more.

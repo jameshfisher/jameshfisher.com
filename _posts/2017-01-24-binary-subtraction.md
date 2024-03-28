@@ -4,6 +4,9 @@ tags:
   - programming
   - computer-science
 taggedAt: '2024-03-26'
+summary: >-
+  To subtract in binary, we use carry bits and two's complement
+  representation.
 ---
 
 Remember how subtraction works. We work from the least-significant bits to the most-significant, and pairwise subtract them. `1-1=0`, `1-0=1`, `0-0=0`.

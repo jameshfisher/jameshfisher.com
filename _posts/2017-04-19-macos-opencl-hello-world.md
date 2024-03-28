@@ -1,6 +1,8 @@
 ---
 title: How to write an OpenCL 'hello world' on macOS
 tags: []
+summary: >-
+  A program that squares an array of floats on the GPU, using the OpenCL API on macOS.
 ---
 
 OpenCL runs programs on a GPU. It does other things, but this is what I'm interested in. On macOS, the OpenCL API is provided by including `<OpenCL/opencl.h>`, and you link with the OpenCL implemention using `-framework OpenCL`. The following is an example program using OpenCL; [it's borrowed from this official example](https://developer.apple.com/library/content/samplecode/OpenCL_Hello_World_Example/Listings/hello_c.html). I've stripped out all error checking to make the code more digestible.

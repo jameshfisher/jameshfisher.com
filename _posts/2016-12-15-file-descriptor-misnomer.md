@@ -5,6 +5,8 @@ tags:
   - posix
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  File descriptors should be called "resource descriptors". They represent various system resources, not just regular files. The operations you can perform depend on the specific resource.
 ---
 
 People say "in UNIX, everything is a file". And that we interact with the operating system through "file descriptors".

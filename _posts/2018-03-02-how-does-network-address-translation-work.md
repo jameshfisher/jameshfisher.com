@@ -3,6 +3,8 @@ title: How does network address translation work?
 tags:
   - programming
   - networking
+summary: >-
+  NAT allows multiple devices in a local network to share a single public IP address. Routers modify IP and port information in network packets, and manage a translation table.
 ---
 
 I have a laptop in front of me

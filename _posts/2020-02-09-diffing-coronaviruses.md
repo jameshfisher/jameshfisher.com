@@ -5,6 +5,9 @@ tags:
   - bioinformatics
 hnUrl: 'https://news.ycombinator.com/item?id=22282458'
 hnUpvotes: 119
+summary: >-
+  Comparing the genome sequences of the Wuhan coronavirus and a bat coronavirus
+  using `diff` and NCBI BLAST reveals an 89% similarity.
 ---
 
 We can use standard UNIX tools
@@ -20,8 +23,8 @@ MG772933.1: 29802 words  26618 89% common  856 3% deleted  2328 8% changed
 MN988713.1: 29882 words  26618 89% common  897 3% inserted  2367 8% changed
 ```
 
-This says that there's an 89% similarity 
-between bat CoV (MG772933.1) 
+This says that there's an 89% similarity
+between bat CoV (MG772933.1)
 and human nCoV (MN988713.1).
 More precisely,
 they share a subsequence of 26618 bases,
@@ -35,7 +38,7 @@ That `genome_diff` script looks like this:
 
 This script works by fetching the genome from [the NCBI database](https://www.ncbi.nlm.nih.gov/).
 The strings "MG772933.1" and "MN988713.1" are [accession numbers](https://en.wikipedia.org/wiki/Accession_number_(bioinformatics)).
-The API returns the RNA sequence in FASTA format, 
+The API returns the RNA sequence in FASTA format,
 which looks like:
 
 ```
@@ -53,7 +56,7 @@ The first line, starting with `>`, describes the sequence that follows.
 We don't need this metadata, so we strip it with `grep -v '^>'`.
 Next, we don't need those newline characters,
 so we strip them with `tr -d '\n'`.
-Finally, 
+Finally,
 because `diff` works on lines rather than characters,
 we'll instead use `wdiff`,
 after separating the characters into separate words using `sed 's/\(.\)/\1 /g'`.
@@ -87,7 +90,7 @@ _Correction 2020-02-11:_
 My script used  `tr -d -C 'ATGC'`
 to strip newlines,
 but it should use `tr -d '\n'`.
-It's important, because 
+It's important, because
 the full set of FASTA characters in this file
 also includes `S`, `W`, and `Y`!
 For the meaning of these,

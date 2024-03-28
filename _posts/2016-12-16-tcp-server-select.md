@@ -7,6 +7,10 @@ tags:
   - posix
   - system-calls
 taggedAt: '2024-03-26'
+summary: >-
+  The `select` syscall allows a process to sleep and wake up when a file
+  descriptor is ready for reading, writing, or has an exceptional condition.
+  This enables a TCP server to handle multiple clients concurrently.
 ---
 
 Yesterday I described the minimal commands for a TCP server. But that server can only serve one client at a time! It does some work with one TCP connection, then closes it and deals with the next TCP connection, etc. This is not how most servers work; the clients expect to be able to talk to the server regardless of what other clients are around.

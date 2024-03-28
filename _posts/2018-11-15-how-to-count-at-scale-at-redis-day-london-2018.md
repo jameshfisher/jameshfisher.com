@@ -2,6 +2,7 @@
 title: _How to count at scale_ at Redis Day London 2018
 tags:
   - talk
+summary: ' '
 ---
 
 I gave this talk at [Redis Day London 2018](https://redislabs.com/community/redis-day-london-2018/).

@@ -9,6 +9,10 @@ tags:
   - posix
   - system-calls
 taggedAt: '2024-03-26'
+summary: >-
+  Kqueue is a more efficient alternative to `select` for managing multiple TCP
+  connections, providing a publish-subscribe model for tracking events in the
+  kernel.
 ---
 
 I previously described [how a process can serve multiple TCP clients simultaneously using the `select` system call](/2016/12/16/tcp-server-select/), which blocks waiting for one of many possible events.

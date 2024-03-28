@@ -1,6 +1,8 @@
 ---
 title: What system calls does `dlopen` use?
 tags: []
+summary: >-
+  The `dlopen` API uses `open`, `mmap`, `close`, and `munmap` to load a shared object file into memory, without requiring any special syscalls.
 ---
 
 When using the `dlopen` API - `dlopen`, `dlsym`, `dlclose` - what syscalls does it use?

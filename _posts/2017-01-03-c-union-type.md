@@ -6,6 +6,10 @@ tags:
   - data-structures
   - semantics
 taggedAt: '2024-03-26'
+summary: >-
+  A `union` in C allows one variable to hold different data types, where the
+  storage is shared. The size of a `union` is at least the size of its largest
+  member. Fields in a `union` have the same byte offset.
 ---
 
 ```c

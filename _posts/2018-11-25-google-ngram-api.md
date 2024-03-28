@@ -2,6 +2,10 @@
 title: What is the  API for Google Ngram Viewer?
 tags:
   - programming
+summary: >-
+  The Google Ngram Viewer API is undocumented, but can be accessed by replacing
+  the `graph` in the URL with `json`. This returns a JSON response with the
+  frequency of the searched phrase over time.
 ---
 
 The [Google Ngram Viewer](https://books.google.com/ngrams) shows the frequency of phrases over time.

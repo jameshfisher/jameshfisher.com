@@ -2,6 +2,10 @@
 title: What is simulated annealing?
 tags:
   - programming
+summary: >-
+  Simulated annealing is a variation of trial-and-error optimization that
+  generates mutations of the current best guess, and gradually reduces the
+  magnitude of the mutations over time, similar to how metals cool.
 ---
 
 Below you see a bunch of points,

@@ -3,6 +3,8 @@ title: Forward secrecy with hash ratchets
 tags:
   - programming
   - crypto
+summary: >-
+  A "hash ratchet" ensures that a compromise of the current key does not allow decryption of past messages. Each message's encryption key is derived from the previous key using a hash function.
 ---
 
 Alice wants to send messages to Bob.

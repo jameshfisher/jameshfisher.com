@@ -6,6 +6,8 @@ tags:
 justification: people need to know.
 hnUrl: 'https://news.ycombinator.com/item?id=16781959'
 hnUpvotes: 1023
+summary: >-
+  Gmail's "dots don't matter" feature lets scammers create an account on, say, Netflix, with your email address but different dots. Results in convincing phishing emails.
 ---
 
 I recently received an email from Netflix

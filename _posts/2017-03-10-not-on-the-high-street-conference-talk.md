@@ -10,6 +10,9 @@ tags:
   - performance
   - engineering
 taggedAt: '2024-03-26'
+summary: >-
+  Discussed Go's real-time garbage collector at an internal conference, after
+  presenting the same talk at The Realtime Guild.
 ---
 
 After Will Sewell and I gave our "Golang's realtime garbage collector" talk at The Realtime Guild,

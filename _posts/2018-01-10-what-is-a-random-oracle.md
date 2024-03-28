@@ -1,6 +1,8 @@
 ---
 title: What is a random oracle?
 tags: []
+summary: >-
+  A random oracle is an idealized model of a hash function, where each call queries a global server that returns a true random value. This models important properties of real-world hash functions like collision resistance.
 ---
 
 Here's one way to implement a hash function (in Go):

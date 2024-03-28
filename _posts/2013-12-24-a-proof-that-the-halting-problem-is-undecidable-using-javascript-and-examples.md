@@ -7,6 +7,8 @@ tags:
   - programming
   - computer-science
 taggedAt: '2024-03-26'
+summary: >-
+  A JS function to decide the Halting Problem will always have a logical contradiction.
 ---
 
 Having read a few proofs that the halting problem is undecidable,

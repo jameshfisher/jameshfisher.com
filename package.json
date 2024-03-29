@@ -22,8 +22,7 @@
     "linkedom": "^0.16.10",
     "markdown-it": "^14.1.0",
     "prettier": "^3.2.5",
-    "striptags": "^3.2.0",
-    "vhtml": "^2.2.0"
+    "striptags": "^3.2.0"
   },
   "type": "module"
 }

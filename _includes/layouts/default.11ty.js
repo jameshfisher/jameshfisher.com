@@ -1,8 +1,8 @@
 import { format } from "date-fns";
-import h from "vhtml";
 import { fragmentHtml } from "../../fragmentHtml.js";
 import { rawHtml } from "../../rawHtml.js";
 import { renderPosts } from "../../renderPosts.js";
+import { h } from "../../vhtml.js";
 
 export const data = {
   layout: "layouts/minimal",

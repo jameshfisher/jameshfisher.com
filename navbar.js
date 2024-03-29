@@ -1,4 +1,4 @@
-import h from "vhtml";
+import { h } from "./vhtml.js";
 
 const navbarHtml = h("div", { class: "noprint" }, [
   h("div", { class: "navbar no-link-underlines" }, [

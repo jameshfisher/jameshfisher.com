@@ -1,10 +1,10 @@
 import striptags from "striptags";
-import h from "vhtml";
 import dataPeople from "../../_data/people.js";
+import { renderInlineMarkdown } from "../../markdown.js";
 import navbarHtml from "../../navbar.js";
 import { rawHtml } from "../../rawHtml.js";
-import { renderInlineMarkdown } from "../../markdown.js";
 import scriptsHtml from "../../scripts.js";
+import { h } from "../../vhtml.js";
 
 export const data = {};
 

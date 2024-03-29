@@ -1,6 +1,6 @@
-import h from "vhtml";
 import blogroll from "./blogroll.js";
 import { fragmentHtml } from "./fragmentHtml.js";
+import { h } from "./vhtml.js";
 
 export const data = {
   layout: "layouts/minimal",

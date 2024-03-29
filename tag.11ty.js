@@ -1,5 +1,5 @@
-import h from "vhtml";
 import { renderPosts } from "./renderPosts.js";
+import { h } from "./vhtml.js";
 
 export const data = {
   layout: "layouts/minimal",

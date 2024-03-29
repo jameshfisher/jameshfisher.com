@@ -7,8 +7,7 @@ export default [
   {
     title: "A strange site",
     author: "Justin Bailey, my friend from secondary school",
-    xmlUrl: "http://blog.justinbailey.net/rss",
-    htmlUrl: "http://blog.justinbailey.net/",
+    htmlUrl: "https://www.justinbailey.net/",
   },
   {
     title: "100 Films / 100 Drawings",
@@ -21,11 +20,11 @@ export default [
     author: "Charlie Cochrane, my friend from work at Pusher",
     htmlUrl: "http://www.charlescochrane.com/",
   },
-  {
-    title: "Dru Topliceanu",
-    author: "Dru Topliceanu, my friend from work at Pusher",
-    htmlUrl: "http://alexandrutopliceanu.ro/",
-  },
+  // {
+  //   title: "Dru Topliceanu",
+  //   author: "Dru Topliceanu, my friend from work at Pusher",
+  //   htmlUrl: "http://alexandrutopliceanu.ro/",
+  // },
   {
     title: "Will Sewell",
     author: "Will Sewell, my friend from work at Pusher",
@@ -50,29 +49,28 @@ export default [
     xmlUrl: "https://medium.com/feed/@ann_zenkina",
     htmlUrl: "https://medium.com/@ann_zenkina",
   },
-  {
-    title: "Science of Data",
-    author: "Junaid Butt, my friend from work at Pusher",
-    xmlUrl: "https://scienceofdata.org/feed/",
-    htmlUrl: "https://scienceofdata.org/",
-  },
+  // {
+  //   title: "Science of Data",
+  //   author: "Junaid Butt, my friend from work at Pusher",
+  //   xmlUrl: "https://scienceofdata.org/feed/",
+  //   htmlUrl: "https://scienceofdata.org/",
+  // },
   {
     title: "Danielle Vass",
     author: "Danielle Vass",
-    xmlUrl: "http://www.daniellevass.com/blog/atom.xml",
-    htmlUrl: "http://daniellevass.com/blog/",
+    htmlUrl: "https://daniellevass.com/",
   },
   {
     title: "Null program",
     author: "Chris Wellons",
     xmlUrl: "https://nullprogram.com/feed/",
-    htmlUrl: "http://nullprogram.com/",
+    htmlUrl: "https://nullprogram.com/",
   },
   {
     title: "Melting Asphalt",
     author: "Kevin Simler",
-    xmlUrl: "http://feeds.feedburner.com/MeltingAsphalt",
-    htmlUrl: "http://www.meltingasphalt.com/",
+    xmlUrl: "https://feeds.feedburner.com/MeltingAsphalt",
+    htmlUrl: "https://meltingasphalt.com/",
   },
   {
     title: "Julia Evans",
@@ -86,16 +84,16 @@ export default [
     xmlUrl: "https://code-cartoons.com/feed",
     htmlUrl: "https://code-cartoons.com/",
   },
-  {
-    title: "Clay Shirky's writings",
-    author: "Clay Shirky",
-    htmlUrl: "http://shirky.com/writings/",
-  },
-  {
-    title: "Here comes everybody",
-    author: "Clay Shirky",
-    htmlUrl: "http://shirky.com/writings/herecomeseverybody/",
-  },
+  // {
+  //   title: "Clay Shirky's writings",
+  //   author: "Clay Shirky",
+  //   htmlUrl: "http://shirky.com/writings/",
+  // },
+  // {
+  //   title: "Here comes everybody",
+  //   author: "Clay Shirky",
+  //   htmlUrl: "http://shirky.com/writings/herecomeseverybody/",
+  // },
   {
     title: "Overcoming Bias",
     author: "Robin Hanson",

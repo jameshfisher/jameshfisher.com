@@ -125,5 +125,5 @@ export function render(data) {
         ),
       ]),
     ]),
-  );
+  ).rawHtml;
 }

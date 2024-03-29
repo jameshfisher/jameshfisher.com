@@ -134,5 +134,5 @@ export function render(data) {
       ]),
       rawHtml(scriptsHtml),
     ]),
-  ]);
+  ]).rawHtml;
 }

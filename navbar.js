@@ -34,6 +34,6 @@ const navbarHtml = h("div", { class: "noprint" }, [
       ]),
     ]),
   ]),
-]);
+]).rawHtml;
 
 export default navbarHtml;

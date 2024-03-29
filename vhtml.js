@@ -24,28 +24,21 @@ const emptyTags = [
 // escape an attribute
 let esc = (str) => String(str).replace(/[&<>"']/g, (s) => `&${map[s]};`);
 let map = { "&": "amp", "<": "lt", ">": "gt", '"': "quot", "'": "apos" };
-let setInnerHTMLAttr = "dangerouslySetInnerHTML";
 let DOMAttributeNames = {
   className: "class",
   htmlFor: "for",
 };
 
-let sanitized = {};
-
-/** Hyperscript reviver that constructs a sanitized HTML string. */
-export function h(name, attrs) {
-  let stack = [],
-    s = "";
-  attrs = attrs || {};
-  for (let i = arguments.length; i-- > 2; ) {
-    stack.push(arguments[i]);
-  }
+/** Hyperscript reviver that constructs a fake element. To serialize, use the .rawHtml property */
+export function h(name, attrs, ...childrenNestedArray) {
+  let s = "";
+  const children = childrenNestedArray.flat();
 
   if (name) {
     s += "<" + name;
     if (attrs)
       for (let i in attrs) {
-        if (attrs[i] !== false && attrs[i] != null && i !== setInnerHTMLAttr) {
+        if (attrs[i] !== false && attrs[i] != null) {
           s += ` ${DOMAttributeNames[i] ? DOMAttributeNames[i] : esc(i)}="${esc(attrs[i])}"`;
         }
       }
@@ -53,23 +46,14 @@ export function h(name, attrs) {
   }
 
   if (emptyTags.indexOf(name) === -1) {
-    if (attrs[setInnerHTMLAttr]) {
-      s += attrs[setInnerHTMLAttr].__html;
-    } else
-      while (stack.length) {
-        let child = stack.pop();
-        if (child) {
-          if (child.pop) {
-            for (let i = child.length; i--; ) stack.push(child[i]);
-          } else {
-            s += sanitized[child] === true ? child : esc(child);
-          }
-        }
+    for (const child of children) {
+      if (child) {
+        s += child.rawHtml ? child.rawHtml : esc(child);
       }
+    }
 
     s += name ? `</${name}>` : "";
   }
 
-  sanitized[s] = true;
-  return s;
+  return { rawHtml: s };
 }

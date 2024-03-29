@@ -22,5 +22,5 @@ export function render(data) {
     h("h1", {}, `Tag: #${data.tag}`),
     renderPosts(collection),
     h("p", {}, "All content copyright James Fisher."),
-  );
+  ).rawHtml;
 }

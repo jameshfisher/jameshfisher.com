@@ -4,16 +4,16 @@
 
 :root {
   font-family: system-ui, sans-serif;
-  color: #222;
   font-size: calc(1rem + 0.25vw);
   line-height: 1.6;
 }
-:root.experiment-color-wash {
-  background-color: #fbfaf9;
-  color: #2c2621;
-}
 body {
   margin: 0;
+  color: #222;
+}
+body.experiment-color-wash {
+  background-color: #fbfaf9;
+  color: #2c2621;
 }
 #content {
   margin: 2em 0;

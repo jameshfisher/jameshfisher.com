@@ -31,6 +31,7 @@ export function render(data) {
         )
       : "",
     rawHtml(data.content),
+
     h("div", { class: "noprint" }, [
       data.hnUrl
         ? h("div", {}, [
@@ -41,6 +42,16 @@ export function render(data) {
             ),
           ])
         : "",
+      h("div", {}, [
+        "Tagged ",
+        ...(data.tags ?? []).map((tag, i) =>
+          fragmentHtml(
+            i ? ", " : undefined,
+            h("a", { class: "post", href: `/tag/${tag}` }, `#${tag}`),
+          ),
+        ),
+        ".",
+      ]),
       h(
         "div",
         {
@@ -74,19 +85,11 @@ export function render(data) {
       renderPosts(data.collections.fave),
     ]),
     h("p", {}, [
-      "Tagged ",
-      ...(data.tags ?? []).map((tag, i) =>
-        fragmentHtml(
-          i ? ", " : undefined,
-          h("a", { class: "post", href: `/tag/${tag}` }, `#${tag}`),
-        ),
-      ),
-      ".",
       author === "jim"
-        ? ` All content copyright James Fisher ${format(
+        ? ` This page copyright James Fisher ${format(
             data.page.date,
             "yyyy",
-          )}. This post is not associated with my employer.`
+          )}. Content is not associated with my employer.`
         : "",
       h("span", { class: "noprint" }, [
         " ",

@@ -8,6 +8,24 @@ export const data = {
   layout: "layouts/minimal",
 };
 
+function postSimilarity(post1Data, post2Data) {
+  // Jaccard similarity between tags
+  const tags1 = new Set(post1Data.tags || []);
+  const tags2 = new Set(post2Data.tags || []);
+  const intersection = new Set([...tags1].filter((x) => tags2.has(x)));
+  const union = new Set([...tags1, ...tags2]);
+  return intersection.size / union.size;
+}
+
+function similarPosts(allPosts, thisPostData) {
+  return allPosts
+    .filter((p) => p.content !== thisPostData.content)
+    .map((p) => ({ post: p, similarity: postSimilarity(thisPostData, p.data) }))
+    .sort((a, b) => b.similarity - a.similarity)
+    .slice(0, 6)
+    .map((x) => x.post);
+}
+
 export function render(data) {
   const author = data.author || "jim";
 
@@ -81,7 +99,9 @@ export function render(data) {
           ]),
         ],
       ),
-      h("h3", { style: "margin-top: 3em;" }, "More by Jim"),
+      h("h3", {}, "Similar posts"),
+      renderPosts(similarPosts(data.collections.posts, data)),
+      h("h3", {}, "More by Jim"),
       renderPosts(data.collections.fave),
     ]),
     h("p", {}, [

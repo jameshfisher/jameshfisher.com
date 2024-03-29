@@ -3,6 +3,9 @@ title: Les Aventures De Toupac - a pixel art game
 tags:
   - programming
   - animation
+summary: >-
+  A pixel art game developed over Christmas, with code on GitHub and
+  development on Glitch.
 ---
 
 I made this game over Christmas:

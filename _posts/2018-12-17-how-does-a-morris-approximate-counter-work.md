@@ -3,6 +3,8 @@ title: How does a Morris approximate counter work?
 tags:
   - c
   - programming
+summary: >-
+  The Morris approximate counter is incremented _probabilistically_.
 ---
 
 If you want to count to a very big number,

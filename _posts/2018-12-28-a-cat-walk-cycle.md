@@ -2,6 +2,9 @@
 title: A cat walk cycle
 tags:
   - animation
+summary: >-
+  A pixel art animation of a "walk cycle", created using GIMP, for use in a retro
+  game.
 ---
 
 I spent a few hours trying my hand at a "walk cycle".

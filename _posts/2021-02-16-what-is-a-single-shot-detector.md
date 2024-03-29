@@ -4,6 +4,8 @@ tags:
   - programming
   - web
   - machine-learning
+summary: >-
+  A neural network architecture that can output bounding boxes. It uses a fixed set of "anchor points" and predicts offsets and sizes for each anchor.
 ---
 
 [The pre-trained Blazeface model](https://github.com/tensorflow/tfjs-models/tree/master/blazeface),

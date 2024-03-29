@@ -4,9 +4,13 @@ tags:
   - programming
   - web
   - webgl
+summary: >-
+  An green screen implementation in the browser using WebGL and a
+  chroma key shader. Includes a demo that replaces sufficiently green
+  pixels with magenta.
 ---
 
-In [the last post](/2020/08/09/how-to-implement-green-screen-in-the-browser/), 
+In [the last post](/2020/08/09/how-to-implement-green-screen-in-the-browser/),
 I showed how to implement green screen in the browser.
 However, the per-pixel logic was implemented in JavaScript on the CPU,
 which is awful for performance.
@@ -38,29 +42,29 @@ Here's a live demo, in which
     const webcamVideoEl = document.getElementById("webcamVideo");
     const displayCanvasEl = document.getElementById("display");
     const gl = displayCanvasEl.getContext("webgl");
-  
+
     const vs = gl.createShader(gl.VERTEX_SHADER);
     gl.shaderSource(vs, 'attribute vec2 c; void main(void) { gl_Position=vec4(c, 0.0, 1.0); }');
     gl.compileShader(vs);
-  
+
     const fs = gl.createShader(gl.FRAGMENT_SHADER);
     gl.shaderSource(fs, document.getElementById("fragment-shader").innerText);
     gl.compileShader(fs);
-  
+
     const prog = gl.createProgram();
     gl.attachShader(prog, vs);
     gl.attachShader(prog, fs);
     gl.linkProgram(prog);
     gl.useProgram(prog);
-  
+
     const vb = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, vb);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([ -1,1,  -1,-1,  1,-1,  1,1 ]), gl.STATIC_DRAW);
-  
+
     const coordLoc = gl.getAttribLocation(prog, 'c');
     gl.vertexAttribPointer(coordLoc, 2, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(coordLoc);
-  
+
     gl.activeTexture(gl.TEXTURE0);
     const tex = gl.createTexture();
     gl.bindTexture(gl.TEXTURE_2D, tex);
@@ -68,13 +72,13 @@ Here's a live demo, in which
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-    
+
     const texLoc = gl.getUniformLocation(prog, "tex");
     const texWidthLoc = gl.getUniformLocation(prog, "texWidth");
     const texHeightLoc = gl.getUniformLocation(prog, "texHeight");
 
     function startWebcam() {
-      navigator.mediaDevices.getUserMedia({ video: { 
+      navigator.mediaDevices.getUserMedia({ video: {
             facingMode: "user",
             width: { ideal: 1280 },
             height: { ideal: 720 } } }).then(stream => {
@@ -106,7 +110,7 @@ if `g > 0.4 && r < 0.4` (where color channels are measured between 0.0 and 1.0).
 Otherwise, it's fully opaque.
 There exist more sophisticated methods to decide whether a pixel should be transparent,
 or how transparent it should be.
-There are also algorithms for "color spill reduction", 
+There are also algorithms for "color spill reduction",
 removing green light reflected from the subject.
 I'll also show these in a future post.
 
@@ -145,29 +149,29 @@ Finally, here's the full HTML sample:
       const webcamVideoEl = document.getElementById("webcamVideo");
       const displayCanvasEl = document.getElementById("display");
       const gl = displayCanvasEl.getContext("webgl");
-    
+
       const vs = gl.createShader(gl.VERTEX_SHADER);
       gl.shaderSource(vs, 'attribute vec2 c; void main(void) { gl_Position=vec4(c, 0.0, 1.0); }');
       gl.compileShader(vs);
-    
+
       const fs = gl.createShader(gl.FRAGMENT_SHADER);
       gl.shaderSource(fs, document.getElementById("fragment-shader").innerText);
       gl.compileShader(fs);
-    
+
       const prog = gl.createProgram();
       gl.attachShader(prog, vs);
       gl.attachShader(prog, fs);
       gl.linkProgram(prog);
       gl.useProgram(prog);
-    
+
       const vb = gl.createBuffer();
       gl.bindBuffer(gl.ARRAY_BUFFER, vb);
       gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([ -1,1,  -1,-1,  1,-1,  1,1 ]), gl.STATIC_DRAW);
-    
+
       const coordLoc = gl.getAttribLocation(prog, 'c');
       gl.vertexAttribPointer(coordLoc, 2, gl.FLOAT, false, 0, 0);
       gl.enableVertexAttribArray(coordLoc);
-    
+
       gl.activeTexture(gl.TEXTURE0);
       const tex = gl.createTexture();
       gl.bindTexture(gl.TEXTURE_2D, tex);
@@ -175,13 +179,13 @@ Finally, here's the full HTML sample:
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-      
+
       const texLoc = gl.getUniformLocation(prog, "tex");
       const texWidthLoc = gl.getUniformLocation(prog, "texWidth");
       const texHeightLoc = gl.getUniformLocation(prog, "texHeight");
 
       function startWebcam() {
-        navigator.mediaDevices.getUserMedia({ video: { 
+        navigator.mediaDevices.getUserMedia({ video: {
             facingMode: "user",
             width: { ideal: 1280 },
             height: { ideal: 720 } } }).then(stream => {

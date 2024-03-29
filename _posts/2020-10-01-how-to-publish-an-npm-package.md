@@ -3,6 +3,9 @@ title: How to publish an npm package
 tags:
   - programming
   - javascript
+summary: >-
+  Publishing an npm package `@jameshfisher/numsyslib` with a `stringifyRoman`
+  function that converts a number to a Roman numeral.
 ---
 
 Here I publish an NPM package `@jameshfisher/numsyslib`
@@ -62,7 +65,7 @@ exports.stringifyRoman = number => {
 
 We can install and use this local package with `npm install local/path/to/numsyslib/`.
 
-To publish this package for the world to use, 
+To publish this package for the world to use,
 I first [signed up on the web](https://www.npmjs.com/signup) for the `jameshfisher` account.
 Only this account can publish packages beginning with the `@jameshfisher/` scope.
 Then I logged in via the CLI:

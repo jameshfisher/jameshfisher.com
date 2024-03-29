@@ -3,6 +3,9 @@ title: How to record a canvas to video
 tags:
   - programming
   - web
+summary: >-
+  Using the `MediaRecorder` API to record a canvas element as a WebM video file,
+  allowing the user to download the recorded video.
 ---
 
 You can use HTML `canvas` to produce videos!
@@ -15,7 +18,7 @@ function recordCanvas(canvas, videoLength) {
   const recordedChunks = [];
   const mediaRecorder = new MediaRecorder(
     canvas.captureStream(25), {mimeType: 'video/webm; codecs=vp9'});
-  mediaRecorder.ondataavailable = 
+  mediaRecorder.ondataavailable =
     event => recordedChunks.push(event.data);
   mediaRecorder.onstop = () => {
     const url = URL.createObjectURL(

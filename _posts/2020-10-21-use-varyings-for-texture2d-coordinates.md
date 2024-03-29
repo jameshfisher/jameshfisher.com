@@ -3,6 +3,10 @@ title: Use varyings for texture2D coordinates!
 tags:
   - programming
   - webgl
+summary: >-
+  Using a `varying` to pass the texture coordinates to the fragment shader
+  avoids the need to perform divisions in the fragment shader, improving
+  performance.
 ---
 
 I'm using WebGL fragment shaders 

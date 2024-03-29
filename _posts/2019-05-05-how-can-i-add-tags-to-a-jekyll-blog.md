@@ -3,6 +3,8 @@ title: How can I add tags to a Jekyll blog?
 tags:
   - programming
   - jekyll
+summary: >-
+  A plugin to create tag pages on a Jekyll blog, and a minimal layout for those tag pages.
 ---
 
 Here I show you how to add tags to your Jekyll blog.
@@ -88,7 +90,7 @@ this could look like:
     <h1>{{page.title}}</h1>
     {{content}}
     <p>
-      Tagged 
+      Tagged
       {% for tag in page.tags %}
       <a class="post" href="/tag/{{tag}}">#{{tag}}</a>{% unless forloop.last %}, {% endunless %}
       {% endfor %}

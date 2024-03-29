@@ -4,6 +4,8 @@ tags:
   - ctci
   - programming
   - c
+summary: >-
+  An in-place string reversal function in C, starting by swapping the first and last characters, then iterating towards the middle.
 ---
 
 Question 1.2 of _Cracking the Coding Interview_:

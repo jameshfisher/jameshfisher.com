@@ -90,6 +90,8 @@ async function main() {
     i++;
     if (i >= 32) return;
   }
+
+  console.log("Done!");
 }
 
 await main();

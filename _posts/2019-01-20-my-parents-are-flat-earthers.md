@@ -4,6 +4,8 @@ tags:
   - fave
 hnUrl: 'https://news.ycombinator.com/item?id=18951569'
 hnUpvotes: 179
+summary: >-
+  For decades, my parents have been working up to Flat-Earther beliefs. From Egyptology to Jehovah's Witnesses to theories that human built the Moon billions of years in the future. Surprisingly, it doesn't affect their successful lives very much. For me, it's a fun family pastime.
 ---
 
 Flat Earth theory entered my life around October 2015,

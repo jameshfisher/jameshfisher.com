@@ -1,6 +1,10 @@
 ---
 title: Service worker hello world
 tags: []
+summary: >-
+  A service worker that responds to a "ping" message with "pong", and a
+  client-side script that registers the service worker and sends it the "ping"
+  message.
 ---
 
 The following service worker gets a ping message and responds to it with "pong":

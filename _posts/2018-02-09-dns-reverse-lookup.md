@@ -7,6 +7,9 @@ tags:
   - posix
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Reverse DNS lookup maps an IP address to a domain name by querying `PTR`
+  records. The mapping is not always consistent with the forward DNS lookup.
 ---
 
 You have an IP address like `8.8.4.4`,

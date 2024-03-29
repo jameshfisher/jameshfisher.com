@@ -14,6 +14,11 @@ tags:
   - history
   - essay
 taggedAt: '2024-03-26'
+summary: >-
+  The trials of Giordano Bruno and Galileo were connected, not because Bruno was
+  a proto-Galileo, but because the Inquisition associated Galileo's
+  Copernicanism with Bruno's condemned Hermeticism and theological heresies,
+  creating a precedent for condemning Galileo.
 ---
 
 "If one regards \[_The Ash Wednesday Supper_\]

@@ -6,6 +6,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Processes can communicate via files, pipes, signals, sockets, message queues,
+  semaphores, and shared memory.
 ---
 
 UNIX processes on their own are boring; they are interesting when they communicate. There are many methods of "Inter-process communication", or IPC. What are all these methods? There are many!:

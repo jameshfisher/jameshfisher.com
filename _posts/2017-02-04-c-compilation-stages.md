@@ -3,6 +3,10 @@ title: What are the stages of C compilation?
 tags:
   - c
 taggedAt: '2024-03-26'
+summary: >-
+  C compilation involves 6 stages: preprocessing, parsing, AST generation, LLVM
+  IR production, assembly generation, and linking to produce the final
+  executable or shared library.
 ---
 
 C compilation goes through several stages. For `clang`, the C compiler on my machine, these are:

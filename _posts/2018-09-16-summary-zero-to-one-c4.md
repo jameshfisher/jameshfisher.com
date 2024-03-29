@@ -8,6 +8,10 @@ tags:
   - education
   - career
 taggedAt: '2024-03-26'
+summary: >-
+  Competition is often destructive and distracting. Wise companies either
+  diverge into new space or merge into a monopoly, rather than imitate each
+  other through competition.
 ---
 
 **Summary:**

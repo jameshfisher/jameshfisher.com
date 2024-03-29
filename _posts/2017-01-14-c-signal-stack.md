@@ -4,6 +4,9 @@ tags:
   - c
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  C signal handlers reuse the same call stack as normal functions, but can
+  optionally use a special signal stack instead.
 ---
 
 We know how C functions work. The program maintains a _call stack_, which contains _stack frames_ corresponding to nested _function calls_. Calling a function means pushing a new stack frame onto the stack, and returning from a function means popping its stack frame off the stack.

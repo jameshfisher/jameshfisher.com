@@ -6,6 +6,10 @@ tags:
   - data-structures
   - semantics
 taggedAt: '2024-03-26'
+summary: >-
+  C allows a single array field of incomplete type (`char []`) at the end of a
+  struct definition. The size of the struct is determined by the size of the
+  fixed fields, and the dynamic-sized array is allocated separately.
 ---
 
 Redis uses a string encoding which it calls "Simple Dynamic Strings". Simplified, it looks like:

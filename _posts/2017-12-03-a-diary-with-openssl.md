@@ -9,6 +9,8 @@ tags:
   - openssl
   - security
 taggedAt: '2024-03-26'
+summary: >-
+  Generate a master keypair. Encrypting each diary entry with a one-time shared secret. Encrypt the shared secret with the public key. Decrypt entries using the private key and the shared secret.
 ---
 
 Writing helps me think.

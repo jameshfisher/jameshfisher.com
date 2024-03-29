@@ -3,6 +3,8 @@ title: How to make a system call in C
 tags:
   - programming
   - c
+summary: >-
+  Replacing `printf` with `write`, and finally directly using the `syscall` function with inline assembly.
 ---
 
 Here's how we might write "hello world" in C:

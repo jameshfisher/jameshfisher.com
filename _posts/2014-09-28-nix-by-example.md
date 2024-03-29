@@ -7,6 +7,8 @@ tags:
   - package-management
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  Nix is a functional programming language used for package management. We see the Nix expression language, including strings, primitives, operators, functions, let expressions, and conditionals.
 ---
 
 [Nix is a package manager.](http://nixos.org/nix/)

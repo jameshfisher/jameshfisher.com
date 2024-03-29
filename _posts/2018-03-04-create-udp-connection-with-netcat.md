@@ -4,6 +4,10 @@ tags:
   - programming
   - networking
   - unix
+summary: >-
+  `nc` can create UDP connections. UDP connections are established when the
+  first data packet is sent, and terminated when the server becomes unreachable.
+  ICMP messages notify the client of an unreachable server.
 ---
 
 The netcat command `nc` is most often used to create TCP connections,

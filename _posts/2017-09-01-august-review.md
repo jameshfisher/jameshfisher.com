@@ -2,6 +2,11 @@
 title: August review
 tags:
   - monthly_review
+summary: >-
+  After a long blogging hiatus, I'm back. I've been giving conference/meetup
+  talks, and have moved my blog to a permanent home at jameshfisher.com. In
+  August, I wrote about C and DNS, and did marketing work on Vidrio. For
+  September, I'm focusing on understanding and investing in cryptocurrencies.
 ---
 
 TL;DR: I've been on a long blogging hiatus, but I'm back.

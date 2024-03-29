@@ -7,6 +7,10 @@ tags:
   - package-management
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  To release a PHP Composer package, create a GitHub repo, add a `composer.json`
+  file, submit the package to Packagist.org, and tag a stable version. Then
+  Composer users can require your package.
 ---
 
 [Composer](https://getcomposer.org/)

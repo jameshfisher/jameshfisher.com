@@ -3,6 +3,8 @@ title: 'osquery: UNIX as a SQL database'
 tags:
   - programming
   - unix
+summary: >-
+  `osquery` allows querying a UNIX system using SQL.
 ---
 
 [Earlier this year, in "UNIX as a SQL database"](/2017/02/14/unix-in-sql/),

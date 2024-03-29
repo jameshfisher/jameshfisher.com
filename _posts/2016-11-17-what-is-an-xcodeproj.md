@@ -4,6 +4,8 @@ tags:
   - xcode
   - programming
 taggedAt: '2024-03-26'
+summary: >-
+  The `.xcodeproj` "file" is actually a directory that contains a `project.pbxproj` file, which is a text file that stores the settings of an Xcode project, including information about the files, build configurations, targets, and dependencies.
 ---
 
 Xcode tracks "projects" with a file called `SomeProject.xcodeproj`.

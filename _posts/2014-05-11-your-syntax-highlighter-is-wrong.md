@@ -7,6 +7,8 @@ tags:
   - programming
   - fave
 taggedAt: '2024-03-26'
+summary: >-
+  Syntax highlighters make value judgments about code. Most highlighters judge that comments are cruft, and try to hide them. Most diff viewers judge that code deletions are bad.
 ---
 
 As coders, we spend our working lives looking at code.

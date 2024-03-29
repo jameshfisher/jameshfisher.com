@@ -4,6 +4,9 @@ tags:
   - programming
   - crypto
   - javascript
+summary: >-
+  A web page that allows you to sign a string using the HMAC algorithm with
+  SHA-256, implemented using the Web Crypto API.
 ---
 
 Below, you can type a plaintext string, and enter a secret key.

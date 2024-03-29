@@ -36,6 +36,12 @@ posthog.onFeatureFlags(() => {
       cvLinks[i].innerText = 'Hire Me';
     }
   }
+
+  const showLinkSummariesVariant = posthog.getFeatureFlag('show-link-summaries');
+  console.log({ showLinkSummariesVariant });
+  if (showLinkSummariesVariant === 'test') {
+    document.body.classList.remove('experiment-dont-show-link-summaries');
+  }
 })
 </script>
 `;

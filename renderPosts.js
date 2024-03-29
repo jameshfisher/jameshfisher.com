@@ -19,7 +19,7 @@ export function renderPost(post) {
     ),
     h(
       "div",
-      { class: "summary" },
+      { class: "post-summary" },
       post.data.summary &&
       rawHtml(renderInlineMarkdown(post.data.summary || "")),
       " ",

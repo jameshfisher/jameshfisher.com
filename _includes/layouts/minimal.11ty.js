@@ -80,7 +80,7 @@ export function render(data) {
       }),
       h("title", {}, data.title),
     ]),
-    h("body", {}, [
+    h("body", { class: "experiment-dont-show-link-summaries" }, [
       h("div", { class: "noprint", style: "float: right; overflow: hidden;" }, [
         h(
           "a",

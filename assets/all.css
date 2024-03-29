@@ -206,6 +206,10 @@ ul {
 .post .date {
   opacity: 0.5;
 }
-.post .summary {
+.post .post-summary {
   font-size: 0.7em;
+}
+
+body.experiment-dont-show-link-summaries .post-summary {
+  display: none;
 }

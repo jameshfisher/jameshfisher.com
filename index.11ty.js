@@ -29,7 +29,7 @@ export function render(data) {
       h("link", { rel: "stylesheet", href: "/assets/all.css" }),
       h("title", {}, "Jim Fisher"),
     ]),
-    h("body", { style: "margin: 1em" }, [
+    h("body", { class: "experiment-dont-show-link-summaries", style: "margin: 1em" }, [
       navbarHtml,
       h(
         "video",

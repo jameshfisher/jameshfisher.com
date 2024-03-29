@@ -41,13 +41,6 @@ export function h(name, attrs) {
     stack.push(arguments[i]);
   }
 
-  // Sortof component support!
-  if (typeof name === "function") {
-    attrs.children = stack.reverse();
-    return name(attrs);
-    // return name(attrs, stack.reverse());
-  }
-
   if (name) {
     s += "<" + name;
     if (attrs)

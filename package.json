@@ -6,7 +6,9 @@
     "test": "hyperlink --recursive --internal --root _site --canonicalroot https://jameshfisher.com _site/index.html",
     "serve": "eleventy --serve",
     "format": "prettier --write \"./**/*.11ty.js\"",
-    "add-hn-backlinks": "bun run addHnBacklinks.ts"
+    "add-hn-backlinks": "bun run scripts/addHnBacklinks.ts",
+    "add-summaries": "bun run scripts/addSummaries.ts",
+    "add-tags": "bun run scripts/addTags.ts"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0-alpha.5",

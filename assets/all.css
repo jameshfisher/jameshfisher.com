@@ -196,6 +196,7 @@ ul {
   gap: 0 1em;
 }
 .posts a.post {
+  text-decoration: none;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -203,6 +204,9 @@ ul {
   padding: 0.5em 0;
   min-width: 15em;
   line-height: 1.3;
+}
+.posts a.post:hover .title {
+  text-decoration: underline;
 }
 .post .title {
   font-weight: 600;

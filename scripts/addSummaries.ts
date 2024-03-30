@@ -43,6 +43,11 @@ const examples = [
     title: "Does C allow pointer arithmetic?",
     summary: `Computing a pointer to unowned memory invokes undefined behavior, even without dereferencing!`,
   },
+  {
+    title: "Auto-summarizing blog posts",
+    summary:
+      "Summarizing my blog posts using Claude Haiku. The benefits of providing business context. The benefits of iterating.",
+  },
 ];
 
 async function fileToSummary(fileContent: string): Promise<string> {

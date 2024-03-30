@@ -89,6 +89,7 @@ export function render(data) {
                 { target: "_blank", href: "https://github.com/jameshfisher" },
                 "GitHub",
               ),
+              ", ",
               h(
                 "a",
                 {

@@ -48,7 +48,7 @@ export function h(name, attrs, ...childrenNestedArray) {
   if (emptyTags.indexOf(name) === -1) {
     for (const child of children) {
       if (child) {
-        s += child.rawHtml ? child.rawHtml : esc(child);
+        s += typeof child.rawHtml === "string" ? child.rawHtml : esc(child);
       }
     }
 

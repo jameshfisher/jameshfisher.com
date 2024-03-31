@@ -5,7 +5,7 @@ tags:
   - web
   - tensorflow
   - machine-learning
-ogimage: /assets/2020-09-21/result.jpg
+ogimage: ./result.jpg
 summary: >-
   A demo that uses the BlazeFace model from TensorFlow.js to detect faces in a
   webcam stream, and draws the detected landmarks on the video.
@@ -30,7 +30,7 @@ and draws the detected face landmarks on top of your webcam stream:
 
 Here's what I get when I run it against my own face:
 
-<p><img src="/assets/2020-09-21/result.jpg"/></p>
+<p><img src="./result.jpg"/></p>
 
 Basic usage of this API is basically one function call;
 a pure function from input image to predicted faces:

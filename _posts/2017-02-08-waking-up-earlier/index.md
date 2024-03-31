@@ -20,7 +20,7 @@ wake  work  leave sleep
 
 Here's the routine visually:
 
-![current daily routine](/assets/2017-02-08-waking-up-earlier/current_sleep_cycle.png)
+![current daily routine](./current_sleep_cycle.png)
 
 What's wrong with this routine?
 
@@ -48,4 +48,4 @@ wake  work  leave sleep
 
 This can be represented visually:
 
-![new daily routine](/assets/2017-02-08-waking-up-earlier/sleep_cycle_comparison.png)
+![new daily routine](./sleep_cycle_comparison.png)

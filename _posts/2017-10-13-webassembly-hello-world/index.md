@@ -58,7 +58,7 @@ The following also works, if you run it in the console:
 
 ```js
 async function callWasm() {
-  const response = await fetch('/assets/2017-10-13/program.wasm');
+  const response = await fetch('./program.wasm');
   const bytes = await response.arrayBuffer();
   const module = await WebAssembly.compile(bytes);
   const instance = new WebAssembly.Instance(module, { imports: { i: console.log } });

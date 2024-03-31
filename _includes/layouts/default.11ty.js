@@ -26,8 +26,17 @@ function similarPosts(allPosts, thisPostData) {
     .map((x) => x.post);
 }
 
+function sortByDate(posts) {
+  return [...posts].sort((a, b) => b.date - a.date);
+}
+
 export function render(data) {
   const author = data.author || "jim";
+
+  const allPosts = sortByDate(data.collections.posts);
+  const myFavoritePosts = allPosts.filter((post) =>
+    (post.data.tags ?? []).includes("fave"),
+  );
 
   return fragmentHtml(
     data.external_url
@@ -102,7 +111,7 @@ export function render(data) {
       h("h3", {}, "Similar posts"),
       renderPosts(similarPosts(data.collections.posts, data)),
       h("h3", {}, "More by Jim"),
-      renderPosts(data.collections.fave),
+      renderPosts(myFavoritePosts),
     ]),
     h("p", {}, [
       author === "jim"

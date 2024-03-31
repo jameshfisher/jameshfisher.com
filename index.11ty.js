@@ -4,13 +4,24 @@ import { renderPosts } from "./renderPosts.js";
 import scriptsHtml from "./scripts.js";
 import { h } from "./vhtml.js";
 
+function sortByDate(posts) {
+  return [...posts].sort((a, b) => b.date - a.date);
+}
+
 export function render(data) {
+  const allPosts = sortByDate(data.collections.posts);
+
   const hnFavorites = data.collections.posts
     .filter(
       (post) =>
         post.data.hnUrl && post.data.hnUpvotes && post.data.hnUpvotes > 100,
     )
     .sort((a, b) => b.data.hnUpvotes - a.data.hnUpvotes);
+
+  const myFavoritePosts = allPosts.filter(
+    (post) =>
+      (post.data.tags ?? []).includes("fave") && !hnFavorites.includes(post),
+  );
 
   return `<!doctype html>${
     h("html", { lang: "en" }, [
@@ -128,15 +139,9 @@ export function render(data) {
           h("h3", {}, "Hacker News favorites"),
           renderPosts(hnFavorites),
           h("h3", {}, "My favorites"),
-          renderPosts(
-            data.collections.fave
-              .reverse()
-              .filter((post) => !post.draft && !hnFavorites.includes(post)),
-          ),
+          renderPosts(myFavoritePosts),
           h("h3", {}, "All posts"),
-          renderPosts(
-            data.collections.posts.reverse().filter((post) => !post.draft),
-          ),
+          renderPosts(allPosts),
           h("h3", {}, "Old blogs"),
           h("ul", {}, [
             h(

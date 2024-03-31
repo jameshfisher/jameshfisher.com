@@ -172,7 +172,7 @@ simulated with WebGL:
       nextStateIndex = previousStateIndex;
     }, 10);
   };
-  startStateImg.src = "/assets/2020-02-23/start-state-2.png";
+  startStateImg.src = "./start-state-2.png";
 </script>
 
 The world is modelled as a 2D grid.

@@ -85,7 +85,7 @@ summary: >-
       gl.uniform1i(normalMapLoc, 0);
       gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
     };
-    normalMapImg.src = '/assets/2017-10-16/norm.jpg';
+    normalMapImg.src = './norm.jpg';
     const colorMapImg = new Image();
     colorMapImg.onload = function() {
       gl.activeTexture(gl.TEXTURE1);
@@ -97,7 +97,7 @@ summary: >-
       gl.uniform1i(colorMapLoc, 1);
       gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
     };
-    colorMapImg.src = '/assets/2017-10-16/color.jpg';
+    colorMapImg.src = './color.jpg';
     var mousePos = {x: 0.1, y: 0.1};
     function draw(ev) {
       gl.enableVertexAttribArray(coord);

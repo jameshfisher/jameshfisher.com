@@ -44,7 +44,7 @@ export default function (eleventyConfig) {
         const sourcePath = path.join(inputDirPath, filename);
         const destPath = path.join(outputDirPath, filename);
         console.log(`Copying ${sourcePath} to ${destPath}`);
-        fs.copyFileSync(sourcePath, destPath);
+        fs.cpSync(sourcePath, destPath, { recursive: true });
       });
   }
 

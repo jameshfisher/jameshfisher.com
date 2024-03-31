@@ -21,10 +21,6 @@ This script will
 
 import fs from "fs";
 import path from "path";
-import { promisify } from "util";
-import { exec } from "child_process";
-
-const execAsync = promisify(exec);
 
 const assetsDir = path.join(__dirname, "assets");
 const postsDir = path.join(__dirname, "_posts");
@@ -35,11 +31,8 @@ const getDirectories = (source: string) =>
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name);
 
-const getFiles = (source: string) =>
-  fs
-    .readdirSync(source, { withFileTypes: true })
-    .filter((dirent) => dirent.isFile())
-    .map((dirent) => dirent.name);
+const getChildren = (source: string) =>
+  fs.readdirSync(source, { withFileTypes: true }).map((dirent) => dirent.name);
 
 // Get all directories in assets, sorted by date
 const assetDirs = getDirectories(assetsDir).sort().reverse();
@@ -92,7 +85,7 @@ for (const assetDir of assetDirs) {
   );
 
   // Move all the files from the assets folder to the new folder
-  const assetFiles = getFiles(path.join(assetsDir, assetDir));
+  const assetFiles = getChildren(path.join(assetsDir, assetDir));
   for (const assetFile of assetFiles) {
     fs.renameSync(
       path.join(assetsDir, assetDir, assetFile),
@@ -107,15 +100,15 @@ for (const assetDir of assetDirs) {
   }
 
   // Update links in the post file to point to the new location of the assets
-  // Original strings will look like /assets/YYYY-MM-DD-something/foobar.png
-  // Updated strings will look like ./foobar.png
+  // Original strings will look like "/assets/YYYY-MM-DD-something/"
+  // Updated strings will look like "./"
 
   const postContent = fs.readFileSync(
     path.join(newPostDir, "index.md"),
     "utf8",
   );
   const updatedContent = postContent.replace(
-    new RegExp(`/assets/${date}-[^/]+/`, "g"),
+    new RegExp(`/assets/${date}[^/]*/`, "g"),
     "./",
   );
   fs.writeFileSync(path.join(newPostDir, "index.md"), updatedContent);

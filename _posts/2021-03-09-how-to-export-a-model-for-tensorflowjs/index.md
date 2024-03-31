@@ -100,7 +100,7 @@ then runs the model on input from the user:
   const modelInputEl = document.getElementById("modelInput");
   const modelOutputEl = document.getElementById("modelOutput");
   (async () => {
-    const model = await tf.loadGraphModel('/assets/2021-03-09/web_model/model.json');
+    const model = await tf.loadGraphModel('./web_model/model.json');
     modelInputEl.addEventListener("input", () => {
       const inputFloat = parseFloat(modelInputEl.value);
       tf.tidy(() => {

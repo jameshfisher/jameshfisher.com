@@ -19,13 +19,13 @@ the rational strategy will switch from _catch it now_
 to _avoid it forever_.
 In this post, I show a compartmental simulation of COVID-19,
 with interactive parameters that you can play with.
-I show a nice "backpropagation" algorithm 
+I show a nice "backpropagation" algorithm
 that calculates death probabilities in compartmental models,
 which lets us analyze optimal selfish strategies.
-I find that there are four phases during epidemics, 
+I find that there are four phases during epidemics,
 each with its own optimal strategy.
 
-The following chart shows 
+The following chart shows
 how likely a person is to be dead by the end of the year,
 given their current state.
 For example, on day 8, a person in the "infected with treatment" state
@@ -42,7 +42,7 @@ According to the simulation,
 which I explain more fully below,
 it's rational to infect yourself right now.
 Intuitively,
-this is because you'll get better treatment 
+this is because you'll get better treatment
 while our healthcare system is still functioning.
 But there are in fact four phases of the epidemic,
 and the strategy is different in each phase.
@@ -52,7 +52,7 @@ we derive the four phases:
 
 1. **Phase 1: you should infect yourself, getting treatment.**
    Before the peak,
-   you should infect yourself 
+   you should infect yourself
    to get treatment while our healthcare system is still functioning.
    We're currently in this phase.
 1. **Phase 2: you should still infect yourself, foregoing treatment.**
@@ -76,7 +76,7 @@ we derive the four phases:
    maybe you can join a clinical trial,
    or maybe your relative donates their treatment to you.
 1. **Phase 4: you should avoid infection forever.**
-   Eventually, 
+   Eventually,
    the blue "susceptible" line dips under the the "infected with treatment" line.
    Beyond this point,
    it's irrational to infect yourself,
@@ -89,7 +89,7 @@ Every simulated person is in one of five states:
 "susceptible", "infected with treatment", "infected without treatment", "recovered", or "dead".
 Each day, people transition between these states like so:
 
-<p><img src="/assets/2020-03-15/sir-model.svg" style="border: none; max-width: 30em; margin: 0 auto; display: block;" /></p>
+<p><img src="/assets/2020-03-14/sir-model.svg" style="border: none; max-width: 30em; margin: 0 auto; display: block;" /></p>
 
 We start the simulation with everyone in the "susceptible" state,
 except for one person with the novel virus.
@@ -109,9 +109,9 @@ but you can play with them yourself:
 The following chart shows the proportion of the population in each state.
 It should look familar;
 especially the red curve of infected people.
-This is the curve that we should be "flattening" 
+This is the curve that we should be "flattening"
 to reduce the total death rate.
-Use the sliders above to flatten the curve 
+Use the sliders above to flatten the curve
 by reducing meetings,
 or by reducing the probability of transmission (e.g., with masks).
 
@@ -124,7 +124,7 @@ We end up with a graph like the following
 Each vertex counts the number of people in a given state on a given day,
 and each edge counts the number of people transferred from one state to another:
 
-<p><img src="/assets/2020-03-15/sir-model-forwards.svg" style="border: none; max-width: 30em; margin: 0 auto; display: block;" /></p>
+<p><img src="/assets/2020-03-14/sir-model-forwards.svg" style="border: none; max-width: 30em; margin: 0 auto; display: block;" /></p>
 
 But how can we generate the "death probability" chart from this?
 Say Bob asks you:
@@ -143,7 +143,7 @@ keeping a record of all the transfers of people from one state to another.
 Then we run the model _backwards_.
 We'll get a graph that looks like this:
 
-<p><img src="/assets/2020-03-15/sir-model-backwards.svg" style="border: none; max-width: 30em; margin: 0 auto; display: block;" /></p>
+<p><img src="/assets/2020-03-14/sir-model-backwards.svg" style="border: none; max-width: 30em; margin: 0 auto; display: block;" /></p>
 
 We've labelled each node with the probability of ending up dead on day 3
 (the bottom-right corner).
@@ -166,7 +166,7 @@ no one appears to be deliberately infecting themselves with COVID-19.
 Perhaps the model is wrong, and self-infection is not actually rational.
 Or perhaps the model is right, but people don't act like _homo economicus_.
 It's a moral argument:
-I'm self-isolating, 
+I'm self-isolating,
 not for my own protection,
 but for the good of the population.
 At least, that's what I tell myself.
@@ -197,15 +197,15 @@ my friends would call me a moron if I self-infected.
         { min: 1000000, max: 400000000, value: covid19Defaults.populationSize, step: 1000000, display: displayFuncs.toString, label: "👩‍👩‍👧‍👧 Population size" },
       infectionDurationDays:
         { min: 1, max: 30, value: covid19Defaults.infectionDurationDays, step: 1, display: displayFuncs.toString, label: "⏰ Average infection duration in days" },
-      meetingInfectionProbability:      
+      meetingInfectionProbability:
         { min: 0, max: 0.1, value: covid19Defaults.meetingInfectionProbability, step: 0.001, display: displayFuncs.percentage, label: "🦠 Probability of transmission in meeting" },
-      meetingsPerDayPerPerson:          
+      meetingsPerDayPerPerson:
         { min: 0, max: 30, value: covid19Defaults.meetingsPerDayPerPerson, step: 1, display: displayFuncs.toString, label: "🤝 Meetings per day per person" },
-      caseFatalityRateWithTreatment:    
+      caseFatalityRateWithTreatment:
         { min: 0, max: 0.2, value: covid19Defaults.caseFatalityRateWithTreatment, step: 0.001, display: displayFuncs.percentage, label: "☠️ Case fatality rate with treatment" },
-      caseFatalityRateWithoutTreatment: 
+      caseFatalityRateWithoutTreatment:
         { min: 0, max: 0.2, value: covid19Defaults.caseFatalityRateWithoutTreatment, step: 0.001, display: displayFuncs.percentage, label: "☠️ Case fatality rate without treatment" },
-      numberOfBedsPerThousandPeople:                     
+      numberOfBedsPerThousandPeople:
         { min: 0, max: 200, value: covid19Defaults.numberOfBedsPerThousandPeople, step: 1, display: displayFuncs.toString, label: "🛏 Number of beds per thousand people" },
       immunityDurationDays:
         { min: 1, max: 3650, value: covid19Defaults.immunityDurationDays, step: 1, display: displayFuncs.toString, label: "⏰ Average immunity duration in days"},
@@ -216,27 +216,27 @@ my friends would call me a moron if I self-infected.
 
       // Ugly! Some attributes have to be set in order; e.g. min and max must precede value!
       for (const [aName, aVal] of Object.entries(as)) e.setAttribute(aName, aVal);
-      for (const [aName, aVal] of Object.entries(as)) e.setAttribute(aName, aVal); 
+      for (const [aName, aVal] of Object.entries(as)) e.setAttribute(aName, aVal);
 
       for (const state of cs) e.appendChild(typeof(state) === "string" ? document.createTextNode(state) : state);
       return e;
     }
 
     for (let [sliderId, sliderConfig] of Object.entries(sliders)) {
-      const slider = el("input", { 
-        type: "range", 
-        id: sliderId, 
-        min: sliderConfig.min, 
-        max: sliderConfig.max, 
-        value: sliderConfig.value, 
+      const slider = el("input", {
+        type: "range",
+        id: sliderId,
+        min: sliderConfig.min,
+        max: sliderConfig.max,
+        value: sliderConfig.value,
         step: sliderConfig.step,
         style: "width: 12em; margin-right: 1em"
       }, []);
       const valueSpan = el("span", {id: sliderId+"Value"}, []);
-      document.getElementById("sliders-body").appendChild(el("div", 
+      document.getElementById("sliders-body").appendChild(el("div",
         {
           style: "width: 20em; display: inline-block;"
-        }, 
+        },
         [
           el("label", { for: sliderId, style: "margin-right: 1em; font-weight: bold;" }, [sliderConfig.label]),
           el("br", {}, []),
@@ -265,7 +265,7 @@ my friends would call me a moron if I self-infected.
     };
 
     const populationChart = new Chart(
-      document.getElementById('populationChart').getContext('2d'), 
+      document.getElementById('populationChart').getContext('2d'),
       {
         type: 'line',
         data: {
@@ -328,7 +328,7 @@ my friends would call me a moron if I self-infected.
     });
 
     const deathProbChart = new Chart(
-      document.getElementById('deathProbChart').getContext('2d'), 
+      document.getElementById('deathProbChart').getContext('2d'),
       {
         type: 'line',
         data: {
@@ -380,8 +380,8 @@ my friends would call me a moron if I self-infected.
     // E.g.
     // calcDeathProb(
     //   "infected",
-    //   200, 
-    //   [{to: "dead", value: 10}], 
+    //   200,
+    //   [{to: "dead", value: 10}],
     //   { infected: 0, dead: 1 }
     // ) = 0.05 = (0.95*0) + (0.05*1)
     function calcDeathProb(cmp, totalToday, transfers, deathProbsTomorrow) {
@@ -400,7 +400,7 @@ my friends would call me a moron if I self-infected.
       const weight = (totalToday-transferred) / totalToday;
       const prob = deathProbsTomorrow[cmp];
       totalProb += weight * prob;
-    
+
       if (totalProb > 1) {
         console.error("prob > 1", JSON.stringify([cmp, totalToday, transfers, deathProbsTomorrow]));
       }
@@ -409,20 +409,20 @@ my friends would call me a moron if I self-infected.
 
     // E.g.
     // calcDeathProbs(
-    //   { infected: 200, dead: 100 }, 
-    //   [{from: "infected", to: "dead", value: 10}], 
+    //   { infected: 200, dead: 100 },
+    //   [{from: "infected", to: "dead", value: 10}],
     //   { infected: 0, dead: 1}
-    // ) = { 
-    //    infected: 0.05, 
+    // ) = {
+    //    infected: 0.05,
     //    dead: 1
     // }
     function calcDeathProbs(totalsToday, transfers, deathProbsTomorrow) {
       const deathProbsToday = {};
       for (const cmp in totalsToday) {
         deathProbsToday[cmp] = calcDeathProb(
-          cmp, 
-          totalsToday[cmp], 
-          transfers.filter(t => t.from === cmp), 
+          cmp,
+          totalsToday[cmp],
+          transfers.filter(t => t.from === cmp),
           deathProbsTomorrow
         );
       }
@@ -458,7 +458,7 @@ my friends would call me a moron if I self-infected.
           const newlyDeadFromWithoutTreatment = newlyNonInfectedFromWithoutTreatment * CASE_FATALITY_RATE_WITHOUT_TREATMENT;
           const newlyRecoveredFromWithoutTreatment = newlyNonInfectedFromWithoutTreatment - newlyDeadFromWithoutTreatment;
 
-          const stillInfectedWithoutTreatment = 
+          const stillInfectedWithoutTreatment =
             state.infectedWithoutTreatment-newlyDeadFromWithoutTreatment-newlyRecoveredFromWithoutTreatment;
 
           let freeBeds = NUMBER_OF_BEDS-state.infectedWithTreatment;
@@ -532,7 +532,7 @@ my friends would call me a moron if I self-infected.
         for ([sliderId, sliderConfig] of Object.entries(sliders)) {
           sliderConfig.valueSpan.innerText = sliderConfig.display(sliderConfig.slider.value);
         }
-      
+
         labels.length = 0;
         for (let i = 0; i < 365; i++) {
           labels.push('Day ' + i);

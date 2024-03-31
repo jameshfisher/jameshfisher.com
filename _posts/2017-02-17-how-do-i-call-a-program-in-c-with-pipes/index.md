@@ -80,7 +80,7 @@ After forking, the file descriptor table is cloned. This means both processes ha
 | child stderr (read)    | `stderr[0]` | `stderr[0]`
 | child stderr (write)   | `stderr[1]` | `stderr[1]`
 
-![start state](/assets/2017-02-17-pipes/start.svg)
+![start state](./start.svg)
 
 What a mess! This needs some reshuffling:
 
@@ -103,7 +103,7 @@ It should end up like this:
 | child stderr (read)    | `proc.stderr` | -
 | child stderr (write)   | -             | `2`
 
-![desired state](/assets/2017-02-17-pipes/finished.svg)
+![desired state](./finished.svg)
 
 Let's start by closing some descriptors. Each end of a new pipe should only be referenced by one process. To remove references to a pipe end, we call `close`, like this:
 
@@ -137,11 +137,11 @@ After `close`ing appropriate ends in each process, we end up with:
 | child stderr (read)    | `stderr[0]` | -
 | child stderr (write)   | -           | `stderr[1]`
 
-![after closing](/assets/2017-02-17-pipes/closed.svg)
+![after closing](./closed.svg)
 
 Much better. The remaining problems are that the child pipes are not referenced in the right way. The parent wants to access its pipe ends via the `proc` struct. To fix this, we copy the descriptors to that struct, and forget the tuple arrays.
 
-![parent moved](/assets/2017-02-17-pipes/parent_moved.svg)
+![parent moved](./parent_moved.svg)
 
 The child's side is trickier. The big problem is that the child's standard descriptors (0, 1, and 2) point to the _parent_ pipes, but we want them to point to the newly created _child_ pipes. In other words, we want to _move_ the reference from, say, `child_in[0]` to `0`.
 
@@ -154,7 +154,7 @@ int dup2(int fildes, int fildes2);
 
 After calling `dup2(fd1, fd2)`, the resource previously referenced by `fd1` is now also referenced by `fd2`. Here are the references after duplicating them:
 
-![after dup2](/assets/2017-02-17-pipes/after_dup2.svg)
+![after dup2](./after_dup2.svg)
 
 Finally, we close the old descriptors:
 
@@ -179,7 +179,7 @@ Let's call `mv_fd` to place the child's pipes in the standard locations:
 }
 ```
 
-![after move](/assets/2017-02-17-pipes/moved.svg)
+![after move](./moved.svg)
 
 Done! When we call `execve`, the page table for the child process will be replaced, so we can forget it. Here's the full code for `call`:
 

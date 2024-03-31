@@ -56,7 +56,7 @@ GHC provides some good observability tools.
 One of these, ThreadScope, gives you a microsecond-level visual history of one run of your program.
 Here’s the chart of one run of our performance benchmark:
 
-![threadscope_1](/assets/2016-05-12/threadscope_1.png)
+![threadscope_1](./threadscope_1.png)
 
 The chart shows the history of one run of our benchmark program.
 Time runs along the x-axis.
@@ -151,7 +151,7 @@ Above, we print out garbage collection statistics with `+RHS -s`.
 The important metric in the result is the ‘max pause’ of 0.0515s, or 51 milliseconds.
 This program still exhibits the same garbage collection pauses when examined in ThreadScope:
 
-![threadscope_data_map](/assets/2016-05-12/threadscope_data_map.png)
+![threadscope_data_map](./threadscope_data_map.png)
 
 We tried tweaking many variables to test their effects on this pause time, most of which had very little effect.
 Compiler optimization flags (`-O`, `-O2`) made little difference.
@@ -166,7 +166,7 @@ Only one variable had a definite effect:
 the number of messages kept in the history.
 The relationship was roughly linear (or perhaps slightly worse):
 
-![relationship](/assets/2016-05-12/relationship_1.png)
+![relationship](./relationship_1.png)
 
 The message history in our program is our entire working set.
 The results above seemed to apply more generally to other programs:
@@ -211,7 +211,7 @@ and copying each object it finds to the active area.
 but the details are unimportant here.
 To see the nuts and bolts, [this set of slides](http://www.scs.stanford.edu/16wi-cs240h/slides/rts-lecture-annot.pdf) is great.)
 
-![copying](/assets/2016-05-12/copying.png)
+![copying](./copying.png)
 
 How long does it take to perform this copying routine on the entire heap?
 The object graph traversal takes time linear in the the number of object pointers in the working set.

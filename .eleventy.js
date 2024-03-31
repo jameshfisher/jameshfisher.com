@@ -1,4 +1,5 @@
 import markdownIt from "markdown-it";
+import * as fs from "fs";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
@@ -23,4 +24,31 @@ export default function (eleventyConfig) {
   eleventyConfig.setLiquidOptions({
     extname: "", // Workaround for https://github.com/11ty/eleventy/issues/1504
   });
+
+  function passThroughAssets(outputPath) {
+    const match = outputPath.match(
+      /_site\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)\/index.html/,
+    );
+    if (!match) return;
+    const [, year, month, day, slug] = match;
+    const postDir = `_posts/${year}-${month}-${day}`;
+    if (!fs.existsSync(postDir)) return;
+
+    fs.readdirSync(postDir)
+      .filter((file) => file !== `${slug}.md`)
+      .forEach((file) => {
+        const source = `${postDir}/${file}`;
+        const dest = outputPath.replace(/index\.html$/, file);
+        console.log(`Copying ${source} to ${dest}`);
+        fs.copyFileSync(source, dest);
+      });
+  }
+
+  eleventyConfig.addTransform(
+    "pass through post-specific assets",
+    function (content, outputPath) {
+      passThroughAssets(outputPath);
+      return content;
+    },
+  );
 }

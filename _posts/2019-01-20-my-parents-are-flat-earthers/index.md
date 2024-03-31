@@ -23,7 +23,7 @@ NASA hoaxes explorations of a fake outside world, "space".
 But, dear viewer, the conspiracy is hidden in plain sight:
 it is flaunted in the UN's very logo, which shows the Flat Earth!:
 
-<p><img src="/assets/2019-01-20-flat-earth/Flag_of_the_United_Nations.svg" /></p>
+<p><img src="./Flag_of_the_United_Nations.svg" /></p>
 
 If you were to see your parents posting this on Facebook,
 what would your reaction be?
@@ -120,7 +120,7 @@ On a globe,
 the shortest route from Argentina to Australia is over Antarctica.
 So, why are there no flights over Antarctica?
 
-<p><img src="/assets/2019-01-20-flat-earth/flightradar.png" style="border: 0;" /></p>
+<p><img src="./flightradar.png" style="border: 0;" /></p>
 
 Yes, you could equivalently ask the Flat Earther,
 "why doesn't the flight go over the _North_ Pole?"

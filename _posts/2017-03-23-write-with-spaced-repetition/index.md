@@ -7,7 +7,7 @@ summary: >-
   main point.
 ---
 
-![communication strategies](/assets/2017-03-23-repetition/repetition.svg)
+![communication strategies](./repetition.svg)
 
 You're writing a book. Or a technical manual. Or an advertisement. Whatever you're writing, you have a key point you want the reader to come away with. "The revolution of October 1917 was inevitable." "The central algorithm in the system is RSA." "Zonko is better than Zarko." Whatever your point is, to teach your reader of it, you should repeat that point throughout!
 

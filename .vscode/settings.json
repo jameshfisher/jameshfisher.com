@@ -1,4 +1,7 @@
 {
   "editor.tabSize": 2,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+
+  // To distinguish index.md files in post directories
+  "workbench.editor.labelFormat": "short"
 }

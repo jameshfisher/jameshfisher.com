@@ -32,14 +32,14 @@ export default function (eleventyConfig) {
     );
     if (!match) return;
     const [, year, month, day, slug] = match;
-    const inputDirPath = `_posts/${year}-${month}-${day}`;
+    const inputDirPath = `_posts/${year}-${month}-${day}-${slug}`;
     if (!fs.existsSync(inputDirPath)) return;
 
     const outputDirPath = path.dirname(outputPath);
     fs.mkdirSync(outputDirPath, { recursive: true });
 
     fs.readdirSync(inputDirPath)
-      .filter((filename) => filename !== `${slug}.md`)
+      .filter((filename) => filename !== `index.md`)
       .forEach((filename) => {
         const sourcePath = path.join(inputDirPath, filename);
         const destPath = path.join(outputDirPath, filename);

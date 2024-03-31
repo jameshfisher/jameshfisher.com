@@ -3,19 +3,19 @@ title: What are JavaScript source maps?
 tags:
   - programming
   - web
-ogimage: /assets/2020-09-26/jimscript.png
+ogimage: ./jimscript.png
 summary: >-
   Source maps map generated JavaScript to original source files, allowing
   debugging of the original code in the browser's dev tools.
 ---
 
-<script src="/assets/2020-09-26/generated.js"></script>
+<script src="./generated.js"></script>
 
 Open the dev tools on this page,
 and you'll see it executes a strange `source.jimscript` file.
 It's basically English, but you can step through and debug it:
 
-<p><img src="/assets/2020-09-26/jimscript.png"/></p>
+<p><img src="./jimscript.png"/></p>
 
 But what on earth is JimScript,
 and how does the browser know how to execute it?

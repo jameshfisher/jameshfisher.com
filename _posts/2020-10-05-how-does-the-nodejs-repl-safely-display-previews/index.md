@@ -13,7 +13,7 @@ When typing in the `node` repl,
 you get instant previews as you type, 
 like this:
 
-<asciinema-player src="/assets/2020-10-05/math_random.cast" autoplay loop theme="solarized-light"></asciinema-player>
+<asciinema-player src="./math_random.cast" autoplay loop theme="solarized-light"></asciinema-player>
 
 Clearly, the REPL is _executing_ your code every time you hit a key.
 But how can this be safe?!
@@ -48,6 +48,6 @@ I'm not sure exactly what V8 considers a side-effect,
 but apparently it doesn't consider `Math.random()` to have side-effects.
 I'm like 99% sure it would consider "deleting all my files" to be a side-effect, though.
 
-<link rel="stylesheet" type="text/css" href="/assets/2020-10-05/asciinema-player.css" />
+<link rel="stylesheet" type="text/css" href="./asciinema-player.css" />
 
-<script src="/assets/2020-10-05/asciinema-player.js"></script>
+<script src="./asciinema-player.js"></script>

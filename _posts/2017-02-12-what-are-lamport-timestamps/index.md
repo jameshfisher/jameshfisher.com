@@ -15,7 +15,7 @@ summary: >-
 
 "Lamport timestamps" are one method to measure time and causality. The idea is that each process/message carries a _timestamp_, and that we can compare these timestamps as a way to determine whether one event happened-before another (i.e., whether the first event could have caused the second). Consider the following process diagram:
 
-![message-passing processes](/assets/2017-02-10-happened-before/message-passing-processes.png)
+![message-passing processes](/2017/02/10/happened-before/message-passing-processes.png)
 
 Lamport has us annotate each line in the diagram with a natural number (the timestamp), like so:
 

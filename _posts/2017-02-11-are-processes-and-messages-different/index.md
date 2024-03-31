@@ -3,7 +3,7 @@ title: Are processes and messages different?
 tags:
   - concurrency
   - computer-science
-taggedAt: '2024-03-26'
+taggedAt: "2024-03-26"
 summary: >-
   Processes and messages can be unified - processes are just very slow messages,
   and message passing can be seen as splitting and fusing atoms.
@@ -11,7 +11,7 @@ summary: >-
 
 [Yesterday I described the "happened-before" relation](/2017/02/10/happened-before/). I showed this typical "interaction diagram" illustrating "processes" interacting with "messages":
 
-![message-passing processes](/assets/2017-02-10-happened-before/message-passing-processes.png)
+![message-passing processes](/2017/02/10/happened-before/message-passing-processes.png)
 
 This model of the world proposes two fundamentally different things: "processes" and "messages". But it's interesting to try to unify them. Processes in the diagram just look like very slow messages! We could also draw the world this way:
 

@@ -39,7 +39,7 @@ We now have all the pieces of the "happened-before relation" (as originally defi
 
 To visualize such events in "time", we usually draw diagrams like this:
 
-![message-passing processes](/assets/2017-02-10-happened-before/message-passing-processes.png)
+![message-passing processes](./message-passing-processes.png)
 
 Here, P, Q and R are "processes". In our example, "Jim's desk" and "Eve's desk" are processes: things fixed in position. The arrows are messages being passed between processes. In our example, Jim calling Eve would be modelled as a message.
 

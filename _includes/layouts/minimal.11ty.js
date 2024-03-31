@@ -24,6 +24,11 @@ export function render(data) {
 
   const author = data.author || "jim";
 
+  const ogImageUrl = new URL(
+    data.ogimage || "/assets/jim_512.jpg",
+    canonical,
+  ).toString();
+
   return h("html", { lang: "en" }, [
     h("head", {}, [
       h("meta", { charset: "utf-8" }),
@@ -46,7 +51,7 @@ export function render(data) {
       }),
       h("meta", {
         property: "og:image",
-        content: `${siteUrl}${data.ogimage || "/assets/jim_512.jpg"}`,
+        content: ogImageUrl,
       }),
       h("meta", {
         property: "og:url",

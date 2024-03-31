@@ -101,12 +101,10 @@ for (const assetDir of assetDirs) {
     path.join(newPostDir, "index.md"),
     "utf8",
   );
-  console.log({ postContent });
   const updatedContent = postContent.replace(
     /\/assets\/\d{4}-\d{2}-\d{2}[^/]*\//g,
     "./",
   );
-  console.log({ updatedContent });
   fs.writeFileSync(path.join(newPostDir, "index.md"), updatedContent);
 
   postsDone += 1;

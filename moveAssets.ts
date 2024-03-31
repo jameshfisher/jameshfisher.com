@@ -93,23 +93,24 @@ for (const assetDir of assetDirs) {
     );
   }
 
-  postsDone += 1;
-
-  if (postsDone >= 0) {
-    break;
-  }
-
   // Update links in the post file to point to the new location of the assets
-  // Original strings will look like "/assets/YYYY-MM-DD-something/"
+  // Original strings will look like  "/assets/YYYY-MM-DD/" or "/assets/YYYY-MM-DD-something/"
   // Updated strings will look like "./"
 
   const postContent = fs.readFileSync(
     path.join(newPostDir, "index.md"),
     "utf8",
   );
+  console.log({ postContent });
   const updatedContent = postContent.replace(
-    new RegExp(`/assets/${date}[^/]*/`, "g"),
+    /\/assets\/\d{4}-\d{2}-\d{2}[^/]*\//g,
     "./",
   );
+  console.log({ updatedContent });
   fs.writeFileSync(path.join(newPostDir, "index.md"), updatedContent);
+
+  postsDone += 1;
+  if (postsDone >= 0) {
+    break;
+  }
 }

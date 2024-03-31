@@ -141,7 +141,7 @@ summary: >-
       nextStateIndex = previousStateIndex;
     }, 100);
   };
-  startStateImg.src = "/assets/2017-10-22/game-of-life.png";
+  startStateImg.src = "./game-of-life.png";
 </script>
 
 [The Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
@@ -241,7 +241,7 @@ window.setInterval(function() {
 The initial process is bootstrapped with this tiny 64x64 image,
 which is a ["Gosper Glider Gun"](https://en.wikipedia.org/wiki/Gun_(cellular_automaton)):
 
-<p><img src="/assets/2017-10-22/game-of-life.png" style="width: 256px; height: 256px; image-rendering: pixelated; border: 1px solid black;"/></p>
+<p><img src="./game-of-life.png" style="width: 256px; height: 256px; image-rendering: pixelated; border: 1px solid black;"/></p>
 
 In future posts,
 I'll use texture rendering for more simulations.

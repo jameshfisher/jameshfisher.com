@@ -35,7 +35,7 @@ In _Clean Code_, Robert Martin writes that
 'A comment may be used to amplify the importance of something that may otherwise seem inconsequential.'
 Martin provides the following example:
 
-<p><img src="/assets/2014-05-11/1.png" alt="Clean Code, p. 59." /></p>
+<p><img src="./1.png" alt="Clean Code, p. 59." /></p>
 
 Martin writes that
 'the proper use of comments is
@@ -46,7 +46,7 @@ The comment needs some help to distinguish itself from the surrounding code and 
 Notice that the comment in Martin's book is appropriately in boldface.
 Now, [let's look at that same code on GitHub's code viewer](https://github.com/unclebob/fitnesse/blob/e013f4cf7d466163af4c22cb1a3b6ab502cded17/src/fitnesse/wikitext/widgets/ListWidget.java):
 
-<p><img src="/assets/2014-05-11/2.png" alt="Using GitHub's syntax highlighting." /></p>
+<p><img src="./2.png" alt="Using GitHub's syntax highlighting." /></p>
 
 The comment is washed out.
 While the rest of the text exists in black, boldface, and bright colors,
@@ -61,7 +61,7 @@ This runs directly counter to the _Clean Code_ approach to commenting.
 What should that comment look like?
 If _Clean Code_ were in color, it might look more like this:
 
-<p><img src="/assets/2014-05-11/3.png" /></p>
+<p><img src="./3.png" /></p>
 
 So why is it that we have collectively decided
 that comments should be almost invisible compared to the code?
@@ -69,7 +69,7 @@ I think it's because of the very thing that Martin rails against:
 the prevalence of redundant, obese comments.
 Here's his example:
 
-<p><img src="/assets/2014-05-11/4.png" alt="Page 61." /></p>
+<p><img src="./4.png" alt="Page 61." /></p>
 
 Every comment here is redundant.
 Worse, the textual decoration attempts to assert its own importance,
@@ -79,12 +79,12 @@ So, after looking at these useless comments all day, what do we do?
 We use our syntax highlighter to turn them off!
 [Here's GitHub again](https://github.com/apache/tomcat/blob/a84fabcbc6fee8a69253ad92a304b4718e96a7c9/java/org/apache/catalina/core/ContainerBase.java):
 
-<p><img src="/assets/2014-05-11/5.png" /></p>
+<p><img src="./5.png" /></p>
 
 Now, what would happen if we were to use my suggested color theme for those comments?
 It's going to be ugly, right?
 
-<p><img src="/assets/2014-05-11/6.png" /></p>
+<p><img src="./6.png" /></p>
 
 Damn right it's ugly!
 It _should_ be ugly!
@@ -93,7 +93,7 @@ The obnoxiousness of those useless comments _forces_ us to improve the code.
 After removing all the comments except the useful ones,
 I was left with [this](https://github.com/jameshfisher/tomcat/blob/566fe9891f80b047fae47fcda75a2daad7338f2f/java/org/apache/catalina/core/ContainerBase.java):
 
-<p><img src="/assets/2014-05-11/7.png" /></p>
+<p><img src="./7.png" /></p>
 
 The few important comments that remain no longer get lost.
 And we simultaneously made the code shorter.
@@ -109,7 +109,7 @@ if we changed our syntax highlighters to reward such good behavior.
 
 [Here is the commit on GitHub in which I removed all of those comments](https://github.com/apache/tomcat/compare/trunk...jameshfisher:remove-obnoxious-comments):
 
-<p><img src="/assets/2014-05-11/8.png" /></p>
+<p><img src="./8.png" /></p>
 
 Notice anything?
 That's right: it's in color!
@@ -182,11 +182,11 @@ using neutral colors to distinguish insertions from deletions
 but make no value judgement about them.
 Here is GitHub's diff viewer showing part of [the fix to the Heartbleed bug](https://github.com/openssl/openssl/commit/96db902):
 
-<p><img src="/assets/2014-05-11/9.png" alt="They've removed some important-looking stuff. Better deny changes." /></p>
+<p><img src="./9.png" alt="They've removed some important-looking stuff. Better deny changes." /></p>
 
 Now here is the same diff using value-neutral colors:
 
-<p><img src="/assets/2014-05-11/10.png" alt="What's important here? I don't know, I'd better read it." /></p>
+<p><img src="./10.png" alt="What's important here? I don't know, I'd better read it." /></p>
 
 
 Perhaps it's not as pretty, but it's more usable.

@@ -38,7 +38,7 @@ The user interface of medium.com,
 the site you are looking at (Note: this post was originally published on Medium!),
 is obviously inspired by a similar approach.
 
-![Sublime Text’s ‘distraction-free’ mode. Do you feel immersed?](/assets/2014-05-04/sublime.png)
+![Sublime Text’s ‘distraction-free’ mode. Do you feel immersed?](./sublime.png)
 
 The explicit assumption of this design
 is that we get distracted when using our computers
@@ -71,7 +71,7 @@ I remember what applications I opened and when and where,
 just like I remember where my washing machine is and when I started it.
 I use the same spatial and temporal memory for virtual applications as I do for physical appliances.
 
-![Everything is minimize](/assets/2014-05-04/owlturd.png)
+![Everything is minimize](./owlturd.png)
 
 (Everything is minimize. Originally from [OwlTurd](http://owlturd.com/post/86649052584/lets-not-the-issue-image-twitter-fb).)
 
@@ -98,7 +98,7 @@ And there are no menus anywhere to destroy the immersion of this experience.
 
 [http://xkcd.com/1367/](http://xkcd.com/1367/)
 
-![Bookshelf with covers outwards](/assets/2014-05-04/my_bookshelf.jpeg)
+![Bookshelf with covers outwards](./my_bookshelf.jpeg)
 
 (Does anyone arrange the books on their bookshelves so that the covers face outwards? Of course not, because their bookshelves do not have the luxury of infinite scrolling space.)
 

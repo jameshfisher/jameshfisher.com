@@ -27,7 +27,7 @@ Redis is best known as a key-value server.
 Clients open a TCP connection to a redis-server process,
 and start sending commands to it which modify the database:
 
-![redis is a key-value server](/assets/2017-03-01/key-value.svg)
+![redis is a key-value server](./key-value.svg)
 
 But Redis is also a messaging server!
 A client interested in donuts can open a TCP connection to the Redis server,
@@ -37,12 +37,12 @@ A news outlet can then connect to the Redis server,
 send “[PUBLISH](https://redis.io/commands/publish) donuts 3-for-$1”,
 and the subscribing client will be notified of this lucrative offer:
 
-![redis is a pub-sub server](/assets/2017-03-01/pubsub-server.svg)
+![redis is a pub-sub server](./pubsub-server.svg)
 
 Now let’s zoom in.
 We can imagine the Redis process keeping track of each socket’s subscription set:
 
-![redis-server with sockets](/assets/2017-03-01/sockets.svg)
+![redis-server with sockets](./sockets.svg)
 
 But what does the inside of Redis _really_ look like?
 Read on to find out!
@@ -69,7 +69,7 @@ which maps channel names to sets of subscribed [client](https://github.com/anti
 A client object represents a TCP-connected client
 by tracking that connection’s [file descriptor](https://github.com/antirez/redis/blob/3.2.6/src/server.h#L567).
 
-![redis-server client objects tracking sockets](/assets/2017-03-01/clients.svg)
+![redis-server client objects tracking sockets](./clients.svg)
 
 When a client sends a `SUBSCRIBE` command,
 its client object gets [added to the set of clients for that channel name](https://github.com/antirez/redis/blob/3.2.6/src/pubsub.c#L71).
@@ -99,7 +99,7 @@ With this, instead of iterating over _every_ channel,
 Redis only needs to [visit the channels which it knows the client was subscribed to](https://github.com/antirez/redis/blob/unstable/src/pubsub.c#L179).
 Let’s draw these sets as red circles:
 
-![redis-server subscription sets](/assets/2017-03-01/subscription-sets.svg)
+![redis-server subscription sets](./subscription-sets.svg)
 
 ## Getting concrete
 
@@ -113,7 +113,7 @@ Let’s start zooming in to allocated memory blocks.
 The `pubsub_channels` map is actually a [hash table](https://github.com/antirez/redis/blob/3.2.6/src/dict.h).
 The channel name is hashed to a position in a `2^n`\-sized array, like this:
 
-![redis-server pubsub_channels structure is a hash table](/assets/2017-03-01/pubsub_channels-hash-table.svg)
+![redis-server pubsub_channels structure is a hash table](./pubsub_channels-hash-table.svg)
 
 The `pubsub_channels` array, with buckets from `0` to `7`,
 is a single allocated block of memory.
@@ -137,7 +137,7 @@ But “set” is also an abstract data structure;
 how is it implemented in Redis?
 Well, the set of clients is another linked list!
 
-![redis-server subscribers are kept in a linked list](/assets/2017-03-01/subscriber-list.svg)
+![redis-server subscribers are kept in a linked list](./subscriber-list.svg)
 
 It’s nice to think of the strings “donuts” and “bagels” as embedded in the hash chain objects.
 But this is not true: each string has a separate allocation.
@@ -146,14 +146,14 @@ and has its own representation for them: [“Simple Dynamic Strings”](https:/
 This is a character array prefixed by its length and the number of free bytes.
 We can draw it like this:
 
-![redis-server strings](/assets/2017-03-01/strings.svg)
+![redis-server strings](./strings.svg)
 
 We are almost at the level of memory blocks, except for one thing: each client’s set of channels.
 Redis chooses to _not_ use a linked list here;
 instead, [Redis uses another hash table](https://github.com/antirez/redis/blob/3.2.6/src/server.h#L609).
 The channel names are the keys of the table:
 
-![redis-server clients have a set of subscribed channels](/assets/2017-03-01/client-channel-set.svg)
+![redis-server clients have a set of subscribed channels](./client-channel-set.svg)
 
 Why does Redis use a linked list to represent the channel’s client set,
 but a hash table to represent the client’s channel set? We’re not sure.
@@ -199,7 +199,7 @@ Answer: Redis _gradually_ resizes the hash table.
 the old and the new.
 Consider this `pubsub_channels` hash table in the middle of a resize:
 
-![redis-server realtime hash table in the middle of resizing](/assets/2017-03-01/realtime-hash-table.svg)
+![redis-server realtime hash table in the middle of resizing](./realtime-hash-table.svg)
 
 Whenever Redis performs an operation on the hash table (lookup, insert, delete …),
 [it does a little bit of resizing work](https://github.com/antirez/redis/blob/3.2.6/src/dict.c#L245).
@@ -257,7 +257,7 @@ Here’s what `redis-server` memory looks like
 after client B subscribes to `drink?`,
 and clients A and B subscribe to `food.*`:
 
-![redis-server pattern subscription implementation](/assets/2017-03-01/pattern-subscriptions.svg)
+![redis-server pattern subscription implementation](./pattern-subscriptions.svg)
 
 There is a global linked list down the left-hand side,
 each pointing to a `pubsubPattern` (deep red).

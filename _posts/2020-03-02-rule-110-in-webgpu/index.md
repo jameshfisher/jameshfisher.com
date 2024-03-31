@@ -18,7 +18,7 @@ Most of you reading this won't have this feature enabled,
 so you'll just see the image.
 
 <div>
-  <img src="/assets/2020-03-02/rule110.png" style="width: 400px; image-rendering: pixelated; border: none; display: inline-block;" />
+  <img src="./rule110.png" style="width: 400px; image-rendering: pixelated; border: none; display: inline-block;" />
   <canvas id="example-canvas" width="200" height="200" style="width: 400px; image-rendering: pixelated; display: inline-block;"></canvas>
 </div>
 

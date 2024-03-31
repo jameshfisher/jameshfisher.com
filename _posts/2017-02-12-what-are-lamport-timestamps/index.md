@@ -19,7 +19,7 @@ summary: >-
 
 Lamport has us annotate each line in the diagram with a natural number (the timestamp), like so:
 
-![Lamport timestamp example](/assets/2017-02-12-lamport-timestamps/lamport-timestamps-example.png)
+![Lamport timestamp example](./lamport-timestamps-example.png)
 
 Each timestamp is generated from the previous ones. So for a sent message, the new process timestamp and the sent message timestamp are the result of the previous process timestamp. And for a received message, the new process timestamp is the result of the previous process timestamp and the inbound message's timestamp.
 
@@ -40,11 +40,11 @@ void on_receive_message(msg_t msg) {
 
 For processes, you can see the timestamp as a monotonically increasing "last event timestamp", and for messages, you can see the timestamp as an immutable "timestamp of the event that caused this message". Events are sending messages or receiving messages. (We could add "internal process events" to this model, but Lamport chooses not to.) So the above diagram represents these event timestamps:
 
-![Lamport timestamp events example](/assets/2017-02-12-lamport-timestamps/lamport-timestamp-events.png)
+![Lamport timestamp events example](./lamport-timestamp-events.png)
 
 What's the _point_ of all this? The point is to separate events into layers:
 
-![Lamport timestamp layers](/assets/2017-02-12-lamport-timestamps/lamport-timestamp-layers.png)
+![Lamport timestamp layers](./lamport-timestamp-layers.png)
 
 These layers correspond to each's process's observation of the passing of time (i.e. "time" as interpreted by the happened-before relation). Similarly, we can see the timestamp as counting the _longest path of events leading to this event_.
 
@@ -87,7 +87,7 @@ In summary, by comparing timestamps, we get
 
 We can also see Lamport timestamps in a diagram which removes the process/message distinction.
 
-![Lamport timestamp particles](/assets/2017-02-12-lamport-timestamps/lamport-timestamps-particles.png)
+![Lamport timestamp particles](./lamport-timestamps-particles.png)
 
 Here, the algorithm is simpler:
 

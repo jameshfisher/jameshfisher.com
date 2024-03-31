@@ -1,5 +1,6 @@
 import markdownIt from "markdown-it";
 import * as fs from "fs";
+import * as path from "path";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
@@ -31,16 +32,19 @@ export default function (eleventyConfig) {
     );
     if (!match) return;
     const [, year, month, day, slug] = match;
-    const postDir = `_posts/${year}-${month}-${day}`;
-    if (!fs.existsSync(postDir)) return;
+    const inputDirPath = `_posts/${year}-${month}-${day}`;
+    if (!fs.existsSync(inputDirPath)) return;
 
-    fs.readdirSync(postDir)
-      .filter((file) => file !== `${slug}.md`)
-      .forEach((file) => {
-        const source = `${postDir}/${file}`;
-        const dest = outputPath.replace(/index\.html$/, file);
-        console.log(`Copying ${source} to ${dest}`);
-        fs.copyFileSync(source, dest);
+    const outputDirPath = path.dirname(outputPath);
+    fs.mkdirSync(outputDirPath, { recursive: true });
+
+    fs.readdirSync(inputDirPath)
+      .filter((filename) => filename !== `${slug}.md`)
+      .forEach((filename) => {
+        const sourcePath = path.join(inputDirPath, filename);
+        const destPath = path.join(outputDirPath, filename);
+        console.log(`Copying ${sourcePath} to ${destPath}`);
+        fs.copyFileSync(sourcePath, destPath);
       });
   }
 

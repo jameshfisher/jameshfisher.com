@@ -14,11 +14,10 @@ export default function (eleventyConfig) {
 
   eleventyConfig.setLibrary("md", markdownItInstance);
 
-  // 'posts' used by the RSS feed
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi
-      .getFilteredByGlob("_posts/**")
-      .filter((post) => !post.data.draft);
+      .getAll()
+      .filter((page) => page.data.filetype === "blogpost" && !page.data.draft);
   });
 
   eleventyConfig.setLiquidOptions({

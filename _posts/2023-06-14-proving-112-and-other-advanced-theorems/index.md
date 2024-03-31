@@ -72,7 +72,7 @@ Your type `: number` claims that this function always returns a number.
 I'm convinced.
 But annoyingly, the computer complains:
 
-![Type 'number | undefined' is not assignable to type 'number'](/assets/2023-06-14/complaint.png)
+![Type 'number | undefined' is not assignable to type 'number'](./complaint.png)
 
 Stupid computer!
 Apparently it can't see that,
@@ -110,7 +110,7 @@ How could this help us solve our problems above?
 In this session we'll play [The Natural Number Game](https://adam.math.hhu.de/#/g/hhu-adam/NNG4).
 Click it and you should see:
 
-![Natural number game](/assets/2023-06-14/natural_number_game.png)
+![Natural number game](./natural_number_game.png)
 
 We'll play the first 8 levels.
 At the end, we will have proved that `a+b=b+a`.

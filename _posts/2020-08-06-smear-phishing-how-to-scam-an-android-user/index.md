@@ -25,7 +25,7 @@ which will appear in that conversation history,
 like this:
 
 <video controls autoplay muted loop style="max-width: 10cm">
-  <source src="/assets/2020-08-06/scam_1_noaudio.mp4" type="video/mp4">
+  <source src="./scam_1_noaudio.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -53,7 +53,7 @@ These Sender IDs are fairly unregulated:
 you can sign up on any SMS gateway and choose an arbitrary Sender ID.
 Here's an example using [ClickSend](http://clicksend.com/):
 
-<p><img src="/assets/2020-08-06/clicksend.png" /></p>
+<p><img src="./clicksend.png" /></p>
 
 Sender ID on its own can be used for low-quality phishing.
 You could send me a message from the Sender ID `JackDorsey`.
@@ -88,7 +88,7 @@ Somewhere in the chain from the SMS gateway to my Android Messages app,
 something was replacing the `O` with a `0`, and interpreting it as a genuine phone number!
 Who could be so stupid, and how did this code get into production?
 
-<p><img src="/assets/2020-08-06/message_details.png" style="max-width: 10cm; margin: 0 auto; display: block"/></p>
+<p><img src="./message_details.png" style="max-width: 10cm; margin: 0 auto; display: block"/></p>
 
 By elimination, I quickly found that Android is the culprit.
 It wasn't the SMS gateway -- the same stupid trick works with other gateways.

@@ -4,7 +4,7 @@ tags:
   - programming
   - web
   - webgl
-ogimage: /assets/2020-08-31/example.png
+ogimage: ./example.png
 summary: >-
   A WebGL fragment shader that implements the Sobel filter, a method for
   detecting edges in an image. A demo processes your webcam video stream.
@@ -138,7 +138,7 @@ corresponds to the gradient's steepness in the input image.
 Take a look at what the demo does with my webcam,
 and consider whether "a steep gradient" really matches your intuition of what an "edge" is:
 
-<p><img src="/assets/2020-08-31/example.png"/></p>
+<p><img src="./example.png"/></p>
 
 In my opinion, there are some oddities.
 Notice the lampshade in the corner does not get a full outline.

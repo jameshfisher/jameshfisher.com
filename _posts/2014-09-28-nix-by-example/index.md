@@ -401,7 +401,7 @@ and in fact every Nix expression -- 
 as an abstract syntax tree.
 The tree for the above expression is shown below.
 
-<p><img src="/assets/2014-09-28/1.png"/></p>
+<p><img src="./1.png"/></p>
 
 (Initial abstract syntax tree represented by our input program.)
 
@@ -434,7 +434,7 @@ Function application means substitution of all references to the bound variable,
 with a reference to the function argument, '3'.
 This yields a new, simpler tree:
 
-<p><img src="/assets/2014-09-28/2.png"/></p>
+<p><img src="./2.png"/></p>
 
 (After one step. We replaced all references to x with references to 3.)
 
@@ -465,7 +465,7 @@ Nix knows how to multiply `7*7`, so we substitute `49`.
 
 Here's the entire process in glorious detail!
 
-<p><img src="/assets/2014-09-28/3.png"/></p>
+<p><img src="./3.png"/></p>
 
 We can express the same reduction textually like this:
 

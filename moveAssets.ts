@@ -45,5 +45,7 @@ for (const post of getChildren(postsDir)) {
   // move the file to the new directory
   fs.renameSync(postPath, newPostPath);
   postsDone++;
-  break;
+  if (postsDone > 5) {
+    break;
+  }
 }

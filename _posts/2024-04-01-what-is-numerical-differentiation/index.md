@@ -1,5 +1,5 @@
 ---
-title: What is automatic differentiation?
+title: What is numerical differentiation?
 tags: []
 summary: >-
   Differentiation asks: how does tweaking the inputs change the output?

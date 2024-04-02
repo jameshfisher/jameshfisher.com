@@ -1,6 +1,10 @@
 ---
-title: "Automatic differentiation with dual numbers"
+title: Automatic differentiation with dual numbers
 tags: []
+summary: >-
+  Differentiation asks: how does tweaking the inputs change the output?
+  To accurately differentiate an arbitrary function,
+  perhaps the simplest way is using "dual numbers".
 ---
 
 Say we're calculating the distance between two points using JavaScript:

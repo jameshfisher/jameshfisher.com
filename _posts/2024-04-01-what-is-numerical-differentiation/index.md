@@ -1,6 +1,10 @@
 ---
-title: "What is automatic differentiation?"
+title: What is automatic differentiation?
 tags: []
+summary: >-
+  Differentiation asks: how does tweaking the inputs change the output?
+  Numerical differentiation is a simple, general way to do this.
+  But it's not very accurate, and it's inefficient when there are many inputs.
 ---
 
 In school, we learned how to differentiate some functions.

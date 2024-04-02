@@ -5,7 +5,7 @@ tags:
   - web
   - webgl
   - machine-learning
-ogimage: /assets/2020-09-22/result.jpg
+ogimage: ./result.jpg
 summary: >-
   A WebGL shader that uses BodyPix segmentation to set the alpha channel.
 ---
@@ -113,7 +113,7 @@ void main(void) {
 
 Here's what I get when I run the demo against my own webcam feed:
 
-<p><img src="/assets/2020-09-22/result.jpg"/></p>
+<p><img src="./result.jpg"/></p>
 
 As you can see, BodyPix still has a number of quality issues.
 In priority order:

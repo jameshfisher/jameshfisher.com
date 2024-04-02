@@ -11,10 +11,10 @@ summary: >-
   background image to create a transparent mask.
 ---
 
-In [this previous post](/2020/08/11/production-ready-green-screen-in-the-browser/) 
+In [this previous post](/2020/08/11/production-ready-green-screen-in-the-browser/)
 I showed how to remove a background from a webcam feed
 using a "green screen" algorithm implemented in WebGL.
-In this post, 
+In this post,
 I show how to remove a background from a webcam feed
 given advance knowledge of what the background looks like.
 Below is a demo &mdash;
@@ -76,7 +76,7 @@ or some more sophisticated background tracking.
 
 <script id="fragment-shader" type="glsl">
   precision mediump float;
-  
+
   uniform sampler2D frame;
   uniform sampler2D background;
 
@@ -96,7 +96,7 @@ or some more sophisticated background tracking.
     );
   }
 
-  // Where the background is very light or very dark, 
+  // Where the background is very light or very dark,
   // chroma difference stops being a useful measure,
   // and luma difference becomes more useful.
   float LightnessDistProportion(float l) {
@@ -168,7 +168,7 @@ or some more sophisticated background tracking.
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-  
+
   gl.activeTexture(gl.TEXTURE1);
   const background = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, background);
@@ -185,7 +185,7 @@ or some more sophisticated background tracking.
   const spillLoc = gl.getUniformLocation(prog, "spill");
 
   function startWebcam() {
-    navigator.mediaDevices.getUserMedia({ video: { 
+    navigator.mediaDevices.getUserMedia({ video: {
         facingMode: "user",
         width: { ideal: 1280 },
         height: { ideal: 720 } } }).then(stream => {

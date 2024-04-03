@@ -108,8 +108,10 @@ export function render(data) {
           ]),
         ],
       ),
-      h("h3", {}, "Similar posts"),
-      renderPosts(similarPosts(data.collections.posts, data)),
+      h("div", { class: "similar-posts" }, [
+        h("h3", {}, "Similar posts"),
+        renderPosts(similarPosts(data.collections.posts, data)),
+      ]),
       h("h3", {}, "More by Jim"),
       renderPosts(myFavoritePosts),
     ]),

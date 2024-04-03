@@ -221,3 +221,10 @@ ul {
 body.experiment-dont-show-link-summaries .post-summary {
   display: none;
 }
+
+.similar-posts {
+  display: none;
+}
+body.experiment-show-similar-posts .similar-posts {
+  display: initial;
+}

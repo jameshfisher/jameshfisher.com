@@ -1,5 +1,6 @@
-import markdownIt from "markdown-it";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import * as fs from "fs";
+import markdownIt from "markdown-it";
 import * as path from "path";
 
 export default function (eleventyConfig) {
@@ -55,4 +56,6 @@ export default function (eleventyConfig) {
       return content;
     },
   );
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 }

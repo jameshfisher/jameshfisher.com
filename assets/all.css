@@ -93,6 +93,18 @@ code {
   }
 }
 
+/*
+  PrismJS theme.
+  PrismJS idiotically doesn't have tokens for the main important things: named entities like variables.
+  So instead of highlighting important things, we have to de-emphasize unimportant things.
+  TODO: use a highlighter that actually parses the code, then use proper semantic highlighting.
+*/
+.token.punctuation,
+.token.operator,
+.token.keyword {
+  color: #877;
+}
+
 #content > table {
   max-width: none;
   overflow-x: auto;

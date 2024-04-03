@@ -4,7 +4,7 @@
   "scripts": {
     "build": "eleventy",
     "test": "hyperlink --recursive --internal --root _site --canonicalroot https://jameshfisher.com _site/index.html",
-    "serve": "eleventy --serve",
+    "dev": "eleventy --serve",
     "format": "prettier --write \"./**/*.11ty.js\"",
     "add-hn-backlinks": "bun run scripts/addHnBacklinks.ts",
     "add-summaries": "bun run scripts/addSummaries.ts",

@@ -10,4 +10,4 @@ function blogpost {
   printf -- "---\ntitle: \"$1\"\ntags: []\n---\n\n" > "${blogpost_dir}/index.md"
 }
 
-alias blog="cd ~/dev/jameshfisher/jameshfisher.com && code -n . && npm run serve"
+alias blog="cd ~/dev/jameshfisher/jameshfisher.com && code -n . && npm run dev"

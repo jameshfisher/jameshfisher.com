@@ -7,6 +7,20 @@ summary: >-
   perhaps the simplest way is using "dual numbers".
 ---
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMath()"></script>
+<script>
+  function renderMath() {
+    renderMathInElement(document.body,{
+              delimiters: [
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+              ]
+    });
+  }
+</script>
+
 Differentiation is the heart of most machine learning,
 but how can we differentiate arbitrary functions?
 Perhaps the simplest accurate method is using _dual numbers_.
@@ -46,26 +60,26 @@ The numerical error is due to our `changeToInput = 0.00000001` not being infinit
 
 Now let's calcuate the derivative without this numerical error!
 
-We'll start by saying that `ε`, or _epsilon_, is a special number that's infinitesimally small.
+We'll start by saying that $\varepsilon$, or _epsilon_, is a special number that's infinitesimally small.
 More precisely:
-it's not so small as to be zero,
-but it's so small that _when you square it, you get zero_.
+$\varepsilon$ is not so small as to be zero,
+but $\varepsilon$ is so small that _when you square it, you get zero_.
 
-Then we'll calculate `distance(3+ε, 4)` in JS,
-and see how many `ε`s are in the output.
+Then we'll calculate $\text{distance}(3+\varepsilon, 4)$ in JS,
+and see how many $\varepsilon$s are in the output.
 And that will be the true derivative!
 
-Does `ε` really exist?
+Does $\varepsilon$ really exist?
 Not in our ordinary real numbers.
 We'll just say it's a different kind of number!
 
-What is `42 + 7ε`?
-Well, because `ε` is a different kind of number,
+What is $42 + 7\varepsilon$?
+Well, because $\varepsilon$ is a different kind of number,
 we can't simplify this expression,
-so we just leave it as `42 + 7ε`.
+so we just leave it as $42 + 7\varepsilon$.
 
 In general, we call these [_dual numbers_](https://en.wikipedia.org/wiki/Dual_number).
-They're of the form `a + bε`,
+They're of the form $a + b\varepsilon$,
 and we can represent them in TypeScript as:
 
 ```ts
@@ -73,27 +87,33 @@ type Dual = {
   // The ordinary real value part
   val: number;
 
-  // How many tiny εs we have
+  // How many tiny epsilons we have
   der: number;
 };
 ```
 
-You might vaguely remember rules from school like "the derivative of `x^n` is `n * x^(n-1)`",
+You might vaguely remember rules from school,
+like the derivative of $x^n$ is $nx^{n-1}$,
 or something about limits.
-But dual numbers let us forget these rules and just use arithmetic!
-For example, let's find the derivative of `x^2` at `x = 5`:
+But dual numbers let us forget these rules and just use algebra!
+For example, let's find the derivative of $x^2$ at $x = 5$.
+We'll start by adding $\varepsilon$ to the input, to get $x = 5 + \varepsilon$.
+Then we simplify $x^2$ with ordinary algebra:
 
-```
-x   = 5 + ε
-x^2 = x * x
-    = (5 + ε)(5 + ε)
-    = 5*5 + 2*5*ε + ε^2
-    = 5*5 + 2*5*ε
-    = 25 + 10ε
-```
+<div>
+  \[
+  \begin{aligned}
+  x^2 &= x \times x                                             \\
+      &= (5 + \varepsilon)(5 + \varepsilon)                   \\
+      &= (5 \times 5) + (\varepsilon \times 5) + (5\times\varepsilon) + \varepsilon^2 \\
+      &= 25 + (2 \times 5 \times \varepsilon)                \\
+      &= 25 + 10\varepsilon                                   \\
+  \end{aligned}
+  \]
+<div>
 
-The value `10` there is the derivative of `x^2` at `x=5`!
-We just used ordinary arithmetic, plus the rule that `ε^2 = 0`.
+The value $10$ there is the derivative of $x^2$ at $x=5$!
+We just used ordinary arithmetic, plus the rule that $\varepsilon^2 = 0$.
 
 Now we can write this in TypeScript:
 
@@ -138,7 +158,7 @@ Now `distance` will give us the ordinary output, plus the derivative!
 
 ```
 > distance(
-  { val: 3, der: 1 },  // adding ε to the first argument
+  { val: 3, der: 1 },  // adding \varepsilon to the first argument
   { val: 4, der: 0 }
 )
 

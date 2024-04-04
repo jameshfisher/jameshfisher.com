@@ -30,7 +30,7 @@ Take these examples:
 > Simply link in the CDN and get started.
 
 All of these sentences are improved by removing the word "simply".`,
-    tags: ["technical-writing", "writing", "communication", "essay"],
+    tags: ["simply", "technical-writing", "writing", "communication", "essay"],
   },
 ];
 
@@ -49,7 +49,8 @@ async function fileToTags(
       `Tags are used to recommend similar posts, and to allow browsing by topic.`,
       `Use existing tags where possible, which are: \`${vocabList.join(", ")}\`.`,
       `If the post covers any topics that do not yet have tags, invent new tags.`,
-      `Start with specific keywords from the post, and work up to more general topics.`,
+      `The first tags should be the specific topics of the post.`,
+      `The remaining tags are more general topics.`,
     ].join(" "),
     messages: [
       ...examples.flatMap(

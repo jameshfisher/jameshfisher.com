@@ -1,12 +1,20 @@
 ---
 title: How does swapping stdin and stderr work?
-tags:
-  - programming
-  - unix
-  - c
 summary: >-
-  The magic shell string `3>&2 2>&1 1>&3-` swaps stdout and stderr.
-  It does with the `dup2` system call to swap file descriptors.
+  The magic shell string `3>&2 2>&1 1>&3-` swaps stdout and stderr. It does with
+  the `dup2` system call to swap file descriptors.
+tags:
+  - dup2
+  - stderr
+  - stdout
+  - file-descriptors
+  - bash
+  - shell
+  - c
+  - system-calls
+  - unix
+  - programming
+taggedAt: '2024-04-04'
 ---
 
 Sometimes I want to call something in bash,

@@ -1,10 +1,15 @@
 ---
 title: What is `extern` in C?
-tags: []
 summary: >-
   `extern` declares a variable without defining it, allowing the linker to find
   the definition elsewhere. This is useful when a variable is declared in one
   file but defined in another.
+tags:
+  - extern
+  - c
+  - semantics
+  - programming
+taggedAt: '2024-04-04'
 ---
 
 C has a keyword `extern`.

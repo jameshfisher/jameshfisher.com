@@ -1,11 +1,19 @@
 ---
 title: What is the `viewport` meta tag? How can I display my website on mobile?
 justification: I'm making the Vidrio website. It should display well on mobile.
-tags: []
 summary: >-
-  Mobile browsers magically scale pages to fit mobile screens.
-  Setting `width=device-width` disables this,
-  but it requires the website to be designed for small screens.
+  Mobile browsers magically scale pages to fit mobile screens. Setting
+  `width=device-width` disables this, but it requires the website to be designed
+  for small screens.
+tags:
+  - viewport-tag
+  - mobile-dev
+  - responsive-design
+  - css
+  - html
+  - website-design
+  - user-experience
+taggedAt: "2024-04-04"
 ---
 
 Look at [vidr.io](https://vidr.io) on mobile. The page looks like a scaled-down version of the site designed for desktop. Compare this to [framer.com](https://framer.com/) on mobile, which displays a significantly different page on mobile.
@@ -13,7 +21,10 @@ Look at [vidr.io](https://vidr.io) on mobile. The page looks like a scaled-down 
 A key difference is [the `viewport` meta tag](https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag). On framer.com, this looks like:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, user-scalable=no"
+/>
 ```
 
 The viewport tag controls how the browser displays the page. It can set multiple properties (such as `width`, `initial-scale`, and `user-scalable`, above).

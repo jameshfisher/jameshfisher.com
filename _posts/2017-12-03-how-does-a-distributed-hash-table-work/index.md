@@ -1,7 +1,15 @@
 ---
 title: How does a distributed hash table work?
 draft: true
-tags: []
+tags:
+  - distributed-hash-table
+  - hash-table
+  - data-structures
+  - algorithms
+  - distributed-systems
+  - programming
+  - computer-science
+taggedAt: '2024-04-04'
 ---
 
 First, what is a hash table?
@@ -39,7 +47,7 @@ then lookups and insertions will be fast.
 Notice I said "approximate" location, and "location estimate".
 Hash functions have _collisions_, e.g. `"jim"` and `"alice"` both hash to bucket `3`.
 There are many ways to deal with collisions.
-For example, _open addressing_ says, 
+For example, _open addressing_ says,
 "if bucket `3` is already full, try bucket `4`, then `5`, and so on".
 Then when the table becomes "full", we do an expensive _hash table resize_,
 moving every key to a new, bigger table.
@@ -55,7 +63,7 @@ How do we put our hash table on those multiple machines?
 One way is to clone our hash table, so that every machine has a copy.
 When a node wishes to look up a value, it can look in its local copy.
 When a machine wishes to insert a value at a key, it broadcasts this to all other nodes.
-This scheme provides redundancy, 
+This scheme provides redundancy,
 and distributes lookups over all copies:
 with _n_ nodes, each node processes 1/_n_ lookups.
 But all nodes still store all data,

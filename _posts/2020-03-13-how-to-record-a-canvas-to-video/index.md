@@ -1,11 +1,19 @@
 ---
 title: How to record a canvas to video
-tags:
-  - programming
-  - web
 summary: >-
   Using the `MediaRecorder` API to record a canvas element as a WebM video file,
   allowing the user to download the recorded video.
+tags:
+  - media-recorder-api
+  - canvas
+  - video
+  - webm
+  - download
+  - javascript
+  - web
+  - html
+  - programming
+taggedAt: '2024-04-04'
 ---
 
 You can use HTML `canvas` to produce videos!

@@ -97,9 +97,10 @@ async function main() {
   const dateStr = new Date().toISOString().slice(0, 10);
 
   const filePaths = fs
-    .readdirSync("_posts")
-    .filter((filename) => filename.endsWith(".md"))
-    .map((filename) => `_posts/${filename}`);
+    .readdirSync("_posts", { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => `_posts/${dirent.name}/index.md`)
+    .filter((filePath) => fs.existsSync(filePath));
 
   shuffle(filePaths);
 

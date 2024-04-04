@@ -8,6 +8,8 @@ tags:
   - programming
   - knowledge-management
 taggedAt: "2024-03-26"
+summary: >-
+  Prolog as a better alternative to "semantic triples" and SPARQL.
 ---
 
 Semantic wikis allow pages to make their facts ‘machine-readable.’

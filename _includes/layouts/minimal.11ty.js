@@ -29,7 +29,7 @@ export function render(data) {
     canonical,
   ).toString();
 
-  return h("html", { lang: "en" }, [
+  const html = h("html", { lang: "en" }, [
     h("head", {}, [
       h("meta", { charset: "utf-8" }),
       h("meta", {
@@ -140,4 +140,6 @@ export function render(data) {
       rawHtml(scriptsHtml),
     ]),
   ]).rawHtml;
+
+  return `<!DOCTYPE html>${html}`;
 }

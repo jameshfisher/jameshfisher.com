@@ -1,32 +1,41 @@
 import striptags from "striptags";
-import dataPeople from "../../_data/people.js";
-import { renderInlineMarkdown } from "../../markdown.js";
-import navbarHtml from "../../navbar.js";
-import { rawHtml } from "../../rawHtml.js";
-import scriptsHtml from "../../scripts.js";
-import { h } from "../../vhtml.js";
+import { dataPeople } from "../data/people.js";
+import { renderInlineMarkdown } from "../markdown.js";
+import { navbar } from "../navbar.js";
+import { scripts } from "../scripts.js";
+import type { Frontmatter } from "../types.js";
+import { h, rawHtml, type VNode } from "../vhtml.js";
 
 export const data = {};
 
-function excerpt(content) {
+function excerpt(content: string) {
   const paraMatches = content.match(/<p.*?<\/p>/s);
   if (paraMatches === null) return "";
   return striptags(paraMatches[0]).replace(/\n/g, " ").trim();
 }
 
-export function render(data) {
+export function renderPage({
+  data,
+  content,
+  page,
+}: {
+  content: VNode;
+  data: Frontmatter;
+  page: { url: string };
+}) {
   const siteUrl = "https://jameshfisher.com"; // FIXME site.url from jekyll _config.yml
-  const canonical = `https://jameshfisher.com${data.page.url}`;
+  const canonical = `https://jameshfisher.com${page.url}`;
 
   // We don't use eleventy's 'excerpt' feature because it requires us to insert an explicit separator in the .md source.
   // I want the excerpt to just be the first paragraph, which is how it behaved in Jekyll.
-  const plaintextExcerpt = excerpt(data.content);
+  const plaintextExcerpt = excerpt(content.rawHtml);
 
   const author = data.author || "jim";
+  const authorPerson = dataPeople[author];
 
   const ogImageUrl = new URL(
     data.ogimage || "/assets/jim_512.jpg",
-    canonical,
+    canonical
   ).toString();
 
   const html = h("html", { lang: "en" }, [
@@ -83,7 +92,7 @@ export function render(data) {
         rel: "stylesheet",
         href: "/assets/all.css",
       }),
-      h("title", {}, data.title),
+      h("title", {}, [data.title]),
     ]),
     h("body", { class: "experiment-dont-show-link-summaries" }, [
       h("div", { class: "noprint", style: "float: right; overflow: hidden;" }, [
@@ -118,9 +127,9 @@ export function render(data) {
                   src: "/assets/jim.mp4",
                   type: "video/mp4",
                 }),
-              ],
+              ]
             ),
-          ],
+          ]
         ),
       ]),
       h("div", { id: "content" }, [
@@ -128,18 +137,18 @@ export function render(data) {
           author === "jim" ? "" : "Guest post: ",
           rawHtml(renderInlineMarkdown(data.title || "")),
         ]),
-        author === "jim"
+        author === "jim" || !authorPerson
           ? ""
           : h("h2", {}, [
               "By ",
-              h("a", { href: dataPeople[author].url }, dataPeople[author].name),
+              h("a", { href: authorPerson.url }, [authorPerson.name]),
             ]),
-        rawHtml(data.content),
-        rawHtml(navbarHtml),
+        content,
+        navbar,
       ]),
-      rawHtml(scriptsHtml),
+      scripts,
     ]),
-  ]).rawHtml;
+  ]);
 
-  return `<!DOCTYPE html>${html}`;
+  return html;
 }

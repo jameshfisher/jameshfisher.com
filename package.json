@@ -1,29 +1,35 @@
 {
   "name": "jameshfisher.com",
-  "version": "1.0.0",
+  "module": "index.ts",
+  "type": "module",
   "scripts": {
-    "build": "eleventy",
+    "dev": "bun run dev.ts",
+    "build": "bun run build.ts",
     "test": "hyperlink --recursive --internal --root _site --canonicalroot https://jameshfisher.com _site/index.html",
-    "dev": "eleventy --serve",
     "format": "prettier --write \"./**/*.11ty.js\"",
     "add-hn-backlinks": "bun run scripts/addHnBacklinks.ts",
     "add-summaries": "bun run scripts/addSummaries.ts",
     "add-tags": "bun run scripts/addTags.ts"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0-alpha.5",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@anthropic-ai/sdk": "^0.19.0",
     "@types/node": "^20.11.30",
+    "@types/browser-sync": "^2.29.0",
+    "@types/bun": "latest",
+    "@types/markdown-it": "^13.0.7",
+    "@types/prismjs": "^1.26.3",
+    "browser-sync": "^3.0.2",
     "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",
     "html-entities": "^1.4.0",
     "hyperlink": "^5.0.4",
-    "jsdom": "^24.0.0",
-    "linkedom": "^0.16.10",
+    "liquidjs": "^10.10.2",
     "markdown-it": "^14.1.0",
     "prettier": "^3.2.5",
+    "prismjs": "^1.29.0",
     "striptags": "^3.2.0"
   },
-  "type": "module"
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
 }

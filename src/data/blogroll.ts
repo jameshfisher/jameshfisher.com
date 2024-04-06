@@ -1,4 +1,4 @@
-export default [
+export const blogroll = [
   {
     title: "The DIY Masters",
     author: "Ben Ellison, my friend from secondary school",

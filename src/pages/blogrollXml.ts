@@ -1,10 +1,10 @@
-import blogroll from "./blogroll.js";
+import { blogroll } from "../data/blogroll";
 
 export const data = {
   permalink: "blogroll.xml",
 };
 
-export function render(data) {
+export function renderBlogrollXml() {
   return `<?xml version="1.0" encoding="UTF-8"?>
   <opml version="1.0">
       <head>
@@ -15,7 +15,7 @@ export function render(data) {
           .filter((blog) => blog.xmlUrl)
           .map(
             (blog) =>
-              `<outline type="rss" xmlUrl="${blog.xmlUrl}" htmlUrl="${blog.htmlUrl}" title="${blog.title}"/>`,
+              `<outline type="rss" xmlUrl="${blog.xmlUrl}" htmlUrl="${blog.htmlUrl}" title="${blog.title}"/>`
           )
           .join("\n")}
       </body>

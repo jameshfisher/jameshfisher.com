@@ -1,19 +1,19 @@
 import { h } from "./vhtml.js";
 
-const navbarHtml = h("div", { class: "noprint" }, [
+export const navbar = h("div", { class: "noprint" }, [
   h("div", { class: "navbar no-link-underlines" }, [
-    h("div", { class: "navbar-item" }, [h("a", { href: "/" }, "Jim Fisher")]),
+    h("div", { class: "navbar-item" }, [h("a", { href: "/" }, ["Jim Fisher"])]),
     h("div", { class: "navbar-item" }, [
-      h("a", { href: "/cv", class: "cv-link" }, "CV"),
+      h("a", { href: "/cv", class: "cv-link" }, ["CV"]),
     ]),
     h("div", { class: "navbar-item" }, [
-      h("a", { href: "/speaking" }, "Speaking"),
+      h("a", { href: "/speaking" }, ["Speaking"]),
     ]),
     h("div", { class: "navbar-item" }, [
-      h("a", { href: "/blogroll" }, "Blogroll"),
+      h("a", { href: "/blogroll" }, ["Blogroll"]),
     ]),
     h("div", { class: "navbar-item" }, [
-      h("a", { href: "https://jameshfisher.com/feed.xml" }, "RSS"),
+      h("a", { href: "https://jameshfisher.com/feed.xml" }, ["RSS"]),
     ]),
     h("div", { class: "navbar-item" }, [
       h("a", { href: "https://tigyog.app", target: "_blank" }, [
@@ -34,6 +34,4 @@ const navbarHtml = h("div", { class: "noprint" }, [
       ]),
     ]),
   ]),
-]).rawHtml;
-
-export default navbarHtml;
+]);

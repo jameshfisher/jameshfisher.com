@@ -1,10 +1,12 @@
+import type { SitemapPageInfo } from "../types";
+
 export const data = {
   permalink: "sitemap.xml",
 };
 
-export function render(data) {
-  const allPagesByUrl = [...data.collections.all];
-  allPagesByUrl.sort((p1, p2) => p1.url.localeCompare(p2.url));
+export function renderSitemapXml(entries: SitemapPageInfo[]) {
+  const entriesByUrl = [...entries];
+  entriesByUrl.sort((p1, p2) => p1.url.localeCompare(p2.url));
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset
@@ -12,12 +14,12 @@ export function render(data) {
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
   http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${allPagesByUrl
+  ${entriesByUrl
     .map(
       (page) => `<url>
   <loc>https://jameshfisher.com${page.url}</loc>
-  <lastmod>${page.date.toISOString()}</lastmod>
-  </url>`,
+  ${page.date ? `<lastmod>${page.date.toISOString()}</lastmod>` : ""}
+  </url>`
     )
     .join("\n")}
 </urlset>

@@ -27,7 +27,7 @@ const writeHtmlIndexFile = (root: VNode, outputDir: string) => {
 };
 
 const getPost = async (
-  sourcePostDirEnt: fs.Dirent
+  sourcePostDirEnt: fs.Dirent,
 ): Promise<Post | undefined> => {
   if (sourcePostDirEnt.isDirectory()) {
     const sourcePostDirName = sourcePostDirEnt.name;
@@ -41,7 +41,7 @@ const getPost = async (
       string,
       string,
       string,
-      string
+      string,
     ];
 
     const inputDirPath = path.join(POSTS_DIR, sourcePostDirName);
@@ -76,14 +76,14 @@ const getPosts = async () => {
           withFileTypes: true,
         })
         .sort((a, b) => b.name.localeCompare(a.name))
-        .map(getPost)
+        .map(getPost),
     )
   ).filter((post): post is Post => !!post);
 };
 
 function passThroughAssets(outputPath: string) {
   const match = outputPath.match(
-    /_site\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)\/index.html/
+    /_site\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)\/index.html/,
   );
   if (!match) return;
   const [, year, month, day, slug] = match;
@@ -122,7 +122,7 @@ export async function build() {
   for (const post of allPosts) {
     writeHtmlIndexFile(
       renderPost(post, publishedPosts),
-      post.page.outputDirPath
+      post.page.outputDirPath,
     );
     passThroughAssets(post.page.outputFilePath);
     sitemapEntries.push({
@@ -131,18 +131,26 @@ export async function build() {
     });
   }
 
-  const tagToPosts = new Map<string, Post[]>();
-  for (const post of publishedPosts) {
+  const tags = new Set<string>();
+  // Must be all posts, not just published posts, because draft posts link to tag pages
+  for (const post of allPosts) {
     for (const tag of post.frontmatter.tags || []) {
-      const postsWithTag = tagToPosts.get(tag) || [];
-      postsWithTag.push(post);
-      tagToPosts.set(tag, postsWithTag);
+      tags.add(tag);
     }
   }
 
-  for (const [tag, postsWithTag] of tagToPosts) {
+  const tagToPublishedPosts = new Map<string, Post[]>();
+  for (const post of publishedPosts) {
+    for (const tag of post.frontmatter.tags ?? []) {
+      const postsWithTag = tagToPublishedPosts.get(tag) ?? [];
+      postsWithTag.push(post);
+      tagToPublishedPosts.set(tag, postsWithTag);
+    }
+  }
+
+  for (const [tag, publishedPostsWithTag] of tagToPublishedPosts) {
     const tagDir = path.join(SITE_DIR, "tag", tag);
-    writeHtmlIndexFile(renderTag(tag, postsWithTag), tagDir);
+    writeHtmlIndexFile(renderTag(tag, publishedPostsWithTag), tagDir);
     sitemapEntries.push({ url: `/tag/${tag}/` });
   }
 
@@ -154,7 +162,7 @@ export async function build() {
 
   writeHtmlIndexFile(
     renderSpeaking(publishedPosts),
-    path.join(SITE_DIR, "speaking")
+    path.join(SITE_DIR, "speaking"),
   );
   sitemapEntries.push({ url: "/speaking/" });
 
@@ -165,17 +173,17 @@ export async function build() {
 
   fs.writeFileSync(
     path.join(SITE_DIR, "feed.xml"),
-    renderFeedXml(publishedPosts)
+    renderFeedXml(publishedPosts),
   );
 
   fs.writeFileSync(
     path.join(SITE_DIR, "robots.txt"),
-    "Sitemap: https://jameshfisher.com/sitemap.xml"
+    "Sitemap: https://jameshfisher.com/sitemap.xml",
   );
 
   fs.writeFileSync(
     path.join(SITE_DIR, "sitemap.xml"),
-    renderSitemapXml(sitemapEntries)
+    renderSitemapXml(sitemapEntries),
   );
 
   const endTime = Date.now();

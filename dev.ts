@@ -14,8 +14,8 @@ const bs = browserSync.create();
 bs.init({ port: PORT, server: SITE_DIR });
 bs.watch(SITE_DIR).on("change", bs.reload);
 
-await build();
+await build({ dev: true });
 
 bs.watch("_posts").on("change", async () => {
-  await build();
+  await build({ dev: true });
 });

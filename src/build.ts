@@ -102,16 +102,21 @@ function passThroughAssets(outputPath: string) {
     });
 }
 
-export async function build() {
+export async function build({ dev }: { dev: boolean }) {
   const startTime = Date.now();
 
   ensureDir(SITE_DIR);
 
-  // _site/assets/ is a copy of assets/
-  // but copying is expensive, so symlink instead
   const destAssetsDir = path.join(SITE_DIR, "assets");
   if (!fs.existsSync(destAssetsDir)) {
-    fs.symlinkSync("../assets", destAssetsDir);
+    if (dev) {
+      // copying is expensive, so symlink instead
+      fs.symlinkSync("../assets", destAssetsDir);
+    } else {
+      // In production, copy assets instead of symlinking, because Netlify doesn't follow symlinks
+      fs.mkdirSync(destAssetsDir);
+      fs.cpSync("assets", destAssetsDir, { recursive: true });
+    }
   }
 
   const sitemapEntries: SitemapPageInfo[] = [];

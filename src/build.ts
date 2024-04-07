@@ -140,11 +140,12 @@ export async function build() {
   }
 
   const tagToPublishedPosts = new Map<string, Post[]>();
+  for (const tag of tags) {
+    tagToPublishedPosts.set(tag, []);
+  }
   for (const post of publishedPosts) {
     for (const tag of post.frontmatter.tags ?? []) {
-      const postsWithTag = tagToPublishedPosts.get(tag) ?? [];
-      postsWithTag.push(post);
-      tagToPublishedPosts.set(tag, postsWithTag);
+      tagToPublishedPosts.get(tag)?.push(post);
     }
   }
 

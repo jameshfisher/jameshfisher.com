@@ -4,15 +4,16 @@ import grayMatter from "gray-matter";
 import * as path from "path";
 import { renderBlogroll } from "./pages/blogroll.js";
 import { renderBlogrollXml } from "./pages/blogrollXml.js";
+import { renderCv } from "./pages/cv.js";
 import { renderFeedXml } from "./pages/feed.js";
 import { renderHomepage } from "./pages/homepage.js";
 import { renderPost } from "./pages/post.js";
+import { renderServiceWorker } from "./pages/serviceWorker.js";
 import { renderSitemapXml } from "./pages/sitemapXml.js";
 import { renderSpeaking } from "./pages/speaking.js";
 import { renderTag } from "./pages/tag.js";
 import type { Post, SitemapPageInfo } from "./types.js";
 import { type VNode } from "./vhtml.js";
-import { renderCv } from "./pages/cv.js";
 
 const POSTS_DIR = "_posts";
 const SITE_DIR = "_site";
@@ -159,6 +160,11 @@ export async function build({ dev }: { dev: boolean }) {
     writeHtmlIndexFile(renderTag(tag, publishedPostsWithTag), tagDir);
     sitemapEntries.push({ url: `/tag/${tag}/` });
   }
+
+  fs.writeFileSync(
+    path.join(SITE_DIR, "service-worker.js"),
+    renderServiceWorker(),
+  );
 
   writeHtmlIndexFile(renderHomepage(publishedPosts), path.join(SITE_DIR));
   sitemapEntries.push({ url: "/" });

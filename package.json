@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "bun run dev.ts",
     "build": "bun run build.ts",
-    "test": "hyperlink --recursive --internal --root _site --canonicalroot https://jameshfisher.com _site/index.html",
+    "typecheck": "tsc --noEmit",
+    "check-links": "hyperlink --recursive --internal --root _site --canonicalroot https://jameshfisher.com _site/index.html",
+    "test": "bun run typecheck && bun run check-links",
     "format": "prettier --write \"./**/*.11ty.js\"",
     "add-hn-backlinks": "bun run scripts/addHnBacklinks.ts",
     "add-summaries": "bun run scripts/addSummaries.ts",
@@ -28,9 +30,7 @@
     "markdown-it": "^14.1.0",
     "prettier": "^3.2.5",
     "prismjs": "^1.29.0",
-    "striptags": "^3.2.0"
-  },
-  "peerDependencies": {
+    "striptags": "^3.2.0",
     "typescript": "^5.0.0"
   }
 }

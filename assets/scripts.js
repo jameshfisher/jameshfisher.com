@@ -100,10 +100,4 @@ posthog.onFeatureFlags(() => {
   if (showLinkSummariesVariant === "test") {
     document.body.classList.remove("experiment-dont-show-link-summaries");
   }
-
-  const colorWashVariant = posthog.getFeatureFlag("color-wash");
-  console.log({ colorWashVariant });
-  if (colorWashVariant === "test") {
-    document.body.classList.add("experiment-color-wash");
-  }
 });

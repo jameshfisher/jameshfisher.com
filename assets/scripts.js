@@ -106,10 +106,4 @@ posthog.onFeatureFlags(() => {
   if (colorWashVariant === "test") {
     document.body.classList.add("experiment-color-wash");
   }
-
-  const showSimilarPostsVariant = posthog.getFeatureFlag("show-similar-posts");
-  console.log({ showSimilarPostsVariant });
-  if (showSimilarPostsVariant === "test") {
-    document.body.classList.add("experiment-show-similar-posts");
-  }
 });

@@ -8,10 +8,12 @@ import { h, rawHtml, type VNode } from "../vhtml.js";
 
 export const data = {};
 
-function excerpt(content: string) {
-  const paraMatches = content.match(/<p.*?<\/p>/s);
-  if (paraMatches === null) return "";
-  return striptags(paraMatches[0]).replace(/\n/g, " ").trim();
+function htmlToFirstParaPlaintext(rawHtml: string) {
+  const firstParaMatches = rawHtml.match(/<p.*?<\/p>/s);
+  if (firstParaMatches === null) return "";
+  const firstParaHtml = firstParaMatches[0];
+  const firstParaPlaintext = striptags(firstParaHtml);
+  return firstParaPlaintext.replace(/\n/g, " ").trim();
 }
 
 export function renderPage({
@@ -28,14 +30,15 @@ export function renderPage({
 
   // We don't use eleventy's 'excerpt' feature because it requires us to insert an explicit separator in the .md source.
   // I want the excerpt to just be the first paragraph, which is how it behaved in Jekyll.
-  const plaintextExcerpt = excerpt(content.rawHtml);
+  const ogDescription =
+    data.summary ?? htmlToFirstParaPlaintext(content.rawHtml);
 
   const author = data.author || "jim";
   const authorPerson = dataPeople[author];
 
   const ogImageUrl = new URL(
     data.ogimage || "/assets/jim_512.jpg",
-    canonical
+    canonical,
   ).toString();
 
   const html = h("html", { lang: "en" }, [
@@ -68,7 +71,7 @@ export function renderPage({
       }),
       h("meta", {
         property: "og:description",
-        content: plaintextExcerpt,
+        content: ogDescription,
       }),
       h("meta", {
         property: "og:site_name",
@@ -127,9 +130,9 @@ export function renderPage({
                   src: "/assets/jim.mp4",
                   type: "video/mp4",
                 }),
-              ]
+              ],
             ),
-          ]
+          ],
         ),
       ]),
       h("div", { id: "content" }, [

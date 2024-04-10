@@ -229,3 +229,13 @@ ul {
 body.experiment-dont-show-link-summaries .post-summary {
   display: none;
 }
+
+.similar-posts-tfidf {
+  display: none;
+}
+body.experiment-similar-posts-tfidf .similar-posts-tfidf {
+  display: initial;
+}
+body.experiment-similar-posts-tfidf .similar-posts-jaccard {
+  display: none;
+}

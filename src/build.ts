@@ -126,18 +126,6 @@ export async function build({ dev }: { dev: boolean }) {
   const allPosts = await getPosts();
   const publishedPosts = allPosts.filter((post) => !post.frontmatter.draft);
 
-  for (const post of allPosts) {
-    writeHtmlIndexFile(
-      renderPost(post, publishedPosts),
-      post.page.outputDirPath,
-    );
-    passThroughAssets(post.page.outputFilePath);
-    sitemapEntries.push({
-      url: post.page.url,
-      date: post.date,
-    });
-  }
-
   const tags = new Set<string>();
   // Must be all posts, not just published posts, because draft posts link to tag pages
   for (const post of allPosts) {
@@ -154,6 +142,18 @@ export async function build({ dev }: { dev: boolean }) {
     for (const tag of post.frontmatter.tags ?? []) {
       tagToPublishedPosts.get(tag)?.push(post);
     }
+  }
+
+  for (const post of allPosts) {
+    writeHtmlIndexFile(
+      renderPost({ post, publishedPosts, tagToPublishedPosts }),
+      post.page.outputDirPath,
+    );
+    passThroughAssets(post.page.outputFilePath);
+    sitemapEntries.push({
+      url: post.page.url,
+      date: post.date,
+    });
   }
 
   for (const [tag, publishedPostsWithTag] of tagToPublishedPosts) {

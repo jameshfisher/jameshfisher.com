@@ -1,9 +1,5 @@
 import { blogroll } from "../data/blogroll";
 
-export const data = {
-  permalink: "blogroll.xml",
-};
-
 export function renderBlogrollXml() {
   return `<?xml version="1.0" encoding="UTF-8"?>
   <opml version="1.0">

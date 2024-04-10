@@ -1,9 +1,5 @@
 import type { SitemapPageInfo } from "../types";
 
-export const data = {
-  permalink: "sitemap.xml",
-};
-
 export function renderSitemapXml(entries: SitemapPageInfo[]) {
   const entriesByUrl = [...entries];
   entriesByUrl.sort((p1, p2) => p1.url.localeCompare(p2.url));

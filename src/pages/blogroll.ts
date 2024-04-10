@@ -2,12 +2,6 @@ import { blogroll } from "../data/blogroll.js";
 import { renderPage } from "../layouts/page.js";
 import { fragmentHtml, h } from "../vhtml.js";
 
-export const data = {
-  layout: "layouts/minimal",
-  author: "jim",
-  title: "Blogroll",
-};
-
 export function renderBlogroll() {
   return renderPage({
     data: {

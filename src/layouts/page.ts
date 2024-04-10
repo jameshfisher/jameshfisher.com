@@ -6,8 +6,6 @@ import { scripts } from "../scripts.js";
 import type { Frontmatter } from "../types.js";
 import { h, rawHtml, type VNode } from "../vhtml.js";
 
-export const data = {};
-
 function htmlToFirstParaPlaintext(rawHtml: string) {
   const firstParaMatches = rawHtml.match(/<p.*?<\/p>/s);
   if (firstParaMatches === null) return "";

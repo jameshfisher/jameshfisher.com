@@ -6,7 +6,7 @@ import { rawHtml } from "../vhtml";
 
 export function renderCv() {
   const fileContent = fs.readFileSync("./cv.md", "utf-8");
-  const { data, content: liquidMarkdownContent } = grayMatter(fileContent);
+  const { content: liquidMarkdownContent } = grayMatter(fileContent);
   const contentHtml = liquidMarkdownToHtml(liquidMarkdownContent);
   return renderPage({
     content: rawHtml(contentHtml),

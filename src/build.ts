@@ -30,43 +30,44 @@ const writeHtmlIndexFile = (root: VNode, outputDir: string) => {
 const getPost = async (
   sourcePostDirEnt: fs.Dirent,
 ): Promise<Post | undefined> => {
-  if (sourcePostDirEnt.isDirectory()) {
-    const sourcePostDirName = sourcePostDirEnt.name;
-    const match = sourcePostDirName.match(/^(\d{4})-(\d{2})-(\d{2})-(.*)$/);
-    if (!match) {
-      console.error(`Invalid post directory name: ${sourcePostDirName}`);
-      return;
-    }
-    const [, year, month, day, slug] = match as [
-      unknown,
-      string,
-      string,
-      string,
-      string,
-    ];
-
-    const inputDirPath = path.join(POSTS_DIR, sourcePostDirName);
-    const inputFilePath = path.join(inputDirPath, "index.md");
-
-    const sourcePostContent = await fsPromises.readFile(inputFilePath, "utf8");
-    const { data, content } = grayMatter(sourcePostContent);
-
-    const outputDirPath = path.join(SITE_DIR, year, month, day, slug);
-    const outputFilePath = path.join(outputDirPath, "index.html");
-
-    return {
-      date: new Date(`${year}-${month}-${day}`),
-      frontmatter: data as any,
-      markdownContent: content,
-      page: {
-        url: `/${year}/${month}/${day}/${slug}/`,
-        inputDirPath,
-        inputFilePath,
-        outputDirPath,
-        outputFilePath,
-      },
-    };
+  if (!sourcePostDirEnt.isDirectory()) {
+    return undefined;
   }
+  const sourcePostDirName = sourcePostDirEnt.name;
+  const match = sourcePostDirName.match(/^(\d{4})-(\d{2})-(\d{2})-(.*)$/);
+  if (!match) {
+    console.error(`Invalid post directory name: ${sourcePostDirName}`);
+    return;
+  }
+  const [, year, month, day, slug] = match as [
+    unknown,
+    string,
+    string,
+    string,
+    string,
+  ];
+
+  const inputDirPath = path.join(POSTS_DIR, sourcePostDirName);
+  const inputFilePath = path.join(inputDirPath, "index.md");
+
+  const sourcePostContent = await fsPromises.readFile(inputFilePath, "utf8");
+  const { data, content } = grayMatter(sourcePostContent);
+
+  const outputDirPath = path.join(SITE_DIR, year, month, day, slug);
+  const outputFilePath = path.join(outputDirPath, "index.html");
+
+  return {
+    date: new Date(`${year}-${month}-${day}`),
+    frontmatter: data as any,
+    markdownContent: content,
+    page: {
+      url: `/${year}/${month}/${day}/${slug}/`,
+      inputDirPath,
+      inputFilePath,
+      outputDirPath,
+      outputFilePath,
+    },
+  };
 };
 
 const getPosts = async () => {

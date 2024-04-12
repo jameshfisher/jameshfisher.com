@@ -1,9 +1,9 @@
 import striptags from "striptags";
 import { dataPeople } from "../data/people.js";
+import type { Frontmatter } from "../frontmatter.js";
 import { renderInlineMarkdown } from "../markdown.js";
 import { navbar } from "../navbar.js";
 import { scripts } from "../scripts.js";
-import type { Frontmatter } from "../types.js";
 import { h, rawHtml, type VNode } from "../vhtml.js";
 
 function htmlToFirstParaPlaintext(rawHtml: string) {

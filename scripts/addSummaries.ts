@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import * as fs from "fs";
 import matter from "gray-matter";
+import { parseFrontmatter } from "../src/frontmatter";
 
 const anthropic = new Anthropic({
   apiKey: process.env["ANTHROPIC_API_KEY"],
@@ -82,7 +83,7 @@ async function fileToSummary(fileContent: string): Promise<string> {
   });
   console.log({ message });
   const content = message.content;
-  const contentBlock = content[0];
+  const contentBlock = content[0]!;
   return contentBlock.text.trim();
 }
 
@@ -90,7 +91,7 @@ function shuffle<T>(array: T[]): void {
   // Fisher-Yates shuffle
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    [array[i], array[j]] = [array[j]!, array[i]!];
   }
 }
 
@@ -106,18 +107,15 @@ async function main() {
   let i = 0;
   for (const filePath of filePaths) {
     const fileContent = fs.readFileSync(filePath, "utf8");
-    const { data: postFrontmatter, content } = matter(fileContent);
-    if (
-      postFrontmatter.summary ||
-      postFrontmatter.external_url ||
-      postFrontmatter.draft
-    ) {
+    const { data: unparsedFrontmatter, content } = matter(fileContent);
+    const frontmatter = parseFrontmatter(unparsedFrontmatter);
+    if (frontmatter.summary || frontmatter.external_url || frontmatter.draft) {
       continue;
     }
     console.log(`Processing ${filePath}`);
     const summaryString = await fileToSummary(fileContent);
-    postFrontmatter.summary = summaryString;
-    const newFileContent = matter.stringify(content, postFrontmatter);
+    frontmatter.summary = summaryString;
+    const newFileContent = matter.stringify(content, frontmatter);
     fs.writeFileSync(filePath, newFileContent);
     i++;
     if (i >= 32) return;

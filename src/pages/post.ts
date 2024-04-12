@@ -1,9 +1,10 @@
 import { format } from "date-fns";
+import type { Frontmatter } from "../frontmatter";
 import { renderPage } from "../layouts/page";
 import { liquidMarkdownToHtml } from "../liquidMarkdown";
 import { renderPosts } from "../renderPosts";
 import { sortByDate } from "../sortByDate";
-import type { Frontmatter, Post } from "../types";
+import type { Post } from "../types";
 import { fragmentHtml, h, rawHtml, type VNode } from "../vhtml";
 
 function tagSpecificity({

@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import matter from "gray-matter";
 import { DOMParser } from "linkedom";
+import { parseFrontmatter } from "../src/frontmatter";
 
 type HNPost = {
   hnUrl: string; // e.g. https://news.ycombinator.com/item?id=foo
@@ -85,10 +86,11 @@ async function main() {
     // to read in node, we need to use fs
     const text = fs.readFileSync(filename, "utf8");
 
-    const { data, content } = matter(text);
-    data.hnUrl = jimPost.hnUrl;
-    data.hnUpvotes = jimPost.upvotes;
-    const newText = matter.stringify(content, data);
+    const { data: unparsedFrontmatter, content } = matter(text);
+    const frontmatter = parseFrontmatter(unparsedFrontmatter);
+    frontmatter.hnUrl = jimPost.hnUrl;
+    frontmatter.hnUpvotes = jimPost.upvotes;
+    const newText = matter.stringify(content, frontmatter);
 
     fs.writeFileSync(filename, newText, "utf8");
   }

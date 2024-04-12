@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import * as fs from "fs";
 import matter from "gray-matter";
+import { parseFrontmatter } from "../src/frontmatter";
 
 const anthropic = new Anthropic({
   apiKey: process.env["ANTHROPIC_API_KEY"],
@@ -67,7 +68,7 @@ async function fileToTags(
   });
   console.log({ message });
   const content = message.content;
-  const contentBlock = content[0];
+  const contentBlock = content[0]!;
   const responseText = contentBlock.text;
   return responseText.split(",").map((tag) => tag.trim());
 }
@@ -76,8 +77,9 @@ async function getTagVocab(filePaths: string[]): Promise<Set<string>> {
   const tagSet = new Set<string>();
   for (const filePath of filePaths) {
     const fileContent = fs.readFileSync(filePath, "utf8");
-    const { data: postFrontmatter } = matter(fileContent);
-    const tags = postFrontmatter.tags ?? [];
+    const { data: unparsedFrontmatter } = matter(fileContent);
+    const frontmatter = parseFrontmatter(unparsedFrontmatter);
+    const tags = frontmatter.tags ?? [];
     for (const tag of tags) {
       tagSet.add(tag);
     }
@@ -89,7 +91,7 @@ function shuffle<T>(array: T[]): void {
   // Fisher-Yates shuffle
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    [array[i], array[j]] = [array[j]!, array[i]!];
   }
 }
 
@@ -112,14 +114,17 @@ async function main() {
   let i = 0;
   for (const filePath of filePaths) {
     const fileContentWithOldTags = fs.readFileSync(filePath, "utf8");
-    const { data: postFrontmatter, content } = matter(fileContentWithOldTags);
-    if (postFrontmatter.taggedAt) {
+    const { data: unparsedFrontmatter, content } = matter(
+      fileContentWithOldTags,
+    );
+    const frontmatter = parseFrontmatter(unparsedFrontmatter);
+    if (frontmatter.taggedAt) {
       continue;
     }
     console.log(`Processing ${filePath}`);
-    const postTagSet = new Set(postFrontmatter.tags ?? []);
-    delete postFrontmatter.tags;
-    const fileContentWithoutTags = matter.stringify(content, postFrontmatter);
+    const postTagSet = new Set(frontmatter.tags ?? []);
+    delete frontmatter.tags;
+    const fileContentWithoutTags = matter.stringify(content, frontmatter);
     const newTags = await fileToTags(fileContentWithoutTags, globalTagVocab);
     for (const tag of newTags) {
       if (!globalTagVocab.has(tag)) {
@@ -128,9 +133,12 @@ async function main() {
       globalTagVocab.add(tag);
     }
     for (const tag of newTags) postTagSet.add(tag);
-    postFrontmatter.tags = [...postTagSet];
-    postFrontmatter.taggedAt = dateStr;
-    const fileContentWithNewTags = matter.stringify(content, postFrontmatter);
+    frontmatter.tags = [...postTagSet];
+    frontmatter.taggedAt = dateStr;
+    const fileContentWithNewTags = matter.stringify(
+      content,
+      unparsedFrontmatter,
+    );
     fs.writeFileSync(filePath, fileContentWithNewTags);
     i++;
     if (i >= 8) return;

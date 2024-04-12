@@ -1,14 +1,4 @@
-export type Frontmatter = {
-  title: string;
-  draft?: boolean;
-  tags?: string[];
-  ogimage?: string;
-  author?: string;
-  external_url?: string;
-  hnUrl?: string;
-  hnUpvotes?: number;
-  summary?: string;
-};
+import type { Frontmatter } from "./frontmatter";
 
 export type PageData = {
   url: string;

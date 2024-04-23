@@ -82,7 +82,7 @@ async function main() {
     const [, year, month, day, title] = match;
 
     // Now we can read the file, add the frontmatter, and write it back
-    const filename = `_posts/${year}-${month}-${day}-${title}.md`;
+    const filename = `_posts/${year}-${month}-${day}-${title}/index.md`;
     // to read in node, we need to use fs
     const text = fs.readFileSync(filename, "utf8");
 

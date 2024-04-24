@@ -1,6 +1,14 @@
 ---
 title: "What is the Metropolis algorithm?"
-tags: []
+tags:
+  - metropolis-algorithm
+  - mcmc
+  - monte-carlo
+  - markov-chain
+  - probability
+  - statistics
+  - math
+  - programming
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" crossorigin="anonymous">

@@ -186,35 +186,6 @@ export function renderPost({
               ]),
             ])
           : "",
-        h(
-          "div",
-          {
-            style:
-              "background: #ffeb57; border-radius: 0.5em; margin-top: 1em; margin-bottom: 1em; padding: 1em;",
-          },
-          [
-            h("div", {}, [
-              "👋 I'm Jim, a ",
-              h("strong", {}, "full-stack product engineer."),
-              " Want to build an ",
-              h("strong", {}, "amazing product"),
-              " and a ",
-              h("strong", {}, "profitable business?"),
-              " ",
-              h("a", { href: "/cv" }, "Read more about me"),
-              " or ",
-              h("strong", {}, [
-                h(
-                  "a",
-                  {
-                    href: "mailto:jameshfisher+work@gmail.com?subject=Let%27s%20build%20an%20amazing%20product%21&body=Hey%20Jim%2C%0A%0A",
-                  },
-                  "Get in touch!",
-                ),
-              ]),
-            ]),
-          ],
-        ),
         h("div", {}, [
           "Tagged ",
           ...(frontmatter.tags ?? []).map((tag, i) =>
@@ -247,6 +218,35 @@ export function renderPost({
         ]),
         h("h3", {}, "More by Jim"),
         renderPosts(myFavoritePosts),
+        h(
+          "div",
+          {
+            style:
+              "background: #ffeb57; border-radius: 0.5em; margin-top: 1em; margin-bottom: 1em; padding: 1em;",
+          },
+          [
+            h("div", {}, [
+              "👋 I'm Jim, a ",
+              h("strong", {}, "full-stack product engineer."),
+              " Want to build an ",
+              h("strong", {}, "amazing product"),
+              " and a ",
+              h("strong", {}, "profitable business?"),
+              " ",
+              h("a", { href: "/cv" }, "Read more about me"),
+              " or ",
+              h("strong", {}, [
+                h(
+                  "a",
+                  {
+                    href: "mailto:jameshfisher+work@gmail.com?subject=Let%27s%20build%20an%20amazing%20product%21&body=Hey%20Jim%2C%0A%0A",
+                  },
+                  "Get in touch!",
+                ),
+              ]),
+            ]),
+          ],
+        ),
       ]),
       h("p", {}, [
         author === "jim"

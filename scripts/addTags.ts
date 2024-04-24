@@ -1,7 +1,9 @@
 import Anthropic from "@anthropic-ai/sdk";
 import * as fs from "fs";
-import matter from "gray-matter";
-import { parseFrontmatter } from "../src/frontmatter";
+import {
+  parsePostFileContent,
+  stringifyPostFileContent,
+} from "../src/frontmatter";
 
 const anthropic = new Anthropic({
   apiKey: process.env["ANTHROPIC_API_KEY"],
@@ -77,8 +79,7 @@ async function getTagVocab(filePaths: string[]): Promise<Set<string>> {
   const tagSet = new Set<string>();
   for (const filePath of filePaths) {
     const fileContent = fs.readFileSync(filePath, "utf8");
-    const { data: unparsedFrontmatter } = matter(fileContent);
-    const frontmatter = parseFrontmatter(unparsedFrontmatter);
+    const { frontmatter } = parsePostFileContent(fileContent);
     const tags = frontmatter.tags ?? [];
     for (const tag of tags) {
       tagSet.add(tag);
@@ -114,17 +115,20 @@ async function main() {
   let i = 0;
   for (const filePath of filePaths) {
     const fileContentWithOldTags = fs.readFileSync(filePath, "utf8");
-    const { data: unparsedFrontmatter, content } = matter(
+    const { content, frontmatter } = parsePostFileContent(
       fileContentWithOldTags,
     );
-    const frontmatter = parseFrontmatter(unparsedFrontmatter);
     if (frontmatter.taggedAt) {
       continue;
     }
     console.log(`Processing ${filePath}`);
     const postTagSet = new Set(frontmatter.tags ?? []);
-    delete frontmatter.tags;
-    const fileContentWithoutTags = matter.stringify(content, frontmatter);
+    const frontmatterWithoutTags = { ...frontmatter };
+    delete frontmatterWithoutTags.tags;
+    const fileContentWithoutTags = stringifyPostFileContent({
+      frontmatter: frontmatterWithoutTags,
+      content,
+    });
     const newTags = await fileToTags(fileContentWithoutTags, globalTagVocab);
     for (const tag of newTags) {
       if (!globalTagVocab.has(tag)) {
@@ -135,10 +139,10 @@ async function main() {
     for (const tag of newTags) postTagSet.add(tag);
     frontmatter.tags = [...postTagSet];
     frontmatter.taggedAt = dateStr;
-    const fileContentWithNewTags = matter.stringify(
+    const fileContentWithNewTags = stringifyPostFileContent({
+      frontmatter,
       content,
-      unparsedFrontmatter,
-    );
+    });
     fs.writeFileSync(filePath, fileContentWithNewTags);
     i++;
     if (i >= 8) return;

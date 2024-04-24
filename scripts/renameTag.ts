@@ -1,6 +1,8 @@
 import * as fs from "fs";
-import matter from "gray-matter";
-import { parseFrontmatter } from "../src/frontmatter";
+import {
+  parsePostFileContent,
+  stringifyPostFileContent,
+} from "../src/frontmatter";
 
 async function main() {
   const oldTag = "ml";
@@ -13,10 +15,9 @@ async function main() {
 
   for (const filePath of filePaths) {
     const fileContentWithOldTags = fs.readFileSync(filePath, "utf8");
-    const { data: unparsedFrontmatter, content } = matter(
+    const { content, frontmatter } = parsePostFileContent(
       fileContentWithOldTags,
     );
-    const frontmatter = parseFrontmatter(unparsedFrontmatter);
     console.log(`Processing ${filePath}`);
     const postTagSet = new Set(frontmatter.tags ?? []);
     if (postTagSet.has(oldTag)) {
@@ -24,7 +25,10 @@ async function main() {
       postTagSet.add(newTag);
     }
     frontmatter.tags = [...postTagSet];
-    const fileContentWithNewTags = matter.stringify(content, frontmatter);
+    const fileContentWithNewTags = stringifyPostFileContent({
+      content,
+      frontmatter,
+    });
     fs.writeFileSync(filePath, fileContentWithNewTags);
   }
 }

@@ -1,4 +1,6 @@
 {
+  "exclude": ["_posts", "_site"],
+
   "compilerOptions": {
     // Enable latest features
     "lib": ["ESNext", "DOM"],
@@ -31,6 +33,6 @@
     "noImplicitReturns": true,
     "noImplicitOverride": true,
     "incremental": true,
-    "exactOptionalPropertyTypes": true,
+    "exactOptionalPropertyTypes": true
   }
 }

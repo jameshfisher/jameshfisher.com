@@ -1,7 +1,9 @@
 import Anthropic from "@anthropic-ai/sdk";
 import * as fs from "fs";
-import matter from "gray-matter";
-import { parseFrontmatter } from "../src/frontmatter";
+import {
+  parsePostFileContent,
+  stringifyPostFileContent,
+} from "../src/frontmatter";
 
 const anthropic = new Anthropic({
   apiKey: process.env["ANTHROPIC_API_KEY"],
@@ -107,15 +109,14 @@ async function main() {
   let i = 0;
   for (const filePath of filePaths) {
     const fileContent = fs.readFileSync(filePath, "utf8");
-    const { data: unparsedFrontmatter, content } = matter(fileContent);
-    const frontmatter = parseFrontmatter(unparsedFrontmatter);
+    const { content, frontmatter } = parsePostFileContent(fileContent);
     if (frontmatter.summary || frontmatter.external_url || frontmatter.draft) {
       continue;
     }
     console.log(`Processing ${filePath}`);
     const summaryString = await fileToSummary(fileContent);
     frontmatter.summary = summaryString;
-    const newFileContent = matter.stringify(content, frontmatter);
+    const newFileContent = stringifyPostFileContent({ content, frontmatter });
     fs.writeFileSync(filePath, newFileContent);
     i++;
     if (i >= 32) return;

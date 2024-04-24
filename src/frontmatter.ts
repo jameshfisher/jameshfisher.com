@@ -1,3 +1,4 @@
+import matter from "gray-matter";
 import { z } from "zod";
 
 const frontmatterSchema = z.object({
@@ -15,6 +16,20 @@ const frontmatterSchema = z.object({
 
 export type Frontmatter = z.infer<typeof frontmatterSchema>;
 
-export const parseFrontmatter = (frontmatter: unknown): Frontmatter => {
-  return frontmatterSchema.parse(frontmatter);
+export type PostFileContent = {
+  frontmatter: Frontmatter;
+  content: string;
 };
+
+const parseFrontmatter = (frontmatter: unknown): Frontmatter =>
+  frontmatterSchema.parse(frontmatter);
+
+export const parsePostFileContent = (fileContent: string): PostFileContent => {
+  const { data: unparsedFrontmatter, content } = matter(fileContent);
+  return { frontmatter: parseFrontmatter(unparsedFrontmatter), content };
+};
+
+export const stringifyPostFileContent = ({
+  frontmatter,
+  content,
+}: PostFileContent) => matter.stringify(content, frontmatter);

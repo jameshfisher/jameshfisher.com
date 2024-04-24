@@ -110,8 +110,9 @@ And if Bob's current meal is `Apple`,
 the next meal is always `Banana`,
 so Bob's second meal is always `Banana`.
 Here are two problems with the Metropolis algorithm:
-the first few samples are not in the correct distribution,
-samples are dependent on the previous samples.
+
+1. The first few samples are not in the correct distribution.
+2. Samples are dependent on the previous samples.
 
 Let's run $10{,}000$ chains,
 and then log the distribution of apples on each day:
@@ -232,8 +233,8 @@ Because the first samples are not in the correct distribution,
 it's common to discard them.
 This is called _burn-in_.
 
-The precise claim of the Metroplis algorithm is that,
-the correct distribution of is a stable distribution.
+The precise claim of the Metroplis algorithm is:
+the _correct_ distribution is a _stable_ distribution.
 To prove this,
 evaluate `nextMealDist([2/5, 3/5])`,
 and you'll see that it's `[2/5, 3/5]`.

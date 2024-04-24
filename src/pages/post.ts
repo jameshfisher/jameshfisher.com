@@ -186,21 +186,11 @@ export function renderPost({
               ]),
             ])
           : "",
-        h("div", {}, [
-          "Tagged ",
-          ...(frontmatter.tags ?? []).map((tag, i) =>
-            fragmentHtml([
-              i ? ", " : undefined,
-              h("a", { class: "post", href: `/tag/${tag}` }, [`#${tag}`]),
-            ]),
-          ),
-          ".",
-        ]),
         h(
           "div",
           {
             style:
-              "background: #ffeb57; border-radius: 0.5em; margin-top: 1em; padding: 1em;",
+              "background: #ffeb57; border-radius: 0.5em; margin-top: 1em; margin-bottom: 1em; padding: 1em;",
           },
           [
             h("div", {}, [
@@ -225,6 +215,16 @@ export function renderPost({
             ]),
           ],
         ),
+        h("div", {}, [
+          "Tagged ",
+          ...(frontmatter.tags ?? []).map((tag, i) =>
+            fragmentHtml([
+              i ? ", " : undefined,
+              h("a", { class: "post", href: `/tag/${tag}` }, [`#${tag}`]),
+            ]),
+          ),
+          ".",
+        ]),
         h("div", { class: "similar-posts-jaccard" }, [
           h("h3", {}, "Similar posts"),
           renderPosts(

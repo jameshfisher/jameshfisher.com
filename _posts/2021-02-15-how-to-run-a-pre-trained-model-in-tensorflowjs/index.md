@@ -5,7 +5,7 @@ summary: >-
   the model's expected format, run inference with `.predict()`, and decode the
   prediction tensor.
 tags:
-  - tensorflow.js
+  - tensorflow-js
   - tensorflow
   - programming
   - web

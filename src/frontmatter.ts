@@ -3,6 +3,7 @@ import { z } from "zod";
 
 const frontmatterSchema = z.object({
   title: z.string(),
+  justification: z.string().optional(),
   draft: z.boolean().optional(),
   tags: z.array(z.string()).optional(),
   taggedAt: z.string().optional(),

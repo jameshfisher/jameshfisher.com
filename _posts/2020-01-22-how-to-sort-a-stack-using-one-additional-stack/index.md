@@ -1,11 +1,18 @@
 ---
 title: How to sort a stack using one additional stack
+summary: >-
+  We can model "infinite tape" using two stacks. Then we can navigate the list
+  in both directions. This lets us bubble-sort the list in O(n^2) time.
 tags:
   - ctci
   - programming
   - haskell
-summary: >-
-  We can model "infinite tape" using two stacks. Then we can navigate the list in both directions. This lets us bubble-sort the list in O(n^2) time.
+  - bubble-sort
+  - stack
+  - sorting
+  - algorithms
+  - data-structures
+taggedAt: '2024-04-12'
 ---
 
 Question 3.6 of _Cracking the Coding Interview_:

@@ -3,11 +3,19 @@ title: How to use keycastr
 justification: >-
   I'm making Vidrio. Keycastr is a tool specifically for screencasting. This is
   the first market I want to capture.
-tags: []
 summary: >-
   Keycastr is a tool that displays your keystrokes on the screen during
   screencasts, but has some issues like not displaying over maximized windows,
   fixed positioning, and using obscure key symbols.
+tags:
+  - keycastr
+  - screencasting
+  - app-ideas
+  - app-development
+  - ux
+  - ui
+  - vidrio
+taggedAt: '2024-04-12'
 ---
 
 Screencasting usually involves explaining how to use some software. The viewer can usually see where you're moving the mouse cursor. But it's not obvious when the presenter does any mouse clicks (or other gestures), and it's not obvious  what the presenter is doing with the keyboard.

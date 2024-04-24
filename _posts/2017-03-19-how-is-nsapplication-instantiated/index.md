@@ -3,12 +3,21 @@ title: What is `NSApplication`? How is it instantiated? What is `NSApp`?
 justification: >-
   I'm making Vidrio this month. I need to understand Cocoa and Swift. `NSApp` is
   the heart of a Cocoa application.
-tags: []
 summary: >-
   `NSApplication` is the core of a Cocoa application. It is typically
   instantiated via `NSApplicationMain` or by calling `NSApplication.shared()`.
   `NSApp` is a global variable that holds the singleton instance of
   `NSApplication`.
+tags:
+  - cocoa-api
+  - objc
+  - swift
+  - nsapplication
+  - nsapp
+  - appkit
+  - main-function
+  - application-development
+taggedAt: '2024-04-12'
 ---
 
 The core of a Cocoa application is [the `NSApplication` class](https://developer.apple.com/reference/appkit/nsapplication). The docs for it say

@@ -1,6 +1,11 @@
 ---
-title: "Shape typing in Python"
-tags: ["python", "types", "programming"]
+title: Shape typing in Python
+tags:
+  - python
+  - types
+  - programming
+hnUrl: 'https://news.ycombinator.com/item?id=40022628'
+hnUpvotes: 130
 ---
 
 While I was looking the other way,

@@ -1,10 +1,13 @@
 ---
 title: Automatic differentiation with dual numbers
-tags: ["machine-learning"]
+tags:
+  - machine-learning
 summary: >-
-  Differentiation asks: how does tweaking the inputs change the output?
-  To accurately differentiate an arbitrary function,
-  perhaps the simplest way is using "dual numbers".
+  Differentiation asks: how does tweaking the inputs change the output? To
+  accurately differentiate an arbitrary function, perhaps the simplest way is
+  using "dual numbers".
+hnUrl: 'https://news.ycombinator.com/item?id=39919049'
+hnUpvotes: 2
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" crossorigin="anonymous">

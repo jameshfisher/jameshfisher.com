@@ -1,11 +1,18 @@
 ---
 title: Measuring audio volume in JavaScript
-tags:
-  - programming
-  - javascript
-  - web
 summary: >-
-  A demo of real-time microphone volume measurement using the Web Audio API's `AnalyserNode`.
+  A demo of real-time microphone volume measurement using the Web Audio API's
+  `AnalyserNode`.
+tags:
+  - web-audio-api
+  - audio
+  - volume
+  - javascript
+  - web-development
+  - web-apis
+  - web
+  - programming
+taggedAt: '2024-04-12'
 ---
 
 Click <button id="startButton">Start measuring</button>,

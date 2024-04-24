@@ -5,11 +5,11 @@ tags:
   - rant
   - openssl
   - fave
-hnUrl: 'https://news.ycombinator.com/item?id=16024515'
-hnUpvotes: 78
+hnUrl: 'https://news.ycombinator.com/item?id=20041487'
+hnUpvotes: 161
 summary: >-
-  OpenSSL's inadequate documentation, confusing key formats,
-  and deprecated interfaces make it difficult to use, despite its importance.
+  OpenSSL's inadequate documentation, confusing key formats, and deprecated
+  interfaces make it difficult to use, despite its importance.
 ---
 
 OpenSSL is one of the most used and important pieces of software in the world.

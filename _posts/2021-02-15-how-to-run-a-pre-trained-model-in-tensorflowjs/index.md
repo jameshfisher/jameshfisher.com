@@ -1,11 +1,18 @@
 ---
 title: How to run a pre-trained model in TensorFlow.js
+summary: >-
+  Load the model, convert the input to a tensor, preprocess the tensor to match
+  the model's expected format, run inference with `.predict()`, and decode the
+  prediction tensor.
 tags:
+  - tensorflow.js
+  - tensorflow
   - programming
   - web
   - machine-learning
-summary: >-
-  Load the model, convert the input to a tensor, preprocess the tensor to match the model's expected format, run inference with `.predict()`, and decode the prediction tensor.
+  - image-processing
+  - javascript
+taggedAt: '2024-04-12'
 ---
 
 [The tfjs-models repository](https://github.com/tensorflow/tfjs-models)

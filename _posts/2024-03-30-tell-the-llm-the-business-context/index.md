@@ -1,8 +1,15 @@
 ---
 title: Tell the LLM the business context
-tags: ["llm", "machine-learning", "programming"]
+tags:
+  - prompt-engineering
+  - large-language-models
+  - machine-learning
+  - programming
 summary: >-
-  Tell LLM why its task is needed and how the output will be used. You'll get better results, but programmers often don't do this because it's anti-modular.
+  Tell LLM why its task is needed and how the output will be used. You'll get
+  better results, but programmers often don't do this because it's anti-modular.
+hnUrl: 'https://news.ycombinator.com/item?id=39900016'
+hnUpvotes: 2
 ---
 
 Employees do better when they have more business context.

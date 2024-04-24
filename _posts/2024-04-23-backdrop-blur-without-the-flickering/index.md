@@ -40,13 +40,13 @@ So, as a hack, the blur must guess what the content is outside the nav.
 [Wikipedia calls this "edge handling".](<https://en.wikipedia.org/wiki/Kernel_(image_processing)#Edge_handling>)
 
 Chrome seems to take the _extend_ strategy:
-which guesses that the pixels at the edge of the background image
+it guesses that the pixels at the edge of the background image
 extend infinitely in all directions.
 This is why the blur flickers so much:
 a tiny scroll causes the edge pixels to change,
 which causes the extended pixels to completely change.
 
-A better edge-handing strategy is _mirroring_.
+One better edge-handing strategy is _mirroring_.
 Mirroring is better because, even though it's inaccurate, it results in smoother transitions.
 
 Neither Firefox nor Safari have this problem,

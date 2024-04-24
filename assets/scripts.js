@@ -100,12 +100,4 @@ posthog.onFeatureFlags(() => {
   if (showLinkSummariesVariant === "test") {
     document.body.classList.remove("experiment-dont-show-link-summaries");
   }
-
-  const similarPostsTFIDFVariant = posthog.getFeatureFlag(
-    "similar-posts-tfidf",
-  );
-  console.log({ similarPostsTFIDFVariant });
-  if (similarPostsTFIDFVariant === "test") {
-    document.body.classList.add("experiment-similar-posts-tfidf");
-  }
 });

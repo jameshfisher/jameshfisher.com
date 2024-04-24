@@ -38,26 +38,6 @@ function tagSetSize({
   return size;
 }
 
-function postSimilarityJaccard({
-  post1Data,
-  post2Data,
-}: {
-  post1Data: Frontmatter;
-  post2Data: Frontmatter;
-  publishedPosts: Post[];
-  tagToPublishedPosts: Map<string, Post[]>;
-}) {
-  const tags1 = new Set(post1Data.tags || []);
-  const tags2 = new Set(post2Data.tags || []);
-  const intersection = new Set([...tags1].filter((x) => tags2.has(x)));
-  const union = new Set([...tags1, ...tags2]);
-
-  const intersectionSize = intersection.size;
-  const unionSize = union.size;
-
-  return intersectionSize / unionSize;
-}
-
 function postSimilarityTFIDF({
   post1Data,
   post2Data,
@@ -88,31 +68,7 @@ function postSimilarityTFIDF({
   return intersectionSize / unionSize;
 }
 
-function similarPublishedPostsJaccard({
-  post,
-  publishedPosts,
-  tagToPublishedPosts,
-}: {
-  post: Post;
-  publishedPosts: Post[];
-  tagToPublishedPosts: Map<string, Post[]>;
-}) {
-  return publishedPosts
-    .filter((p) => p.markdownContent !== post.markdownContent)
-    .map((p) => ({
-      post: p,
-      similarity: postSimilarityJaccard({
-        post1Data: post.frontmatter,
-        post2Data: p.frontmatter,
-        publishedPosts,
-        tagToPublishedPosts,
-      }),
-    }))
-    .sort((a, b) => b.similarity - a.similarity)
-    .slice(0, 6)
-    .map((x) => x.post);
-}
-
+// A/B test showed that TF-IDF leads to more clicks than Jaccard similarity
 function similarPublishedPostsTFIDF({
   post,
   publishedPosts,
@@ -196,26 +152,14 @@ export function renderPost({
           ),
           ".",
         ]),
-        h("div", { class: "similar-posts-jaccard" }, [
-          h("h3", {}, "Similar posts"),
-          renderPosts(
-            similarPublishedPostsJaccard({
-              post,
-              publishedPosts,
-              tagToPublishedPosts,
-            }),
-          ),
-        ]),
-        h("div", { class: "similar-posts-tfidf" }, [
-          h("h3", {}, "Similar posts"),
-          renderPosts(
-            similarPublishedPostsTFIDF({
-              post,
-              publishedPosts,
-              tagToPublishedPosts,
-            }),
-          ),
-        ]),
+        h("h3", {}, "Similar posts"),
+        renderPosts(
+          similarPublishedPostsTFIDF({
+            post,
+            publishedPosts,
+            tagToPublishedPosts,
+          }),
+        ),
         h("h3", {}, "More by Jim"),
         renderPosts(myFavoritePosts),
         h(

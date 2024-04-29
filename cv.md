@@ -46,7 +46,7 @@ and my two startups, [Vidrio](https://vidrio.netlify.app/) and [TigYog](https://
 
 ## Experience
 
-<span class="details">Feb </span>2023 – current:
+<span class="details">Feb </span>2023 – Mar 2024:
 <span class="summary">
 Senior engineer at [Slite](https://slite.com/).
 Slite lets employees document their knowledge, and search all company knowledge across Slack, Google Drive, etc.

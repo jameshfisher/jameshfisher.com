@@ -5,7 +5,7 @@ import { liquidMarkdownToHtml } from "../liquidMarkdown";
 import { renderPosts } from "../renderPosts";
 import { sortByDate } from "../sortByDate";
 import type { Post } from "../types";
-import { fragmentHtml, h, rawHtml, type VNode } from "../vhtml";
+import { fragmentHtml, h, rawHtml, type VChild, type VNode } from "../vhtml";
 
 function tagSpecificity({
   tag,
@@ -94,6 +94,40 @@ function similarPublishedPostsTFIDF({
     .map((x) => x.post);
 }
 
+const openToWork = false;
+
+const openToWorkElement: VChild =
+  openToWork &&
+  h(
+    "div",
+    {
+      style:
+        "background: #ffeb57; border-radius: 0.5em; margin-top: 1em; margin-bottom: 1em; padding: 1em;",
+    },
+    [
+      h("div", {}, [
+        "👋 I'm Jim, a ",
+        h("strong", {}, "full-stack product engineer."),
+        " Want to build an ",
+        h("strong", {}, "amazing product"),
+        " and a ",
+        h("strong", {}, "profitable business?"),
+        " ",
+        h("a", { href: "/cv" }, "Read more about me"),
+        " or ",
+        h("strong", {}, [
+          h(
+            "a",
+            {
+              href: "mailto:jameshfisher+work@gmail.com?subject=Let%27s%20build%20an%20amazing%20product%21&body=Hey%20Jim%2C%0A%0A",
+            },
+            "Get in touch!",
+          ),
+        ]),
+      ]),
+    ],
+  );
+
 export function renderPost({
   post,
   publishedPosts,
@@ -162,35 +196,7 @@ export function renderPost({
         ),
         h("h3", {}, "More by Jim"),
         renderPosts(myFavoritePosts),
-        h(
-          "div",
-          {
-            style:
-              "background: #ffeb57; border-radius: 0.5em; margin-top: 1em; margin-bottom: 1em; padding: 1em;",
-          },
-          [
-            h("div", {}, [
-              "👋 I'm Jim, a ",
-              h("strong", {}, "full-stack product engineer."),
-              " Want to build an ",
-              h("strong", {}, "amazing product"),
-              " and a ",
-              h("strong", {}, "profitable business?"),
-              " ",
-              h("a", { href: "/cv" }, "Read more about me"),
-              " or ",
-              h("strong", {}, [
-                h(
-                  "a",
-                  {
-                    href: "mailto:jameshfisher+work@gmail.com?subject=Let%27s%20build%20an%20amazing%20product%21&body=Hey%20Jim%2C%0A%0A",
-                  },
-                  "Get in touch!",
-                ),
-              ]),
-            ]),
-          ],
-        ),
+        openToWorkElement,
       ]),
       h("p", {}, [
         author === "jim"

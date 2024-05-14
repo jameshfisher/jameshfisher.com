@@ -37,7 +37,7 @@ const DOMAttributeNames = {
 
 export type VNode = { rawHtml: string };
 
-type VChild = VNode | string | null | undefined | false | VChild[];
+export type VChild = VNode | string | null | undefined | false | VChild[];
 
 export function h(
   name: string | null,

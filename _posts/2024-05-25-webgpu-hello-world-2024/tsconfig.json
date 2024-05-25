@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "skipLibCheck": true
+  },
+  "include": ["script.ts"]
+}

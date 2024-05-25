@@ -4,3 +4,4 @@ _drafts
 node_modules
 .env.local
 tsconfig.tsbuildinfo
+venv

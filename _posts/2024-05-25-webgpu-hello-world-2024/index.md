@@ -5,7 +5,7 @@ tags:
   - webgpu
 ---
 
-Below is a pink square.
+Below is a pink square on a yellow background.
 It's rendered by WebGPU.
 
 <div>
@@ -46,5 +46,7 @@ const pass = encoder.beginRenderPass({
 pass.end();
 device.queue.submit([encoder.finish()]);
 ```
+
+This is derived from [this tutorial](https://codelabs.developers.google.com/your-first-webgpu-app).
 
 <script type="module" src="script.js"></script>

@@ -32,10 +32,19 @@ device.queue.writeBuffer(vertexBuffer, /*bufferOffset=*/ 0, vertices);
 const cellShaderModule = device.createShaderModule({
     label: "Cell shader",
     code: `
+    @group(0) @binding(0) var<uniform> grid: vec2f;
+
     @vertex
-    fn vertexMain(@location(0) pos: vec2f) ->
+    fn vertexMain(@location(0) pos: vec2f,
+                  @builtin(instance_index) instance: u32) ->
       @builtin(position) vec4f {
-      return vec4f(pos, 0, 1);
+
+      let i = f32(instance);
+      let cell = vec2f(i % grid.x, floor(i / grid.x));
+      let cellOffset = cell / grid * 2; // Updated
+      let gridPos = (pos + 1) / grid - 1 + cellOffset;
+
+      return vec4f(gridPos, 0, 1);
     }
 
     @fragment
@@ -63,6 +72,24 @@ const cellPipeline = device.createRenderPipeline({
         targets: [{ format: canvasFormat }],
     },
 });
+const GRID_SIZE = 32;
+const uniformArray = new Float32Array([GRID_SIZE, GRID_SIZE]);
+const uniformBuffer = device.createBuffer({
+    label: "Grid Uniforms",
+    size: uniformArray.byteLength,
+    usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+});
+device.queue.writeBuffer(uniformBuffer, 0, uniformArray);
+const bindGroup = device.createBindGroup({
+    label: "Cell renderer bind group",
+    layout: cellPipeline.getBindGroupLayout(0),
+    entries: [
+        {
+            binding: 0,
+            resource: { buffer: uniformBuffer },
+        },
+    ],
+});
 const encoder = device.createCommandEncoder();
 const pass = encoder.beginRenderPass({
     colorAttachments: [
@@ -76,7 +103,8 @@ const pass = encoder.beginRenderPass({
 });
 pass.setPipeline(cellPipeline);
 pass.setVertexBuffer(0, vertexBuffer);
-pass.draw(vertices.length / 2);
+pass.setBindGroup(0, bindGroup); // New line!
+pass.draw(vertices.length / 2, GRID_SIZE * GRID_SIZE);
 pass.end();
 device.queue.submit([encoder.finish()]);
 export {};

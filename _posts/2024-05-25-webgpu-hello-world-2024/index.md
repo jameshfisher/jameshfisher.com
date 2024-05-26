@@ -9,7 +9,7 @@ Below is a pink square on a yellow background.
 It's rendered by WebGPU.
 
 <div>
-  <canvas id="example-canvas" width="200" height="200"></canvas>
+  <canvas id="example-canvas" width="600" height="600"></canvas>
 </div>
 
 Here's the essential JavaScript:

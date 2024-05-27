@@ -95,8 +95,9 @@ function passThroughAssets(outputPath: string) {
   const outputDirPath = path.dirname(outputPath);
   fs.mkdirSync(outputDirPath, { recursive: true });
 
+  const ignorePatterns = [`index.md`, `node_modules`];
   fs.readdirSync(inputDirPath)
-    .filter((filename) => filename !== `index.md`)
+    .filter((filename) => !ignorePatterns.includes(filename))
     .forEach((filename) => {
       const sourcePath = path.join(inputDirPath, filename);
       const destPath = path.join(outputDirPath, filename);

@@ -5,7 +5,7 @@ tags:
   - webgpu
 ---
 
-Below is a pink square on a yellow background.
+Below is a grid of squares.
 It's rendered by WebGPU.
 
 <div>

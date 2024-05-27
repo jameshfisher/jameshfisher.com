@@ -16,6 +16,8 @@ bs.watch(SITE_DIR).on("change", bs.reload);
 
 await build({ dev: true });
 
-bs.watch("_posts").on("change", async () => {
+const watcher = bs.watch("_posts");
+watcher.on("change", async (file) => {
+  console.log(`File changed: ${file}`);
   await build({ dev: true });
 });

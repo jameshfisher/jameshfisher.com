@@ -94,39 +94,43 @@ function similarPublishedPostsTFIDF({
     .map((x) => x.post);
 }
 
-const openToWork = false;
+const recruitingMailtoURL = new URL("mailto:team@granola.so");
+recruitingMailtoURL.searchParams.append("subject", "Let's work together!");
+recruitingMailtoURL.searchParams.append("body", "Hey team,\n\n");
 
-const openToWorkElement: VChild =
-  openToWork &&
-  h(
-    "div",
-    {
-      style:
-        "background: #ffeb57; border-radius: 0.5em; margin-top: 1em; margin-bottom: 1em; padding: 1em;",
-    },
-    [
-      h("div", {}, [
-        "👋 I'm Jim, a ",
-        h("strong", {}, "full-stack product engineer."),
-        " Want to build an ",
-        h("strong", {}, "amazing product"),
-        " and a ",
-        h("strong", {}, "profitable business?"),
-        " ",
-        h("a", { href: "/cv" }, "Read more about me"),
-        " or ",
-        h("strong", {}, [
-          h(
-            "a",
-            {
-              href: "mailto:jameshfisher+work@gmail.com?subject=Let%27s%20build%20an%20amazing%20product%21&body=Hey%20Jim%2C%0A%0A",
-            },
-            "Get in touch!",
-          ),
-        ]),
+const recruitingElement: VChild = h(
+  "div",
+  {
+    style:
+      "background: #ffeb57; border-radius: 0.5em; margin-top: 1em; margin-bottom: 1em; padding: 1em;",
+  },
+  [
+    h("div", {}, [
+      "Want to build a fantastic product using LLMs? I work at ",
+      h(
+        "strong",
+        {},
+        h("a", { href: "https://granola.so", target: "_blank" }, "Granola"),
+      ),
+      " where we're building the future IDE for knowledge work. Come and work with us! ",
+      h(
+        "a",
+        { href: "https://jobs.granola.so/", target: "_blank" },
+        "Read more",
+      ),
+      " or ",
+      h("strong", {}, [
+        h(
+          "a",
+          {
+            href: recruitingMailtoURL.href,
+          },
+          "get in touch!",
+        ),
       ]),
-    ],
-  );
+    ]),
+  ],
+);
 
 export function renderPost({
   post,
@@ -196,7 +200,7 @@ export function renderPost({
         ),
         h("h3", {}, "More by Jim"),
         renderPosts(myFavoritePosts),
-        openToWorkElement,
+        recruitingElement,
       ]),
       h("p", {}, [
         author === "jim"

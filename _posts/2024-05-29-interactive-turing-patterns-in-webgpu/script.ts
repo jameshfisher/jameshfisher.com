@@ -73,7 +73,7 @@ const vertexBuffer = (() => {
 })();
 
 function makeStateBuffer(name: string) {
-  const cellStateArray = new Float32Array(NUMBER_OF_CELLS);
+  const cellStateArray = new Float32Array(NUMBER_OF_CELLS * 2);
 
   const buffer = device.createBuffer({
     label: `Cell State ${name}`,
@@ -105,7 +105,7 @@ const cellShaderModule = device.createShaderModule({
 
     struct VertexOutput {
       @builtin(position) pos: vec4f,
-      @location(0) amount: f32,
+      @location(0) amount: vec2f,
     };
 
     // The value is [GRID_SIZE, GRID_SIZE]
@@ -113,8 +113,9 @@ const cellShaderModule = device.createShaderModule({
 
     // a flat array of cell states
     // the size of the array is NUMBER_OF_CELLS
-    // the possible values are 0.0+, the amount of chemical in the cell
-    @group(0) @binding(${BINDING_CELL_STATE_INPUT}) var<storage> cellState: array<f32>;
+    // there are two chemicals A and B
+    // each cell has a concentration of each chemical
+    @group(0) @binding(${BINDING_CELL_STATE_INPUT}) var<storage> cellState: array<vec2f>;
 
     @vertex
     fn vertexMain(
@@ -127,7 +128,7 @@ const cellShaderModule = device.createShaderModule({
 
       let i = f32(instance);
       let cell = vec2f(i % GRID_WIDTH, floor(i / GRID_WIDTH));
-      let amount = f32(cellState[instance]);
+      let amount = cellState[instance];
 
       let cellOffset = cell / GRID_WIDTH * 2;
       let gridPos = (pos+1) / GRID_WIDTH - 1 + cellOffset;
@@ -139,13 +140,13 @@ const cellShaderModule = device.createShaderModule({
     }
 
     struct FragInput {
-      @location(0) amount: f32,
+      @location(0) amount: vec2f,
     };
 
     @fragment
     fn fragmentMain(input: FragInput) -> @location(0) vec4f {
       let amount = input.amount;
-      return vec4f(amount, amount, amount, 1);
+      return vec4f(amount.x, amount.y, 0, 1);
     }
   `,
 });
@@ -207,12 +208,12 @@ const simulationShaderModule = device.createShaderModule({
     // a flat array of cell states
     // the size of the array is NUMBER_OF_CELLS
     // the possible values are 0.0+, the amount of chemical in the cell
-    @group(0) @binding(${BINDING_CELL_STATE_INPUT}) var<storage> cellStateIn: array<f32>;
+    @group(0) @binding(${BINDING_CELL_STATE_INPUT}) var<storage> cellStateIn: array<vec2f>;
 
     // a flat array of cell states
     // the size of the array is NUMBER_OF_CELLS
     // the possible values are 0.0+, the amount of chemical in the cell
-    @group(0) @binding(${BINDING_CELL_STATE_OUTPUT}) var<storage, read_write> cellStateOut: array<f32>;
+    @group(0) @binding(${BINDING_CELL_STATE_OUTPUT}) var<storage, read_write> cellStateOut: array<vec2f>;
 
     // given a cell's x and y coordinates, return the index of the cell in the flat array
     fn cellIndex(cell: vec2u) -> u32 {

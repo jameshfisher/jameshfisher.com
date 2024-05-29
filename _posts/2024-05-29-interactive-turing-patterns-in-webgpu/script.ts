@@ -11,7 +11,7 @@
 
 export {};
 
-const GRID_SIZE = 128;
+const GRID_SIZE = 600;
 
 const WORKGROUP_SIZE = 8;
 
@@ -90,7 +90,7 @@ function makeStateBuffer(name: string) {
     usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST,
   });
   for (let i = 0; i < cellStateArray.length; ++i) {
-    cellStateArray[i] = Math.random() > 0.6 ? 1 : 0;
+    cellStateArray[i] = Math.random() * 0.5;
   }
   device.queue.writeBuffer(buffer, 0, cellStateArray);
 
@@ -224,6 +224,11 @@ const simulationShaderModule = device.createShaderModule({
     // the possible values are 0.0+, the amount of chemical in the cell
     @group(0) @binding(${BINDING_CELL_STATE_OUTPUT}) var<storage, read_write> cellStateOut: array<vec2f>;
 
+    const D_p = 1.0;
+    const D_s = 0.5;
+    const FEED_RATE = 0.055;
+    const KILL_RATE = 0.062;
+
     // given a cell's x and y coordinates, return the index of the cell in the flat array
     fn cellIndex(cell: vec2u) -> u32 {
       return (cell.y % u32(grid.y)) * u32(grid.x) +
@@ -248,38 +253,38 @@ const simulationShaderModule = device.createShaderModule({
       let vLeft = cellStateIn[cellIndex(ixLeft)];
       let vRight = cellStateIn[cellIndex(ixRight)];
 
+      let p = vHere.x;
+      let s = vHere.y;
+
       // DIFFUSE
 
-      // Rate of diffusion for P and S
-      const DIFFUSION_RATE = vec2f(0.1, 0.05);
+      let avg_neighbor_p = (vAbove.x + vBelow.x + vLeft.x + vRight.x) / 4;
+      let avg_neighbor_s = (vAbove.y + vBelow.y + vLeft.y + vRight.y) / 4;
 
-      let deltaAbove = (vAbove - vHere) * DIFFUSION_RATE; // This much moves from above to here (if negative, moves from here to above)
-      let deltaBelow = (vBelow - vHere) * DIFFUSION_RATE;
-      let deltaLeft = (vLeft - vHere) * DIFFUSION_RATE;
-      let deltaRight = (vRight - vHere) * DIFFUSION_RATE;
+      let diff_p = avg_neighbor_p - p;
+      let diff_s = avg_neighbor_s - s;
 
-      var newvHere = vHere + deltaAbove + deltaBelow + deltaLeft + deltaRight;
-
-      var p = newvHere.x;
-      var s = newvHere.y;
+      let new_p_from_diffusion = D_p * diff_p;
+      let new_s_from_diffusion = D_s * diff_s;
 
       // FEED
 
-      let FEED_RATE = 0.055;
-      p += FEED_RATE * (1 - p);
+      let new_p_from_feed = FEED_RATE * (1 - p);
 
       // REACTION
 
       let reactions = p * s * s;
-      p -= reactions;
-      s += reactions;
+      let new_p_from_reactions = -reactions;
+      let new_s_from_reactions = reactions;
 
       // KILL
 
-      let KILL_RATE = 0.082;
-      s -= KILL_RATE * s;
+      let new_s_from_kill = -(KILL_RATE + FEED_RATE) * s;
 
-      cellStateOut[cellIndex(ixHere)] = vec2f(p, s);
+      cellStateOut[cellIndex(ixHere)] = vec2f(
+        p + new_p_from_diffusion + new_p_from_reactions + new_p_from_feed,
+        s + new_s_from_diffusion + new_s_from_reactions + new_s_from_kill,
+      );
     }`,
 });
 

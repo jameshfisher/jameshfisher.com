@@ -33,24 +33,25 @@ context.configure({
   format: canvasFormat,
 });
 
-const uniformBuffer = (() => {
-  const uniformArray = new Float32Array([GRID_SIZE, GRID_SIZE]);
+const gridSizeBuffer = (() => {
+  const gridSizeArray = new Float32Array([GRID_SIZE, GRID_SIZE]);
   const buffer = device.createBuffer({
-    label: "Grid Uniforms",
-    size: uniformArray.byteLength,
+    label: "Grid Size",
+    size: gridSizeArray.byteLength,
     usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
   });
-  device.queue.writeBuffer(buffer, 0, uniformArray);
+  device.queue.writeBuffer(buffer, 0, gridSizeArray);
   return buffer;
 })();
 
 const vertexBuffer = (() => {
+  const s = 1.0;
   const vertices = new Float32Array([
     // Triangle 1
-    -0.8, -0.8, 0.8, -0.8, 0.8, 0.8,
+    -s, -s, s, -s, s, s,
 
     // Triangle 2
-    -0.8, -0.8, 0.8, 0.8, -0.8, 0.8,
+    -s, -s, s, s, -s, s,
   ]);
   const buffer = device.createBuffer({
     label: "Cell vertices",
@@ -80,7 +81,7 @@ function makeStateBuffer(name: string) {
 const stateBufferA = makeStateBuffer("A");
 const stateBufferB = makeStateBuffer("B");
 
-const BINDING_UNIFORM = 0;
+const BINDING_GRID_SIZE = 0;
 const BINDING_CELL_STATE_INPUT = 1;
 const BINDING_CELL_STATE_OUTPUT = 2;
 
@@ -97,18 +98,29 @@ const cellShaderModule = device.createShaderModule({
       @location(0) cell: vec2f,
     };
 
-    @group(0) @binding(${BINDING_UNIFORM}) var<uniform> grid: vec2f;
+    // The value is [GRID_SIZE, GRID_SIZE]
+    @group(0) @binding(${BINDING_GRID_SIZE}) var<uniform> gridSize: vec2f;
+
+    // a flat array of cell states
+    // the size of the array is NUMBER_OF_CELLS
+    // the possible values are 0 and 1
     @group(0) @binding(${BINDING_CELL_STATE_INPUT}) var<storage> cellState: array<u32>;
 
     @vertex
-    fn vertexMain(@location(0) pos: vec2f,
-                  @builtin(instance_index) instance: u32) -> VertexOutput {
+    fn vertexMain(
+      // pos comes from the vertex buffer
+      @location(0) pos: vec2f,
+      // instance ranges from 0 to NUMBER_OF_CELLS
+      @builtin(instance_index) instance: u32
+    ) -> VertexOutput {
+      let GRID_WIDTH = gridSize.x;
+
       let i = f32(instance);
-      let cell = vec2f(i % grid.x, floor(i / grid.x));
+      let cell = vec2f(i % GRID_WIDTH, floor(i / GRID_WIDTH));
       let state = f32(cellState[instance]);
 
-      let cellOffset = cell / grid * 2;
-      let gridPos = (pos*state+1) / grid - 1 + cellOffset;
+      let cellOffset = cell / GRID_WIDTH * 2;
+      let gridPos = (pos*state+1) / GRID_WIDTH - 1 + cellOffset;
 
       var output: VertexOutput;
       output.pos = vec4f(gridPos, 0, 1);
@@ -122,8 +134,12 @@ const cellShaderModule = device.createShaderModule({
 
     @fragment
     fn fragmentMain(input: FragInput) -> @location(0) vec4f {
-      let c = input.cell / grid;
-      return vec4f(c, 1-c.x, 1);
+      // input.cell comes from the vertex shader.
+      // It's the cell's x and y coordinates.
+      // We use it to determine the cell's color.
+      let GRID_WIDTH = gridSize.x;
+      let c = input.cell / GRID_WIDTH;
+      return vec4f(c.x, c.y, 1-c.x, 1);
     }
   `,
 });
@@ -132,7 +148,7 @@ const bindGroupLayout = device.createBindGroupLayout({
   label: "Bind Group Layout",
   entries: [
     {
-      binding: BINDING_UNIFORM,
+      binding: BINDING_GRID_SIZE,
       visibility:
         GPUShaderStage.FRAGMENT |
         GPUShaderStage.VERTEX |
@@ -180,21 +196,34 @@ const cellPipeline = device.createRenderPipeline({
 const simulationShaderModule = device.createShaderModule({
   label: "Game of Life simulation shader",
   code: `
-    @group(0) @binding(${BINDING_UNIFORM}) var<uniform> grid: vec2f;
+    @group(0) @binding(${BINDING_GRID_SIZE}) var<uniform> grid: vec2f;
+
+    // a flat array of cell states
+    // the size of the array is NUMBER_OF_CELLS
+    // the possible values are 0 and 1
     @group(0) @binding(${BINDING_CELL_STATE_INPUT}) var<storage> cellStateIn: array<u32>;
+
+    // a flat array of cell states
+    // the size of the array is NUMBER_OF_CELLS
+    // the possible values are 0 and 1
     @group(0) @binding(${BINDING_CELL_STATE_OUTPUT}) var<storage, read_write> cellStateOut: array<u32>;
 
+    // given a cell's x and y coordinates, return the index of the cell in the flat array
     fn cellIndex(cell: vec2u) -> u32 {
       return (cell.y % u32(grid.y)) * u32(grid.x) +
              (cell.x % u32(grid.x));
     }
 
+    // given a cell's x and y coordinates, return the state of the cell (0 or 1)
     fn cellActive(x: u32, y: u32) -> u32 {
       return cellStateIn[cellIndex(vec2(x, y))];
     }
 
     @compute @workgroup_size(${WORKGROUP_SIZE}, ${WORKGROUP_SIZE})
-    fn computeMain(@builtin(global_invocation_id) cell: vec3u) {
+    fn computeMain(
+      // executed with [x,y,z] where x in [0, GRID_SIZE) and y in [0, GRID_SIZE)
+      @builtin(global_invocation_id) cell: vec3u
+    ) {
       let activeNeighbors =
         cellActive(cell.x+1, cell.y+1) +
         cellActive(cell.x+1, cell.y) +
@@ -236,8 +265,8 @@ const bindGroups = [
     layout: bindGroupLayout,
     entries: [
       {
-        binding: BINDING_UNIFORM,
-        resource: { buffer: uniformBuffer },
+        binding: BINDING_GRID_SIZE,
+        resource: { buffer: gridSizeBuffer },
       },
       {
         binding: BINDING_CELL_STATE_INPUT,
@@ -255,8 +284,8 @@ const bindGroups = [
 
     entries: [
       {
-        binding: BINDING_UNIFORM,
-        resource: { buffer: uniformBuffer },
+        binding: BINDING_GRID_SIZE,
+        resource: { buffer: gridSizeBuffer },
       },
       {
         binding: BINDING_CELL_STATE_INPUT,
@@ -270,7 +299,7 @@ const bindGroups = [
   }),
 ];
 
-const UPDATE_INTERVAL_MS = 500;
+const UPDATE_INTERVAL_MS = 100;
 let step = 0;
 
 function updateGrid() {

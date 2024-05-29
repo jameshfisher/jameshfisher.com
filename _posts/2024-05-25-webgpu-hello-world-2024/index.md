@@ -5,8 +5,8 @@ tags:
   - webgpu
 ---
 
-Below is a grid of squares.
-It's rendered by WebGPU.
+Below is a Game of Life simulation.
+It uses WebGPU.
 
 <div>
   <canvas id="example-canvas" width="600" height="600"></canvas>

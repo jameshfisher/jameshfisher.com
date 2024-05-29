@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@webgpu/types": "^0.1.40"
+  },
+  "dependencies": {
+    "typescript": "^5.4.5"
+  }
+}

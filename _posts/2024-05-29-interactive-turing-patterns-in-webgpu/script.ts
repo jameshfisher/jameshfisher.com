@@ -1,5 +1,14 @@
 /// <reference types="@webgpu/types" />
 
+// Follows the model at https://www.karlsims.com/rd.html:
+//
+// Chemical P (prey) is added at a given "feed" rate.
+// Chemical S (predator) is removed at a given "kill" rate.
+// Reaction: two Ss convert an P into S, as if S reproduces using P as food.
+// Both chemicals diffuse so uneven concentrations spread out across the grid, but P diffuses faster than S.
+//
+// Typical values DA=1.0, DB=.5, f=.055, k=.062
+
 export {};
 
 const GRID_SIZE = 128;
@@ -113,7 +122,7 @@ const cellShaderModule = device.createShaderModule({
 
     // a flat array of cell states
     // the size of the array is NUMBER_OF_CELLS
-    // there are two chemicals A and B
+    // there are two chemicals P and S
     // each cell has a concentration of each chemical
     @group(0) @binding(${BINDING_CELL_STATE_INPUT}) var<storage> cellState: array<vec2f>;
 
@@ -239,16 +248,38 @@ const simulationShaderModule = device.createShaderModule({
       let vLeft = cellStateIn[cellIndex(ixLeft)];
       let vRight = cellStateIn[cellIndex(ixRight)];
 
-      const DIFFUSION_RATE = 0.01;
+      // DIFFUSE
+
+      // Rate of diffusion for P and S
+      const DIFFUSION_RATE = vec2f(0.1, 0.05);
 
       let deltaAbove = (vAbove - vHere) * DIFFUSION_RATE; // This much moves from above to here (if negative, moves from here to above)
       let deltaBelow = (vBelow - vHere) * DIFFUSION_RATE;
       let deltaLeft = (vLeft - vHere) * DIFFUSION_RATE;
       let deltaRight = (vRight - vHere) * DIFFUSION_RATE;
 
-      let newvHere = vHere + deltaAbove + deltaBelow + deltaLeft + deltaRight;
+      var newvHere = vHere + deltaAbove + deltaBelow + deltaLeft + deltaRight;
 
-      cellStateOut[cellIndex(ixHere)] = newvHere;
+      var p = newvHere.x;
+      var s = newvHere.y;
+
+      // FEED
+
+      let FEED_RATE = 0.055;
+      p += FEED_RATE * (1 - p);
+
+      // REACTION
+
+      let reactions = p * s * s;
+      p -= reactions;
+      s += reactions;
+
+      // KILL
+
+      let KILL_RATE = 0.082;
+      s -= KILL_RATE * s;
+
+      cellStateOut[cellIndex(ixHere)] = vec2f(p, s);
     }`,
 });
 
@@ -301,7 +332,7 @@ const bindGroups = [
   }),
 ];
 
-const UPDATE_INTERVAL_MS = 100;
+const UPDATE_INTERVAL_MS = 30;
 let step = 0;
 
 function updateGrid() {

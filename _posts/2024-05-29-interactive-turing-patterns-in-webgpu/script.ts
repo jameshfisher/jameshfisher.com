@@ -17,9 +17,6 @@ const WORKGROUP_SIZE = 8;
 
 const NUMBER_OF_CELLS = GRID_SIZE * GRID_SIZE;
 
-const GRID_WIDTH = GRID_SIZE;
-const GRID_HEIGHT = GRID_SIZE;
-// TODO get these from UI
 let D_p = 1.0;
 let D_s = 0.5;
 let FEED_RATE = 0.055;
@@ -37,6 +34,22 @@ function getConstantsArray() {
 }
 
 const canvas = document.getElementById("example-canvas") as HTMLCanvasElement;
+const feedRateSlider = document.getElementById("feed-rate") as HTMLInputElement;
+const killRateSlider = document.getElementById("kill-rate") as HTMLInputElement;
+const feedRateValue = document.getElementById("feed-rate-value") as HTMLSpanElement;
+const killRateValue = document.getElementById("kill-rate-value") as HTMLSpanElement;
+
+feedRateSlider.addEventListener("input", (event) => {
+  const value = (event.target as HTMLInputElement).value;
+  feedRateValue.textContent = value;
+  FEED_RATE = parseFloat(value);
+});
+
+killRateSlider.addEventListener("input", (event) => {
+  const value = (event.target as HTMLInputElement).value;
+  killRateValue.textContent = value;
+  KILL_RATE = parseFloat(value);
+});
 
 if (!navigator.gpu) {
   throw new Error("WebGPU not supported on this browser.");
@@ -182,7 +195,7 @@ const cellShaderModule = device.createShaderModule({
     @fragment
     fn fragmentMain(input: FragInput) -> @location(0) vec4f {
       let amount = input.amount;
-      return vec4f(amount.x, amount.y, 0, 1);
+      return vec4f(amount.y, amount.x, 0, 1);
     }
   `,
 });

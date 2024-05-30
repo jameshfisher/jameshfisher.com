@@ -2,6 +2,23 @@
 const GRID_SIZE = 600;
 const WORKGROUP_SIZE = 8;
 const NUMBER_OF_CELLS = GRID_SIZE * GRID_SIZE;
+const GRID_WIDTH = GRID_SIZE;
+const GRID_HEIGHT = GRID_SIZE;
+// TODO get these from UI
+let D_p = 1.0;
+let D_s = 0.5;
+let FEED_RATE = 0.055;
+let KILL_RATE = 0.062;
+function getConstantsArray() {
+    return new Float32Array([
+        GRID_SIZE,
+        GRID_SIZE,
+        D_p,
+        D_s,
+        FEED_RATE,
+        KILL_RATE,
+    ]);
+}
 const canvas = document.getElementById("example-canvas");
 if (!navigator.gpu) {
     throw new Error("WebGPU not supported on this browser.");
@@ -20,14 +37,14 @@ context.configure({
     device: device,
     format: canvasFormat,
 });
-const gridSizeBuffer = (() => {
-    const gridSizeArray = new Float32Array([GRID_SIZE, GRID_SIZE]);
+const constantsBuffer = (() => {
+    const constantsArray = getConstantsArray();
     const buffer = device.createBuffer({
         label: "Grid Size",
-        size: gridSizeArray.byteLength,
-        usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+        size: constantsArray.byteLength,
+        usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST,
     });
-    device.queue.writeBuffer(buffer, 0, gridSizeArray);
+    device.queue.writeBuffer(buffer, 0, constantsArray);
     return buffer;
 })();
 const vertexBuffer = (() => {
@@ -78,7 +95,7 @@ function makeStateBuffer(name) {
 }
 const stateBufferA = makeStateBuffer("A");
 const stateBufferB = makeStateBuffer("B");
-const BINDING_GRID_SIZE = 0;
+const BINDING_CONSTANTS = 0;
 const BINDING_CELL_STATE_INPUT = 1;
 const BINDING_CELL_STATE_OUTPUT = 2;
 const cellShaderModule = device.createShaderModule({
@@ -94,8 +111,7 @@ const cellShaderModule = device.createShaderModule({
       @location(0) amount: vec2f,
     };
 
-    // The value is [GRID_SIZE, GRID_SIZE]
-    @group(0) @binding(${BINDING_GRID_SIZE}) var<uniform> gridSize: vec2f;
+    @group(0) @binding(${BINDING_CONSTANTS}) var<storage> constants: array<f32>;
 
     // a flat array of cell states
     // the size of the array is NUMBER_OF_CELLS
@@ -110,7 +126,7 @@ const cellShaderModule = device.createShaderModule({
       // instance ranges from 0 to NUMBER_OF_CELLS
       @builtin(instance_index) instance: u32
     ) -> VertexOutput {
-      let GRID_WIDTH = gridSize.x;
+      let GRID_WIDTH = constants[0];
 
       let i = f32(instance);
       let cell = vec2f(i % GRID_WIDTH, floor(i / GRID_WIDTH));
@@ -140,11 +156,11 @@ const bindGroupLayout = device.createBindGroupLayout({
     label: "Bind Group Layout",
     entries: [
         {
-            binding: BINDING_GRID_SIZE,
+            binding: BINDING_CONSTANTS,
             visibility: GPUShaderStage.FRAGMENT |
                 GPUShaderStage.VERTEX |
                 GPUShaderStage.COMPUTE,
-            buffer: { type: "uniform" },
+            buffer: { type: "read-only-storage" },
         },
         {
             binding: BINDING_CELL_STATE_INPUT,
@@ -184,7 +200,7 @@ const cellPipeline = device.createRenderPipeline({
 const simulationShaderModule = device.createShaderModule({
     label: "Game of Life simulation shader",
     code: `
-    @group(0) @binding(${BINDING_GRID_SIZE}) var<uniform> grid: vec2f;
+    @group(0) @binding(${BINDING_CONSTANTS}) var<storage> constants: array<f32>;
 
     // a flat array of cell states
     // the size of the array is NUMBER_OF_CELLS
@@ -196,15 +212,11 @@ const simulationShaderModule = device.createShaderModule({
     // the possible values are 0.0+, the amount of chemical in the cell
     @group(0) @binding(${BINDING_CELL_STATE_OUTPUT}) var<storage, read_write> cellStateOut: array<vec2f>;
 
-    const D_p = 1.0;
-    const D_s = 0.5;
-    const FEED_RATE = 0.055;
-    const KILL_RATE = 0.062;
-
     // given a cell's x and y coordinates, return the index of the cell in the flat array
     fn cellIndex(cell: vec2u) -> u32 {
-      return (cell.y % u32(grid.y)) * u32(grid.x) +
-             (cell.x % u32(grid.x));
+      let GRID_WIDTH = constants[0];
+      return (cell.y % u32(GRID_WIDTH)) * u32(GRID_WIDTH) +
+             (cell.x % u32(GRID_WIDTH));
     }
 
     @compute @workgroup_size(${WORKGROUP_SIZE}, ${WORKGROUP_SIZE})
@@ -212,6 +224,11 @@ const simulationShaderModule = device.createShaderModule({
       // executed with [x,y,z] where x in [0, GRID_SIZE) and y in [0, GRID_SIZE)
       @builtin(global_invocation_id) cell: vec3u
     ) {
+      let D_p = constants[2];
+      let D_s = constants[3];
+      let FEED_RATE = constants[4];
+      let KILL_RATE = constants[5];
+
       let ixHere = cell.xy;
 
       let ixAbove = vec2u(ixHere.x, ixHere.y-1);
@@ -281,8 +298,8 @@ const bindGroups = [
         layout: bindGroupLayout,
         entries: [
             {
-                binding: BINDING_GRID_SIZE,
-                resource: { buffer: gridSizeBuffer },
+                binding: BINDING_CONSTANTS,
+                resource: { buffer: constantsBuffer },
             },
             {
                 binding: BINDING_CELL_STATE_INPUT,
@@ -299,8 +316,8 @@ const bindGroups = [
         layout: bindGroupLayout,
         entries: [
             {
-                binding: BINDING_GRID_SIZE,
-                resource: { buffer: gridSizeBuffer },
+                binding: BINDING_CONSTANTS,
+                resource: { buffer: constantsBuffer },
             },
             {
                 binding: BINDING_CELL_STATE_INPUT,
@@ -317,6 +334,8 @@ const UPDATE_INTERVAL_MS = 30;
 let step = 0;
 function updateGrid() {
     step++;
+    // Write constants array
+    device.queue.writeBuffer(constantsBuffer, 0, getConstantsArray());
     const encoder = device.createCommandEncoder();
     const computePass = encoder.beginComputePass();
     computePass.setPipeline(simulationPipeline);

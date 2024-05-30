@@ -58,14 +58,21 @@ const vertexBuffer = (() => {
 })();
 function makeStateBuffer(name) {
     const cellStateArray = new Float32Array(NUMBER_OF_CELLS * 2);
+    for (let i = 0; i < NUMBER_OF_CELLS; ++i) {
+        cellStateArray[i * 2] = 1.0;
+        cellStateArray[i * 2 + 1] = 0.0;
+    }
+    // Seed a few cells with S
+    for (let i = 0; i < NUMBER_OF_CELLS; ++i) {
+        if (Math.random() < 0.01) {
+            cellStateArray[i * 2 + 1] = 1.0;
+        }
+    }
     const buffer = device.createBuffer({
         label: `Cell State ${name}`,
         size: cellStateArray.byteLength,
         usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST,
     });
-    for (let i = 0; i < cellStateArray.length; ++i) {
-        cellStateArray[i] = Math.random() * 0.5;
-    }
     device.queue.writeBuffer(buffer, 0, cellStateArray);
     return buffer;
 }
@@ -211,20 +218,28 @@ const simulationShaderModule = device.createShaderModule({
       let ixBelow = vec2u(ixHere.x, ixHere.y+1);
       let ixLeft = vec2u(ixHere.x-1, ixHere.y);
       let ixRight = vec2u(ixHere.x+1, ixHere.y);
+      let ixAboveLeft = vec2u(ixHere.x-1, ixHere.y-1);
+      let ixAboveRight = vec2u(ixHere.x+1, ixHere.y-1);
+      let ixBelowLeft = vec2u(ixHere.x-1, ixHere.y+1);
+      let ixBelowRight = vec2u(ixHere.x+1, ixHere.y+1);
 
       let vHere = cellStateIn[cellIndex(ixHere)];
       let vAbove = cellStateIn[cellIndex(ixAbove)];
       let vBelow = cellStateIn[cellIndex(ixBelow)];
       let vLeft = cellStateIn[cellIndex(ixLeft)];
       let vRight = cellStateIn[cellIndex(ixRight)];
+      let vAboveLeft = cellStateIn[cellIndex(ixAboveLeft)];
+      let vAboveRight = cellStateIn[cellIndex(ixAboveRight)];
+      let vBelowLeft = cellStateIn[cellIndex(ixBelowLeft)];
+      let vBelowRight = cellStateIn[cellIndex(ixBelowRight)];
 
       let p = vHere.x;
       let s = vHere.y;
 
       // DIFFUSE
 
-      let avg_neighbor_p = (vAbove.x + vBelow.x + vLeft.x + vRight.x) / 4;
-      let avg_neighbor_s = (vAbove.y + vBelow.y + vLeft.y + vRight.y) / 4;
+      let avg_neighbor_p = (vAbove.x + vBelow.x + vLeft.x + vRight.x + vAboveLeft.x + vAboveRight.x + vBelowLeft.x + vBelowRight.x) / 8;
+      let avg_neighbor_s = (vAbove.y + vBelow.y + vLeft.y + vRight.y + vAboveLeft.y + vAboveRight.y + vBelowLeft.y + vBelowRight.y) / 8;
 
       let diff_p = avg_neighbor_p - p;
       let diff_s = avg_neighbor_s - s;

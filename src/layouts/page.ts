@@ -96,6 +96,27 @@ export function renderPage({
       h("title", {}, [data.title]),
     ]),
     h("body", { class: "experiment-dont-show-link-summaries" }, [
+      h(
+        "a",
+        {
+          style:
+            "display: block; clear: both; margin: 0 0 1em 0; text-decoration-color: white;",
+          href: "https://en.wikipedia.org/wiki/Gaza_genocide",
+          target: "_blank",
+        },
+        [
+          h(
+            "div",
+            {
+              style:
+                "background-color: black; color: white; padding: 0.5em; font-weight: bold;",
+            },
+            [
+              "Learn more about Israeli war crimes in Gaza, funded by the USA, Germany, the UK and others.",
+            ],
+          ),
+        ],
+      ),
       h("div", { class: "noprint", style: "float: right; overflow: hidden;" }, [
         h(
           "a",

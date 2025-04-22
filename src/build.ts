@@ -200,6 +200,13 @@ export async function build({ dev }: { dev: boolean }) {
     renderSitemapXml(sitemapEntries),
   );
 
+  const wellKnownDir = path.join(SITE_DIR, ".well-known");
+  ensureDir(wellKnownDir);
+  fs.writeFileSync(
+    path.join(wellKnownDir, "atproto-did"),
+    "did:plc:rv2apmj25u2vaxy6y7i3pavc",
+  );
+
   const endTime = Date.now();
   console.log(`Built site in ${endTime - startTime}ms`);
 }

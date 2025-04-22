@@ -105,6 +105,12 @@ function passThroughAssets(outputPath: string) {
     });
 }
 
+export function clean() {
+  if (fs.existsSync(SITE_DIR)) {
+    fs.rmSync(SITE_DIR, { recursive: true, force: true });
+  }
+}
+
 export async function build({ dev }: { dev: boolean }) {
   const startTime = Date.now();
 

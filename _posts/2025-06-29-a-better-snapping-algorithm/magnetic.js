@@ -8,7 +8,7 @@
     // Global state
     let state = {
         dragging: false,
-        windowPosition: { left: -0.3, top: -0.225 },
+        windowPosition: { left: 0.3, top: -0.8 },
     };
     const getSnapLines = () => {
         return {
@@ -263,7 +263,7 @@
             left: 0.05,
             top: -0.05 - WINDOW_HEIGHT,
         };
-        const targets = [{ position: targetB, label: "Drag here!" }];
+        const targets = [{ position: targetB, label: "Target!" }];
         targets.forEach(({ position, label }) => {
             const topLeft = worldToScreen(position.left, position.top);
             const bottomRight = worldToScreen(position.left + WINDOW_WIDTH, position.top + WINDOW_HEIGHT);

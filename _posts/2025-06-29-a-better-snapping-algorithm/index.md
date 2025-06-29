@@ -16,12 +16,11 @@ so for precise positioning, you have to disable snapping.
 In this post, I show _sticky snap_,
 a better algorithm.
 But first,
-try out the standard snap algorithm:
+try to place the green rectangle at the target using the standard snap algorithm:
 
 <canvas id="magnetic-snap-app" style="display: block; margin: 0 auto"></canvas>
 
-If you try to place the green rectangle at the target,
-you'll soon find that it's impossible to reach!
+You'll soon find that it's impossible to reach!
 The snap lines always pull the object out of place.
 Sometimes useful, but often very frustrating.
 To complete this task, you'll need to disable snapping!

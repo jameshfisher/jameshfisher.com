@@ -16,22 +16,31 @@ export const navbar = h("div", { class: "noprint" }, [
       h("a", { href: "https://jameshfisher.com/feed.xml" }, ["RSS"]),
     ]),
     h("div", { class: "navbar-item" }, [
-      h("a", { href: "https://tigyog.app", target: "_blank" }, [
+      h("a", { href: "https://granola.ai", target: "_blank" }, [
         h("img", {
-          src: "/assets/tigyog/icon-192.png",
+          src: "/assets/granola.png",
           style: "width: 1em; position: relative; top: 0.1em;",
         }),
-        " TigYog",
+        " Granola",
       ]),
     ]),
-    h("div", { class: "navbar-item" }, [
-      h("a", { href: "https://kickabout.club", target: "_blank" }, [
-        h("img", {
-          src: "/assets/kickabout/icon-192.png",
-          style: "width: 1em; position: relative; top: 0.1em;",
-        }),
-        " Kickabout",
-      ]),
-    ]),
+    // h("div", { class: "navbar-item" }, [
+    //   h("a", { href: "https://tigyog.app", target: "_blank" }, [
+    //     h("img", {
+    //       src: "/assets/tigyog/icon-192.png",
+    //       style: "width: 1em; position: relative; top: 0.1em;",
+    //     }),
+    //     " TigYog",
+    //   ]),
+    // ]),
+    // h("div", { class: "navbar-item" }, [
+    //   h("a", { href: "https://kickabout.club", target: "_blank" }, [
+    //     h("img", {
+    //       src: "/assets/kickabout/icon-192.png",
+    //       style: "width: 1em; position: relative; top: 0.1em;",
+    //     }),
+    //     " Kickabout",
+    //   ]),
+    // ]),
   ]),
 ]);

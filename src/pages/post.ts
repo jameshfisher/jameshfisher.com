@@ -190,7 +190,7 @@ export function renderPost({
           ),
           ".",
         ]),
-        h("h3", {}, "Similar posts"),
+        h("h3", { style: "margin-top: 4em;" }, "Similar posts"),
         renderPosts(
           similarPublishedPostsTFIDF({
             post,

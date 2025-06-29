@@ -76,7 +76,9 @@ export function renderHomepage(posts: Post[]) {
               "max-width: 40em; margin: 0 auto 2em auto; font-size: 1.3em; font-weight: 500; text-align: center",
           },
           [
-            "👋 I'm Jim, a product engineer. I built ",
+            "👋 I'm Jim, a product engineer at ",
+            h("a", { target: "_blank", href: "https://granola.ai" }, "Granola"),
+            ". I built ",
             h("a", { target: "_blank", href: "https://tigyog.app" }, "TigYog"),
             " and ",
             h(

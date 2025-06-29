@@ -15,7 +15,7 @@ Drawing apps should consider using sticky snap!
 I call the most common snapping algorithm I call _magnetic snap_.
 Try it out and experience its problems:
 
-<canvas id="magnetic-snap-app"></canvas>
+<canvas id="magnetic-snap-app" style="display: block; margin: 0 auto"></canvas>
 
 Notice how the target "Drag here" is impossible to reach!
 The magnetic snap lines exert _action at a distance_,
@@ -24,7 +24,7 @@ Sometimes useful, but often frustrating!
 
 Now, try out _sticky snap_:
 
-<canvas id="sticky-snap-app"></canvas>
+<canvas id="sticky-snap-app" style="display: block; margin: 0 auto"></canvas>
 
 With this algorithm, you can drag to the target
 by approaching it without touching the snap lines.
@@ -35,31 +35,26 @@ You get the best of both worlds:
 it's easy to stick something to a snap line by dragging across the line,
 but it's also easy to get arbitrarily close to the snap line without it interfering.
 
-I found the sticky snap algorithm in macOS window management.
-
-
-What's the algorithm?
-The object has two axes, X and Y.
+The sticky-snap algorithm is only slightly more complex than magnetic snap.
+The dragged object has two axes, X and Y.
 Each axis is either free,
 or one of its edges is stuck to a snap line.
 When an edge touches/crosses a snap line, it becomes stuck.
 When pulled far enough away, it becomes unstuck.
 
+I discovered this algorithm in macOS window management!
+It makes it easy to snap a window next to another one,
+but also easy to put a window _near_ another one.
+As such, macOS has no "snapping off" mode.
 
-
-```ts
-type Axis
-  = { type: 'Free' }
-  | { type: 'Stuck';
-      edge: 'Start' | 'Middle' | 'End' };
-type State = { x: Axis, y: Axis };
-```
-
-A list of apps that use naive magnetic snap:
-- tldraw
-- Figma
-- Inkscape
-
+Yet all drawing apps I've tried use naive magnetic snap:
+Figma,
+Google Docs,
+tldraw,
+Inkscape, etc.
+As such, they have to make it easy to disable snapping,
+or even start with snapping off.
+They should all consider using sticky snap!
 
 <script type="module" src="./magnetic.js"></script>
 <script type="module" src="./sticky.js"></script>

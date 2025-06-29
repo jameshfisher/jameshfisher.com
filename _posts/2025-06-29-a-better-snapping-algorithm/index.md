@@ -1,6 +1,13 @@
 ---
-title: "Sticky snap: a better snapping algorithm"
-tags: []
+title: 'Sticky snap: a better snapping algorithm'
+tags:
+  - ui
+  - ux
+  - design
+  - graphics
+  - interface-design
+  - interaction-design
+taggedAt: '2025-06-29'
 ---
 
 In drawing apps,
@@ -13,16 +20,16 @@ With sticky snap, you can place the object anywhere, so snapping can always be o
 Drawing apps should consider using sticky snap!
 
 I call the most common snapping algorithm I call _magnetic snap_.
-Try it out and experience its problems:
+Try to place the green rectangle at the target:
 
 <canvas id="magnetic-snap-app" style="display: block; margin: 0 auto"></canvas>
 
-Notice how the target "Drag here" is impossible to reach!
+The target is impossible to reach!
 The magnetic snap lines exert _action at a distance_,
 pulling the object out of place.
-Sometimes useful, but often frustrating!
+Sometimes useful, but often very frustrating!
 
-Now, try out _sticky snap_:
+Now, try out _sticky snap_ on the same task:
 
 <canvas id="sticky-snap-app" style="display: block; margin: 0 auto"></canvas>
 
@@ -42,18 +49,20 @@ or one of its edges is stuck to a snap line.
 When an edge touches/crosses a snap line, it becomes stuck.
 When pulled far enough away, it becomes unstuck.
 
-I discovered this algorithm in macOS window management!
+I discovered sticky snap in macOS window management!
 It makes it easy to snap a window next to another one,
 but also easy to put a window _near_ another one.
 As such, macOS has no "snapping off" mode.
 
-Yet all drawing apps I've tried use naive magnetic snap:
+I haven't seen sticky snap anywhere else.
+All drawing apps I've tried use naive magnetic snap:
 Figma,
 Google Docs,
 tldraw,
-Inkscape, etc.
-As such, they have to make it easy to disable snapping,
-or even start with snapping off.
+Inkscape,
+Keynote, etc.
+As such, all these apps have to make it easy to disable snapping,
+or even to start with snapping off.
 They should all consider using sticky snap!
 
 <script type="module" src="./magnetic.js"></script>

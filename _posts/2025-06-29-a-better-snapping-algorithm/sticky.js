@@ -201,8 +201,8 @@ const drawSnapLines = (ctx) => {
     snapLines.vertical.forEach((worldX) => {
         const { x } = worldToScreen(worldX, 0);
         const isSnapped = state.dragging && state.axisStates.xAxis.type === 'Stuck';
-        ctx.strokeStyle = isSnapped ? 'rgba(100, 116, 139, 0.6)' : 'rgba(100, 116, 139, 0.3)';
-        ctx.lineWidth = 1;
+        ctx.strokeStyle = isSnapped ? 'rgba(59, 130, 246, 0.6)' : 'rgba(100, 116, 139, 0.3)'; // Light blue when snapped
+        ctx.lineWidth = isSnapped ? 4 : 1; // Thicker when snapped
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, CANVAS_SIZE);
@@ -212,8 +212,8 @@ const drawSnapLines = (ctx) => {
     snapLines.horizontal.forEach((worldY) => {
         const { y } = worldToScreen(0, worldY);
         const isSnapped = state.dragging && state.axisStates.yAxis.type === 'Stuck';
-        ctx.strokeStyle = isSnapped ? 'rgba(100, 116, 139, 0.6)' : 'rgba(100, 116, 139, 0.3)';
-        ctx.lineWidth = 1;
+        ctx.strokeStyle = isSnapped ? 'rgba(59, 130, 246, 0.6)' : 'rgba(100, 116, 139, 0.3)'; // Light blue when snapped
+        ctx.lineWidth = isSnapped ? 4 : 1; // Thicker when snapped
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(CANVAS_SIZE, y);

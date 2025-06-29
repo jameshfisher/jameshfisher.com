@@ -17,7 +17,7 @@ Try it out and experience its problems:
 
 > Insert demo of magnetic snap here.
 
-Notice how several locations are impossible to reach.
+Notice how location B is impossible to reach.
 The magnetic snap lines exert _action at a distance_,
 pulling the object out of place.
 Sometimes useful, but often frustrating!

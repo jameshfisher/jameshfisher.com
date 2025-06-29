@@ -3,7 +3,7 @@
 const CANVAS_SIZE = 1000;
 const WINDOW_WIDTH = 0.6;
 const WINDOW_HEIGHT = 0.45;
-const SNAP_THRESHOLD = 0.06;
+const SNAP_THRESHOLD = 0.1;
 // Global state
 let state = {
     dragging: false,
@@ -249,6 +249,46 @@ const drawWindow = (ctx, left, top, windowType) => {
     ctx.closePath();
     ctx.fill();
 };
+const drawTargetWindows = (ctx) => {
+    const targetB = {
+        left: 0.05,
+        top: -0.05 - WINDOW_HEIGHT
+    };
+    const targets = [
+        { position: targetB, label: 'Drag here!' }
+    ];
+    targets.forEach(({ position, label }) => {
+        const topLeft = worldToScreen(position.left, position.top);
+        const bottomRight = worldToScreen(position.left + WINDOW_WIDTH, position.top + WINDOW_HEIGHT);
+        const width = bottomRight.x - topLeft.x;
+        const height = bottomRight.y - topLeft.y;
+        const cornerRadius = 8;
+        // Draw dotted border
+        ctx.strokeStyle = 'rgba(100, 116, 139, 0.4)';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(topLeft.x + cornerRadius, topLeft.y);
+        ctx.lineTo(topLeft.x + width - cornerRadius, topLeft.y);
+        ctx.quadraticCurveTo(topLeft.x + width, topLeft.y, topLeft.x + width, topLeft.y + cornerRadius);
+        ctx.lineTo(topLeft.x + width, topLeft.y + height - cornerRadius);
+        ctx.quadraticCurveTo(topLeft.x + width, topLeft.y + height, topLeft.x + width - cornerRadius, topLeft.y + height);
+        ctx.lineTo(topLeft.x + cornerRadius, topLeft.y + height);
+        ctx.quadraticCurveTo(topLeft.x, topLeft.y + height, topLeft.x, topLeft.y + height - cornerRadius);
+        ctx.lineTo(topLeft.x, topLeft.y + cornerRadius);
+        ctx.quadraticCurveTo(topLeft.x, topLeft.y, topLeft.x + cornerRadius, topLeft.y);
+        ctx.closePath();
+        ctx.stroke();
+        // Reset line dash
+        ctx.setLineDash([]);
+        // Draw label
+        ctx.fillStyle = 'rgba(100, 116, 139, 0.8)';
+        ctx.font = '48px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(label, topLeft.x + width / 2, topLeft.y + height / 2);
+    });
+};
 // Main drawing function
 const draw = () => {
     const canvas = document.getElementById('sticky-snap-app');
@@ -258,6 +298,7 @@ const draw = () => {
     ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
     drawBackground(ctx);
     drawSnapLines(ctx);
+    drawTargetWindows(ctx);
     if (state.dragging) {
         // While dragging: show green window at snapped position and grey window at dragged position
         const draggedPosition = {

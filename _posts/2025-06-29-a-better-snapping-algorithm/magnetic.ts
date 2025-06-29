@@ -483,7 +483,7 @@
   };
 
   // Mouse event handlers
-  const getMousePos = (e: MouseEvent) => {
+  const getMousePos = (e: MouseEvent | TouchEvent) => {
     const canvas = document.getElementById(
       "magnetic-snap-app",
     ) as HTMLCanvasElement;
@@ -494,13 +494,25 @@
     const scaleX = CANVAS_SIZE / rect.width;
     const scaleY = CANVAS_SIZE / rect.height;
 
+    let clientX: number, clientY: number;
+
+    if (e instanceof MouseEvent) {
+      clientX = e.clientX;
+      clientY = e.clientY;
+    } else {
+      // Touch event
+      const touch = e.touches[0] || e.changedTouches[0];
+      clientX = touch.clientX;
+      clientY = touch.clientY;
+    }
+
     return {
-      x: (e.clientX - rect.left) * scaleX,
-      y: (e.clientY - rect.top) * scaleY,
+      x: (clientX - rect.left) * scaleX,
+      y: (clientY - rect.top) * scaleY,
     };
   };
 
-  const handleMouseDown = (e: MouseEvent) => {
+  const handleMouseDown = (e: MouseEvent | TouchEvent) => {
     const mousePos = getMousePos(e);
     const worldPos = screenToWorld(mousePos.x, mousePos.y);
 
@@ -513,6 +525,11 @@
       worldPos.y <= state.windowPosition.top + WINDOW_HEIGHT;
 
     if (withinX && withinY) {
+      // Prevent default behavior for touch events to stop scrolling
+      if (e instanceof TouchEvent) {
+        e.preventDefault();
+      }
+
       state = {
         dragging: true,
         windowPosition: state.windowPosition,
@@ -527,8 +544,13 @@
     }
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = (e: MouseEvent | TouchEvent) => {
     if (!state.dragging) return;
+
+    // Prevent default behavior for touch events to stop scrolling
+    if (e instanceof TouchEvent) {
+      e.preventDefault();
+    }
 
     const mousePos = getMousePos(e);
     const worldPos = screenToWorld(mousePos.x, mousePos.y);
@@ -555,6 +577,8 @@
       previousDraggedPosition: { left: draggedLeft, top: draggedTop },
     };
     draw();
+
+    return false;
   };
 
   const handleMouseUp = () => {
@@ -594,10 +618,13 @@
     canvas.style.aspectRatio = "1";
     canvas.style.cursor = "grab";
 
-    // Add event listeners
+    // Add event listeners for both mouse and touch
     canvas.addEventListener("mousedown", handleMouseDown);
+    canvas.addEventListener("touchstart", handleMouseDown, { passive: false });
     document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("touchmove", handleMouseMove, { passive: false });
     document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("touchend", handleMouseUp);
 
     // Initial draw
     draw();

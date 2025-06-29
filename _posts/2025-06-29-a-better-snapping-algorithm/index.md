@@ -17,16 +17,18 @@ Try it out and experience its problems:
 
 <canvas id="magnetic-snap-app"></canvas>
 
-Notice how location B is impossible to reach.
+Notice how the target "Drag here" is impossible to reach!
 The magnetic snap lines exert _action at a distance_,
 pulling the object out of place.
 Sometimes useful, but often frustrating!
 
-Now try out _sticky snap_:
+Now, try out _sticky snap_:
 
 <canvas id="sticky-snap-app"></canvas>
 
-With this algorithm, the snap lines are not magnetic, they're _sticky_.
+With this algorithm, you can drag to the target
+by approaching it without touching the snap lines.
+Here, the snap lines are not magnetic, they're _sticky_.
 They don't exert any action at a distance;
 they only exert force once you've stuck something to them.
 You get the best of both worlds:

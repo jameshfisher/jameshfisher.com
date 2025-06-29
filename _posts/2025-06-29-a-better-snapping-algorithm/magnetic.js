@@ -329,9 +329,20 @@
         // Scale from actual rendered size to internal canvas size (1000px)
         const scaleX = CANVAS_SIZE / rect.width;
         const scaleY = CANVAS_SIZE / rect.height;
+        let clientX, clientY;
+        if (e instanceof MouseEvent) {
+            clientX = e.clientX;
+            clientY = e.clientY;
+        }
+        else {
+            // Touch event
+            const touch = e.touches[0] || e.changedTouches[0];
+            clientX = touch.clientX;
+            clientY = touch.clientY;
+        }
         return {
-            x: (e.clientX - rect.left) * scaleX,
-            y: (e.clientY - rect.top) * scaleY,
+            x: (clientX - rect.left) * scaleX,
+            y: (clientY - rect.top) * scaleY,
         };
     };
     const handleMouseDown = (e) => {
@@ -343,6 +354,10 @@
         const withinY = worldPos.y >= state.windowPosition.top &&
             worldPos.y <= state.windowPosition.top + WINDOW_HEIGHT;
         if (withinX && withinY) {
+            // Prevent default behavior for touch events to stop scrolling
+            if (e instanceof TouchEvent) {
+                e.preventDefault();
+            }
             state = {
                 dragging: true,
                 windowPosition: state.windowPosition,
@@ -359,6 +374,10 @@
     const handleMouseMove = (e) => {
         if (!state.dragging)
             return;
+        // Prevent default behavior for touch events to stop scrolling
+        if (e instanceof TouchEvent) {
+            e.preventDefault();
+        }
         const mousePos = getMousePos(e);
         const worldPos = screenToWorld(mousePos.x, mousePos.y);
         const newDragOffsetX = worldPos.x - state.dragStartX;
@@ -374,6 +393,7 @@
             previousDraggedPosition: { left: draggedLeft, top: draggedTop },
         };
         draw();
+        return false;
     };
     const handleMouseUp = () => {
         if (!state.dragging)
@@ -403,10 +423,13 @@
         canvas.style.height = "auto";
         canvas.style.aspectRatio = "1";
         canvas.style.cursor = "grab";
-        // Add event listeners
+        // Add event listeners for both mouse and touch
         canvas.addEventListener("mousedown", handleMouseDown);
+        canvas.addEventListener("touchstart", handleMouseDown, { passive: false });
         document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("touchmove", handleMouseMove, { passive: false });
         document.addEventListener("mouseup", handleMouseUp);
+        document.addEventListener("touchend", handleMouseUp);
         // Initial draw
         draw();
     };

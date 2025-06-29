@@ -66,7 +66,7 @@ async function fileToTags(
       { role: "user", content: fileContentWithoutTags.slice(0, 2048) },
       { role: "assistant", content: `Tags:` },
     ],
-    model: "claude-3-haiku-20240307",
+    model: "claude-3-5-haiku-20241022",
   });
   console.log({ message });
   const content = message.content;
@@ -88,14 +88,6 @@ async function getTagVocab(filePaths: string[]): Promise<Set<string>> {
   return tagSet;
 }
 
-function shuffle<T>(array: T[]): void {
-  // Fisher-Yates shuffle
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j]!, array[i]!];
-  }
-}
-
 async function main() {
   const dateStr = new Date().toISOString().slice(0, 10);
 
@@ -105,7 +97,13 @@ async function main() {
     .map((dirent) => `_posts/${dirent.name}/index.md`)
     .filter((filePath) => fs.existsSync(filePath));
 
-  shuffle(filePaths);
+  // Sort from newest to oldest based on directory name date
+  filePaths.sort((a, b) => {
+    const dateA = a.match(/_posts\/(\d{4}-\d{2}-\d{2})-/)?.[1];
+    const dateB = b.match(/_posts\/(\d{4}-\d{2}-\d{2})-/)?.[1];
+    if (!dateA || !dateB) return 0;
+    return dateB.localeCompare(dateA); // Reverse order for newest first
+  });
 
   const globalTagVocab = await getTagVocab(filePaths);
   const initialVocabList = [...globalTagVocab];

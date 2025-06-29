@@ -21,29 +21,23 @@
         // Check X-axis snapping (vertical lines)
         let newXAxis = currentSnapState.xAxis;
         if (currentSnapState.xAxis.type === "Free") {
-            // Check for collisions with vertical snap lines
+            // Check for proximity to vertical snap lines
             for (const line of snapLines.vertical) {
-                const prevLeft = previousLeft;
                 const currentLeft = draggedLeft;
-                const prevRight = previousLeft + WINDOW_WIDTH;
                 const currentRight = draggedLeft + WINDOW_WIDTH;
-                const prevCenter = previousLeft + WINDOW_WIDTH / 2;
                 const currentCenter = draggedLeft + WINDOW_WIDTH / 2;
-                // Check left edge collision
-                if ((prevLeft <= line && currentLeft > line) ||
-                    (prevLeft >= line && currentLeft < line)) {
+                // Check left edge proximity
+                if (Math.abs(currentLeft - line) <= SNAP_THRESHOLD) {
                     newXAxis = { type: "Stuck", edge: "Start" };
                     break;
                 }
-                // Check right edge collision
-                if ((prevRight <= line && currentRight > line) ||
-                    (prevRight >= line && currentRight < line)) {
+                // Check right edge proximity
+                if (Math.abs(currentRight - line) <= SNAP_THRESHOLD) {
                     newXAxis = { type: "Stuck", edge: "End" };
                     break;
                 }
-                // Check center collision
-                if ((prevCenter <= line && currentCenter > line) ||
-                    (prevCenter >= line && currentCenter < line)) {
+                // Check center proximity
+                if (Math.abs(currentCenter - line) <= SNAP_THRESHOLD) {
                     newXAxis = { type: "Stuck", edge: "Middle" };
                     break;
                 }
@@ -62,29 +56,23 @@
         // Check Y-axis snapping (horizontal lines)
         let newYAxis = currentSnapState.yAxis;
         if (currentSnapState.yAxis.type === "Free") {
-            // Check for collisions with horizontal snap lines
+            // Check for proximity to horizontal snap lines
             for (const line of snapLines.horizontal) {
-                const prevTop = previousTop;
                 const currentTop = draggedTop;
-                const prevBottom = previousTop + WINDOW_HEIGHT;
                 const currentBottom = draggedTop + WINDOW_HEIGHT;
-                const prevCenter = previousTop + WINDOW_HEIGHT / 2;
                 const currentCenter = draggedTop + WINDOW_HEIGHT / 2;
-                // Check top edge collision
-                if ((prevTop <= line && currentTop > line) ||
-                    (prevTop >= line && currentTop < line)) {
+                // Check top edge proximity
+                if (Math.abs(currentTop - line) <= SNAP_THRESHOLD) {
                     newYAxis = { type: "Stuck", edge: "Start" };
                     break;
                 }
-                // Check bottom edge collision
-                if ((prevBottom <= line && currentBottom > line) ||
-                    (prevBottom >= line && currentBottom < line)) {
+                // Check bottom edge proximity
+                if (Math.abs(currentBottom - line) <= SNAP_THRESHOLD) {
                     newYAxis = { type: "Stuck", edge: "End" };
                     break;
                 }
-                // Check center collision
-                if ((prevCenter <= line && currentCenter > line) ||
-                    (prevCenter >= line && currentCenter < line)) {
+                // Check center proximity
+                if (Math.abs(currentCenter - line) <= SNAP_THRESHOLD) {
                     newYAxis = { type: "Stuck", edge: "Middle" };
                     break;
                 }
@@ -310,7 +298,7 @@
     };
     // Main drawing function
     const draw = () => {
-        const canvas = document.getElementById("sticky-snap-app");
+        const canvas = document.getElementById("magnetic-snap-app");
         const ctx = canvas?.getContext("2d");
         if (!ctx)
             return;
@@ -334,7 +322,7 @@
     };
     // Mouse event handlers
     const getMousePos = (e) => {
-        const canvas = document.getElementById("sticky-snap-app");
+        const canvas = document.getElementById("magnetic-snap-app");
         if (!canvas)
             return { x: 0, y: 0 };
         const rect = canvas.getBoundingClientRect();
@@ -403,7 +391,7 @@
     };
     // Initialize the app
     const init = () => {
-        const canvas = document.getElementById("sticky-snap-app");
+        const canvas = document.getElementById("magnetic-snap-app");
         if (!canvas)
             return;
         // Set canvas size and style

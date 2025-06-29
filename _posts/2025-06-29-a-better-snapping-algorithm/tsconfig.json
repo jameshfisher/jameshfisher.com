@@ -5,5 +5,5 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "include": ["sticky.ts"]
+  "include": ["sticky.ts", "magnetic.ts"]
 }

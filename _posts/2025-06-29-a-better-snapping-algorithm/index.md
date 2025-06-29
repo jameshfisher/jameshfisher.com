@@ -15,7 +15,7 @@ Drawing apps should consider using sticky snap!
 I call the most common snapping algorithm I call _magnetic snap_.
 Try it out and experience its problems:
 
-> Insert demo of magnetic snap here.
+<canvas id="magnetic-snap-app"></canvas>
 
 Notice how location B is impossible to reach.
 The magnetic snap lines exert _action at a distance_,
@@ -59,4 +59,5 @@ A list of apps that use naive magnetic snap:
 - Inkscape
 
 
+<script type="module" src="./magnetic.js"></script>
 <script type="module" src="./sticky.js"></script>

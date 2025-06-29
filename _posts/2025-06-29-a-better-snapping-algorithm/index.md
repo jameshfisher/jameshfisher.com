@@ -10,51 +10,45 @@ tags:
 taggedAt: '2025-06-29'
 ---
 
-In drawing apps,
-the _snapping_ feature lets you align objects precisely.
-But the snapping algorithm in most drawing apps has a problem:
+The "snapping" feature in most drawing apps has a problem:
 you can't place the object near snap lines,
 so for precise positioning, you have to disable snapping.
-In this post, I show _sticky snap_, a better snapping algorithm that I discovered in macOS window management.
-With sticky snap, you can place the object anywhere, so snapping can always be on by default.
-Drawing apps should consider using sticky snap!
-
-I call the most common snapping algorithm I call _magnetic snap_.
-Try to place the green rectangle at the target:
+In this post, I show _sticky snap_,
+a better algorithm.
+But first,
+try out the standard snap algorithm:
 
 <canvas id="magnetic-snap-app" style="display: block; margin: 0 auto"></canvas>
 
-The target is impossible to reach!
-The magnetic snap lines exert _action at a distance_,
-pulling the object out of place.
-Sometimes useful, but often very frustrating!
+If you try to place the green rectangle at the target,
+you'll soon find that it's impossible to reach!
+The snap lines always pull the object out of place.
+Sometimes useful, but often very frustrating.
+To complete this task, you'll need to disable snapping!
 
-Now, try out _sticky snap_ on the same task:
+I call that standard algorithm _magnetic snap_,
+because the snap lines exert "action at a distance" on the thing you want to drag.
+Now for contrast, try out _sticky snap_ on the same task:
 
 <canvas id="sticky-snap-app" style="display: block; margin: 0 auto"></canvas>
 
-With this algorithm, you can drag to the target
+With sticky snap, you can drag to the target
 by approaching it without touching the snap lines.
 Here, the snap lines are not magnetic, they're _sticky_.
-They don't exert any action at a distance;
+The snap lines don't exert action at a distance;
 they only exert force once you've stuck something to them.
 You get the best of both worlds:
-it's easy to stick something to a snap line by dragging across the line,
-but it's also easy to get arbitrarily close to the snap line without it interfering.
+easy to snap,
+but also easy to avoid the snap line.
 
-The sticky-snap algorithm is only slightly more complex than magnetic snap.
-The dragged object has two axes, X and Y.
-Each axis is either free,
-or one of its edges is stuck to a snap line.
-When an edge touches/crosses a snap line, it becomes stuck.
-When pulled far enough away, it becomes unstuck.
+I discovered sticky snap in macOS window management:
+try dragging a window next to another one!
+Notice, unlike every other app with snapping,
+macOS has no "window snap off" mode.
+This is no coincidence:
+with sticky snap, you don't need to turn it off.
 
-I discovered sticky snap in macOS window management!
-It makes it easy to snap a window next to another one,
-but also easy to put a window _near_ another one.
-As such, macOS has no "snapping off" mode.
-
-I haven't seen sticky snap anywhere else.
+Yet I haven't seen sticky snap anywhere else.
 All drawing apps I've tried use naive magnetic snap:
 Figma,
 Google Docs,

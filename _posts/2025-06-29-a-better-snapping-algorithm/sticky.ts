@@ -276,7 +276,7 @@ const drawWindow = (ctx: CanvasRenderingContext2D, left: number, top: number, wi
   if (windowType === 'dragged') {
     fillStyle = 'rgba(128, 128, 128, 0.3)'; // 30% grey for live drag position
   } else {
-    fillStyle = 'rgba(0, 128, 0, 0.6)'; // 60% green for actual window (original/snapped)
+    fillStyle = 'rgba(150, 200, 150, 1)';
   }
 
   ctx.fillStyle = fillStyle;
@@ -294,6 +294,13 @@ const drawWindow = (ctx: CanvasRenderingContext2D, left: number, top: number, wi
   ctx.quadraticCurveTo(topLeft.x, topLeft.y, topLeft.x + cornerRadius, topLeft.y);
   ctx.closePath();
   ctx.fill();
+
+  // Add 4px border for green windows
+  if (windowType !== 'dragged') {
+    ctx.strokeStyle = 'rgba(150, 200, 150, 1)';
+    ctx.lineWidth = 4;
+    ctx.stroke();
+  }
 };
 
 const drawTargetWindows = (ctx: CanvasRenderingContext2D) => {
@@ -357,7 +364,7 @@ const draw = () => {
   drawTargetWindows(ctx);
 
   if (state.dragging) {
-    // While dragging: show green window at snapped position and grey window at dragged position
+    // While dragging: show only the green window at snapped position
     const draggedPosition = {
       left: state.windowPosition.left + state.dragOffsetX,
       top: state.windowPosition.top + state.dragOffsetY
@@ -365,7 +372,6 @@ const draw = () => {
     const snappedPosition = calculateSnappedPosition(draggedPosition.left, draggedPosition.top, state.axisStates);
 
     drawWindow(ctx, snappedPosition.left, snappedPosition.top, 'snapped');
-    drawWindow(ctx, draggedPosition.left, draggedPosition.top, 'dragged');
   } else {
     // When not dragging: show only the green window at its actual position
     drawWindow(ctx, state.windowPosition.left, state.windowPosition.top, 'original');

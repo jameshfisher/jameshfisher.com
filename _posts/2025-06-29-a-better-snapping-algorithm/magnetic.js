@@ -355,7 +355,8 @@
             worldPos.y <= state.windowPosition.top + WINDOW_HEIGHT;
         if (withinX && withinY) {
             // Prevent default behavior for touch events to stop scrolling
-            if (e instanceof TouchEvent) {
+            // Use property presence check instead of `instanceof TouchEvent` for Safari compatibility.
+            if ("touches" in e) {
                 e.preventDefault();
             }
             state = {
@@ -375,7 +376,8 @@
         if (!state.dragging)
             return;
         // Prevent default behavior for touch events to stop scrolling
-        if (e instanceof TouchEvent) {
+        // Use property presence check instead of `instanceof TouchEvent` for Safari compatibility.
+        if ("touches" in e) {
             e.preventDefault();
         }
         const mousePos = getMousePos(e);

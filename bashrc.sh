@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/zsh
 
-# source this file from your ~/.bashrc
+# source this file from your ~/.zshrc or install https://github.com/jameshfisher/dotfiles
 
 function blogpost {
   local blogpost_slug=$(echo $1 | tr '[:upper:] ' '[:lower:]-' | tr -cd "[:alnum:]-")

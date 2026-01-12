@@ -30,4 +30,4 @@ mainBundle.loadNibNamed(mainNibFileBaseName, owner: myApp, topLevelObjects: nil)
 _ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
 ```
 
-However, if the `NSMainNibFile` key is not present, `NSApplicationMain` falls back the first nib/xib file which it happens to find in the main bundle. We can't emulate this behavior easily. If you have nib/xib files in your bundle which you don't want to use as the main nib, you should hide them away so that `NSApplicationMain` doesn't find them.
+However, if the `NSMainNibFile` key is not present, `NSApplicationMain` falls back the first nib/xib file which it happens to find in the main bundle. We can't emulate this behavior easily. If you have nib/xib files in your bundle which you don't want to use as the main nib, you should hide them away so that `NSApplicationMain` doesn't find them. But how? A good trick is to make an empty nib file called `Empty.xib`. If this is alphabetically the first nib file the runtime encounters, it gives up the search for a main nib with a menu in it, and now you can load the menu yourself, in code, without having it load twice.
